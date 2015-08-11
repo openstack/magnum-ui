@@ -1,0 +1,11 @@
+AUTHORS
+ChangeLog
+build
+doc/source/sourcecode
+magnum_ui/test/.secret_key_store
+.venv
+.tox
+*.pyc
+*.lock
+*.egg*
+*.swp

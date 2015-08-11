@@ -1,0 +1,4 @@
+include setup.py
+recursive-include magnum_ui/bay/templates *
+recursive-include magnum_ui/baymodel/templates *
+recursive-include magnum_ui/static *
