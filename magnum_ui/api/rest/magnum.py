@@ -24,7 +24,7 @@ from openstack_dashboard.api.rest import utils as rest_utils
 class BayModels(generic.View):
     """API for Magnum BayModels
     """
-    url_regex = r'containers/baymodel/$'
+    url_regex = r'containers/baymodels/$'
 
     @rest_utils.ajax()
     def get(self, request):

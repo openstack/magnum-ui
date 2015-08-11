@@ -18,7 +18,8 @@
   'use strict';
 
   /**
-   * @ngdoc horizon.dashboard.containers.baymodel
+   * @ngdoc overview
+   * @name horizon.dashboard.containers.baymodel
    * @ngModule
    *
    * @description

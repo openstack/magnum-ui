@@ -28,6 +28,14 @@
     .module('horizon.dashboard.containers', [
       'horizon.dashboard.containers.bay',
       'horizon.dashboard.containers.baymodel'
-    ]);
+    ])
+    .config(config);
+
+  config.$inject = ['$provide', '$windowProvider'];
+
+  function config($provide, $windowProvider) {
+    var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
+    $provide.constant('horizon.dashboard.containers.basePath', path);
+  }
 
 })();

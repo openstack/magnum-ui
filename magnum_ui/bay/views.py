@@ -14,6 +14,8 @@
 
 from horizon import views
 
+from magnum_ui.api.rest import magnum  # noqa
+
 
 class IndexView(views.APIView):
     # A very simple class-based view...
