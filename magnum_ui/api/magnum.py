@@ -98,7 +98,7 @@ def bay_delete(request, id):
 
 
 def bay_list(request, limit=None, marker=None, sort_key=None,
-             sort_dir=None, detail=False):
+             sort_dir=None, detail=True):
     return magnumclient(request).bays.list(limit, marker, sort_key,
                                            sort_dir, detail)
 

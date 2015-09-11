@@ -1,0 +1,162 @@
+<table ng-controller="containersBayTableController as table"
+  hz-table ng-cloak
+  st-table="table.ibays"
+  st-safe-src="table.bays"
+  default-sort="name"
+  default-sort-reverse="false"
+  class="table-striped table-rsp table-detail modern">
+
+  <thead>
+    <!--
+      Table-batch-actions:
+      This is where batch actions like searching, creating, and deleting.
+    -->
+    <tr>
+      <th colspan="100" class="search-header">
+        <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
+
+          <action-list class="btn-addon">
+            <action
+              action-classes="'btn btn-default btn-sm btn-danger'"
+              disabled="numSelected === 0"
+              callback="table.batchDelete">
+              <i class="fa fa-trash-o"></i>
+              <translate>Delete Bays</translate>
+            </action>
+          </action-list>
+
+        </hz-search-bar>
+      </th>
+    </tr>
+    <!--
+      Table-column-headers:
+      The headers for the table columns
+    -->
+    <tr>
+      <th class=select-col>
+        <input type="checkbox" hz-select-all="table.ibays">
+      </th>
+
+      <th class="expander"></th>
+
+      <th class="rsp-p1" st-sort="name" st-sort-default>
+        <translate>Name</translate>
+      </th>
+
+      <th class="rsp-p2" st-sort="id" >
+        <translate>ID</translate>
+      </th>
+
+      <th class="rsp-p1" st-sort="status" >
+        <translate>Status</translate>
+      </th>
+
+      <th class="rsp-p2" st-sort="master_count" >
+        <translate>Master Count</translate>
+      </th>
+
+      <th class="rsp-p2" st-sort="node_count" >
+        <translate>Node Count</translate>
+      </th>
+
+      <th class="action-col">
+        <translate>Actions</translate>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--
+      Table-rows:
+      This is where we declaratively define the table columns.
+      Include select-col if you want to select all.
+      Include expander if you want to inline details.
+      Include action-col if you want to perform actions.
+      rsp-p1 rsp-p2 are responsive priority as user resizes window.
+    -->
+
+    <tr ng-repeat-start="b in table.ibays track by b.id"
+        nt-class="{'st-selected': checked[b.id]}">
+
+      <td class="select-col">
+        <input type="checkbox"
+          ng-model="selected[b.id].checked"
+          hz-select="b">
+      </td>
+
+      <td class="expander">
+        <i class="fa fa-chevron-right"
+          hz-expand-detail
+          duration="200">
+        </i>
+      </td>
+
+      <td class="rsp-p1">{$ b.name $}</td>
+      <td class="rsp-p2">{$ b.id $}</td>
+      <td class="rsp-p1">{$ b.status $}</td>
+      <td class="rsp-p2">{$ b.master_count $}</td>
+      <td class="rsp-p2">{$ b.node_count $}</td>
+
+      <td class="action-col">
+        <!--
+          Table-row-action-column:
+          Actions taken here applies to a single item/row.
+        -->
+
+        <action-list dropdown>
+
+          <action
+            button-type="split-button"
+            action-classes="'btn btn-default btn-danger btn-sm'"
+            callback="table.singleDelete" item="b">
+              <translate>Delete</translate>
+          </action>
+
+        </action-list>
+      </td>
+    </tr>
+    <tr ng-repeat-end class="detail-row">
+      <!--
+        Table-row-details:
+        Provides detail view of specific view, with more information than can be
+        displayed in the table alone.
+      -->
+
+      <td class="detail" colspan="100">
+        <dl class=dl-horizontal>
+
+          <dt><translate>Name</translate></dt>
+          <dd>{$ b.name $}</dd>
+
+          <dt><translate>ID</translate></dt>
+          <dd>{$ b.id $}</dd>
+
+          <dt><translate>Status</translate></dt>
+          <dd>{$ b.status $}</dd>
+
+          <!--
+            TODO (bradjones): Baymodel should link to the baymodel resource in
+            the UI
+          -->
+          <dt><translate>BayModel</translate></dt>
+          <dd>{$ b.baymodel_id $}</dd>
+
+          <dt><translate>Master Count</translate></dt>
+          <dd>{$ b.master_count $}</dd>
+
+          <dt><translate>Node Count</translate></dt>
+          <dd>{$ b.node_count $}</dd>
+
+          <dt><translate>Node Addresses</translate></dt>
+          <dd ng-repeat="addr in b.node_addresses">{$ addr $}</dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <td colspan="100">
+        <span class="display">{$ table.ibays.length|itemCount $}</span>
+          <div st-pagination="" st-items-by-page="10"
+            st-displayed-pages="10"></div>
+        </td>
+  </tfoot>
+</table>

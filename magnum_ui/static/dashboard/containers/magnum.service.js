@@ -27,6 +27,9 @@
 
   function MagnumAPI(apiService, toastService) {
     var service = {
+      getBays: getBays,
+      deleteBay: deleteBay,
+      deleteBays: deleteBays,
       getBayModels: getBayModels,
       deleteBayModel: deleteBayModel,
       deleteBayModels: deleteBayModels
@@ -34,7 +37,34 @@
 
     return service;
 
-    ///////////
+    //////////
+    // Bays //
+    //////////
+
+    function getBays() {
+      return apiService.get('/api/containers/bays/')
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the Bays.'));
+        });
+    }
+
+    function deleteBay(id) {
+      return apiService.delete('/api/containers/bays/', [id])
+        .error(function() {
+          toastService.add('error', gettext('Unable to delete the Bay.'));
+        });
+    }
+
+    function deleteBays(ids) {
+      return apiService.delete('/api/containers/bays/', ids)
+        .error(function() {
+          toastService.add('error', gettext('Unable to delete the Bays.'));
+        });
+    }
+
+    ///////////////
+    // BayModels //
+    ///////////////
 
     function getBayModels() {
       return apiService.get('/api/containers/baymodels/')
