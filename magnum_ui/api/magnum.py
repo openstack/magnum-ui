@@ -32,6 +32,9 @@ BAYMODEL_CREATE_ATTRS = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
                          'https_proxy', 'no_proxy', 'network_driver',
                          'insecure']
 
+BAY_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count', 'discovery_url',
+                    'bay_create_timeout', 'master_count']
+
 
 def magnumclient(request):
     magnum_url = ""
@@ -73,3 +76,32 @@ def baymodel_list(request, limit=None, marker=None, sort_key=None,
 
 def baymodel_show(request, id):
     return magnumclient(request).baymodels.get(id)
+
+
+def bay_create(request, **kwargs):
+    args = {}
+    for (key, value) in kwargs.items():
+        if key in BAY_CREATE_ATTRS:
+            args[key] = value
+        else:
+            raise exceptions.InvalidAttribute(
+                "Key must be in %s" % ",".join(BAY_CREATE_ATTRS))
+    return magnumclient(request).bays.create(args)
+
+
+def bay_update(request, id, patch):
+    return magnumclient(request).bays.update(id, patch)
+
+
+def bay_delete(request, id):
+    return magnumclient(request).bays.delete(id)
+
+
+def bay_list(request, limit=None, marker=None, sort_key=None,
+             sort_dir=None, detail=False):
+    return magnumclient(request).bays.list(limit, marker, sort_key,
+                                           sort_dir, detail)
+
+
+def bay_show(request, id):
+    return magnumclient(request).bays.get(id)
