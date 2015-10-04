@@ -25,6 +25,13 @@ from openstack_dashboard.api import base
 
 LOG = logging.getLogger(__name__)
 
+BAYMODEL_CREATE_ATTRS = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
+                         'keypair_id', 'external_network_id', 'fixed_network',
+                         'dns_nameserver', 'docker_volume_size', 'labels',
+                         'ssh_authorized_key', 'coe', 'http_proxy',
+                         'https_proxy', 'no_proxy', 'network_driver',
+                         'insecure']
+
 
 def magnumclient(request):
     magnum_url = ""
@@ -41,3 +48,28 @@ def magnumclient(request):
                              input_auth_token=request.user.token.id,
                              magnum_url=magnum_url)
     return c
+
+
+def baymodel_create(request, **kwargs):
+    args = {}
+    for (key, value) in kwargs.items():
+        if key in BAYMODEL_CREATE_ATTRS:
+            args[key] = value
+        else:
+            raise exceptions.InvalidAttribute(
+                "Key must be in %s" % ",".join(BAYMODEL_CREATE_ATTRS))
+    return magnumclient(request).baymodels.create(args)
+
+
+def baymodel_delete(request, id):
+    return magnumclient(request).baymodels.delete(id)
+
+
+def baymodel_list(request, limit=None, marker=None, sort_key=None,
+                  sort_dir=None, detail=False):
+    return magnumclient(request).baymodels.list(limit, marker, sort_key,
+                                                sort_dir, detail)
+
+
+def baymodel_show(request, id):
+    return magnumclient(request).baymodels.get(id)
