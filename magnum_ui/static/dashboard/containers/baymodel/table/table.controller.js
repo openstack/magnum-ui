@@ -49,7 +49,7 @@
     }
 
     function getBayModelsSuccess(response) {
-      ctrl.baymodels = response.baymodels;
+      ctrl.baymodels = response.items;
     }
 
     function singleDelete(baymodel) {

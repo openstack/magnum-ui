@@ -14,13 +14,11 @@
 
 
 from __future__ import absolute_import
-
 import logging
-
 from magnumclient.v1 import client as magnum_client
 
 from horizon import exceptions
-
+from horizon.utils.memoized import memoized
 from openstack_dashboard.api import base
 
 LOG = logging.getLogger(__name__)
@@ -36,6 +34,7 @@ BAY_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count', 'discovery_url',
                     'bay_create_timeout', 'master_count']
 
 
+@memoized
 def magnumclient(request):
     magnum_url = ""
     try:
@@ -105,3 +104,45 @@ def bay_list(request, limit=None, marker=None, sort_key=None,
 
 def bay_show(request, id):
     return magnumclient(request).bays.get(id)
+
+
+def container_create(request, bay_id, **kwargs):
+    """Creates a container object
+    :param request: Request context
+    :param bay_id: ID of a bay (Required)
+    :param kwargs: Image ID, Name, Command, Memory
+    :returns: Container object
+    """
+    return magnumclient(request).containers.create(bay_id=bay_id, **kwargs)
+
+
+def container_delete(request, id):
+    """Deletes a container
+    :param request: Request context
+    :param id: The ID of the container to delete
+    """
+    magnumclient(request).containers.delete(id)
+
+
+def container_list(request, marker=None, limit=None, sort_key=None,
+                   sort_dir=None, detail=False):
+    """Lists all containers
+    :param request: Request context
+    :param marker: Optional, ID of last container in previous results
+    :param limit: '==0' return all, '> 0' specifies max, None respects max
+                  imposed by Magnum API
+    :param sort_key: Optional, key to sort by
+    :param sort_dir: Optional, direction of sorting ('asc' or 'desc')
+    :param detail: Optional, boolean, return detailed info about containers
+    """
+    return magnumclient(request).containers.list(
+        marker=marker, limit=limit, sort_key=sort_key, sort_dir=sort_dir,
+        detail=detail)
+
+
+def container_show(request, id):
+    """Get an individual container
+    :param request: Request context
+    :param id: ID of the container to get
+    """
+    return magnumclient(request).containers.get(id)

@@ -49,7 +49,7 @@
     }
 
     function getBaysSuccess(response) {
-      ctrl.bays = response.bays;
+      ctrl.bays = response.items;
     }
 
     function singleDelete(bay) {

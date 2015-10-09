@@ -40,11 +40,11 @@ class BayModels(generic.View):
     def get(self, request):
         """Get a list of the BayModels for a project.
 
-        The returned result is an object with property 'baymodels' and each
+        The returned result is an object with property 'items' and each
         item under this is a BayModel.
         """
         result = magnum.baymodel_list(request)
-        return{'baymodels': [change_to_id(n.to_dict()) for n in result]}
+        return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
@@ -63,8 +63,8 @@ class BayModels(generic.View):
         """
         new_baymodel = magnum.baymodel_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/containers/baymodel/%s' % new_baymodel.id,
-            new_baymodel.to_dict())
+            '/api/containers/baymodel/%s' % new_baymodel['uuid'],
+            new_baymodel)
 
 
 @urls.register
@@ -77,11 +77,11 @@ class Bays(generic.View):
     def get(self, request):
         """Get a list of the Bays for a project.
 
-        The returned result is an object with property 'bays' and each
+        The returned result is an object with property 'items' and each
         item under this is a Bay.
         """
         result = magnum.bay_list(request)
-        return{'bays': [change_to_id(n.to_dict()) for n in result]}
+        return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
@@ -100,5 +100,41 @@ class Bays(generic.View):
         """
         new_bay = magnum.bay_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/containers/bay/%s' % new_bay.uuid,
-            new_bay.to_dict())
+            '/api/containers/bay/%s' % new_bay['uuid'],
+            new_bay)
+
+
+@urls.register
+class Containers(generic.View):
+    """API for Magnum Containers
+    """
+    url_regex = r'containers/containers/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Containers for a project.
+
+        The returned result is an object with property 'items' and each
+        item under this is a Container.
+        """
+        result = magnum.container_list(request)
+        return {'items': [n.to_dict() for n in result]}
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request):
+        """Delete one or more Containers by ID.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        for container_id in request.DATA:
+            magnum.container_delete(request, container_id)
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request):
+        """Create a new Container.
+
+        Returns the new Container object on success.
+        """
+        container = magnum.container_create(request, **request.DATA)
+        return rest_utils.CreatedResponse(
+            '/api/containers/container/%s' % container['uuid'], container)
