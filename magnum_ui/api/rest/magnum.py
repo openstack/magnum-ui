@@ -51,7 +51,7 @@ class BayModels(generic.View):
 
         Returns the new BayModel object on success.
         """
-        new_baymodel = magnum.baymodel.create(request, **request.DATA)
+        new_baymodel = magnum.baymodel_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
             '/api/containers/baymodel/%s' % new_baymodel.id,
             new_baymodel.to_dict())
