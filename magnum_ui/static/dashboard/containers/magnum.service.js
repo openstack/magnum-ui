@@ -27,6 +27,7 @@
 
   function MagnumAPI(apiService, toastService) {
     var service = {
+      createBay: createBay,
       getBays: getBays,
       deleteBay: deleteBay,
       deleteBays: deleteBays,
@@ -40,6 +41,13 @@
     //////////
     // Bays //
     //////////
+
+    function createBay(params) {
+        return apiService.post('/api/containers/bays/', params)
+          .error(function() {
+            toastService.add('error', gettext('Unable to create Bay.'));
+          });
+      }
 
     function getBays() {
       return apiService.get('/api/containers/bays/')

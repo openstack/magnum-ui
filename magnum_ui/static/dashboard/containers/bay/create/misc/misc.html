@@ -1,0 +1,23 @@
+<div ng-controller="createBayMiscController as ctrl">
+  <h1 translate>Miscellaneous</h1>
+
+  <div class="content">
+    <div translate class="subtitle">Please provide the miscellaneous for creation of the Bay.</div>
+
+    <div class="form-group">
+      <div class="form-field bay-discovery-url">
+        <label class="on-top"><translate>Discovery URL</translate></label>
+        <input name="bay-discovery-url" type="text" class="form-control input-sm"
+               ng-model="model.newBaySpec.discovery_url"
+               placeholder="{$ 'Specifies custom discovery url for node discovery.'|translate $}">
+      </div>
+      <div class="form-field bay-timeout">
+        <label class="on-top"><translate>Timeout</translate></label>
+        <input name="bay-timeout" type="number" ng-pattern="/^[0-9]+$/" class="form-control input-sm"
+               ng-model="model.newBaySpec.bay_create_timeout"
+               placeholder="{$ 'The timeout for bay creation in minutes. Set to 0 for no timeout. The default is no timeout.'|translate $}">
+      </div>
+    </div>
+
+  </div>
+</div>

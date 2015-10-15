@@ -14,7 +14,14 @@
     <tr>
       <th colspan="100" class="search-header">
         <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
-
+          <action-list class="btn-addon">
+            <a href="javascipt:void(0);"
+              class="btn btn-default btn-sm btn-launch ng-scope"
+              ng-controller="containersBayModalController as modal"
+              ng-click="modal.openBayCreateWizard({successUrl: '/containers/'})">
+              <span class="fa fa-plus"> <translate>Create Bay</translate></span>
+            </a>
+          </action-list>
           <action-list class="btn-addon">
             <action
               action-classes="'btn btn-default btn-sm btn-danger'"
@@ -24,7 +31,6 @@
               <translate>Delete Bays</translate>
             </action>
           </action-list>
-
         </hz-search-bar>
       </th>
     </tr>
@@ -103,14 +109,12 @@
         -->
 
         <action-list dropdown>
-
-          <action
-            button-type="split-button"
-            action-classes="'btn btn-default btn-danger btn-sm'"
-            callback="table.singleDelete" item="b">
+          <action button-type="split-button"
+                  action-classes="'btn btn-default btn-sm btn-danger'"
+                  callback="table.singleDelete" item="b">
               <translate>Delete</translate>
-          </action>
-
+            </action>
+          </menu>
         </action-list>
       </td>
     </tr>

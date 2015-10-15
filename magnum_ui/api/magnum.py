@@ -85,7 +85,7 @@ def bay_create(request, **kwargs):
         else:
             raise exceptions.InvalidAttribute(
                 "Key must be in %s" % ",".join(BAY_CREATE_ATTRS))
-    return magnumclient(request).bays.create(args)
+    return magnumclient(request).bays.create(**args)
 
 
 def bay_update(request, id, patch):

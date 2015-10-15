@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Cisco Systems, Inc.
+ * Copyright 2015 NEC Corporation
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -18,15 +18,26 @@
   'use strict';
 
   /**
-   * @ngdoc overview
-   * @name horizon.dashboard.containers.bay
-   * @ngModule
+   * @ngdoc controller
+   * @name createBaySizeController
+   * @ngController
    *
    * @description
-   * Provides all the services and widgets require to display the bay
-   * panel
+   * Controller for the containers bay size step in create workflow
    */
   angular
-    .module('horizon.dashboard.containers.bay', []);
+    .module('horizon.dashboard.containers.bay')
+    .controller('createBaySizeController', createBaySizeController);
+
+  createBaySizeController.$inject = [
+    '$scope',
+    'horizon.dashboard.containers.basePath',
+    'horizon.app.core.openstack-service-api.magnum'
+  ];
+
+  function createBaySizeController($scope, basePath, magnum) {
+    var ctrl = this;
+
+  }
 
 })();
