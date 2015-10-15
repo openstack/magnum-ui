@@ -20,6 +20,16 @@ from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
 
 
+def change_to_id(obj):
+    """Change key named 'uuid' to 'id'
+
+    Magnum returns objects with a field called 'uuid' many of Horizons
+    directives however expect objects to have a field called 'id'.
+    """
+    obj['id'] = obj.pop('uuid')
+    return obj
+
+
 @urls.register
 class BayModels(generic.View):
     """API for Magnum BayModels
@@ -34,7 +44,7 @@ class BayModels(generic.View):
         item under this is a BayModel.
         """
         result = magnum.baymodel_list(request)
-        return{'baymodels': [n.to_dict() for n in result]}
+        return{'baymodels': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):

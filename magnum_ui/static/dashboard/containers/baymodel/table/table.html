@@ -43,7 +43,7 @@
         <translate>Name</translate>
       </th>
 
-      <th class="rsp-p1" st-sort="uuid" >
+      <th class="rsp-p1" st-sort="id" >
         <translate>ID</translate>
       </th>
 
@@ -66,13 +66,12 @@
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="bm in table.ibaymodels"
-              g-repeat-start="bm in table.ibaymodels"
-      nt-class="{'st-selected': table.checked[bm.uuid]">
+    <tr ng-repeat-start="bm in table.ibaymodels track by bm.id"
+        nt-class="{'st-selected': checked[bm.id]}">
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="table.checked[bm.uuid].checked"
+          ng-model="selected[bm.id].checked"
           hz-select="bm">
       </td>
 
@@ -84,7 +83,7 @@
       </td>
 
       <td class="rsp-p1">{$ bm.name $}</td>
-      <td class="rsp-p1">{$ bm.uuid $}</td>
+      <td class="rsp-p1">{$ bm.id $}</td>
       <td class="rsp-p2">{$ bm.coe $}</td>
 
       <td class="action-col">
@@ -119,7 +118,7 @@
           <dd>{$ bm.name $}</dd>
 
           <dt><translate>ID</translate></dt>
-          <dd>{$ bm.uuid $}</dd>
+          <dd>{$ bm.id $}</dd>
 
           <dt><translate>COE</translate></dt>
           <dd>{$ bm.coe $}</dd>

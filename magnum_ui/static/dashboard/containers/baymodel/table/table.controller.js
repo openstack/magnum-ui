@@ -30,14 +30,14 @@
     .controller('containersBayModelTableController', containersBayModelTableController);
 
   containersBayModelTableController.$inject = [
+    '$scope',
     'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function containersBayModelTableController(magnum) {
+  function containersBayModelTableController($scope, magnum) {
     var ctrl = this;
     ctrl.ibaymodels = [];
     ctrl.baymodels = [];
-    ctrl.checked = {};
 
     ctrl.singleDelete = singleDelete;
     ctrl.batchDelete = batchDelete;
@@ -53,25 +53,26 @@
     }
 
     function singleDelete(baymodel) {
-      magnum.deleteBayModel(baymodel.uuid).success(function() {
+      magnum.deleteBayModel(baymodel.id).success(function() {
         ctrl.baymodels.splice(ctrl.baymodels.indexOf(baymodel),1);
       });
     }
 
     function batchDelete() {
       var ids = [];
-      for (var bm in ctrl.checked) {
-        ids.push(bm);
+      for (var id in $scope.selected) {
+        if ($scope.selected[id].checked) {
+          ids.push(id);
+        }
       }
-
-      magnum.deleteBayModels(ctrl.checked).success(function() {
-        for (var bm in ctrl.checked) {
+      magnum.deleteBayModels(ids).success(function() {
+        for (var id in ids) {
           var todelete = ctrl.baymodels.filter(function(obj) {
-            return obj.uuid == bm;
+            return obj.id == ids[id];
           });
           ctrl.baymodels.splice(ctrl.baymodels.indexOf(todelete[0]),1);
         }
-        ctrl.checked = {};
+        $scope.selected = {};
       })
     }
   }
