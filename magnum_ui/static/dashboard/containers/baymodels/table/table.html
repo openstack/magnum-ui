@@ -21,7 +21,14 @@
     <tr>
       <th colspan="100" class="action-col">
         <action-list class="btn-addon">
-
+          <button
+            class="btn btn-default btn-sm btn-launch ng-scope"
+            ng-controller="containersBayModelModalController as modal"
+            ng-click="modal.openBayModelCreateWizard({successUrl: '/project/baymodels/'})">
+            <span class="fa fa-plus" translate>Create Bay Model</span>
+          </button>
+        </action-list>
+        <action-list class="btn-addon">
           <action
             action-classes="'btn btn-default btn-sm btn-danger'"
             disabled="numSelected === 0"

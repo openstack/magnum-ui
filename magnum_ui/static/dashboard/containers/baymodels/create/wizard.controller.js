@@ -19,25 +19,26 @@
 
   /**
    * @ngdoc overview
-   * @name horizon.dashboard.containers.baymodels
-   * @ngModule
+   * @name createBayModelWizardController
+   * @ngController
    *
    * @description
-   * Provides all the services and widgets require to display the bay model
-   * panel
+   * Controller for the containers bay model create modal
    */
   angular
-    .module('horizon.dashboard.containers.baymodels', [])
-    .value('horizon.dashboard.containers.baymodels.events', events());
+    .module('horizon.dashboard.containers.baymodels')
+    .controller('createBayModelWizardController', createBayModelWizardController);
 
-  /**
-   * @ngdoc value
-   * @name horizon.dashboard.containers.baymodels.events
-   * @description A list of events used by Bay Models
-   */
-  function events() {
-    return {
-      selectedImage: 'horizon.dashboard.containers.baymodels.selectedImaged'
-    };
+  createBayModelWizardController.$inject = [
+    '$scope',
+    'baymodelModel',
+    'horizon.dashboard.containers.baymodels.workflow'
+  ];
+
+  function createBayModelWizardController($scope, model, workflow) {
+    $scope.workflow = workflow;
+    $scope.model = model;
+    $scope.model.init();
+    $scope.submit = $scope.model.createBayModel;
   }
 })();

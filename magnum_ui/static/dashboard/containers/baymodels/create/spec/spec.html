@@ -1,0 +1,52 @@
+<div ng-controller="createBayModelSpecController as ctrl">
+  <h1 translate>Node Spec</h1>
+
+  <div class="content">
+    <div class="subtitle" translate>Please provide the specs of the Bay.</div>
+
+    <div class="form-group">
+      <div class="form-field required baymodel-image-id">
+        <label class="on-top" translate>Image</label>
+        <select name="baymodel-image-id" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.image_id" ng-required="true"
+                ng-options="image.id as image.name for image in ctrl.images">
+        </select>
+      </div>
+      <div class="form-field baymodel-flavor-id">
+        <label class="on-top" translate>Flavor</label>
+        <select name="baymodel-flavor-id" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.flavor_id"
+                ng-options="nflavor.id as nflavor.name for nflavor in ctrl.nflavors">
+        </select>
+      </div>
+      <div class="form-field baymodel-master-flavor-id">
+        <label class="on-top" translate>Master Flavor</label>
+        <select name="baymodel-master-flavor-id" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.master_flavor_id"
+                ng-options="mflavor.id as mflavor.name for mflavor in ctrl.mflavors">
+        </select>
+      </div>
+      <div class="form-field baymodel-docker-volume-size">
+        <label class="on-top" translate>Docker Volume Size (GB)</label>
+        <input name="baymodel-docker-volume-size"  type="number" ng-pattern="/^[0-9]+$/"
+               class="form-control input-sm"
+               ng-model="model.newBayModelSpec.docker_volume_size" min="1"
+               placeholder="{$ 'Specify the number of size in GB for the docker volume to use.'|translate $}">
+      </div>
+      <div class="form-field required baymodel-keypair-id">
+        <label class="on-top" translate>Keypair</label>
+        <select name="baymodel-keypair-id" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.keypair_id" ng-required="true"
+                ng-options="keypair.id as keypair.name for keypair in ctrl.keypairs">
+        </select>
+      </div>
+      <div class="form-field baymodel-ssh-authorized-key">
+        <label class="on-top" translate>SSH Authorized Key</label>
+        <input name="baymodel-ssh-authorized-key" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.ssh_authorized_key"
+               placeholder="{$ 'The SSH authorized key to use.'|translate $}">
+      </div>
+    </div>
+
+  </div>
+</div>

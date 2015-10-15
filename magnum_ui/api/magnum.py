@@ -28,7 +28,7 @@ BAYMODEL_CREATE_ATTRS = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
                          'dns_nameserver', 'docker_volume_size', 'labels',
                          'ssh_authorized_key', 'coe', 'http_proxy',
                          'https_proxy', 'no_proxy', 'network_driver',
-                         'insecure']
+                         'public', 'registry_enabled', 'tls_disabled']
 
 BAY_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count', 'discovery_url',
                     'bay_create_timeout', 'master_count']
@@ -56,10 +56,17 @@ def baymodel_create(request, **kwargs):
     args = {}
     for (key, value) in kwargs.items():
         if key in BAYMODEL_CREATE_ATTRS:
-            args[key] = value
+            args[str(key)] = str(value)
         else:
             raise exceptions.InvalidAttribute(
                 "Key must be in %s" % ",".join(BAYMODEL_CREATE_ATTRS))
+        if key == "labels":
+            labels = {}
+            vals = value.split(",")
+            for v in vals:
+                kv = v.split("=", 1)
+                labels[kv[0]] = kv[1]
+            args["labels"] = labels
     return magnumclient(request).baymodels.create(**args)
 
 

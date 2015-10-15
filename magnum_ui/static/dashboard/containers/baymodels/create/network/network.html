@@ -1,0 +1,55 @@
+<div ng-controller="createBayModelNetworkController as ctrl">
+  <h1 translate>Network</h1>
+
+  <div class="content">
+    <div translate class="subtitle">Please provide the settings of the Bay networking.</div>
+
+    <div class="form-group">
+      <div class="form-field baymodel-network-driver">
+        <label class="on-top" translate>Network Driver</label>
+        <select name="baymodel-network-driver" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.network_driver"
+                placeholder="{$ 'The network driver name for instantiating container networks.'|translate $}"
+                ng-options="driver.name as driver.label for driver in model.newBayModelSpec.network_drivers">
+        </select>
+      </div>
+      <div class="form-field baymodel-http-proxy">
+        <label class="on-top" translate>HTTP Proxy</label>
+        <input name="baymodel-http-proxy" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.http_proxy"
+               placeholder="{$ 'The http_proxy address to use for nodes in bay.'|translate $}">
+      </div>
+      <div class="form-field baymodel-https-proxy">
+        <label class="on-top" translate>HTTPS Proxy</label>
+        <input name="baymodel-https-proxy" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.https_proxy"
+               placeholder="{$ 'The https_proxy address to use for nodes in bay.'|translate $}">
+      </div>
+      <div class="form-field baymodel-no-proxy">
+        <label class="on-top" translate>No Proxy</label>
+        <input name="baymodel-no-proxy" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.no_proxy"
+               placeholder="{$ 'The no_proxy address to use for nodes in bay.'|translate $}">
+      </div>
+      <div class="form-field required baymodel-external-network-id">
+        <label class="on-top" translate>External Network ID</label>
+        <input name="baymodel-external-network-id" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.external_network_id" ng-required="true"
+               placeholder="{$ 'The external Neutron network ID to connect to this bay model.'|translate $}">
+      </div>
+      <div class="form-field baymodel-fixed-network">
+        <label class="on-top" translate>Fixed Network</label>
+        <input name="baymodel-fixed-network" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.fixed_network"
+               placeholder="{$ 'The private Neutron network name to connect to this bay model.'|translate $}">
+      </div>
+      <div class="form-field baymodel-dns-nameserver">
+        <label class="on-top" translate>DNS</label>
+        <input name="baymodel-dns-nameserver" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.dns_nameserver"
+               placeholder="{$ 'The DNS nameserver to use for this Bay.'|translate $}">
+      </div>
+    </div>
+
+  </div>
+</div>

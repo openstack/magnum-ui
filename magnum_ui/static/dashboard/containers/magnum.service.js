@@ -32,6 +32,7 @@
       getBays: getBays,
       deleteBay: deleteBay,
       deleteBays: deleteBays,
+      createBayModel: createBayModel,
       getBayModel: getBayModel,
       getBayModels: getBayModels,
       deleteBayModel: deleteBayModel,
@@ -88,6 +89,13 @@
     ///////////////
     // BayModels //
     ///////////////
+
+    function createBayModel(params) {
+      return apiService.post('/api/containers/baymodels/', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to create BayModel'));
+        });
+    }
 
     function getBayModel(id) {
       return apiService.get('/api/containers/baymodels/' + id)
