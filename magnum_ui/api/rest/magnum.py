@@ -118,7 +118,7 @@ class Containers(generic.View):
         item under this is a Container.
         """
         result = magnum.container_list(request)
-        return {'items': [n.to_dict() for n in result]}
+        return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):

@@ -1,0 +1,164 @@
+<table ng-controller="containersContainersTableController as table"
+  hz-table ng-cloak
+  st-table="table.icontainers"
+  st-safe-src="table.containers"
+  default-sort="name"
+  default-sort-reverse="false"
+  class="table-striped table-rsp table-detail modern">
+
+  <thead>
+    <!--
+      Table-batch-actions:
+      This is where batch actions like searching, creating, and deleting.
+    -->
+    <tr>
+      <th colspan="100" class="search-header">
+        <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
+
+          <action-list class="btn-addon">
+            <action
+              action-classes="'btn btn-default btn-sm btn-danger'"
+              disabled="numSelected === 0"
+              callback="table.batchDelete">
+              <i class="fa fa-trash-o"></i>
+              <translate>Delete Containers</translate>
+            </action>
+          </action-list>
+
+        </hz-search-bar>
+      </th>
+    </tr>
+    <!--
+      Table-column-headers:
+      The headers for the table columns
+    -->
+    <tr>
+      <th class=select-col>
+        <input type="checkbox" hz-select-all="table.icontainers">
+      </th>
+
+      <th class="expander"></th>
+
+      <th class="rsp-p1" st-sort="name" st-sort-default>
+        <translate>Name</translate>
+      </th>
+
+      <th class="rsp-p1" st-sort="id" >
+        <translate>UUID</translate>
+      </th>
+
+      <th class="rsp-p1" st-sort="status" >
+        <translate>Status</translate>
+      </th>
+
+      <th class="rsp-p3" st-sort="bay" >
+        <translate>Bay UUID</translate>
+      </th>
+
+      <th class="rsp-p2" st-sort="image" >
+        <translate>Image</translate>
+      </th>
+
+      <th class="rsp-p3" st-sort="memory" >
+        <translate>Memory</translate>
+      </th>
+
+      <th class="action-col">
+        <translate>Actions</translate>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--
+      Table-rows:
+      This is where we declaratively define the table columns.
+      Include select-col if you want to select all.
+      Include expander if you want to inline details.
+      Include action-col if you want to perform actions.
+      rsp-p1 rsp-p2 are responsive priority as user resizes window.
+    -->
+
+    <tr ng-repeat-start="c in table.icontainers track by c.id"
+        nt-class="{'st-selected': checked[c.id]}">
+
+      <td class="select-col">
+        <input type="checkbox"
+          ng-model="selected[c.id].checked"
+          hz-select="c">
+      </td>
+
+      <td class="expander">
+        <i class="fa fa-chevron-right"
+          hz-expand-detail
+          duration="200">
+        </i>
+      </td>
+
+      <td class="rsp-p1">{$ c.name $}</td>
+      <td class="rsp-p1">{$ c.id $}</td>
+      <td class="rsp-p1">{$ c.status $}</td>
+      <td class="rsp-p3">{$ c.bay_uuid $}</td>
+      <td class="rsp-p2">{$ c.image $}</td>
+      <td class="rsp-p3">{$ c.memory $}</td>
+
+      <td class="action-col">
+        <!--
+          Table-row-action-column:
+          Actions taken here applies to a single item/row.
+        -->
+
+        <action-list dropdown>
+
+          <action
+            button-type="split-button"
+            action-classes="'btn btn-default btn-danger btn-sm'"
+            callback="table.singleDelete" item="c">
+              <translate>Delete</translate>
+          </action>
+
+        </action-list>
+      </td>
+    </tr>
+    <tr ng-repeat-end class="detail-row">
+      <!--
+        Table-row-details:
+        Provides detail view of specific view, with more information than can be
+        displayed in the table alone.
+      -->
+
+      <td class="detail" colspan="100">
+        <dl class=dl-horizontal>
+
+          <dt><translate>Name</translate></dt>
+          <dd>{$ c.name $}</dd>
+
+          <dt><translate>UUID</translate></dt>
+          <dd>{$ c.id $}</dd>
+
+          <dt><translate>Status</translate></dt>
+          <dd>{$ c.status $}</dd>
+
+          <dt><translate>Bay UUID</translate></dt>
+          <dd>{$ c.bay_uuid $}</dd>
+
+          <dt><translate>Image</translate></dt>
+          <dd>{$ c.image $}</dd>
+
+          <dt><translate>Memory</translate></dt>
+          <dd>{$ c.memory $}</dd>
+
+          <dt><translate>Command</translate></dt>
+          <dd>{$ c.command $}</dd>
+
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <td colspan="100">
+        <span class="display">{$ table.icontainers.length|itemCount $}</span>
+          <div st-pagination="" st-items-by-page="10"
+            st-displayed-pages="10"></div>
+        </td>
+  </tfoot>
+</table>

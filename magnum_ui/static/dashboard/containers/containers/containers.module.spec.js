@@ -13,30 +13,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-
 (function() {
   'use strict';
 
-  /**
-   * @ngdoc overview
-   * @name horizon.dashboard.containers
-   *
-   * @description
-   * Dashboard module to host various containers panels.
-   */
-  angular
-    .module('horizon.dashboard.containers', [
-      'horizon.dashboard.containers.bay',
-      'horizon.dashboard.containers.baymodel',
-      'horizon.dashboard.containers.containers'
-    ])
-    .config(config);
-
-  config.$inject = ['$provide', '$windowProvider'];
-
-  function config($provide, $windowProvider) {
-    var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
-    $provide.constant('horizon.dashboard.containers.basePath', path);
-  }
+  describe('horizon.dashboard.containers.containers', function() {
+    it('should exist', function() {
+      expect(angular.module('horizon.dashboard.containers.containers')).toBeDefined();
+    });
+  });
 
 })();

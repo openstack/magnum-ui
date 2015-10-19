@@ -1,4 +1,4 @@
-#  Copyright 2015 Cisco Systems.
+#  Copyright 2015 Cisco Systems
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -13,14 +13,13 @@
 #    under the License.
 
 from django.utils.translation import ugettext_lazy as _
-
 import horizon
+from magnum_ui import dashboard
 
 
-class Containers(horizon.Dashboard):
+class Containers(horizon.Panel):
     name = _("Containers")
     slug = "containers"
-    panels = ('bay', 'baymodel', 'containers')
-    default_panel = 'bay'
 
-horizon.register(Containers)
+
+dashboard.Containers.register(Containers)

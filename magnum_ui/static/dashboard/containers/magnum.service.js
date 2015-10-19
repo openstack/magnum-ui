@@ -33,7 +33,11 @@
       deleteBays: deleteBays,
       getBayModels: getBayModels,
       deleteBayModel: deleteBayModel,
-      deleteBayModels: deleteBayModels
+      deleteBayModels: deleteBayModels,
+      getContainers: getContainers,
+      deleteContainer: deleteContainer,
+      deleteContainers: deleteContainers,
+
     };
 
     return service;
@@ -93,6 +97,32 @@
         .error(function() {
           toastService.add('error', gettext('Unable to delete the BayModels.'))
         })
+    }
+
+
+    ////////////////
+    // Containers //
+    ////////////////
+
+    function getContainers() {
+      return apiService.get('/api/containers/containers/')
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the Containers.'));
+        });
+    }
+
+    function deleteContainer(id) {
+      return apiService.delete('/api/containers/containers/', [id])
+        .error(function() {
+          toastService.add('error', gettext('Unable to delete the Container.'));
+        });
+    }
+
+    function deleteContainers(ids) {
+      return apiService.delete('/api/containers/containers/', ids)
+        .error(function() {
+          toastService.add('error', gettext('Unable to delete the Containers.'));
+        });
     }
   }
 

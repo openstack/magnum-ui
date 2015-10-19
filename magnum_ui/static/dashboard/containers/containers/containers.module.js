@@ -19,24 +19,14 @@
 
   /**
    * @ngdoc overview
-   * @name horizon.dashboard.containers
+   * @name horizon.dashboard.containers.containers
+   * @ngModule
    *
    * @description
-   * Dashboard module to host various containers panels.
+   * Provides all the services and widgets require to display the containers
+   * panel
    */
   angular
-    .module('horizon.dashboard.containers', [
-      'horizon.dashboard.containers.bay',
-      'horizon.dashboard.containers.baymodel',
-      'horizon.dashboard.containers.containers'
-    ])
-    .config(config);
-
-  config.$inject = ['$provide', '$windowProvider'];
-
-  function config($provide, $windowProvider) {
-    var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
-    $provide.constant('horizon.dashboard.containers.basePath', path);
-  }
+    .module('horizon.dashboard.containers.containers', []);
 
 })();

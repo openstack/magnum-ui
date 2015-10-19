@@ -1,4 +1,4 @@
-#  Copyright 2015 Cisco Systems.
+#  Copyright 2015 Cisco Systems
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -12,15 +12,10 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.utils.translation import ugettext_lazy as _
+from horizon import views
 
-import horizon
+from magnum_ui.api.rest import magnum  # noqa
 
 
-class Containers(horizon.Dashboard):
-    name = _("Containers")
-    slug = "containers"
-    panels = ('bay', 'baymodel', 'containers')
-    default_panel = 'bay'
-
-horizon.register(Containers)
+class IndexView(views.APIView):
+    template_name = 'containers/containers/index.html'
