@@ -51,6 +51,10 @@
         <translate>ID</translate>
       </th>
 
+      <th class="rsp-p2" st-sort="network-driver" >
+        <translate>Network Driver</translate>
+      </th>
+
       <th class="rsp-p2" st-sort="coe" >
         <translate>COE</translate>
       </th>
@@ -88,6 +92,7 @@
 
       <td class="rsp-p1">{$ bm.name $}</td>
       <td class="rsp-p1">{$ bm.id $}</td>
+      <td class="rsp-p2">{$ bm.network_driver $}</td>
       <td class="rsp-p2">{$ bm.coe $}</td>
 
       <td class="action-col">
@@ -132,6 +137,12 @@
 
           <dt><translate>Registry Enabled</translate></dt>
           <dd>{$ bm.registry_enabled $}</dd>
+
+          <dt><translate>Network Driver</translate></dt>
+          <dd>{$ bm.network_driver $}</dd>
+
+          <dt><translate>Labels</translate></dt>
+          <dd ng-repeat="lbl in b.labels">{$ lbl $}</dd>
         </dl>
       </td>
     </tr>
