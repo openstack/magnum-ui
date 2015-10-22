@@ -42,6 +42,28 @@
     ctrl.singleDelete = singleDelete;
     ctrl.batchDelete = batchDelete;
 
+    /**
+     * Filtering - client-side MagicSearch
+     * all facets for baymodel table
+     */
+    ctrl.baymodelFacets = [
+      {
+        'label': gettext('Name'),
+        'name': 'name',
+        'singleton': true
+      },
+      {
+        'label': gettext('ID'),
+        'name': 'id',
+        'singleton': true
+      },
+      {
+        'label': gettext('COE'),
+        'name': 'coe',
+        'singleton': true
+      }
+    ];
+
     init();
 
     function init() {

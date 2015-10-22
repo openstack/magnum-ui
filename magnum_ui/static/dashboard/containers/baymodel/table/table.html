@@ -13,19 +13,23 @@
     -->
     <tr>
       <th colspan="100" class="search-header">
-        <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
+        <hz-magic-search-bar group-classes="input-group-sm" icon-classes="fa-search"
+          filter-facets="table.baymodelFacets">
+        </hz-magic-search-bar>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="100" class="action-col">
+        <action-list class="btn-addon">
 
-          <action-list class="btn-addon">
-            <action
-              action-classes="'btn btn-default btn-sm btn-danger'"
-              disabled="numSelected === 0"
-              callback="table.batchDelete">
-              <i class="fa fa-trash-o"></i>
-              <translate>Delete Bay Models</translate>
-            </action>
-          </action-list>
-
-        </hz-search-bar>
+          <action
+            action-classes="'btn btn-default btn-sm btn-danger'"
+            disabled="numSelected === 0"
+            callback="table.batchDelete">
+            <i class="fa fa-trash-o"></i>
+            <translate>Delete Bay Models</translate>
+          </action>
+        </action-list>
       </th>
     </tr>
     <!--
