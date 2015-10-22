@@ -42,6 +42,48 @@
     ctrl.singleDelete = singleDelete;
     ctrl.batchDelete = batchDelete;
 
+    /**
+     * Filtering - client-side MagicSearch
+     * all facets for container table
+     */
+    ctrl.containerFacets = [
+      {
+        'label': gettext('Name'),
+        'name': 'name',
+        'singleton': true
+      },
+      {
+        'label': gettext('UUID'),
+        'name': 'id',
+        'singleton': true
+      },
+      {
+        'label': gettext('Status'),
+        'name': 'status',
+        'singleton': true
+      },
+      {
+        'label': gettext('Bay'),
+        'name': 'bay-uuid',
+        'singleton': true
+      },
+      {
+        'label': gettext('Image'),
+        'name': 'image',
+        'singleton': true
+      },
+      {
+        'label': gettext('Memory'),
+        'name': 'memory',
+        'singleton': true
+      },
+      {
+        'label': gettext('Command'),
+        'name': 'command',
+        'singleton': true
+      }
+    ];
+
     init();
 
     function init() {
