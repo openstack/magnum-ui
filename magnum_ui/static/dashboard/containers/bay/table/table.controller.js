@@ -42,6 +42,39 @@
     ctrl.singleDelete = singleDelete;
     ctrl.batchDelete = batchDelete;
 
+    /**
+     * Filtering - client-side MagicSearch
+     * all facets for bay table
+     */
+    ctrl.bayFacets = [
+      {
+        'label': gettext('Name'),
+        'name': 'name',
+        'singleton': true
+      },
+      {
+        'label': gettext('ID'),
+        'name': 'id',
+        'singleton': true
+      },
+      {
+        'label': gettext('Status'),
+        'name': 'status',
+        'singleton': true
+      },
+      {
+        'label': gettext('Master Count'),
+        'name': 'master_count',
+        'singleton': true
+      },
+      {
+        'label': gettext('Node Count'),
+        'name': 'node_count',
+        'singleton': true
+      }
+    ];
+
+
     init();
 
     function init() {
