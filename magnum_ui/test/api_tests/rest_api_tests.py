@@ -39,17 +39,18 @@ class MagnumRestTestCase(test.TestCase):
 
     @mock.patch.object(magnum, 'magnum')
     def test_baymodel_create(self, client):
-        test_baymodel = TEST.baymodels.first()
-        test_body = json.dumps(test_baymodel)
+        test_baymodels = mock_resource(TEST.baymodels.list())
+        test_bmodel = test_baymodels[0]
+        test_body = json.dumps(test_bmodel.to_dict())
         request = self.mock_rest_request(body=test_body)
-        client.baymodel_create.return_value = test_baymodel
+        client.baymodel_create.return_value = test_bmodel
         response = magnum.BayModels().post(request)
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
-                         '/api/containers/baymodel/%s' % test_baymodel['uuid'])
+                         '/api/containers/baymodel/%s' % test_bmodel.uuid)
         client.baymodel_create.assert_called_once_with(request,
-                                                       **test_baymodel)
+                                                       **test_bmodel.to_dict())
 
     @mock.patch.object(magnum, 'magnum')
     def test_baymodel_delete(self, client):
@@ -117,16 +118,18 @@ class MagnumRestTestCase(test.TestCase):
 
     @mock.patch.object(magnum, 'magnum')
     def test_container_create(self, client):
-        test_cont = TEST.magnum_containers.first()
-        test_body = json.dumps(test_cont)
+        test_conts = mock_resource(TEST.magnum_containers.list())
+        test_cont = test_conts[0]
+        test_body = json.dumps(test_cont.to_dict())
         request = self.mock_rest_request(body=test_body)
         client.container_create.return_value = test_cont
         response = magnum.Containers().post(request)
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
-                         '/api/containers/container/%s' % test_cont['uuid'])
-        client.container_create.assert_called_once_with(request, **test_cont)
+                         '/api/containers/container/%s' % test_cont.uuid)
+        client.container_create.assert_called_once_with(request,
+                                                        **test_cont.to_dict())
 
     @mock.patch.object(magnum, 'magnum')
     def test_container_delete(self, client):

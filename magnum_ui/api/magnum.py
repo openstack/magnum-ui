@@ -60,7 +60,7 @@ def baymodel_create(request, **kwargs):
         else:
             raise exceptions.InvalidAttribute(
                 "Key must be in %s" % ",".join(BAYMODEL_CREATE_ATTRS))
-    return magnumclient(request).baymodels.create(args)
+    return magnumclient(request).baymodels.create(**args)
 
 
 def baymodel_delete(request, id):
