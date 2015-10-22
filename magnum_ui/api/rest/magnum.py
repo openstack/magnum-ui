@@ -63,8 +63,8 @@ class BayModels(generic.View):
         """
         new_baymodel = magnum.baymodel_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/containers/baymodel/%s' % new_baymodel['uuid'],
-            new_baymodel)
+            '/api/containers/baymodel/%s' % new_baymodel.uuid,
+            new_baymodel.to_dict())
 
 
 @urls.register
@@ -137,4 +137,5 @@ class Containers(generic.View):
         """
         container = magnum.container_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/containers/container/%s' % container['uuid'], container)
+            '/api/containers/container/%s' % container.uuid,
+            container.to_dict())
