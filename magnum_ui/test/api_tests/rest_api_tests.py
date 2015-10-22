@@ -77,17 +77,18 @@ class MagnumRestTestCase(test.TestCase):
 
     @mock.patch.object(magnum, 'magnum')
     def test_bay_create(self, client):
-        test_bay = TEST.bays.first()
-        test_body = json.dumps(test_bay)
+        test_bays = mock_resource(TEST.bays.list())
+        test_bay = test_bays[0]
+        test_body = json.dumps(test_bay.to_dict())
         request = self.mock_rest_request(body=test_body)
         client.bay_create.return_value = test_bay
         response = magnum.Bays().post(request)
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
-                         '/api/containers/bay/%s' % test_bay['uuid'])
+                         '/api/containers/bay/%s' % test_bay.uuid)
         client.bay_create.assert_called_once_with(request,
-                                                  **test_bay)
+                                                  **test_bay.to_dict())
 
     @mock.patch.object(magnum, 'magnum')
     def test_bay_delete(self, client):

@@ -100,8 +100,8 @@ class Bays(generic.View):
         """
         new_bay = magnum.bay_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/containers/bay/%s' % new_bay['uuid'],
-            new_bay)
+            '/api/containers/bay/%s' % new_bay.uuid,
+            new_bay.to_dict())
 
 
 @urls.register

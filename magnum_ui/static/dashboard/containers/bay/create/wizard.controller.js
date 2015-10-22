@@ -19,14 +19,27 @@
 
   /**
    * @ngdoc overview
-   * @name horizon.dashboard.containers.bay
-   * @ngModule
+   * @name createBayWizardController
+   * @ngController
    *
    * @description
-   * Provides all the services and widgets require to display the bay
-   * panel
+   * Controller for the containers bay create modal
    */
   angular
-    .module('horizon.dashboard.containers.bay', []);
+    .module('horizon.dashboard.containers.bay')
+    .controller('createBayWizardController', createBayWizardController);
+
+  createBayWizardController.$inject = [
+    '$scope',
+    'bayModel',
+    'horizon.dashboard.containers.bay.workflow'
+  ];
+
+  function createBayWizardController($scope, model, workflow) {
+    $scope.workflow = workflow;
+    $scope.model = model;
+    $scope.model.init();
+    $scope.submit = $scope.model.createBay;
+  }
 
 })();
