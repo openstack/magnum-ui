@@ -1,0 +1,199 @@
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2015. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-11-05 21:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-11-06 12:09+0000\n"
+"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"X-Generator: Zanata 3.7.1\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "API Server Port"
+msgstr "API サーバーのポート"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Bay"
+msgstr "ベイ"
+
+msgid "Bay Details"
+msgstr "ベイの詳細"
+
+msgid "Bay Model"
+msgstr "ベイモデル"
+
+msgid "Bay Model Detail"
+msgstr "ベイモデルの詳細"
+
+msgid "Bay Name"
+msgstr "ベイの名前"
+
+msgid "Bay Size"
+msgstr "ベイのサイズ"
+
+msgid "Bay UUID"
+msgstr "ベイの UUID"
+
+msgid "BayModel"
+msgstr "ベイモデル"
+
+msgid "COE"
+msgstr "COE"
+
+msgid "Choose a Bay Model"
+msgstr "ベイモデルを選択してください。"
+
+msgid "Command"
+msgstr "コマンド"
+
+msgid "Create"
+msgstr "作成"
+
+msgid "Create Bay"
+msgstr "ベイを作成"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete Bay Models"
+msgstr "ベイモデルの削除"
+
+msgid "Delete Bays"
+msgstr "ベイの削除"
+
+msgid "Delete Containers"
+msgstr "コンテナーの削除"
+
+msgid "Description:"
+msgstr "説明："
+
+msgid "Discovery URL"
+msgstr "探索 URL"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Image"
+msgstr "イメージ"
+
+msgid "Image ID"
+msgstr "イメージ ID"
+
+msgid "Info"
+msgstr "情報"
+
+msgid "Master Count"
+msgstr "マスターの数"
+
+msgid "Memory"
+msgstr "メモリー"
+
+msgid "Misc"
+msgstr "その他"
+
+msgid "Miscellaneous"
+msgstr "その他"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Name of the bay to create."
+msgstr "作成するベイの名前"
+
+msgid "Node Addresses"
+msgstr "ノードのアドレス"
+
+msgid "Node Count"
+msgstr "ノードの数"
+
+msgid "Please provide the count of the master and node in this Bay."
+msgstr "このベイにおける、マスターとノードの数を指定してください。"
+
+msgid "Please provide the miscellaneous for creation of the Bay."
+msgstr "ベイの作成のためのその他の条件を指定してください。"
+
+msgid "Please provide the name of the Bay."
+msgstr "ベイの名前を設定してください。"
+
+msgid "Public"
+msgstr "パブリック"
+
+msgid "Registry Enabled"
+msgstr "レジストリーの有効化"
+
+msgid "Size"
+msgstr "サイズ"
+
+msgid "Specifies custom discovery url for node discovery."
+msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
+
+msgid "Specify bay name and choose bay model."
+msgstr "ベイの名前を指定し、ベイモデルを選択してください。"
+
+msgid "Specify conditions for bay creation."
+msgstr "ベイの作成条件を指定してください。"
+
+msgid "Specify the number of master nodes and bay nodes for the bay."
+msgstr "ベイのマスターノードとベイノードの数を指定してください。"
+
+msgid "Status"
+msgstr "状態"
+
+msgid "TLS Disabled"
+msgstr "TLS の無効化"
+
+msgid "The bay node count."
+msgstr "ベイノードの数"
+
+msgid "The number of master nodes for the bay."
+msgstr "ベイのマスターノードの数"
+
+msgid ""
+"The timeout for bay creation in minutes. Set to 0 for no timeout. The "
+"default is no timeout."
+msgstr ""
+"ベイの作成のタイムアウトの分数。タイムアウトしないためには、0 を設定設定しま"
+"す。デフォルトはタイムアウトしません。"
+
+msgid "Timeout"
+msgstr "タイムアウト"
+
+msgid "UUID"
+msgstr "UUID"
+
+msgid "Unable to create Bay."
+msgstr "ベイを作成できません"
+
+msgid "Unable to delete the Bay."
+msgstr "ベイを削除できません。"
+
+msgid "Unable to delete the BayModel."
+msgstr "ベイモデルを削除できません。"
+
+msgid "Unable to delete the BayModels."
+msgstr "ベイモデルを削除できません。"
+
+msgid "Unable to delete the Bays."
+msgstr "ベイを削除できません。"
+
+msgid "Unable to delete the Container."
+msgstr "コンテナーを削除できません。"
+
+msgid "Unable to delete the Containers."
+msgstr "コンテナーの一覧を取得できません。"
+
+msgid "Unable to retrieve the BayModels."
+msgstr "ベイモデルの一覧を取得できません。"
+
+msgid "Unable to retrieve the Bays."
+msgstr "ベイの一覧を取得できません。"
+
+msgid "Unable to retrieve the Containers."
+msgstr "コンテナーの一覧を取得できません。"
