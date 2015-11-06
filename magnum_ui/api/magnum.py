@@ -106,14 +106,14 @@ def bay_show(request, id):
     return magnumclient(request).bays.get(id)
 
 
-def container_create(request, bay_id, **kwargs):
+def container_create(request, bay_uuid, **kwargs):
     """Creates a container object
     :param request: Request context
-    :param bay_id: ID of a bay (Required)
+    :param bay_uuid: ID of a bay (Required)
     :param kwargs: Image ID, Name, Command, Memory
     :returns: Container object
     """
-    return magnumclient(request).containers.create(bay_id=bay_id, **kwargs)
+    return magnumclient(request).containers.create(bay_uuid=bay_uuid, **kwargs)
 
 
 def container_delete(request, id):

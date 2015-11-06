@@ -1,0 +1,47 @@
+<div ng-controller="createContainerInfoController as ctrl">
+  <h1 translate>Container Details</h1>
+
+  <div class="content">
+    <div translate class="subtitle">Please provide the name of the Container.</div>
+
+    <div class="form-group">
+      <div class="form-field container-name">
+        <label class="on-top" translate>Container Name</label>
+        <input name="container-name" type="text" class="form-control input-sm"
+               ng-model="model.newContainerSpec.name"
+               placeholder="{$ 'Name of the container to create.'|translate $}">
+      </div>
+      <div class="form-field required container-model">
+        <label class="on-top" translate>Bay</label>
+        <select class="form-control" name="container-bay"
+          ng-model="model.newContainerSpec.bay_uuid"
+          ng-required="true"
+          ng-options="bay.id as bay.name for bay in ctrl.bays"
+          ng-change="changeBay()">
+        </select>
+      </div>
+    </div>
+
+    <h2 translate class="section-title">Bay Detail</h2>
+    <div class="subtitle" id="bay_detail_none" translate>
+      Choose a Bay
+    </div>
+    <div class="subtitle" id="bay_detail">
+      <dl class=dl-horizontal>
+        <dt translate>Name</dt>
+        <dd>{$ baydetail.name $}</dd>
+        <dt translate>ID</dt>
+        <dd>{$ baydetail.id $}</dd>
+        <dt translate>BayModel ID</dt>
+        <dd>{$ baydetail.baymodel_id $}</dd>
+        <dt translate>Master Count</dt>
+        <dd>{$ baydetail.master_count $}</dd>
+        <dt translate>Node Count</dt>
+        <dd>{$ baydetail.node_count $}</dd>
+        <dt translate>Timeout</dt>
+        <dd>{$ baydetail.timeout $}</dd>
+      </dl>
+    </div>
+
+  </div>
+</div>

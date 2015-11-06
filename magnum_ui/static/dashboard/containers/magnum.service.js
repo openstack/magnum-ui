@@ -34,6 +34,7 @@
       getBayModels: getBayModels,
       deleteBayModel: deleteBayModel,
       deleteBayModels: deleteBayModels,
+      createContainer: createContainer,
       getContainers: getContainers,
       deleteContainer: deleteContainer,
       deleteContainers: deleteContainers,
@@ -103,6 +104,13 @@
     ////////////////
     // Containers //
     ////////////////
+
+    function createContainer(params) {
+      return apiService.post('/api/containers/containers/', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to create Container.'));
+        });
+    }
 
     function getContainers() {
       return apiService.get('/api/containers/containers/')

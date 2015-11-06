@@ -54,7 +54,7 @@ class MagnumApiTests(test.APITestCase):
 
     def test_container_create(self):
         container = self.magnum_containers.first()
-        form_data = {'bay_id': container['bay'],
+        form_data = {'bay_uuid': container['bay'],
                      'name': container['name']}
 
         magnumclient = self.stub_magnumclient()

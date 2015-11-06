@@ -21,6 +21,14 @@
     <tr>
       <th colspan="100" class="action-col">
         <action-list class="btn-addon">
+          <a href="javascipt:void(0);"
+            class="btn btn-default btn-sm btn-launch ng-scope"
+            ng-controller="containersContainerModalController as modal"
+            ng-click="modal.openContainerCreateWizard({successUrl: '/containers/containers/'})">
+            <span class="fa fa-plus"> <translate>Create Container</translate></span>
+          </a>
+        </action-list>
+        <action-list class="btn-addon">
           <action
             action-classes="'btn btn-default btn-sm btn-danger'"
             disabled="numSelected === 0"
