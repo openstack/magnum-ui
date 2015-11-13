@@ -38,7 +38,7 @@
 
   function createBayInfoController($q, $scope, basePath, magnum) {
     var ctrl = this;
-    ctrl.baymodels = [{id:"", name: "Choose a Bay Model"}];
+    ctrl.baymodels = [{id:"", name: gettext("Choose a Bay Model")}];
     $scope.model.newBaySpec.baymodel_id = "";
     $scope.baymodeldetail = {
         name: "",

@@ -6,14 +6,14 @@
 
     <div class="form-group">
       <div class="form-field bay-master-count">
-        <label class="on-top"><translate>Master Count</translate></label>
+        <label class="on-top" translate>Master Count</label>
         <input name="bay-master-count" type="number" ng-pattern="/^[0-9]+$/"
                class="form-control input-sm"
                ng-model="model.newBaySpec.master_count"
                placeholder="{$ 'The bay node count.'|translate $}">
       </div>
       <div class="form-field bay-node-count">
-        <label class="on-top"><translate>Node Count</translate></label>
+        <label class="on-top" translate>Node Count</label>
         <input name="bay-node-count" type="number" ng-pattern="/^[0-9]+$/"
                class="form-control input-sm"
                ng-model="model.newBaySpec.node_count"
