@@ -45,7 +45,7 @@
       var options = {
         controller: 'ModalContainerController',
         backdrop: 'static',
-        template: '<wizard ng-controller="createBayWizardController"></wizard>"',
+        template: '<wizard ng-controller="createBayWizardController"></wizard>',
         windowClass: 'modal-dialog-wizard',
         resolve: {
           launchContext: function() {
