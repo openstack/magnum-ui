@@ -25,7 +25,7 @@
             class="btn btn-default btn-sm btn-launch ng-scope"
             ng-controller="containersBayModalController as modal"
             ng-click="modal.openBayCreateWizard({successUrl: '/containers/'})">
-            <span class="fa fa-plus"> <translate>Create Bay</translate></span>
+            <span class="fa fa-plus" translate>Create Bay</span>
           </a>
         </action-list>
         <action-list class="btn-addon">
@@ -33,8 +33,7 @@
             action-classes="'btn btn-default btn-sm btn-danger'"
             disabled="numSelected === 0"
             callback="table.batchDelete">
-            <i class="fa fa-trash-o"></i>
-            <translate>Delete Bays</translate>
+            <span class="fa fa-trash-o" translate>Delete Bays</span>
           </action>
         </action-list>
       </th>
@@ -50,28 +49,28 @@
 
       <th class="expander"></th>
 
-      <th class="rsp-p1" st-sort="name" st-sort-default>
-        <translate>Name</translate>
+      <th class="rsp-p1" st-sort="name" st-sort-default translate>
+        Name
       </th>
 
-      <th class="rsp-p2" st-sort="id" >
-        <translate>ID</translate>
+      <th class="rsp-p2" st-sort="id" translate>
+        ID
       </th>
 
-      <th class="rsp-p1" st-sort="status" >
-        <translate>Status</translate>
+      <th class="rsp-p1" st-sort="status" translate>
+        Status
       </th>
 
-      <th class="rsp-p2" st-sort="master_count" >
-        <translate>Master Count</translate>
+      <th class="rsp-p2" st-sort="master_count" translate>
+        Master Count
       </th>
 
-      <th class="rsp-p2" st-sort="node_count" >
-        <translate>Node Count</translate>
+      <th class="rsp-p2" st-sort="node_count" translate>
+        Node Count
       </th>
 
-      <th class="action-col">
-        <translate>Actions</translate>
+      <th class="action-col" translate>
+        Actions
       </th>
     </tr>
   </thead>
@@ -133,29 +132,29 @@
       <td class="detail" colspan="100">
         <dl class=dl-horizontal>
 
-          <dt><translate>Name</translate></dt>
+          <dt translate>Name</dt>
           <dd>{$ b.name $}</dd>
 
-          <dt><translate>ID</translate></dt>
+          <dt translate>ID</dt>
           <dd>{$ b.id $}</dd>
 
-          <dt><translate>Status</translate></dt>
+          <dt translate>Status</dt>
           <dd>{$ b.status $}</dd>
 
           <!--
             TODO (bradjones): Baymodel should link to the baymodel resource in
             the UI
           -->
-          <dt><translate>BayModel</translate></dt>
+          <dt translate>BayModel</dt>
           <dd>{$ b.baymodel_id $}</dd>
 
-          <dt><translate>Master Count</translate></dt>
+          <dt translate>Master Count</dt>
           <dd>{$ b.master_count $}</dd>
 
-          <dt><translate>Node Count</translate></dt>
+          <dt translate>Node Count</dt>
           <dd>{$ b.node_count $}</dd>
 
-          <dt><translate>Node Addresses</translate></dt>
+          <dt translate>Node Addresses</dt>
           <dd ng-repeat="addr in b.node_addresses">{$ addr $}</dd>
         </dl>
       </td>

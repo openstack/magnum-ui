@@ -6,13 +6,13 @@
 
     <div class="form-group">
       <div class="form-field bay-name">
-        <label class="on-top"><translate>Bay Name</translate></label>
+        <label class="on-top" translate>Bay Name</label>
         <input name="bay-name" type="text" class="form-control input-sm"
                ng-model="model.newBaySpec.name"
                placeholder="{$ 'Name of the bay to create.'|translate $}">
       </div>
       <div class="form-field required bay-model">
-        <label class="on-top"><translate>Bay Model</translate></label>
+        <label class="on-top" translate>Bay Model</label>
         <select class="form-control" name="bay-model"
           ng-model="model.newBaySpec.baymodel_id"
           ng-required="true"
@@ -23,26 +23,26 @@
     </div>
 
     <h2 translate class="section-title">Bay Model Detail</h2>
-    <div translate class="subtitle" id="baymodel_detail_none">
-      <translate>Choose a Bay Model</translate>
+    <div class="subtitle" id="baymodel_detail_none" translate>
+      Choose a Bay Model
     </div>
     <div class="subtitle" id="baymodel_detail">
       <dl class=dl-horizontal>
-        <dt><translate>Name</translate></dt>
+        <dt translate>Name</dt>
         <dd>{$ baymodeldetail.name $}</dd>
-        <dt><translate>ID</translate></dt>
+        <dt translate>ID</dt>
         <dd>{$ baymodeldetail.id $}</dd>
-        <dt><translate>COE</translate></dt>
+        <dt translate>COE</dt>
         <dd>{$ baymodeldetail.coe $}</dd>
-        <dt><translate>Image ID</translate></dt>
+        <dt translate>Image ID</dt>
         <dd>{$ baymodeldetail.image_id $}</dd>
-        <dt><translate>Public</translate></dt>
+        <dt translate>Public</dt>
         <dd>{$ baymodeldetail.public $}</dd>
-        <dt><translate>Registry Enabled</translate></dt>
+        <dt translate>Registry Enabled</dt>
         <dd>{$ baymodeldetail.registry_enabled $}</dd>
-        <dt><translate>TLS Disabled</translate></dt>
+        <dt translate>TLS Disabled</dt>
         <dd>{$ baymodeldetail.tls_disabled $}</dd>
-        <dt><translate>API Server Port</translate></dt>
+        <dt translate>API Server Port</dt>
         <dd>{$ baymodeldetail.apiserver_port $}</dd>
       </dl>
     </div>
