@@ -52,6 +52,12 @@
     .when('/baymodel/:baymodelId', {
       templateUrl: path + 'baymodel/detail/detail.html'
     })
+    .when('/', {
+      templateUrl: path + 'bay/table/table.html'
+    })
+    .when('/:bayId', {
+      templateUrl: path + 'bay/detail/detail.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
