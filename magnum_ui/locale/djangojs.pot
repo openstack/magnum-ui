@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-05 06:00+0000\n"
+"POT-Creation-Date: 2015-11-19 06:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,43 +17,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
 
-#: static/dashboard/containers/magnum.service.js:52
+#: static/dashboard/containers/magnum.service.js:53
 msgid "Unable to create Bay."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:59
+#: static/dashboard/containers/magnum.service.js:60
 msgid "Unable to retrieve the Bays."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:66
+#: static/dashboard/containers/magnum.service.js:67
 msgid "Unable to delete the Bay."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:73
+#: static/dashboard/containers/magnum.service.js:74
 msgid "Unable to delete the Bays."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:84
+#: static/dashboard/containers/magnum.service.js:85
 msgid "Unable to retrieve the BayModels."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:91
+#: static/dashboard/containers/magnum.service.js:92
 msgid "Unable to delete the BayModel."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:98
+#: static/dashboard/containers/magnum.service.js:99
 msgid "Unable to delete the BayModels."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:110
+#: static/dashboard/containers/magnum.service.js:111
+msgid "Unable to create Container."
+msgstr ""
+
+#: static/dashboard/containers/magnum.service.js:118
 msgid "Unable to retrieve the Containers."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:117
+#: static/dashboard/containers/magnum.service.js:125
 msgid "Unable to delete the Container."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:124
+#: static/dashboard/containers/magnum.service.js:132
 msgid "Unable to delete the Containers."
 msgstr ""
 
@@ -63,6 +67,7 @@ msgid "Create Bay"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/create-workflow.service.js:35
+#: static/dashboard/containers/containers/create/create-workflow.service.js:35
 msgid "Info"
 msgstr ""
 
@@ -75,12 +80,20 @@ msgid "Misc"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/create-workflow.service.js:55
+#: static/dashboard/containers/containers/create/create-workflow.service.js:49
 msgid "Create"
+msgstr ""
+
+#: static/dashboard/containers/bay/create/info/bay.info.controller.js:41
+#: static/dashboard/containers/bay/create/info/info.html:26
+msgid "Choose a Bay Model"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.help.html:2
 #: static/dashboard/containers/bay/create/misc/misc.help.html:2
 #: static/dashboard/containers/bay/create/size/size.help.html:2
+#: static/dashboard/containers/containers/create/info/info.help.html:2
+#: static/dashboard/containers/containers/create/spec/spec.help.html:2
 msgid "Description:"
 msgstr ""
 
@@ -112,16 +125,29 @@ msgstr ""
 msgid "Bay Model Detail"
 msgstr ""
 
-#: static/dashboard/containers/bay/create/info/info.html:27
-msgid "Choose a Bay Model"
+#: static/dashboard/containers/bay/create/info/info.html:31
+#: static/dashboard/containers/bay/table/table.controller.js:51
+#: static/dashboard/containers/bay/table/table.html:52
+#: static/dashboard/containers/bay/table/table.html:135
+#: static/dashboard/containers/baymodel/table/table.controller.js:51
+#: static/dashboard/containers/baymodel/table/table.html:47
+#: static/dashboard/containers/baymodel/table/table.html:121
+#: static/dashboard/containers/containers/create/info/info.html:31
+#: static/dashboard/containers/containers/table/table.controller.js:51
+#: static/dashboard/containers/containers/table/table.html:54
+#: static/dashboard/containers/containers/table/table.html:143
+msgid "Name"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:33
-msgid ""
-"<dl>\n"
-"        <dt>Name</dt></dl>\n"
-"        <dd>{$ baymodeldetail.name $}</dd>\n"
-"        <dt>ID</dt>"
+#: static/dashboard/containers/bay/table/table.controller.js:56
+#: static/dashboard/containers/bay/table/table.html:56
+#: static/dashboard/containers/bay/table/table.html:138
+#: static/dashboard/containers/baymodel/table/table.controller.js:56
+#: static/dashboard/containers/baymodel/table/table.html:51
+#: static/dashboard/containers/baymodel/table/table.html:124
+#: static/dashboard/containers/containers/create/info/info.html:33
+msgid "ID"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:35
@@ -174,6 +200,7 @@ msgid "Specifies custom discovery url for node discovery."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/misc/misc.html:15
+#: static/dashboard/containers/containers/create/info/info.html:41
 msgid "Timeout"
 msgstr ""
 
@@ -197,8 +224,9 @@ msgstr ""
 
 #: static/dashboard/containers/bay/create/size/size.html:9
 #: static/dashboard/containers/bay/table/table.controller.js:66
-#: static/dashboard/containers/bay/table/table.html:66
-#: static/dashboard/containers/bay/table/table.html:152
+#: static/dashboard/containers/bay/table/table.html:64
+#: static/dashboard/containers/bay/table/table.html:151
+#: static/dashboard/containers/containers/create/info/info.html:37
 msgid "Master Count"
 msgstr ""
 
@@ -208,8 +236,9 @@ msgstr ""
 
 #: static/dashboard/containers/bay/create/size/size.html:16
 #: static/dashboard/containers/bay/table/table.controller.js:71
-#: static/dashboard/containers/bay/table/table.html:70
-#: static/dashboard/containers/bay/table/table.html:155
+#: static/dashboard/containers/bay/table/table.html:68
+#: static/dashboard/containers/bay/table/table.html:154
+#: static/dashboard/containers/containers/create/info/info.html:39
 msgid "Node Count"
 msgstr ""
 
@@ -217,57 +246,36 @@ msgstr ""
 msgid "The number of master nodes for the bay."
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.controller.js:51
-#: static/dashboard/containers/bay/table/table.html:54
-#: static/dashboard/containers/bay/table/table.html:136
-#: static/dashboard/containers/baymodel/table/table.controller.js:51
-#: static/dashboard/containers/baymodel/table/table.html:47
-#: static/dashboard/containers/baymodel/table/table.html:121
-#: static/dashboard/containers/containers/table/table.controller.js:51
-#: static/dashboard/containers/containers/table/table.html:46
-#: static/dashboard/containers/containers/table/table.html:135
-msgid "Name"
-msgstr ""
-
-#: static/dashboard/containers/bay/table/table.controller.js:56
-#: static/dashboard/containers/bay/table/table.html:58
-#: static/dashboard/containers/bay/table/table.html:139
-#: static/dashboard/containers/baymodel/table/table.controller.js:56
-#: static/dashboard/containers/baymodel/table/table.html:51
-#: static/dashboard/containers/baymodel/table/table.html:124
-msgid "ID"
-msgstr ""
-
 #: static/dashboard/containers/bay/table/table.controller.js:61
-#: static/dashboard/containers/bay/table/table.html:62
-#: static/dashboard/containers/bay/table/table.html:142
+#: static/dashboard/containers/bay/table/table.html:60
+#: static/dashboard/containers/bay/table/table.html:141
 #: static/dashboard/containers/containers/table/table.controller.js:61
-#: static/dashboard/containers/containers/table/table.html:54
-#: static/dashboard/containers/containers/table/table.html:141
+#: static/dashboard/containers/containers/table/table.html:62
+#: static/dashboard/containers/containers/table/table.html:149
 msgid "Status"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:37
+#: static/dashboard/containers/bay/table/table.html:36
 msgid "Delete Bays"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:74
+#: static/dashboard/containers/bay/table/table.html:72
 #: static/dashboard/containers/baymodel/table/table.html:59
-#: static/dashboard/containers/containers/table/table.html:70
+#: static/dashboard/containers/containers/table/table.html:78
 msgid "Actions"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:120
+#: static/dashboard/containers/bay/table/table.html:119
 #: static/dashboard/containers/baymodel/table/table.html:105
-#: static/dashboard/containers/containers/table/table.html:119
+#: static/dashboard/containers/containers/table/table.html:127
 msgid "Delete"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:149
+#: static/dashboard/containers/bay/table/table.html:148
 msgid "BayModel"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:158
+#: static/dashboard/containers/bay/table/table.html:157
 msgid "Node Addresses"
 msgstr ""
 
@@ -275,39 +283,125 @@ msgstr ""
 msgid "Delete Bay Models"
 msgstr ""
 
-#: static/dashboard/containers/containers/table/table.controller.js:56
-#: static/dashboard/containers/containers/table/table.html:50
-#: static/dashboard/containers/containers/table/table.html:138
-msgid "UUID"
+#: static/dashboard/containers/containers/create/create-workflow.service.js:31
+#: static/dashboard/containers/containers/table/table.html:28
+msgid "Create Container"
 msgstr ""
 
+#: static/dashboard/containers/containers/create/create-workflow.service.js:41
+msgid "Spec"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/container.info.controller.js:41
+#: static/dashboard/containers/containers/create/info/info.html:26
+msgid "Choose a Bay"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.help.html:3
+msgid "Specify container name and choose bay."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:2
+msgid "Container Details"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:5
+msgid "Please provide the name of the Container."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:9
+msgid "Container Name"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:10
+msgid "Name of the container to create."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:15
 #: static/dashboard/containers/containers/table/table.controller.js:66
 msgid "Bay"
 msgstr ""
 
+#: static/dashboard/containers/containers/create/info/info.html:25
+msgid "Bay Detail"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/info/info.html:35
+msgid "BayModel ID"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/container.spec.controller.js:41
+msgid "bytes"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/container.spec.controller.js:42
+msgid "KB"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/container.spec.controller.js:43
+msgid "MB"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/container.spec.controller.js:44
+msgid "GB"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.help.html:3
+msgid "Specify the specs for the container."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.html:2
+msgid "Container Spec"
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.html:5
+msgid "Please provide the specs for this Container."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.html:9
 #: static/dashboard/containers/containers/table/table.controller.js:71
-#: static/dashboard/containers/containers/table/table.html:62
-#: static/dashboard/containers/containers/table/table.html:147
+#: static/dashboard/containers/containers/table/table.html:70
+#: static/dashboard/containers/containers/table/table.html:155
 msgid "Image"
 msgstr ""
 
+#: static/dashboard/containers/containers/create/spec/spec.html:10
+msgid "Name of the container image."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.html:17
 #: static/dashboard/containers/containers/table/table.controller.js:76
-#: static/dashboard/containers/containers/table/table.html:66
-#: static/dashboard/containers/containers/table/table.html:150
+#: static/dashboard/containers/containers/table/table.html:74
+#: static/dashboard/containers/containers/table/table.html:158
 msgid "Memory"
 msgstr ""
 
+#: static/dashboard/containers/containers/create/spec/spec.html:19
+msgid "The container memory size."
+msgstr ""
+
+#: static/dashboard/containers/containers/create/spec/spec.html:35
 #: static/dashboard/containers/containers/table/table.controller.js:81
-#: static/dashboard/containers/containers/table/table.html:153
+#: static/dashboard/containers/containers/table/table.html:161
 msgid "Command"
 msgstr ""
 
-#: static/dashboard/containers/containers/table/table.html:29
+#: static/dashboard/containers/containers/create/spec/spec.html:36
+msgid "Send command to the contaier in a line."
+msgstr ""
+
+#: static/dashboard/containers/containers/table/table.controller.js:56
+#: static/dashboard/containers/containers/table/table.html:58
+#: static/dashboard/containers/containers/table/table.html:146
+msgid "UUID"
+msgstr ""
+
+#: static/dashboard/containers/containers/table/table.html:37
 msgid "Delete Containers"
 msgstr ""
 
-#: static/dashboard/containers/containers/table/table.html:58
-#: static/dashboard/containers/containers/table/table.html:144
+#: static/dashboard/containers/containers/table/table.html:66
+#: static/dashboard/containers/containers/table/table.html:152
 msgid "Bay UUID"
 msgstr ""
 

@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-05 21:54+0000\n"
+"POT-Creation-Date: 2015-11-17 17:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-11-06 12:09+0000\n"
+"PO-Revision-Date: 2015-11-18 12:20+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22,6 +22,9 @@ msgstr "アクション"
 
 msgid "Bay"
 msgstr "ベイ"
+
+msgid "Bay Detail"
+msgstr "ベイの詳細"
 
 msgid "Bay Details"
 msgstr "ベイの詳細"
@@ -44,8 +47,14 @@ msgstr "ベイの UUID"
 msgid "BayModel"
 msgstr "ベイモデル"
 
+msgid "BayModel ID"
+msgstr "ベイモデル ID"
+
 msgid "COE"
 msgstr "COE"
+
+msgid "Choose a Bay"
+msgstr "ベイを選択してください。"
 
 msgid "Choose a Bay Model"
 msgstr "ベイモデルを選択してください。"
@@ -53,11 +62,23 @@ msgstr "ベイモデルを選択してください。"
 msgid "Command"
 msgstr "コマンド"
 
+msgid "Container Details"
+msgstr "コンテナーの詳細"
+
+msgid "Container Name"
+msgstr "コンテナー名"
+
+msgid "Container Spec"
+msgstr "コンテナーのスペック"
+
 msgid "Create"
 msgstr "作成"
 
 msgid "Create Bay"
 msgstr "ベイを作成"
+
+msgid "Create Container"
+msgstr "コンテナーの作成"
 
 msgid "Delete"
 msgstr "削除"
@@ -77,6 +98,9 @@ msgstr "説明："
 msgid "Discovery URL"
 msgstr "探索 URL"
 
+msgid "GB"
+msgstr "GB"
+
 msgid "ID"
 msgstr "ID"
 
@@ -88,6 +112,12 @@ msgstr "イメージ ID"
 
 msgid "Info"
 msgstr "情報"
+
+msgid "KB"
+msgstr "KB"
+
+msgid "MB"
+msgstr "MB"
 
 msgid "Master Count"
 msgstr "マスターの数"
@@ -107,6 +137,12 @@ msgstr "名前"
 msgid "Name of the bay to create."
 msgstr "作成するベイの名前"
 
+msgid "Name of the container image."
+msgstr "コンテナーのイメージの名前。"
+
+msgid "Name of the container to create."
+msgstr "作成するコンテナーの名前。"
+
 msgid "Node Addresses"
 msgstr "ノードのアドレス"
 
@@ -122,14 +158,26 @@ msgstr "ベイの作成のためのその他の条件を指定してください
 msgid "Please provide the name of the Bay."
 msgstr "ベイの名前を設定してください。"
 
+msgid "Please provide the name of the Container."
+msgstr "コンテナーの名前を設定してください。"
+
+msgid "Please provide the specs for this Container."
+msgstr "このコンテナーのスペックを設定してください。"
+
 msgid "Public"
 msgstr "パブリック"
 
 msgid "Registry Enabled"
 msgstr "レジストリーの有効化"
 
+msgid "Send command to the contaier in a line."
+msgstr "コンテナーに送る一行のコマンド"
+
 msgid "Size"
 msgstr "サイズ"
+
+msgid "Spec"
+msgstr "スペック"
 
 msgid "Specifies custom discovery url for node discovery."
 msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
@@ -140,8 +188,14 @@ msgstr "ベイの名前を指定し、ベイモデルを選択してください
 msgid "Specify conditions for bay creation."
 msgstr "ベイの作成条件を指定してください。"
 
+msgid "Specify container name and choose bay."
+msgstr "コンテナーの名前を指定し、ベイを選択してください。"
+
 msgid "Specify the number of master nodes and bay nodes for the bay."
 msgstr "ベイのマスターノードとベイノードの数を指定してください。"
+
+msgid "Specify the specs for the container."
+msgstr "コンテナーのスペックを指定します。"
 
 msgid "Status"
 msgstr "状態"
@@ -151,6 +205,9 @@ msgstr "TLS の無効化"
 
 msgid "The bay node count."
 msgstr "ベイノードの数"
+
+msgid "The container memory size."
+msgstr "コンテナーのメモリーサイズ"
 
 msgid "The number of master nodes for the bay."
 msgstr "ベイのマスターノードの数"
@@ -170,6 +227,9 @@ msgstr "UUID"
 
 msgid "Unable to create Bay."
 msgstr "ベイを作成できません"
+
+msgid "Unable to create Container."
+msgstr "コンテナーを作成できません。"
 
 msgid "Unable to delete the Bay."
 msgstr "ベイを削除できません。"
@@ -197,3 +257,6 @@ msgstr "ベイの一覧を取得できません。"
 
 msgid "Unable to retrieve the Containers."
 msgstr "コンテナーの一覧を取得できません。"
+
+msgid "bytes"
+msgstr "バイト"
