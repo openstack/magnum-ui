@@ -46,6 +46,12 @@
     $provide.constant('horizon.dashboard.containers.basePath', path);
 
     $routeProvider
+    .when('/containers', {
+      templateUrl: path + 'containers/table/table.html'
+    })
+    .when('/containers/:containerId', {
+      templateUrl: path + 'containers/detail/detail.html'
+    })
     .when('/baymodel', {
       templateUrl: path + 'baymodel/table/table.html'
     })
