@@ -105,6 +105,19 @@ class Bays(generic.View):
 
 
 @urls.register
+class Container(generic.View):
+    """API for retrieving a single container
+    """
+    url_regex = r'containers/containers/(?P<container_id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, container_id):
+        """Get a specific container
+        """
+        return magnum.container_show(request, container_id).to_dict()
+
+
+@urls.register
 class Containers(generic.View):
     """API for Magnum Containers
     """
