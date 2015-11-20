@@ -31,6 +31,19 @@ def change_to_id(obj):
 
 
 @urls.register
+class BayModel(generic.View):
+    """API for retrieving a single baymodel
+    """
+    url_regex = r'containers/baymodels/(?P<baymodel_id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, baymodel_id):
+        """Get a specific baymodel
+        """
+        return magnum.baymodel_show(request, baymodel_id).to_dict()
+
+
+@urls.register
 class BayModels(generic.View):
     """API for Magnum BayModels
     """
