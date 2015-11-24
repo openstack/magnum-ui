@@ -28,15 +28,33 @@
     .module('horizon.dashboard.containers', [
       'horizon.dashboard.containers.bay',
       'horizon.dashboard.containers.baymodel',
-      'horizon.dashboard.containers.containers'
+      'horizon.dashboard.containers.containers',
+      'ngRoute'
     ])
     .config(config);
 
-  config.$inject = ['$provide', '$windowProvider'];
+  config.$inject = ['$provide', '$windowProvider',
+                    '$routeProvider', '$locationProvider'];
 
-  function config($provide, $windowProvider) {
+  function config($provide, $windowProvider, $routeProvider, $locationProvider) {
+    $locationProvider
+    .html5Mode({
+      enabled: true
+    });
+
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
     $provide.constant('horizon.dashboard.containers.basePath', path);
+
+    $routeProvider
+    .when('/baymodel', {
+      templateUrl: path + 'baymodel/table/table.html'
+    })
+    .when('/baymodel/:baymodelId', {
+      templateUrl: path + 'baymodel/detail/detail.html'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
   }
 
 })();

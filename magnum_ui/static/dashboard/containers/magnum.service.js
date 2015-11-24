@@ -28,13 +28,16 @@
   function MagnumAPI(apiService, toastService) {
     var service = {
       createBay: createBay,
+      getBay: getBay,
       getBays: getBays,
       deleteBay: deleteBay,
       deleteBays: deleteBays,
+      getBayModel: getBayModel,
       getBayModels: getBayModels,
       deleteBayModel: deleteBayModel,
       deleteBayModels: deleteBayModels,
       createContainer: createContainer,
+      getContainer: getContainer,
       getContainers: getContainers,
       deleteContainer: deleteContainer,
       deleteContainers: deleteContainers,
@@ -53,6 +56,13 @@
             toastService.add('error', gettext('Unable to create Bay.'));
           });
       }
+
+    function getBay(id) {
+      return apiService.get('/api/containers/bays/' + id)
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the Bay.'));
+        });
+    }
 
     function getBays() {
       return apiService.get('/api/containers/bays/')
@@ -78,6 +88,13 @@
     ///////////////
     // BayModels //
     ///////////////
+
+    function getBayModel(id) {
+      return apiService.get('/api/containers/baymodels/' + id)
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the BayModel.'));
+        });
+    }
 
     function getBayModels() {
       return apiService.get('/api/containers/baymodels/')
@@ -109,6 +126,13 @@
       return apiService.post('/api/containers/containers/', params)
         .error(function() {
           toastService.add('error', gettext('Unable to create Container.'));
+        });
+    }
+
+    function getContainer(id) {
+      return apiService.get('/api/containers/containers/' + id)
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the Container.'));
         });
     }
 

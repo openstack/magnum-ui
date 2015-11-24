@@ -9,6 +9,10 @@
   <hz-page-header header="{$ 'Containers' | translate $}"/>
 {% endblock page_header %}
 
+{% block ng_route_base %}
+  <base href="/containers/"></base>
+{% endblock %}
+
 {% block main %}
   <ng-include src="'{{ STATIC_URL }}dashboard/containers/containers/table/table.html'"></ng-include>
 {% endblock %}

@@ -19,6 +19,10 @@ ADD_ANGULAR_MODULES = [
     'horizon.dashboard.containers'
 ]
 
+ADD_JS_FILES = [
+    'horizon/lib/angular/angular-route.js'
+]
+
 ADD_SCSS_FILES = [
     'dashboard/containers/containers.scss'
 ]

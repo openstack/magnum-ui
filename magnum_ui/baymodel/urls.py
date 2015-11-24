@@ -20,5 +20,6 @@ from magnum_ui.baymodel.views import IndexView
 
 urlpatterns = patterns(
     '',
+    url(r'^[0-9a-f\-]{36}$', IndexView.as_view(), name='detail'),
     url(r'^$', IndexView.as_view(), name='index'),
 )

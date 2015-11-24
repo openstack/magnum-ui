@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load i18n %}
-{% block title %}{% trans "Bays" %}{% endblock %}
+
+{% block title %}
+  {% trans "Bays" %}
+{% endblock %}
 
 {% block page_header %}
   <hz-page-header header="{$ 'Bays' | translate $}"/>
 {% endblock page_header %}
+
+{% block ng_route_base %}
+  <base href="/containers/"></base>
+{% endblock %}
 
 {% block main %}
   <ng-include src="'{{ STATIC_URL }}dashboard/containers/bay/table/table.html'"></ng-include>
