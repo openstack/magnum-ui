@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-11-19 06:03+0000\n"
+"POT-Creation-Date: 2015-12-03 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
 
-#: static/dashboard/containers/magnum.service.js:53
+#: static/dashboard/containers/magnum.service.js:56
 msgid "Unable to create Bay."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:60
+#: static/dashboard/containers/magnum.service.js:63
+msgid "Unable to retrieve the Bay."
+msgstr ""
+
+#: static/dashboard/containers/magnum.service.js:70
 msgid "Unable to retrieve the Bays."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:67
+#: static/dashboard/containers/magnum.service.js:77
 msgid "Unable to delete the Bay."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:74
+#: static/dashboard/containers/magnum.service.js:84
 msgid "Unable to delete the Bays."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:85
+#: static/dashboard/containers/magnum.service.js:95
+msgid "Unable to retrieve the BayModel."
+msgstr ""
+
+#: static/dashboard/containers/magnum.service.js:102
 msgid "Unable to retrieve the BayModels."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:92
+#: static/dashboard/containers/magnum.service.js:109
 msgid "Unable to delete the BayModel."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:99
+#: static/dashboard/containers/magnum.service.js:116
 msgid "Unable to delete the BayModels."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:111
+#: static/dashboard/containers/magnum.service.js:128
 msgid "Unable to create Container."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:118
+#: static/dashboard/containers/magnum.service.js:135
+msgid "Unable to retrieve the Container."
+msgstr ""
+
+#: static/dashboard/containers/magnum.service.js:142
 msgid "Unable to retrieve the Containers."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:125
+#: static/dashboard/containers/magnum.service.js:149
 msgid "Unable to delete the Container."
 msgstr ""
 
-#: static/dashboard/containers/magnum.service.js:132
+#: static/dashboard/containers/magnum.service.js:156
 msgid "Unable to delete the Containers."
 msgstr ""
 
@@ -143,6 +155,7 @@ msgstr ""
 #: static/dashboard/containers/bay/table/table.controller.js:56
 #: static/dashboard/containers/bay/table/table.html:56
 #: static/dashboard/containers/bay/table/table.html:138
+#: static/dashboard/containers/baymodel/detail/detail.html:134
 #: static/dashboard/containers/baymodel/table/table.controller.js:56
 #: static/dashboard/containers/baymodel/table/table.html:51
 #: static/dashboard/containers/baymodel/table/table.html:124
@@ -151,6 +164,7 @@ msgid "ID"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:35
+#: static/dashboard/containers/baymodel/detail/detail.html:16
 #: static/dashboard/containers/baymodel/table/table.controller.js:61
 #: static/dashboard/containers/baymodel/table/table.html:55
 #: static/dashboard/containers/baymodel/table/table.html:127
@@ -158,20 +172,24 @@ msgid "COE"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:37
+#: static/dashboard/containers/baymodel/detail/detail.html:46
 #: static/dashboard/containers/baymodel/table/table.html:130
 msgid "Image ID"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:39
+#: static/dashboard/containers/baymodel/detail/detail.html:28
 msgid "Public"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:41
+#: static/dashboard/containers/baymodel/detail/detail.html:32
 #: static/dashboard/containers/baymodel/table/table.html:133
 msgid "Registry Enabled"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:43
+#: static/dashboard/containers/baymodel/detail/detail.html:36
 msgid "TLS Disabled"
 msgstr ""
 
@@ -277,6 +295,102 @@ msgstr ""
 
 #: static/dashboard/containers/bay/table/table.html:157
 msgid "Node Addresses"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:4
+msgid "Bay Models"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:9
+msgid "Overview"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:12
+msgid "Cluster Type"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:20
+msgid "Cluster Distro"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:24
+msgid "Server Type"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:42
+msgid "Node Spec"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:50
+msgid "Flavor ID"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:54
+msgid "Master Flavor ID"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:58
+msgid "Docker Volume Size"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:59
+msgid "{$ ctrl.baymodel.docker_volume_size $} GB"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:62
+msgid "Keypair ID"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:66
+msgid "SSH Authorized Key"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:74
+msgid "Network"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:78
+msgid "Network Driver"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:82
+msgid "HTTP Proxy"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:86
+msgid "HTTPS Proxy"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:90
+msgid "No Proxy"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:94
+msgid "External Network ID"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:98
+msgid "Fixed Network"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:102
+msgid "DNS"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:108
+msgid "Labels"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:122
+msgid "Record Properties"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:126
+msgid "Created"
+msgstr ""
+
+#: static/dashboard/containers/baymodel/detail/detail.html:130
+msgid "Updated"
 msgstr ""
 
 #: static/dashboard/containers/baymodel/table/table.html:30
