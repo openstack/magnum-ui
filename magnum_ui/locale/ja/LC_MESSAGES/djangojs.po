@@ -3,16 +3,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-03 00:07+0000\n"
+"POT-Creation-Date: 2015-12-07 15:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-12-03 12:58+0000\n"
+"PO-Revision-Date: 2015-12-08 12:30+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 3.7.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "API Address"
+msgstr "API アドレス"
 
 msgid "API Server Port"
 msgstr "API サーバーのポート"
@@ -22,6 +25,9 @@ msgstr "アクション"
 
 msgid "Bay"
 msgstr "ベイ"
+
+msgid "Bay Create Timeout"
+msgstr "ベイ作成のタイムアウト"
 
 msgid "Bay Detail"
 msgstr "ベイの詳細"
@@ -158,6 +164,9 @@ msgstr "ラベル"
 msgid "MB"
 msgstr "MB"
 
+msgid "Master Addresses"
+msgstr "マスターのアドレス"
+
 msgid "Master Count"
 msgstr "マスターの数"
 
@@ -202,6 +211,9 @@ msgstr "ノードの数"
 
 msgid "Node Spec"
 msgstr "ノードのスペック"
+
+msgid "Nodes"
+msgstr "ノード"
 
 msgid "Overview"
 msgstr "概要"

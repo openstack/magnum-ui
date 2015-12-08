@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-03 06:01+0000\n"
+"POT-Creation-Date: 2015-12-08 06:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,6 +130,7 @@ msgid "Name of the bay to create."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:15
+#: static/dashboard/containers/bay/detail/detail.html:12
 msgid "Bay Model"
 msgstr ""
 
@@ -138,6 +139,7 @@ msgid "Bay Model Detail"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:31
+#: static/dashboard/containers/bay/detail/detail.html:16
 #: static/dashboard/containers/bay/table/table.controller.js:51
 #: static/dashboard/containers/bay/table/table.html:52
 #: static/dashboard/containers/bay/table/table.html:135
@@ -152,6 +154,8 @@ msgid "Name"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:33
+#: static/dashboard/containers/bay/detail/detail.html:20
+#: static/dashboard/containers/bay/detail/detail.html:97
 #: static/dashboard/containers/bay/table/table.controller.js:56
 #: static/dashboard/containers/bay/table/table.html:56
 #: static/dashboard/containers/bay/table/table.html:138
@@ -164,6 +168,7 @@ msgid "ID"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:35
+#: static/dashboard/containers/bay/detail/detail.html:24
 #: static/dashboard/containers/baymodel/detail/detail.html:16
 #: static/dashboard/containers/baymodel/table/table.controller.js:61
 #: static/dashboard/containers/baymodel/table/table.html:55
@@ -172,6 +177,7 @@ msgid "COE"
 msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:37
+#: static/dashboard/containers/bay/detail/detail.html:28
 #: static/dashboard/containers/baymodel/detail/detail.html:46
 #: static/dashboard/containers/baymodel/table/table.html:130
 msgid "Image ID"
@@ -202,6 +208,7 @@ msgid "Specify conditions for bay creation."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/misc/misc.html:2
+#: static/dashboard/containers/bay/detail/detail.html:66
 msgid "Miscellaneous"
 msgstr ""
 
@@ -210,6 +217,7 @@ msgid "Please provide the miscellaneous for creation of the Bay."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/misc/misc.html:9
+#: static/dashboard/containers/bay/detail/detail.html:70
 msgid "Discovery URL"
 msgstr ""
 
@@ -241,6 +249,7 @@ msgid "Please provide the count of the master and node in this Bay."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/size/size.html:9
+#: static/dashboard/containers/bay/detail/detail.html:38
 #: static/dashboard/containers/bay/table/table.controller.js:66
 #: static/dashboard/containers/bay/table/table.html:64
 #: static/dashboard/containers/bay/table/table.html:151
@@ -253,6 +262,7 @@ msgid "The bay node count."
 msgstr ""
 
 #: static/dashboard/containers/bay/create/size/size.html:16
+#: static/dashboard/containers/bay/detail/detail.html:42
 #: static/dashboard/containers/bay/table/table.controller.js:71
 #: static/dashboard/containers/bay/table/table.html:68
 #: static/dashboard/containers/bay/table/table.html:154
@@ -264,6 +274,61 @@ msgstr ""
 msgid "The number of master nodes for the bay."
 msgstr ""
 
+#: static/dashboard/containers/bay/detail/detail.html:4
+msgid "Bays"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:9
+#: static/dashboard/containers/baymodel/detail/detail.html:9
+msgid "Overview"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:34
+msgid "Nodes"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:46
+msgid "API Address"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:50
+msgid "Master Addresses"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:56
+#: static/dashboard/containers/bay/table/table.html:157
+msgid "Node Addresses"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:74
+msgid "Bay Create Timeout"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:78
+msgid ""
+"<div>\n"
+"                  Infinite</div>\n"
+"                  {$ ctrl.bay.bay_create_timeout $} minute"
+msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: static/dashboard/containers/bay/detail/detail.html:85
+#: static/dashboard/containers/baymodel/detail/detail.html:122
+msgid "Record Properties"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:89
+#: static/dashboard/containers/baymodel/detail/detail.html:126
+msgid "Created"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:93
+#: static/dashboard/containers/baymodel/detail/detail.html:130
+msgid "Updated"
+msgstr ""
+
+#: static/dashboard/containers/bay/detail/detail.html:101
 #: static/dashboard/containers/bay/table/table.controller.js:61
 #: static/dashboard/containers/bay/table/table.html:60
 #: static/dashboard/containers/bay/table/table.html:141
@@ -293,16 +358,8 @@ msgstr ""
 msgid "BayModel"
 msgstr ""
 
-#: static/dashboard/containers/bay/table/table.html:157
-msgid "Node Addresses"
-msgstr ""
-
 #: static/dashboard/containers/baymodel/detail/detail.html:4
 msgid "Bay Models"
-msgstr ""
-
-#: static/dashboard/containers/baymodel/detail/detail.html:9
-msgid "Overview"
 msgstr ""
 
 #: static/dashboard/containers/baymodel/detail/detail.html:12
@@ -379,18 +436,6 @@ msgstr ""
 
 #: static/dashboard/containers/baymodel/detail/detail.html:108
 msgid "Labels"
-msgstr ""
-
-#: static/dashboard/containers/baymodel/detail/detail.html:122
-msgid "Record Properties"
-msgstr ""
-
-#: static/dashboard/containers/baymodel/detail/detail.html:126
-msgid "Created"
-msgstr ""
-
-#: static/dashboard/containers/baymodel/detail/detail.html:130
-msgid "Updated"
 msgstr ""
 
 #: static/dashboard/containers/baymodel/table/table.html:30
