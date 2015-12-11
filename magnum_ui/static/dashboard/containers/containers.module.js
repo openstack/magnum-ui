@@ -26,47 +26,47 @@
    */
   angular
     .module('horizon.dashboard.containers', [
-      'horizon.dashboard.containers.bay',
-      'horizon.dashboard.containers.baymodel',
+      'horizon.dashboard.containers.bays',
+      'horizon.dashboard.containers.baymodels',
       'horizon.dashboard.containers.containers',
       'ngRoute'
     ])
-    .config(config);
+    .config(config)
 
   config.$inject = ['$provide', '$windowProvider',
                     '$routeProvider', '$locationProvider'];
 
   function config($provide, $windowProvider, $routeProvider, $locationProvider) {
+    /* FIXME (shu-mutou): remove settings for $locationProvider if following patch is merged.
+     * https://review.openstack.org/#/c/260741/
+     */
     $locationProvider
-    .html5Mode({
-      enabled: true
-    });
+      .html5Mode({
+        enabled: true
+      })
+      .hashPrefix('!');
 
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
     $provide.constant('horizon.dashboard.containers.basePath', path);
 
     $routeProvider
-    .when('/containers', {
+    .when('/project/bays/containers', {
       templateUrl: path + 'containers/table/table.html'
     })
-    .when('/containers/:containerId', {
+    .when('/project/bays/containers/:containerId', {
       templateUrl: path + 'containers/detail/detail.html'
     })
-    .when('/baymodel', {
-      templateUrl: path + 'baymodel/table/table.html'
+    .when('/project/baymodels', {
+      templateUrl: path + 'baymodels/table/table.html'
     })
-    .when('/baymodel/:baymodelId', {
-      templateUrl: path + 'baymodel/detail/detail.html'
+    .when('/project/baymodels/:baymodelId', {
+      templateUrl: path + 'baymodels/detail/detail.html'
     })
-    .when('/', {
-      templateUrl: path + 'bay/table/table.html'
+    .when('/project/bays', {
+      templateUrl: path + 'bays/table/table.html'
     })
-    .when('/:bayId', {
-      templateUrl: path + 'bay/detail/detail.html'
-    })
-    .otherwise({
-      redirectTo: '/'
+    .when('/project/bays/:bayId', {
+      templateUrl: path + 'bays/detail/detail.html'
     });
   }
-
 })();

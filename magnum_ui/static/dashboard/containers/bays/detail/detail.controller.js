@@ -17,50 +17,27 @@
   "use strict";
 
   angular
-    .module('horizon.dashboard.containers.containers')
-    .controller('ContainerDetailController', ContainerDetailController);
+    .module('horizon.dashboard.containers.bays')
+    .controller('BayDetailController', BayDetailController);
 
-  ContainerDetailController.$inject = [
+  BayDetailController.$inject = [
     '$window',
     'horizon.app.core.openstack-service-api.magnum',
     '$routeParams'
   ];
 
-  function ContainerDetailController($window, magnum, $routeParams) {
+  function BayDetailController($window, magnum, $routeParams) {
     var ctrl = this;
-    ctrl.container = {};
     ctrl.bay = {};
     ctrl.baymodel = {};
-    ctrl.memoryunits = { "b": gettext("bytes"),
-        "k": gettext("KB"),
-        "m": gettext("MB"),
-        "g": gettext("GB")};
 
-
-    var containerId = $routeParams.containerId;
+    var bayId = $routeParams.bayId;
 
     init();
 
     function init() {
       // Load the elements that are used in the overview.
-      magnum.getContainer(containerId).success(onGetContainer);
-    }
-
-    function onGetContainer(container) {
-      ctrl.container = container;
-      magnum.getBay(ctrl.container.bay_uuid).success(onGetBay);
-
-      ctrl.container.memorysize = "";
-      ctrl.container.memoryunit = "";
-      if(ctrl.container.memory !== null){
-        // separate number and unit, then using gettext() to unit.
-        var regex = /(\d+)([bkmg]?)/;
-        var match = regex.exec(ctrl.container.memory);
-        ctrl.container.memorysize = match[1];
-        if(match[2]){
-          ctrl.container.memoryunit = ctrl.memoryunits[match[2]];
-        }
-      }
+      magnum.getBay(bayId).success(onGetBay);
     }
 
     function onGetBay(bay) {

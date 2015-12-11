@@ -1,7 +1,7 @@
 <div class="content" ng-controller="ContainerDetailController as ctrl">
   <div class="page-header">
     <ol class="breadcrumb">
-      <li><a href="./containers" translate>Containers</a></li>
+      <li><a ng-href="project/bays/containers" translate>Containers</a></li>
       <li class="active">{$ ctrl.container.name $}</li>
     </ol>
   </div>
@@ -32,7 +32,7 @@
           <dl class="dl-horizontal">
             <div class="{$ propertyClasses $}">
               <dt translate>Name</dt>
-              <dd><a ng-href="{$ ctrl.bay.uuid $}">{$ ctrl.bay.name $}</a></dd>
+              <dd><a ng-href="project/bays/{$ ctrl.bay.uuid $}">{$ ctrl.bay.name $}</a></dd>
             </div>
             <div class="{$ propertyClasses $}">
               <dt translate>ID</dt>
@@ -60,7 +60,7 @@
           <dl class="dl-horizontal">
             <div class="{$ propertyClasses $}">
               <dt translate>Name</dt>
-              <dd><a ng-href="baymodel/{$ ctrl.baymodel.uuid $}">{$ ctrl.baymodel.name $}</a></dd>
+              <dd><a ng-href="project/baymodels/{$ ctrl.baymodel.uuid $}">{$ ctrl.baymodel.name $}</a></dd>
             </div>
             <div class="{$ propertyClasses $}">
               <dt translate>ID</dt>
