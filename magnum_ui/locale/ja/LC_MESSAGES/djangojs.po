@@ -3,11 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-07 15:07+0000\n"
+"POT-Creation-Date: 2015-12-14 13:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-12-08 12:30+0000\n"
+"PO-Revision-Date: 2015-12-08 11:58+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -58,6 +58,9 @@ msgstr "ベイモデル"
 
 msgid "BayModel ID"
 msgstr "ベイモデル ID"
+
+msgid "Bays"
+msgstr "ベイ"
 
 msgid "COE"
 msgstr "COE"
@@ -148,6 +151,9 @@ msgstr "イメージ"
 
 msgid "Image ID"
 msgstr "イメージ ID"
+
+msgid "Infinite"
+msgstr "無制限"
 
 msgid "Info"
 msgstr "情報"
@@ -350,6 +356,10 @@ msgstr "更新時刻"
 
 msgid "bytes"
 msgstr "バイト"
+
+msgid "{$ ctrl.bay.bay_create_timeout $} minute"
+msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
+msgstr[0] "{$ ctrl.bay.bay_create_timeout $} 分"
 
 msgid "{$ ctrl.baymodel.docker_volume_size $} GB"
 msgstr "{$ ctrl.baymodel.docker_volume_size $} GB"
