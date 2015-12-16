@@ -1,13 +1,13 @@
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2015. #zanata
+# KATO Tomoyuki <kato.tomoyuki@jp.fujitsu.com>, 2015. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-14 13:47+0000\n"
+"POT-Creation-Date: 2015-12-15 14:47+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-12-08 11:58+0000\n"
+"PO-Revision-Date: 2015-12-15 08:00+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -69,7 +69,7 @@ msgid "Choose a Bay"
 msgstr "ベイを選択してください。"
 
 msgid "Choose a Bay Model"
-msgstr "ベイモデルを選択してください。"
+msgstr "ベイモデルの選択"
 
 msgid "Cluster Distro"
 msgstr "クラスターのディストリビューション"
@@ -93,7 +93,7 @@ msgid "Create"
 msgstr "作成"
 
 msgid "Create Bay"
-msgstr "ベイを作成"
+msgstr "ベイの作成"
 
 msgid "Create Container"
 msgstr "コンテナーの作成"
@@ -117,7 +117,7 @@ msgid "Delete Containers"
 msgstr "コンテナーの削除"
 
 msgid "Description:"
-msgstr "説明："
+msgstr "説明:"
 
 msgid "Discovery URL"
 msgstr "探索 URL"
@@ -138,10 +138,10 @@ msgid "GB"
 msgstr "GB"
 
 msgid "HTTP Proxy"
-msgstr "HTTP プロキシ"
+msgstr "HTTP プロキシー"
 
 msgid "HTTPS Proxy"
-msgstr "HTTPS プロキシ"
+msgstr "HTTPS プロキシー"
 
 msgid "ID"
 msgstr "ID"
@@ -195,7 +195,7 @@ msgid "Name of the bay to create."
 msgstr "作成するベイの名前"
 
 msgid "Name of the container image."
-msgstr "コンテナーのイメージの名前。"
+msgstr "コンテナーのイメージの名前"
 
 msgid "Name of the container to create."
 msgstr "作成するコンテナーの名前。"
@@ -207,7 +207,7 @@ msgid "Network Driver"
 msgstr "ネットワークドライバー"
 
 msgid "No Proxy"
-msgstr "プロキシの例外"
+msgstr "プロキシーの例外"
 
 msgid "Node Addresses"
 msgstr "ノードのアドレス"
@@ -243,7 +243,7 @@ msgid "Public"
 msgstr "パブリック"
 
 msgid "Record Properties"
-msgstr "レコードのプロパティ"
+msgstr "レコードのプロパティー"
 
 msgid "Registry Enabled"
 msgstr "レジストリーの有効化"
@@ -300,8 +300,8 @@ msgid ""
 "The timeout for bay creation in minutes. Set to 0 for no timeout. The "
 "default is no timeout."
 msgstr ""
-"ベイの作成のタイムアウトの分数。タイムアウトしないためには、0 を設定設定しま"
-"す。デフォルトはタイムアウトしません。"
+"ベイの作成のタイムアウトの分数。タイムアウトしないためには、0 を設定します。"
+"デフォルトはタイムアウトしません。"
 
 msgid "Timeout"
 msgstr "タイムアウト"
@@ -310,7 +310,7 @@ msgid "UUID"
 msgstr "UUID"
 
 msgid "Unable to create Bay."
-msgstr "ベイを作成できません"
+msgstr "ベイを作成できません。"
 
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
