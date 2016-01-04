@@ -32,21 +32,18 @@ def change_to_id(obj):
 
 @urls.register
 class BayModel(generic.View):
-    """API for retrieving a single baymodel
-    """
+    """API for retrieving a single baymodel"""
     url_regex = r'containers/baymodels/(?P<baymodel_id>[^/]+)$'
 
     @rest_utils.ajax()
     def get(self, request, baymodel_id):
-        """Get a specific baymodel
-        """
+        """Get a specific baymodel"""
         return magnum.baymodel_show(request, baymodel_id).to_dict()
 
 
 @urls.register
 class BayModels(generic.View):
-    """API for Magnum BayModels
-    """
+    """API for Magnum BayModels"""
     url_regex = r'containers/baymodels/$'
 
     @rest_utils.ajax()
@@ -82,21 +79,18 @@ class BayModels(generic.View):
 
 @urls.register
 class Bay(generic.View):
-    """API for retrieving a single bay
-    """
+    """API for retrieving a single bay"""
     url_regex = r'containers/bays/(?P<bay_id>[^/]+)$'
 
     @rest_utils.ajax()
     def get(self, request, bay_id):
-        """Get a specific bay
-        """
+        """Get a specific bay"""
         return magnum.bay_show(request, bay_id).to_dict()
 
 
 @urls.register
 class Bays(generic.View):
-    """API for Magnum Bays
-    """
+    """API for Magnum Bays"""
     url_regex = r'containers/bays/$'
 
     @rest_utils.ajax()
@@ -132,21 +126,18 @@ class Bays(generic.View):
 
 @urls.register
 class Container(generic.View):
-    """API for retrieving a single container
-    """
+    """API for retrieving a single container"""
     url_regex = r'containers/containers/(?P<container_id>[^/]+)$'
 
     @rest_utils.ajax()
     def get(self, request, container_id):
-        """Get a specific container
-        """
+        """Get a specific container"""
         return magnum.container_show(request, container_id).to_dict()
 
 
 @urls.register
 class Containers(generic.View):
-    """API for Magnum Containers
-    """
+    """API for Magnum Containers"""
     url_regex = r'containers/containers/$'
 
     @rest_utils.ajax()

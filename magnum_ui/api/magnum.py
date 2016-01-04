@@ -108,6 +108,7 @@ def bay_show(request, id):
 
 def container_create(request, bay_uuid, **kwargs):
     """Creates a container object
+
     :param request: Request context
     :param bay_uuid: ID of a bay (Required)
     :param kwargs: Image ID, Name, Command, Memory
@@ -118,6 +119,7 @@ def container_create(request, bay_uuid, **kwargs):
 
 def container_delete(request, id):
     """Deletes a container
+
     :param request: Request context
     :param id: The ID of the container to delete
     """
@@ -127,6 +129,7 @@ def container_delete(request, id):
 def container_list(request, marker=None, limit=None, sort_key=None,
                    sort_dir=None, detail=False):
     """Lists all containers
+
     :param request: Request context
     :param marker: Optional, ID of last container in previous results
     :param limit: '==0' return all, '> 0' specifies max, None respects max
@@ -142,6 +145,7 @@ def container_list(request, marker=None, limit=None, sort_key=None,
 
 def container_show(request, id):
     """Get an individual container
+
     :param request: Request context
     :param id: ID of the container to get
     """
