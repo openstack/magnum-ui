@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2015 ORGANIZATION
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-15 06:02+0000\n"
+"POT-Creation-Date: 2016-01-04 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.1.1\n"
+"Generated-By: Babel 2.2.0\n"
 
 #: static/dashboard/containers/magnum.service.js:56
 msgid "Unable to create Bay."
@@ -131,6 +131,7 @@ msgstr ""
 
 #: static/dashboard/containers/bay/create/info/info.html:15
 #: static/dashboard/containers/bay/detail/detail.html:12
+#: static/dashboard/containers/containers/detail/detail.html:58
 msgid "Bay Model"
 msgstr ""
 
@@ -147,6 +148,8 @@ msgstr ""
 #: static/dashboard/containers/baymodel/table/table.html:47
 #: static/dashboard/containers/baymodel/table/table.html:121
 #: static/dashboard/containers/containers/create/info/info.html:31
+#: static/dashboard/containers/containers/detail/detail.html:34
+#: static/dashboard/containers/containers/detail/detail.html:62
 #: static/dashboard/containers/containers/table/table.controller.js:51
 #: static/dashboard/containers/containers/table/table.html:54
 #: static/dashboard/containers/containers/table/table.html:143
@@ -164,6 +167,9 @@ msgstr ""
 #: static/dashboard/containers/baymodel/table/table.html:51
 #: static/dashboard/containers/baymodel/table/table.html:124
 #: static/dashboard/containers/containers/create/info/info.html:33
+#: static/dashboard/containers/containers/detail/detail.html:38
+#: static/dashboard/containers/containers/detail/detail.html:66
+#: static/dashboard/containers/containers/detail/detail.html:92
 msgid "ID"
 msgstr ""
 
@@ -173,6 +179,7 @@ msgstr ""
 #: static/dashboard/containers/baymodel/table/table.controller.js:61
 #: static/dashboard/containers/baymodel/table/table.html:55
 #: static/dashboard/containers/baymodel/table/table.html:127
+#: static/dashboard/containers/containers/detail/detail.html:70
 msgid "COE"
 msgstr ""
 
@@ -180,6 +187,7 @@ msgstr ""
 #: static/dashboard/containers/bay/detail/detail.html:28
 #: static/dashboard/containers/baymodel/detail/detail.html:46
 #: static/dashboard/containers/baymodel/table/table.html:130
+#: static/dashboard/containers/containers/detail/detail.html:74
 msgid "Image ID"
 msgstr ""
 
@@ -254,6 +262,7 @@ msgstr ""
 #: static/dashboard/containers/bay/table/table.html:64
 #: static/dashboard/containers/bay/table/table.html:151
 #: static/dashboard/containers/containers/create/info/info.html:37
+#: static/dashboard/containers/containers/detail/detail.html:46
 msgid "Master Count"
 msgstr ""
 
@@ -267,6 +276,7 @@ msgstr ""
 #: static/dashboard/containers/bay/table/table.html:68
 #: static/dashboard/containers/bay/table/table.html:154
 #: static/dashboard/containers/containers/create/info/info.html:39
+#: static/dashboard/containers/containers/detail/detail.html:50
 msgid "Node Count"
 msgstr ""
 
@@ -280,6 +290,7 @@ msgstr ""
 
 #: static/dashboard/containers/bay/detail/detail.html:9
 #: static/dashboard/containers/baymodel/detail/detail.html:9
+#: static/dashboard/containers/containers/detail/detail.html:9
 msgid "Overview"
 msgstr ""
 
@@ -316,16 +327,19 @@ msgstr[1] ""
 
 #: static/dashboard/containers/bay/detail/detail.html:85
 #: static/dashboard/containers/baymodel/detail/detail.html:122
+#: static/dashboard/containers/containers/detail/detail.html:80
 msgid "Record Properties"
 msgstr ""
 
 #: static/dashboard/containers/bay/detail/detail.html:89
 #: static/dashboard/containers/baymodel/detail/detail.html:126
+#: static/dashboard/containers/containers/detail/detail.html:84
 msgid "Created"
 msgstr ""
 
 #: static/dashboard/containers/bay/detail/detail.html:93
 #: static/dashboard/containers/baymodel/detail/detail.html:130
+#: static/dashboard/containers/containers/detail/detail.html:88
 msgid "Updated"
 msgstr ""
 
@@ -333,6 +347,8 @@ msgstr ""
 #: static/dashboard/containers/bay/table/table.controller.js:61
 #: static/dashboard/containers/bay/table/table.html:60
 #: static/dashboard/containers/bay/table/table.html:141
+#: static/dashboard/containers/containers/detail/detail.html:42
+#: static/dashboard/containers/containers/detail/detail.html:96
 #: static/dashboard/containers/containers/table/table.controller.js:61
 #: static/dashboard/containers/containers/table/table.html:62
 #: static/dashboard/containers/containers/table/table.html:149
@@ -449,6 +465,7 @@ msgid "Create Container"
 msgstr ""
 
 #: static/dashboard/containers/containers/create/create-workflow.service.js:41
+#: static/dashboard/containers/containers/detail/detail.html:12
 msgid "Spec"
 msgstr ""
 
@@ -478,6 +495,7 @@ msgid "Name of the container to create."
 msgstr ""
 
 #: static/dashboard/containers/containers/create/info/info.html:15
+#: static/dashboard/containers/containers/detail/detail.html:30
 #: static/dashboard/containers/containers/table/table.controller.js:66
 msgid "Bay"
 msgstr ""
@@ -491,18 +509,22 @@ msgid "BayModel ID"
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/container.spec.controller.js:41
+#: static/dashboard/containers/containers/detail/detail.controller.js:34
 msgid "bytes"
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/container.spec.controller.js:42
+#: static/dashboard/containers/containers/detail/detail.controller.js:35
 msgid "KB"
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/container.spec.controller.js:43
+#: static/dashboard/containers/containers/detail/detail.controller.js:36
 msgid "MB"
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/container.spec.controller.js:44
+#: static/dashboard/containers/containers/detail/detail.controller.js:37
 msgid "GB"
 msgstr ""
 
@@ -519,6 +541,7 @@ msgid "Please provide the specs for this Container."
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/spec.html:9
+#: static/dashboard/containers/containers/detail/detail.html:16
 #: static/dashboard/containers/containers/table/table.controller.js:71
 #: static/dashboard/containers/containers/table/table.html:70
 #: static/dashboard/containers/containers/table/table.html:155
@@ -530,6 +553,7 @@ msgid "Name of the container image."
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/spec.html:17
+#: static/dashboard/containers/containers/detail/detail.html:20
 #: static/dashboard/containers/containers/table/table.controller.js:76
 #: static/dashboard/containers/containers/table/table.html:74
 #: static/dashboard/containers/containers/table/table.html:158
@@ -541,6 +565,7 @@ msgid "The container memory size."
 msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/spec.html:35
+#: static/dashboard/containers/containers/detail/detail.html:24
 #: static/dashboard/containers/containers/table/table.controller.js:81
 #: static/dashboard/containers/containers/table/table.html:161
 msgid "Command"
@@ -548,6 +573,10 @@ msgstr ""
 
 #: static/dashboard/containers/containers/create/spec/spec.html:36
 msgid "Send command to the contaier in a line."
+msgstr ""
+
+#: static/dashboard/containers/containers/detail/detail.html:4
+msgid "Containers"
 msgstr ""
 
 #: static/dashboard/containers/containers/table/table.controller.js:56
