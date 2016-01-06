@@ -1,7 +1,7 @@
-<table ng-controller="containersContainersTableController as table"
+<table ng-controller="containersBayModelsTableController as table"
   hz-table ng-cloak
-  st-table="table.icontainers"
-  st-safe-src="table.containers"
+  st-table="table.ibaymodels"
+  st-safe-src="table.baymodels"
   default-sort="name"
   default-sort-reverse="false"
   class="table-striped table-rsp table-detail modern">
@@ -14,27 +14,20 @@
     <tr>
       <th colspan="100" class="search-header">
         <hz-magic-search-bar group-classes="input-group-sm" icon-classes="fa-search"
-          filter-facets="table.containerFacets">
+          filter-facets="table.baymodelFacets">
         </hz-magic-search-bar>
       </th>
     </tr>
     <tr>
       <th colspan="100" class="action-col">
         <action-list class="btn-addon">
-          <button
-            class="btn btn-default btn-sm btn-launch ng-scope"
-            ng-controller="containersContainerModalController as modal"
-            ng-click="modal.openContainerCreateWizard({successUrl: '/project/bays/containers/'})">
-            <span class="fa fa-plus"> <translate>Create Container</translate></span>
-          </button>
-        </action-list>
-        <action-list class="btn-addon">
+
           <action
             action-classes="'btn btn-default btn-sm btn-danger'"
             disabled="numSelected === 0"
             callback="table.batchDelete">
             <i class="fa fa-trash-o"></i>
-            <translate>Delete Containers</translate>
+            <translate>Delete Bay Models</translate>
           </action>
         </action-list>
       </th>
@@ -44,8 +37,8 @@
       The headers for the table columns
     -->
     <tr>
-      <th class=select-col>
-        <input type="checkbox" hz-select-all="table.icontainers">
+      <th>
+        <input type="checkbox" hz-select-all="table.ibaymodels">
       </th>
 
       <th class="expander"></th>
@@ -55,23 +48,11 @@
       </th>
 
       <th class="rsp-p1" st-sort="id" >
-        <translate>UUID</translate>
+        <translate>ID</translate>
       </th>
 
-      <th class="rsp-p1" st-sort="status" >
-        <translate>Status</translate>
-      </th>
-
-      <th class="rsp-p3" st-sort="bay" >
-        <translate>Bay UUID</translate>
-      </th>
-
-      <th class="rsp-p2" st-sort="image" >
-        <translate>Image</translate>
-      </th>
-
-      <th class="rsp-p3" st-sort="memory" >
-        <translate>Memory</translate>
+      <th class="rsp-p2" st-sort="coe" >
+        <translate>COE</translate>
       </th>
 
       <th class="action-col">
@@ -89,13 +70,13 @@
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="c in table.icontainers track by c.id"
-        nt-class="{'st-selected': checked[c.id]}">
+    <tr ng-repeat-start="bm in table.ibaymodels track by bm.id"
+        nt-class="{'st-selected': checked[bm.id]}">
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="selected[c.id].checked"
-          hz-select="c">
+          ng-model="selected[bm.id].checked"
+          hz-select="bm">
       </td>
 
       <td class="expander">
@@ -105,12 +86,9 @@
         </i>
       </td>
 
-      <td class="rsp-p1">{$ c.name $}</td>
-      <td class="rsp-p1">{$ c.id $}</td>
-      <td class="rsp-p1">{$ c.status $}</td>
-      <td class="rsp-p3">{$ c.bay_uuid $}</td>
-      <td class="rsp-p2">{$ c.image $}</td>
-      <td class="rsp-p3">{$ c.memory $}</td>
+      <td class="rsp-p1">{$ bm.name $}</td>
+      <td class="rsp-p1">{$ bm.id $}</td>
+      <td class="rsp-p2">{$ bm.coe $}</td>
 
       <td class="action-col">
         <!--
@@ -123,7 +101,7 @@
           <action
             button-type="split-button"
             action-classes="'btn btn-default btn-danger btn-sm'"
-            callback="table.singleDelete" item="c">
+            callback="table.singleDelete" item="bm">
               <translate>Delete</translate>
           </action>
 
@@ -141,33 +119,26 @@
         <dl class=dl-horizontal>
 
           <dt><translate>Name</translate></dt>
-          <dd><a ng-href="project/bays/containers/{$ c.id $}">{$ c.name $}</a></dd>
+          <dd><a ng-href="project/baymodels/{$ bm.id $}">{$ bm.name $}</a></dd>
 
-          <dt><translate>UUID</translate></dt>
-          <dd>{$ c.id $}</dd>
+          <dt><translate>ID</translate></dt>
+          <dd>{$ bm.id $}</dd>
 
-          <dt><translate>Status</translate></dt>
-          <dd>{$ c.status $}</dd>
+          <dt><translate>COE</translate></dt>
+          <dd>{$ bm.coe $}</dd>
 
-          <dt><translate>Bay UUID</translate></dt>
-          <dd>{$ c.bay_uuid $}</dd>
+          <dt><translate>Image ID</translate></dt>
+          <dd>{$ bm.image_id $}</dd>
 
-          <dt><translate>Image</translate></dt>
-          <dd>{$ c.image $}</dd>
-
-          <dt><translate>Memory</translate></dt>
-          <dd>{$ c.memory $}</dd>
-
-          <dt><translate>Command</translate></dt>
-          <dd>{$ c.command $}</dd>
-
+          <dt><translate>Registry Enabled</translate></dt>
+          <dd>{$ bm.registry_enabled $}</dd>
         </dl>
       </td>
     </tr>
   </tbody>
   <tfoot>
     <td colspan="100">
-        <span class="display">{$ table.icontainers.length|itemCount $}</span>
+        <span class="display">{$ table.ibaymodels.length|itemCount $}</span>
           <div st-pagination="" st-items-by-page="10"
             st-displayed-pages="10"></div>
         </td>
