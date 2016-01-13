@@ -25,6 +25,7 @@
 from __future__ import print_function
 
 import os
+import subprocess
 import sys
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -275,8 +276,10 @@ html_static_path = ['_static']
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
 # html_last_updated_fmt = '%b %d, %Y'
-git_cmd = "git log --pretty=format:'%ad, commit %h' --date=local -n1"
-html_last_updated_fmt = os.popen(git_cmd).read()
+git_cmd = ["git", "log", "--pretty=format:'%ad, commit %h'", "--date=local",
+           "-n1"]
+html_last_updated_fmt = subprocess.check_output(git_cmd,
+                                                stdin=subprocess.PIPE)
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
