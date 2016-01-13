@@ -1,31 +1,31 @@
 # Translations template for PROJECT.
-# Copyright (C) 2015 ORGANIZATION
+# Copyright (C) 2016 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-08-12 00:02+0100\n"
+"POT-Creation-Date: 2016-01-13 06:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.0\n"
+"Generated-By: Babel 2.2.0\n"
 
-#: dashboard.py:22
-msgid "Containers"
+#: content/baymodels/panel.py:20 templates/baymodels/index.html:5
+msgid "Bay Models"
 msgstr ""
 
-#: bay/panel.py:22
+#: content/bays/panel.py:20 templates/bays/index.html:5
 msgid "Bays"
 msgstr ""
 
-#: bay_model/panel.py:22
-msgid "Bay Models"
+#: content/bays/containers/panel.py:20 templates/bays.containers/index.html:5
+msgid "Containers"
 msgstr ""
 
