@@ -90,7 +90,7 @@
         </i>
       </td>
 
-      <td class="rsp-p1">{$ bm.name $}</td>
+      <td class="rsp-p1">{$ bm.name|noName $}</td>
       <td class="rsp-p1">{$ bm.id $}</td>
       <td class="rsp-p2">{$ bm.network_driver $}</td>
       <td class="rsp-p2">{$ bm.coe $}</td>
@@ -124,7 +124,7 @@
         <dl class=dl-horizontal>
 
           <dt><translate>Name</translate></dt>
-          <dd><a ng-href="project/baymodels/{$ bm.id $}">{$ bm.name $}</a></dd>
+          <dd><a ng-href="project/baymodels/{$ bm.id $}">{$ bm.name|noName $}</a></dd>
 
           <dt><translate>ID</translate></dt>
           <dd>{$ bm.id $}</dd>

@@ -16,7 +16,7 @@
         <select class="form-control" name="bay-model"
           ng-model="model.newBaySpec.baymodel_id"
           ng-required="true"
-          ng-options="baymodel.id as baymodel.name for baymodel in ctrl.baymodels"
+          ng-options="baymodel.id as baymodel.name|noName for baymodel in ctrl.baymodels"
           ng-change="changeBayModel()">
         </select>
       </div>
@@ -33,7 +33,7 @@
           <a
             ng-href="project/baymodels/{$ baymodeldetail.id $}"
             ng-click="cancel()">
-            {$ baymodeldetail.name $}
+            {$ baymodeldetail.name|noName $}
           </a>
         </dd>
         <dt translate>ID</dt>

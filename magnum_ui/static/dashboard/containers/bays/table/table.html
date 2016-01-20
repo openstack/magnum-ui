@@ -100,7 +100,7 @@
         </span>
       </td>
 
-      <td class="rsp-p1">{$ b.name $}</td>
+      <td class="rsp-p1">{$ b.name|noName $}</td>
       <td class="rsp-p2">{$ b.id $}</td>
       <td class="rsp-p1">{$ b.status $}</td>
       <td class="rsp-p2">{$ b.master_count $}</td>
@@ -133,7 +133,7 @@
         <dl class=dl-horizontal>
 
           <dt translate>Name</dt>
-          <dd><a ng-href="project/bays/{$ b.id $}">{$ b.name $}</a></dd>
+          <dd><a ng-href="project/bays/{$ b.id $}">{$ b.name|noName $}</a></dd>
 
           <dt translate>ID</dt>
           <dd>{$ b.id $}</dd>
@@ -141,10 +141,6 @@
           <dt translate>Status</dt>
           <dd>{$ b.status $}</dd>
 
-          <!--
-            TODO (bradjones): Baymodel should link to the baymodel resource in
-            the UI
-          -->
           <dt translate>BayModel</dt>
           <dd>{$ b.baymodel_id $}</dd>
 

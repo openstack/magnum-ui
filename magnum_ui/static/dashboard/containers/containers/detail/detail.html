@@ -2,7 +2,7 @@
   <div class="page-header">
     <ol class="breadcrumb">
       <li><a ng-href="project/bays/containers" translate>Containers</a></li>
-      <li class="active">{$ ctrl.container.name $}</li>
+      <li class="active">{$ ctrl.container.name|noName $}</li>
     </ol>
   </div>
   <tabset>
@@ -32,7 +32,7 @@
           <dl class="dl-horizontal">
             <div class="{$ propertyClasses $}">
               <dt translate>Name</dt>
-              <dd><a ng-href="project/bays/{$ ctrl.bay.uuid $}">{$ ctrl.bay.name $}</a></dd>
+              <dd><a ng-href="project/bays/{$ ctrl.bay.uuid $}">{$ ctrl.bay.name|noName $}</a></dd>
             </div>
             <div class="{$ propertyClasses $}">
               <dt translate>ID</dt>
@@ -60,7 +60,7 @@
           <dl class="dl-horizontal">
             <div class="{$ propertyClasses $}">
               <dt translate>Name</dt>
-              <dd><a ng-href="project/baymodels/{$ ctrl.baymodel.uuid $}">{$ ctrl.baymodel.name $}</a></dd>
+              <dd><a ng-href="project/baymodels/{$ ctrl.baymodel.uuid $}">{$ ctrl.baymodel.name|noName $}</a></dd>
             </div>
             <div class="{$ propertyClasses $}">
               <dt translate>ID</dt>
