@@ -29,7 +29,13 @@
     <div class="subtitle" id="baymodel_detail">
       <dl class=dl-horizontal>
         <dt translate>Name</dt>
-        <dd>{$ baymodeldetail.name $}</dd>
+        <dd>
+          <a
+            ng-href="project/baymodels/{$ baymodeldetail.id $}"
+            ng-click="cancel()">
+            {$ baymodeldetail.name $}
+          </a>
+        </dd>
         <dt translate>ID</dt>
         <dd>{$ baymodeldetail.id $}</dd>
         <dt translate>COE</dt>
