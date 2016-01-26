@@ -37,15 +37,6 @@
                     '$routeProvider', '$locationProvider'];
 
   function config($provide, $windowProvider, $routeProvider, $locationProvider) {
-    /* FIXME (shu-mutou): remove settings for $locationProvider if following patch is merged.
-     * https://review.openstack.org/#/c/260741/
-     */
-    $locationProvider
-      .html5Mode({
-        enabled: true
-      })
-      .hashPrefix('!');
-
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/containers/';
     $provide.constant('horizon.dashboard.containers.basePath', path);
 
