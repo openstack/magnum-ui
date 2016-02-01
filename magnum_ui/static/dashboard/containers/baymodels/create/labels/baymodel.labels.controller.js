@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Cisco Systems, Inc.
+ * Copyright 2015 NEC Corporation
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -18,26 +18,26 @@
   'use strict';
 
   /**
-   * @ngdoc overview
-   * @name horizon.dashboard.containers.baymodels
-   * @ngModule
+   * @ngdoc controller
+   * @name createBayModelLabelsController
+   * @ngController
    *
    * @description
-   * Provides all the services and widgets require to display the bay model
-   * panel
+   * Controller for the bay model labels step in create workflow
    */
   angular
-    .module('horizon.dashboard.containers.baymodels', [])
-    .value('horizon.dashboard.containers.baymodels.events', events());
+    .module('horizon.dashboard.containers.baymodels')
+    .controller('createBayModelLabelsController', createBayModelLabelsController);
 
-  /**
-   * @ngdoc value
-   * @name horizon.dashboard.containers.baymodels.events
-   * @description A list of events used by Bay Models
-   */
-  function events() {
-    return {
-      selectedImage: 'horizon.dashboard.containers.baymodels.selectedImaged'
-    };
+  createBayModelLabelsController.$inject = [
+    '$q',
+    '$scope',
+    'horizon.dashboard.containers.basePath',
+    'horizon.app.core.openstack-service-api.magnum'
+  ];
+
+  function createBayModelLabelsController($q, $scope, basePath, magnum) {
+    var ctrl = this;
   }
+
 })();

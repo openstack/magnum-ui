@@ -1,0 +1,47 @@
+<div ng-controller="createBayModelInfoController as ctrl">
+  <h1 translate>Bay Model Details</h1>
+
+  <div class="content">
+    <div translate class="subtitle">Please provide the name of the Bay Model.</div>
+
+    <div class="form-group">
+      <div class="form-field baymodel-name">
+        <label class="on-top" translate>Bay Model Name</label>
+        <input name="baymodel-name" type="text" class="form-control input-sm"
+               ng-model="model.newBayModelSpec.name"
+               placeholder="{$ 'Name of the baymodel to create.'|translate $}">
+      </div>
+      <div class="form-field required baymodel-coe">
+        <label class="on-top" translate>COE</label>
+        <select class="form-control" name="baymodel-coe"
+                ng-model="model.newBayModelSpec.coe"
+                ng-required="true"
+                ng-options="coe.name as coe.label for coe in ctrl.coes"
+                ng-change="changeCoes()">
+        </select>
+      </div>
+      <div class="checkbox baymodel-public">
+        <label class="on-top">
+          <input name="baymodel-public" type="checkbox"
+                 ng-model="model.newBayModelSpec.public">
+          <translate>Public</translate>
+        </label>
+      </div>
+      <div class="checkbox baymodel-registry-enabled">
+        <label class="on-top">
+          <input name="baymodel-registry-enabled" type="checkbox"
+                 ng-model="model.newBayModelSpec.registry_enabled">
+          <translate>Registry Enabled</translate>
+        </label>
+      </div>
+      <div class="checkbox baymodel-tls-disabled">
+        <label class="on-top">
+          <input name="baymodel-tls-disabled" type="checkbox"
+                 ng-model="model.newBayModelSpec.tls_disabled">
+          <translate>TLS Disabled</translate>
+        </label>
+      </div>
+    </div>
+
+  </div>
+</div>
