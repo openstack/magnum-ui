@@ -5,11 +5,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-01-08 20:29+0000\n"
+"POT-Creation-Date: 2016-02-01 18:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-01-07 12:18+0000\n"
+"PO-Revision-Date: 2016-02-02 12:26+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -24,6 +24,13 @@ msgstr "API サーバーのポート"
 
 msgid "Actions"
 msgstr "アクション"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a "
+"baymodel. May be used multiple times."
+msgstr ""
+"ベイモデルと関連付ける「キー=値」のペアの形式の任意のラベルです。複数回使用で"
+"きます。"
 
 msgid "Bay"
 msgstr "ベイ"
@@ -42,6 +49,12 @@ msgstr "ベイモデル"
 
 msgid "Bay Model Detail"
 msgstr "ベイモデルの詳細"
+
+msgid "Bay Model Details"
+msgstr "ベイモデルの詳細"
+
+msgid "Bay Model Name"
+msgstr "ベイモデルの名前"
 
 msgid "Bay Models"
 msgstr "ベイモデル"
@@ -67,11 +80,29 @@ msgstr "ベイ"
 msgid "COE"
 msgstr "COE"
 
+msgid "COE:"
+msgstr "コンテナーオーケストレーションエンジン:"
+
 msgid "Choose a Bay"
 msgstr "ベイを選択してください。"
 
 msgid "Choose a Bay Model"
 msgstr "ベイモデルを選択してください。"
+
+msgid "Choose a Container Orchestration Engine"
+msgstr "コンテナーオーケストレーションエンジンを選択してください。"
+
+msgid "Choose a Flavor for Master Node"
+msgstr "マスターノードのフレーバーを選択してください。"
+
+msgid "Choose a Flavor for Node"
+msgstr "ノードのフレーバーを選択してください。"
+
+msgid "Choose a Image"
+msgstr "イメージを選択してください"
+
+msgid "Choose a Keypair"
+msgstr "キーペアを選択してください。"
 
 msgid "Cluster Distro"
 msgstr "クラスターのディストリビューション"
@@ -100,6 +131,9 @@ msgstr "作成"
 msgid "Create Bay"
 msgstr "ベイの作成"
 
+msgid "Create Bay Model"
+msgstr "ベイモデルの作成"
+
 msgid "Create Container"
 msgstr "コンテナーの作成"
 
@@ -108,6 +142,9 @@ msgstr "作成時刻"
 
 msgid "DNS"
 msgstr "DNS"
+
+msgid "DNS:"
+msgstr "DNS:"
 
 msgid "Delete"
 msgstr "削除"
@@ -124,11 +161,29 @@ msgstr "コンテナーの削除"
 msgid "Description:"
 msgstr "説明:"
 
+msgid "Disable TLS in the Bay. Default: False"
+msgstr "ベイにおいて、 TLS を無効にします。デフォルト: False"
+
 msgid "Discovery URL"
 msgstr "探索 URL"
 
+msgid "Docker"
+msgstr "Docker"
+
+msgid "Docker Swarm"
+msgstr "Docker Swarm"
+
 msgid "Docker Volume Size"
 msgstr "Docker のボリューム容量"
+
+msgid "Docker Volume Size (GB)"
+msgstr "Docker のボリューム容量 (GB)"
+
+msgid "Docker Volume Size:"
+msgstr "Docker のボリューム容量:"
+
+msgid "Enable docker registry in the Bay. Default: False"
+msgstr "ベイにおいて、 Docker のレジストリーを有効にします。デフォルト: False"
 
 msgid "External Network ID"
 msgstr "外部ネットワーク ID"
@@ -136,8 +191,20 @@ msgstr "外部ネットワーク ID"
 msgid "Fixed Network"
 msgstr "固定ネットワーク"
 
+msgid "Fixed Network:"
+msgstr "固定ネットワーク:"
+
+msgid "Flannel"
+msgstr "Flannel"
+
+msgid "Flavor"
+msgstr "フレーバー"
+
 msgid "Flavor ID"
 msgstr "フレーバー ID"
+
+msgid "Flavor:"
+msgstr "フレーバー:"
 
 msgid "GB"
 msgstr "GB"
@@ -157,6 +224,9 @@ msgstr "イメージ"
 msgid "Image ID"
 msgstr "イメージ ID"
 
+msgid "Image:"
+msgstr "イメージ:"
+
 msgid "Infinite"
 msgstr "無制限"
 
@@ -166,8 +236,20 @@ msgstr "情報"
 msgid "KB"
 msgstr "KB"
 
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Keypair"
+msgstr "キーペア"
+
 msgid "Keypair ID"
 msgstr "キーペア ID"
+
+msgid "Keypair:"
+msgstr "キーペア:"
+
+msgid "Kubernetes"
+msgstr "Kubernetes"
 
 msgid "Labels"
 msgstr "ラベル"
@@ -175,17 +257,29 @@ msgstr "ラベル"
 msgid "MB"
 msgstr "MB"
 
+msgid "Make baymodel public. Default: False"
+msgstr "ベイモデルをパブリックに変更します。デフォルト: False"
+
 msgid "Master Addresses"
 msgstr "マスターのアドレス"
 
 msgid "Master Count"
 msgstr "マスターの数"
 
+msgid "Master Flavor"
+msgstr "マスターノードのフレーバー"
+
 msgid "Master Flavor ID"
 msgstr "マスターノードのフレーバー ID"
 
+msgid "Master Flavor:"
+msgstr "マスターのフレーバー:"
+
 msgid "Memory"
 msgstr "メモリー"
+
+msgid "Mesos"
+msgstr "Mesos"
 
 msgid "Misc"
 msgstr "その他"
@@ -198,6 +292,9 @@ msgstr "名前"
 
 msgid "Name of the bay to create."
 msgstr "作成するベイの名前"
+
+msgid "Name of the baymodel to create."
+msgstr "作成するベイモデルの名前"
 
 msgid "Name of the container image."
 msgstr "コンテナーのイメージの名前"
@@ -232,8 +329,14 @@ msgstr "概要"
 msgid "Please provide the count of the master and node in this Bay."
 msgstr "このベイにおける、マスターとノードの数を指定してください。"
 
+msgid "Please provide the labels of the Bay Model."
+msgstr "ベイモデルのラベルを設定してください。"
+
 msgid "Please provide the miscellaneous for creation of the Bay."
 msgstr "ベイの作成のためのその他の条件を指定してください。"
+
+msgid "Please provide the name of the Bay Model."
+msgstr "ベイモデルの名前を設定してください。"
 
 msgid "Please provide the name of the Bay."
 msgstr "ベイの名前を設定してください。"
@@ -241,17 +344,29 @@ msgstr "ベイの名前を設定してください。"
 msgid "Please provide the name of the Container."
 msgstr "コンテナーの名前を設定してください。"
 
+msgid "Please provide the settings of the Bay networking."
+msgstr "ベイのネットワークを設定してください。"
+
 msgid "Please provide the specs for this Container."
 msgstr "このコンテナーのスペックを設定してください。"
 
+msgid "Please provide the specs of the Bay."
+msgstr "ベイのスペックを設定してください。"
+
 msgid "Public"
 msgstr "パブリック"
+
+msgid "Public:"
+msgstr "パブリック:"
 
 msgid "Record Properties"
 msgstr "レコードのプロパティー"
 
 msgid "Registry Enabled"
 msgstr "レジストリーの有効化"
+
+msgid "Registry Enabled:"
+msgstr "レジストリーの有効化:"
 
 msgid "SSH Authorized Key"
 msgstr "SSH 認証鍵"
@@ -271,6 +386,10 @@ msgstr "スペック"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
 
+msgid "Specify Bay Model name and Container Orchestration Engine."
+msgstr ""
+"ベイモデルの名前とコンテナーオーケストレーションエンジンを指定してください。"
+
 msgid "Specify bay name and choose bay model."
 msgstr "ベイの名前を指定し、ベイモデルを選択してください。"
 
@@ -280,11 +399,26 @@ msgstr "ベイの作成条件を指定してください。"
 msgid "Specify container name and choose bay."
 msgstr "コンテナーの名前を指定し、ベイを選択してください。"
 
+msgid "Specify the Container Orchestration Engine to use."
+msgstr "使用するコンテナーオーケストレーションエンジンを指定してください。"
+
+msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
+msgstr "ベイで使用するネームサーバーを指定してください。"
+
+msgid "Specify the network settings for the Bay Model."
+msgstr "ベイモデルのネットワーク設定を指定してください。"
+
 msgid "Specify the number of master nodes and bay nodes for the bay."
 msgstr "ベイのマスターノードとベイノードの数を指定してください。"
 
+msgid "Specify the number of size in GB for the docker volume to use."
+msgstr "Docker のボリュームで使用する GB 単位のサイズを指定してください。"
+
 msgid "Specify the specs for the container."
 msgstr "コンテナーのスペックを指定します。"
+
+msgid "Specify the specs for the nodes in the Bay."
+msgstr "ベイのノードのスペックを指定します。"
 
 msgid "Stack ID"
 msgstr "スタック ID"
@@ -295,14 +429,63 @@ msgstr "状態"
 msgid "TLS Disabled"
 msgstr "TLS の無効化"
 
+msgid "TLS Disabled:"
+msgstr "TLS の無効化:"
+
+msgid "The DNS nameserver to use for this Bay."
+msgstr "このベイで使用する DNS ネームサーバー。"
+
+msgid "The SSH authorized key to use."
+msgstr "使用する SSH 認証鍵。"
+
 msgid "The bay node count."
 msgstr "ベイノードの数"
 
 msgid "The container memory size."
 msgstr "コンテナーのメモリーサイズ"
 
+msgid "The external Neutron network ID to connect to this bay model."
+msgstr "このベイモデルに接続する Neutron の外部ネットワーク ID。"
+
+msgid "The http_proxy address to use for nodes in bay."
+msgstr "ベイのノードで使用する HTTP プロキシのアドレス。"
+
+msgid "The https_proxy address to use for nodes in bay."
+msgstr "ベイのノードで使用する HTTPS プロキシのアドレス。"
+
+msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
+msgstr "ベイのノードにロードする SSH キーペアの名前または UUID。"
+
+msgid "The name or UUID of the base image to customize for the bay."
+msgstr "ベイでカスタマイズするベースとなるイメージの名前または UUID。"
+
+msgid "The network driver name for instantiating container networks."
+msgstr ""
+"コンテナーネットワークのインスタンスを生成するネットワークドライバーの名前で"
+"す。"
+
+msgid "The no_proxy address to use for nodes in bay."
+msgstr "ベイのノードで使用するプロキシ例外のアドレス。"
+
+msgid "The nova flavor id to use when launching the bay. Default: m1.small"
+msgstr ""
+"ベイを起動するときに使用する Nova のフレーバー ID。デフォルト: m1.small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the bay. "
+"Default: m1.small"
+msgstr ""
+"ベイのマスターノードを起動するときに使用する Nova のフレーバー ID。デフォル"
+"ト: m1.small"
+
 msgid "The number of master nodes for the bay."
 msgstr "ベイのマスターノードの数"
+
+msgid "The private Neutron network name to connect to this bay model."
+msgstr "このベイモデルに接続する Neutron のプライベートネットワーク名。"
+
+msgid "The size in GB for Docker Volume. Default: 25"
+msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
 
 msgid ""
 "The timeout for bay creation in minutes. Set to 0 for no timeout. The "
@@ -310,6 +493,10 @@ msgid ""
 msgstr ""
 "ベイの作成のタイムアウトの分数。タイムアウトしないためには、0 を設定します。"
 "デフォルトはタイムアウトしません。"
+
+msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
+msgstr ""
+"固定ネットワークの CIDR が設定される必要があります。デフォルト: 10.0.0.0/24"
 
 msgid "Timeout"
 msgstr "タイムアウト"
@@ -319,6 +506,9 @@ msgstr "UUID"
 
 msgid "Unable to create Bay."
 msgstr "ベイを作成できません。"
+
+msgid "Unable to create BayModel"
+msgstr "ベイモデルを作成できません。"
 
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
