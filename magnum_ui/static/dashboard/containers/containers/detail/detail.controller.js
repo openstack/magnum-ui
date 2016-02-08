@@ -31,10 +31,6 @@
     ctrl.container = {};
     ctrl.bay = {};
     ctrl.baymodel = {};
-    ctrl.memoryunits = { "b": gettext("bytes"),
-        "k": gettext("KB"),
-        "m": gettext("MB"),
-        "g": gettext("GB")};
 
 
     var containerId = $routeParams.containerId;
@@ -49,18 +45,6 @@
     function onGetContainer(container) {
       ctrl.container = container;
       magnum.getBay(ctrl.container.bay_uuid).success(onGetBay);
-
-      ctrl.container.memorysize = "";
-      ctrl.container.memoryunit = "";
-      if(ctrl.container.memory !== null){
-        // separate number and unit, then using gettext() to unit.
-        var regex = /(\d+)([bkmg]?)/;
-        var match = regex.exec(ctrl.container.memory);
-        ctrl.container.memorysize = match[1];
-        if(match[2]){
-          ctrl.container.memoryunit = ctrl.memoryunits[match[2]];
-        }
-      }
     }
 
     function onGetBay(bay) {

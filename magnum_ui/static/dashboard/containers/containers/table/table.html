@@ -110,7 +110,7 @@
       <td class="rsp-p1">{$ c.status $}</td>
       <td class="rsp-p3">{$ c.bay_uuid $}</td>
       <td class="rsp-p2">{$ c.image $}</td>
-      <td class="rsp-p3">{$ c.memory $}</td>
+      <td class="rsp-p3">{$ c.memorysize $} {$ c.memoryunit $}</td>
 
       <td class="action-col">
         <!--
@@ -156,7 +156,7 @@
           <dd>{$ c.image $}</dd>
 
           <dt><translate>Memory</translate></dt>
-          <dd>{$ c.memory $}</dd>
+          <dd>{$ c.memorysize $} {$ c.memoryunit $}</dd>
 
           <dt><translate>Command</translate></dt>
           <dd>{$ c.command $}</dd>
