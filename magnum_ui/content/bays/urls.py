@@ -13,15 +13,13 @@
 #    under the License.
 
 from django.conf.urls import include
-from django.conf.urls import patterns
 from django.conf.urls import url
 from magnum_ui.content.bays.containers import urls as containers_urls
 from magnum_ui.content.bays.views import IndexView
 
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^containers/', include(containers_urls, namespace='containers')),
     url(r'^[0-9a-f\-]{36}$', IndexView.as_view(), name='detail'),
     url(r'^$', IndexView.as_view(), name='index'),
-)
+]

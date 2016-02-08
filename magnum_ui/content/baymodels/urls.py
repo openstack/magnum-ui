@@ -12,13 +12,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import patterns
 from django.conf.urls import url
 from magnum_ui.content.baymodels.views import IndexView
 
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^[0-9a-f\-]{36}$', IndexView.as_view(), name='detail'),
     url(r'^$', IndexView.as_view(), name='index'),
-)
+]
