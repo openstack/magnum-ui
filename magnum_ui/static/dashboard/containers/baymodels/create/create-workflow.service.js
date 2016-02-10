@@ -23,10 +23,11 @@
 
   baymodelWorkflow.$inject = [
     'horizon.dashboard.containers.basePath',
-    'horizon.app.core.workflow.factory'
+    'horizon.app.core.workflow.factory',
+    'horizon.framework.util.i18n.gettext'
   ];
 
-  function baymodelWorkflow(basePath, dashboardWorkflow) {
+  function baymodelWorkflow(basePath, dashboardWorkflow, gettext) {
     return dashboardWorkflow({
       title: gettext('Create Bay Model'),
 

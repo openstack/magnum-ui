@@ -1,7 +1,7 @@
 <table ng-controller="containersBayModelsTableController as table"
   hz-table ng-cloak
-  st-table="table.ibaymodels"
-  st-safe-src="table.baymodels"
+  st-table="table.baymodels"
+  st-safe-src="table.baymodelsSrc"
   default-sort="name"
   default-sort-reverse="false"
   class="table-striped table-rsp table-detail modern">
@@ -11,7 +11,6 @@
       Table-batch-actions:
       This is where batch actions like searching, creating, and deleting.
     -->
-    <tr>
       <th colspan="100" class="search-header">
         <hz-magic-search-bar group-classes="input-group-sm" icon-classes="fa-search"
           filter-facets="table.baymodelFacets">
@@ -20,23 +19,7 @@
     </tr>
     <tr>
       <th colspan="100" class="action-col">
-        <action-list class="btn-addon">
-          <button
-            class="btn btn-default btn-sm btn-launch ng-scope"
-            ng-controller="containersBayModelModalController as modal"
-            ng-click="modal.openBayModelCreateWizard({successUrl: '/project/baymodels/'})">
-            <span class="fa fa-plus" translate>Create Bay Model</span>
-          </button>
-        </action-list>
-        <action-list class="btn-addon">
-          <action
-            action-classes="'btn btn-default btn-sm btn-danger'"
-            disabled="numSelected === 0"
-            callback="table.batchDelete">
-            <i class="fa fa-trash-o"></i>
-            <translate>Delete Bay Models</translate>
-          </action>
-        </action-list>
+        <actions allowed="table.batchActions.actions" type="batch"></actions>
       </th>
     </tr>
     <!--
@@ -44,8 +27,8 @@
       The headers for the table columns
     -->
     <tr>
-      <th>
-        <input type="checkbox" hz-select-all="table.ibaymodels">
+      <th class="select-col">
+        <input type="checkbox" hz-select-all="table.baymodels">
       </th>
 
       <th class="expander"></th>
@@ -81,7 +64,7 @@
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="bm in table.ibaymodels track by bm.id"
+    <tr ng-repeat-start="bm in table.baymodels track by bm.id"
         nt-class="{'st-selected': checked[bm.id]}">
 
       <td class="select-col">
@@ -107,17 +90,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-
-        <action-list dropdown>
-
-          <action
-            button-type="split-button"
-            action-classes="'btn btn-default btn-danger btn-sm'"
-            callback="table.singleDelete" item="bm">
-              <translate>Delete</translate>
-          </action>
-
-        </action-list>
+        <actions allowed="table.rowActions.actions" type="row" item="bm" />
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">
@@ -156,7 +129,7 @@
   </tbody>
   <tfoot>
     <td colspan="100">
-        <span class="display">{$ table.ibaymodels.length|itemCount $}</span>
+        <span class="display">{$ table.baymodels.length|itemCount $}</span>
           <div st-pagination="" st-items-by-page="10"
             st-displayed-pages="10"></div>
         </td>

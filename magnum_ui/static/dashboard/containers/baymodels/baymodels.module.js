@@ -28,16 +28,17 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels', [])
-    .value('horizon.dashboard.containers.baymodels.events', events());
+    .constant('horizon.dashboard.containers.baymodels.events', events());
 
   /**
-   * @ngdoc value
+   * @ngdoc constant
    * @name horizon.dashboard.containers.baymodels.events
    * @description A list of events used by Bay Models
    */
   function events() {
     return {
-      selectedImage: 'horizon.dashboard.containers.baymodels.selectedImaged'
+      CREATE_SUCCESS: 'horizon.dashboard.containers.baymodels.CREATE_SUCCESS',
+      DELETE_SUCCESS: 'horizon.dashboard.containers.baymodels.DELETE_SUCCESS'
     };
   }
 })();

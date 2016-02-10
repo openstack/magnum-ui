@@ -22,11 +22,10 @@
     .factory('baymodelModel', baymodelModel);
 
   baymodelModel.$inject = [
-    'horizon.dashboard.containers.baymodels.events',
     'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function baymodelModel(events, magnum) {
+  function baymodelModel(magnum) {
     var model = {
       newBayModelSpec: {},
 

@@ -22,10 +22,11 @@
 
   MagnumAPI.$inject = [
     'horizon.framework.util.http.service',
-    'horizon.framework.widgets.toast.service'
+    'horizon.framework.widgets.toast.service',
+    'horizon.framework.util.i18n.gettext'
   ];
 
-  function MagnumAPI(apiService, toastService) {
+  function MagnumAPI(apiService, toastService, gettext) {
     var service = {
       createBay: createBay,
       getBay: getBay,
@@ -108,24 +109,25 @@
     function getBayModels() {
       return apiService.get('/api/containers/baymodels/')
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the BayModels.'))
+          toastService.add('error', gettext('Unable to retrieve the BayModels.'));
         });
     }
 
-    function deleteBayModel(id) {
-      return apiService.delete('/api/containers/baymodels/', [id])
-        .error(function() {
-          toastService.add('error', gettext('Unable to delete the BayModel.'))
-        })
+    function deleteBayModel(id, suppressError) {
+      var promise = apiService.delete('/api/containers/baymodels/', [id]);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete the BayModel with id: %(id)s');
+        toastService.add('error', interpolate(msg, { id: id }, true));
+      });
     }
 
+    // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteBayModels(ids) {
       return apiService.delete('/api/containers/baymodels/', ids)
         .error(function() {
-          toastService.add('error', gettext('Unable to delete the BayModels.'))
+          toastService.add('error', gettext('Unable to delete the BayModels.'));
         })
     }
-
 
     ////////////////
     // Containers //

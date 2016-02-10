@@ -31,16 +31,20 @@
 
   containersBayModelsTableController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.magnum'
+    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.containers.baymodels.events',
+    'horizon.dashboard.containers.baymodels.batch-actions.service',
+    'horizon.dashboard.containers.baymodels.row-actions.service'
   ];
 
-  function containersBayModelsTableController($scope, magnum) {
+  function containersBayModelsTableController($scope, magnum, events, batchActions, rowActions) {
     var ctrl = this;
-    ctrl.ibaymodels = [];
     ctrl.baymodels = [];
-
-    ctrl.singleDelete = singleDelete;
-    ctrl.batchDelete = batchDelete;
+    ctrl.baymodelsSrc = [];
+    ctrl.batchActions = batchActions;
+    ctrl.batchActions.initScope($scope);
+    ctrl.rowActions = rowActions;
+    ctrl.rowActions.initScope($scope);
 
     /**
      * Filtering - client-side MagicSearch
@@ -64,6 +68,11 @@
       }
     ];
 
+    var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+    var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+
+    $scope.$on('$destroy', destroy);
+
     init();
 
     function init() {
@@ -71,32 +80,38 @@
     }
 
     function getBayModelsSuccess(response) {
-      ctrl.baymodels = response.items;
+      ctrl.baymodelsSrc = response.items;
     }
 
-    function singleDelete(baymodel) {
-      magnum.deleteBayModel(baymodel.id).success(function() {
-        ctrl.baymodels.splice(ctrl.baymodels.indexOf(baymodel),1);
-      });
+    function onCreateSuccess(e, createdItem) {
+      e.stopPropagation();
+      ctrl.baymodelsSrc.push(createdItem);
     }
 
-    function batchDelete() {
-      var ids = [];
-      for (var id in $scope.selected) {
-        if ($scope.selected[id].checked) {
-          ids.push(id);
-        }
+    function onDeleteSuccess(e, removedIds) {
+      ctrl.baymodelsSrc = difference(ctrl.baymodelsSrc, removedIds, 'id');
+      e.stopPropagation();
+
+      // after deleting the items
+      // we need to clear selected items from table controller
+      $scope.$emit('hzTable:clearSelected');
+    }
+
+    function difference(currentList, otherList, key) {
+      return currentList.filter(filter);
+
+      function filter(elem) {
+        return otherList.filter(function filterDeletedItem(deletedItem) {
+          return deletedItem === elem[key];
+        }).length === 0;
       }
-      magnum.deleteBayModels(ids).success(function() {
-        for (var id in ids) {
-          var todelete = ctrl.baymodels.filter(function(obj) {
-            return obj.id == ids[id];
-          });
-          ctrl.baymodels.splice(ctrl.baymodels.indexOf(todelete[0]),1);
-        }
-        $scope.selected = {};
-      })
     }
+
+    function destroy() {
+      createWatcher();
+      deleteWatcher();
+    }
+
   }
 
 })();
