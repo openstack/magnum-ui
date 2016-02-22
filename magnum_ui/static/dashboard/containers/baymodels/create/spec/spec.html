@@ -26,6 +26,14 @@
                 ng-options="mflavor.id as mflavor.name for mflavor in ctrl.mflavors">
         </select>
       </div>
+      <div class="form-field baymodel-volume-driver">
+        <label class="on-top" translate>Volume Driver</label>
+        <select name="baymodel-volume-driver" type="text" class="form-control input-sm"
+                ng-model="model.newBayModelSpec.volume_driver"
+                placeholder="{$ 'The volume driver name for instantiating container volume.'|translate $}"
+                ng-options="driver.name as driver.label for driver in model.newBayModelSpec.volume_drivers">
+        </select>
+      </div>
       <div class="form-field baymodel-docker-volume-size">
         <label class="on-top" translate>Docker Volume Size (GB)</label>
         <input name="baymodel-docker-volume-size"  type="number" ng-pattern="/^[0-9]+$/"
