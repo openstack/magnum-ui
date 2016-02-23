@@ -1,7 +1,7 @@
 <table ng-controller="containersBaysTableController as table"
   hz-table ng-cloak
-  st-table="table.ibays"
-  st-safe-src="table.bays"
+  st-table="table.bays"
+  st-safe-src="table.baysSrc"
   default-sort="name"
   default-sort-reverse="false"
   class="table-striped table-rsp table-detail modern">
@@ -20,22 +20,7 @@
     </tr>
     <tr>
       <th colspan="100" class="action-col">
-        <action-list class="btn-addon">
-          <button
-            class="btn btn-default btn-sm btn-launch ng-scope"
-            ng-controller="containersBayModalController as modal"
-            ng-click="modal.openBayCreateWizard({successUrl: '/project/bays/'})">
-            <span class="fa fa-plus" translate>Create Bay</span>
-          </button>
-        </action-list>
-        <action-list class="btn-addon">
-          <action
-            action-classes="'btn btn-default btn-sm btn-danger'"
-            disabled="numSelected === 0"
-            callback="table.batchDelete">
-            <span class="fa fa-trash-o" translate>Delete Bays</span>
-          </action>
-        </action-list>
+        <actions allowed="table.bayResource.batchActions" type="batch"></actions>
       </th>
     </tr>
     <!--
@@ -44,7 +29,7 @@
     -->
     <tr>
       <th class=select-col>
-        <input type="checkbox" hz-select-all="table.ibays">
+        <input type="checkbox" hz-select-all="table.bays">
       </th>
 
       <th class="expander"></th>
@@ -84,12 +69,12 @@
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="b in table.ibays track by b.id"
+    <tr ng-repeat-start="b in table.bays track by b.id"
         nt-class="{'st-selected': checked[b.id]}">
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="selected[b.id].checked"
+          ng-model="tCtrl.selections[b.id].checked"
           hz-select="b">
       </td>
 
@@ -111,15 +96,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-
-        <action-list dropdown>
-          <action button-type="split-button"
-                  action-classes="'btn btn-default btn-sm btn-danger'"
-                  callback="table.singleDelete" item="b">
-              <translate>Delete</translate>
-            </action>
-          </menu>
-        </action-list>
+        <actions allowed="table.bayResource.itemActions" type="row" item="b" />
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">
@@ -158,7 +135,7 @@
   </tbody>
   <tfoot>
     <td colspan="100">
-        <span class="display">{$ table.ibays.length|itemCount $}</span>
+        <span class="display">{$ table.bays.length|itemCount $}</span>
           <div st-pagination="" st-items-by-page="10"
             st-displayed-pages="10"></div>
         </td>

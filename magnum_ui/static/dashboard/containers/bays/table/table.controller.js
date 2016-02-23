@@ -31,16 +31,17 @@
 
   containersBaysTableController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.magnum'
+    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.containers.bays.events',
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.containers.bays.resourceType'
   ];
 
-  function containersBaysTableController($scope, magnum) {
+  function containersBaysTableController($scope, magnum, events, registry, bayResourceType) {
     var ctrl = this;
-    ctrl.ibays = [];
     ctrl.bays = [];
-
-    ctrl.singleDelete = singleDelete;
-    ctrl.batchDelete = batchDelete;
+    ctrl.baysSrc = [];
+    ctrl.bayResource = registry.getResourceType(bayResourceType);
 
     /**
      * Filtering - client-side MagicSearch
@@ -74,39 +75,49 @@
       }
     ];
 
+    var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+    var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+
+    $scope.$on('$destroy', destroy);
 
     init();
 
     function init() {
+      registry.initActions(bayResourceType, $scope);
       magnum.getBays().success(getBaysSuccess);
     }
 
     function getBaysSuccess(response) {
-      ctrl.bays = response.items;
+      ctrl.baysSrc = response.items;
     }
 
-    function singleDelete(bay) {
-      magnum.deleteBay(bay.id).success(function() {
-        ctrl.bays.splice(ctrl.bays.indexOf(bay), 1);
-      });
+    function onCreateSuccess(e, createdItem) {
+      ctrl.baysSrc.push(createdItem);
+      e.stopPropagation();
     }
 
-    function batchDelete() {
-      var ids = [];
-      for (var id in $scope.selected) {
-        if ($scope.selected[id].checked) {
-          ids.push(id);
-        }
+    function onDeleteSuccess(e, removedIds) {
+      ctrl.baysSrc = difference(ctrl.baysSrc, removedIds, 'id');
+      e.stopPropagation();
+
+      // after deleting the items
+      // we need to clear selected items from table controller
+      $scope.$emit('hzTable:clearSelected');
+    }
+
+    function difference(currentList, otherList, key) {
+      return currentList.filter(filter);
+
+      function filter(elem) {
+        return otherList.filter(function filterDeletedItem(deletedItem) {
+          return deletedItem === elem[key];
+        }).length === 0;
       }
-      magnum.deleteBays(ids).success(function() {
-        for (var b in ids) {
-          var todelete = ctrl.bays.filter(function(obj) {
-            return obj.id == ids[b];
-          });
-          ctrl.bays.splice(ctrl.bays.indexOf(todelete[0]), 1);
-        }
-        $scope.selected = {};
-      });
+    }
+
+    function destroy() {
+      createWatcher();
+      deleteWatcher();
     }
   }
 
