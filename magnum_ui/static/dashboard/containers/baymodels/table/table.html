@@ -20,7 +20,7 @@
     </tr>
     <tr>
       <th colspan="100" class="action-col">
-        <actions allowed="table.batchActions.actions" type="batch"></actions>
+        <actions allowed="table.baymodelResource.batchActions" type="batch"></actions>
       </th>
     </tr>
     <!--
@@ -70,7 +70,7 @@
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="selected[bm.id].checked"
+          ng-model="tCtrl.selections[bm.id].checked"
           hz-select="bm">
       </td>
 
@@ -91,7 +91,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-        <actions allowed="table.rowActions.actions" type="row" item="bm" />
+        <actions allowed="table.baymodelResource.itemActions" type="row" item="bm" />
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">

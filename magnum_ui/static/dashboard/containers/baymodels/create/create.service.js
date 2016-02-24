@@ -19,12 +19,12 @@
 
   /**
    * @ngdoc overview
-   * @name horizon.dashboard.containers.baymodels.create.createService
+   * @name horizon.dashboard.containers.baymodels.create.service
    * @description Service for the containers bay model create modal
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .factory('horizon.dashboard.containers.baymodels.create.createService', createService);
+    .factory('horizon.dashboard.containers.baymodels.create.service', createService);
 
   createService.$inject = [
     'baymodelModel',
@@ -79,16 +79,13 @@
     }
 
     function submit(){
-      return model.createBayModel().then(success, error);
+      return model.createBayModel().then(success);
     }
 
     function success(response) {
       response.data.id = response.data.uuid;
       toast.add('success', interpolate(message.success, [response.data.id]));
       scope.$emit(events.CREATE_SUCCESS, response.data);
-    }
-
-    function error(response){
     }
   }
 })();
