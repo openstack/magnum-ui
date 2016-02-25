@@ -84,6 +84,10 @@
 
     function onGetBayModels(response) {
       Array.prototype.push.apply(ctrl.baymodels, response.items);
+      if($scope.selected instanceof Object){
+        $scope.model.newBaySpec.baymodel_id = $scope.selected.id;
+        $scope.changeBayModel();
+      }
     }
 
   }

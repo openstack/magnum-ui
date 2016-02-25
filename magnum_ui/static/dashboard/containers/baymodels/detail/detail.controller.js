@@ -28,11 +28,12 @@
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.glance',
     'horizon.dashboard.containers.baymodels.events',
+    'horizon.dashboard.containers.bays.events',
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.dashboard.containers.baymodels.resourceType'
   ];
 
-  function BayModelDetailController($scope, $window, $location, $routeParams, magnum, glance, events, registry, baymodelResourceType) {
+  function BayModelDetailController($scope, $window, $location, $routeParams, magnum, glance, events, bayEvents, registry, baymodelResourceType) {
     var ctrl = this;
     ctrl.baymodel = {};
     ctrl.image_uuid;
@@ -41,6 +42,7 @@
     var baymodelId = $routeParams.baymodelId;
 
     var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+    var createBayWatcher = $scope.$on(bayEvents.CREATE_SUCCESS, onCreateBaySuccess);
 
     $scope.$on('$destroy', destroy);
 
@@ -66,13 +68,19 @@
       });
     }
 
-    function onDeleteSuccess(e, removedIds){
-      $location.path('/project/baymodels');
+    function onDeleteSuccess(e, removedIds) {
+      e.stopPropagation();
+      $location.path("/project/baymodels");
+    }
+
+    function onCreateBaySuccess(e, createdItem) {
+      e.stopPropagation();
+      $location.path("/project/bays");
     }
 
     function destroy() {
       deleteWatcher();
+      createBayWatcher();
     }
-
   }
 })();
