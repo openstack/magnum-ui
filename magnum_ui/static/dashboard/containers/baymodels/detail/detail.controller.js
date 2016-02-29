@@ -21,18 +21,29 @@
     .controller('BayModelDetailController', BayModelDetailController);
 
   BayModelDetailController.$inject = [
+    '$scope',
     '$window',
+    '$location',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.glance',
-    '$routeParams'
+    '$routeParams',
+    'horizon.dashboard.containers.baymodels.events',
+    'horizon.dashboard.containers.baymodels.row-actions.service'
   ];
 
-  function BayModelDetailController($window, magnum, glance, $routeParams) {
+  function BayModelDetailController($scope, $window, $location, magnum, glance, $routeParams, events, actions) {
     var ctrl = this;
     ctrl.baymodel = {};
     ctrl.image_uuid;
 
     var baymodelId = $routeParams.baymodelId;
+
+    ctrl.actions = actions;
+    ctrl.actions.initScope($scope);
+
+    var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+
+    $scope.$on('$destroy', destroy);
 
     init();
 
@@ -43,6 +54,7 @@
 
     function onGetBayModel(baymodel) {
       ctrl.baymodel = baymodel;
+      ctrl.baymodel.id = baymodel.uuid;
       glance.getImages().success(onGetImages);
     }
 
@@ -53,5 +65,14 @@
         }
       });
     }
+
+    function onDeleteSuccess(e, removedIds){
+      $location.path('/project/baymodels');
+    }
+
+    function destroy() {
+      deleteWatcher();
+    }
+
   }
 })();
