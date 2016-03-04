@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-02-02 06:01+0000\n"
+"POT-Creation-Date: 2016-03-04 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,113 +17,138 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.2.0\n"
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:57
+#: magnum_ui/static/dashboard/containers/magnum.service.js:59
 msgid "Unable to create Bay."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:64
+#: magnum_ui/static/dashboard/containers/magnum.service.js:66
 msgid "Unable to retrieve the Bay."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:71
+#: magnum_ui/static/dashboard/containers/magnum.service.js:73
 msgid "Unable to retrieve the Bays."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:78
+#: magnum_ui/static/dashboard/containers/magnum.service.js:80
 msgid "Unable to delete the Bay."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:85
+#: magnum_ui/static/dashboard/containers/magnum.service.js:87
 msgid "Unable to delete the Bays."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:96
+#: magnum_ui/static/dashboard/containers/magnum.service.js:98
 msgid "Unable to create BayModel"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:103
+#: magnum_ui/static/dashboard/containers/magnum.service.js:105
 msgid "Unable to retrieve the BayModel."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:110
+#: magnum_ui/static/dashboard/containers/magnum.service.js:112
 msgid "Unable to retrieve the BayModels."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:117
-msgid "Unable to delete the BayModel."
+#: magnum_ui/static/dashboard/containers/magnum.service.js:119
+#, python-format
+msgid "Unable to delete the BayModel with id: %(id)s"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:124
+#: magnum_ui/static/dashboard/containers/magnum.service.js:128
 msgid "Unable to delete the BayModels."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:136
+#: magnum_ui/static/dashboard/containers/magnum.service.js:139
 msgid "Unable to create Container."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:143
+#: magnum_ui/static/dashboard/containers/magnum.service.js:150
 msgid "Unable to retrieve the Container."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:150
+#: magnum_ui/static/dashboard/containers/magnum.service.js:163
 msgid "Unable to retrieve the Containers."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:157
+#: magnum_ui/static/dashboard/containers/magnum.service.js:170
 msgid "Unable to delete the Container."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/magnum.service.js:164
+#: magnum_ui/static/dashboard/containers/magnum.service.js:177
 msgid "Unable to delete the Containers."
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:59
+#: magnum_ui/static/dashboard/containers/magnum.service.js:182
+#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:41
+msgid "bytes"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/magnum.service.js:183
+#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:42
+msgid "KB"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/magnum.service.js:184
+#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:43
+msgid "MB"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/magnum.service.js:185
+#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:44
+msgid "GB"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:58
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:48
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:50
 msgid "Docker"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:60
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:59
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:47
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:49
 msgid "Flannel"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:31
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:28
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:32
 msgid "Create Bay Model"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:35
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:36
 #: magnum_ui/static/dashboard/containers/bays/create/create-workflow.service.js:35
 #: magnum_ui/static/dashboard/containers/containers/create/create-workflow.service.js:35
 msgid "Info"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:41
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:42
 #: magnum_ui/static/dashboard/containers/baymodels/create/spec/spec.html:2
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:42
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:45
 msgid "Node Spec"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:47
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:48
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:2
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:74
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:77
 msgid "Network"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:53
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:54
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:2
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:9
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:108
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:151
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:111
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:125
 msgid "Labels"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:61
+#: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:62
 #: magnum_ui/static/dashboard/containers/bays/create/create-workflow.service.js:55
 #: magnum_ui/static/dashboard/containers/containers/create/create-workflow.service.js:49
 msgid "Create"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/create/create.service.js:46
+#, python-format
+msgid "BayModel %s was successfully created."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:41
@@ -207,10 +232,10 @@ msgid "Name of the baymodel to create."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:15
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:16
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:61
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:66
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:139
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:19
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:65
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:50
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:113
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:41
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:24
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:70
@@ -218,20 +243,20 @@ msgid "COE"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:27
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:28
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:31
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:45
 msgid "Public"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:34
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:32
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:145
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:35
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:119
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:47
 msgid "Registry Enabled"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:41
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:36
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:39
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:49
 msgid "TLS Disabled"
 msgstr ""
@@ -275,9 +300,9 @@ msgid "Please provide the settings of the Bay networking."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:9
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:78
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:62
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:148
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:81
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:46
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:122
 msgid "Network Driver"
 msgstr ""
 
@@ -286,7 +311,7 @@ msgid "The network driver name for instantiating container networks."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:17
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:82
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:85
 msgid "HTTP Proxy"
 msgstr ""
 
@@ -295,7 +320,7 @@ msgid "The http_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:23
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:86
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:89
 msgid "HTTPS Proxy"
 msgstr ""
 
@@ -304,7 +329,7 @@ msgid "The https_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:29
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:90
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:93
 msgid "No Proxy"
 msgstr ""
 
@@ -313,7 +338,7 @@ msgid "The no_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:35
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:94
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:97
 msgid "External Network ID"
 msgstr ""
 
@@ -322,7 +347,7 @@ msgid "The external Neutron network ID to connect to this bay model."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:41
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:98
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:101
 msgid "Fixed Network"
 msgstr ""
 
@@ -331,7 +356,7 @@ msgid "The private Neutron network name to connect to this bay model."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:47
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:102
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:105
 msgid "DNS"
 msgstr ""
 
@@ -435,7 +460,7 @@ msgid "Keypair"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/spec/spec.html:44
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:66
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:69
 msgid "SSH Authorized Key"
 msgstr ""
 
@@ -443,78 +468,126 @@ msgstr ""
 msgid "The SSH authorized key to use."
 msgstr ""
 
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:45
+msgid "Confirm Delete BayModel"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:47
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted baymodel"
+" is not recoverable."
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:49
+#: magnum_ui/static/dashboard/containers/baymodels/table/row-actions.service.js:55
+msgid "Delete BayModel"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:50
+#, python-format
+msgid "Deleted BayModel: %s."
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:51
+#, python-format
+msgid "Unable to delete BayModel: %s."
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:54
+msgid "Confirm Delete BayModels"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:56
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted "
+"baymodels are not recoverable."
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:58
+#: magnum_ui/static/dashboard/containers/baymodels/table/batch-actions.service.js:62
+msgid "Delete BayModels"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:59
+#, python-format
+msgid "Deleted BayModels: %s."
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:60
+#, python-format
+msgid "Unable to delete BayModels: %s."
+msgstr ""
+
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:4
 msgid "Bay Models"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:9
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:12
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:9
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:9
 msgid "Overview"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:12
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:15
 msgid "Cluster Type"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:20
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:23
 msgid "Cluster Distro"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:24
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:27
 msgid "Server Type"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:46
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:142
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:49
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:116
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:43
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:28
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:74
 msgid "Image ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:50
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:53
 msgid "Flavor ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:54
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:57
 msgid "Master Flavor ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:58
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:61
 msgid "Docker Volume Size"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:59
-msgid "{$ ctrl.baymodel.docker_volume_size $} GB"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:62
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:65
 msgid "Keypair ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:122
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:125
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:89
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:80
 msgid "Record Properties"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:126
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:129
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:93
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:84
 msgid "Created"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:130
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:133
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:97
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:88
 msgid "Updated"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:134
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:56
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:58
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:136
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:137
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:60
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:42
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:110
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:39
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:20
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:101
@@ -528,9 +601,13 @@ msgstr ""
 msgid "ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:51
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:54
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:133
+#: magnum_ui/static/dashboard/containers/baymodels/table/batch-actions.service.js:56
+msgid "Create BayModel"
+msgstr ""
+
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:55
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:38
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:107
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:31
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:16
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:51
@@ -545,20 +622,10 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:37
-msgid "Delete Bay Models"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:70
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:54
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:72
 #: magnum_ui/static/dashboard/containers/containers/table/table.html:78
 msgid "Actions"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:117
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:119
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:127
-msgid "Delete"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/bays/create/create-workflow.service.js:31
@@ -741,6 +808,11 @@ msgstr ""
 msgid "Delete Bays"
 msgstr ""
 
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:119
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:127
+msgid "Delete"
+msgstr ""
+
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:144
 msgid "BayModel"
 msgstr ""
@@ -792,26 +864,6 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:41
 msgid "BayModel ID"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:41
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.controller.js:34
-msgid "bytes"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:42
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.controller.js:35
-msgid "KB"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:43
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.controller.js:36
-msgid "MB"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/containers/create/spec/container.spec.controller.js:44
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.controller.js:37
-msgid "GB"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/spec/spec.help.html:3

@@ -5,11 +5,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-02-01 18:26+0000\n"
+"POT-Creation-Date: 2016-03-02 07:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-02-02 12:26+0000\n"
+"PO-Revision-Date: 2016-02-23 12:35+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -71,6 +71,10 @@ msgstr "ベイの UUID"
 msgid "BayModel"
 msgstr "ベイモデル"
 
+#, python-format
+msgid "BayModel %s was successfully created."
+msgstr "ベイモデル %s が正常に作成されました。"
+
 msgid "BayModel ID"
 msgstr "ベイモデル ID"
 
@@ -113,6 +117,12 @@ msgstr "クラスター種別"
 msgid "Command"
 msgstr "コマンド"
 
+msgid "Confirm Delete BayModel"
+msgstr "ベイモデルの削除の確認"
+
+msgid "Confirm Delete BayModels"
+msgstr "ベイモデルの削除の確認"
+
 msgid "Container Details"
 msgstr "コンテナーの詳細"
 
@@ -134,6 +144,9 @@ msgstr "ベイの作成"
 msgid "Create Bay Model"
 msgstr "ベイモデルの作成"
 
+msgid "Create BayModel"
+msgstr "ベイモデルの作成"
+
 msgid "Create Container"
 msgstr "コンテナーの作成"
 
@@ -149,7 +162,10 @@ msgstr "DNS:"
 msgid "Delete"
 msgstr "削除"
 
-msgid "Delete Bay Models"
+msgid "Delete BayModel"
+msgstr "ベイモデルの削除"
+
+msgid "Delete BayModels"
 msgstr "ベイモデルの削除"
 
 msgid "Delete Bays"
@@ -157,6 +173,14 @@ msgstr "ベイの削除"
 
 msgid "Delete Containers"
 msgstr "コンテナーの削除"
+
+#, python-format
+msgid "Deleted BayModel: %s."
+msgstr "ベイモデル %s を削除しました。"
+
+#, python-format
+msgid "Deleted BayModels: %s."
+msgstr "ベイモデル %s を削除しました。"
 
 msgid "Description:"
 msgstr "説明:"
@@ -513,11 +537,20 @@ msgstr "ベイモデルを作成できません。"
 msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
 
+#, python-format
+msgid "Unable to delete BayModel: %s."
+msgstr "ベイモデルを削除できません: %s"
+
+#, python-format
+msgid "Unable to delete BayModels: %s."
+msgstr "ベイモデルを削除できません: %s"
+
 msgid "Unable to delete the Bay."
 msgstr "ベイを削除できません。"
 
-msgid "Unable to delete the BayModel."
-msgstr "ベイモデルを削除できません。"
+#, python-format
+msgid "Unable to delete the BayModel with id: %(id)s"
+msgstr "次の ID のベイモデルを削除できません: %(id)s"
 
 msgid "Unable to delete the BayModels."
 msgstr "ベイモデルを削除できません。"
@@ -552,12 +585,25 @@ msgstr "コンテナーの一覧を取得できません。"
 msgid "Updated"
 msgstr "更新時刻"
 
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
+"not recoverable."
+msgstr ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたベイモデルは元に"
+"戻せません。"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
+"are not recoverable."
+msgstr ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたベイモデルは元に"
+"戻せません。"
+
 msgid "bytes"
 msgstr "バイト"
 
 msgid "{$ ctrl.bay.bay_create_timeout $} minute"
 msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
 msgstr[0] "{$ ctrl.bay.bay_create_timeout $} 分"
-
-msgid "{$ ctrl.baymodel.docker_volume_size $} GB"
-msgstr "{$ ctrl.baymodel.docker_volume_size $} GB"
