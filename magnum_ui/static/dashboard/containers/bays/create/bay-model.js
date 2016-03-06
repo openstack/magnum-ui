@@ -19,7 +19,7 @@
 
   angular
     .module('horizon.dashboard.containers.bays')
-    .factory('bayModel', bayModel);
+    .factory('horizon.dashboard.containers.bays.bayModel', bayModel);
 
   bayModel.$inject = [
     'horizon.app.core.openstack-service-api.magnum'

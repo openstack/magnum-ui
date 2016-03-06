@@ -80,7 +80,6 @@
       }
     }
 
-
     function labelize(count){
       return {
           title: ngettext('Confirm Delete Bay',
