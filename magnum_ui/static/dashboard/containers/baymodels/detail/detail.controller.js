@@ -24,22 +24,21 @@
     '$scope',
     '$window',
     '$location',
+    '$routeParams',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.glance',
-    '$routeParams',
     'horizon.dashboard.containers.baymodels.events',
-    'horizon.dashboard.containers.baymodels.row-actions.service'
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.containers.baymodels.resourceType'
   ];
 
-  function BayModelDetailController($scope, $window, $location, magnum, glance, $routeParams, events, actions) {
+  function BayModelDetailController($scope, $window, $location, $routeParams, magnum, glance, events, registry, baymodelResourceType) {
     var ctrl = this;
     ctrl.baymodel = {};
     ctrl.image_uuid;
+    ctrl.baymodelResource = registry.getResourceType(baymodelResourceType);
 
     var baymodelId = $routeParams.baymodelId;
-
-    ctrl.actions = actions;
-    ctrl.actions.initScope($scope);
 
     var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
 
@@ -48,6 +47,7 @@
     init();
 
     function init() {
+      registry.initActions(baymodelResourceType, $scope);
       // Load the elements that are used in the overview.
       magnum.getBayModel(baymodelId).success(onGetBayModel);
     }

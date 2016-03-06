@@ -17,7 +17,7 @@
 
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .factory('horizon.dashboard.containers.baymodels.delete.deleteService', deleteService);
+    .factory('horizon.dashboard.containers.baymodels.delete.service', deleteService);
 
   deleteService.$inject = [
     'horizon.app.core.openstack-service-api.magnum',
@@ -30,7 +30,7 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.containers.baymodels.delete.deleteService
+   * @name horizon.dashboard.containers.baymodels.delete.service
    *
    * @Description
    * Brings up the delete baymodels confirmation modal dialog.
@@ -41,24 +41,6 @@
     magnum, policy, deleteModalService, gettext, $qExtensions, events
   ) {
     var scope;
-    var singleLabels = {
-      title: gettext('Confirm Delete BayModel'),
-      /* eslint-disable max-len */
-      message: gettext('You have selected "%s". Please confirm your selection. Deleted baymodel is not recoverable.'),
-      /* eslint-enable max-len */
-      submit: gettext('Delete BayModel'),
-      success: gettext('Deleted BayModel: %s.'),
-      error: gettext('Unable to delete BayModel: %s.')
-    };
-    var multiLabels = {
-      title: gettext('Confirm Delete BayModels'),
-      /* eslint-disable max-len */
-      message: gettext('You have selected "%s". Please confirm your selection. Deleted baymodels are not recoverable.'),
-      /* eslint-enable max-len */
-      submit: gettext('Delete BayModels'),
-      success: gettext('Deleted BayModels: %s.'),
-      error: gettext('Unable to delete BayModels: %s.')
-    };
     var context = {
       labels: null,
       deleteEntity: deleteEntity,
@@ -89,14 +71,30 @@
     function perform(selected) {
       if(!selected.hasOwnProperty('id')){
         // batch (multi)
-        context.labels = multiLabels;
-        var items = getSelectedItems(selected);
-        $qExtensions.allSettled(items.map(checkPermission)).then(afterCheck);
+        context.labels = labelize(selected.length);
+        $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
       }else{
         // row (single)
-        context.labels = singleLabels;
+        context.labels = labelize(1);
         deleteModalService.open(scope, [selected], context);
       }
+    }
+
+    function labelize(count){
+      return {
+        title: ngettext('Confirm Delete BayModel',
+                        'Confirm Delete BayModels', count),
+        /* eslint-disable max-len */
+        message: ngettext('You have selected "%s". Please confirm your selection. Deleted baymodel is not recoverable.',
+                          'You have selected "%s". Please confirm your selection. Deleted baymodels are not recoverable.', count),
+        /* eslint-enable max-len */
+        submit: ngettext('Delete BayModel',
+                         'Delete BayModels', count),
+        success: ngettext('Deleted BayModel: %s.',
+                          'Deleted BayModels: %s.', count),
+        error: ngettext('Unable to delete BayModel: %s.',
+                        'Unable to delete BayModels: %s.', count)
+      };
     }
 
     // for batch delete
@@ -111,19 +109,6 @@
       }
       if (result.pass.length > 0) {
         deleteModalService.open(scope, result.pass.map(getEntity), context);
-      }
-    }
-
-    // for batch delete
-    function getSelectedItems(selected) {
-      return Object.keys(selected).filter(isChecked).map(getItem);
-
-      function isChecked(value) {
-        return selected[value].checked;
-      }
-
-      function getItem(value) {
-        return selected[value].item;
       }
     }
 

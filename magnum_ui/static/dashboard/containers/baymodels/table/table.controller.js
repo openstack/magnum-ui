@@ -33,18 +33,15 @@
     '$scope',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.dashboard.containers.baymodels.events',
-    'horizon.dashboard.containers.baymodels.batch-actions.service',
-    'horizon.dashboard.containers.baymodels.row-actions.service'
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.containers.baymodels.resourceType'
   ];
 
-  function containersBayModelsTableController($scope, magnum, events, batchActions, rowActions) {
+  function containersBayModelsTableController($scope, magnum, events, registry, baymodelResourceType) {
     var ctrl = this;
     ctrl.baymodels = [];
     ctrl.baymodelsSrc = [];
-    ctrl.batchActions = batchActions;
-    ctrl.batchActions.initScope($scope);
-    ctrl.rowActions = rowActions;
-    ctrl.rowActions.initScope($scope);
+    ctrl.baymodelResource = registry.getResourceType(baymodelResourceType);
 
     /**
      * Filtering - client-side MagicSearch
@@ -76,6 +73,7 @@
     init();
 
     function init() {
+      registry.initActions(baymodelResourceType, $scope);
       magnum.getBayModels().success(getBayModelsSuccess);
     }
 

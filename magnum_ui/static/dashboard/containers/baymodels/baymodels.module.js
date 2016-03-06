@@ -27,8 +27,9 @@
    * panel
    */
   angular
-    .module('horizon.dashboard.containers.baymodels', [])
-    .constant('horizon.dashboard.containers.baymodels.events', events());
+    .module('horizon.dashboard.containers.baymodels', ['horizon.dashboard.containers.baymodels.actions'])
+    .constant('horizon.dashboard.containers.baymodels.events', events())
+    .constant('horizon.dashboard.containers.baymodels.resourceType', 'OS::Magnum::BayModel');
 
   /**
    * @ngdoc constant
