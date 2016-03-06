@@ -166,13 +166,15 @@
         });
     }
 
-    function deleteContainer(id) {
-      return apiService.delete('/api/containers/containers/', [id])
-        .error(function() {
-          toastService.add('error', gettext('Unable to delete the Container.'));
-        });
+    function deleteContainer(id, suppressError) {
+      var promise = apiService.delete('/api/containers/containers/', [id]);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete the Container with id: %(id)s');
+        toastService.add('error', interpolate(msg, { id: id }, true));
+      });
     }
 
+    // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteContainers(ids) {
       return apiService.delete('/api/containers/containers/', ids)
         .error(function() {

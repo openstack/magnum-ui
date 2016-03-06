@@ -1,7 +1,7 @@
 <table ng-controller="containersContainersTableController as table"
   hz-table ng-cloak
-  st-table="table.icontainers"
-  st-safe-src="table.containers"
+  st-table="table.containers"
+  st-safe-src="table.containersSrc"
   default-sort="name"
   default-sort-reverse="false"
   class="table-striped table-rsp table-detail modern">
@@ -20,23 +20,7 @@
     </tr>
     <tr>
       <th colspan="100" class="action-col">
-        <action-list class="btn-addon">
-          <button
-            class="btn btn-default btn-sm btn-launch ng-scope"
-            ng-controller="containersContainerModalController as modal"
-            ng-click="modal.openContainerCreateWizard({successUrl: '/project/bays/containers/'})">
-            <span class="fa fa-plus"> <translate>Create Container</translate></span>
-          </button>
-        </action-list>
-        <action-list class="btn-addon">
-          <action
-            action-classes="'btn btn-default btn-sm btn-danger'"
-            disabled="numSelected === 0"
-            callback="table.batchDelete">
-            <i class="fa fa-trash-o"></i>
-            <translate>Delete Containers</translate>
-          </action>
-        </action-list>
+        <actions allowed="table.containerResource.batchActions" type="batch"></actions>
       </th>
     </tr>
     <!--
@@ -45,7 +29,7 @@
     -->
     <tr>
       <th class=select-col>
-        <input type="checkbox" hz-select-all="table.icontainers">
+        <input type="checkbox" hz-select-all="table.containers">
       </th>
 
       <th class="expander"></th>
@@ -89,12 +73,12 @@
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="c in table.icontainers track by c.id"
+    <tr ng-repeat-start="c in table.containers track by c.id"
         nt-class="{'st-selected': checked[c.id]}">
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="selected[c.id].checked"
+          ng-model="tCtrl.selections[c.id].checked"
           hz-select="c">
       </td>
 
@@ -117,17 +101,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-
-        <action-list dropdown>
-
-          <action
-            button-type="split-button"
-            action-classes="'btn btn-default btn-danger btn-sm'"
-            callback="table.singleDelete" item="c">
-              <translate>Delete</translate>
-          </action>
-
-        </action-list>
+        <actions allowed="table.containerResource.itemActions" type="row" item="c" />
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">
@@ -167,7 +141,7 @@
   </tbody>
   <tfoot>
     <td colspan="100">
-        <span class="display">{$ table.icontainers.length|itemCount $}</span>
+        <span class="display">{$ table.containers.length|itemCount $}</span>
           <div st-pagination="" st-items-by-page="10"
             st-displayed-pages="10"></div>
         </td>

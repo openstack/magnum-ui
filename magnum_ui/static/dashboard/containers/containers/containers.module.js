@@ -27,6 +27,20 @@
    * panel
    */
   angular
-    .module('horizon.dashboard.containers.containers', []);
+    .module('horizon.dashboard.containers.containers', ['horizon.dashboard.containers.containers.actions'])
+    .constant('horizon.dashboard.containers.containers.events', events())
+    .constant('horizon.dashboard.containers.containers.resourceType', 'OS::Magnum::Container');
+
+  /**
+   * @ngdoc constant
+   * @name horizon.dashboard.containers.containers.events
+   * @description A list of events used by Containers
+   */
+  function events() {
+    return {
+      CREATE_SUCCESS: 'horizon.dashboard.containers.containers.CREATE_SUCCESS',
+      DELETE_SUCCESS: 'horizon.dashboard.containers.containers.DELETE_SUCCESS'
+    };
+  }
 
 })();

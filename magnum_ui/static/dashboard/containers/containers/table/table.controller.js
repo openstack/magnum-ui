@@ -31,16 +31,18 @@
 
   containersContainersTableController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.magnum'
+    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.containers.containers.events',
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.containers.containers.resourceType'
   ];
 
-  function containersContainersTableController($scope, magnum) {
+  function containersContainersTableController($scope, magnum, events, registry, containerResourceType) {
     var ctrl = this;
-    ctrl.icontainers = [];
     ctrl.containers = [];
+    ctrl.containersSrc = [];
+    ctrl.containerResource = registry.getResourceType(containerResourceType);
 
-    ctrl.singleDelete = singleDelete;
-    ctrl.batchDelete = batchDelete;
 
     /**
      * Filtering - client-side MagicSearch
@@ -84,38 +86,50 @@
       }
     ];
 
+    var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+    var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+
+    $scope.$on('$destroy', destroy);
+
     init();
 
     function init() {
+      registry.initActions(containerResourceType, $scope);
       magnum.getContainers().success(getContainersSuccess);
     }
 
     function getContainersSuccess(response) {
-      ctrl.containers = response.items;
+      ctrl.containersSrc = response.items;
     }
 
-    function singleDelete(container) {
-      magnum.deleteContainer(container.id).success(function() {
-        ctrl.containers.splice(ctrl.containers.indexOf(container), 1);
-      });
+
+    function onCreateSuccess(e, createdItem) {
+      ctrl.containersSrc.push(createdItem);
+      e.stopPropagation();
     }
 
-    function batchDelete() {
-      var ids = [];
-      for (var id in $scope.selected) {
-        if ($scope.selected[id].checked) {
-          ids.push(id);
-        }
+    function onDeleteSuccess(e, removedIds) {
+      ctrl.containersSrc = difference(ctrl.containersSrc, removedIds, 'id');
+      e.stopPropagation();
+
+      // after deleting the items
+      // we need to clear selected items from table controller
+      $scope.$emit('hzTable:clearSelected');
+    }
+
+    function difference(currentList, otherList, key) {
+      return currentList.filter(filter);
+
+      function filter(elem) {
+        return otherList.filter(function filterDeletedItem(deletedItem) {
+          return deletedItem === elem[key];
+        }).length === 0;
       }
-      magnum.deleteContainers(ids).success(function() {
-        for (var c in ids) {
-          var todelete = ctrl.containers.filter(function(obj) {
-            return obj.id == ids[c];
-          });
-          ctrl.containers.splice(ctrl.containers.indexOf(todelete[0]), 1);
-        }
-        $scope.selected = {};
-      });
+    }
+
+    function destroy() {
+      createWatcher();
+      deleteWatcher();
     }
   }
 

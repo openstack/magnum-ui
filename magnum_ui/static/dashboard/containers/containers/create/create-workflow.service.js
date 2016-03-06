@@ -23,10 +23,11 @@
 
   containerWorkflow.$inject = [
     'horizon.dashboard.containers.basePath',
-    'horizon.app.core.workflow.factory'
+    'horizon.app.core.workflow.factory',
+    'horizon.framework.util.i18n.gettext'
   ];
 
-  function containerWorkflow(basePath, dashboardWorkflow) {
+  function containerWorkflow(basePath, dashboardWorkflow, gettext) {
     return dashboardWorkflow({
       title: gettext('Create Container'),
 
