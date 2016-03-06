@@ -27,5 +27,19 @@
    * panel
    */
   angular
-    .module('horizon.dashboard.containers.bays', []);
+    .module('horizon.dashboard.containers.bays', ['horizon.dashboard.containers.bays.actions'])
+    .constant('horizon.dashboard.containers.bays.events', events())
+    .constant('horizon.dashboard.containers.bays.resourceType', 'OS::Magnum::Bay');
+
+  /**
+   * @ngdoc constant
+   * @name horizon.dashboard.containers.bays.events
+   * @description A list of events used by Bays
+   */
+  function events() {
+    return {
+      CREATE_SUCCESS: 'horizon.dashboard.containers.bays.CREATE_SUCCESS',
+      DELETE_SUCCESS: 'horizon.dashboard.containers.bays.DELETE_SUCCESS'
+    };
+  }
 })();
