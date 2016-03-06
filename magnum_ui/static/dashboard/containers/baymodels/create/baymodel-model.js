@@ -48,6 +48,7 @@
         keypair_id: "",
         ssh_authorized_key: null,
         network_driver: "",
+        volume_driver: "",
         http_proxy: null,
         https_proxy: null,
         no_proxy: null,
@@ -56,7 +57,10 @@
         dns_nameserver: null,
         labels: null,
         network_drivers : [{name: "docker", label: gettext("Docker")},
-                           {name: "flannel", label: gettext("Flannel")}]
+                           {name: "flannel", label: gettext("Flannel")}],
+        volume_drivers : [{name: "", label: gettext("Choose a Volume Driver")},
+                          {name: "cinder", label: gettext("Cinder")},
+                          {name: "rexray", label: gettext("Rexray")}]
       };
     }
 
@@ -76,9 +80,11 @@
     function cleanNullProperties(finalSpec) {
       // Initially clean fields that don't have any value.
       // Not only "null", blank too.
-      // "network_drivers" is used for pull-down options. not for submittion.
+      // "network_drivers" and "volume_drivers" are used for pull-down options.
+      // These are not for submittion.
       for (var key in finalSpec) {
-        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null || finalSpec[key] === "" || key === "network_drivers") {
+        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null || finalSpec[key] === ""
+            || key === "network_drivers" || key === "volume_drivers") {
           delete finalSpec[key];
         }
       }
