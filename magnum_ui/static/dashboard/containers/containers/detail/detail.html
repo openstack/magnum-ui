@@ -3,6 +3,9 @@
     <ol class="breadcrumb">
       <li><a ng-href="project/bays/containers" translate>Containers</a></li>
       <li class="active">{$ ctrl.container.name|noName $}</li>
+      <div class="pull-right">
+        <actions allowed="ctrl.containerResource.itemActions" type="row" item="ctrl.container" />
+      </div>
     </ol>
   </div>
   <tabset>

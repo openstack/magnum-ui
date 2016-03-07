@@ -21,29 +21,40 @@
     .controller('ContainerDetailController', ContainerDetailController);
 
   ContainerDetailController.$inject = [
+    '$scope',
     '$window',
+    '$location',
+    '$routeParams',
     'horizon.app.core.openstack-service-api.magnum',
-    '$routeParams'
+    'horizon.dashboard.containers.containers.events',
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.dashboard.containers.containers.resourceType'
   ];
 
-  function ContainerDetailController($window, magnum, $routeParams) {
+  function ContainerDetailController($scope, $window, $location, $routeParams, magnum, events, registry, containerResourceType) {
     var ctrl = this;
     ctrl.container = {};
     ctrl.bay = {};
     ctrl.baymodel = {};
-
+    ctrl.containerResource = registry.getResourceType(containerResourceType);
 
     var containerId = $routeParams.containerId;
+
+    var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+
+    $scope.$on('$destroy', destroy);
 
     init();
 
     function init() {
+      registry.initActions(containerResourceType, $scope);
       // Load the elements that are used in the overview.
       magnum.getContainer(containerId).success(onGetContainer);
     }
 
     function onGetContainer(container) {
       ctrl.container = container;
+      ctrl.container.id = container.uuid;
       magnum.getBay(ctrl.container.bay_uuid).success(onGetBay);
     }
 
@@ -54,6 +65,15 @@
 
     function onGetBayModel(baymodel) {
       ctrl.baymodel = baymodel;
+    }
+
+    function onDeleteSuccess(e, removedIds) {
+      e.stopPropagation();
+      $location.path("/project/bays/containers");
+    }
+
+    function destroy() {
+      deleteWatcher();
     }
   }
 })();
