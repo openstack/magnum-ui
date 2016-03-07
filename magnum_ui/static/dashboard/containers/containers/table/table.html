@@ -91,7 +91,7 @@
       <td class="rsp-p1"><a ng-href="project/bays/containers/{$ c.id $}">{$ c.name|noName $}</a></td>
       <td class="rsp-p2">{$ c.id $}</td>
       <td class="rsp-p1">{$ c.status $}</td>
-      <td class="rsp-p3"><a ng-href="project/baymodels/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></td>
+      <td class="rsp-p3"><a ng-href="project/bays/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></td>
       <td class="rsp-p2">{$ c.image $}</td>
       <td class="rsp-p3">{$ c.memorysize $} {$ c.memoryunit $}</td>
 
@@ -100,7 +100,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-        <actions allowed="table.containerResource.itemActions" type="row" item="c" />
+        <actions allowed="table.containerResource.itemActions" type="row" item="c"></actions>
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">
@@ -130,7 +130,7 @@
           <span class="rsp-alt-p3">
             <dl class="col-xs-5">
               <dt translate>Bay ID</dt>
-              <dd><a ng-href="project/baymodels/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></dd>
+              <dd><a ng-href="project/bays/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></dd>
             </dl>
             <dl class="col-xs-2">
               <dt translate>Memory</dt>

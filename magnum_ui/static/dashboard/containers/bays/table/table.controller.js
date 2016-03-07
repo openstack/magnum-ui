@@ -31,13 +31,15 @@
 
   containersBaysTableController.$inject = [
     '$scope',
+    '$location',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.dashboard.containers.bays.events',
+    'horizon.dashboard.containers.containers.events',
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.dashboard.containers.bays.resourceType'
   ];
 
-  function containersBaysTableController($scope, magnum, events, registry, bayResourceType) {
+  function containersBaysTableController($scope, $location, magnum, events, containerEvents, registry, bayResourceType) {
     var ctrl = this;
     ctrl.bays = [];
     ctrl.baysSrc = [];
@@ -76,6 +78,7 @@
     ];
 
     var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+    var createContainerWatcher = $scope.$on(containerEvents.CREATE_SUCCESS, onCreateContainerSuccess);
     var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
 
     $scope.$on('$destroy', destroy);
@@ -94,6 +97,11 @@
     function onCreateSuccess(e, createdItem) {
       ctrl.baysSrc.push(createdItem);
       e.stopPropagation();
+    }
+
+    function onCreateContainerSuccess(e, createdItem) {
+      e.stopPropagation();
+      $location.path("/project/bays/containers");
     }
 
     function onDeleteSuccess(e, removedIds) {
@@ -117,6 +125,7 @@
 
     function destroy() {
       createWatcher();
+      createContainerWatcher();
       deleteWatcher();
     }
   }

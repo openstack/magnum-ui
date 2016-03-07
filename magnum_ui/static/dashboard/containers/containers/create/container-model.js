@@ -19,7 +19,7 @@
 
   angular
     .module('horizon.dashboard.containers.containers')
-    .factory('containerModel', containerModel);
+    .factory('horizon.dashboard.containers.containers.containerModel', containerModel);
 
   containerModel.$inject = [
     'horizon.app.core.openstack-service-api.magnum'

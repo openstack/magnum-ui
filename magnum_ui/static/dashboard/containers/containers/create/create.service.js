@@ -25,7 +25,7 @@
     .factory('horizon.dashboard.containers.containers.create.service', createService);
 
   createService.$inject = [
-    'containerModel',
+    'horizon.dashboard.containers.containers.containerModel',
     'horizon.framework.widgets.modal.wizard-modal.service',
     'horizon.framework.widgets.toast.service',
     'horizon.dashboard.containers.containers.workflow',
@@ -63,8 +63,9 @@
       });
     }
 
-    function perform() {
+    function perform(selected) {
       scope.model.init();
+      scope.selected = selected;
       wizardModalService.modal({
         scope: scope,
         workflow: createWorkflow,
@@ -72,7 +73,7 @@
       });
     }
 
-    function allowed() {
+    function allowed(selected) {
       return $qExtensions.booleanAsPromise(true);
     }
 

@@ -82,6 +82,10 @@
 
     function onGetBays(response) {
       Array.prototype.push.apply(ctrl.bays, response.items);
+      if($scope.selected instanceof Object){
+        $scope.model.newContainerSpec.bay_uuid = $scope.selected.id;
+        $scope.changeBay();
+      }
     }
 
   }
