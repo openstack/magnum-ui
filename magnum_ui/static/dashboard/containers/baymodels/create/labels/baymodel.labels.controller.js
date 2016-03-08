@@ -19,7 +19,7 @@
 
   /**
    * @ngdoc controller
-   * @name createBayModelLabelsController
+   * @name createBaymodelLabelsController
    * @ngController
    *
    * @description
@@ -27,16 +27,16 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('createBayModelLabelsController', createBayModelLabelsController);
+    .controller('createBaymodelLabelsController', createBaymodelLabelsController);
 
-  createBayModelLabelsController.$inject = [
+  createBaymodelLabelsController.$inject = [
     '$q',
     '$scope',
     'horizon.dashboard.containers.basePath',
     'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createBayModelLabelsController($q, $scope, basePath, magnum) {
+  function createBaymodelLabelsController($q, $scope, basePath, magnum) {
     var ctrl = this;
   }
 

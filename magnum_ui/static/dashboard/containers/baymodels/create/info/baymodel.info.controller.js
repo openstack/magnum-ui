@@ -19,7 +19,7 @@
 
   /**
    * @ngdoc controller
-   * @name createBayModelInfoController
+   * @name createBaymodelInfoController
    * @ngController
    *
    * @description
@@ -27,9 +27,9 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('createBayModelInfoController', createBayModelInfoController);
+    .controller('createBaymodelInfoController', createBaymodelInfoController);
 
-  createBayModelInfoController.$inject = [
+  createBaymodelInfoController.$inject = [
     '$q',
     '$scope',
     'horizon.dashboard.containers.basePath',
@@ -37,7 +37,7 @@
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function createBayModelInfoController($q, $scope, basePath, magnum, gettext) {
+  function createBaymodelInfoController($q, $scope, basePath, magnum, gettext) {
     var ctrl = this;
     ctrl.coes = [{name: "", label: gettext("Choose a Container Orchestration Engine")},
                  {name: "swarm", label: gettext("Docker Swarm")},
@@ -64,16 +64,16 @@
               {name:"rexray", label: gettext("Rexray")}]};
 
     $scope.changeCoes = function(){
-      if($scope.model.newBayModelSpec.coe){
-        $scope.model.newBayModelSpec.network_drivers = ctrl.supportedNetworkDrivers[$scope.model.newBayModelSpec.coe];
-        $scope.model.newBayModelSpec.network_driver = ctrl.supportedNetworkDrivers[$scope.model.newBayModelSpec.coe][0].name;
-        $scope.model.newBayModelSpec.volume_drivers = ctrl.supportedVolumeDrivers[$scope.model.newBayModelSpec.coe];
-        $scope.model.newBayModelSpec.volume_driver = ctrl.supportedVolumeDrivers[$scope.model.newBayModelSpec.coe][0].name;
+      if($scope.model.newBaymodelSpec.coe){
+        $scope.model.newBaymodelSpec.network_drivers = ctrl.supportedNetworkDrivers[$scope.model.newBaymodelSpec.coe];
+        $scope.model.newBaymodelSpec.network_driver = ctrl.supportedNetworkDrivers[$scope.model.newBaymodelSpec.coe][0].name;
+        $scope.model.newBaymodelSpec.volume_drivers = ctrl.supportedVolumeDrivers[$scope.model.newBaymodelSpec.coe];
+        $scope.model.newBaymodelSpec.volume_driver = ctrl.supportedVolumeDrivers[$scope.model.newBaymodelSpec.coe][0].name;
       }else{
-        $scope.model.newBayModelSpec.network_drivers = ctrl.supportedNetworkDrivers.initial;
-        $scope.model.newBayModelSpec.network_driver = ctrl.supportedNetworkDrivers.initial[0].name;
-        $scope.model.newBayModelSpec.volume_drivers = ctrl.supportedVolumeDrivers.initial;
-        $scope.model.newBayModelSpec.volume_driver = ctrl.supportedVolumeDrivers.initial[0].name;
+        $scope.model.newBaymodelSpec.network_drivers = ctrl.supportedNetworkDrivers.initial;
+        $scope.model.newBaymodelSpec.network_driver = ctrl.supportedNetworkDrivers.initial[0].name;
+        $scope.model.newBaymodelSpec.volume_drivers = ctrl.supportedVolumeDrivers.initial;
+        $scope.model.newBaymodelSpec.volume_driver = ctrl.supportedVolumeDrivers.initial[0].name;
       }
     };
   }

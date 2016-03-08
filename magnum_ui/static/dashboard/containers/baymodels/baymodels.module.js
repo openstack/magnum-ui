@@ -29,7 +29,7 @@
   angular
     .module('horizon.dashboard.containers.baymodels', ['horizon.dashboard.containers.baymodels.actions'])
     .constant('horizon.dashboard.containers.baymodels.events', events())
-    .constant('horizon.dashboard.containers.baymodels.resourceType', 'OS::Magnum::BayModel');
+    .constant('horizon.dashboard.containers.baymodels.resourceType', 'OS::Magnum::Baymodel');
 
   /**
    * @ngdoc constant

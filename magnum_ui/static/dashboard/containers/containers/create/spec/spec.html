@@ -1,44 +1,51 @@
 <div ng-controller="createContainerSpecController as ctrl">
-  <h1 translate>Container Spec</h1>
+  <p translate>Please provide the specs for this Container.</p>
 
-  <div class="content">
-    <div translate class="subtitle">Please provide the specs for this Container.</div>
+  <div class="row">
+    <div class="col-xs-12">
 
-    <div class="form-group">
-      <div class="form-field required container-image">
-        <label class="on-top" translate>Image</label>
-        <input name="container-image" type="text"
-               class="form-control input-sm"
-               ng-required="true"
-               ng-model="model.newContainerSpec.image"
+      <div class="form-group">
+        <label class="control-label" for="container-image" translate>
+          <translate>Image</translate>
+          <span class="hz-icon-required fa fa-asterisk"></span>
+        </label>
+        <input name="container-image" type="text" class="form-control" id="container-image"
+               ng-required="true" ng-model="model.newContainerSpec.image"
                placeholder="{$ 'Name of the container image.'|translate $}">
       </div>
-      <div class="form-field container-memory">
-        <label class="on-top" translate>Memory</label>
-        <div class="input-group">
-          <input name="container-memorysize" type="number" ng-pattern="/^[0-9]+$/"
-                 class="form-control form-inline input-sm container-memorysize"
-                 ng-model="model.newContainerSpec.memorysize"
-                 placeholder="{$ 'The container memory size.'|translate $}"
-                 ng-change="changeMemorySize()">
-          <select name="container-memoryunit"
-                  class="form-control form-inline input-sm container-memoryunit"
-                  ng-options="mu.unit as mu.label for mu in ctrl.memoryunits"
-                  ng-model="model.newContainerSpec.memoryunit"
-                  ng-change="changeMemoryUnit()">
-          </select>
-        </div>
-        <input name="container-memory" type="hidden"
-               ng-model="model.newContainerSpec.memory">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-memorysize" translate>Memory Size</label>
+        <input name="container-memorysize" type="number" ng-pattern="/^[0-9]+$/"
+               class="form-control" ng-model="model.newContainerSpec.memorysize"
+               placeholder="{$ 'The container memory size.'|translate $}"
+               ng-change="changeMemorySize()" id="container-memorysize">
       </div>
-      <div class="form-field container-command">
-        <label class="on-top" translate>Command</label>
-        <input name="container-command" type="text"
-               class="form-control input-sm"
+    </div>
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="container-memoryunit" translate>Memory Unit</label>
+        <select name="container-memoryunit" id="container-memoryunit"
+                class="form-control" ng-options="mu.unit as mu.label for mu in ctrl.memoryunits"
+                ng-model="model.newContainerSpec.memoryunit" ng-change="changeMemoryUnit()">
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="container-command" translate>Command</label>
+        <input name="container-command" type="text" class="form-control" id="container-command"
                ng-model="model.newContainerSpec.command"
                placeholder="{$ 'Send command to the contaier in a line.'|translate $}">
       </div>
     </div>
-
   </div>
 </div>

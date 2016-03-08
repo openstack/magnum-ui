@@ -20,4 +20,4 @@ PANEL_GROUP = 'containers'
 PANEL_DASHBOARD = 'project'
 
 # Python panel class of the PANEL to be added.
-ADD_PANEL = 'magnum_ui.content.baymodels.panel.BayModels'
+ADD_PANEL = 'magnum_ui.content.baymodels.panel.Baymodels'

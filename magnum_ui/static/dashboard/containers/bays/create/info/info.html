@@ -1,57 +1,49 @@
 <div ng-controller="createBayInfoController as ctrl">
-  <h1 translate>Bay Details</h1>
+  <div class="row">
+    <div class="col-xs-12">
 
-  <div class="content">
-    <div translate class="subtitle">Please provide the name of the Bay.</div>
-
-    <div class="form-group">
-      <div class="form-field bay-name">
-        <label class="on-top" translate>Bay Name</label>
-        <input name="bay-name" type="text" class="form-control input-sm"
-               ng-model="model.newBaySpec.name"
-               placeholder="{$ 'Name of the bay to create.'|translate $}">
+      <div class="form-group">
+        <label class="control-label" for="bay-name" translate>Bay Name</label>
+        <input name="bay-name" type="text" class="form-control" id="bay-name"
+               ng-model="model.newBaySpec.name">
       </div>
-      <div class="form-field required bay-model">
-        <label class="on-top" translate>Bay Model</label>
-        <select class="form-control" name="bay-model"
+
+      <div class="form-group">
+        <label class="control-label" for="bay-model" translate>
+          Baymodel
+          <span class="hz-icon-required fa fa-asterisk"></span>
+        </label>
+        <select class="form-control" name="bay-model" id="bay-model"
           ng-model="model.newBaySpec.baymodel_id"
           ng-required="true"
           ng-options="baymodel.id as baymodel.name|noName for baymodel in ctrl.baymodels"
-          ng-change="changeBayModel()">
+          ng-change="changeBaymodel()">
         </select>
       </div>
-    </div>
 
-    <h2 translate class="section-title">Bay Model Detail</h2>
-    <div class="subtitle" id="baymodel_detail_none" translate>
-      Choose a Bay Model
+      <div class="detail" ng-show="model.newBaySpec.baymodel_id">
+        <span translate class="h4">Baymodel Detail</span>
+        <dl class="dl-horizontal">
+          <dt translate>Name</dt>
+          <dd><a ng-href="project/baymodels/{$ baymodeldetail.id $}" ng-click="cancel()">
+              {$ baymodeldetail.name|noName $}
+          </a></dd>
+          <dt translate>ID</dt>
+          <dd>{$ baymodeldetail.id $}</dd>
+          <dt translate>COE</dt>
+          <dd>{$ baymodeldetail.coe $}</dd>
+          <dt translate>Image ID</dt>
+          <dd>{$ baymodeldetail.image_id $}</dd>
+          <dt translate>Public</dt>
+          <dd>{$ baymodeldetail.public $}</dd>
+          <dt translate>Registry Enabled</dt>
+          <dd>{$ baymodeldetail.registry_enabled $}</dd>
+          <dt translate>TLS Disabled</dt>
+          <dd>{$ baymodeldetail.tls_disabled $}</dd>
+          <dt translate>API Server Port</dt>
+          <dd>{$ baymodeldetail.apiserver_port $}</dd>
+        </dl>
+      </div>
     </div>
-    <div class="subtitle" id="baymodel_detail">
-      <dl class=dl-horizontal>
-        <dt translate>Name</dt>
-        <dd>
-          <a
-            ng-href="project/baymodels/{$ baymodeldetail.id $}"
-            ng-click="cancel()">
-            {$ baymodeldetail.name|noName $}
-          </a>
-        </dd>
-        <dt translate>ID</dt>
-        <dd>{$ baymodeldetail.id $}</dd>
-        <dt translate>COE</dt>
-        <dd>{$ baymodeldetail.coe $}</dd>
-        <dt translate>Image ID</dt>
-        <dd>{$ baymodeldetail.image_id $}</dd>
-        <dt translate>Public</dt>
-        <dd>{$ baymodeldetail.public $}</dd>
-        <dt translate>Registry Enabled</dt>
-        <dd>{$ baymodeldetail.registry_enabled $}</dd>
-        <dt translate>TLS Disabled</dt>
-        <dd>{$ baymodeldetail.tls_disabled $}</dd>
-        <dt translate>API Server Port</dt>
-        <dd>{$ baymodeldetail.apiserver_port $}</dd>
-      </dl>
-    </div>
-
   </div>
 </div>

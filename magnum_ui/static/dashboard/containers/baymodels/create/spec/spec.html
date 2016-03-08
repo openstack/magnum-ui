@@ -1,54 +1,67 @@
-<div ng-controller="createBayModelSpecController as ctrl">
-  <h1 translate>Node Spec</h1>
-
-  <div class="content">
-    <div class="subtitle" translate>Please provide the specs of the Bay.</div>
-
-    <div class="form-group">
-      <div class="form-field required baymodel-image-id">
-        <label class="on-top" translate>Image</label>
-        <select name="baymodel-image-id" type="text" class="form-control input-sm"
-                ng-model="model.newBayModelSpec.image_id" ng-required="true"
+<div ng-controller="createBaymodelSpecController as ctrl">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-image-id">
+          <translate>Image</span>
+          <span class="hz-icon-required fa fa-asterisk"></span>
+        </label>
+        <select name="baymodel-image-id" type="text" class="form-control" id="baymodel-image-id"
+                ng-model="model.newBaymodelSpec.image_id" ng-required="true"
                 ng-options="image.id as image.name for image in ctrl.images">
         </select>
       </div>
-      <div class="form-field baymodel-flavor-id">
-        <label class="on-top" translate>Flavor</label>
-        <select name="baymodel-flavor-id" type="text" class="form-control input-sm"
-                ng-model="model.newBayModelSpec.flavor_id"
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-flavor-id" translate>Flavor</label>
+        <select name="baymodel-flavor-id" type="text" class="form-control" id="baymodel-flavor-id"
+                ng-model="model.newBaymodelSpec.flavor_id"
                 ng-options="nflavor.id as nflavor.name for nflavor in ctrl.nflavors">
         </select>
       </div>
-      <div class="form-field baymodel-master-flavor-id">
-        <label class="on-top" translate>Master Flavor</label>
-        <select name="baymodel-master-flavor-id" type="text" class="form-control input-sm"
-                ng-model="model.newBayModelSpec.master_flavor_id"
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-master-flavor-id" translate>Master Flavor</label>
+        <select name="baymodel-master-flavor-id" type="text" class="form-control" id="baymodel-master-flavor-id"
+                ng-model="model.newBaymodelSpec.master_flavor_id"
                 ng-options="mflavor.id as mflavor.name for mflavor in ctrl.mflavors">
         </select>
       </div>
-      <div class="form-field baymodel-volume-driver">
-        <label class="on-top" translate>Volume Driver</label>
-        <select name="baymodel-volume-driver" type="text" class="form-control input-sm"
-                ng-model="model.newBayModelSpec.volume_driver"
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-volume-driver" translate>Volume Driver</label>
+        <select name="baymodel-volume-driver" type="text" class="form-control" id="baymodel-volume-driver"
+                ng-model="model.newBaymodelSpec.volume_driver"
                 placeholder="{$ 'The volume driver name for instantiating container volume.'|translate $}"
-                ng-options="driver.name as driver.label for driver in model.newBayModelSpec.volume_drivers">
+                ng-options="driver.name as driver.label for driver in model.newBaymodelSpec.volume_drivers">
         </select>
       </div>
-      <div class="form-field baymodel-docker-volume-size">
-        <label class="on-top" translate>Docker Volume Size (GB)</label>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-docker-volume-size" translate>
+          Docker Volume Size (GB)
+        </label>
         <input name="baymodel-docker-volume-size"  type="number" ng-pattern="/^[0-9]+$/"
-               class="form-control input-sm"
-               ng-model="model.newBayModelSpec.docker_volume_size" min="1"
-               placeholder="{$ 'Specify the number of size in GB for the docker volume to use.'|translate $}">
+               class="form-control" id="baymodel-docker-volume-size"
+               ng-model="model.newBaymodelSpec.docker_volume_size" min="1"
+               placeholder="{$ 'Specify the size in GB for the docker volume'|translate $}">
       </div>
-      <div class="form-field required baymodel-keypair-id">
-        <label class="on-top" translate>Keypair</label>
-        <select name="baymodel-keypair-id" type="text" class="form-control input-sm"
-                ng-model="model.newBayModelSpec.keypair_id" ng-required="true"
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-keypair-id">
+          <translate>Keypair</translate>
+          <span class="hz-icon-required fa fa-asterisk"></span>
+        </label>
+        <select name="baymodel-keypair-id" type="text" class="form-control" id="baymodel-keypair-id"
+                ng-model="model.newBaymodelSpec.keypair_id" ng-required="true"
                 ng-options="keypair.id as keypair.name for keypair in ctrl.keypairs">
         </select>
       </div>
     </div>
-
   </div>
 </div>

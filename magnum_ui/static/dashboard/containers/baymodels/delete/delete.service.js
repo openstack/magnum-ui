@@ -82,18 +82,18 @@
 
     function labelize(count){
       return {
-        title: ngettext('Confirm Delete BayModel',
-                        'Confirm Delete BayModels', count),
+        title: ngettext('Confirm Delete Baymodel',
+                        'Confirm Delete Baymodels', count),
         /* eslint-disable max-len */
         message: ngettext('You have selected "%s". Please confirm your selection. Deleted baymodel is not recoverable.',
                           'You have selected "%s". Please confirm your selection. Deleted baymodels are not recoverable.', count),
         /* eslint-enable max-len */
-        submit: ngettext('Delete BayModel',
-                         'Delete BayModels', count),
-        success: ngettext('Deleted BayModel: %s.',
-                          'Deleted BayModels: %s.', count),
-        error: ngettext('Unable to delete BayModel: %s.',
-                        'Unable to delete BayModels: %s.', count)
+        submit: ngettext('Delete Baymodel',
+                         'Delete Baymodels', count),
+        success: ngettext('Deleted Baymodel: %s.',
+                          'Deleted Baymodels: %s.', count),
+        error: ngettext('Unable to delete Baymodel: %s.',
+                        'Unable to delete Baymodels: %s.', count)
       };
     }
 
@@ -119,7 +119,7 @@
 
     // call delete REST API
     function deleteEntity(id){
-      return magnum.deleteBayModel(id, true);
+      return magnum.deleteBaymodel(id, true);
     }
   }
 })();

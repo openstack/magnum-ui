@@ -33,11 +33,11 @@
       getBays: getBays,
       deleteBay: deleteBay,
       deleteBays: deleteBays,
-      createBayModel: createBayModel,
-      getBayModel: getBayModel,
-      getBayModels: getBayModels,
-      deleteBayModel: deleteBayModel,
-      deleteBayModels: deleteBayModels,
+      createBaymodel: createBaymodel,
+      getBaymodel: getBaymodel,
+      getBaymodels: getBaymodels,
+      deleteBaymodel: deleteBaymodel,
+      deleteBaymodels: deleteBaymodels,
       createContainer: createContainer,
       getContainer: getContainer,
       getContainers: getContainers,
@@ -91,43 +91,43 @@
     }
 
     ///////////////
-    // BayModels //
+    // Baymodels //
     ///////////////
 
-    function createBayModel(params) {
+    function createBaymodel(params) {
       return apiService.post('/api/containers/baymodels/', params)
         .error(function() {
-          toastService.add('error', gettext('Unable to create BayModel'));
+          toastService.add('error', gettext('Unable to create Baymodel'));
         });
     }
 
-    function getBayModel(id) {
+    function getBaymodel(id) {
       return apiService.get('/api/containers/baymodels/' + id)
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the BayModel.'));
+          toastService.add('error', gettext('Unable to retrieve the Baymodel.'));
         });
     }
 
-    function getBayModels() {
+    function getBaymodels() {
       return apiService.get('/api/containers/baymodels/')
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the BayModels.'));
+          toastService.add('error', gettext('Unable to retrieve the Baymodels.'));
         });
     }
 
-    function deleteBayModel(id, suppressError) {
+    function deleteBaymodel(id, suppressError) {
       var promise = apiService.delete('/api/containers/baymodels/', [id]);
       return suppressError ? promise : promise.error(function() {
-        var msg = gettext('Unable to delete the BayModel with id: %(id)s');
+        var msg = gettext('Unable to delete the Baymodel with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
 
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
-    function deleteBayModels(ids) {
+    function deleteBaymodels(ids) {
       return apiService.delete('/api/containers/baymodels/', ids)
         .error(function() {
-          toastService.add('error', gettext('Unable to delete the BayModels.'));
+          toastService.add('error', gettext('Unable to delete the Baymodels.'));
         })
     }
 

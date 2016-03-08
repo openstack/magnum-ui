@@ -25,13 +25,13 @@ TEST = TestData(test_data.data)
 
 class MagnumRestTestCase(test.TestCase):
 
-    # BayModels
+    # Baymodels
     @mock.patch.object(magnum, 'magnum')
     def test_baymodel_get(self, client):
         request = self.mock_rest_request()
         client.baymodel_list.return_value = \
             mock_resource(TEST.baymodels.list())
-        response = magnum.BayModels().get(request)
+        response = magnum.Baymodels().get(request)
 
         self.assertStatusCode(response, 200)
         self.assertItemsCollectionEqual(response, TEST.baymodels.list())
@@ -44,7 +44,7 @@ class MagnumRestTestCase(test.TestCase):
         test_body = json.dumps(test_bmodel.to_dict())
         request = self.mock_rest_request(body=test_body)
         client.baymodel_create.return_value = test_bmodel
-        response = magnum.BayModels().post(request)
+        response = magnum.Baymodels().post(request)
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
@@ -57,7 +57,7 @@ class MagnumRestTestCase(test.TestCase):
         test_baymodel = TEST.baymodels.first()
         request = self.mock_rest_request(
             body='{"baymodel_id":' + str(test_baymodel['uuid']) + '}')
-        response = magnum.BayModels().delete(request)
+        response = magnum.Baymodels().delete(request)
 
         self.assertStatusCode(response, 204)
         client.baymodel_delete.assert_called_once_with(

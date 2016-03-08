@@ -27,15 +27,15 @@
 
   function baymodelModel(magnum) {
     var model = {
-      newBayModelSpec: {},
+      newBaymodelSpec: {},
 
       // API methods
       init: init,
-      createBayModel: createBayModel
+      createBaymodel: createBaymodel
     };
 
-    function initNewBayModelSpec() {
-      model.newBayModelSpec = {
+    function initNewBaymodelSpec() {
+      model.newBaymodelSpec = {
         name: null,
         coe: "",
         public: null,
@@ -64,16 +64,16 @@
     }
 
     function init() {
-      // Reset the new BayModel spec
-      initNewBayModelSpec();
+      // Reset the new Baymodel spec
+      initNewBaymodelSpec();
     }
 
-    function createBayModel() {
-      var finalSpec = angular.copy(model.newBayModelSpec);
+    function createBaymodel() {
+      var finalSpec = angular.copy(model.newBaymodelSpec);
 
       cleanNullProperties(finalSpec);
 
-      return magnum.createBayModel(finalSpec);
+      return magnum.createBaymodel(finalSpec);
     }
 
     function cleanNullProperties(finalSpec) {
