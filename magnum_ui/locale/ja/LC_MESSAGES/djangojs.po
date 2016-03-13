@@ -5,12 +5,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-02 07:01+0000\n"
+"POT-Creation-Date: 2016-03-07 10:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-04 08:19+0000\n"
-"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"PO-Revision-Date: 2016-03-09 04:29+0000\n"
+"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -25,16 +25,19 @@ msgstr "API サーバーのポート"
 msgid "Actions"
 msgstr "アクション"
 
-#, fuzzy
 msgid ""
 "Arbitrary labels in the form of key=value pairs to associate with a "
 "baymodel. May be used multiple times."
 msgstr ""
-"ベイモデルと関連付ける「キー=値」のペアの形式の任意のラベルです。複数回使用で"
-"きます。"
+"ベイモデルには、「key=value」形式で任意のラベルを関連付けできます。複数個指定"
+"できます。"
 
 msgid "Bay"
 msgstr "ベイ"
+
+#, python-format
+msgid "Bay %s was successfully created."
+msgstr "ベイ %s が正常に作成されました。"
 
 msgid "Bay Create Timeout"
 msgstr "ベイ作成のタイムアウト"
@@ -88,31 +91,35 @@ msgstr "COE"
 msgid "COE:"
 msgstr "コンテナーオーケストレーションエンジン:"
 
-#, fuzzy
 msgid "Choose a Bay"
-msgstr "ベイを選択してください。"
+msgstr "ベイを選択してください"
 
 msgid "Choose a Bay Model"
 msgstr "ベイモデルを選択してください"
 
-#, fuzzy
 msgid "Choose a Container Orchestration Engine"
-msgstr "コンテナーオーケストレーションエンジンを選択してください。"
+msgstr "コンテナーオーケストレーションエンジンを選択してください"
 
-#, fuzzy
 msgid "Choose a Flavor for Master Node"
-msgstr "マスターノードのフレーバーを選択してください。"
+msgstr "マスターノードのフレーバーを選択してください"
 
-#, fuzzy
 msgid "Choose a Flavor for Node"
-msgstr "ノードのフレーバーを選択してください。"
+msgstr "ノードのフレーバーを選択してください"
 
 msgid "Choose a Image"
 msgstr "イメージを選択してください"
 
-#, fuzzy
 msgid "Choose a Keypair"
-msgstr "キーペアを選択してください。"
+msgstr "キーペアを選択してください"
+
+msgid "Choose a Network Driver"
+msgstr "ネットワークドライバーを選択してください"
+
+msgid "Choose a Volume Driver"
+msgstr "ボリュームドライバーを選択してください"
+
+msgid "Cinder"
+msgstr "Cinder"
 
 msgid "Cluster Distro"
 msgstr "クラスターのディストリビューション"
@@ -123,11 +130,21 @@ msgstr "クラスター種別"
 msgid "Command"
 msgstr "コマンド"
 
-msgid "Confirm Delete BayModel"
-msgstr "ベイモデルの削除の確認"
+msgid "Confirm Delete Bay"
+msgid_plural "Confirm Delete Bays"
+msgstr[0] "ベイの削除の確認"
 
-msgid "Confirm Delete BayModels"
-msgstr "ベイモデルの削除の確認"
+msgid "Confirm Delete BayModel"
+msgid_plural "Confirm Delete BayModels"
+msgstr[0] "ベイモデルの削除の確認"
+
+msgid "Confirm Delete Container"
+msgid_plural "Confirm Delete Containers"
+msgstr[0] "コンテナーの削除の確認"
+
+#, python-format
+msgid "Container %s was successfully created."
+msgstr "コンテナー %s が正常に削除されました。"
 
 msgid "Container Details"
 msgstr "コンテナーの詳細"
@@ -165,11 +182,13 @@ msgstr "DNS"
 msgid "DNS:"
 msgstr "DNS:"
 
-msgid "Delete"
-msgstr "削除"
+msgid "Delete Bay"
+msgid_plural "Delete Bays"
+msgstr[0] "ベイの削除"
 
 msgid "Delete BayModel"
-msgstr "ベイモデルの削除"
+msgid_plural "Delete BayModels"
+msgstr[0] "ベイモデルの削除"
 
 msgid "Delete BayModels"
 msgstr "ベイモデルの削除"
@@ -177,23 +196,33 @@ msgstr "ベイモデルの削除"
 msgid "Delete Bays"
 msgstr "ベイの削除"
 
+msgid "Delete Container"
+msgid_plural "Delete Containers"
+msgstr[0] "コンテナーの削除"
+
 msgid "Delete Containers"
 msgstr "コンテナーの削除"
 
 #, python-format
-msgid "Deleted BayModel: %s."
-msgstr "ベイモデル %s を削除しました。"
+msgid "Deleted Bay: %s."
+msgid_plural "Deleted Bays: %s."
+msgstr[0] "ベイ %s を削除しました。"
 
 #, python-format
-msgid "Deleted BayModels: %s."
-msgstr "ベイモデル %s を削除しました。"
+msgid "Deleted BayModel: %s."
+msgid_plural "Deleted BayModels: %s."
+msgstr[0] "ベイモデル %s を削除しました。"
+
+#, python-format
+msgid "Deleted Container: %s."
+msgid_plural "Deleted Containers: %s."
+msgstr[0] "コンテナー %s を削除しました。"
 
 msgid "Description:"
 msgstr "説明:"
 
-#, fuzzy
 msgid "Disable TLS in the Bay. Default: False"
-msgstr "ベイにおいて、 TLS を無効にします。デフォルト: False"
+msgstr "このベイにおいて、 TLS を無効にします。デフォルト: False"
 
 msgid "Discovery URL"
 msgstr "探索 URL"
@@ -213,9 +242,9 @@ msgstr "Docker のボリューム容量 (GB)"
 msgid "Docker Volume Size:"
 msgstr "Docker のボリューム容量:"
 
-#, fuzzy
 msgid "Enable docker registry in the Bay. Default: False"
-msgstr "ベイにおいて、 Docker のレジストリーを有効にします。デフォルト: False"
+msgstr ""
+"このベイにおいて、 Docker のレジストリーを有効にします。デフォルト: False"
 
 msgid "External Network ID"
 msgstr "外部ネットワーク ID"
@@ -289,9 +318,8 @@ msgstr "ラベル"
 msgid "MB"
 msgstr "MB"
 
-#, fuzzy
 msgid "Make baymodel public. Default: False"
-msgstr "ベイモデルをパブリックに変更します。デフォルト: False"
+msgstr "ベイモデルをパブリックに設定します。デフォルト: False"
 
 msgid "Master Addresses"
 msgstr "マスターのアドレス"
@@ -362,34 +390,29 @@ msgstr "概要"
 msgid "Please provide the count of the master and node in this Bay."
 msgstr "このベイにおける、マスターとノードの数を指定してください。"
 
-#, fuzzy
 msgid "Please provide the labels of the Bay Model."
-msgstr "ベイモデルのラベルを設定してください。"
+msgstr "このベイモデルのラベルを設定してください。"
 
 msgid "Please provide the miscellaneous for creation of the Bay."
 msgstr "ベイの作成のためのその他の条件を指定してください。"
 
-#, fuzzy
 msgid "Please provide the name of the Bay Model."
-msgstr "ベイモデルの名前を設定してください。"
+msgstr "ベイモデルの名前を指定してください。"
 
 msgid "Please provide the name of the Bay."
 msgstr "ベイの名前を設定してください。"
 
-#, fuzzy
 msgid "Please provide the name of the Container."
-msgstr "コンテナーの名前を設定してください"
+msgstr "コンテナーの名前を指定してください。"
 
-#, fuzzy
 msgid "Please provide the settings of the Bay networking."
-msgstr "ベイのネットワークを設定してください。"
+msgstr "このベイのネットワーク設定を指定してください。"
 
 msgid "Please provide the specs for this Container."
 msgstr "このコンテナーのスペックを設定してください。"
 
-#, fuzzy
 msgid "Please provide the specs of the Bay."
-msgstr "ベイのスペックを設定してください。"
+msgstr "このベイのスペックを指定してください。"
 
 msgid "Public"
 msgstr "パブリック"
@@ -405,6 +428,9 @@ msgstr "レジストリーの有効化"
 
 msgid "Registry Enabled:"
 msgstr "レジストリーの有効化:"
+
+msgid "Rexray"
+msgstr "Rexray"
 
 msgid "SSH Authorized Key"
 msgstr "SSH 認証鍵"
@@ -449,9 +475,8 @@ msgstr "ベイモデルのネットワーク設定を指定してください。
 msgid "Specify the number of master nodes and bay nodes for the bay."
 msgstr "ベイのマスターノードとベイノードの数を指定してください。"
 
-#, fuzzy
 msgid "Specify the number of size in GB for the docker volume to use."
-msgstr "Docker のボリュームで使用する GB 単位のサイズを指定してください。"
+msgstr "Docker のボリュームで使用するサイズを GB 単位で指定してください。"
 
 msgid "Specify the specs for the container."
 msgstr "コンテナーのスペックを指定します。"
@@ -486,31 +511,23 @@ msgstr "コンテナーのメモリーサイズ"
 msgid "The external Neutron network ID to connect to this bay model."
 msgstr "このベイモデルに接続する Neutron の外部ネットワーク ID。"
 
-#, fuzzy
 msgid "The http_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用する HTTP プロキシのアドレス。"
+msgstr "ベイのノードで使用する HTTP プロキシーのアドレス。"
 
-#, fuzzy
 msgid "The https_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用する HTTPS プロキシのアドレス。"
+msgstr "ベイのノードで使用する HTTPS プロキシーのアドレス。"
 
-#, fuzzy
 msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr "ベイのノードにロードする SSH キーペアの名前または UUID。"
+msgstr "このベイのノードにロードする SSH キーペアの名前または UUID。"
 
-#, fuzzy
 msgid "The name or UUID of the base image to customize for the bay."
-msgstr "ベイでカスタマイズするベースとなるイメージの名前または UUID。"
+msgstr "このベイで、カスタマイズのベースとなるイメージの名前または UUID。"
 
-#, fuzzy
 msgid "The network driver name for instantiating container networks."
-msgstr ""
-"コンテナーネットワークのインスタンスを生成するネットワークドライバーの名前で"
-"す。"
+msgstr "コンテナーネットワークの作成に使用するネットワークドライバー名です。"
 
-#, fuzzy
 msgid "The no_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用するプロキシ例外のアドレス。"
+msgstr "ベイのノードで使用するプロキシー例外のアドレス。"
 
 msgid "The nova flavor id to use when launching the bay. Default: m1.small"
 msgstr ""
@@ -532,18 +549,19 @@ msgstr "このベイモデルに接続する Neutron のプライベートネッ
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
 
-#, fuzzy
 msgid ""
 "The timeout for bay creation in minutes. Set to 0 for no timeout. The "
 "default is no timeout."
 msgstr ""
-"ベイの作成のタイムアウトの分数。タイムアウトしないためには、0 を設定します。"
-"デフォルトはタイムアウトしません。"
+"ベイの作成タイムアウト時間 (単位: 分)。タイムアウトなしにするには 0 を設定し"
+"ます。デフォルトはタイムアウトしません。"
 
-#, fuzzy
+msgid "The volume driver name for instantiating container volume."
+msgstr "コンテナーボリュームの作成時に使用するボリュームドライバー名。"
+
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
-"固定ネットワークの CIDR が設定される必要があります。デフォルト: 10.0.0.0/24"
+"固定ネットワークの CIDR を指定する必要があります。デフォルト: 10.0.0.0/24"
 
 msgid "Timeout"
 msgstr "タイムアウト"
@@ -561,19 +579,27 @@ msgid "Unable to create Container."
 msgstr "コンテナーを作成できません。"
 
 #, python-format
-msgid "Unable to delete BayModel: %s."
-msgstr "ベイモデルを削除できません: %s"
+msgid "Unable to delete Bay: %s."
+msgid_plural "Unable to delete Bays: %s."
+msgstr[0] "ベイを削除できません: %s"
 
 #, python-format
-msgid "Unable to delete BayModels: %s."
-msgstr "ベイモデルを削除できません: %s"
+msgid "Unable to delete BayModel: %s."
+msgid_plural "Unable to delete BayModels: %s."
+msgstr[0] "ベイモデルを削除できません: %s"
 
-msgid "Unable to delete the Bay."
-msgstr "ベイを削除できません。"
+#, python-format
+msgid "Unable to delete Container: %s."
+msgid_plural "Unable to delete Containers: %s."
+msgstr[0] "コンテナーを削除できません: %s"
 
-#, fuzzy, python-format
+#, python-format
+msgid "Unable to delete the Bay with id: %(id)s"
+msgstr "ID が %(id)s のベイを削除できません。"
+
+#, python-format
 msgid "Unable to delete the BayModel with id: %(id)s"
-msgstr "次の ID のベイモデルを削除できません: %(id)s"
+msgstr "ID %(id)s のベイモデルを削除できません"
 
 msgid "Unable to delete the BayModels."
 msgstr "ベイモデルを削除できません。"
@@ -581,8 +607,9 @@ msgstr "ベイモデルを削除できません。"
 msgid "Unable to delete the Bays."
 msgstr "ベイを削除できません。"
 
-msgid "Unable to delete the Container."
-msgstr "コンテナーを削除できません。"
+#, python-format
+msgid "Unable to delete the Container with id: %(id)s"
+msgstr "ID が %(id)s のコンテナーを削除できません。"
 
 msgid "Unable to delete the Containers."
 msgstr "コンテナーの一覧を取得できません。"
@@ -608,20 +635,40 @@ msgstr "コンテナーの一覧を取得できません。"
 msgid "Updated"
 msgstr "更新時刻"
 
+msgid "Volume Driver"
+msgstr "ボリュームドライバー"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted bay is not "
+"recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted bays are "
+"not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたベイは元に戻せま"
+"せん。"
+
 #, python-format
 msgid ""
 "You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
 "not recoverable."
-msgstr ""
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
+"are not recoverable."
+msgstr[0] ""
 "\"%s\" を選択しました。選択内容を確認してください。削除されたベイモデルは元に"
 "戻せません。"
 
 #, python-format
 msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
+"You have selected \"%s\". Please confirm your selection. Deleted container "
+"is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted containers "
 "are not recoverable."
-msgstr ""
-"\"%s\" を選択しました。選択内容を確認してください。削除されたベイモデルは元に"
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたコンテナーは元に"
 "戻せません。"
 
 msgid "bytes"
