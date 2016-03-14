@@ -4,7 +4,7 @@
   st-safe-src="table.baymodelsSrc"
   default-sort="name"
   default-sort-reverse="false"
-  class="table-striped table-rsp table-detail modern">
+  class="table table-striped table-rsp table-detail">
 
   <thead>
     <!--
@@ -18,8 +18,8 @@
         </hz-magic-search-bar>
       </th>
     </tr>
-    <tr>
-      <th colspan="100" class="action-col">
+    <tr class="action-row">
+      <th colspan="100">
         <actions allowed="table.baymodelResource.batchActions" type="batch"></actions>
       </th>
     </tr>
@@ -28,30 +28,30 @@
       The headers for the table columns
     -->
     <tr>
-      <th class="select-col">
+      <th class="multi_select_column">
         <input type="checkbox" hz-select-all="table.baymodels">
       </th>
 
       <th class="expander"></th>
 
-      <th class="rsp-p1" st-sort="name" st-sort-default>
-        <translate>Name</translate>
+      <th class="rsp-p1" st-sort="name" st-sort-default translate>
+        Name
       </th>
 
-      <th class="rsp-p1" st-sort="id" >
-        <translate>ID</translate>
+      <th class="rsp-p2" st-sort="id" translate>
+        ID
       </th>
 
-      <th class="rsp-p2" st-sort="network-driver" >
-        <translate>Network Driver</translate>
+      <th class="rsp-p1" st-sort="coe" translate>
+        COE
       </th>
 
-      <th class="rsp-p2" st-sort="coe" >
-        <translate>COE</translate>
+      <th class="rsp-p2" st-sort="network-driver" translate>
+        Network Driver
       </th>
 
-      <th class="action-col">
-        <translate>Actions</translate>
+      <th class="actions_column" translate>
+        Actions
       </th>
     </tr>
   </thead>
@@ -59,16 +59,15 @@
     <!--
       Table-rows:
       This is where we declaratively define the table columns.
-      Include select-col if you want to select all.
+      Include multi_select_column if you want to select all.
       Include expander if you want to inline details.
-      Include action-col if you want to perform actions.
+      Include actions_column if you want to perform actions.
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="bm in table.baymodels track by bm.id"
-        nt-class="{'st-selected': checked[bm.id]}">
+    <tr ng-repeat-start="bm in table.baymodels track by bm.id">
 
-      <td class="select-col">
+      <td class="multi_select_column">
         <input type="checkbox"
           ng-model="tCtrl.selections[bm.id].checked"
           hz-select="bm">
@@ -81,12 +80,12 @@
         </i>
       </td>
 
-      <td class="rsp-p1">{$ bm.name|noName $}</td>
-      <td class="rsp-p1">{$ bm.id $}</td>
+      <td class="rsp-p1"><a ng-href="project/baymodels/{$ bm.id $}">{$ bm.name|noName $}</a></td>
+      <td class="rsp-p2">{$ bm.id $}</td>
+      <td class="rsp-p1">{$ bm.coe $}</td>
       <td class="rsp-p2">{$ bm.network_driver $}</td>
-      <td class="rsp-p2">{$ bm.coe $}</td>
 
-      <td class="action-col">
+      <td class="actions_column">
         <!--
           Table-row-action-column:
           Actions taken here applies to a single item/row.
@@ -96,43 +95,50 @@
     </tr>
     <tr ng-repeat-end class="detail-row">
       <!--
-        Table-row-details:
-        Provides detail view of specific view, with more information than can be
-        displayed in the table alone.
+        Detail-row:
+        Contains detailed information on this item.
+        Can be toggled using the chevron button.
+        Ensure colspan is greater or equal to number of column-headers.
       -->
-
       <td class="detail" colspan="100">
-        <dl class=dl-horizontal>
-
-          <dt><translate>Name</translate></dt>
-          <dd><a ng-href="project/baymodels/{$ bm.id $}">{$ bm.name|noName $}</a></dd>
-
-          <dt><translate>ID</translate></dt>
-          <dd>{$ bm.id $}</dd>
-
-          <dt><translate>COE</translate></dt>
-          <dd>{$ bm.coe $}</dd>
-
-          <dt><translate>Image ID</translate></dt>
-          <dd>{$ bm.image_id $}</dd>
-
-          <dt><translate>Registry Enabled</translate></dt>
-          <dd>{$ bm.registry_enabled $}</dd>
-
-          <dt><translate>Network Driver</translate></dt>
-          <dd>{$ bm.network_driver $}</dd>
-
-          <dt><translate>Labels</translate></dt>
-          <dd ng-repeat="lbl in b.labels">{$ lbl $}</dd>
-        </dl>
+        <!--
+          The responsive columns that disappear typically should reappear here
+          with the same responsive priority that they disappear.
+          E.g. table header with rsp-p2 should be here with rsp-alt-p2
+        -->
+        <div class="row">
+          <span class="rsp-alt-p2">
+            <dl class="col-xs-5">
+              <dt translate>ID</dt>
+              <dd>{$ bm.id $}</dd>
+            </dl>
+            <dl class="col-xs-3">
+              <dt translate>Network Driver</dt>
+              <dd>{$ bm.network_driver $}</dd>
+            </dl>
+          </span>
+        </div>
+        <div class="row">
+          <dl class="col-xs-5">
+            <dt translate>Image ID</dt>
+            <dd>{$ bm.image_id $}</dd>
+          </dl>
+          <dl class="col-xs-3">
+            <dt translate>Registry Enabled</dt>
+            <dd>{$ bm.registry_enabled $}</dd>
+          </dl>
+          <dl class="col-xs-4">
+            <dt translate>Labels</dt>
+            <dd ng-repeat="lbl in b.labels">{$ lbl $}</dd>
+          </dl>
+        </div>
       </td>
     </tr>
+    <tr hz-no-items items="table.baymodels"></tr>
   </tbody>
-  <tfoot>
-    <td colspan="100">
-        <span class="display">{$ table.baymodels.length|itemCount $}</span>
-          <div st-pagination="" st-items-by-page="10"
-            st-displayed-pages="10"></div>
-        </td>
-  </tfoot>
+  <!--
+    Table-footer:
+    This is where we display number of items and pagination controls.
+  -->
+  <tfoot hz-table-footer items="table.baymodels"></tfoot>
 </table>

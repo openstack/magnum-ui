@@ -4,7 +4,7 @@
   st-safe-src="table.containersSrc"
   default-sort="name"
   default-sort-reverse="false"
-  class="table-striped table-rsp table-detail modern">
+  class="table table-striped table-rsp table-detail">
 
   <thead>
     <!--
@@ -18,8 +18,8 @@
         </hz-magic-search-bar>
       </th>
     </tr>
-    <tr>
-      <th colspan="100" class="action-col">
+    <tr class="action-row">
+      <th colspan="100">
         <actions allowed="table.containerResource.batchActions" type="batch"></actions>
       </th>
     </tr>
@@ -28,38 +28,38 @@
       The headers for the table columns
     -->
     <tr>
-      <th class=select-col>
+      <th class="multi_select_column">
         <input type="checkbox" hz-select-all="table.containers">
       </th>
 
       <th class="expander"></th>
 
-      <th class="rsp-p1" st-sort="name" st-sort-default>
-        <translate>Name</translate>
+      <th class="rsp-p1" st-sort="name" st-sort-default translate>
+        Name
       </th>
 
-      <th class="rsp-p1" st-sort="id" >
-        <translate>UUID</translate>
+      <th class="rsp-p2" st-sort="id" translate>
+        ID
       </th>
 
-      <th class="rsp-p1" st-sort="status" >
-        <translate>Status</translate>
+      <th class="rsp-p1" st-sort="status" translate>
+        Status
       </th>
 
-      <th class="rsp-p3" st-sort="bay" >
-        <translate>Bay UUID</translate>
+      <th class="rsp-p3" st-sort="bay" translate>
+        Bay ID
       </th>
 
-      <th class="rsp-p2" st-sort="image" >
-        <translate>Image</translate>
+      <th class="rsp-p2" st-sort="image" translate>
+        Image
       </th>
 
-      <th class="rsp-p3" st-sort="memory" >
-        <translate>Memory</translate>
+      <th class="rsp-p3" st-sort="memory" translate>
+        Memory
       </th>
 
-      <th class="action-col">
-        <translate>Actions</translate>
+      <th class="actions_column" translate>
+        Actions
       </th>
     </tr>
   </thead>
@@ -67,16 +67,15 @@
     <!--
       Table-rows:
       This is where we declaratively define the table columns.
-      Include select-col if you want to select all.
+      Include multi_select_column if you want to select all.
       Include expander if you want to inline details.
-      Include action-col if you want to perform actions.
+      Include actions_column if you want to perform actions.
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
 
-    <tr ng-repeat-start="c in table.containers track by c.id"
-        nt-class="{'st-selected': checked[c.id]}">
+    <tr ng-repeat-start="c in table.containers track by c.id">
 
-      <td class="select-col">
+      <td class="multi_select_column">
         <input type="checkbox"
           ng-model="tCtrl.selections[c.id].checked"
           hz-select="c">
@@ -89,14 +88,14 @@
         </i>
       </td>
 
-      <td class="rsp-p1">{$ c.name|noName $}</td>
-      <td class="rsp-p1">{$ c.id $}</td>
+      <td class="rsp-p1"><a ng-href="project/bays/containers/{$ c.id $}">{$ c.name|noName $}</a></td>
+      <td class="rsp-p2">{$ c.id $}</td>
       <td class="rsp-p1">{$ c.status $}</td>
-      <td class="rsp-p3">{$ c.bay_uuid $}</td>
+      <td class="rsp-p3"><a ng-href="project/baymodels/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></td>
       <td class="rsp-p2">{$ c.image $}</td>
       <td class="rsp-p3">{$ c.memorysize $} {$ c.memoryunit $}</td>
 
-      <td class="action-col">
+      <td class="actions_column">
         <!--
           Table-row-action-column:
           Actions taken here applies to a single item/row.
@@ -106,44 +105,52 @@
     </tr>
     <tr ng-repeat-end class="detail-row">
       <!--
-        Table-row-details:
-        Provides detail view of specific view, with more information than can be
-        displayed in the table alone.
+        Detail-row:
+        Contains detailed information on this item.
+        Can be toggled using the chevron button.
+        Ensure colspan is greater or equal to number of column-headers.
       -->
-
       <td class="detail" colspan="100">
-        <dl class=dl-horizontal>
-
-          <dt><translate>Name</translate></dt>
-          <dd><a ng-href="project/bays/containers/{$ c.id $}">{$ c.name|noName $}</a></dd>
-
-          <dt><translate>UUID</translate></dt>
-          <dd>{$ c.id $}</dd>
-
-          <dt><translate>Status</translate></dt>
-          <dd>{$ c.status $}</dd>
-
-          <dt><translate>Bay UUID</translate></dt>
-          <dd>{$ c.bay_uuid $}</dd>
-
-          <dt><translate>Image</translate></dt>
-          <dd>{$ c.image $}</dd>
-
-          <dt><translate>Memory</translate></dt>
-          <dd>{$ c.memorysize $} {$ c.memoryunit $}</dd>
-
-          <dt><translate>Command</translate></dt>
-          <dd>{$ c.command $}</dd>
-
-        </dl>
+        <!--
+          The responsive columns that disappear typically should reappear here
+          with the same responsive priority that they disappear.
+          E.g. table header with rsp-p2 should be here with rsp-alt-p2
+        -->
+        <div class="row">
+          <span class="rsp-alt-p2">
+            <dl class="col-xs-5">
+              <dt translate>ID</dt>
+              <dd>{$ c.id $}</dd>
+            </dl>
+            <dl class="col-xs-5">
+              <dt translate>Image</dt>
+              <dd>{$ c.image $}</dd>
+            </dl>
+          </span>
+          <span class="rsp-alt-p3">
+            <dl class="col-xs-5">
+              <dt translate>Bay ID</dt>
+              <dd><a ng-href="project/baymodels/{$ c.bay_uuid $}">{$ c.bay_uuid $}</a></dd>
+            </dl>
+            <dl class="col-xs-2">
+              <dt translate>Memory</dt>
+              <dd>{$ c.memorysize $} {$ c.memoryunit $}</dd>
+            </dl>
+          </span>
+        </div>
+        <div class="row">
+          <dl class="col-xs-12">
+            <dt translate>Command</dt>
+            <dd>{$ c.command $}</dd>
+          </dl>
+        </div>
       </td>
     </tr>
+    <tr hz-no-items items="table.containers"></tr>
   </tbody>
-  <tfoot>
-    <td colspan="100">
-        <span class="display">{$ table.containers.length|itemCount $}</span>
-          <div st-pagination="" st-items-by-page="10"
-            st-displayed-pages="10"></div>
-        </td>
-  </tfoot>
+  <!--
+    Table-footer:
+    This is where we display number of items and pagination controls.
+  -->
+  <tfoot hz-table-footer items="table.containers"></tfoot>
 </table>
