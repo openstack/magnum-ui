@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-13 06:01+0000\n"
+"POT-Creation-Date: 2016-03-15 06:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,7 +182,7 @@ msgstr ""
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:2
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:9
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:115
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:125
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:131
 msgid "Labels"
 msgstr ""
 
@@ -284,11 +284,10 @@ msgstr ""
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:15
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:19
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:64
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:50
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:113
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:45
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:41
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:24
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:70
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:73
 msgid "COE"
 msgstr ""
 
@@ -300,7 +299,7 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/info.html:34
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:35
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:119
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:127
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:47
 msgid "Registry Enabled"
 msgstr ""
@@ -351,8 +350,8 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:9
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:85
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:46
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:122
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:49
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:116
 msgid "Network Driver"
 msgstr ""
 
@@ -482,10 +481,10 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/spec/spec.html:9
 #: magnum_ui/static/dashboard/containers/containers/create/spec/spec.html:9
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:16
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:19
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:73
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:54
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:129
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:53
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:126
 msgid "Image"
 msgstr ""
 
@@ -564,7 +563,7 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:12
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:9
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:9
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:12
 msgid "Overview"
 msgstr ""
 
@@ -581,10 +580,10 @@ msgid "Server Type"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:49
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:116
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:123
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:43
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:28
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:74
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:77
 msgid "Image ID"
 msgstr ""
 
@@ -606,59 +605,58 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:129
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:89
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:80
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:83
 msgid "Record Properties"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:133
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:93
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:84
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:87
 msgid "Created"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:137
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:97
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:88
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:91
 msgid "Updated"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:141
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:59
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:42
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:110
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:41
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:112
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:39
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:20
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:101
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:57
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:41
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:115
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:117
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:39
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:38
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:66
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:92
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:41
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:69
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:95
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:41
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:122
 msgid "ID"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:54
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:38
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:107
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:37
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:31
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:16
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:52
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:37
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:112
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:31
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:34
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:62
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:37
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:65
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:53
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:38
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:117
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:37
 msgid "Name"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:54
+#: magnum_ui/static/dashboard/containers/baymodels/table/table.html:53
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:57
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:62
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:61
 msgid "Actions"
 msgstr ""
 
@@ -713,7 +711,7 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/bays/create/info/info.html:15
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:12
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:58
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:61
 msgid "Bay Model"
 msgstr ""
 
@@ -774,9 +772,9 @@ msgstr ""
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:38
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:67
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:49
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:124
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:121
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:43
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:46
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:49
 msgid "Master Count"
 msgstr ""
 
@@ -788,9 +786,9 @@ msgstr ""
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:42
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:72
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:53
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:127
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:125
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:45
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:50
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:53
 msgid "Node Count"
 msgstr ""
 
@@ -846,7 +844,7 @@ msgid "Master Addresses"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:56
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:130
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:136
 msgid "Node Addresses"
 msgstr ""
 
@@ -871,16 +869,14 @@ msgstr[1] ""
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:105
 #: magnum_ui/static/dashboard/containers/bays/table/table.controller.js:62
 #: magnum_ui/static/dashboard/containers/bays/table/table.html:45
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:118
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:42
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:96
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:45
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:99
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:63
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:46
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:123
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:45
 msgid "Status"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/bays/table/table.html:121
+#: magnum_ui/static/dashboard/containers/bays/table/table.html:132
 msgid "BayModel"
 msgstr ""
 
@@ -901,7 +897,7 @@ msgid "Delete Containers"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/create-workflow.service.js:42
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:12
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:15
 msgid "Spec"
 msgstr ""
 
@@ -936,7 +932,7 @@ msgid "Name of the container to create."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/info/info.html:15
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:30
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:33
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:68
 msgid "Bay"
 msgstr ""
@@ -966,10 +962,10 @@ msgid "Name of the container image."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/spec/spec.html:17
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:20
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:23
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:78
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:58
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:132
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:57
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:136
 msgid "Memory"
 msgstr ""
 
@@ -978,9 +974,9 @@ msgid "The container memory size."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/create/spec/spec.html:35
-#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:24
+#: magnum_ui/static/dashboard/containers/containers/detail/detail.html:27
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:83
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:135
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:143
 msgid "Command"
 msgstr ""
 
@@ -1024,13 +1020,11 @@ msgid "Containers"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/containers/table/table.controller.js:58
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:42
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:120
 msgid "UUID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:50
-#: magnum_ui/static/dashboard/containers/containers/table/table.html:126
-msgid "Bay UUID"
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:49
+#: magnum_ui/static/dashboard/containers/containers/table/table.html:132
+msgid "Bay ID"
 msgstr ""
 
