@@ -1,0 +1,2 @@
+# settings file for magnum-ui plugin
+enable_service magnum-ui
