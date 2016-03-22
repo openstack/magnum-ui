@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-15 06:01+0000\n"
+"POT-Creation-Date: 2016-03-22 06:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,21 +121,21 @@ msgstr ""
 msgid "Delete BayModels"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:59
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:58
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:49
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:52
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:54
 msgid "Docker"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:60
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:59
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:50
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:51
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:53
 msgid "Flannel"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:61
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:60
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:56
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:59
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:61
@@ -143,13 +143,13 @@ msgstr ""
 msgid "Choose a Volume Driver"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:62
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:61
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:57
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:60
 msgid "Cinder"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:63
+#: magnum_ui/static/dashboard/containers/baymodels/create/baymodel-model.js:62
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:58
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:62
 #: magnum_ui/static/dashboard/containers/baymodels/create/info/baymodel.info.controller.js:64
@@ -174,14 +174,14 @@ msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:48
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:2
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:81
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:77
 msgid "Network"
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/create-workflow.service.js:54
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:2
 #: magnum_ui/static/dashboard/containers/baymodels/create/labels/labels.html:9
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:115
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:111
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.html:131
 msgid "Labels"
 msgstr ""
@@ -349,7 +349,7 @@ msgid "Please provide the settings of the Bay networking."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:9
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:85
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:81
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.html:49
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.html:116
 msgid "Network Driver"
@@ -360,7 +360,7 @@ msgid "The network driver name for instantiating container networks."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:17
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:89
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:85
 msgid "HTTP Proxy"
 msgstr ""
 
@@ -369,7 +369,7 @@ msgid "The http_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:23
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:93
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:89
 msgid "HTTPS Proxy"
 msgstr ""
 
@@ -378,7 +378,7 @@ msgid "The https_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:29
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:97
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:93
 msgid "No Proxy"
 msgstr ""
 
@@ -387,7 +387,7 @@ msgid "The no_proxy address to use for nodes in bay."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:35
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:101
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:97
 msgid "External Network ID"
 msgstr ""
 
@@ -396,7 +396,7 @@ msgid "The external Neutron network ID to connect to this bay model."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:41
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:105
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:101
 msgid "Fixed Network"
 msgstr ""
 
@@ -405,7 +405,7 @@ msgid "The private Neutron network name to connect to this bay model."
 msgstr ""
 
 #: magnum_ui/static/dashboard/containers/baymodels/create/network/network.html:47
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:109
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:105
 msgid "DNS"
 msgstr ""
 
@@ -517,15 +517,6 @@ msgstr ""
 msgid "Keypair"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/create/spec/spec.html:52
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:73
-msgid "SSH Authorized Key"
-msgstr ""
-
-#: magnum_ui/static/dashboard/containers/baymodels/create/spec/spec.html:53
-msgid "The SSH authorized key to use."
-msgstr ""
-
 #: magnum_ui/static/dashboard/containers/baymodels/delete/delete.service.js:85
 msgid "Confirm Delete BayModel"
 msgid_plural "Confirm Delete BayModels"
@@ -603,25 +594,25 @@ msgstr ""
 msgid "Keypair ID"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:129
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:125
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:89
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:83
 msgid "Record Properties"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:133
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:129
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:93
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:87
 msgid "Created"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:137
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:133
 #: magnum_ui/static/dashboard/containers/bays/detail/detail.html:97
 #: magnum_ui/static/dashboard/containers/containers/detail/detail.html:91
 msgid "Updated"
 msgstr ""
 
-#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:141
+#: magnum_ui/static/dashboard/containers/baymodels/detail/detail.html:137
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.controller.js:59
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.html:41
 #: magnum_ui/static/dashboard/containers/baymodels/table/table.html:112
