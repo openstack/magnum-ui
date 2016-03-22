@@ -26,7 +26,7 @@ LOG = logging.getLogger(__name__)
 BAYMODEL_CREATE_ATTRS = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
                          'keypair_id', 'external_network_id', 'fixed_network',
                          'dns_nameserver', 'docker_volume_size', 'labels',
-                         'ssh_authorized_key', 'coe', 'http_proxy',
+                         'coe', 'http_proxy',
                          'https_proxy', 'no_proxy', 'network_driver',
                          'volume_driver',
                          'public', 'registry_enabled', 'tls_disabled']

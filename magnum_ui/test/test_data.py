@@ -30,7 +30,6 @@ def data(TEST):
                        "external-network-id": "",
                        "coe": "",
                        "fixed-network": "",
-                       "ssh-authorized-key": "",
                        "dns-nameserver": "",
                        "flavor-id": "",
                        "master-flavor-id": "",

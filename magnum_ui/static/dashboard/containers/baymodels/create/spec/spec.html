@@ -48,12 +48,6 @@
                 ng-options="keypair.id as keypair.name for keypair in ctrl.keypairs">
         </select>
       </div>
-      <div class="form-field baymodel-ssh-authorized-key">
-        <label class="on-top" translate>SSH Authorized Key</label>
-        <input name="baymodel-ssh-authorized-key" type="text" class="form-control input-sm"
-               ng-model="model.newBayModelSpec.ssh_authorized_key"
-               placeholder="{$ 'The SSH authorized key to use.'|translate $}">
-      </div>
     </div>
 
   </div>

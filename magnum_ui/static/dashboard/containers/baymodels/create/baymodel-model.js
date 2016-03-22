@@ -46,7 +46,6 @@
         master_flavor_id: "",
         docker_volume_size: null,
         keypair_id: "",
-        ssh_authorized_key: null,
         network_driver: "",
         volume_driver: "",
         http_proxy: null,
