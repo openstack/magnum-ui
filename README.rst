@@ -8,8 +8,16 @@ Magnum Dashboard
 * Source: http://git.openstack.org/cgit/openstack/magnum-ui
 * Bugs: http://bugs.launchpad.net/magnum-ui
 
-Installation instructions
--------------------------
+Enabling in DevStack
+--------------------
+
+Add this repo as an external repository into your ``local.conf`` file::
+
+    [[local|localrc]]
+    enable_plugin magnum-ui https://github.com/openstack/magnum-ui
+
+Manual Installation
+-------------------
 
 Begin by cloning the Horizon and Magnum UI repositories::
 
@@ -34,7 +42,6 @@ editor. You will want to customize several settings:
    environment. (They should be correct unless you modified your
    OpenStack server to change them.)
 
-
 Install Magnum UI with all dependencies in your virtual environment::
 
     tools/with_venv.sh pip install -e ../magnum-ui/
@@ -45,8 +52,6 @@ And enable it in Horizon::
     cp ../magnum-ui/enabled/_51_project_containers_bays_panel.py openstack_dashboard/local/enabled
     cp ../magnum-ui/enabled/_52_project_containers_baymodels_panel.py openstack_dashboard/local/enabled
     cp ../magnum-ui/enabled/_53_project_containers_containers_panel.py openstack_dashboard/local/enabled
-
-
 
 To run horizon with the newly enabled Magnum UI plugin run::
 
