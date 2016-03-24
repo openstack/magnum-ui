@@ -40,8 +40,8 @@
         bay_uuid: null,
         image: null,
         memory: null,
-        memorysize: null,
-        memoryunit: "m",
+        memory_size: null,
+        memory_unit: "m",
         command: null
       };
     }
@@ -63,7 +63,7 @@
       // Initially clean fields that don't have any value.
       for (var key in finalSpec) {
         if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null
-            || key === "memorysize" || key === "memoryunit") {
+            || key === "memory_size" || key === "memory_unit") {
           delete finalSpec[key];
         }
       }

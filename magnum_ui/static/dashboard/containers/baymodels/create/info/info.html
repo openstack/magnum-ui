@@ -2,13 +2,14 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="form-group">
-        <label class="control-label" for="baymodel-name" translate>Bay Model Name</label>
+        <label class="control-label" for="baymodel-name" translate>Baymodel Name</label>
         <input name="baymodel-name" type="text" class="form-control" id="baymodel-name"
-               ng-model="model.newBaymodelSpec.name">
+               ng-model="model.newBaymodelSpec.name"
+               placeholder="{$ 'Name of the baymodel to create.'|translate $}">
       </div>
       <div class="form-group">
-        <label class="control-label" for="baymodel-coe" translate>
-          Container Orchestration Engine
+        <label class="control-label" for="baymodel-coe">
+          <translate>Container Orchestration Engine</translate>
           <span class="hz-icon-required fa fa-asterisk"></span>
         </label>
         <select class="form-control" name="baymodel-coe" id="baymodel-coe"
@@ -21,7 +22,7 @@
       <div class="form-group">
         <div class="themable-checkbox">
           <input name="baymodel-public" type="checkbox" id="baymodel-public"
-                 ng-model="model.newBaymodelSpec.public" translate>
+                 ng-model="model.newBaymodelSpec.public">
           <label for="baymodel-public" translate>Public</label>
         </div>
       </div>
@@ -35,7 +36,7 @@
       <div class="form-group">
         <div class="themable-checkbox">
           <input name="baymodel-tls-disabled" type="checkbox" id="baymodel-tls-disabled"
-                 ng-model="model.newBaymodelSpec.tls_disabled" translate>
+                 ng-model="model.newBaymodelSpec.tls_disabled">
           <label for="baymodel-tls-disabled" translate>Disable TLS</label>
         </div>
       </div>

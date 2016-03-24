@@ -60,10 +60,10 @@
 
     function onGetBay(bay) {
       ctrl.bay = bay;
-      magnum.getBayModel(ctrl.bay.baymodel_id).success(onGetBayModel);
+      magnum.getBaymodel(ctrl.bay.baymodel_id).success(onGetBaymodel);
     }
 
-    function onGetBayModel(baymodel) {
+    function onGetBaymodel(baymodel) {
       ctrl.baymodel = baymodel;
     }
 

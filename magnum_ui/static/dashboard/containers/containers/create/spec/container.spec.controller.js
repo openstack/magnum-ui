@@ -38,16 +38,16 @@
 
   function createContainerSpecController($q, $scope, basePath, magnum) {
     var ctrl = this;
-    ctrl.memoryunits = [{unit: "b", label: gettext("bytes")},
+    ctrl.memory_units = [{unit: "b", label: gettext("bytes")},
                         {unit: "k", label: gettext("KB")},
                         {unit: "m", label: gettext("MB")},
                         {unit: "g", label: gettext("GB")}];
 
     $scope.changeMemory = function(){
-      if($scope.model.newContainerSpec.memorysize > 0){
-        $scope.model.newContainerSpec.memory = $scope.model.newContainerSpec.memorysize + $scope.model.newContainerSpec.memoryunit;
+      if($scope.model.newContainerSpec.memory_size > 0){
+        $scope.model.newContainerSpec.memory = $scope.model.newContainerSpec.memory_size + $scope.model.newContainerSpec.memory_unit;
       }else{
-        $scope.model.newContainerSpec.memory = "";
+        $scope.model.newContainerSpec.memory = null;
       }
     };
     $scope.changeMemoryUnit = function(){

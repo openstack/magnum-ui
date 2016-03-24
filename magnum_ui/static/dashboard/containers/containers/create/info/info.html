@@ -1,9 +1,6 @@
 <div ng-controller="createContainerInfoController as ctrl">
-  <p translate>Please provide the name of the Container.</p>
-
   <div class="row">
     <div class="col-xs-12">
-
       <div class="form-group">
         <label class="control-label" for="container-name" translate>
           Container Name
@@ -12,7 +9,6 @@
                  ng-model="model.newContainerSpec.name"
                  placeholder="{$ 'Name of the container to create.'|translate $}">
       </div>
-
       <div class="form-group">
         <label class="control-label" for="container-bay">
           <translate>Bay</translate>
@@ -25,7 +21,7 @@
           ng-change="changeBay()">
         </select>
       </div>
-      
+
       <div class="detail" ng-show="model.newContainerSpec.bay_uuid">
         <span translate class="h4">Bay Detail</span>
         <dl class="dl-horizontal">

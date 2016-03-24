@@ -52,31 +52,21 @@
     };
 
     $scope.changeBaymodel = function(){
-      // show Baymodel Detail
-      if(!$scope.model.newBaySpec.baymodel_id){
-        $("#baymodel_detail").hide();
-        $("#baymodel_detail_none").show();
-      } else {
-        angular.forEach(ctrl.baymodels, function(model, idx){
-          if($scope.model.newBaySpec.baymodel_id === model.id){
-            $("#baymodel_detail").show();
-            $("#baymodel_detail_none").hide();
-            $scope.baymodeldetail.name = model.name;
-            $scope.baymodeldetail.id = model.id;
-            $scope.baymodeldetail.coe = model.coe;
-            $scope.baymodeldetail.image_id = model.image_id;
-            $scope.baymodeldetail.public = model.public;
-            $scope.baymodeldetail.registry_enabled = model.registry_enabled;
-            $scope.baymodeldetail.tls_disabled = model.tls_disabled;
-            $scope.baymodeldetail.apiserver_port = model.apiserver_port;
-          }
-        });
-      }
+      angular.forEach(ctrl.baymodels, function(model, idx){
+        if($scope.model.newBaySpec.baymodel_id === model.id){
+          $scope.baymodeldetail.name = model.name;
+          $scope.baymodeldetail.id = model.id;
+          $scope.baymodeldetail.coe = model.coe;
+          $scope.baymodeldetail.image_id = model.image_id;
+          $scope.baymodeldetail.public = model.public;
+          $scope.baymodeldetail.registry_enabled = model.registry_enabled;
+          $scope.baymodeldetail.tls_disabled = model.tls_disabled;
+          $scope.baymodeldetail.apiserver_port = model.apiserver_port;
+        }
+      });
     };
 
     init();
-    $("#baymodel_detail").hide();
-    $("#baymodel_detail_none").show();
 
     function init() {
       magnum.getBaymodels({paginate: false}).success(onGetBaymodels);

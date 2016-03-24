@@ -191,7 +191,7 @@
   function convertMemorySize(container){
     container.memorysize = "";
     container.memoryunit = "";
-    if(container.memory !== null){
+    if(container.memory !== null && container.memory !== ""){
       // separate number and unit.
       var regex = /(\d+)([bkmg]?)/;
       var match = regex.exec(container.memory);

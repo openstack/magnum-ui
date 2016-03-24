@@ -23,7 +23,7 @@
    * @ngModule
    *
    * @description
-   * Provides all the services and widgets require to display the bay model
+   * Provides all the services and widgets require to display the baymodel
    * panel
    */
   angular
@@ -34,7 +34,7 @@
   /**
    * @ngdoc constant
    * @name horizon.dashboard.containers.baymodels.events
-   * @description A list of events used by Bay Models
+   * @description A list of events used by Baymodels
    */
   function events() {
     return {

@@ -51,30 +51,22 @@
     };
 
     $scope.changeBay = function(){
-      // show Bay Detail
-      if(!$scope.model.newContainerSpec.bay_uuid){
-        $("#bay_detail").hide();
-        $("#bay_detail_none").show();
-      } else {
-        angular.forEach(ctrl.bays, function(bay, idx){
-          if($scope.model.newContainerSpec.bay_uuid === bay.id){
-            $("#bay_detail").show();
-            $("#bay_detail_none").hide();
-            $scope.baydetail.name = bay.name;
-            $scope.baydetail.id = bay.id;
-            $scope.baydetail.baymodel_id = bay.baymodel_id;
-            $scope.baydetail.master_count = bay.master_count;
-            $scope.baydetail.node_count = bay.node_count;
-            $scope.baydetail.discovery_url = bay.discovery_url;
-            $scope.baydetail.timeout = bay.timeout;
-          }
-        });
-      }
+      angular.forEach(ctrl.bays, function(bay, idx){
+        if($scope.model.newContainerSpec.bay_uuid === bay.id){
+          $("#bay_detail").show();
+          $("#bay_detail_none").hide();
+          $scope.baydetail.name = bay.name;
+          $scope.baydetail.id = bay.id;
+          $scope.baydetail.baymodel_id = bay.baymodel_id;
+          $scope.baydetail.master_count = bay.master_count;
+          $scope.baydetail.node_count = bay.node_count;
+          $scope.baydetail.discovery_url = bay.discovery_url;
+          $scope.baydetail.timeout = bay.timeout;
+        }
+      });
     };
 
     init();
-    $("#bay_detail").hide();
-    $("#bay_detail_none").show();
 
     function init() {
       magnum.getBays({paginate: false}).success(onGetBays);
@@ -87,7 +79,5 @@
         $scope.changeBay();
       }
     }
-
   }
-
 })();

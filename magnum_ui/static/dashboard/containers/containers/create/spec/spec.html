@@ -1,9 +1,6 @@
 <div ng-controller="createContainerSpecController as ctrl">
-  <p translate>Please provide the specs for this Container.</p>
-
   <div class="row">
     <div class="col-xs-12">
-
       <div class="form-group">
         <label class="control-label" for="container-image" translate>
           <translate>Image</translate>
@@ -19,20 +16,20 @@
   <div class="row">
     <div class="col-xs-6">
       <div class="form-group">
-        <label class="control-label" for="container-memorysize" translate>Memory Size</label>
-        <input name="container-memorysize" type="number" ng-pattern="/^[0-9]+$/"
-               class="form-control" ng-model="model.newContainerSpec.memorysize"
+        <label class="control-label" for="container-memory-size" translate>Memory Size</label>
+        <input name="container-memory-size" type="number" min="1"
+               class="form-control" ng-model="model.newContainerSpec.memory_size"
                placeholder="{$ 'The container memory size.'|translate $}"
-               ng-change="changeMemorySize()" id="container-memorysize">
+               ng-change="changeMemorySize()" id="container-memory-size">
       </div>
     </div>
 
     <div class="col-xs-6">
       <div class="form-group">
-        <label class="control-label" for="container-memoryunit" translate>Memory Unit</label>
-        <select name="container-memoryunit" id="container-memoryunit"
-                class="form-control" ng-options="mu.unit as mu.label for mu in ctrl.memoryunits"
-                ng-model="model.newContainerSpec.memoryunit" ng-change="changeMemoryUnit()">
+        <label class="control-label" for="container-memory-unit" translate>Memory Unit</label>
+        <select name="container-memory-unit" id="container-memory-unit"
+                class="form-control" ng-options="mu.unit as mu.label for mu in ctrl.memory_units"
+                ng-model="model.newContainerSpec.memory_unit" ng-change="changeMemoryUnit()">
         </select>
       </div>
     </div>
