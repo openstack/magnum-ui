@@ -19,7 +19,7 @@
 
   /**
    * @ngdoc controller
-   * @name createBayModelSpecController
+   * @name createBaymodelSpecController
    * @ngController
    *
    * @description
@@ -27,9 +27,9 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('createBayModelSpecController', createBayModelSpecController);
+    .controller('createBaymodelSpecController', createBaymodelSpecController);
 
-  createBayModelSpecController.$inject = [
+  createBaymodelSpecController.$inject = [
     '$q',
     '$scope',
     'horizon.dashboard.containers.basePath',
@@ -38,11 +38,11 @@
     'horizon.app.core.openstack-service-api.glance'
   ];
 
-  function createBayModelSpecController($q, $scope, basePath, magnum, nova, glance) {
+  function createBaymodelSpecController($q, $scope, basePath, magnum, nova, glance) {
     var ctrl = this;
-    ctrl.images = [{id:"", name: gettext("Choose a Image")}];
-    ctrl.nflavors = [{id:"", name: gettext("Choose a Flavor for Node")}];
-    ctrl.mflavors = [{id:"", name: gettext("Choose a Flavor for Master Node")}];
+    ctrl.images = [{id:"", name: gettext("Choose an Image")}];
+    ctrl.nflavors = [{id:"", name: gettext("Choose a Flavor for the Node")}];
+    ctrl.mflavors = [{id:"", name: gettext("Choose a Flavor for the Master Node")}];
     ctrl.keypairs = [{id:"", name: gettext("Choose a Keypair")}];
 
     init();

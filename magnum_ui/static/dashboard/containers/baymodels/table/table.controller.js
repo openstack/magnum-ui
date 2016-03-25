@@ -19,7 +19,7 @@
 
   /**
    * @ngdoc overview
-   * @name containersBayModelsTableController
+   * @name containersBaymodelsTableController
    * @ngController
    *
    * @description
@@ -27,9 +27,9 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('containersBayModelsTableController', containersBayModelsTableController);
+    .controller('containersBaymodelsTableController', containersBaymodelsTableController);
 
-  containersBayModelsTableController.$inject = [
+  containersBaymodelsTableController.$inject = [
     '$scope',
     '$location',
     'horizon.app.core.openstack-service-api.magnum',
@@ -39,7 +39,7 @@
     'horizon.dashboard.containers.baymodels.resourceType'
   ];
 
-  function containersBayModelsTableController($scope, $location, magnum, events, bayEvents, registry, baymodelResourceType) {
+  function containersBaymodelsTableController($scope, $location, magnum, events, bayEvents, registry, baymodelResourceType) {
     var ctrl = this;
     ctrl.baymodels = [];
     ctrl.baymodelsSrc = [];
@@ -77,10 +77,10 @@
 
     function init() {
       registry.initActions(baymodelResourceType, $scope);
-      magnum.getBayModels().success(getBayModelsSuccess);
+      magnum.getBaymodels().success(getBaymodelsSuccess);
     }
 
-    function getBayModelsSuccess(response) {
+    function getBaymodelsSuccess(response) {
       ctrl.baymodelsSrc = response.items;
     }
 

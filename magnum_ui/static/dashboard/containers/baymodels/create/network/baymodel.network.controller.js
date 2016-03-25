@@ -19,7 +19,7 @@
 
   /**
    * @ngdoc controller
-   * @name createBayModelNetworkController
+   * @name createBaymodelNetworkController
    * @ngController
    *
    * @description
@@ -27,16 +27,16 @@
    */
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('createBayModelNetworkController', createBayModelNetworkController);
+    .controller('createBaymodelNetworkController', createBaymodelNetworkController);
 
-  createBayModelNetworkController.$inject = [
+  createBaymodelNetworkController.$inject = [
     '$q',
     '$scope',
     'horizon.dashboard.containers.basePath',
     'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createBayModelNetworkController($q, $scope, basePath, magnum) {
+  function createBaymodelNetworkController($q, $scope, basePath, magnum) {
     var ctrl = this;
   };
 

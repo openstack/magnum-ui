@@ -43,7 +43,7 @@
 
     var scope;
     var message = {
-      success: gettext('BayModel %s was successfully created.')
+      success: gettext('Baymodel %s was successfully created.')
     };
 
     var service = {
@@ -79,7 +79,7 @@
     }
 
     function submit(){
-      return model.createBayModel().then(success);
+      return model.createBaymodel().then(success);
     }
 
     function success(response) {

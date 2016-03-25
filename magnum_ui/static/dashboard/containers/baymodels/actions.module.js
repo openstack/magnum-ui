@@ -23,9 +23,9 @@
    * Provides all of the actions for baymodels.
    */
   angular.module('horizon.dashboard.containers.baymodels.actions', ['horizon.framework', 'horizon.dashboard.containers'])
-   .run(registerBayModelActions);
+   .run(registerBaymodelActions);
 
-  registerBayModelActions.$inject = [
+  registerBaymodelActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.containers.baymodels.create.service',
@@ -34,11 +34,11 @@
     'horizon.dashboard.containers.baymodels.resourceType',
   ];
 
-  function registerBayModelActions(
+  function registerBaymodelActions(
     registry,
     gettext,
-    createBayModelService,
-    deleteBayModelService,
+    createBaymodelService,
+    deleteBaymodelService,
     createBayService,
     resourceType)
   {
@@ -52,29 +52,29 @@
         }
       })
       .append({
-        id: 'deleteBayModelAction',
-        service: deleteBayModelService,
+        id: 'deleteBaymodelAction',
+        service: deleteBaymodelService,
         template: {
           type: 'delete',
-          text: gettext('Delete BayModel')
+          text: gettext('Delete Baymodel')
         }
       });
 
     baymodelResourceType.batchActions
       .append({
-        id: 'createBayModelAction',
-        service: createBayModelService,
+        id: 'createBaymodelAction',
+        service: createBaymodelService,
         template: {
           type: 'create',
-          text: gettext('Create BayModel')
+          text: gettext('Create Baymodel')
         }
       })
       .append({
-        id: 'batchDeleteBayModelAction',
-        service: deleteBayModelService,
+        id: 'batchDeleteBaymodelAction',
+        service: deleteBaymodelService,
         template: {
           type: 'delete-selected',
-          text: gettext('Delete BayModels')
+          text: gettext('Delete Baymodels')
         }
       });
   }

@@ -31,7 +31,7 @@ def change_to_id(obj):
 
 
 @urls.register
-class BayModel(generic.View):
+class Baymodel(generic.View):
     """API for retrieving a single baymodel"""
     url_regex = r'containers/baymodels/(?P<baymodel_id>[^/]+)$'
 
@@ -42,23 +42,23 @@ class BayModel(generic.View):
 
 
 @urls.register
-class BayModels(generic.View):
-    """API for Magnum BayModels"""
+class Baymodels(generic.View):
+    """API for Magnum Baymodels"""
     url_regex = r'containers/baymodels/$'
 
     @rest_utils.ajax()
     def get(self, request):
-        """Get a list of the BayModels for a project.
+        """Get a list of the Baymodels for a project.
 
         The returned result is an object with property 'items' and each
-        item under this is a BayModel.
+        item under this is a Baymodel.
         """
         result = magnum.baymodel_list(request)
         return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
-        """Delete one or more BayModels by id.
+        """Delete one or more Baymodels by id.
 
         Returns HTTP 204 (no content) on successful deletion.
         """
@@ -67,9 +67,9 @@ class BayModels(generic.View):
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
-        """Create a new BayModel.
+        """Create a new Baymodel.
 
-        Returns the new BayModel object on success.
+        Returns the new Baymodel object on success.
         """
         new_baymodel = magnum.baymodel_create(request, **request.DATA)
         return rest_utils.CreatedResponse(

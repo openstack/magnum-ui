@@ -38,7 +38,7 @@
 
   function createBayInfoController($q, $scope, basePath, magnum) {
     var ctrl = this;
-    ctrl.baymodels = [{id:"", name: gettext("Choose a Bay Model")}];
+    ctrl.baymodels = [{id:"", name: gettext("Choose a Baymodel")}];
     $scope.model.newBaySpec.baymodel_id = "";
     $scope.baymodeldetail = {
         name: "",
@@ -51,8 +51,8 @@
         apiserver_port: ""
     };
 
-    $scope.changeBayModel = function(){
-      // show Bay Model Detail
+    $scope.changeBaymodel = function(){
+      // show Baymodel Detail
       if(!$scope.model.newBaySpec.baymodel_id){
         $("#baymodel_detail").hide();
         $("#baymodel_detail_none").show();
@@ -79,14 +79,14 @@
     $("#baymodel_detail_none").show();
 
     function init() {
-      magnum.getBayModels({paginate: false}).success(onGetBayModels);
+      magnum.getBaymodels({paginate: false}).success(onGetBaymodels);
     }
 
-    function onGetBayModels(response) {
+    function onGetBaymodels(response) {
       Array.prototype.push.apply(ctrl.baymodels, response.items);
       if($scope.selected instanceof Object){
         $scope.model.newBaySpec.baymodel_id = $scope.selected.id;
-        $scope.changeBayModel();
+        $scope.changeBaymodel();
       }
     }
 

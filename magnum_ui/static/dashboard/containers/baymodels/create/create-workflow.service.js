@@ -29,7 +29,7 @@
 
   function baymodelWorkflow(basePath, dashboardWorkflow, gettext) {
     return dashboardWorkflow({
-      title: gettext('Create Bay Model'),
+      title: gettext('Create Baymodel'),
 
       steps: [
         {
@@ -63,7 +63,7 @@
       },
 
       btnIcon: {
-        finish: 'fa fa-cloud-download'
+        finish: 'fa fa-check'
       }
     });
   }

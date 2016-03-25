@@ -16,6 +16,6 @@ from django.utils.translation import ugettext_lazy as _
 import horizon
 
 
-class BayModels(horizon.Panel):
-    name = _("Bay Models")
+class Baymodels(horizon.Panel):
+    name = _("Baymodels")
     slug = "baymodels"

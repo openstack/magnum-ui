@@ -18,9 +18,9 @@
 
   angular
     .module('horizon.dashboard.containers.baymodels')
-    .controller('BayModelDetailController', BayModelDetailController);
+    .controller('BaymodelDetailController', BaymodelDetailController);
 
-  BayModelDetailController.$inject = [
+  BaymodelDetailController.$inject = [
     '$scope',
     '$window',
     '$location',
@@ -33,7 +33,7 @@
     'horizon.dashboard.containers.baymodels.resourceType'
   ];
 
-  function BayModelDetailController($scope, $window, $location, $routeParams, magnum, glance, events, bayEvents, registry, baymodelResourceType) {
+  function BaymodelDetailController($scope, $window, $location, $routeParams, magnum, glance, events, bayEvents, registry, baymodelResourceType) {
     var ctrl = this;
     ctrl.baymodel = {};
     ctrl.image_uuid;
@@ -51,10 +51,10 @@
     function init() {
       registry.initActions(baymodelResourceType, $scope);
       // Load the elements that are used in the overview.
-      magnum.getBayModel(baymodelId).success(onGetBayModel);
+      magnum.getBaymodel(baymodelId).success(onGetBaymodel);
     }
 
-    function onGetBayModel(baymodel) {
+    function onGetBaymodel(baymodel) {
       ctrl.baymodel = baymodel;
       ctrl.baymodel.id = baymodel.uuid;
       glance.getImages().success(onGetImages);

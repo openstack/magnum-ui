@@ -1,53 +1,50 @@
 <div ng-controller="createContainerInfoController as ctrl">
-  <h1 translate>Container Details</h1>
+  <p translate>Please provide the name of the Container.</p>
 
-  <div class="content">
-    <div translate class="subtitle">Please provide the name of the Container.</div>
+  <div class="row">
+    <div class="col-xs-12">
 
-    <div class="form-group">
-      <div class="form-field container-name">
-        <label class="on-top" translate>Container Name</label>
-        <input name="container-name" type="text" class="form-control input-sm"
-               ng-model="model.newContainerSpec.name"
-               placeholder="{$ 'Name of the container to create.'|translate $}">
+      <div class="form-group">
+        <label class="control-label" for="container-name" translate>
+          Container Name
+        </label>
+        <input name="container-name" type="text" class="form-control" id="container-name"
+                 ng-model="model.newContainerSpec.name"
+                 placeholder="{$ 'Name of the container to create.'|translate $}">
       </div>
-      <div class="form-field required container-model">
-        <label class="on-top" translate>Bay</label>
-        <select class="form-control" name="container-bay"
+
+      <div class="form-group">
+        <label class="control-label" for="container-bay">
+          <translate>Bay</translate>
+          <span class="hz-icon-required fa fa-asterisk"></span>
+        </label>
+        <select class="form-control" name="container-bay" id="container-bay"
           ng-model="model.newContainerSpec.bay_uuid"
           ng-required="true"
           ng-options="bay.id as bay.name|noName for bay in ctrl.bays"
           ng-change="changeBay()">
         </select>
       </div>
-    </div>
-
-    <h2 translate class="section-title">Bay Detail</h2>
-    <div class="subtitle" id="bay_detail_none" translate>
-      Choose a Bay
-    </div>
-    <div class="subtitle" id="bay_detail">
-      <dl class=dl-horizontal>
-        <dt translate>Name</dt>
-        <dd>
-          <a
-            ng-href="project/bays/{$ baydetail.id $}"
-            ng-click="cancel()">
+      
+      <div class="detail" ng-show="model.newContainerSpec.bay_uuid">
+        <span translate class="h4">Bay Detail</span>
+        <dl class="dl-horizontal">
+          <dt translate>Name</dt>
+          <dd><a ng-href="project/bays/{$ baydetail.id $}" ng-click="cancel()">
             {$ baydetail.name|noName $}
-          </a>
-        </dd>
-        <dt translate>ID</dt>
-        <dd>{$ baydetail.id $}</dd>
-        <dt translate>BayModel ID</dt>
-        <dd>{$ baydetail.baymodel_id $}</dd>
-        <dt translate>Master Count</dt>
-        <dd>{$ baydetail.master_count $}</dd>
-        <dt translate>Node Count</dt>
-        <dd>{$ baydetail.node_count $}</dd>
-        <dt translate>Timeout</dt>
-        <dd>{$ baydetail.timeout $}</dd>
-      </dl>
+          </a></dd>
+          <dt translate>ID</dt>
+          <dd>{$ baydetail.id $}</dd>
+          <dt translate>Baymodel ID</dt>
+          <dd>{$ baydetail.baymodel_id $}</dd>
+          <dt translate>Master Count</dt>
+          <dd>{$ baydetail.master_count $}</dd>
+          <dt translate>Node Count</dt>
+          <dd>{$ baydetail.node_count $}</dd>
+          <dt translate>Timeout</dt>
+          <dd>{$ baydetail.timeout $}</dd>
+        </dl>
+      </div>
     </div>
-
   </div>
 </div>

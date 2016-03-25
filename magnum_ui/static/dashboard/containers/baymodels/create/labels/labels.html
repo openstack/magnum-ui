@@ -1,17 +1,11 @@
-<div ng-controller="createBayModelLabelsController as ctrl">
-  <h1 translate>Labels</h1>
-
-  <div class="content">
-    <div translate class="subtitle">Please provide the labels of the Bay Model.</div>
-
-    <div class="form-group">
-      <div class="form-field baymodel-labels">
-        <label class="on-top" translate>Labels</label>
-        <input name="baymodel-labels" type="text" class="form-control input-sm"
-               ng-model="model.newBayModelSpec.labels"
+<div ng-controller="createBaymodelLabelsController as ctrl">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label class="control-label" for="baymodel-labels" translate>Labels</label>
+        <textarea name="baymodel-labels" class="form-control" id="baymodel-labels"
+               rows="4" ng-model="model.newBaymodelSpec.labels"
                placeholder="{$ 'KEY1=VALUE1,KEY2=VALUE2...'|translate $}">
       </div>
-    </div>
-
   </div>
 </div>
