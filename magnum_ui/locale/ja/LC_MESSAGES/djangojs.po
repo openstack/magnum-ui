@@ -5,12 +5,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-14 01:06+0000\n"
+"POT-Creation-Date: 2016-03-26 16:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-14 07:49+0000\n"
-"Last-Translator: Akihiro Motoki <amotoki@gmail.com>\n"
+"PO-Revision-Date: 2016-03-28 12:15+0000\n"
+"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -24,6 +24,9 @@ msgstr "API サーバーのポート"
 
 msgid "Actions"
 msgstr "アクション"
+
+msgid "An arbitrary human-readable name"
+msgstr "人間が読むことができる任意の名前。"
 
 msgid ""
 "Arbitrary labels in the form of key=value pairs to associate with a "
@@ -45,42 +48,30 @@ msgstr "ベイ作成のタイムアウト"
 msgid "Bay Detail"
 msgstr "ベイの詳細"
 
-msgid "Bay Details"
-msgstr "ベイの詳細"
-
 msgid "Bay ID"
 msgstr "ベイ ID"
-
-msgid "Bay Model"
-msgstr "ベイモデル"
-
-msgid "Bay Model Detail"
-msgstr "ベイモデルの詳細"
-
-msgid "Bay Model Details"
-msgstr "ベイモデルの詳細"
-
-msgid "Bay Model Name"
-msgstr "ベイモデルの名前"
-
-msgid "Bay Models"
-msgstr "ベイモデル"
 
 msgid "Bay Name"
 msgstr "ベイの名前"
 
-msgid "Bay Size"
-msgstr "ベイのサイズ"
-
-msgid "BayModel"
+msgid "Baymodel"
 msgstr "ベイモデル"
 
 #, python-format
-msgid "BayModel %s was successfully created."
+msgid "Baymodel %s was successfully created."
 msgstr "ベイモデル %s が正常に作成されました。"
 
-msgid "BayModel ID"
+msgid "Baymodel Detail"
+msgstr "ベイモデルの詳細"
+
+msgid "Baymodel ID"
 msgstr "ベイモデル ID"
+
+msgid "Baymodel Name"
+msgstr "ベイモデル名"
+
+msgid "Baymodels"
+msgstr "ベイモデル"
 
 msgid "Bays"
 msgstr "ベイ"
@@ -88,26 +79,20 @@ msgstr "ベイ"
 msgid "COE"
 msgstr "COE"
 
-msgid "COE:"
-msgstr "コンテナーオーケストレーションエンジン:"
-
 msgid "Choose a Bay"
 msgstr "ベイを選択してください"
 
-msgid "Choose a Bay Model"
+msgid "Choose a Baymodel"
 msgstr "ベイモデルを選択してください"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "コンテナーオーケストレーションエンジンを選択してください"
 
-msgid "Choose a Flavor for Master Node"
+msgid "Choose a Flavor for the Master Node"
 msgstr "マスターノードのフレーバーを選択してください"
 
-msgid "Choose a Flavor for Node"
+msgid "Choose a Flavor for the Node"
 msgstr "ノードのフレーバーを選択してください"
-
-msgid "Choose a Image"
-msgstr "イメージを選択してください"
 
 msgid "Choose a Keypair"
 msgstr "キーペアを選択してください"
@@ -117,6 +102,9 @@ msgstr "ネットワークドライバーを選択してください"
 
 msgid "Choose a Volume Driver"
 msgstr "ボリュームドライバーを選択してください"
+
+msgid "Choose an Image"
+msgstr "イメージを選択してください"
 
 msgid "Cinder"
 msgstr "Cinder"
@@ -134,8 +122,8 @@ msgid "Confirm Delete Bay"
 msgid_plural "Confirm Delete Bays"
 msgstr[0] "ベイの削除の確認"
 
-msgid "Confirm Delete BayModel"
-msgid_plural "Confirm Delete BayModels"
+msgid "Confirm Delete Baymodel"
+msgid_plural "Confirm Delete Baymodels"
 msgstr[0] "ベイモデルの削除の確認"
 
 msgid "Confirm Delete Container"
@@ -144,16 +132,13 @@ msgstr[0] "コンテナーの削除の確認"
 
 #, python-format
 msgid "Container %s was successfully created."
-msgstr "コンテナー %s が正常に削除されました。"
-
-msgid "Container Details"
-msgstr "コンテナーの詳細"
+msgstr "コンテナー %s が正常に作成されました。"
 
 msgid "Container Name"
 msgstr "コンテナー名"
 
-msgid "Container Spec"
-msgstr "コンテナーのスペック"
+msgid "Container Orchestration Engine"
+msgstr "コンテナーオーケストレーションエンジン"
 
 msgid "Containers"
 msgstr "コンテナー"
@@ -164,10 +149,7 @@ msgstr "作成"
 msgid "Create Bay"
 msgstr "ベイの作成"
 
-msgid "Create Bay Model"
-msgstr "ベイモデルの作成"
-
-msgid "Create BayModel"
+msgid "Create Baymodel"
 msgstr "ベイモデルの作成"
 
 msgid "Create Container"
@@ -179,18 +161,15 @@ msgstr "作成時刻"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS:"
-msgstr "DNS:"
-
 msgid "Delete Bay"
 msgid_plural "Delete Bays"
 msgstr[0] "ベイの削除"
 
-msgid "Delete BayModel"
-msgid_plural "Delete BayModels"
+msgid "Delete Baymodel"
+msgid_plural "Delete Baymodels"
 msgstr[0] "ベイモデルの削除"
 
-msgid "Delete BayModels"
+msgid "Delete Baymodels"
 msgstr "ベイモデルの削除"
 
 msgid "Delete Bays"
@@ -209,8 +188,8 @@ msgid_plural "Deleted Bays: %s."
 msgstr[0] "ベイ %s を削除しました。"
 
 #, python-format
-msgid "Deleted BayModel: %s."
-msgid_plural "Deleted BayModels: %s."
+msgid "Deleted Baymodel: %s."
+msgid_plural "Deleted Baymodels: %s."
 msgstr[0] "ベイモデル %s を削除しました。"
 
 #, python-format
@@ -218,8 +197,8 @@ msgid "Deleted Container: %s."
 msgid_plural "Deleted Containers: %s."
 msgstr[0] "コンテナー %s を削除しました。"
 
-msgid "Description:"
-msgstr "説明:"
+msgid "Disable TLS"
+msgstr "TLS の無効化"
 
 msgid "Disable TLS in the Bay. Default: False"
 msgstr "このベイにおいて、 TLS を無効にします。デフォルト: False"
@@ -239,8 +218,8 @@ msgstr "Docker のボリューム容量"
 msgid "Docker Volume Size (GB)"
 msgstr "Docker のボリューム容量 (GB)"
 
-msgid "Docker Volume Size:"
-msgstr "Docker のボリューム容量:"
+msgid "Enable Registry"
+msgstr "レジストリーの有効化"
 
 msgid "Enable docker registry in the Bay. Default: False"
 msgstr ""
@@ -252,9 +231,6 @@ msgstr "外部ネットワーク ID"
 msgid "Fixed Network"
 msgstr "固定ネットワーク"
 
-msgid "Fixed Network:"
-msgstr "固定ネットワーク:"
-
 msgid "Flannel"
 msgstr "Flannel"
 
@@ -263,9 +239,6 @@ msgstr "フレーバー"
 
 msgid "Flavor ID"
 msgstr "フレーバー ID"
-
-msgid "Flavor:"
-msgstr "フレーバー:"
 
 msgid "GB"
 msgstr "GB"
@@ -285,9 +258,6 @@ msgstr "イメージ"
 msgid "Image ID"
 msgstr "イメージ ID"
 
-msgid "Image:"
-msgstr "イメージ:"
-
 msgid "Infinite"
 msgstr "無制限"
 
@@ -305,9 +275,6 @@ msgstr "キーペア"
 
 msgid "Keypair ID"
 msgstr "キーペア ID"
-
-msgid "Keypair:"
-msgstr "キーペア:"
 
 msgid "Kubernetes"
 msgstr "Kubernetes"
@@ -333,11 +300,14 @@ msgstr "マスターノードのフレーバー"
 msgid "Master Flavor ID"
 msgstr "マスターノードのフレーバー ID"
 
-msgid "Master Flavor:"
-msgstr "マスターのフレーバー:"
-
 msgid "Memory"
 msgstr "メモリー"
+
+msgid "Memory Size"
+msgstr "メモリーサイズ"
+
+msgid "Memory Unit"
+msgstr "メモリーの単位"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -387,38 +357,8 @@ msgstr "ノード"
 msgid "Overview"
 msgstr "概要"
 
-msgid "Please provide the count of the master and node in this Bay."
-msgstr "このベイにおける、マスターとノードの数を指定してください。"
-
-msgid "Please provide the labels of the Bay Model."
-msgstr "このベイモデルのラベルを設定してください。"
-
-msgid "Please provide the miscellaneous for creation of the Bay."
-msgstr "ベイの作成のためのその他の条件を指定してください。"
-
-msgid "Please provide the name of the Bay Model."
-msgstr "ベイモデルの名前を指定してください。"
-
-msgid "Please provide the name of the Bay."
-msgstr "ベイの名前を設定してください。"
-
-msgid "Please provide the name of the Container."
-msgstr "コンテナーの名前を指定してください。"
-
-msgid "Please provide the settings of the Bay networking."
-msgstr "このベイのネットワーク設定を指定してください。"
-
-msgid "Please provide the specs for this Container."
-msgstr "このコンテナーのスペックを設定してください。"
-
-msgid "Please provide the specs of the Bay."
-msgstr "このベイのスペックを指定してください。"
-
 msgid "Public"
 msgstr "パブリック"
-
-msgid "Public:"
-msgstr "パブリック:"
 
 msgid "Record Properties"
 msgstr "レコードのプロパティー"
@@ -426,14 +366,8 @@ msgstr "レコードのプロパティー"
 msgid "Registry Enabled"
 msgstr "レジストリーの有効化"
 
-msgid "Registry Enabled:"
-msgstr "レジストリーの有効化:"
-
 msgid "Rexray"
 msgstr "Rexray"
-
-msgid "SSH Authorized Key"
-msgstr "SSH 認証鍵"
 
 msgid "Send command to the contaier in a line."
 msgstr "コンテナーに送る一行のコマンド"
@@ -450,12 +384,8 @@ msgstr "スペック"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
 
-msgid "Specify Bay Model name and Container Orchestration Engine."
-msgstr ""
-"ベイモデルの名前とコンテナーオーケストレーションエンジンを指定してください。"
-
-msgid "Specify bay name and choose bay model."
-msgstr "ベイの名前を指定し、ベイモデルを選択してください。"
+msgid "Specify bay name and choose baymodel"
+msgstr "ベイの名前を指定し、ベイモデルを選択してください"
 
 msgid "Specify conditions for bay creation."
 msgstr "ベイの作成条件を指定してください。"
@@ -469,20 +399,14 @@ msgstr "使用するコンテナーオーケストレーションエンジンを
 msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
 msgstr "ベイで使用するネームサーバーを指定してください。"
 
-msgid "Specify the network settings for the Bay Model."
-msgstr "ベイモデルのネットワーク設定を指定してください。"
-
 msgid "Specify the number of master nodes and bay nodes for the bay."
 msgstr "ベイのマスターノードとベイノードの数を指定してください。"
 
-msgid "Specify the number of size in GB for the docker volume to use."
-msgstr "Docker のボリュームで使用するサイズを GB 単位で指定してください。"
+msgid "Specify the size in GB for the docker volume"
+msgstr "Docker のボリュームのサイズを GB 単位で指定してください"
 
 msgid "Specify the specs for the container."
 msgstr "コンテナーのスペックを指定します。"
-
-msgid "Specify the specs for the nodes in the Bay."
-msgstr "ベイのノードのスペックを指定します。"
 
 msgid "Stack ID"
 msgstr "スタック ID"
@@ -493,14 +417,8 @@ msgstr "状態"
 msgid "TLS Disabled"
 msgstr "TLS の無効化"
 
-msgid "TLS Disabled:"
-msgstr "TLS の無効化:"
-
-msgid "The DNS nameserver to use for this Bay."
-msgstr "このベイで使用する DNS ネームサーバー。"
-
-msgid "The SSH authorized key to use."
-msgstr "使用する SSH 認証鍵。"
+msgid "The DNS nameserver to use for this Bay"
+msgstr "このベイで使用する DNS ネームサーバー"
 
 msgid "The bay node count."
 msgstr "ベイノードの数"
@@ -508,14 +426,14 @@ msgstr "ベイノードの数"
 msgid "The container memory size."
 msgstr "コンテナーのメモリーサイズ"
 
-msgid "The external Neutron network ID to connect to this bay model."
-msgstr "このベイモデルに接続する Neutron の外部ネットワーク ID。"
+msgid "The external Neutron network ID to connect to this bay model"
+msgstr "このベイモデルに接続する Neutron の外部ネットワーク ID"
 
-msgid "The http_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用する HTTP プロキシーのアドレス。"
+msgid "The http_proxy address to use for nodes in bay"
+msgstr "ベイのノードに使用する http_proxy アドレス"
 
-msgid "The https_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用する HTTPS プロキシーのアドレス。"
+msgid "The https_proxy address to use for nodes in bay"
+msgstr "ベイのノードに使用する https_proxy アドレス"
 
 msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
 msgstr "このベイのノードにロードする SSH キーペアの名前または UUID。"
@@ -523,11 +441,11 @@ msgstr "このベイのノードにロードする SSH キーペアの名前ま�
 msgid "The name or UUID of the base image to customize for the bay."
 msgstr "このベイで、カスタマイズのベースとなるイメージの名前または UUID。"
 
-msgid "The network driver name for instantiating container networks."
-msgstr "コンテナーネットワークの作成に使用するネットワークドライバー名です。"
+msgid "The network driver name for instantiating container networks"
+msgstr "コンテナーネットワークの作成に使用するネットワークドライバー名"
 
-msgid "The no_proxy address to use for nodes in bay."
-msgstr "ベイのノードで使用するプロキシー例外のアドレス。"
+msgid "The no_proxy address to use for nodes in bay"
+msgstr "ベイのノードに使用する no_proxy アドレス"
 
 msgid "The nova flavor id to use when launching the bay. Default: m1.small"
 msgstr ""
@@ -543,8 +461,8 @@ msgstr ""
 msgid "The number of master nodes for the bay."
 msgstr "ベイのマスターノードの数"
 
-msgid "The private Neutron network name to connect to this bay model."
-msgstr "このベイモデルに接続する Neutron のプライベートネットワーク名。"
+msgid "The private Neutron network name to connect to this bay model"
+msgstr "このベイモデルに接続する Neutron のプライベートネットワーク名"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
@@ -572,7 +490,7 @@ msgstr "UUID"
 msgid "Unable to create Bay."
 msgstr "ベイを作成できません。"
 
-msgid "Unable to create BayModel"
+msgid "Unable to create Baymodel"
 msgstr "ベイモデルを作成できません。"
 
 msgid "Unable to create Container."
@@ -584,8 +502,8 @@ msgid_plural "Unable to delete Bays: %s."
 msgstr[0] "ベイを削除できません: %s"
 
 #, python-format
-msgid "Unable to delete BayModel: %s."
-msgid_plural "Unable to delete BayModels: %s."
+msgid "Unable to delete Baymodel: %s."
+msgid_plural "Unable to delete Baymodels: %s."
 msgstr[0] "ベイモデルを削除できません: %s"
 
 #, python-format
@@ -595,13 +513,13 @@ msgstr[0] "コンテナーを削除できません: %s"
 
 #, python-format
 msgid "Unable to delete the Bay with id: %(id)s"
-msgstr "ID が %(id)s のベイを削除できません。"
+msgstr "ID %(id)s のベイを削除できません。"
 
 #, python-format
-msgid "Unable to delete the BayModel with id: %(id)s"
+msgid "Unable to delete the Baymodel with id: %(id)s"
 msgstr "ID %(id)s のベイモデルを削除できません"
 
-msgid "Unable to delete the BayModels."
+msgid "Unable to delete the Baymodels."
 msgstr "ベイモデルを削除できません。"
 
 msgid "Unable to delete the Bays."
@@ -609,7 +527,7 @@ msgstr "ベイを削除できません。"
 
 #, python-format
 msgid "Unable to delete the Container with id: %(id)s"
-msgstr "ID が %(id)s のコンテナーを削除できません。"
+msgstr "ID %(id)s のコンテナーを削除できません。"
 
 msgid "Unable to delete the Containers."
 msgstr "コンテナーの一覧を取得できません。"
@@ -617,10 +535,10 @@ msgstr "コンテナーの一覧を取得できません。"
 msgid "Unable to retrieve the Bay."
 msgstr "ベイの情報を取得できません。"
 
-msgid "Unable to retrieve the BayModel."
+msgid "Unable to retrieve the Baymodel."
 msgstr "ベイモデルの情報を取得できません。"
 
-msgid "Unable to retrieve the BayModels."
+msgid "Unable to retrieve the Baymodels."
 msgstr "ベイモデルの一覧を取得できません。"
 
 msgid "Unable to retrieve the Bays."

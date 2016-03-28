@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2016-03-14 01:06+0000\n"
+"POT-Creation-Date: 2016-03-26 16:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,42 +44,11 @@ msgstr "Bay 생성 제한시간"
 msgid "Bay Detail"
 msgstr "Bay 세부 사항"
 
-msgid "Bay Details"
-msgstr "Bay 세부 사항"
-
 msgid "Bay ID"
 msgstr "Bay ID"
 
-msgid "Bay Model"
-msgstr "Bay Model"
-
-msgid "Bay Model Detail"
-msgstr "Bay Model 세부 사항"
-
-msgid "Bay Model Details"
-msgstr "Bay Model 세부 사항"
-
-msgid "Bay Model Name"
-msgstr "Bay Model 이름"
-
-msgid "Bay Models"
-msgstr "Bay Models"
-
 msgid "Bay Name"
 msgstr "Bay 이름"
-
-msgid "Bay Size"
-msgstr "Bay 크기"
-
-msgid "BayModel"
-msgstr "BayModel"
-
-#, python-format
-msgid "BayModel %s was successfully created."
-msgstr "BayModel %s이(가) 성공적으로 생성되었습니다."
-
-msgid "BayModel ID"
-msgstr "BayModel ID"
 
 msgid "Bays"
 msgstr "Bays"
@@ -87,26 +56,11 @@ msgstr "Bays"
 msgid "COE"
 msgstr "COE"
 
-msgid "COE:"
-msgstr "COE:"
-
 msgid "Choose a Bay"
 msgstr "Bay 선택"
 
-msgid "Choose a Bay Model"
-msgstr "Bay Model 선택"
-
 msgid "Choose a Container Orchestration Engine"
 msgstr "컨테이너 오케스트레이션 엔진 선택"
-
-msgid "Choose a Flavor for Master Node"
-msgstr "마스터 노드의 Flavor 선택"
-
-msgid "Choose a Flavor for Node"
-msgstr "노드의 Flavor 선택"
-
-msgid "Choose a Image"
-msgstr "이미지 선택"
 
 msgid "Choose a Keypair"
 msgstr "키 페어 선택"
@@ -133,10 +87,6 @@ msgid "Confirm Delete Bay"
 msgid_plural "Confirm Delete Bays"
 msgstr[0] "Bay 삭제 확인"
 
-msgid "Confirm Delete BayModel"
-msgid_plural "Confirm Delete BayModels"
-msgstr[0] "BayModel 삭제 확인"
-
 msgid "Confirm Delete Container"
 msgid_plural "Confirm Delete Containers"
 msgstr[0] "컨테이너 삭제 확인"
@@ -145,14 +95,8 @@ msgstr[0] "컨테이너 삭제 확인"
 msgid "Container %s was successfully created."
 msgstr "%s 컨테이너가 성공적으로 생성되었습니다."
 
-msgid "Container Details"
-msgstr "컨테이너 세부 사항"
-
 msgid "Container Name"
 msgstr "컨테이너 이름"
-
-msgid "Container Spec"
-msgstr "컨테이너 사양"
 
 msgid "Containers"
 msgstr "컨테이너"
@@ -163,12 +107,6 @@ msgstr "생성"
 msgid "Create Bay"
 msgstr "Bay 생성"
 
-msgid "Create Bay Model"
-msgstr "Bay Model 생성"
-
-msgid "Create BayModel"
-msgstr "BayModel 생성"
-
 msgid "Create Container"
 msgstr "컨테이너 생성"
 
@@ -178,19 +116,9 @@ msgstr "생성됨"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "DNS:"
-msgstr "DNS:"
-
 msgid "Delete Bay"
 msgid_plural "Delete Bays"
 msgstr[0] "Bay 삭제"
-
-msgid "Delete BayModel"
-msgid_plural "Delete BayModels"
-msgstr[0] "BayModel 삭제"
-
-msgid "Delete BayModels"
-msgstr "BayModels 삭제"
 
 msgid "Delete Bays"
 msgstr "Bay 삭제"
@@ -208,17 +136,9 @@ msgid_plural "Deleted Bays: %s."
 msgstr[0] "삭제된 Bay: %s"
 
 #, python-format
-msgid "Deleted BayModel: %s."
-msgid_plural "Deleted BayModels: %s."
-msgstr[0] "삭제된 BayModel: %s."
-
-#, python-format
 msgid "Deleted Container: %s."
 msgid_plural "Deleted Containers: %s."
 msgstr[0] "삭제된 컨테이너: %s."
-
-msgid "Description:"
-msgstr "설명:"
 
 msgid "Disable TLS in the Bay. Default: False"
 msgstr "Bay에서 TLS를 사용하지 않게 설정하십시오. 기본값: False"
@@ -238,9 +158,6 @@ msgstr "Docker 볼륨 크기"
 msgid "Docker Volume Size (GB)"
 msgstr "Docker 볼륨 크기(GB)"
 
-msgid "Docker Volume Size:"
-msgstr "Docker 볼륨 크기:"
-
 msgid "Enable docker registry in the Bay. Default: False"
 msgstr "Bay에서 docker 저장소를 사용하십시오. 기본값: False"
 
@@ -250,9 +167,6 @@ msgstr "외부 네트워크 ID"
 msgid "Fixed Network"
 msgstr "고정 네트워크"
 
-msgid "Fixed Network:"
-msgstr "고정 네트워크:"
-
 msgid "Flannel"
 msgstr "Flannel"
 
@@ -261,9 +175,6 @@ msgstr "Flavor"
 
 msgid "Flavor ID"
 msgstr "Flavor ID"
-
-msgid "Flavor:"
-msgstr "Flavor:"
 
 msgid "GB"
 msgstr "GB"
@@ -283,9 +194,6 @@ msgstr "이미지"
 msgid "Image ID"
 msgstr "이미지 ID"
 
-msgid "Image:"
-msgstr "이미지:"
-
 msgid "Infinite"
 msgstr "무제한"
 
@@ -303,9 +211,6 @@ msgstr "키 페어"
 
 msgid "Keypair ID"
 msgstr "키 페어 ID"
-
-msgid "Keypair:"
-msgstr "키 페어:"
 
 msgid "Kubernetes"
 msgstr "Kubernetes"
@@ -330,9 +235,6 @@ msgstr "마스터 Flavor"
 
 msgid "Master Flavor ID"
 msgstr "마스터 Flavor ID"
-
-msgid "Master Flavor:"
-msgstr "마스터 Flavor:"
 
 msgid "Memory"
 msgstr "메모리"
@@ -385,38 +287,8 @@ msgstr "노드"
 msgid "Overview"
 msgstr "개요"
 
-msgid "Please provide the count of the master and node in this Bay."
-msgstr "이 Bay의 노드 및 마스터 수를 제공하십시오."
-
-msgid "Please provide the labels of the Bay Model."
-msgstr "Bay Model의 레이블을 제공하십시오."
-
-msgid "Please provide the miscellaneous for creation of the Bay."
-msgstr "Bay를 생성하기 위한 기타 사항을 제공하십시오."
-
-msgid "Please provide the name of the Bay Model."
-msgstr "Bay Model의 이름을 제공하십시오."
-
-msgid "Please provide the name of the Bay."
-msgstr "Bay의 이름을 제공하십시오."
-
-msgid "Please provide the name of the Container."
-msgstr "컨테이너의 이름을 제공하십시오."
-
-msgid "Please provide the settings of the Bay networking."
-msgstr "Bay 네트워킹의 설정을 제공하십시오."
-
-msgid "Please provide the specs for this Container."
-msgstr "컨테이너의 사양을 제공하십시오."
-
-msgid "Please provide the specs of the Bay."
-msgstr "Bay의 사양을 제공하십시오."
-
 msgid "Public"
 msgstr "공용"
-
-msgid "Public:"
-msgstr "공용:"
 
 msgid "Record Properties"
 msgstr "레코드 속성"
@@ -424,14 +296,8 @@ msgstr "레코드 속성"
 msgid "Registry Enabled"
 msgstr "저장소가 사용됨"
 
-msgid "Registry Enabled:"
-msgstr "저장소가 사용됨:"
-
 msgid "Rexray"
 msgstr "Rexray"
-
-msgid "SSH Authorized Key"
-msgstr "SSH 인증 키"
 
 msgid "Send command to the contaier in a line."
 msgstr "컨테이너에 명령을 한 행으로 보내십시오."
@@ -448,12 +314,6 @@ msgstr "사양"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "노드 검색을 위한 사용자 정의 검색 url을 지정합니다."
 
-msgid "Specify Bay Model name and Container Orchestration Engine."
-msgstr "Bay Model 이름과 컨테이너 오케스트레이션 엔진을 지정하십시오."
-
-msgid "Specify bay name and choose bay model."
-msgstr "Bay 이름을 지정하고 bay model을 선택하십시오."
-
 msgid "Specify conditions for bay creation."
 msgstr "Bay 생성 조건을 지정하십시오."
 
@@ -466,20 +326,11 @@ msgstr "사용할 컨테이너 오케스트레이션 엔진을 지정하십시�
 msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
 msgstr "Bay에 사용할 네임서버를 지정하십시오. 기본값: 8.8.8.8"
 
-msgid "Specify the network settings for the Bay Model."
-msgstr "Bay Model의 네트워크 설정을 지정하십시오."
-
 msgid "Specify the number of master nodes and bay nodes for the bay."
 msgstr "Bay의 bay 노드 및 마스터 노드 수를 지정하십시오."
 
-msgid "Specify the number of size in GB for the docker volume to use."
-msgstr "사용할 Docker 볼륨의 크기(GB)를 지정하십시오."
-
 msgid "Specify the specs for the container."
 msgstr "컨테이너의 사양을 지정하십시오."
-
-msgid "Specify the specs for the nodes in the Bay."
-msgstr "Bay에서 노드의 사양을 지정하십시오."
 
 msgid "Stack ID"
 msgstr "스택 ID"
@@ -490,41 +341,17 @@ msgstr "상태"
 msgid "TLS Disabled"
 msgstr "TLS 가 사용되지 않음"
 
-msgid "TLS Disabled:"
-msgstr "TLS가 사용되지 않음:"
-
-msgid "The DNS nameserver to use for this Bay."
-msgstr "이 Bay에 사용할 DNS 네임 서버입니다."
-
-msgid "The SSH authorized key to use."
-msgstr "사용할 SSH 인증 키입니다."
-
 msgid "The bay node count."
 msgstr "Bay 노드 수입니다."
 
 msgid "The container memory size."
 msgstr "컨테이너의 메모리 크기입니다."
 
-msgid "The external Neutron network ID to connect to this bay model."
-msgstr "이 Bay Model에 연결할 외부 Neutron 네트워크 ID입니다."
-
-msgid "The http_proxy address to use for nodes in bay."
-msgstr "Bay의 노드에 사용할 http_proxy 주소입니다."
-
-msgid "The https_proxy address to use for nodes in bay."
-msgstr "Bay의 노드에 사용할 https_proxy 주소입니다."
-
 msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
 msgstr "Bay 노드에 로드할 SSH 키 쌍의 이름 또는 UUID입니다."
 
 msgid "The name or UUID of the base image to customize for the bay."
 msgstr "Bay에 맞게 사용자 정의할 기본 이미지의 이름 또는 UUID입니다."
-
-msgid "The network driver name for instantiating container networks."
-msgstr "컨테이너 네트워크를 인스턴스화하기 위한 네트워크 드라이버 이름입니다."
-
-msgid "The no_proxy address to use for nodes in bay."
-msgstr "Bay의 노드에 사용할 no_proxy 주소입니다."
 
 msgid "The nova flavor id to use when launching the bay. Default: m1.small"
 msgstr "bay를 실행할 때 사용할 nova flavor id입니다. 기본값: m1.small"
@@ -537,9 +364,6 @@ msgstr ""
 
 msgid "The number of master nodes for the bay."
 msgstr "Bay의 마스터 노드 수입니다."
-
-msgid "The private Neutron network name to connect to this bay model."
-msgstr "이 Bay Model에 연결할 개인용 Neutron 네트워크 이름입니다."
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker 볼륨의 크기(GB)입니다. 기본값: 25"
@@ -567,9 +391,6 @@ msgstr "UUID"
 msgid "Unable to create Bay."
 msgstr "Bay를 생성할 수 없습니다."
 
-msgid "Unable to create BayModel"
-msgstr "BayModel을 생성할 수 없음"
-
 msgid "Unable to create Container."
 msgstr "컨테이너를 생성할 수 없습니다."
 
@@ -579,11 +400,6 @@ msgid_plural "Unable to delete Bays: %s."
 msgstr[0] "Bay를 삭제할 수 없음: %s."
 
 #, python-format
-msgid "Unable to delete BayModel: %s."
-msgid_plural "Unable to delete BayModels: %s."
-msgstr[0] "BayModel을 삭제할 수 없음: %s."
-
-#, python-format
 msgid "Unable to delete Container: %s."
 msgid_plural "Unable to delete Containers: %s."
 msgstr[0] "컨테이너를 삭제할 수 없습니다: %s."
@@ -591,13 +407,6 @@ msgstr[0] "컨테이너를 삭제할 수 없습니다: %s."
 #, python-format
 msgid "Unable to delete the Bay with id: %(id)s"
 msgstr "ID가 %(id)s인 Bay를 삭제할 수 없습니다."
-
-#, python-format
-msgid "Unable to delete the BayModel with id: %(id)s"
-msgstr "ID가 %(id)s인 BayModel을 삭제할 수 없습니다"
-
-msgid "Unable to delete the BayModels."
-msgstr "BayModels를 삭제할 수 없습니다."
 
 msgid "Unable to delete the Bays."
 msgstr "Bay를 삭제할 수 없습니다."
@@ -611,12 +420,6 @@ msgstr "컨테이너를 삭제할 수 없습니다."
 
 msgid "Unable to retrieve the Bay."
 msgstr "Bay를 검색할 수 없습니다."
-
-msgid "Unable to retrieve the BayModel."
-msgstr "BayModel을 검색할 수 없습니다."
-
-msgid "Unable to retrieve the BayModels."
-msgstr "BayModels를 검색할 수 없습니다."
 
 msgid "Unable to retrieve the Bays."
 msgstr "Bay를 검색할 수 없습니다."
