@@ -1,5 +1,3 @@
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
-# SeYeon Lee <sy_lee@kr.ibm.com>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
@@ -9,8 +7,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-28 06:49+0000\n"
-"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"PO-Revision-Date: 2016-04-08 05:07+0000\n"
+"Last-Translator: SeYeon Lee <sy_lee@kr.ibm.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -138,7 +136,7 @@ msgid "Container Name"
 msgstr "컨테이너 이름"
 
 msgid "Container Orchestration Engine"
-msgstr "컨테이너 Orchestration 엔진"
+msgstr "컨테이너 오케스트레이션 엔진"
 
 msgid "Containers"
 msgstr "컨테이너"
@@ -285,7 +283,7 @@ msgid "MB"
 msgstr "MB"
 
 msgid "Make baymodel public. Default: False"
-msgstr "baymodel이 공용이 되게 하십시오. 기본값: false"
+msgstr "Baymodel이 공용이 되게 하십시오. 기본값: false"
 
 msgid "Master Addresses"
 msgstr "마스터 주소"
@@ -327,7 +325,7 @@ msgid "Name of the baymodel to create."
 msgstr "생성할 baymodel의 이름"
 
 msgid "Name of the container image."
-msgstr "컨테이너 이미지의 이름입니다."
+msgstr "컨테이너 이미지 이름입니다."
 
 msgid "Name of the container to create."
 msgstr "생성할 컨테이너의 이름입니다."
@@ -384,7 +382,7 @@ msgid "Specifies custom discovery url for node discovery."
 msgstr "노드 검색을 위한 사용자 정의 검색 url을 지정합니다."
 
 msgid "Specify bay name and choose baymodel"
-msgstr "Bay 이름 및 baymodel을 지정합니다"
+msgstr "Bay 이름과 baymodel을 지정합니다"
 
 msgid "Specify conditions for bay creation."
 msgstr "Bay 생성 조건을 지정하십시오."
@@ -399,13 +397,13 @@ msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
 msgstr "Bay에 사용할 네임서버를 지정하십시오. 기본값: 8.8.8.8"
 
 msgid "Specify the number of master nodes and bay nodes for the bay."
-msgstr "Bay의 bay 노드 및 마스터 노드 수를 지정하십시오."
+msgstr "Bay의 bay 노드와 마스터 노드 수를 지정하십시오."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker 볼륨에 대한 크기를 GB로 지정합니다"
 
 msgid "Specify the specs for the container."
-msgstr "컨테이너의 사양을 지정하십시오."
+msgstr "컨테이너 사양을 지정하십시오."
 
 msgid "Stack ID"
 msgstr "스택 ID"
@@ -423,7 +421,7 @@ msgid "The bay node count."
 msgstr "Bay 노드 수입니다."
 
 msgid "The container memory size."
-msgstr "컨테이너의 메모리 크기입니다."
+msgstr "컨테이너 메모리 크기입니다."
 
 msgid "The external Neutron network ID to connect to this bay model"
 msgstr "해당 bay 모델에 연결하기 위한 외부 Neutron 네트워크 ID"
@@ -432,10 +430,10 @@ msgid "The http_proxy address to use for nodes in bay"
 msgstr "bay 내 노드 사용에 대한 http_proxy 주소"
 
 msgid "The https_proxy address to use for nodes in bay"
-msgstr "bay 내 노드 사용에 대한 https_proxy 주소"
+msgstr "Bay 내 노드 사용에 대한 https_proxy 주소"
 
 msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr "Bay 노드에 로드할 SSH 키 쌍의 이름 또는 UUID입니다."
+msgstr "Bay 노드에 로드할 SSH 키 쌍의 이름이나 UUID입니다."
 
 msgid "The name or UUID of the base image to customize for the bay."
 msgstr "Bay에 맞게 사용자 정의할 기본 이미지의 이름 또는 UUID입니다."
@@ -444,10 +442,10 @@ msgid "The network driver name for instantiating container networks"
 msgstr "컨테이너 네트워크를 인스턴스화하기 위한 네트워크 드라이버 이름"
 
 msgid "The no_proxy address to use for nodes in bay"
-msgstr "bay 내 노드 사용에 대한 no_proxy 주소"
+msgstr "Bay 내 노드 사용에 대한 no_proxy 주소"
 
 msgid "The nova flavor id to use when launching the bay. Default: m1.small"
-msgstr "bay를 실행할 때 사용할 nova flavor id입니다. 기본값: m1.small"
+msgstr "Bay를 실행할 때 사용할 nova flavor id입니다. 기본값: m1.small"
 
 msgid ""
 "The nova flavor id to use when launching the master node of the bay. "
@@ -456,7 +454,7 @@ msgstr ""
 "Bay의 마스터 노드를 실행할 때 사용할 nova flavor입니다. 기본값: m1.small"
 
 msgid "The number of master nodes for the bay."
-msgstr "Bay의 마스터 노드 수입니다."
+msgstr "Bay에대한 마스터 노드 수입니다."
 
 msgid "The private Neutron network name to connect to this bay model"
 msgstr "해당 bay 모델에 연결하기 위한 사설 Neutron 네트워크 이름"
@@ -591,4 +589,4 @@ msgstr "바이트"
 
 msgid "{$ ctrl.bay.bay_create_timeout $} minute"
 msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
-msgstr[0] "{$ ctrl.bay.bay_create_timeout $} minute"
+msgstr[0] "{$ ctrl.bay.bay_create_timeout $} 분"
