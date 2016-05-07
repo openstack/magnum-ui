@@ -431,7 +431,7 @@ function run_makemessages {
 
   cd ..
   if [ $check_only -eq 1 ]; then
-    git checkout -- magnum_ui/locale/django*.pot
+    rm magnum_ui/locale/django*.pot
   fi
 
   exit $(($MAGNUM_PY_RESULT || $MAGNUM_JS_RESULT))
