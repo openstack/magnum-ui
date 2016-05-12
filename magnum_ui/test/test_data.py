@@ -19,8 +19,6 @@ def data(TEST):
     # Test Data Containers
     TEST.baymodels = utils.TestDataContainer()
     TEST.bays = utils.TestDataContainer()
-    # 'magnum_containers' to avoid Swift naming confusion
-    TEST.magnum_containers = utils.TestDataContainer()
 
     # Bay Models
     baymodel_dict_1 = {"uuid": 1,
@@ -53,13 +51,3 @@ def data(TEST):
                   "timeout": 0}
 
     TEST.bays.add(bay_dict_1)
-
-    # Containers
-    container_dict_1 = {"uuid": 1,
-                        "name": "myapartmentsmellsofrichmahogany",
-                        "image": "",
-                        "bay": bay_dict_1["uuid"],
-                        "command": "",
-                        "memory": ""}
-
-    TEST.magnum_containers.add(container_dict_1)

@@ -103,46 +103,6 @@ class MagnumRestTestCase(test.TestCase):
             request,
             u'bay_id')
 
-    # Containers
-    @mock.patch.object(magnum, 'magnum')
-    def test_container_get(self, client):
-        request = self.mock_rest_request()
-        client.container_list.return_value = \
-            mock_resource(TEST.magnum_containers.list())
-        response = magnum.Containers().get(request)
-
-        self.assertStatusCode(response, 200)
-        self.assertItemsCollectionEqual(response,
-                                        TEST.magnum_containers.list())
-        client.container_list.assert_called_once_with(request)
-
-    @mock.patch.object(magnum, 'magnum')
-    def test_container_create(self, client):
-        test_conts = mock_resource(TEST.magnum_containers.list())
-        test_cont = test_conts[0]
-        test_body = json.dumps(test_cont.to_dict())
-        request = self.mock_rest_request(body=test_body)
-        client.container_create.return_value = test_cont
-        response = magnum.Containers().post(request)
-
-        self.assertStatusCode(response, 201)
-        self.assertEqual(response['location'],
-                         '/api/containers/container/%s' % test_cont.uuid)
-        client.container_create.assert_called_once_with(request,
-                                                        **test_cont.to_dict())
-
-    @mock.patch.object(magnum, 'magnum')
-    def test_container_delete(self, client):
-        test_container = TEST.magnum_containers.first()
-        request = self.mock_rest_request(
-            body='{"container_id":' + str(test_container['uuid']) + '}')
-        response = magnum.Containers().delete(request)
-
-        self.assertStatusCode(response, 204)
-        client.container_delete.assert_called_once_with(
-            request,
-            u'container_id')
-
 
 def mock_resource(resource):
     """Utility function to make mocking more DRY"""

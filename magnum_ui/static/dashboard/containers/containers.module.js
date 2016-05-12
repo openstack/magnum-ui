@@ -28,7 +28,6 @@
     .module('horizon.dashboard.containers', [
       'horizon.dashboard.containers.bays',
       'horizon.dashboard.containers.baymodels',
-      'horizon.dashboard.containers.containers',
       'ngRoute'
     ])
     .config(config)
@@ -41,12 +40,6 @@
     $provide.constant('horizon.dashboard.containers.basePath', path);
 
     $routeProvider
-    .when('/project/bays/containers', {
-      templateUrl: path + 'containers/table/table.html'
-    })
-    .when('/project/bays/containers/:containerId', {
-      templateUrl: path + 'containers/detail/detail.html'
-    })
     .when('/project/baymodels', {
       templateUrl: path + 'baymodels/table/table.html'
     })
