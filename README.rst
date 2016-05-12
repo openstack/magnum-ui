@@ -51,7 +51,6 @@ And enable it in Horizon::
     cp ../magnum-ui/enabled/_50_project_containers_panelgroup.py openstack_dashboard/local/enabled
     cp ../magnum-ui/enabled/_51_project_containers_bays_panel.py openstack_dashboard/local/enabled
     cp ../magnum-ui/enabled/_52_project_containers_baymodels_panel.py openstack_dashboard/local/enabled
-    cp ../magnum-ui/enabled/_53_project_containers_containers_panel.py openstack_dashboard/local/enabled
 
 To run horizon with the newly enabled Magnum UI plugin run::
 

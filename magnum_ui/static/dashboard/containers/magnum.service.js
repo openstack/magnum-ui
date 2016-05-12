@@ -38,13 +38,6 @@
       getBaymodels: getBaymodels,
       deleteBaymodel: deleteBaymodel,
       deleteBaymodels: deleteBaymodels,
-      createContainer: createContainer,
-      getContainer: getContainer,
-      getContainers: getContainers,
-      deleteContainer: deleteContainer,
-      deleteContainers: deleteContainers,
-      memoryUnits: memoryUnits,
-      convertMemorySize: convertMemorySize,
     };
 
     return service;
@@ -130,76 +123,5 @@
           toastService.add('error', gettext('Unable to delete the Baymodels.'));
         })
     }
-
-    ////////////////
-    // Containers //
-    ////////////////
-
-    function createContainer(params) {
-      return apiService.post('/api/containers/containers/', params)
-        .error(function() {
-          toastService.add('error', gettext('Unable to create Container.'));
-        });
-    }
-
-    function getContainer(id) {
-      return apiService.get('/api/containers/containers/' + id)
-        .success(function(data, status, headers, config) {
-          convertMemorySize(data);
-          return data;
-        })
-        .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Container.'));
-        });
-    }
-
-    function getContainers() {
-      return apiService.get('/api/containers/containers/')
-        .success(function(data, status, headers, config) {
-          angular.forEach(data.items, function(container, idx){
-            convertMemorySize(container);
-          });
-          return data;
-        })
-        .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Containers.'));
-        });
-    }
-
-    function deleteContainer(id, suppressError) {
-      var promise = apiService.delete('/api/containers/containers/', [id]);
-      return suppressError ? promise : promise.error(function() {
-        var msg = gettext('Unable to delete the Container with id: %(id)s');
-        toastService.add('error', interpolate(msg, { id: id }, true));
-      });
-    }
-
-    // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
-    function deleteContainers(ids) {
-      return apiService.delete('/api/containers/containers/', ids)
-        .error(function() {
-          toastService.add('error', gettext('Unable to delete the Containers.'));
-        });
-    }
   }
-
-  var memoryUnits = { "b": gettext("bytes"),
-      "k": gettext("KB"),
-      "m": gettext("MB"),
-      "g": gettext("GB")};
-
-  function convertMemorySize(container){
-    container.memorysize = "";
-    container.memoryunit = "";
-    if(container.memory !== null && container.memory !== ""){
-      // separate number and unit.
-      var regex = /(\d+)([bkmg]?)/;
-      var match = regex.exec(container.memory);
-      container.memorysize = match[1];
-      if(match[2]){
-        container.memoryunit = memoryUnits[match[2]];
-      }
-    }
-  };
-
 }());

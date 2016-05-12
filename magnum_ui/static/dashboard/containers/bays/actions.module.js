@@ -30,7 +30,6 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.containers.bays.create.service',
     'horizon.dashboard.containers.bays.delete.service',
-    'horizon.dashboard.containers.containers.create.service',
     'horizon.dashboard.containers.bays.resourceType',
   ];
 
@@ -39,18 +38,10 @@
     gettext,
     createBayService,
     deleteBayService,
-    createContainerService,
     resourceType)
   {
     var bayResourceType = registry.getResourceType(resourceType);
     bayResourceType.itemActions
-      .append({
-        id: 'createContainerAction',
-        service: createContainerService,
-        template: {
-          text: gettext('Create Container')
-        }
-      })
       .append({
         id: 'deleteBayAction',
         service: deleteBayService,

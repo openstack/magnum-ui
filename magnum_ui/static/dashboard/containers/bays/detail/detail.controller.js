@@ -27,13 +27,12 @@
     '$routeParams',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.dashboard.containers.bays.events',
-    'horizon.dashboard.containers.containers.events',
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.dashboard.containers.bays.resourceType'
   ];
 
   function BayDetailController(
-    $scope, $window, $location, $routeParams, magnum, events, containerEvents, registry, bayResourceType
+    $scope, $window, $location, $routeParams, magnum, events, registry, bayResourceType
   ) {
     var ctrl = this;
     ctrl.bay = {};
@@ -43,7 +42,6 @@
     var bayId = $routeParams.bayId;
 
     var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
-    var createContainerWatcher = $scope.$on(containerEvents.CREATE_SUCCESS, onCreateContainerSuccess);
 
     $scope.$on('$destroy', destroy);
 
@@ -70,14 +68,8 @@
       $location.path("/project/bays");
     }
 
-    function onCreateContainerSuccess(e, createdItem) {
-      e.stopPropagation();
-      $location.path("/project/bays/containers");
-    }
-
     function destroy() {
       deleteWatcher();
-      createContainerWatcher();
     }
   }
 })();
