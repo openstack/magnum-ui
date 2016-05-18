@@ -1,7 +1,7 @@
 @import "baymodels/baymodels";
 @import "bays/bays";
 
-.table > thead > .action-row > th > actions {
+.batch-action {
   float: right;
   action-list {
     padding-left: 0.3em;
