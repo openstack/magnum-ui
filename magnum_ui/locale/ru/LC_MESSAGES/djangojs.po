@@ -1,9 +1,9 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev3\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev9\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-05-07 20:54+0000\n"
+"POT-Creation-Date: 2016-05-23 00:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,21 +34,12 @@ msgstr ""
 "Произвольные метки в форме пар ключь=значение связанные с моделью отсека. "
 "Могут быть использованы несколько раз."
 
-msgid "Bay"
-msgstr "Отсек"
-
 #, python-format
 msgid "Bay %s was successfully created."
 msgstr "Отсек %s создан успешно."
 
 msgid "Bay Create Timeout"
 msgstr "Таймаут создания отсека"
-
-msgid "Bay Detail"
-msgstr "Подробности отсека"
-
-msgid "Bay ID"
-msgstr "ID отсека"
 
 msgid "Bay Name"
 msgstr "Имя отсека"
@@ -63,9 +54,6 @@ msgstr "Модель отсека %s успешно создана."
 msgid "Baymodel Detail"
 msgstr "Сведения модели отсека"
 
-msgid "Baymodel ID"
-msgstr "ID модели отсека"
-
 msgid "Baymodel Name"
 msgstr "Имя модели отсека"
 
@@ -77,9 +65,6 @@ msgstr "Отсеки"
 
 msgid "COE"
 msgstr "COE"
-
-msgid "Choose a Bay"
-msgstr "Выбрать отсек"
 
 msgid "Choose a Baymodel"
 msgstr "Выбрать модель отсека"
@@ -114,9 +99,6 @@ msgstr "Дистрибутив кластера"
 msgid "Cluster Type"
 msgstr "Тип кластера"
 
-msgid "Command"
-msgstr "Команда"
-
 msgid "Confirm Delete Bay"
 msgid_plural "Confirm Delete Bays"
 msgstr[0] "Подтвердите удаление отсека"
@@ -129,24 +111,8 @@ msgstr[0] "Подтвердите удаление модели отсека"
 msgstr[1] "Подтвердите удаление моделей отсека"
 msgstr[2] "Подтвердите удаление моделей отсека"
 
-msgid "Confirm Delete Container"
-msgid_plural "Confirm Delete Containers"
-msgstr[0] "Подтвердить удаление контейнера"
-msgstr[1] "Подтвердить удаление контейнеров"
-msgstr[2] "Подтвердить удаление контейнеров"
-
-#, python-format
-msgid "Container %s was successfully created."
-msgstr "Контейнер %s успешно создан."
-
-msgid "Container Name"
-msgstr "Имя контейнера"
-
 msgid "Container Orchestration Engine"
 msgstr "Движок оркестрации контейнеров"
-
-msgid "Containers"
-msgstr "Контейнеры"
 
 msgid "Create"
 msgstr "Создать"
@@ -156,9 +122,6 @@ msgstr "Создать отсек"
 
 msgid "Create Baymodel"
 msgstr "Создать модель отсека"
-
-msgid "Create Container"
-msgstr "Создать контейнер"
 
 msgid "Created"
 msgstr "Создано"
@@ -184,15 +147,6 @@ msgstr "Удалить модели отсека"
 msgid "Delete Bays"
 msgstr "Удалить отсеки"
 
-msgid "Delete Container"
-msgid_plural "Delete Containers"
-msgstr[0] "Удалить контейнер"
-msgstr[1] "Удалить контейнеры"
-msgstr[2] "Удалить контейнеры"
-
-msgid "Delete Containers"
-msgstr "Удалить контейнеры"
-
 #, python-format
 msgid "Deleted Bay: %s."
 msgid_plural "Deleted Bays: %s."
@@ -206,13 +160,6 @@ msgid_plural "Deleted Baymodels: %s."
 msgstr[0] "Удалена модель отсека: %s."
 msgstr[1] "Удалены модели отсека: %s."
 msgstr[2] "Удалены модели отсека: %s."
-
-#, python-format
-msgid "Deleted Container: %s."
-msgid_plural "Deleted Containers: %s."
-msgstr[0] "Удаленный контейнер: %s."
-msgstr[1] "Удаленные контейнеры: %s."
-msgstr[2] "Удаленные контейнеры: %s."
 
 msgid "Disable TLS"
 msgstr "Выключить TLS."
@@ -256,9 +203,6 @@ msgstr "Тип инстанса"
 msgid "Flavor ID"
 msgstr "ID типа инстанса"
 
-msgid "GB"
-msgstr "ГБ"
-
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
 
@@ -280,9 +224,6 @@ msgstr "Бесконечно"
 msgid "Info"
 msgstr "Информация"
 
-msgid "KB"
-msgstr "КБ"
-
 msgid "KEY1=VALUE1,KEY2=VALUE2..."
 msgstr "КЛЮЧЬ1=ЗНАЧЕНИЕ1,КЛЮЧЬ2=ЗНАЧЕНИЕ2..."
 
@@ -298,9 +239,6 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Метки"
 
-msgid "MB"
-msgstr "МБ"
-
 msgid "Make baymodel public. Default: False"
 msgstr "Сделать модель отсека общедоступной. По умолчанию: Нет"
 
@@ -315,15 +253,6 @@ msgstr "Тип инстанса мастера"
 
 msgid "Master Flavor ID"
 msgstr "ID типа инстанса Master"
-
-msgid "Memory"
-msgstr "Память"
-
-msgid "Memory Size"
-msgstr "Размер памяти"
-
-msgid "Memory Unit"
-msgstr "Единица памяти"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -342,12 +271,6 @@ msgstr "Имя отсека для создания."
 
 msgid "Name of the baymodel to create."
 msgstr "Имя модели отсека для создания."
-
-msgid "Name of the container image."
-msgstr "Имя образа контейнера."
-
-msgid "Name of the container to create."
-msgstr "Имя контейнера для создания."
 
 msgid "Network"
 msgstr "Сеть"
@@ -385,17 +308,11 @@ msgstr "Реестр разрешен"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Send command to the contaier in a line."
-msgstr "Отправить команду в контейнер."
-
 msgid "Server Type"
 msgstr "Тип сервера"
 
 msgid "Size"
 msgstr "Размер"
-
-msgid "Spec"
-msgstr "Спек"
 
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Укажите url поиска для поиска узлов."
@@ -405,9 +322,6 @@ msgstr "Укажите имя отсека и выберете модель от
 
 msgid "Specify conditions for bay creation."
 msgstr "Укажите условия создания отсека."
-
-msgid "Specify container name and choose bay."
-msgstr "Укажите имя контейнера и выберете отсек."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Укажите движок оркестрации контейнеров."
@@ -420,9 +334,6 @@ msgstr "Укажите количество мастер узлов для от�
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Укажите размер диска Docker в ГБ."
-
-msgid "Specify the specs for the container."
-msgstr "Укажите спек для контейнера."
 
 msgid "Stack ID"
 msgstr "ID стека"
@@ -438,9 +349,6 @@ msgstr "Сервер имен DNS для использования в этом 
 
 msgid "The bay node count."
 msgstr "Количество узлов отсека."
-
-msgid "The container memory size."
-msgstr "Размер памяти контейнера."
 
 msgid "The external Neutron network ID to connect to this bay model"
 msgstr "ID внешней сети Neutron для подключения к этой модели отсеков"
@@ -502,17 +410,11 @@ msgstr ""
 msgid "Timeout"
 msgstr "Таймаут"
 
-msgid "UUID"
-msgstr "UUID"
-
 msgid "Unable to create Bay."
 msgstr "Не удалось создать отсек"
 
 msgid "Unable to create Baymodel"
 msgstr "Не удалось создать модель отсека"
-
-msgid "Unable to create Container."
-msgstr "Не удалось создать контейнер."
 
 #, python-format
 msgid "Unable to delete Bay: %s."
@@ -529,13 +431,6 @@ msgstr[1] "Не удалось удалить модели отсека: %s."
 msgstr[2] "Не удалось удалить модели отсека: %s."
 
 #, python-format
-msgid "Unable to delete Container: %s."
-msgid_plural "Unable to delete Containers: %s."
-msgstr[0] "Не удалось удалить контейнер: %s."
-msgstr[1] "Не удалось удалить контейнеры: %s."
-msgstr[2] "Не удалось удалить контейнеры: %s."
-
-#, python-format
 msgid "Unable to delete the Bay with id: %(id)s"
 msgstr "Не удаётся удалить отсек с id: %(id)s"
 
@@ -549,13 +444,6 @@ msgstr "Не удалось удалить модели отсека."
 msgid "Unable to delete the Bays."
 msgstr "Не удалось удалить отсеки."
 
-#, python-format
-msgid "Unable to delete the Container with id: %(id)s"
-msgstr "Невозможно удалить контейнер с  id: %(id)s"
-
-msgid "Unable to delete the Containers."
-msgstr "Не удалось удалить контейнеры."
-
 msgid "Unable to retrieve the Bay."
 msgstr "Не удалось получить отсек."
 
@@ -567,12 +455,6 @@ msgstr "Не удалось получить модели отсека."
 
 msgid "Unable to retrieve the Bays."
 msgstr "Не удалось получить отсеки."
-
-msgid "Unable to retrieve the Container."
-msgstr "Не удалось получить контейнер."
-
-msgid "Unable to retrieve the Containers."
-msgstr "Не удалось получить контейнеры."
 
 msgid "Updated"
 msgstr "Обновлено"
@@ -613,26 +495,6 @@ msgstr[1] ""
 msgstr[2] ""
 "Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление моделей отсека "
 "необратимо."
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted container "
-"is not recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted containers "
-"are not recoverable."
-msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнера "
-"необратимо."
-msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнеров "
-"необратимо."
-msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление контейнеров "
-"необратимо."
-
-msgid "bytes"
-msgstr "байты"
 
 msgid "{$ ctrl.bay.bay_create_timeout $} minute"
 msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"

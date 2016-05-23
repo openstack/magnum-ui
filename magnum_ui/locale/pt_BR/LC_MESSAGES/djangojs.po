@@ -1,9 +1,9 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev3\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev9\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-05-07 20:54+0000\n"
+"POT-Creation-Date: 2016-05-23 00:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,21 +33,12 @@ msgstr ""
 "Rótulos arbitrários no formato de pares key=value para associar ao modelo de "
 "compartimento. Pode ser utilizado múltiplas vezes."
 
-msgid "Bay"
-msgstr "Compartimento"
-
 #, python-format
 msgid "Bay %s was successfully created."
 msgstr "Compartimento %s criado com sucesso."
 
 msgid "Bay Create Timeout"
 msgstr "Tempo limite de Criação do Compartimento"
-
-msgid "Bay Detail"
-msgstr "Detalhe do Compartimento"
-
-msgid "Bay ID"
-msgstr "ID do Compartimento"
 
 msgid "Bay Name"
 msgstr "Nome do Compartimento"
@@ -62,9 +53,6 @@ msgstr "O Modelo de Compartimento %s foi criado com sucesso."
 msgid "Baymodel Detail"
 msgstr "Detalhe do Modelo de Compartimento"
 
-msgid "Baymodel ID"
-msgstr "ID do Modelo de Compartimento"
-
 msgid "Baymodel Name"
 msgstr "Nome do Modelo de Compartimento"
 
@@ -76,9 +64,6 @@ msgstr "Compartimentos"
 
 msgid "COE"
 msgstr "MOC"
-
-msgid "Choose a Bay"
-msgstr "Escolha um Compartimento"
 
 msgid "Choose a Baymodel"
 msgstr "Escolha um Modelo de Compartimento"
@@ -113,9 +98,6 @@ msgstr "Distribuição do Cluster"
 msgid "Cluster Type"
 msgstr "Tipo de Cluster"
 
-msgid "Command"
-msgstr "Comando"
-
 msgid "Confirm Delete Bay"
 msgid_plural "Confirm Delete Bays"
 msgstr[0] "Confirmar Exclusão de Compartimento"
@@ -126,23 +108,8 @@ msgid_plural "Confirm Delete Baymodels"
 msgstr[0] "Confirma exclusão do Modelo de Compartimento"
 msgstr[1] "Confirma exclusão dos Modelos de Compartimentos"
 
-msgid "Confirm Delete Container"
-msgid_plural "Confirm Delete Containers"
-msgstr[0] "Confirme a exclusão do Container"
-msgstr[1] "Confirme a exclusão dos Containers"
-
-#, python-format
-msgid "Container %s was successfully created."
-msgstr "Container %s foi criado com sucesso."
-
-msgid "Container Name"
-msgstr "Nome do Container"
-
 msgid "Container Orchestration Engine"
 msgstr "Mecanismo de Orquestração de Contêiner"
-
-msgid "Containers"
-msgstr "Contêiners"
 
 msgid "Create"
 msgstr "Criar"
@@ -152,9 +119,6 @@ msgstr "Criar Compartimento"
 
 msgid "Create Baymodel"
 msgstr "Criar Modelo de Compartimento"
-
-msgid "Create Container"
-msgstr "Criar Container"
 
 msgid "Created"
 msgstr "Criado"
@@ -178,14 +142,6 @@ msgstr "Excluir Modelos de Compartimento"
 msgid "Delete Bays"
 msgstr "Excluir Compartimentos"
 
-msgid "Delete Container"
-msgid_plural "Delete Containers"
-msgstr[0] "Deletar Container"
-msgstr[1] "Deletar Containers"
-
-msgid "Delete Containers"
-msgstr "Deletar Container"
-
 #, python-format
 msgid "Deleted Bay: %s."
 msgid_plural "Deleted Bays: %s."
@@ -197,12 +153,6 @@ msgid "Deleted Baymodel: %s."
 msgid_plural "Deleted Baymodels: %s."
 msgstr[0] "Modelo de Compartimento Excluído: %s."
 msgstr[1] "Modelos de Compartimentos Excluídos: %s."
-
-#, python-format
-msgid "Deleted Container: %s."
-msgid_plural "Deleted Containers: %s."
-msgstr[0] "Container deletado: %s."
-msgstr[1] "Containers deletados: %s."
 
 msgid "Disable TLS"
 msgstr "Desativar TLS"
@@ -246,9 +196,6 @@ msgstr "Flavor"
 msgid "Flavor ID"
 msgstr "ID do Flavor"
 
-msgid "GB"
-msgstr "GB"
-
 msgid "HTTP Proxy"
 msgstr "Proxy HTTP"
 
@@ -270,9 +217,6 @@ msgstr "Infinito"
 msgid "Info"
 msgstr "Informação"
 
-msgid "KB"
-msgstr "KB"
-
 msgid "KEY1=VALUE1,KEY2=VALUE2..."
 msgstr "CHAVE1=VALOR1,CHAVE2=VALOR2..."
 
@@ -288,9 +232,6 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Rótulos"
 
-msgid "MB"
-msgstr "MB"
-
 msgid "Make baymodel public. Default: False"
 msgstr "Tornar o modelo de compartimento público. Padrão: Falso"
 
@@ -305,15 +246,6 @@ msgstr "Flavor Principal"
 
 msgid "Master Flavor ID"
 msgstr "ID do Sabor Principal"
-
-msgid "Memory"
-msgstr "Memória"
-
-msgid "Memory Size"
-msgstr "Tamanho da Memória"
-
-msgid "Memory Unit"
-msgstr "Unidade de Memória"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -332,12 +264,6 @@ msgstr "Nome do compartimento a ser criado."
 
 msgid "Name of the baymodel to create."
 msgstr "Nome do modelo de compartimento a ser criado."
-
-msgid "Name of the container image."
-msgstr "Nome da imagem do container."
-
-msgid "Name of the container to create."
-msgstr "Nome do Container a ser criado."
 
 msgid "Network"
 msgstr "Rede"
@@ -375,17 +301,11 @@ msgstr "Registro Habilitado"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Send command to the contaier in a line."
-msgstr "Envia comandos para o container em uma linha."
-
 msgid "Server Type"
 msgstr "Tipo de Servidor"
 
 msgid "Size"
 msgstr "Tamanho"
-
-msgid "Spec"
-msgstr "Especificação"
 
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Especifica uma URL de descoberta customizada para a descoberta do nó. "
@@ -396,9 +316,6 @@ msgstr ""
 
 msgid "Specify conditions for bay creation."
 msgstr "Especifique as condições para criação do compartimento."
-
-msgid "Specify container name and choose bay."
-msgstr "Especifique nome do container e escolha compartimento."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Especifique o Mecanismo de Orquestração de Container"
@@ -416,9 +333,6 @@ msgstr ""
 msgid "Specify the size in GB for the docker volume"
 msgstr "Especifique o tamanho em GB que o volume do docker usará."
 
-msgid "Specify the specs for the container."
-msgstr "Defina as especificações para o container."
-
 msgid "Stack ID"
 msgstr "ID Pilha"
 
@@ -434,9 +348,6 @@ msgstr ""
 
 msgid "The bay node count."
 msgstr "A contagem de nós do compartimento."
-
-msgid "The container memory size."
-msgstr "O tamanho de memória do contêiner."
 
 msgid "The external Neutron network ID to connect to this bay model"
 msgstr ""
@@ -501,17 +412,11 @@ msgstr "Isto deveria ser chamado de fixed-network-cidr. Padrão: 10.0.0.0/24"
 msgid "Timeout"
 msgstr "Tempo limite"
 
-msgid "UUID"
-msgstr "UUID"
-
 msgid "Unable to create Bay."
 msgstr "Não é possível criar Compartimento."
 
 msgid "Unable to create Baymodel"
 msgstr "Não foi possível criar o Modelo de Compartimento"
-
-msgid "Unable to create Container."
-msgstr "Não foi possível criar o Container."
 
 #, python-format
 msgid "Unable to delete Bay: %s."
@@ -524,12 +429,6 @@ msgid "Unable to delete Baymodel: %s."
 msgid_plural "Unable to delete Baymodels: %s."
 msgstr[0] "Não é possível excluir o Modelo de Compartimento: %s."
 msgstr[1] "Não é possível excluir os Modelos de Compartimentos: %s."
-
-#, python-format
-msgid "Unable to delete Container: %s."
-msgid_plural "Unable to delete Containers: %s."
-msgstr[0] "Não foi possível excluir Contêiner: %s."
-msgstr[1] "Não foi possível excluir Contêiners: %s."
 
 #, python-format
 msgid "Unable to delete the Bay with id: %(id)s"
@@ -545,13 +444,6 @@ msgstr "Não foi possível remover os Modelos de Compartimentos."
 msgid "Unable to delete the Bays."
 msgstr "Não é possível remover os Compartimentos."
 
-#, python-format
-msgid "Unable to delete the Container with id: %(id)s"
-msgstr "Não foi possível deletar o Container de id: %(id)s"
-
-msgid "Unable to delete the Containers."
-msgstr "Não foi possível deletar os Containers."
-
 msgid "Unable to retrieve the Bay."
 msgstr "Não é possível recuperar o Compartimento."
 
@@ -563,12 +455,6 @@ msgstr "Não foi possível obter os Modelos de Compartimentos."
 
 msgid "Unable to retrieve the Bays."
 msgstr "Não é possível recuperar os Compartimentos."
-
-msgid "Unable to retrieve the Container."
-msgstr "Não foi possível recuperar o Container."
-
-msgid "Unable to retrieve the Containers."
-msgstr "Não foi possível recuperar os Containers."
 
 msgid "Updated"
 msgstr "Atualizado"
@@ -599,19 +485,6 @@ msgstr[0] ""
 msgstr[1] ""
 "Você selecionou \"%s\". Modelos de Compartimento excluídos não  são "
 "recuperáveis."
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted container "
-"is not recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted containers "
-"are not recoverable."
-msgstr[0] "Você selecionou \"%s\". Container excluído não é recuperável."
-msgstr[1] "Você selecionou \"%s\". Containers excluídos não  são recuperáveis."
-
-msgid "bytes"
-msgstr "bytes"
 
 msgid "{$ ctrl.bay.bay_create_timeout $} minute"
 msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
