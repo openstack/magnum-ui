@@ -16,7 +16,7 @@ from openstack_dashboard.test.test_data import utils
 
 
 def data(TEST):
-    # Test Data Containers
+    # Test Data Container in Horizon
     TEST.baymodels = utils.TestDataContainer()
     TEST.bays = utils.TestDataContainer()
 

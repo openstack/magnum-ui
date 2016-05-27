@@ -48,7 +48,7 @@ class MagnumRestTestCase(test.TestCase):
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
-                         '/api/containers/baymodel/%s' % test_bmodel.uuid)
+                         '/api/container-infra/baymodel/%s' % test_bmodel.uuid)
         client.baymodel_create.assert_called_once_with(request,
                                                        **test_bmodel.to_dict())
 
@@ -87,7 +87,7 @@ class MagnumRestTestCase(test.TestCase):
 
         self.assertStatusCode(response, 201)
         self.assertEqual(response['location'],
-                         '/api/containers/bay/%s' % test_bay.uuid)
+                         '/api/container-infra/bay/%s' % test_bay.uuid)
         client.bay_create.assert_called_once_with(request,
                                                   **test_bay.to_dict())
 
