@@ -15,7 +15,7 @@ function install_magnum_ui {
 }
 
 function configure_magnum_ui {
-    cp -a ${MAGNUM_UI_DIR}/enabled/* ${DEST}/horizon/openstack_dashboard/local/enabled/
+    cp -a ${MAGNUM_UI_DIR}/magnum_ui/enabled/* ${DEST}/horizon/openstack_dashboard/local/enabled/
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${MAGNUM_UI_DIR}/magnum_ui/locale ]; then
