@@ -39,9 +39,10 @@ BAY_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count', 'discovery_url',
 def magnumclient(request):
     magnum_url = ""
     try:
-        magnum_url = base.url_for(request, 'container')
+        magnum_url = base.url_for(request, 'container-infra')
     except exceptions.ServiceCatalogException:
-        LOG.debug('No Containers service is configured.')
+        LOG.debug('No Container Infrastructure Management service is '
+                  'configured.')
         return None
 
     LOG.debug('magnumclient connection created using the token "%s" and url'
