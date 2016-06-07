@@ -12,11 +12,12 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from horizon import views
+from django.views import generic
 
+# DO NOT REMOVE
+# This needs for register url of API.
 from magnum_ui.api.rest import magnum  # noqa
 
 
-class IndexView(views.APIView):
-    # A very simple class-based view...
-    template_name = 'bays/index.html'
+class IndexView(generic.TemplateView):
+    template_name = 'angular.html'

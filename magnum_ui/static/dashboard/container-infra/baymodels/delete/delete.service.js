@@ -20,11 +20,16 @@
     .factory('horizon.dashboard.container-infra.baymodels.delete.service', deleteService);
 
   deleteService.$inject = [
+    '$location',
+    '$q',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.policy',
-    'horizon.framework.widgets.modal.deleteModalService',
+    'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
+    'horizon.framework.widgets.modal.deleteModalService',
+    'horizon.framework.widgets.toast.service',
+    'horizon.dashboard.container-infra.baymodels.resourceType',
     'horizon.dashboard.container-infra.baymodels.events'
   ];
 
@@ -38,7 +43,7 @@
    * On cancel, do nothing.
    */
   function deleteService(
-    magnum, policy, deleteModalService, gettext, $qExtensions, events
+    $location, $q, magnum, policy, actionResult, gettext, $qExtensions, deleteModal, toast, resourceType, events
   ) {
     var scope;
     var context = {
@@ -46,12 +51,12 @@
       deleteEntity: deleteEntity,
       successEvent: events.DELETE_SUCCESS
     };
-
     var service = {
       initScope: initScope,
       allowed: allowed,
       perform: perform
     };
+    var notAllowedMessage = gettext("You are not allowed to delete baymodels: %s");
 
     return service;
 
@@ -69,15 +74,9 @@
 
     // delete selected resource objects
     function perform(selected) {
-      if(!selected.hasOwnProperty('id')){
-        // batch (multi)
-        context.labels = labelize(selected.length);
-        $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
-      }else{
-        // row (single)
-        context.labels = labelize(1);
-        deleteModalService.open(scope, [selected], context);
-      }
+      var selected = angular.isArray(selected) ? selected : [selected];
+      context.labels = labelize(selected.length);
+      return $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
     }
 
     function labelize(count){
@@ -104,12 +103,40 @@
 
     // for batch delete
     function afterCheck(result){
+      var outcome = $q.reject();  // Reject the promise by default
       if (result.fail.length > 0) {
         toast.add('error', getMessage(notAllowedMessage, result.fail));
+        outcome = $q.reject(result.fail);
       }
       if (result.pass.length > 0) {
-        deleteModalService.open(scope, result.pass.map(getEntity), context);
+        outcome = deleteModal.open(scope, result.pass.map(getEntity), context).then(createResult);
       }
+      return outcome;
+    }
+
+    function createResult(deleteModalResult) {
+      // To make the result of this action generically useful, reformat the return
+      // from the deleteModal into a standard form
+      var result = actionResult.getActionResult();
+      deleteModalResult.pass.forEach(function markDeleted(item) {
+        result.deleted(resourceType, getEntity(item).id);
+      });
+      deleteModalResult.fail.forEach(function markFailed(item) {
+        result.failed(resourceType, getEntity(item).id);
+      });
+      if(result.result.failed.length == 0 && result.result.deleted.length > 0){
+        $location.path("/project/baymodels");
+      }else{
+        return result.result;
+      }
+    }
+
+    function getMessage(message, entities) {
+      return interpolate(message, [entities.map(getName).join(", ")]);
+    }
+
+    function getName(result) {
+      return getEntity(result).name;
     }
 
     // for batch delete

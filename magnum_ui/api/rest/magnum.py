@@ -38,7 +38,8 @@ class Baymodel(generic.View):
     @rest_utils.ajax()
     def get(self, request, baymodel_id):
         """Get a specific baymodel"""
-        return magnum.baymodel_show(request, baymodel_id).to_dict()
+        return change_to_id(magnum.baymodel_show(request, baymodel_id)
+                            .to_dict())
 
 
 @urls.register
@@ -85,7 +86,7 @@ class Bay(generic.View):
     @rest_utils.ajax()
     def get(self, request, bay_id):
         """Get a specific bay"""
-        return magnum.bay_show(request, bay_id).to_dict()
+        return change_to_id(magnum.bay_show(request, bay_id).to_dict())
 
 
 @urls.register

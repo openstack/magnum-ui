@@ -27,10 +27,9 @@
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function bayWorkflow(basePath, dashboardWorkflow, gettext) {
-    return dashboardWorkflow({
+  function bayWorkflow(basePath, workflowService, gettext) {
+    return workflowService({
       title: gettext('Create Bay'),
-
       steps: [
         {
           title: gettext('Info'),

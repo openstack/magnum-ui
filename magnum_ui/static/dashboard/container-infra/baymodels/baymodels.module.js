@@ -27,9 +27,15 @@
    * panel
    */
   angular
-    .module('horizon.dashboard.container-infra.baymodels', ['horizon.dashboard.container-infra.baymodels.actions'])
+    .module('horizon.dashboard.container-infra.baymodels', [
+      'ngRoute',
+      'horizon.dashboard.container-infra.baymodels.actions',
+      'horizon.dashboard.container-infra.baymodels.details'
+    ])
     .constant('horizon.dashboard.container-infra.baymodels.events', events())
-    .constant('horizon.dashboard.container-infra.baymodels.resourceType', 'OS::Magnum::Baymodel');
+    .constant('horizon.dashboard.container-infra.baymodels.resourceType', 'OS::Magnum::Baymodel')
+    .run(run)
+    .config(config);
 
   /**
    * @ngdoc constant
@@ -41,5 +47,116 @@
       CREATE_SUCCESS: 'horizon.dashboard.container-infra.baymodels.CREATE_SUCCESS',
       DELETE_SUCCESS: 'horizon.dashboard.container-infra.baymodels.DELETE_SUCCESS'
     };
+  }
+
+  run.$inject = [
+    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.container-infra.baymodels.basePath',
+    'horizon.dashboard.container-infra.baymodels.resourceType'
+  ];
+
+  function run(registry, magnum, basePath, resourceType) {
+    registry.getResourceType(resourceType)
+    .setNames(gettext('Baymodel'), gettext('Baymodels'))
+
+    // for detail summary view on table row 
+    .setSummaryTemplateUrl(basePath + 'details/drawer.html')
+    // for table row items and detail summary view.
+    .setProperty('name', {
+      label: gettext('Name')
+    })
+    .setProperty('id', {
+      label: gettext('ID')
+    })
+    .setProperty('coe', {
+      label: gettext('COE')
+    })
+    .setProperty('network_driver', {
+      label: gettext('Network Driver')
+    })
+    .setListFunction(listFunction)
+    .tableColumns
+    .append({
+      id: 'name',
+      priority: 1,
+      sortDefault: true,
+      filters: ['noName'],
+      urlFunction: urlFunction
+    })
+    .append({
+      id: 'id',
+      priority: 2
+    })
+    .append({
+      id: 'coe',
+      priority: 1
+    })
+    .append({
+      id: 'network_driver',
+      priority: 2
+    });
+
+    // for magic-search
+    registry.getResourceType(resourceType).filterFacets
+    .append({
+      'label': gettext('Name'),
+      'name': 'name',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('ID'),
+      'name': 'id',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('COE'),
+      'name': 'coe',
+      'singleton': true,
+      options: [
+        {label: gettext('Docker Swarm'), key: 'swarm'},
+        {label: gettext('Kubernetes'), key: 'kubernetes'},
+        {label: gettext('Mesos'), key: 'mesos'}
+      ]
+    })
+
+    function listFunction(params) {
+      return magnum.getBaymodels(params).then(modifyResponse);
+
+      function modifyResponse(response) {
+        return {data: {items: response.data.items.map(addTrackBy)}};
+
+        function addTrackBy(baymodel) {
+          baymodel.trackBy = baymodel.id;
+          return baymodel;
+        }
+      }
+    }
+
+    function urlFunction(item) {
+      return 'project/ngdetails/OS::Magnum::Baymodel/' + item.id;
+    }
+  }
+
+  config.$inject = [
+    '$provide',
+    '$windowProvider',
+    '$routeProvider'
+  ];
+
+  /**
+   * @name config
+   * @param {Object} $provide
+   * @param {Object} $windowProvider
+   * @param {Object} $routeProvider
+   * @description Routes used by this module.
+   * @returns {undefined} Returns nothing
+   */
+  function config($provide, $windowProvider, $routeProvider) {
+    var path = $windowProvider.$get().STATIC_URL + 'dashboard/container-infra/baymodels/';
+    $provide.constant('horizon.dashboard.container-infra.baymodels.basePath', path);
+    $routeProvider.when('/project/baymodels/', {
+      templateUrl: path + 'panel.html'
+    });
   }
 })();
