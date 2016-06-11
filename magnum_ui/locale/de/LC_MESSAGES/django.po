@@ -1,18 +1,24 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev9\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev18\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-05-23 00:13+0000\n"
+"POT-Creation-Date: 2016-05-31 08:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-11 08:24+0000\n"
+"PO-Revision-Date: 2016-06-09 01:12+0000\n"
 "Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 3.7.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+msgid "Baymodels"
+msgstr "Bay Modelle"
+
 msgid "Bays"
 msgstr "Bays"
+
+msgid "Container Infrastructure"
+msgstr "Container Infrastruktur"
