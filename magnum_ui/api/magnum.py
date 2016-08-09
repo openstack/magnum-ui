@@ -15,6 +15,8 @@
 
 from __future__ import absolute_import
 import logging
+
+from django.conf import settings
 from magnumclient.v1 import client as magnum_client
 
 from horizon import exceptions
@@ -47,10 +49,16 @@ def magnumclient(request):
 
     LOG.debug('magnumclient connection created using the token "%s" and url'
               '"%s"' % (request.user.token.id, magnum_url))
+
+    insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
+    cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
+
     c = magnum_client.Client(username=request.user.username,
                              project_id=request.user.tenant_id,
                              input_auth_token=request.user.token.id,
-                             magnum_url=magnum_url)
+                             magnum_url=magnum_url,
+                             insecure=insecure,
+                             cacert=cacert)
     return c
 
 
