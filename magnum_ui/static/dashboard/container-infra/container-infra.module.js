@@ -32,25 +32,10 @@
     ])
     .config(config)
 
-  config.$inject = ['$provide', '$windowProvider',
-                    '$routeProvider', '$locationProvider'];
+  config.$inject = ['$provide', '$windowProvider', '$routeProvider'];
 
-  function config($provide, $windowProvider, $routeProvider, $locationProvider) {
+  function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container-infra/';
     $provide.constant('horizon.dashboard.container-infra.basePath', path);
-
-    $routeProvider
-    .when('/project/baymodels', {
-      templateUrl: path + 'baymodels/table/table.html'
-    })
-    .when('/project/baymodels/:baymodelId', {
-      templateUrl: path + 'baymodels/detail/detail.html'
-    })
-    .when('/project/bays', {
-      templateUrl: path + 'bays/table/table.html'
-    })
-    .when('/project/bays/:bayId', {
-      templateUrl: path + 'bays/detail/detail.html'
-    });
   }
 })();

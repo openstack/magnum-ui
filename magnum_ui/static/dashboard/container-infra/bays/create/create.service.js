@@ -25,18 +25,21 @@
     .factory('horizon.dashboard.container-infra.bays.create.service', createService);
 
   createService.$inject = [
-    'horizon.dashboard.container-infra.bays.bayModel',
+    '$location',
+    'horizon.app.core.openstack-service-api.policy',
+    'horizon.framework.util.actions.action-result.service',
+    'horizon.framework.util.i18n.gettext',
+    'horizon.framework.util.q.extensions',
     'horizon.framework.widgets.modal.wizard-modal.service',
     'horizon.framework.widgets.toast.service',
-    'horizon.dashboard.container-infra.bays.workflow',
+    'horizon.dashboard.container-infra.bays.bayModel',
     'horizon.dashboard.container-infra.bays.events',
-    'horizon.app.core.openstack-service-api.policy',
-    'horizon.framework.util.i18n.gettext',
-    'horizon.framework.util.q.extensions'
+    'horizon.dashboard.container-infra.bays.resourceType',
+    'horizon.dashboard.container-infra.bays.workflow'
   ];
 
   function createService(
-    model, wizardModalService, toast, createWorkflow, events, policy, gettext, $qExtensions
+    $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast, model, events, resourceType, createWorkflow
   ) {
 
     var scope;
@@ -56,7 +59,6 @@
 
     function initScope($scope) {
       scope = $scope;
-
       scope.workflow = createWorkflow;
       scope.model = model;
       scope.$on('$destroy', function() {
@@ -66,14 +68,14 @@
     function perform(selected) {
       scope.model.init();
       scope.selected = selected;
-      wizardModalService.modal({
+      return wizardModalService.modal({
         scope: scope,
         workflow: createWorkflow,
         submit: submit
-      });
+      }).result;
     }
 
-    function allowed(selected) {
+    function allowed() {
       return $qExtensions.booleanAsPromise(true);
     }
 
@@ -84,7 +86,13 @@
     function success(response) {
       response.data.id = response.data.uuid;
       toast.add('success', interpolate(message.success, [response.data.id]));
-      scope.$emit(events.CREATE_SUCCESS, response.data);
+      var result = actionResult.getActionResult()
+                   .created(resourceType, response.data.id);
+      if(result.result.failed.length == 0 && result.result.created.length > 0){
+        $location.path("/project/bays");
+      }else{
+        return result.result;
+      }
     }
   }
 })();
