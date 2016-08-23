@@ -3,27 +3,27 @@
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev27\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev35\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-07-24 23:40+0000\n"
+"POT-Creation-Date: 2016-08-23 00:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-07-30 01:39+0000\n"
+"PO-Revision-Date: 2016-08-23 02:59+0000\n"
 "Last-Translator: sunanchen <KF.sunanchen@h3c.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.7.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
+msgid "ADOPT COMPLETE"
+msgstr "调整完成"
+
 msgid "API Address"
 msgstr "API 地址"
 
 msgid "API Server Port"
 msgstr "API服务端口"
-
-msgid "Actions"
-msgstr "行为。"
 
 msgid "An arbitrary human-readable name"
 msgstr "一个任意可读的名称。"
@@ -32,6 +32,9 @@ msgid ""
 "Arbitrary labels in the form of key=value pairs to associate with a "
 "baymodel. May be used multiple times."
 msgstr "与支架模型相关联的“键=值”对形式的任意标签，可以使用多次。"
+
+msgid "Bay"
+msgstr "容器"
 
 #, python-format
 msgid "Bay %s was successfully created."
@@ -62,8 +65,20 @@ msgstr "支架模型。"
 msgid "Bays"
 msgstr "支架模型。"
 
+msgid "CHECK COMPLETE"
+msgstr "检查完成"
+
 msgid "COE"
 msgstr "COE"
+
+msgid "CREATE COMPLETE"
+msgstr "创建完成"
+
+msgid "CREATE FAILED"
+msgstr "创建失败"
+
+msgid "CREATE IN PROGRESS"
+msgstr "正在创建"
 
 msgid "Choose a Baymodel"
 msgstr "选择一个Baymodel。"
@@ -120,6 +135,15 @@ msgstr "创建Baymodel"
 
 msgid "Created"
 msgstr "已经创建的。"
+
+msgid "DELETE COMPLETE"
+msgstr "删除完成"
+
+msgid "DELETE FAILED"
+msgstr "删除失败"
+
+msgid "DELETE IN PROGRESS"
+msgstr "正在删除"
 
 msgid "DNS"
 msgstr "DNS"
@@ -286,6 +310,15 @@ msgstr "概览"
 msgid "Public"
 msgstr "公共"
 
+msgid "RESTORE COMPLETE"
+msgstr "修复完成"
+
+msgid "RESUME COMPLETE"
+msgstr "恢复完成"
+
+msgid "ROLLBACK COMPLETE"
+msgstr "回滚完成"
+
 msgid "Record Properties"
 msgstr "记录属性"
 
@@ -294,6 +327,9 @@ msgstr "启用Registry"
 
 msgid "Rexray"
 msgstr "雷克斯射线"
+
+msgid "SNAPSHOT COMPLETE"
+msgstr "快照完成"
 
 msgid "Server Type"
 msgstr "服务器类型"
@@ -389,6 +425,15 @@ msgstr "这应该称为真正的固定网络CIRD，默认地址为10.0.0.0/24"
 msgid "Timeout"
 msgstr "超时"
 
+msgid "UPDATE COMPLETE"
+msgstr "更新完成"
+
+msgid "UPDATE FAILED"
+msgstr "更新失败"
+
+msgid "UPDATE IN PROGRESS"
+msgstr "正在更新"
+
 msgid "Unable to create Bay."
 msgstr "无法创建Bay。"
 
@@ -436,6 +481,14 @@ msgstr "已经更新的"
 
 msgid "Volume Driver"
 msgstr "卷驱动"
+
+#, python-format
+msgid "You are not allowed to delete baymodels: %s"
+msgstr "你不能删除baymodels: %s"
+
+#, python-format
+msgid "You are not allowed to delete bays: %s"
+msgstr "你不被允许删除bays: %s"
 
 #, python-format
 msgid ""
