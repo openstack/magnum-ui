@@ -38,7 +38,7 @@ if is_service_enabled magnum-ui; then
 
     elif [[ "$1" == "stack" && "$2" == "post-config"  ]]; then
         # Configure after the other layer 1 and 2 services have been configured
-        echo_summary "Configurng Magnum UI"
+        echo_summary "Configuring Magnum UI"
         configure_magnum_ui
 
     elif [[ "$1" == "stack" && "$2" == "extra"  ]]; then
