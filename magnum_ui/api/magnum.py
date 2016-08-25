@@ -50,14 +50,12 @@ def magnumclient(request):
               '"%s"' % (request.user.token.id, magnum_url))
 
     insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
-    cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
 
     c = magnum_client.Client(username=request.user.username,
                              project_id=request.user.tenant_id,
                              input_auth_token=request.user.token.id,
                              magnum_url=magnum_url,
-                             insecure=insecure,
-                             cacert=cacert)
+                             insecure=insecure)
     return c
 
 
