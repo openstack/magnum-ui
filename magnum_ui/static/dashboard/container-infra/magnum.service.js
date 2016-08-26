@@ -28,99 +28,99 @@
 
   function MagnumAPI(apiService, toastService, gettext) {
     var service = {
-      createBay: createBay,
-      getBay: getBay,
-      getBays: getBays,
-      deleteBay: deleteBay,
-      deleteBays: deleteBays,
-      createBaymodel: createBaymodel,
-      getBaymodel: getBaymodel,
-      getBaymodels: getBaymodels,
-      deleteBaymodel: deleteBaymodel,
-      deleteBaymodels: deleteBaymodels,
+      createCluster: createCluster,
+      getCluster: getCluster,
+      getClusters: getClusters,
+      deleteCluster: deleteCluster,
+      deleteClusters: deleteClusters,
+      createClusterTemplate: createClusterTemplate,
+      getClusterTemplate: getClusterTemplate,
+      getClusterTemplates: getClusterTemplates,
+      deleteClusterTemplate: deleteClusterTemplate,
+      deleteClusterTemplates: deleteClusterTemplates,
     };
 
     return service;
 
     //////////
-    // Bays //
+    // Clusters //
     //////////
 
-    function createBay(params) {
-        return apiService.post('/api/container-infra/bays/', params)
+    function createCluster(params) {
+        return apiService.post('/api/container_infra/clusters/', params)
           .error(function() {
-            toastService.add('error', gettext('Unable to create Bay.'));
+            toastService.add('error', gettext('Unable to create cluster.'));
           });
       }
 
-    function getBay(id) {
-      return apiService.get('/api/container-infra/bays/' + id)
+    function getCluster(id) {
+      return apiService.get('/api/container_infra/clusters/' + id)
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Bay.'));
+          toastService.add('error', gettext('Unable to retrieve the cluster.'));
         });
     }
 
-    function getBays() {
-      return apiService.get('/api/container-infra/bays/')
+    function getClusters() {
+      return apiService.get('/api/container_infra/clusters/')
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Bays.'));
+          toastService.add('error', gettext('Unable to retrieve the clusters.'));
         });
     }
 
-    function deleteBay(id, suppressError) {
-      var promise = apiService.delete('/api/container-infra/bays/', [id]);
+    function deleteCluster(id, suppressError) {
+      var promise = apiService.delete('/api/container_infra/clusters/', [id]);
       return suppressError ? promise : promise.error(function() {
-        var msg = gettext('Unable to delete the Bay with id: %(id)s');
+        var msg = gettext('Unable to delete the cluster with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
 
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
-    function deleteBays(ids) {
-      return apiService.delete('/api/container-infra/bays/', ids)
+    function deleteClusters(ids) {
+      return apiService.delete('/api/container_infra/clusters/', ids)
         .error(function() {
-          toastService.add('error', gettext('Unable to delete the Bays.'));
+          toastService.add('error', gettext('Unable to delete the clusters.'));
         });
     }
 
     ///////////////
-    // Baymodels //
+    // ClusterTemplates //
     ///////////////
 
-    function createBaymodel(params) {
-      return apiService.post('/api/container-infra/baymodels/', params)
+    function createClusterTemplate(params) {
+      return apiService.post('/api/container_infra/cluster_templates/', params)
         .error(function() {
-          toastService.add('error', gettext('Unable to create Baymodel'));
+          toastService.add('error', gettext('Unable to create cluster template'));
         });
     }
 
-    function getBaymodel(id) {
-      return apiService.get('/api/container-infra/baymodels/' + id)
+    function getClusterTemplate(id) {
+      return apiService.get('/api/container_infra/cluster_templates/' + id)
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Baymodel.'));
+          toastService.add('error', gettext('Unable to retrieve the cluster template.'));
         });
     }
 
-    function getBaymodels() {
-      return apiService.get('/api/container-infra/baymodels/')
+    function getClusterTemplates() {
+      return apiService.get('/api/container_infra/cluster_templates/')
         .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Baymodels.'));
+          toastService.add('error', gettext('Unable to retrieve the cluster templates.'));
         });
     }
 
-    function deleteBaymodel(id, suppressError) {
-      var promise = apiService.delete('/api/container-infra/baymodels/', [id]);
+    function deleteClusterTemplate(id, suppressError) {
+      var promise = apiService.delete('/api/container_infra/cluster_templates/', [id]);
       return suppressError ? promise : promise.error(function() {
-        var msg = gettext('Unable to delete the Baymodel with id: %(id)s');
+        var msg = gettext('Unable to delete the cluster template with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
 
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
-    function deleteBaymodels(ids) {
-      return apiService.delete('/api/container-infra/baymodels/', ids)
+    function deleteClusterTemplates(ids) {
+      return apiService.delete('/api/container_infra/cluster_templates/', ids)
         .error(function() {
-          toastService.add('error', gettext('Unable to delete the Baymodels.'));
+          toastService.add('error', gettext('Unable to delete the cluster templates.'));
         })
     }
   }

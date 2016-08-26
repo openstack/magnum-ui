@@ -48,9 +48,9 @@ Install Magnum UI with all dependencies in your virtual environment::
 
 And enable it in Horizon::
 
-    cp ../magnum-ui/magnum_ui/enabled/_1370_project_containers-infra_panelgroup.py openstack_dashboard/local/enabled
-    cp ../magnum-ui/magnum_ui/enabled/_1371_project_containers-infra_bays_panel.py openstack_dashboard/local/enabled
-    cp ../magnum-ui/magnum_ui/enabled/_1372_project_containers-infra_baymodels_panel.py openstack_dashboard/local/enabled
+    cp ../magnum-ui/magnum_ui/enabled/_1370_project_container_infra_panelgroup.py openstack_dashboard/local/enabled
+    cp ../magnum-ui/magnum_ui/enabled/_1371_project_container_infra_clusters_panel.py openstack_dashboard/local/enabled
+    cp ../magnum-ui/magnum_ui/enabled/_1372_project_container_infra_cluster_templates_panel.py openstack_dashboard/local/enabled
 
 To run horizon with the newly enabled Magnum UI plugin run::
 

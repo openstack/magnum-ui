@@ -26,8 +26,8 @@
    */
   angular
     .module('horizon.dashboard.container-infra', [
-      'horizon.dashboard.container-infra.bays',
-      'horizon.dashboard.container-infra.baymodels',
+      'horizon.dashboard.container-infra.clusters',
+      'horizon.dashboard.container-infra.cluster-templates',
       'ngRoute'
     ])
     .config(config)

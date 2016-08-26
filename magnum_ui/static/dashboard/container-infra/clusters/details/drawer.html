@@ -1,0 +1,28 @@
+<div ng-controller="horizon.dashboard.container-infra.clusters.DrawerController as drawerCtrl">
+  <div class="row">
+    <span class="rsp-alt-p2">
+      <dl class="col-md-5">
+        <dt translate>ID</dt>
+        <dd>{$ item.id $}</dd>
+      </dl>
+      <dl class="col-md-3">
+        <dt translate>Master Count</dt>
+        <dd>{$ item.master_count $}</dd>
+      </dl>
+      <dl class="col-md-3">
+        <dt translate>Node Count</dt>
+        <dd>{$ item.node_count $}</dd>
+      </dl>
+    </span>
+  </div>
+  <div class="row">
+    <dl class="col-md-5">
+      <dt translate>Cluster Template</dt>
+      <dd><a ng-href="project/ngdetails/OS::Magnum::ClusterTemplate/{$ item.baymodel_id $}">{$ item.baymodel_id $}</a></dd>
+    </dl>
+    <dl class="col-md-3">
+      <dt translate>Node Addresses</dt>
+      <dd ng-repeat="addr in item.node_addresses">{$ addr $}</dd>
+    </dl>
+  </div>
+</div>

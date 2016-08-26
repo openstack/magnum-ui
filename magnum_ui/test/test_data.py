@@ -17,37 +17,37 @@ from openstack_dashboard.test.test_data import utils
 
 def data(TEST):
     # Test Data Container in Horizon
-    TEST.baymodels = utils.TestDataContainer()
-    TEST.bays = utils.TestDataContainer()
+    TEST.cluster_templates = utils.TestDataContainer()
+    TEST.clusters = utils.TestDataContainer()
 
-    # Bay Models
-    baymodel_dict_1 = {"uuid": 1,
-                       "name": "kindofabigdeal",
-                       "image-id": "",
-                       "keypair-id": "",
-                       "external-network-id": "",
-                       "coe": "",
-                       "fixed-network": "",
-                       "dns-nameserver": "",
-                       "flavor-id": "",
-                       "master-flavor-id": "",
-                       "docker-volume-size": "",
-                       "http-proxy": "",
-                       "https-proxy": "",
-                       "no-proxy": "",
-                       "labels": "",
-                       "tls-disabled": "",
-                       "public": ""}
+    # Cluster Templates
+    cluster_template_dict_1 = {"uuid": 1,
+                               "name": "kindofabigdeal",
+                               "image-id": "",
+                               "keypair-id": "",
+                               "external-network-id": "",
+                               "coe": "",
+                               "fixed-network": "",
+                               "dns-nameserver": "",
+                               "flavor-id": "",
+                               "master-flavor-id": "",
+                               "docker-volume-size": "",
+                               "http-proxy": "",
+                               "https-proxy": "",
+                               "no-proxy": "",
+                               "labels": "",
+                               "tls-disabled": "",
+                               "public": ""}
 
-    TEST.baymodels.add(baymodel_dict_1)
+    TEST.cluster_templates.add(cluster_template_dict_1)
 
-    # Bays
-    bay_dict_1 = {"uuid": 1,
-                  "name": "peopleknowme",
-                  "baymodel": baymodel_dict_1["uuid"],
-                  "node-count": "",
-                  "master-count": "",
-                  "discovery-url": "",
-                  "timeout": 0}
+    # Clusters
+    cluster_dict_1 = {"uuid": 1,
+                      "name": "peopleknowme",
+                      "baymodel": cluster_template_dict_1["uuid"],
+                      "node-count": "",
+                      "master-count": "",
+                      "discovery-url": "",
+                      "timeout": 0}
 
-    TEST.bays.add(bay_dict_1)
+    TEST.clusters.add(cluster_dict_1)

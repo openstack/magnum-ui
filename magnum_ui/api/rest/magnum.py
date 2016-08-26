@@ -31,95 +31,95 @@ def change_to_id(obj):
 
 
 @urls.register
-class Baymodel(generic.View):
-    """API for retrieving a single baymodel"""
-    url_regex = r'container-infra/baymodels/(?P<baymodel_id>[^/]+)$'
+class ClusterTemplate(generic.View):
+    """API for retrieving a single cluster template"""
+    url_regex = r'container_infra/cluster_templates/(?P<template_id>[^/]+)$'
 
     @rest_utils.ajax()
-    def get(self, request, baymodel_id):
-        """Get a specific baymodel"""
-        return change_to_id(magnum.baymodel_show(request, baymodel_id)
+    def get(self, request, template_id):
+        """Get a specific cluster template"""
+        return change_to_id(magnum.cluster_template_show(request, template_id)
                             .to_dict())
 
 
 @urls.register
-class Baymodels(generic.View):
-    """API for Magnum Baymodels"""
-    url_regex = r'container-infra/baymodels/$'
+class ClusterTemplates(generic.View):
+    """API for Magnum Cluster Templates"""
+    url_regex = r'container_infra/cluster_templates/$'
 
     @rest_utils.ajax()
     def get(self, request):
-        """Get a list of the Baymodels for a project.
+        """Get a list of the Cluster Templates for a project.
 
         The returned result is an object with property 'items' and each
-        item under this is a Baymodel.
+        item under this is a Cluster Template.
         """
-        result = magnum.baymodel_list(request)
+        result = magnum.cluster_template_list(request)
         return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
-        """Delete one or more Baymodels by id.
+        """Delete one or more Cluster Templates by id.
 
         Returns HTTP 204 (no content) on successful deletion.
         """
-        for baymodel_id in request.DATA:
-            magnum.baymodel_delete(request, baymodel_id)
+        for template_id in request.DATA:
+            magnum.cluster_template_delete(request, template_id)
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
-        """Create a new Baymodel.
+        """Create a new Cluster Template.
 
-        Returns the new Baymodel object on success.
+        Returns the new ClusterTemplate object on success.
         """
-        new_baymodel = magnum.baymodel_create(request, **request.DATA)
+        new_template = magnum.cluster_template_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/container-infra/baymodel/%s' % new_baymodel.uuid,
-            new_baymodel.to_dict())
+            '/api/container_infra/cluster_template/%s' % new_template.uuid,
+            new_template.to_dict())
 
 
 @urls.register
-class Bay(generic.View):
-    """API for retrieving a single bay"""
-    url_regex = r'container-infra/bays/(?P<bay_id>[^/]+)$'
+class Cluster(generic.View):
+    """API for retrieving a single cluster"""
+    url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)$'
 
     @rest_utils.ajax()
-    def get(self, request, bay_id):
-        """Get a specific bay"""
-        return change_to_id(magnum.bay_show(request, bay_id).to_dict())
+    def get(self, request, cluster_id):
+        """Get a specific cluster"""
+        return change_to_id(magnum.cluster_show(request, cluster_id).to_dict())
 
 
 @urls.register
-class Bays(generic.View):
-    """API for Magnum Bays"""
-    url_regex = r'container-infra/bays/$'
+class Clusters(generic.View):
+    """API for Magnum Clusters"""
+    url_regex = r'container_infra/clusters/$'
 
     @rest_utils.ajax()
     def get(self, request):
-        """Get a list of the Bays for a project.
+        """Get a list of the Clusters for a project.
 
         The returned result is an object with property 'items' and each
-        item under this is a Bay.
+        item under this is a Cluster.
         """
-        result = magnum.bay_list(request)
+        result = magnum.cluster_list(request)
         return {'items': [change_to_id(n.to_dict()) for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
-        """Delete one or more Bays by id.
+        """Delete one or more Clusters by id.
 
         Returns HTTP 204 (no content) on successful deletion.
         """
-        for bay_id in request.DATA:
-            magnum.bay_delete(request, bay_id)
+        for cluster_id in request.DATA:
+            magnum.cluster_delete(request, cluster_id)
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
-        """Create a new Bay.
+        """Create a new Cluster.
 
-        Returns the new Bay object on success.
+        Returns the new Cluster object on success.
         """
-        new_bay = magnum.bay_create(request, **request.DATA)
+        new_cluster = magnum.cluster_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            '/api/container-infra/bay/%s' % new_bay.uuid,
-            new_bay.to_dict())
+            '/api/container_infra/cluster/%s' % new_cluster.uuid,
+            new_cluster.to_dict())

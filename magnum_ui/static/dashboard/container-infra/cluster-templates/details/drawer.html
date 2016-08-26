@@ -1,0 +1,28 @@
+<div ng-controller="horizon.dashboard.container-infra.cluster-templates.DrawerController as drawerCtrl">
+  <div class="row">
+    <span class="rsp-alt-p2">
+      <dl class="col-md-5">
+        <dt translate>ID</dt>
+        <dd>{$ item.id $}</dd>
+      </dl>
+      <dl class="col-md-3">
+        <dt translate>Network Driver</dt>
+        <dd>{$ item.network_driver $}</dd>
+      </dl>
+    </span>
+  </div>
+  <div class="row">
+    <dl class="col-md-5">
+      <dt translate>Image ID</dt>
+      <dd>{$ item.image_id $}</dd>
+    </dl>
+    <dl class="col-md-3">
+      <dt translate>Registry Enabled</dt>
+      <dd>{$ item.registry_enabled | yesno $}</dd>
+    </dl>
+    <dl class="col-md-4">
+      <dt translate>Labels</dt>
+      <dd ng-repeat="(key, value) in item.labels">{$ key + '=' + value $}</dd>
+    </dl>
+  </div>
+</div>

@@ -25,16 +25,17 @@ from openstack_dashboard.api import base
 
 LOG = logging.getLogger(__name__)
 
-BAYMODEL_CREATE_ATTRS = ['name', 'image_id', 'flavor_id', 'master_flavor_id',
-                         'keypair_id', 'external_network_id', 'fixed_network',
-                         'dns_nameserver', 'docker_volume_size', 'labels',
-                         'coe', 'http_proxy',
-                         'https_proxy', 'no_proxy', 'network_driver',
-                         'volume_driver',
-                         'public', 'registry_enabled', 'tls_disabled']
+CLUSTER_TEMPLATE_CREATE_ATTRS = ['name', 'image_id', 'flavor_id',
+                                 'master_flavor_id', 'keypair_id',
+                                 'external_network_id', 'fixed_network',
+                                 'dns_nameserver', 'docker_volume_size',
+                                 'labels', 'coe', 'http_proxy', 'https_proxy',
+                                 'no_proxy', 'network_driver', 'volume_driver',
+                                 'public', 'registry_enabled', 'tls_disabled']
 
-BAY_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count', 'discovery_url',
-                    'bay_create_timeout', 'master_count']
+CLUSTER_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count',
+                        'discovery_url', 'cluster_create_timeout',
+                        'master_count']
 
 
 @memoized
@@ -62,14 +63,14 @@ def magnumclient(request):
     return c
 
 
-def baymodel_create(request, **kwargs):
+def cluster_template_create(request, **kwargs):
     args = {}
     for (key, value) in kwargs.items():
-        if key in BAYMODEL_CREATE_ATTRS:
+        if key in CLUSTER_TEMPLATE_CREATE_ATTRS:
             args[str(key)] = str(value)
         else:
             raise exceptions.InvalidAttribute(
-                "Key must be in %s" % ",".join(BAYMODEL_CREATE_ATTRS))
+                "Key must be in %s" % ",".join(CLUSTER_TEMPLATE_CREATE_ATTRS))
         if key == "labels":
             labels = {}
             vals = value.split(",")
@@ -80,44 +81,44 @@ def baymodel_create(request, **kwargs):
     return magnumclient(request).baymodels.create(**args)
 
 
-def baymodel_delete(request, id):
+def cluster_template_delete(request, id):
     return magnumclient(request).baymodels.delete(id)
 
 
-def baymodel_list(request, limit=None, marker=None, sort_key=None,
-                  sort_dir=None, detail=True):
+def cluster_template_list(request, limit=None, marker=None, sort_key=None,
+                          sort_dir=None, detail=True):
     return magnumclient(request).baymodels.list(limit, marker, sort_key,
                                                 sort_dir, detail)
 
 
-def baymodel_show(request, id):
+def cluster_template_show(request, id):
     return magnumclient(request).baymodels.get(id)
 
 
-def bay_create(request, **kwargs):
+def cluster_create(request, **kwargs):
     args = {}
     for (key, value) in kwargs.items():
-        if key in BAY_CREATE_ATTRS:
+        if key in CLUSTER_CREATE_ATTRS:
             args[key] = value
         else:
             raise exceptions.InvalidAttribute(
-                "Key must be in %s" % ",".join(BAY_CREATE_ATTRS))
+                "Key must be in %s" % ",".join(CLUSTER_CREATE_ATTRS))
     return magnumclient(request).bays.create(**args)
 
 
-def bay_update(request, id, patch):
+def cluster_update(request, id, patch):
     return magnumclient(request).bays.update(id, patch)
 
 
-def bay_delete(request, id):
+def cluster_delete(request, id):
     return magnumclient(request).bays.delete(id)
 
 
-def bay_list(request, limit=None, marker=None, sort_key=None,
-             sort_dir=None, detail=True):
+def cluster_list(request, limit=None, marker=None, sort_key=None,
+                 sort_dir=None, detail=True):
     return magnumclient(request).bays.list(limit, marker, sort_key,
                                            sort_dir, detail)
 
 
-def bay_show(request, id):
+def cluster_show(request, id):
     return magnumclient(request).bays.get(id)

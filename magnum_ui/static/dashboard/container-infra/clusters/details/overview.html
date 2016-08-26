@@ -1,0 +1,77 @@
+<div ng-controller="ClusterOverviewController as ctrl">
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Cluster Template</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Name</dt>
+        <dd><a ng-href="project/ngdetails/OS::Magnum::ClusterTemplate/{$ ctrl.cluster_template.id $}">{$ ctrl.cluster_template.name|noName $}</a></dd>
+        <dt translate>ID</dt>
+        <dd>{$ ctrl.cluster_template.id $}</dd>
+        <dt translate>COE</dt>
+        <dd>{$ ctrl.cluster_template.coe $}</dd>
+        <dt translate>Image ID</dt>
+        <dd>{$ ctrl.cluster_template.image_id $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Nodes</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Master Count</dt>
+        <dd>{$ ctrl.cluster.master_count $}</dd>
+        <dt translate>Node Count</dt>
+        <dd>{$ ctrl.cluster.node_count $}</dd>
+        <dt translate>API Address</dt>
+        <dd>{$ ctrl.cluster.api_address $}</dd>
+        <dt translate>Master Addresses</dt>
+        <dd>
+          <div ng-repeat="addr in ctrl.cluster.master_addresses">{$ addr $}</div>
+        </dd>
+        <dt translate>Node Addresses</dt>
+        <dd>
+          <div ng-repeat="addr in ctrl.cluster.node_addresses">{$ addr $}</div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 detail">
+      <h3 translate>Miscellaneous</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Stack ID</dt>
+        <dd><a ng-href="project/stacks/stack/{$ ctrl.cluster.stack_id $}" target="_self">
+          {$ ctrl.cluster.stack_id $}
+        </a></dd>
+        <dt translate>Discovery URL</dt>
+        <dd>{$ ctrl.cluster.discovery_url $}</dd>
+        <dt translate>Cluster Create Timeout</dt>
+        <dd>
+          <div ng-switch on="ctrl.cluster.bay_create_timeout === 0 || ctrl.cluster.bay_create_timeout === null">
+            <div ng-switch-when="true" translate>Infinite</div>
+            <div ng-switch-default translate
+              translate-n="ctrl.cluster.bay_create_timeout"
+              translate-plural="{$ ctrl.cluster.bay_create_timeout $} minutes">
+                {$ ctrl.cluster.bay_create_timeout $} minute
+            </div>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Record Properties</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Created</dt>
+        <dd>{$ ctrl.cluster.created_at | date:'short' $}</dd>
+        <dt translate>Updated</dt>
+        <dd>{$ ctrl.cluster.updated_at | date:'short' $}</dd>
+        <dt translate>ID</dt>
+        <dd>{$ ctrl.cluster.id $}</dd>
+        <dt translate>Status</dt>
+        <dd>{$ ctrl.cluster.status $}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

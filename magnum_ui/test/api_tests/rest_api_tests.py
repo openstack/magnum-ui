@@ -25,81 +25,83 @@ TEST = TestData(test_data.data)
 
 class MagnumRestTestCase(test.TestCase):
 
-    # Baymodels
+    # Cluster Templates
     @mock.patch.object(magnum, 'magnum')
-    def test_baymodel_get(self, client):
+    def test_cluster_template_get(self, client):
         request = self.mock_rest_request()
-        client.baymodel_list.return_value = \
-            mock_resource(TEST.baymodels.list())
-        response = magnum.Baymodels().get(request)
+        client.cluster_template_list.return_value = \
+            mock_resource(TEST.cluster_templates.list())
+        response = magnum.ClusterTemplates().get(request)
 
         self.assertStatusCode(response, 200)
-        self.assertItemsCollectionEqual(response, TEST.baymodels.list())
-        client.baymodel_list.assert_called_once_with(request)
+        self.assertItemsCollectionEqual(response,
+                                        TEST.cluster_templates.list())
+        client.cluster_template_list.assert_called_once_with(request)
 
     @mock.patch.object(magnum, 'magnum')
-    def test_baymodel_create(self, client):
-        test_baymodels = mock_resource(TEST.baymodels.list())
-        test_bmodel = test_baymodels[0]
-        test_body = json.dumps(test_bmodel.to_dict())
+    def test_cluster_template_create(self, client):
+        test_cluster_templates = mock_resource(TEST.cluster_templates.list())
+        test_cluster_template = test_cluster_templates[0]
+        test_body = json.dumps(test_cluster_template.to_dict())
         request = self.mock_rest_request(body=test_body)
-        client.baymodel_create.return_value = test_bmodel
-        response = magnum.Baymodels().post(request)
+        client.cluster_template_create.return_value = test_cluster_template
+        response = magnum.ClusterTemplates().post(request)
+        url = '/api/container_infra/cluster_template/%s' % \
+              test_cluster_template.uuid
 
         self.assertStatusCode(response, 201)
-        self.assertEqual(response['location'],
-                         '/api/container-infra/baymodel/%s' % test_bmodel.uuid)
-        client.baymodel_create.assert_called_once_with(request,
-                                                       **test_bmodel.to_dict())
+        self.assertEqual(response['location'], url)
+        client.cluster_template_create.assert_called_once_with(
+            request, **test_cluster_template.to_dict())
 
     @mock.patch.object(magnum, 'magnum')
-    def test_baymodel_delete(self, client):
-        test_baymodel = TEST.baymodels.first()
+    def test_cluster_template_delete(self, client):
+        test_cluster_template = TEST.cluster_templates.first()
         request = self.mock_rest_request(
-            body='{"baymodel_id":' + str(test_baymodel['uuid']) + '}')
-        response = magnum.Baymodels().delete(request)
+            body='{"baymodel_id":' + str(test_cluster_template['uuid']) + '}')
+        response = magnum.ClusterTemplates().delete(request)
 
         self.assertStatusCode(response, 204)
-        client.baymodel_delete.assert_called_once_with(
+        client.cluster_template_delete.assert_called_once_with(
             request,
             u'baymodel_id')
 
-    # Bays
+    # Clusters
     @mock.patch.object(magnum, 'magnum')
-    def test_bay_get(self, client):
+    def test_cluster_get(self, client):
         request = self.mock_rest_request()
-        client.bay_list.return_value = \
-            mock_resource(TEST.bays.list())
-        response = magnum.Bays().get(request)
+        client.cluster_list.return_value = \
+            mock_resource(TEST.clusters.list())
+        response = magnum.Clusters().get(request)
 
         self.assertStatusCode(response, 200)
-        self.assertItemsCollectionEqual(response, TEST.bays.list())
-        client.bay_list.assert_called_once_with(request)
+        self.assertItemsCollectionEqual(response, TEST.clusters.list())
+        client.cluster_list.assert_called_once_with(request)
 
     @mock.patch.object(magnum, 'magnum')
-    def test_bay_create(self, client):
-        test_bays = mock_resource(TEST.bays.list())
-        test_bay = test_bays[0]
-        test_body = json.dumps(test_bay.to_dict())
+    def test_cluster_create(self, client):
+        test_clusters = mock_resource(TEST.clusters.list())
+        test_cluster = test_clusters[0]
+        test_body = json.dumps(test_cluster.to_dict())
         request = self.mock_rest_request(body=test_body)
-        client.bay_create.return_value = test_bay
-        response = magnum.Bays().post(request)
+        client.cluster_create.return_value = test_cluster
+        response = magnum.Clusters().post(request)
+        url = '/api/container_infra/cluster/%s' % test_cluster.uuid
 
         self.assertStatusCode(response, 201)
-        self.assertEqual(response['location'],
-                         '/api/container-infra/bay/%s' % test_bay.uuid)
-        client.bay_create.assert_called_once_with(request,
-                                                  **test_bay.to_dict())
+        self.assertEqual(response['location'], url)
+        client.cluster_create.assert_called_once_with(request,
+                                                      **test_cluster.to_dict())
 
     @mock.patch.object(magnum, 'magnum')
-    def test_bay_delete(self, client):
-        test_bay = TEST.bays.first()
+    def test_cluster_delete(self, client):
+        test_cluster = TEST.clusters.first()
         request = self.mock_rest_request(
-            body='{"bay_id":' + str(test_bay['uuid']) + '}')
-        response = magnum.Bays().delete(request)
+            body='{"bay_id":' + str(test_cluster['uuid']) + '}')
+        response = magnum.Clusters().delete(request)
 
         self.assertStatusCode(response, 204)
-        client.bay_delete.assert_called_once_with(
+        client.cluster_delete.assert_called_once_with(
             request,
             u'bay_id')
 
