@@ -59,14 +59,12 @@
 
     function initScope($scope) {
       scope = $scope;
-      scope.workflow = createWorkflow;
-      scope.model = model;
       scope.$on('$destroy', function() {
       });
     }
 
     function perform(selected) {
-      scope.model.init();
+      model.init();
       scope.selected = selected;
       return wizardModalService.modal({
         scope: scope,
