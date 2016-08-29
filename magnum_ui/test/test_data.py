@@ -37,7 +37,12 @@ def data(TEST):
                                "no-proxy": "",
                                "labels": "",
                                "tls-disabled": "",
-                               "public": ""}
+                               "public": "",
+                               "docker_storage_driver": "",
+                               "fixed_subnet": "",
+                               "floating_ip_enabled": "",
+                               "master_lb_enabled": "",
+                               "insecure_registry": ""}
 
     TEST.cluster_templates.add(cluster_template_dict_1)
 

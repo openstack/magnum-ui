@@ -49,11 +49,32 @@
                placeholder="{$ 'The private Neutron network name to connect to this cluster template'|translate $}">
       </div>
       <div class="form-group">
+        <label class="control-label" for="cluster-template-fixed-subnet" translate>Fixed Subnet</label>
+        <input name="cluster-template-fixed-subnet" type="text" class="form-control"
+               id="cluster-template-fixed-subnet"
+               ng-model="model.newClusterTemplateSpec.fixed_subnet"
+               placeholder="{$ 'The private Neutron subnet name to connect to this cluster template'|translate $}">
+      </div>
+      <div class="form-group">
         <label class="control-label" for="cluster-template-dns-nameserver" translate>DNS</label>
         <input name="cluster-template-dns-nameserver" type="text" class="form-control"
                id="cluster-template-dns-nameserver"
                ng-model="model.newClusterTemplateSpec.dns_nameserver"
                placeholder="{$ 'The DNS nameserver to use for this cluster template'|translate $}">
+      </div>
+      <div class="form-group">
+        <div class="themable-checkbox">
+          <input name="cluster-template-master-lb-enabled" type="checkbox" id="cluster-template-master-lb-enabled"
+                 ng-model="model.newClusterTemplateSpec.master_lb_enabled">
+          <label for="cluster-template-master-lb-enabled" translate>Master LB</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="themable-checkbox">
+          <input name="cluster-template-floating-ip-enabled" type="checkbox" id="cluster-template-floating-ip-enabled"
+                 ng-model="model.newClusterTemplateSpec.floating_ip_enabled">
+          <label for="cluster-template-floating-ip-enabled" translate>Floating IP</label>
+        </div>
       </div>
     </div>
   </div>

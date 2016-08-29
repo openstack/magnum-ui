@@ -45,6 +45,7 @@
         flavor_id: "",
         master_flavor_id: "",
         docker_volume_size: null,
+        docker_storage_driver: "devicemapper",
         keypair_id: "",
         network_driver: "",
         volume_driver: "",
@@ -53,13 +54,19 @@
         no_proxy: null,
         external_network_id: "",
         fixed_network: "",
+        fixed_subnet: "",
         dns_nameserver: null,
+        master_lb_enabled: "",
+        floating_ip_enabled: true,
         labels: null,
-        network_drivers : [{name: "docker", label: gettext("Docker")},
+        network_drivers : [{name: "", label: gettext("Choose a Network Driver")},
+                           {name: "docker", label: gettext("Docker")},
                            {name: "flannel", label: gettext("Flannel")}],
         volume_drivers : [{name: "", label: gettext("Choose a Volume Driver")},
                           {name: "cinder", label: gettext("Cinder")},
-                          {name: "rexray", label: gettext("Rexray")}]
+                          {name: "rexray", label: gettext("Rexray")}],
+        docker_storage_drivers: [{name: "devicemapper", label: gettext("Device Mapper")},
+                                 {name: "overlay", label: gettext("Overley")}]
       };
     }
 
@@ -83,7 +90,7 @@
       // These are not for submittion.
       for (var key in finalSpec) {
         if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null || finalSpec[key] === ""
-            || key === "network_drivers" || key === "volume_drivers") {
+            || key === "network_drivers" || key === "volume_drivers" || key === "docker_storage_drivers") {
           delete finalSpec[key];
         }
       }
