@@ -3,9 +3,9 @@
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev35\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-23 00:46+0000\n"
+"POT-Creation-Date: 2016-08-29 05:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,43 +28,6 @@ msgstr "API服务端口"
 msgid "An arbitrary human-readable name"
 msgstr "一个任意可读的名称。"
 
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"baymodel. May be used multiple times."
-msgstr "与支架模型相关联的“键=值”对形式的任意标签，可以使用多次。"
-
-msgid "Bay"
-msgstr "容器"
-
-#, python-format
-msgid "Bay %s was successfully created."
-msgstr "成功创建支架%s。"
-
-msgid "Bay Create Timeout"
-msgstr "创建支架超时。"
-
-msgid "Bay Name"
-msgstr "支架名称。"
-
-msgid "Baymodel"
-msgstr "支架模型。"
-
-#, python-format
-msgid "Baymodel %s was successfully created."
-msgstr "成功创建Baymodel %s。"
-
-msgid "Baymodel Detail"
-msgstr "支架模型详细信息。"
-
-msgid "Baymodel Name"
-msgstr "Baymodel名"
-
-msgid "Baymodels"
-msgstr "支架模型。"
-
-msgid "Bays"
-msgstr "支架模型。"
-
 msgid "CHECK COMPLETE"
 msgstr "检查完成"
 
@@ -79,9 +42,6 @@ msgstr "创建失败"
 
 msgid "CREATE IN PROGRESS"
 msgstr "正在创建"
-
-msgid "Choose a Baymodel"
-msgstr "选择一个Baymodel。"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "选择容器编排引擎"
@@ -113,25 +73,11 @@ msgstr "集群。"
 msgid "Cluster Type"
 msgstr "集群类型"
 
-msgid "Confirm Delete Bay"
-msgid_plural "Confirm Delete Bays"
-msgstr[0] "确认删除支架。"
-
-msgid "Confirm Delete Baymodel"
-msgid_plural "Confirm Delete Baymodels"
-msgstr[0] "确认删除支架模型。"
-
 msgid "Container Orchestration Engine"
 msgstr "容器编配引擎"
 
 msgid "Create"
 msgstr "创建"
-
-msgid "Create Bay"
-msgstr "创建Bay"
-
-msgid "Create Baymodel"
-msgstr "创建Baymodel"
 
 msgid "Created"
 msgstr "已经创建的。"
@@ -148,35 +94,8 @@ msgstr "正在删除"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "Delete Bay"
-msgid_plural "Delete Bays"
-msgstr[0] "删除Bay。"
-
-msgid "Delete Baymodel"
-msgid_plural "Delete Baymodels"
-msgstr[0] "删除Baymodel"
-
-msgid "Delete Baymodels"
-msgstr "删除Baymodel"
-
-msgid "Delete Bays"
-msgstr "删除Bays。"
-
-#, python-format
-msgid "Deleted Bay: %s."
-msgid_plural "Deleted Bays: %s."
-msgstr[0] "删除名为%s的支架。"
-
-#, python-format
-msgid "Deleted Baymodel: %s."
-msgid_plural "Deleted Baymodels: %s."
-msgstr[0] "删除的支架模型：%s。"
-
 msgid "Disable TLS"
 msgstr "禁用TLS"
-
-msgid "Disable TLS in the Bay. Default: False"
-msgstr "在支架底座中禁用TLS，默认为False。"
 
 msgid "Discovery URL"
 msgstr "已有的URL，"
@@ -195,9 +114,6 @@ msgstr "Docker 卷大小 (GB)"
 
 msgid "Enable Registry"
 msgstr "可以注册"
-
-msgid "Enable docker registry in the Bay. Default: False"
-msgstr "在支架底座中启用注册表，默认为False。"
 
 msgid "External Network ID"
 msgstr "外部网络ID。"
@@ -250,9 +166,6 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "标签"
 
-msgid "Make baymodel public. Default: False"
-msgstr "公有化baymodel，默认为False"
-
 msgid "Master Addresses"
 msgstr "主节点地址"
 
@@ -276,12 +189,6 @@ msgstr "繁杂"
 
 msgid "Name"
 msgstr "名字。"
-
-msgid "Name of the bay to create."
-msgstr "创建支架名称。"
-
-msgid "Name of the baymodel to create."
-msgstr "需创建Bay模型名称"
 
 msgid "Network"
 msgstr "网络"
@@ -340,20 +247,8 @@ msgstr "大小。"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "为节点指定url"
 
-msgid "Specify bay name and choose baymodel"
-msgstr "指定支架名称和选择支架模型。"
-
-msgid "Specify conditions for bay creation."
-msgstr "为创建支架指定容器。"
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "申明应使用的容器编排引擎。"
-
-msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
-msgstr "为Bay制定域名解析服务器。默认：8.8.8.8"
-
-msgid "Specify the number of master nodes and bay nodes for the bay."
-msgstr "为bay指定master节点和bay节点的个数"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "指定容器卷的大小用GB来衡量。"
@@ -367,54 +262,11 @@ msgstr "状态"
 msgid "TLS Disabled"
 msgstr "禁用TLS"
 
-msgid "The DNS nameserver to use for this Bay"
-msgstr "DNS命名服务器用于这种支架模型。"
-
-msgid "The bay node count."
-msgstr "支架节点数量。"
-
-msgid "The external Neutron network ID to connect to this bay model"
-msgstr "外部子网ID与这种支架模型相连。"
-
-msgid "The http_proxy address to use for nodes in bay"
-msgstr "要用于支架中的节点的 http_proxy 地址。"
-
-msgid "The https_proxy address to use for nodes in bay"
-msgstr "要用于支架中的节点的 https_proxy 地址。"
-
-msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr "SSH密钥对的名称或UUID加载到支架节点。"
-
-msgid "The name or UUID of the base image to customize for the bay."
-msgstr "支架定制的基础镜像的名称或UUID。"
-
 msgid "The network driver name for instantiating container networks"
 msgstr "用于实例化容器网络的驱动程序名称。"
 
-msgid "The no_proxy address to use for nodes in bay"
-msgstr "用于支架中节点的非代理地址。"
-
-msgid "The nova flavor id to use when launching the bay. Default: m1.small"
-msgstr "登陆支架时使用的是nova 类型的云主机，默认的是m1.small 类型。"
-
-msgid ""
-"The nova flavor id to use when launching the master node of the bay. "
-"Default: m1.small"
-msgstr "登陆支架时使用的是nova 类型的云主机，默认的是m1.small 类型。"
-
-msgid "The number of master nodes for the bay."
-msgstr "支架的主节点数。"
-
-msgid "The private Neutron network name to connect to this bay model"
-msgstr "私有子网与这种支架模型相连。"
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker卷的大小(以GB计)，默认是25G。"
-
-msgid ""
-"The timeout for bay creation in minutes. Set to 0 for no timeout. The "
-"default is no timeout."
-msgstr "创建bay超时以分钟来计算，设置为0表示没有超时，默认的是没有超时。"
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "用于实例化容器卷的卷驱动名称。"
@@ -434,80 +286,8 @@ msgstr "更新失败"
 msgid "UPDATE IN PROGRESS"
 msgstr "正在更新"
 
-msgid "Unable to create Bay."
-msgstr "无法创建Bay。"
-
-msgid "Unable to create Baymodel"
-msgstr "无法创建Baymodel"
-
-#, python-format
-msgid "Unable to delete Bay: %s."
-msgid_plural "Unable to delete Bays: %s."
-msgstr[0] "无法删除名为%s的支架。"
-
-#, python-format
-msgid "Unable to delete Baymodel: %s."
-msgid_plural "Unable to delete Baymodels: %s."
-msgstr[0] "无法删除名称为%s的支架模型。"
-
-#, python-format
-msgid "Unable to delete the Bay with id: %(id)s"
-msgstr "无法删除ID为：%(id)s的Bay。"
-
-#, python-format
-msgid "Unable to delete the Baymodel with id: %(id)s"
-msgstr "无法删除ID为：%(id)s的Baymodel。"
-
-msgid "Unable to delete the Baymodels."
-msgstr "无法删除Baymodel"
-
-msgid "Unable to delete the Bays."
-msgstr "无法删除Bay。"
-
-msgid "Unable to retrieve the Bay."
-msgstr "无法获取Bay。"
-
-msgid "Unable to retrieve the Baymodel."
-msgstr "无法获取Baymodel。"
-
-msgid "Unable to retrieve the Baymodels."
-msgstr "无法获取Baymodel。"
-
-msgid "Unable to retrieve the Bays."
-msgstr "无法获取Bay。"
-
 msgid "Updated"
 msgstr "已经更新的"
 
 msgid "Volume Driver"
 msgstr "卷驱动"
-
-#, python-format
-msgid "You are not allowed to delete baymodels: %s"
-msgstr "你不能删除baymodels: %s"
-
-#, python-format
-msgid "You are not allowed to delete bays: %s"
-msgstr "你不被允许删除bays: %s"
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted bay is not "
-"recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted bays are "
-"not recoverable."
-msgstr[0] "你已经选择了“%s”，请确认你的选择，删除了支架模型将不能恢复。"
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
-"not recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
-"are not recoverable."
-msgstr[0] "你已经选择了“%s”，请确认你的选择，删除支架模型将不能恢复。"
-
-msgid "{$ ctrl.bay.bay_create_timeout $} minute"
-msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
-msgstr[0] "{$创建bay超时时间$} 分钟"

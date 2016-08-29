@@ -1,9 +1,9 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev35\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-23 00:46+0000\n"
+"POT-Creation-Date: 2016-08-29 05:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,50 +24,8 @@ msgstr "Серверный порт API"
 msgid "An arbitrary human-readable name"
 msgstr "Произвольное человеко-читаемое имя"
 
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"baymodel. May be used multiple times."
-msgstr ""
-"Произвольные метки в форме пар ключь=значение связанные с моделью отсека. "
-"Могут быть использованы несколько раз."
-
-msgid "Bay"
-msgstr "Отсек"
-
-#, python-format
-msgid "Bay %s was successfully created."
-msgstr "Отсек %s создан успешно."
-
-msgid "Bay Create Timeout"
-msgstr "Таймаут создания отсека"
-
-msgid "Bay Name"
-msgstr "Имя отсека"
-
-msgid "Baymodel"
-msgstr "Модель отсека"
-
-#, python-format
-msgid "Baymodel %s was successfully created."
-msgstr "Модель отсека %s успешно создана."
-
-msgid "Baymodel Detail"
-msgstr "Сведения модели отсека"
-
-msgid "Baymodel Name"
-msgstr "Имя модели отсека"
-
-msgid "Baymodels"
-msgstr "Модели отсека"
-
-msgid "Bays"
-msgstr "Отсеки"
-
 msgid "COE"
 msgstr "COE"
-
-msgid "Choose a Baymodel"
-msgstr "Выбрать модель отсека"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Выберите движок оркестрации контейнеров."
@@ -99,29 +57,11 @@ msgstr "Дистрибутив кластера"
 msgid "Cluster Type"
 msgstr "Тип кластера"
 
-msgid "Confirm Delete Bay"
-msgid_plural "Confirm Delete Bays"
-msgstr[0] "Подтвердите удаление отсека"
-msgstr[1] "Подтвердите удаление отсеков"
-msgstr[2] "Подтвердите удаление отсеков"
-
-msgid "Confirm Delete Baymodel"
-msgid_plural "Confirm Delete Baymodels"
-msgstr[0] "Подтвердите удаление модели отсека"
-msgstr[1] "Подтвердите удаление моделей отсека"
-msgstr[2] "Подтвердите удаление моделей отсека"
-
 msgid "Container Orchestration Engine"
 msgstr "Движок оркестрации контейнеров"
 
 msgid "Create"
 msgstr "Создать"
-
-msgid "Create Bay"
-msgstr "Создать отсек"
-
-msgid "Create Baymodel"
-msgstr "Создать модель отсека"
 
 msgid "Created"
 msgstr "Создано"
@@ -129,43 +69,8 @@ msgstr "Создано"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "Delete Bay"
-msgid_plural "Delete Bays"
-msgstr[0] "Удалить отсек"
-msgstr[1] "Удалить отсеки"
-msgstr[2] "Удалить отсеки"
-
-msgid "Delete Baymodel"
-msgid_plural "Delete Baymodels"
-msgstr[0] "Удалить модель отсека"
-msgstr[1] "Удалить модели отсека"
-msgstr[2] "Удалить модели отсека"
-
-msgid "Delete Baymodels"
-msgstr "Удалить модели отсека"
-
-msgid "Delete Bays"
-msgstr "Удалить отсеки"
-
-#, python-format
-msgid "Deleted Bay: %s."
-msgid_plural "Deleted Bays: %s."
-msgstr[0] "Удален отсек: %s."
-msgstr[1] "Удалены отсеки: %s."
-msgstr[2] "Удалены отсеки: %s."
-
-#, python-format
-msgid "Deleted Baymodel: %s."
-msgid_plural "Deleted Baymodels: %s."
-msgstr[0] "Удалена модель отсека: %s."
-msgstr[1] "Удалены модели отсека: %s."
-msgstr[2] "Удалены модели отсека: %s."
-
 msgid "Disable TLS"
 msgstr "Выключить TLS."
-
-msgid "Disable TLS in the Bay. Default: False"
-msgstr "Выключить TLS в отсеке. По умолчанию: Нет."
 
 msgid "Discovery URL"
 msgstr "URL поиска"
@@ -184,9 +89,6 @@ msgstr "Размер диска Docker (ГБ)"
 
 msgid "Enable Registry"
 msgstr "Разрешить реестр"
-
-msgid "Enable docker registry in the Bay. Default: False"
-msgstr "Разрешить реестр docker в отсеке. ПО умолчанию: Нет."
 
 msgid "External Network ID"
 msgstr "ID внешней сети"
@@ -239,9 +141,6 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Метки"
 
-msgid "Make baymodel public. Default: False"
-msgstr "Сделать модель отсека общедоступной. По умолчанию: Нет"
-
 msgid "Master Addresses"
 msgstr "Адреса мастеров"
 
@@ -265,12 +164,6 @@ msgstr "Другое"
 
 msgid "Name"
 msgstr "Имя"
-
-msgid "Name of the bay to create."
-msgstr "Имя отсека для создания."
-
-msgid "Name of the baymodel to create."
-msgstr "Имя модели отсека для создания."
 
 msgid "Network"
 msgstr "Сеть"
@@ -317,20 +210,8 @@ msgstr "Размер"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Укажите url поиска для поиска узлов."
 
-msgid "Specify bay name and choose baymodel"
-msgstr "Укажите имя отсека и выберете модель отсека."
-
-msgid "Specify conditions for bay creation."
-msgstr "Укажите условия создания отсека."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Укажите движок оркестрации контейнеров."
-
-msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
-msgstr "Укажите сервер имен для использования в отсеке. По умолчанию: 8.8.8.8"
-
-msgid "Specify the number of master nodes and bay nodes for the bay."
-msgstr "Укажите количество мастер узлов для отсека."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Укажите размер диска Docker в ГБ."
@@ -344,61 +225,11 @@ msgstr "Статус"
 msgid "TLS Disabled"
 msgstr "TLS запрещен"
 
-msgid "The DNS nameserver to use for this Bay"
-msgstr "Сервер имен DNS для использования в этом отсеке"
-
-msgid "The bay node count."
-msgstr "Количество узлов отсека."
-
-msgid "The external Neutron network ID to connect to this bay model"
-msgstr "ID внешней сети Neutron для подключения к этой модели отсеков"
-
-msgid "The http_proxy address to use for nodes in bay"
-msgstr "Адрес http_proxy для использования узлами в отсеке"
-
-msgid "The https_proxy address to use for nodes in bay"
-msgstr "Адрес https_proxy для использования узлами в отсеке."
-
-msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr ""
-"Имя или UUID ключевой пары SSH, используемого для доступа к узлам отсека."
-
-msgid "The name or UUID of the base image to customize for the bay."
-msgstr "Имя или UUID базового образа для настройки отсека."
-
 msgid "The network driver name for instantiating container networks"
 msgstr "Имя драйвера сети для создания контейнерных сетей"
 
-msgid "The no_proxy address to use for nodes in bay"
-msgstr "Адрес no_proxy для использования узлами в отсеке."
-
-msgid "The nova flavor id to use when launching the bay. Default: m1.small"
-msgstr ""
-"ID типа инстанса nova для использования при запуске отсека. По умолчанию: m1."
-"small"
-
-msgid ""
-"The nova flavor id to use when launching the master node of the bay. "
-"Default: m1.small"
-msgstr ""
-"ID типа инстанса nova для использования при запуске мастер узла отсека. По "
-"умолчанию: m1.small"
-
-msgid "The number of master nodes for the bay."
-msgstr "Количество мастер узлов для отсека."
-
-msgid "The private Neutron network name to connect to this bay model"
-msgstr "Имя приватной сети Neutron для подключения к этой модели отсеков"
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Размер диска Docker в ГБ. По умолчанию: 25"
-
-msgid ""
-"The timeout for bay creation in minutes. Set to 0 for no timeout. The "
-"default is no timeout."
-msgstr ""
-"Таймаут в минутах для создания отсека. Значение 0 отменяет тайм-аут. По "
-"умолчанию таймаута нет."
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "Имя драйвера дисков для создания контейнерных дисков"
@@ -410,94 +241,8 @@ msgstr ""
 msgid "Timeout"
 msgstr "Таймаут"
 
-msgid "Unable to create Bay."
-msgstr "Не удалось создать отсек"
-
-msgid "Unable to create Baymodel"
-msgstr "Не удалось создать модель отсека"
-
-#, python-format
-msgid "Unable to delete Bay: %s."
-msgid_plural "Unable to delete Bays: %s."
-msgstr[0] "Не удалось удалить отсек: %s."
-msgstr[1] "Не удалось удалить отсеки: %s."
-msgstr[2] "Не удалось удалить отсеки: %s."
-
-#, python-format
-msgid "Unable to delete Baymodel: %s."
-msgid_plural "Unable to delete Baymodels: %s."
-msgstr[0] "Не удалось удалить модель отсека: %s."
-msgstr[1] "Не удалось удалить модели отсека: %s."
-msgstr[2] "Не удалось удалить модели отсека: %s."
-
-#, python-format
-msgid "Unable to delete the Bay with id: %(id)s"
-msgstr "Не удаётся удалить отсек с id: %(id)s"
-
-#, python-format
-msgid "Unable to delete the Baymodel with id: %(id)s"
-msgstr "Не удаётся удалить модель отсека с id: %(id)s"
-
-msgid "Unable to delete the Baymodels."
-msgstr "Не удалось удалить модели отсека."
-
-msgid "Unable to delete the Bays."
-msgstr "Не удалось удалить отсеки."
-
-msgid "Unable to retrieve the Bay."
-msgstr "Не удалось получить отсек."
-
-msgid "Unable to retrieve the Baymodel."
-msgstr "Не удалось получить модель отсека."
-
-msgid "Unable to retrieve the Baymodels."
-msgstr "Не удалось получить модели отсека."
-
-msgid "Unable to retrieve the Bays."
-msgstr "Не удалось получить отсеки."
-
 msgid "Updated"
 msgstr "Обновлено"
 
 msgid "Volume Driver"
 msgstr "Драйвер диска"
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted bay is not "
-"recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted bays are "
-"not recoverable."
-msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление отсека "
-"необратимо."
-msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление отсеков "
-"необратимо."
-msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление отсеков "
-"необратимо."
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
-"not recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
-"are not recoverable."
-msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление модели отсека "
-"необратимо."
-msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление моделей отсека "
-"необратимо."
-msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление моделей отсека "
-"необратимо."
-
-msgid "{$ ctrl.bay.bay_create_timeout $} minute"
-msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
-msgstr[0] "{$ ctrl.bay.bay_create_timeout $} минута"
-msgstr[1] "{$ ctrl.bay.bay_create_timeout $} минуты"
-msgstr[2] "{$ ctrl.bay.bay_create_timeout $} минут"

@@ -1,11 +1,10 @@
-# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Lenka Husáková <lenka.husakova@ultimum.io>, 2016. #zanata
 # Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev35\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-23 00:46+0000\n"
+"POT-Creation-Date: 2016-08-29 05:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,44 +24,8 @@ msgstr "Port serveru API"
 msgid "An arbitrary human-readable name"
 msgstr "Libovolný čitelný název"
 
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"baymodel. May be used multiple times."
-msgstr ""
-"Libovolné popisky ve tvaru párů klíč=hodnota asociované s baymodelem. Může "
-"být použito vícekrát."
-
-#, python-format
-msgid "Bay %s was successfully created."
-msgstr "Bay %s byl úspěšně vytvořen."
-
-msgid "Bay Create Timeout"
-msgstr "Časový limit pro vytvoření bay"
-
-msgid "Bay Name"
-msgstr "Název bay"
-
-msgid "Baymodel"
-msgstr "Baymodel"
-
-#, python-format
-msgid "Baymodel %s was successfully created."
-msgstr "Baymodel %s byl úspěšně vytvořen."
-
-msgid "Baymodel Detail"
-msgstr "Detaily baymodelu"
-
-msgid "Baymodel Name"
-msgstr "Název baymodelu"
-
-msgid "Baymodels"
-msgstr "Baymodely"
-
 msgid "COE"
 msgstr "COE"
-
-msgid "Choose a Baymodel"
-msgstr "Zvolte baymodel"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Zvolte technologii kontejnerové orchestrace"
@@ -94,29 +57,11 @@ msgstr "Distribuce clusteru"
 msgid "Cluster Type"
 msgstr "Typ clusteru"
 
-msgid "Confirm Delete Bay"
-msgid_plural "Confirm Delete Bays"
-msgstr[0] "Potvrdit smazání bay"
-msgstr[1] "Potvrdit smazání bay"
-msgstr[2] "Potvrdit smazání bay"
-
-msgid "Confirm Delete Baymodel"
-msgid_plural "Confirm Delete Baymodels"
-msgstr[0] "Potvrdit smazání baymodelu"
-msgstr[1] "Potvrdit smazání baymodelů"
-msgstr[2] "Potvrdit smazání baymodelů"
-
 msgid "Container Orchestration Engine"
 msgstr "Technologie kontejnerové orchestrace"
 
 msgid "Create"
 msgstr "Vytvořit"
-
-msgid "Create Bay"
-msgstr "Vytvořit bay"
-
-msgid "Create Baymodel"
-msgstr "Vytvořit baymodel"
 
 msgid "Created"
 msgstr "Vytvořeno"
@@ -124,36 +69,8 @@ msgstr "Vytvořeno"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "Delete Bay"
-msgid_plural "Delete Bays"
-msgstr[0] "Smazat bay"
-msgstr[1] "Smazat bay"
-msgstr[2] "Smazat bay"
-
-msgid "Delete Baymodel"
-msgid_plural "Delete Baymodels"
-msgstr[0] "Smazat baymodel"
-msgstr[1] "Smazat baymodely"
-msgstr[2] "Smazat baymodelů"
-
-msgid "Delete Baymodels"
-msgstr "Smazat baymodely"
-
-msgid "Delete Bays"
-msgstr "Smazat bay"
-
-#, python-format
-msgid "Deleted Baymodel: %s."
-msgid_plural "Deleted Baymodels: %s."
-msgstr[0] "Smazaný baymodel: %s."
-msgstr[1] "Smazané baymodely: %s."
-msgstr[2] "Smazaných baymodelů: %s."
-
 msgid "Disable TLS"
 msgstr "Zakázat TLS"
-
-msgid "Disable TLS in the Bay. Default: False"
-msgstr "Zakázat TLS v bay. Výchozí: Chybný"
 
 msgid "Discovery URL"
 msgstr "Discovery URL"
@@ -172,9 +89,6 @@ msgstr "Velikost svazku docker (GB)"
 
 msgid "Enable Registry"
 msgstr "Povolit registr"
-
-msgid "Enable docker registry in the Bay. Default: False"
-msgstr "Povolit docker registr v bay. Výchozí: Chybný"
 
 msgid "External Network ID"
 msgstr "ID externí sítě"
@@ -227,9 +141,6 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Štítky"
 
-msgid "Make baymodel public. Default: False"
-msgstr "Zveřejnění baymodel. Výchozí: Chybný"
-
 msgid "Master Addresses"
 msgstr "Hlavní adresy"
 
@@ -250,12 +161,6 @@ msgstr "Různé"
 
 msgid "Name"
 msgstr "Název"
-
-msgid "Name of the bay to create."
-msgstr "Název bay pro vytvoření."
-
-msgid "Name of the baymodel to create."
-msgstr "Název baymodelu pro vytvoření."
 
 msgid "Network"
 msgstr "Síť"
@@ -302,20 +207,8 @@ msgstr "Velikost"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Specifikujte vlastní discovery url pro discovery uzel."
 
-msgid "Specify bay name and choose baymodel"
-msgstr "Zadejte název bay a zvolte baymodel"
-
-msgid "Specify conditions for bay creation."
-msgstr "Zadejte podmínky pro vytvoření bay."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Zadejte technologii kontejnerové orchestrace k použití."
-
-msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
-msgstr "Zadejte jmenný server pro použití v bay. Výchozí: 8.8.8.8"
-
-msgid "Specify the number of master nodes and bay nodes for the bay."
-msgstr "Specifikujte počet hlavních uzlů a bay uzly pro bay."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Zadejte velikost pro svazek docker v GB"
@@ -329,57 +222,11 @@ msgstr "Stav"
 msgid "TLS Disabled"
 msgstr "TLS zakázáno"
 
-msgid "The DNS nameserver to use for this Bay"
-msgstr "DNS jmenný server pro použití v bay"
-
-msgid "The bay node count."
-msgstr "Počet bay uzlů."
-
-msgid "The external Neutron network ID to connect to this bay model"
-msgstr "ID externí Neutron sítě pro připojení do tohoto baymodelu"
-
-msgid "The http_proxy address to use for nodes in bay"
-msgstr "Http_proxy adresa pro použití uzlů v bay"
-
-msgid "The https_proxy address to use for nodes in bay"
-msgstr "Https_proxy adresa pro použití uzlů v bay"
-
-msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr "Název nebo UUID klíče SSH pro načtení do bay uzlů."
-
-msgid "The name or UUID of the base image to customize for the bay."
-msgstr "Název nebo UUID základního obrazu ke kustomizaci pro bay."
-
 msgid "The network driver name for instantiating container networks"
 msgstr "Název síťového ovladače pro spouštění sítí kontejneru."
 
-msgid "The no_proxy address to use for nodes in bay"
-msgstr "No_proxy adresa pro použití uzlů v bay"
-
-msgid "The nova flavor id to use when launching the bay. Default: m1.small"
-msgstr "Id nova typ pro použití při spouštění bay. Výchozí: m1.small"
-
-msgid ""
-"The nova flavor id to use when launching the master node of the bay. "
-"Default: m1.small"
-msgstr ""
-"Id typu nova pro použití při spuštění hlavního uzlu bay. Výchozí: m1.small"
-
-msgid "The number of master nodes for the bay."
-msgstr "Počet hlavních uzlů pro bay."
-
-msgid "The private Neutron network name to connect to this bay model"
-msgstr "Název privátní Neutron sítě pro připojení do tohoto baymodelu"
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Velikost v GB pro svazek docker. Výchozí: 25"
-
-msgid ""
-"The timeout for bay creation in minutes. Set to 0 for no timeout. The "
-"default is no timeout."
-msgstr ""
-"Časový limit pro vytvoření bay v minutách. Nastavte 0 pro žádný časový "
-"limit. Ve výchozím nastavení není žádný časový limit."
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "Název ovladače svazku pro spouštění svazku kontejneru."
@@ -390,88 +237,8 @@ msgstr "Toto by se mělo jmenovat fixed-network-cidr. Výchozí: 10.0.0.0/24"
 msgid "Timeout"
 msgstr "Časový limit"
 
-msgid "Unable to create Bay."
-msgstr "Nelze vytvořit bay."
-
-msgid "Unable to create Baymodel"
-msgstr "Nelze vytvořit baymodel"
-
-#, python-format
-msgid "Unable to delete Bay: %s."
-msgid_plural "Unable to delete Bays: %s."
-msgstr[0] "Nelze smazat bay: %s."
-msgstr[1] "Nelze smazat baye: %s."
-msgstr[2] "Nelze smazat baye: %s."
-
-#, python-format
-msgid "Unable to delete Baymodel: %s."
-msgid_plural "Unable to delete Baymodels: %s."
-msgstr[0] "Nelze smazat baymodel: %s."
-msgstr[1] "Nelze smazat baymodely: %s."
-msgstr[2] "Nelze smazat baymodely: %s."
-
-#, python-format
-msgid "Unable to delete the Bay with id: %(id)s"
-msgstr "Nelze smazat bay s id: %(id)s"
-
-#, python-format
-msgid "Unable to delete the Baymodel with id: %(id)s"
-msgstr "Nelze smazat baymodel s id: %(id)s"
-
-msgid "Unable to delete the Baymodels."
-msgstr "Nelze smazat baymodely."
-
-msgid "Unable to retrieve the Bay."
-msgstr "Nelze získat Bay."
-
-msgid "Unable to retrieve the Baymodel."
-msgstr "Nelze získat baymodel."
-
-msgid "Unable to retrieve the Baymodels."
-msgstr "Nelze získat baymodely."
-
 msgid "Updated"
 msgstr "Aktualizováno"
 
 msgid "Volume Driver"
 msgstr "Ovladač svazku"
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted bay is not "
-"recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted bays are "
-"not recoverable."
-msgstr[0] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazaný bay není možné "
-"obnovit."
-msgstr[1] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané baye není možné "
-"obnovit."
-msgstr[2] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané baye není možné "
-"obnovit."
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
-"not recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
-"are not recoverable."
-msgstr[0] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazaný baymodel nelze "
-"obnovit."
-msgstr[1] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané baymodely nelze "
-"obnovit."
-msgstr[2] ""
-"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané baymodely nelze "
-"obnovit."
-
-msgid "{$ ctrl.bay.bay_create_timeout $} minute"
-msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
-msgstr[0] "{$ ctrl.bay.bay_create_timeout $} minuta"
-msgstr[1] "{$ ctrl.bay.bay_create_timeout $} minuty"
-msgstr[2] "{$ ctrl.bay.bay_create_timeout $} minut"

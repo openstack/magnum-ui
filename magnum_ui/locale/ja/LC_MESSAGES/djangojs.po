@@ -2,13 +2,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev37\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-25 05:55+0000\n"
+"POT-Creation-Date: 2016-08-29 05:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-08-24 09:22+0000\n"
+"PO-Revision-Date: 2016-08-29 08:57+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -28,43 +28,11 @@ msgid "An arbitrary human-readable name"
 msgstr "人間が読むことができる任意の名前。"
 
 msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"baymodel. May be used multiple times."
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
 msgstr ""
-"ベイモデルには、「key=value」形式で任意のラベルを関連付けできます。複数個指定"
-"できます。"
-
-msgid "Bay"
-msgstr "ベイ"
-
-#, python-format
-msgid "Bay %s was successfully created."
-msgstr "ベイ %s が正常に作成されました。"
-
-msgid "Bay Create Timeout"
-msgstr "ベイ作成のタイムアウト"
-
-msgid "Bay Name"
-msgstr "ベイの名前"
-
-msgid "Baymodel"
-msgstr "ベイモデル"
-
-#, python-format
-msgid "Baymodel %s was successfully created."
-msgstr "ベイモデル %s が正常に作成されました。"
-
-msgid "Baymodel Detail"
-msgstr "ベイモデルの詳細"
-
-msgid "Baymodel Name"
-msgstr "ベイモデル名"
-
-msgid "Baymodels"
-msgstr "ベイモデル"
-
-msgid "Bays"
-msgstr "ベイ"
+"クラスターテンプレートには、「key=value」形式で任意のラベルを関連付けできま"
+"す。複数個指定できます。"
 
 msgid "CHECK COMPLETE"
 msgstr "チェック完了"
@@ -81,8 +49,8 @@ msgstr "作成に失敗"
 msgid "CREATE IN PROGRESS"
 msgstr "作成中"
 
-msgid "Choose a Baymodel"
-msgstr "ベイモデルを選択してください"
+msgid "Choose a Cluster Template"
+msgstr "クラスターテンプレートを選択してください。"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "コンテナーオーケストレーションエンジンを選択してください"
@@ -108,19 +76,54 @@ msgstr "イメージを選択してください"
 msgid "Cinder"
 msgstr "Cinder"
 
+msgid "Cluster"
+msgstr "クラスター"
+
+#, python-format
+msgid "Cluster %s was successfully created."
+msgstr "クラスター %s が正常に作成されました。"
+
+msgid "Cluster Create Timeout"
+msgstr "クラスター作成のタイムアウト"
+
 msgid "Cluster Distro"
 msgstr "クラスターのディストリビューション"
+
+msgid "Cluster Name"
+msgstr "クラスター名"
+
+msgid "Cluster Template"
+msgstr "クラスターテンプレート"
+
+msgid "Cluster Template Detail"
+msgstr "クラスターテンプレートの詳細"
+
+msgid "Cluster Template Name"
+msgstr "クラスターテンプレート名"
+
+msgid "Cluster Templates"
+msgstr "クラスターテンプレート"
 
 msgid "Cluster Type"
 msgstr "クラスター種別"
 
-msgid "Confirm Delete Bay"
-msgid_plural "Confirm Delete Bays"
-msgstr[0] "ベイの削除の確認"
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "クラスターテンプレート %s が正常に作成されました。"
 
-msgid "Confirm Delete Baymodel"
-msgid_plural "Confirm Delete Baymodels"
-msgstr[0] "ベイモデルの削除の確認"
+msgid "Cluster template Name"
+msgstr "クラスターテンプレート名"
+
+msgid "Clusters"
+msgstr "クラスター"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "クラスターの削除の確認"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "クラスターテンプレートの削除の確認"
 
 msgid "Container Orchestration Engine"
 msgstr "コンテナーオーケストレーションエンジン"
@@ -128,11 +131,11 @@ msgstr "コンテナーオーケストレーションエンジン"
 msgid "Create"
 msgstr "作成"
 
-msgid "Create Bay"
-msgstr "ベイの作成"
+msgid "Create Cluster"
+msgstr "クラスターの作成"
 
-msgid "Create Baymodel"
-msgstr "ベイモデルの作成"
+msgid "Create Cluster Template"
+msgstr "クラスターテンプレートの作成"
 
 msgid "Created"
 msgstr "作成時刻"
@@ -149,35 +152,36 @@ msgstr "削除中"
 msgid "DNS"
 msgstr "DNS"
 
-msgid "Delete Bay"
-msgid_plural "Delete Bays"
-msgstr[0] "ベイの削除"
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "クラスターの削除"
 
-msgid "Delete Baymodel"
-msgid_plural "Delete Baymodels"
-msgstr[0] "ベイモデルの削除"
+msgid "Delete Cluster Template"
+msgid_plural "Delete Cluster Templates"
+msgstr[0] "クラスターテンプレートの削除"
 
-msgid "Delete Baymodels"
-msgstr "ベイモデルの削除"
+msgid "Delete Cluster Templates"
+msgstr "クラスターテンプレートの削除"
 
-msgid "Delete Bays"
-msgstr "ベイの削除"
-
-#, python-format
-msgid "Deleted Bay: %s."
-msgid_plural "Deleted Bays: %s."
-msgstr[0] "ベイ %s を削除しました。"
+msgid "Delete Clusters"
+msgstr "クラスターの削除"
 
 #, python-format
-msgid "Deleted Baymodel: %s."
-msgid_plural "Deleted Baymodels: %s."
-msgstr[0] "ベイモデル %s を削除しました。"
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "クラスターテンプレート %s を削除しました。"
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "クラスター %s を削除しました。"
 
 msgid "Disable TLS"
 msgstr "TLS の無効化"
 
-msgid "Disable TLS in the Bay. Default: False"
-msgstr "このベイにおいて、 TLS を無効にします。デフォルト: False"
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr ""
+"このクラスターテンプレートにおいて、 TLS を無効にします。デフォルト: False"
 
 msgid "Discovery URL"
 msgstr "探索 URL"
@@ -197,9 +201,10 @@ msgstr "Docker のボリューム容量 (GB)"
 msgid "Enable Registry"
 msgstr "レジストリーの有効化"
 
-msgid "Enable docker registry in the Bay. Default: False"
+msgid "Enable docker registry in the cluster temlate. Default: False"
 msgstr ""
-"このベイにおいて、 Docker のレジストリーを有効にします。デフォルト: False"
+"このクラスターテンプレートにおいて、 Docker のレジストリーを有効にします。デ"
+"フォルト: False"
 
 msgid "External Network ID"
 msgstr "外部ネットワーク ID"
@@ -252,8 +257,8 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "ラベル"
 
-msgid "Make baymodel public. Default: False"
-msgstr "ベイモデルをパブリックに設定します。デフォルト: False"
+msgid "Make cluster template public. Default: False"
+msgstr "クラスターテンプレートをパブリックに設定します。デフォルト: False"
 
 msgid "Master Addresses"
 msgstr "マスターのアドレス"
@@ -279,11 +284,11 @@ msgstr "その他"
 msgid "Name"
 msgstr "名前"
 
-msgid "Name of the bay to create."
-msgstr "作成するベイの名前"
+msgid "Name of the cluster template to create."
+msgstr "作成するクラスターテンプレートの名前。"
 
-msgid "Name of the baymodel to create."
-msgstr "作成するベイモデルの名前"
+msgid "Name of the cluster to create."
+msgstr "作成するクラスターの名前。"
 
 msgid "Network"
 msgstr "ネットワーク"
@@ -342,20 +347,21 @@ msgstr "サイズ"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
 
-msgid "Specify bay name and choose baymodel"
-msgstr "ベイの名前を指定し、ベイモデルを選択してください"
+msgid "Specify cluster name and choose cluster template"
+msgstr "クラスターの名前を指定し、クラスターテンプレートを選択してください"
 
-msgid "Specify conditions for bay creation."
-msgstr "ベイの作成条件を指定してください。"
+msgid "Specify conditions for cluster creation."
+msgstr "クラスターの作成条件を指定してください。"
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "使用するコンテナーオーケストレーションエンジンを指定してください。"
 
-msgid "Specify the nameserver to use for the Bay. Default: 8.8.8.8"
-msgstr "ベイで使用するネームサーバーを指定してください。"
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr "クラスターテンプレートで使用するネームサーバーを指定してください。"
 
-msgid "Specify the number of master nodes and bay nodes for the bay."
-msgstr "ベイのマスターノードとベイノードの数を指定してください。"
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr "クラスターのマスターノードとクラスターノードの数を指定してください。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker のボリュームのサイズを GB 単位で指定してください"
@@ -369,59 +375,62 @@ msgstr "状態"
 msgid "TLS Disabled"
 msgstr "TLS の無効化"
 
-msgid "The DNS nameserver to use for this Bay"
-msgstr "このベイで使用する DNS ネームサーバー"
+msgid "The DNS nameserver to use for this cluster template"
+msgstr "このクラスターテンプレートで使用する DNS ネームサーバー。"
 
-msgid "The bay node count."
-msgstr "ベイノードの数"
+msgid "The cluster node count."
+msgstr "クラスターノードの数"
 
-msgid "The external Neutron network ID to connect to this bay model"
-msgstr "このベイモデルに接続する Neutron の外部ネットワーク ID"
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "このクラスターテンプレートに接続する Neutron の外部ネットワーク ID。"
 
-msgid "The http_proxy address to use for nodes in bay"
-msgstr "ベイのノードに使用する http_proxy アドレス"
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "クラスターのノードに使用する http_proxy アドレス。"
 
-msgid "The https_proxy address to use for nodes in bay"
-msgstr "ベイのノードに使用する https_proxy アドレス"
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "クラスターのノードに使用する https_proxy アドレス。"
 
-msgid "The name or UUID of the SSH keypair to load into the Bay nodes."
-msgstr "このベイのノードにロードする SSH キーペアの名前または UUID。"
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr "このクラスターのノードにロードする SSH キーペアの名前または UUID。"
 
-msgid "The name or UUID of the base image to customize for the bay."
-msgstr "このベイで、カスタマイズのベースとなるイメージの名前または UUID。"
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr ""
+"このクラスターテンプレートで、カスタマイズのベースとなるイメージの名前または "
+"UUID。"
 
 msgid "The network driver name for instantiating container networks"
 msgstr "コンテナーネットワークの作成に使用するネットワークドライバー名"
 
-msgid "The no_proxy address to use for nodes in bay"
-msgstr "ベイのノードに使用する no_proxy アドレス"
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "クラスターのノードで使用するプロキシー例外のアドレス。"
 
-msgid "The nova flavor id to use when launching the bay. Default: m1.small"
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
 msgstr ""
-"ベイを起動するときに使用する Nova のフレーバー ID。デフォルト: m1.small"
+"クラスターを起動するときに使用する Nova のフレーバー ID。デフォルト: m1.small"
 
 msgid ""
-"The nova flavor id to use when launching the master node of the bay. "
+"The nova flavor id to use when launching the master node of the cluster. "
 "Default: m1.small"
 msgstr ""
-"ベイのマスターノードを起動するときに使用する Nova のフレーバー ID。デフォル"
-"ト: m1.small"
+"クラスターのマスターノードを起動するときに使用する Nova のフレーバー ID。デ"
+"フォルト: m1.small"
 
-msgid "The number of master nodes for the bay."
-msgstr "ベイのマスターノードの数"
+msgid "The number of master nodes for the cluster."
+msgstr "このクラスターのマスターノードの数。"
 
-msgid "The private Neutron network name to connect to this bay model"
-msgstr "このベイモデルに接続する Neutron のプライベートネットワーク名"
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr ""
+"このクラスターテンプレートに接続する Neutron のプライベートネットワーク名。"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
 
 msgid ""
-"The timeout for bay creation in minutes. Set to 0 for no timeout. The "
+"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
 "default is no timeout."
 msgstr ""
-"ベイの作成タイムアウト時間 (単位: 分)。タイムアウトなしにするには 0 を設定し"
-"ます。デフォルトはタイムアウトしません。"
+"クラスターの作成タイムアウト時間 (単位: 分)。タイムアウトなしにするには 0 を"
+"設定します。デフォルトはタイムアウトしません。"
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "コンテナーボリュームの作成時に使用するボリュームドライバー名。"
@@ -442,47 +451,47 @@ msgstr "更新に失敗"
 msgid "UPDATE IN PROGRESS"
 msgstr "更新中"
 
-msgid "Unable to create Bay."
-msgstr "ベイを作成できません。"
+msgid "Unable to create cluster template"
+msgstr "クラスターテンプレートを作成できません"
 
-msgid "Unable to create Baymodel"
-msgstr "ベイモデルを作成できません。"
-
-#, python-format
-msgid "Unable to delete Bay: %s."
-msgid_plural "Unable to delete Bays: %s."
-msgstr[0] "ベイを削除できません: %s"
+msgid "Unable to create cluster."
+msgstr "クラスターを作成できません"
 
 #, python-format
-msgid "Unable to delete Baymodel: %s."
-msgid_plural "Unable to delete Baymodels: %s."
-msgstr[0] "ベイモデルを削除できません: %s"
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "クラスターテンプレートを削除できません: %s"
 
 #, python-format
-msgid "Unable to delete the Bay with id: %(id)s"
-msgstr "ID %(id)s のベイを削除できません。"
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "クラスターを削除できません: %s"
 
 #, python-format
-msgid "Unable to delete the Baymodel with id: %(id)s"
-msgstr "ID %(id)s のベイモデルを削除できません"
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "ID %(id)s のクラスターテンプレートを削除できません。"
 
-msgid "Unable to delete the Baymodels."
-msgstr "ベイモデルを削除できません。"
+msgid "Unable to delete the cluster templates."
+msgstr "クラスターテンプレートを削除できません。"
 
-msgid "Unable to delete the Bays."
-msgstr "ベイを削除できません。"
+#, python-format
+msgid "Unable to delete the cluster with id: %(id)s"
+msgstr "ID %(id)s のクラスターを削除できません。"
 
-msgid "Unable to retrieve the Bay."
-msgstr "ベイの情報を取得できません。"
+msgid "Unable to delete the clusters."
+msgstr "クラスターを削除できません。"
 
-msgid "Unable to retrieve the Baymodel."
-msgstr "ベイモデルの情報を取得できません。"
+msgid "Unable to retrieve the cluster template."
+msgstr "クラスターテンプレートを取得できません。"
 
-msgid "Unable to retrieve the Baymodels."
-msgstr "ベイモデルの一覧を取得できません。"
+msgid "Unable to retrieve the cluster templates."
+msgstr "クラスターテンプレートを取得できません。"
 
-msgid "Unable to retrieve the Bays."
-msgstr "ベイの一覧を取得できません。"
+msgid "Unable to retrieve the cluster."
+msgstr "クラスターを取得できません。"
+
+msgid "Unable to retrieve the clusters."
+msgstr "クラスターの一覧を取得できません"
 
 msgid "Updated"
 msgstr "更新時刻"
@@ -491,35 +500,35 @@ msgid "Volume Driver"
 msgstr "ボリュームドライバー"
 
 #, python-format
-msgid "You are not allowed to delete baymodels: %s"
-msgstr "ベイモデルの削除は許可されていません: %s"
+msgid "You are not allowed to delete cluster templates: %s"
+msgstr "クラスターテンプレートの削除は許可されていません: %s"
 
 #, python-format
-msgid "You are not allowed to delete bays: %s"
-msgstr "ベイの削除は許可されていません: %s"
-
-#, python-format
-msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted bay is not "
-"recoverable."
-msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted bays are "
-"not recoverable."
-msgstr[0] ""
-"\"%s\" を選択しました。選択内容を確認してください。削除されたベイは元に戻せま"
-"せん。"
+msgid "You are not allowed to delete clusters: %s"
+msgstr "クラスターの削除は許可されていません: %s"
 
 #, python-format
 msgid ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodel is "
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
 "not recoverable."
 msgid_plural ""
-"You have selected \"%s\". Please confirm your selection. Deleted baymodels "
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
 "are not recoverable."
 msgstr[0] ""
-"\"%s\" を選択しました。選択内容を確認してください。削除されたベイモデルは元に"
+"\"%s\" を選択しました。選択内容を確認してください。削除されたクラスターは元に"
 "戻せません。"
 
-msgid "{$ ctrl.bay.bay_create_timeout $} minute"
-msgid_plural "{$ ctrl.bay.bay_create_timeout $} minutes"
-msgstr[0] "{$ ctrl.bay.bay_create_timeout $} 分"
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたクラスターテンプ"
+"レートは元に戻せません。"
+
+msgid "{$ ctrl.cluster.bay_create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.bay_create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.bay_create_timeout $} 分"
