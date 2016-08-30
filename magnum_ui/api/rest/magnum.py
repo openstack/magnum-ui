@@ -123,3 +123,29 @@ class Clusters(generic.View):
         return rest_utils.CreatedResponse(
             '/api/container_infra/cluster/%s' % new_cluster.uuid,
             new_cluster.to_dict())
+
+
+@urls.register
+class Certificates(generic.View):
+    """API for Magnum Certificates"""
+    url_regex = r'container_infra/certificates/(?P<cluster_id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, cluster_id):
+        """Get a certificate from a cluster.
+
+        Returns the CA.pem string on success
+        """
+        ca = magnum.certificate_show(request, cluster_id)
+        return ca.to_dict()
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request):
+        """Create a new Certificate.
+
+        Returns the new Cert.pem string from csr for a cluster on success.
+        """
+        new_cert = magnum.certificate_create(request, **request.DATA)
+        return rest_utils.CreatedResponse(
+            '/api/container_infra/certificates/',
+            new_cert.to_dict())

@@ -105,6 +105,26 @@ class MagnumRestTestCase(test.TestCase):
             request,
             u'bay_id')
 
+    # Certificates
+    @mock.patch.object(magnum, 'magnum')
+    def test_certificate_create(self, client):
+        test_certificates = mock_resource(TEST.certificates.list())
+        test_certificate = test_certificates[0]
+        test_body = json.dumps(test_certificate.to_dict())
+        request = self.mock_rest_request(body=test_body)
+
+        test_res_list = mock_resource(TEST.certificate_res_list.list())
+        test_res = test_res_list[0]
+        client.certificate_create.return_value = test_res
+
+        response = magnum.Certificates().post(request)
+        res_body = json.loads(response.content)
+
+        self.assertStatusCode(response, 201)
+        self.assertEqual(res_body['pem'], test_res.to_dict()['pem'])
+        client.certificate_create.assert_called_once_with(
+            request, **test_certificate.to_dict())
+
 
 def mock_resource(resource):
     """Utility function to make mocking more DRY"""

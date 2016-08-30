@@ -40,6 +40,8 @@ CLUSTER_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count',
                         'discovery_url', 'cluster_create_timeout',
                         'master_count']
 
+CERTIFICATE_CREATE_ATTRS = ['cluster_uuid', 'csr']
+
 
 @memoized
 def magnumclient(request):
@@ -125,3 +127,18 @@ def cluster_list(request, limit=None, marker=None, sort_key=None,
 
 def cluster_show(request, id):
     return magnumclient(request).bays.get(id)
+
+
+def certificate_create(request, **kwargs):
+    args = {}
+    for (key, value) in kwargs.items():
+        if key in CERTIFICATE_CREATE_ATTRS:
+            args[key] = value
+        else:
+            raise exceptions.BadRequest(
+                "Key must be in %s" % ",".join(CERTIFICATE_CREATE_ATTRS))
+    return magnumclient(request).certificates.create(**args)
+
+
+def certificate_show(request, id):
+    return magnumclient(request).certificates.get(id)

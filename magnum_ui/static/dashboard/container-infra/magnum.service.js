@@ -38,13 +38,15 @@
       getClusterTemplates: getClusterTemplates,
       deleteClusterTemplate: deleteClusterTemplate,
       deleteClusterTemplates: deleteClusterTemplates,
+      showCertificate: showCertificate,
+      signCertificate: signCertificate,
     };
 
     return service;
 
-    //////////
+    //////////////
     // Clusters //
-    //////////
+    //////////////
 
     function createCluster(params) {
         return apiService.post('/api/container_infra/clusters/', params)
@@ -83,14 +85,14 @@
         });
     }
 
-    ///////////////
+    //////////////////////
     // ClusterTemplates //
-    ///////////////
+    //////////////////////
 
     function createClusterTemplate(params) {
       return apiService.post('/api/container_infra/cluster_templates/', params)
         .error(function() {
-          toastService.add('error', gettext('Unable to create cluster template'));
+          toastService.add('error', gettext('Unable to create cluster template.'));
         });
     }
 
@@ -122,6 +124,24 @@
         .error(function() {
           toastService.add('error', gettext('Unable to delete the cluster templates.'));
         })
+    }
+
+    //////////////////
+    // Certificates //
+    //////////////////
+
+    function signCertificate(params) {
+      return apiService.post('/api/container_infra/certificates/', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to sign certificate.'));
+        });
+    }
+
+    function showCertificate(id) {
+      return apiService.get('/api/container_infra/certificates/' + id)
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the certificate.'));
+        });
     }
   }
 }());
