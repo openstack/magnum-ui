@@ -14,10 +14,6 @@
 
 from django.views import generic
 
-# DO NOT REMOVE
-# This needs for register url of API.
-from magnum_ui.api.rest import magnum  # noqa
-
 
 class IndexView(generic.TemplateView):
     template_name = 'angular.html'
