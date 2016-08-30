@@ -2,13 +2,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev48\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-29 05:32+0000\n"
+"POT-Creation-Date: 2016-08-30 02:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-08-29 08:57+0000\n"
+"PO-Revision-Date: 2016-08-30 04:32+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -111,9 +111,6 @@ msgstr "クラスター種別"
 msgid "Cluster template %s was successfully created."
 msgstr "クラスターテンプレート %s が正常に作成されました。"
 
-msgid "Cluster template Name"
-msgstr "クラスターテンプレート名"
-
 msgid "Clusters"
 msgstr "クラスター"
 
@@ -176,6 +173,9 @@ msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "クラスター %s を削除しました。"
 
+msgid "Device Mapper"
+msgstr "Device Mapper"
+
 msgid "Disable TLS"
 msgstr "TLS の無効化"
 
@@ -189,8 +189,14 @@ msgstr "探索 URL"
 msgid "Docker"
 msgstr "Docker"
 
+msgid "Docker Storage Driver"
+msgstr "Docker のストレージドライバー"
+
 msgid "Docker Swarm"
 msgstr "Docker Swarm"
+
+msgid "Docker Volume Driver"
+msgstr "Docker のボリュームドライバー"
 
 msgid "Docker Volume Size"
 msgstr "Docker のボリューム容量"
@@ -212,6 +218,9 @@ msgstr "外部ネットワーク ID"
 msgid "Fixed Network"
 msgstr "固定ネットワーク"
 
+msgid "Fixed Subnet"
+msgstr "固定サブネット"
+
 msgid "Flannel"
 msgstr "Flannel"
 
@@ -220,6 +229,12 @@ msgstr "フレーバー"
 
 msgid "Flavor ID"
 msgstr "フレーバー ID"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+msgid "Floating IP Enabled"
+msgstr "Floating IP の有効化"
 
 msgid "HTTP Proxy"
 msgstr "HTTP プロキシー"
@@ -235,6 +250,19 @@ msgstr "イメージ"
 
 msgid "Image ID"
 msgstr "イメージ ID"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"作成されるクラスターが Floating IP を持つかどうかを示します。デフォルト: True"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"作成されるクラスターがマスターノード用のロードバランサーを持つかどうかを示し"
+"ます。デフォルト: False"
 
 msgid "Infinite"
 msgstr "無制限"
@@ -271,6 +299,9 @@ msgstr "マスターノードのフレーバー"
 
 msgid "Master Flavor ID"
 msgstr "マスターノードのフレーバー ID"
+
+msgid "Master LB"
+msgstr "マスターノード LB"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -310,6 +341,9 @@ msgstr "ノードのスペック"
 
 msgid "Nodes"
 msgstr "ノード"
+
+msgid "Overley"
+msgstr "Overley"
 
 msgid "Overview"
 msgstr "概要"
@@ -375,6 +409,9 @@ msgstr "状態"
 msgid "TLS Disabled"
 msgstr "TLS の無効化"
 
+msgid "TLS Enabled"
+msgstr "TLS の有効化"
+
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "このクラスターテンプレートで使用する DNS ネームサーバー。"
 
@@ -421,6 +458,10 @@ msgstr "このクラスターのマスターノードの数。"
 msgid "The private Neutron network name to connect to this cluster template"
 msgstr ""
 "このクラスターテンプレートに接続する Neutron のプライベートネットワーク名。"
+
+msgid "The private Neutron subnet name to connect to this cluster template"
+msgstr ""
+"このクラスターテンプレートに接続する Neutron のプライベートサブネット名。"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
