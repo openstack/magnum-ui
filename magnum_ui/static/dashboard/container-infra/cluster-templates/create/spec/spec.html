@@ -54,7 +54,7 @@
     </div>
     <div class="col-xs-6">
       <div class="form-group">
-        <label class="control-label" for="cluster-template-docker-storage-driver" translate>Docker Volume Driver</label>
+        <label class="control-label" for="cluster-template-docker-storage-driver" translate>Docker Storage Driver</label>
         <select name="cluster-template-docker-storage-driver" type="text" class="form-control" id="cluster-template-docker-storage-driver"
                 ng-model="model.newClusterTemplateSpec.docker_storage_driver"
                 ng-options="driver.name as driver.label for driver in model.newClusterTemplateSpec.docker_storage_drivers">
