@@ -1,16 +1,17 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# ZHIYUAN SU <suzhiyuan@inspur.com>, 2016. #zanata
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
+"Project-Id-Version: magnum-ui 1.0.1.dev52\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-29 05:32+0000\n"
+"POT-Creation-Date: 2016-08-30 18:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-08-23 02:59+0000\n"
-"Last-Translator: sunanchen <KF.sunanchen@h3c.com>\n"
+"PO-Revision-Date: 2016-08-31 04:02+0000\n"
+"Last-Translator: ZHIYUAN SU <suzhiyuan@inspur.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -27,6 +28,11 @@ msgstr "API服务端口"
 
 msgid "An arbitrary human-readable name"
 msgstr "一个任意可读的名称。"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr "以键值对形式的与集群模板关联的任意标签，可能多次复用"
 
 msgid "CHECK COMPLETE"
 msgstr "检查完成"
@@ -70,14 +76,33 @@ msgstr "Cinder"
 msgid "Cluster Distro"
 msgstr "集群。"
 
+msgid "Cluster Template"
+msgstr "集群模板"
+
+msgid "Cluster Template Name"
+msgstr "集群模板名"
+
+msgid "Cluster Templates"
+msgstr "集群模板"
+
 msgid "Cluster Type"
 msgstr "集群类型"
+
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "成功创建集群模板%s"
 
 msgid "Container Orchestration Engine"
 msgstr "容器编配引擎"
 
 msgid "Create"
 msgstr "创建"
+
+msgid "Create Cluster"
+msgstr "创建集群"
+
+msgid "Create Cluster Template"
+msgstr "创建集群模板"
 
 msgid "Created"
 msgstr "已经创建的。"
@@ -94,8 +119,21 @@ msgstr "正在删除"
 msgid "DNS"
 msgstr "DNS"
 
+msgid "Delete Cluster Template"
+msgid_plural "Delete Cluster Templates"
+msgstr[0] "删除集群模板"
+
+msgid "Delete Cluster Templates"
+msgstr "批量删除集群模板"
+
+msgid "Device Mapper"
+msgstr "设备映射"
+
 msgid "Disable TLS"
 msgstr "禁用TLS"
+
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "在集群模板中禁用TLS，默认：不禁用"
 
 msgid "Discovery URL"
 msgstr "已有的URL，"
@@ -115,6 +153,9 @@ msgstr "Docker 卷大小 (GB)"
 msgid "Enable Registry"
 msgstr "可以注册"
 
+msgid "Enable docker registry in the cluster temlate. Default: False"
+msgstr "允许docker在集群模板中进行注册，默认：不允许"
+
 msgid "External Network ID"
 msgstr "外部网络ID。"
 
@@ -129,6 +170,9 @@ msgstr "云主机类型"
 
 msgid "Flavor ID"
 msgstr "云主机类型ID"
+
+msgid "Floating IP"
+msgstr "浮动IP"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
@@ -166,6 +210,9 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "标签"
 
+msgid "Make cluster template public. Default: False"
+msgstr "共享集群模板 默认：不共享"
+
 msgid "Master Addresses"
 msgstr "主节点地址"
 
@@ -178,6 +225,9 @@ msgstr "主节点类型"
 msgid "Master Flavor ID"
 msgstr "主节点类型ID"
 
+msgid "Master LB"
+msgstr "主负载均衡"
+
 msgid "Mesos"
 msgstr "Mesos"
 
@@ -189,6 +239,9 @@ msgstr "繁杂"
 
 msgid "Name"
 msgstr "名字。"
+
+msgid "Name of the cluster template to create."
+msgstr "给要创建的集群模板命名"
 
 msgid "Network"
 msgstr "网络"
@@ -210,6 +263,9 @@ msgstr "节点规格"
 
 msgid "Nodes"
 msgstr "节点列表。"
+
+msgid "Overley"
+msgstr "Overlay"
 
 msgid "Overview"
 msgstr "概览"
@@ -250,6 +306,10 @@ msgstr "为节点指定url"
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "申明应使用的容器编排引擎。"
 
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr "明确集群模板使用的nameserver地址，默认：8.8.8.8"
+
 msgid "Specify the size in GB for the docker volume"
 msgstr "指定容器卷的大小用GB来衡量。"
 
@@ -285,6 +345,38 @@ msgstr "更新失败"
 
 msgid "UPDATE IN PROGRESS"
 msgstr "正在更新"
+
+msgid "Unable to create cluster template"
+msgstr "无法创建集群模板"
+
+msgid "Unable to create cluster."
+msgstr "无法创建集群"
+
+#, python-format
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "无法按照id或者%(id)s 获取集群模板"
+
+msgid "Unable to delete the cluster templates."
+msgstr "无法批量获取集群模板"
+
+#, python-format
+msgid "Unable to delete the cluster with id: %(id)s"
+msgstr "无法按照id或者%(id)s删除集群"
+
+msgid "Unable to delete the clusters."
+msgstr "无法批量删除集群"
+
+msgid "Unable to retrieve the cluster template."
+msgstr "无法获取集群模板"
+
+msgid "Unable to retrieve the cluster templates."
+msgstr "无法批量获取集群模板"
+
+msgid "Unable to retrieve the cluster."
+msgstr "无法批量获取集群"
+
+msgid "Unable to retrieve the clusters."
+msgstr "无法获取集群"
 
 msgid "Updated"
 msgstr "已经更新的"
