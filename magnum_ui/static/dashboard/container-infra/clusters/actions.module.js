@@ -30,6 +30,7 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.clusters.delete.service',
+    'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.resourceType',
   ];
 
@@ -38,6 +39,7 @@
     gettext,
     createClusterService,
     deleteClusterService,
+    showCertificateService,
     resourceType)
   {
     var clusterResourceType = registry.getResourceType(resourceType);
@@ -48,6 +50,13 @@
         template: {
           type: 'delete',
           text: gettext('Delete Cluster')
+        }
+      })
+      .append({
+        id: 'showCertificateAction',
+        service: showCertificateService,
+        template: {
+          text: gettext('Show Certificate')
         }
       });
 

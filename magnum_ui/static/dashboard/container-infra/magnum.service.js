@@ -21,12 +21,13 @@
     .factory('horizon.app.core.openstack-service-api.magnum', MagnumAPI);
 
   MagnumAPI.$inject = [
+    '$timeout',
     'horizon.framework.util.http.service',
     'horizon.framework.widgets.toast.service',
     'horizon.framework.util.i18n.gettext'
   ];
 
-  function MagnumAPI(apiService, toastService, gettext) {
+  function MagnumAPI($timeout, apiService, toastService, gettext) {
     var service = {
       createCluster: createCluster,
       getCluster: getCluster,
@@ -40,6 +41,7 @@
       deleteClusterTemplates: deleteClusterTemplates,
       showCertificate: showCertificate,
       signCertificate: signCertificate,
+      downloadTextAsFile: downloadTextAsFile,
     };
 
     return service;
@@ -142,6 +144,25 @@
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the certificate.'));
         });
+    }
+
+    function downloadTextAsFile(text, filename){
+      // create text file as object url
+      var blob = new Blob([ text ], { "type" : "text/plain" });
+      window.URL = window.URL || window.webkitURL;
+      var fileurl = window.URL.createObjectURL(blob);
+
+      // provide text as downloaded file
+      $timeout(function() {
+        //Update view
+        var a = angular.element('<a></a>');
+        a.attr("href", fileurl);
+        a.attr("download", filename);
+        a.attr("target", "_blank");
+        angular.element(document.body).append(a);
+        a[0].click();
+        a.remove();
+      }, 0);
     }
   }
 }());
