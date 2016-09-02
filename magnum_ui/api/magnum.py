@@ -65,7 +65,7 @@ def baymodel_create(request, **kwargs):
         if key in BAYMODEL_CREATE_ATTRS:
             args[str(key)] = str(value)
         else:
-            raise exceptions.InvalidAttribute(
+            raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(BAYMODEL_CREATE_ATTRS))
         if key == "labels":
             labels = {}
@@ -97,7 +97,7 @@ def bay_create(request, **kwargs):
         if key in BAY_CREATE_ATTRS:
             args[key] = value
         else:
-            raise exceptions.InvalidAttribute(
+            raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(BAY_CREATE_ATTRS))
     return magnumclient(request).bays.create(**args)
 
