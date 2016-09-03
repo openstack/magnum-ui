@@ -1,17 +1,18 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # ZHIYUAN SU <suzhiyuan@inspur.com>, 2016. #zanata
+# cuixiaoyu <cuixiaoyu@163.com>, 2016. #zanata
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev52\n"
+"Project-Id-Version: magnum-ui 2.0.1.dev1\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-30 18:57+0000\n"
+"POT-Creation-Date: 2016-08-31 17:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-08-31 04:02+0000\n"
-"Last-Translator: ZHIYUAN SU <suzhiyuan@inspur.com>\n"
+"PO-Revision-Date: 2016-09-03 08:43+0000\n"
+"Last-Translator: cuixiaoyu <cuixiaoyu@163.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -73,8 +74,21 @@ msgstr "选择一个镜像。"
 msgid "Cinder"
 msgstr "Cinder"
 
+msgid "Cluster"
+msgstr "集群"
+
+#, python-format
+msgid "Cluster %s was successfully created."
+msgstr "成功创建集群：%s"
+
+msgid "Cluster Create Timeout"
+msgstr "创建集群超时"
+
 msgid "Cluster Distro"
 msgstr "集群。"
+
+msgid "Cluster Name"
+msgstr "集群名称"
 
 msgid "Cluster Template"
 msgstr "集群模板"
@@ -91,6 +105,13 @@ msgstr "集群类型"
 #, python-format
 msgid "Cluster template %s was successfully created."
 msgstr "成功创建集群模板%s"
+
+msgid "Clusters"
+msgstr "集群"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "确认删除集群"
 
 msgid "Container Orchestration Engine"
 msgstr "容器编配引擎"
@@ -126,6 +147,14 @@ msgstr[0] "删除集群模板"
 msgid "Delete Cluster Templates"
 msgstr "批量删除集群模板"
 
+msgid "Delete Clusters"
+msgstr "删除集群"
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "删除集群：%s"
+
 msgid "Device Mapper"
 msgstr "设备映射"
 
@@ -140,6 +169,9 @@ msgstr "已有的URL，"
 
 msgid "Docker"
 msgstr "Docker"
+
+msgid "Docker Storage Driver"
+msgstr "Docker存储驱动"
 
 msgid "Docker Swarm"
 msgstr "Docker Swarm"
@@ -243,6 +275,9 @@ msgstr "名字。"
 msgid "Name of the cluster template to create."
 msgstr "给要创建的集群模板命名"
 
+msgid "Name of the cluster to create."
+msgstr "要创建的集群的名称"
+
 msgid "Network"
 msgstr "网络"
 
@@ -322,8 +357,20 @@ msgstr "状态"
 msgid "TLS Disabled"
 msgstr "禁用TLS"
 
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "连接到这个集群模板的外部Neutron网络ID"
+
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "集群中的节点使用的https代理地址"
+
 msgid "The network driver name for instantiating container networks"
 msgstr "用于实例化容器网络的驱动程序名称。"
+
+msgid "The number of master nodes for the cluster."
+msgstr "集群中主节点数量"
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr "连接到这个集群模板的内部Neutron网络名称"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker卷的大小(以GB计)，默认是25G。"
@@ -383,3 +430,16 @@ msgstr "已经更新的"
 
 msgid "Volume Driver"
 msgstr "卷驱动"
+
+#, python-format
+msgid "You are not allowed to delete clusters: %s"
+msgstr "您不被允许删除集群：%s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] "您选择了：\"%s\"。请确认你的选择，删除集群无法恢复。"
