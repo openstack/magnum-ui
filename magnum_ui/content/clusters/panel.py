@@ -15,6 +15,11 @@
 from django.utils.translation import ugettext_lazy as _
 import horizon
 
+# DO NOT REMOVE
+# This needs for register url of REST API.
+# Dashboard plugins load REST API from here.
+from magnum_ui.api.rest import magnum  # noqa
+
 
 class Clusters(horizon.Panel):
     name = _("Clusters")
