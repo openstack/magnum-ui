@@ -5,14 +5,14 @@
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.0.1.dev1\n"
+"Project-Id-Version: magnum-ui 2.0.1.dev8\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-31 17:39+0000\n"
+"POT-Creation-Date: 2016-09-06 04:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-03 08:43+0000\n"
-"Last-Translator: cuixiaoyu <cuixiaoyu@163.com>\n"
+"PO-Revision-Date: 2016-09-06 02:54+0000\n"
+"Last-Translator: ZHIYUAN SU <suzhiyuan@inspur.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -49,6 +49,9 @@ msgstr "创建失败"
 
 msgid "CREATE IN PROGRESS"
 msgstr "正在创建"
+
+msgid "Choose a Cluster Template"
+msgstr "选择集群模板"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "选择容器编排引擎"
@@ -93,6 +96,9 @@ msgstr "集群名称"
 msgid "Cluster Template"
 msgstr "集群模板"
 
+msgid "Cluster Template Detail"
+msgstr "集群模板详情"
+
 msgid "Cluster Template Name"
 msgstr "集群模板名"
 
@@ -112,6 +118,10 @@ msgstr "集群"
 msgid "Confirm Delete Cluster"
 msgid_plural "Confirm Delete Clusters"
 msgstr[0] "确认删除集群"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "确认删除集群模板"
 
 msgid "Container Orchestration Engine"
 msgstr "容器编配引擎"
@@ -139,6 +149,10 @@ msgstr "正在删除"
 
 msgid "DNS"
 msgstr "DNS"
+
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "删除集群"
 
 msgid "Delete Cluster Template"
 msgid_plural "Delete Cluster Templates"
@@ -194,6 +208,9 @@ msgstr "外部网络ID。"
 msgid "Fixed Network"
 msgstr "固定网络。"
 
+msgid "Fixed Subnet"
+msgstr "固定子网"
+
 msgid "Flannel"
 msgstr "Flannel"
 
@@ -205,6 +222,9 @@ msgstr "云主机类型ID"
 
 msgid "Floating IP"
 msgstr "浮动IP"
+
+msgid "Floating IP Enabled"
+msgstr "允许浮动IP"
 
 msgid "HTTP Proxy"
 msgstr "HTTP 代理"
@@ -220,6 +240,16 @@ msgstr "镜像"
 
 msgid "Image ID"
 msgstr "镜像ID"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr "声明是否为创建的集群提供一个浮动IP，默认，提供"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr "声明是否为创建的集群的主节点提供一个负载均衡器，默认，不提供"
 
 msgid "Infinite"
 msgstr "无穷的。"
@@ -259,6 +289,9 @@ msgstr "主节点类型ID"
 
 msgid "Master LB"
 msgstr "主负载均衡"
+
+msgid "Master LB Enabled"
+msgstr "允许主负载均衡"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -338,6 +371,9 @@ msgstr "大小。"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "为节点指定url"
 
+msgid "Specify cluster name and choose cluster template"
+msgstr "指定集群名称和选择集群模板"
+
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "申明应使用的容器编排引擎。"
 
@@ -357,20 +393,46 @@ msgstr "状态"
 msgid "TLS Disabled"
 msgstr "禁用TLS"
 
+msgid "The DNS nameserver to use for this cluster template"
+msgstr "集群模板使用的DNS命名服务器"
+
 msgid "The external Neutron network ID to connect to this cluster template"
 msgstr "连接到这个集群模板的外部Neutron网络ID"
+
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "集群中节点所用的HTTP代理地址"
 
 msgid "The https_proxy address to use for nodes in cluster"
 msgstr "集群中的节点使用的https代理地址"
 
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr "加载到集群节点的SSH 密钥对的UUID名称"
+
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr "集群定制化基础镜像UUID的名称"
+
 msgid "The network driver name for instantiating container networks"
 msgstr "用于实例化容器网络的驱动程序名称。"
+
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "集群中节点所用的非代理地址"
+
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
+msgstr "当启动集群时候，计算服务类型的id，默认m1.small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the cluster. "
+"Default: m1.small"
+msgstr "当启动集群主节点时候，计算服务类型的id，默认m1.small"
 
 msgid "The number of master nodes for the cluster."
 msgstr "集群中主节点数量"
 
 msgid "The private Neutron network name to connect to this cluster template"
 msgstr "连接到这个集群模板的内部Neutron网络名称"
+
+msgid "The private Neutron subnet name to connect to this cluster template"
+msgstr "连接到集群模板的私有Neutron子网名称"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker卷的大小(以GB计)，默认是25G。"
@@ -430,6 +492,10 @@ msgstr "已经更新的"
 
 msgid "Volume Driver"
 msgstr "卷驱动"
+
+#, python-format
+msgid "You are not allowed to delete cluster templates: %s"
+msgstr "不允许删除集群模板; %s"
 
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
