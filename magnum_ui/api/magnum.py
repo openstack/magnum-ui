@@ -72,7 +72,7 @@ def cluster_template_create(request, **kwargs):
         if key in CLUSTER_TEMPLATE_CREATE_ATTRS:
             args[str(key)] = str(value)
         else:
-            raise exceptions.InvalidAttribute(
+            raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(CLUSTER_TEMPLATE_CREATE_ATTRS))
         if key == "labels":
             labels = {}
@@ -104,7 +104,7 @@ def cluster_create(request, **kwargs):
         if key in CLUSTER_CREATE_ATTRS:
             args[key] = value
         else:
-            raise exceptions.InvalidAttribute(
+            raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(CLUSTER_CREATE_ATTRS))
     return magnumclient(request).bays.create(**args)
 
