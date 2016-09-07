@@ -126,8 +126,8 @@ class Clusters(generic.View):
 
 
 @urls.register
-class Certificates(generic.View):
-    """API for Magnum Certificates"""
+class Certificate(generic.View):
+    """API for retrieving a single certificate"""
     url_regex = r'container_infra/certificates/(?P<cluster_id>[^/]+)$'
 
     @rest_utils.ajax()
@@ -138,6 +138,12 @@ class Certificates(generic.View):
         """
         ca = magnum.certificate_show(request, cluster_id)
         return ca.to_dict()
+
+
+@urls.register
+class Certificates(generic.View):
+    """API for Magnum Certificates"""
+    url_regex = r'container_infra/certificates/$'
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
