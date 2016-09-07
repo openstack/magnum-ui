@@ -19,6 +19,8 @@ def data(TEST):
     # Test Data Container in Horizon
     TEST.cluster_templates = utils.TestDataContainer()
     TEST.clusters = utils.TestDataContainer()
+    TEST.certificates = utils.TestDataContainer()
+    TEST.certificate_res_list = utils.TestDataContainer()
 
     # Cluster Templates
     cluster_template_dict_1 = {"uuid": 1,
@@ -56,3 +58,22 @@ def data(TEST):
                       "timeout": 0}
 
     TEST.clusters.add(cluster_dict_1)
+
+    # Certificates
+    certificate_1 = {"cluster_uuid": 1,
+                     "csr": "kore-ya-kono\n"
+                            "yuku-mo-kaheru-mo\n"
+                            "wakarete-ha\n"
+                            "shiru-mo-shiranu-mo\n"
+                            "afusaka-no-seki"}
+
+    TEST.certificates.add(certificate_1)
+
+    certificate_res = {"cluster_uuid": 1,
+                       "pem": "wata-no-hara\n"
+                              "yasoshima-kakete\n"
+                              "kogi-idenu-to\n"
+                              "hito-niwa-tsugeyo\n"
+                              "ama-no-tsuri-fune"}
+
+    TEST.certificate_res_list.add(certificate_res)
