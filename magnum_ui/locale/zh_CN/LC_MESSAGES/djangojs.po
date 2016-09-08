@@ -5,14 +5,14 @@
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.0.1.dev8\n"
+"Project-Id-Version: magnum-ui 2.0.1.dev11\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-09-06 04:24+0000\n"
+"POT-Creation-Date: 2016-09-07 14:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-06 02:54+0000\n"
-"Last-Translator: ZHIYUAN SU <suzhiyuan@inspur.com>\n"
+"PO-Revision-Date: 2016-09-08 06:00+0000\n"
+"Last-Translator: sunanchen <KF.sunanchen@h3c.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -163,6 +163,11 @@ msgstr "批量删除集群模板"
 
 msgid "Delete Clusters"
 msgstr "删除集群"
+
+#, python-format
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "删除集群模板：%s。"
 
 #, python-format
 msgid "Deleted cluster: %s."
@@ -374,12 +379,18 @@ msgstr "为节点指定url"
 msgid "Specify cluster name and choose cluster template"
 msgstr "指定集群名称和选择集群模板"
 
+msgid "Specify conditions for cluster creation."
+msgstr "指定集群创建的条件"
+
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "申明应使用的容器编排引擎。"
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "明确集群模板使用的nameserver地址，默认：8.8.8.8"
+
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr "指定master节点的数量和集群节点的数量。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "指定容器卷的大小用GB来衡量。"
@@ -395,6 +406,9 @@ msgstr "禁用TLS"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "集群模板使用的DNS命名服务器"
+
+msgid "The cluster node count."
+msgstr "集群节点数量"
 
 msgid "The external Neutron network ID to connect to this cluster template"
 msgstr "连接到这个集群模板的外部Neutron网络ID"
@@ -437,6 +451,13 @@ msgstr "连接到集群模板的私有Neutron子网名称"
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker卷的大小(以GB计)，默认是25G。"
 
+msgid ""
+"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
+"default is no timeout."
+msgstr ""
+"集群创建操作的超时以分钟为单位。设置为0表示没有超时上限。默认情况为没有超时上"
+"限。"
+
 msgid "The volume driver name for instantiating container volume."
 msgstr "用于实例化容器卷的卷驱动名称。"
 
@@ -455,11 +476,21 @@ msgstr "更新失败"
 msgid "UPDATE IN PROGRESS"
 msgstr "正在更新"
 
-msgid "Unable to create cluster template"
+msgid "Unable to create cluster template."
 msgstr "无法创建集群模板"
 
 msgid "Unable to create cluster."
 msgstr "无法创建集群"
+
+#, python-format
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "无法删除集群模板：%s。"
+
+#, python-format
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "无法删除集群：%s。"
 
 #, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
@@ -475,6 +506,9 @@ msgstr "无法按照id或者%(id)s删除集群"
 msgid "Unable to delete the clusters."
 msgstr "无法批量删除集群"
 
+msgid "Unable to retrieve the certificate."
+msgstr "无法检索证书"
+
 msgid "Unable to retrieve the cluster template."
 msgstr "无法获取集群模板"
 
@@ -486,6 +520,9 @@ msgstr "无法批量获取集群"
 
 msgid "Unable to retrieve the clusters."
 msgstr "无法获取集群"
+
+msgid "Unable to sign certificate."
+msgstr "无法签名证书"
 
 msgid "Updated"
 msgstr "已经更新的"
@@ -509,3 +546,16 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted clusters "
 "are not recoverable."
 msgstr[0] "您选择了：\"%s\"。请确认你的选择，删除集群无法恢复。"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] "你已经选择了\"%s\"。请确认你的选择。删除集群模板操作无法恢复。"
+
+msgid "{$ ctrl.cluster.bay_create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.bay_create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.bay_create_timeout $} 分钟"
