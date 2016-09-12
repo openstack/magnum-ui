@@ -19,7 +19,9 @@
 
   angular
     .module('horizon.dashboard.container-infra.cluster-templates')
-    .factory('horizon.dashboard.container-infra.cluster-templates.workflow', ClusterTemplateWorkflow);
+    .factory(
+      'horizon.dashboard.container-infra.cluster-templates.workflow',
+      ClusterTemplateWorkflow);
 
   ClusterTemplateWorkflow.$inject = [
     'horizon.dashboard.container-infra.basePath',

@@ -63,19 +63,26 @@
       mesos: [{name:"", label: gettext("Choose a Volume Driver")},
               {name:"rexray", label: gettext("Rexray")}]};
 
-    $scope.changeCoes = function(){
-      if($scope.model.newClusterTemplateSpec.coe){
-        $scope.model.newClusterTemplateSpec.network_drivers = ctrl.supportedNetworkDrivers[$scope.model.newClusterTemplateSpec.coe];
-        $scope.model.newClusterTemplateSpec.network_driver = ctrl.supportedNetworkDrivers[$scope.model.newClusterTemplateSpec.coe][0].name;
-        $scope.model.newClusterTemplateSpec.volume_drivers = ctrl.supportedVolumeDrivers[$scope.model.newClusterTemplateSpec.coe];
-        $scope.model.newClusterTemplateSpec.volume_driver = ctrl.supportedVolumeDrivers[$scope.model.newClusterTemplateSpec.coe][0].name;
-      }else{
-        $scope.model.newClusterTemplateSpec.network_drivers = ctrl.supportedNetworkDrivers.initial;
-        $scope.model.newClusterTemplateSpec.network_driver = ctrl.supportedNetworkDrivers.initial[0].name;
-        $scope.model.newClusterTemplateSpec.volume_drivers = ctrl.supportedVolumeDrivers.initial;
-        $scope.model.newClusterTemplateSpec.volume_driver = ctrl.supportedVolumeDrivers.initial[0].name;
+    $scope.changeCoes = function() {
+      if ($scope.model.newClusterTemplateSpec.coe) {
+        $scope.model.newClusterTemplateSpec.network_drivers =
+          ctrl.supportedNetworkDrivers[$scope.model.newClusterTemplateSpec.coe];
+        $scope.model.newClusterTemplateSpec.network_driver =
+          ctrl.supportedNetworkDrivers[$scope.model.newClusterTemplateSpec.coe][0].name;
+        $scope.model.newClusterTemplateSpec.volume_drivers =
+          ctrl.supportedVolumeDrivers[$scope.model.newClusterTemplateSpec.coe];
+        $scope.model.newClusterTemplateSpec.volume_driver =
+          ctrl.supportedVolumeDrivers[$scope.model.newClusterTemplateSpec.coe][0].name;
+      } else {
+        $scope.model.newClusterTemplateSpec.network_drivers =
+          ctrl.supportedNetworkDrivers.initial;
+        $scope.model.newClusterTemplateSpec.network_driver =
+          ctrl.supportedNetworkDrivers.initial[0].name;
+        $scope.model.newClusterTemplateSpec.volume_drivers =
+          ctrl.supportedVolumeDrivers.initial;
+        $scope.model.newClusterTemplateSpec.volume_driver =
+          ctrl.supportedVolumeDrivers.initial[0].name;
       }
     };
   }
-
 })();

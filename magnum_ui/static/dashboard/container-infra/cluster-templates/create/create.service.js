@@ -40,7 +40,8 @@
   ];
 
   function createService(
-    policy, actionResult, gettext, $qExtensions, wizardModalService, toast, model, events, resourceType, createWorkflow
+    policy, actionResult, gettext, $qExtensions, wizardModalService,
+    toast, model, events, resourceType, createWorkflow
   ) {
 
     var scope;
@@ -79,7 +80,7 @@
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function submit(){
+    function submit() {
       return model.createClusterTemplate().then(success);
     }
 

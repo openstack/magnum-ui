@@ -21,26 +21,29 @@
    * @ngdoc overview
    * @name horizon.dashboard.container-infra.cluster-templates
    * @ngModule
-   *
    * @description
    * Provides all the services and widgets require to display the cluster template
    * panel
    */
   angular
-    .module('horizon.dashboard.container-infra.cluster-templates', [
+    .module('horizon.dashboard.container-infra.cluster-templates',
+    [
       'ngRoute',
       'horizon.dashboard.container-infra.cluster-templates.actions',
       'horizon.dashboard.container-infra.cluster-templates.details'
     ])
     .constant('horizon.dashboard.container-infra.cluster-templates.events', events())
-    .constant('horizon.dashboard.container-infra.cluster-templates.resourceType', 'OS::Magnum::ClusterTemplate')
+    .constant(
+      'horizon.dashboard.container-infra.cluster-templates.resourceType',
+      'OS::Magnum::ClusterTemplate')
     .run(run)
     .config(config);
 
   /**
    * @ngdoc constant
-   * @name horizon.dashboard.container-infra.cluster-templates.events
-   * @description A list of events used by cluster templates
+   * @name events
+   * @returns {Object} The event object
+   * @description A list of events for cluster templates
    */
   function events() {
     return {
@@ -60,7 +63,7 @@
     registry.getResourceType(resourceType)
     .setNames(gettext('Cluster Template'), gettext('Cluster Templates'))
 
-    // for detail summary view on table row 
+    // for detail summary view on table row
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     // for table row items and detail summary view.
     .setProperty('name', {
@@ -118,7 +121,7 @@
         {label: gettext('Kubernetes'), key: 'kubernetes'},
         {label: gettext('Mesos'), key: 'mesos'}
       ]
-    })
+    });
 
     function listFunction(params) {
       return magnum.getClusterTemplates(params).then(modifyResponse);
@@ -126,9 +129,9 @@
       function modifyResponse(response) {
         return {data: {items: response.data.items.map(addTrackBy)}};
 
-        function addTrackBy(cluster_template) {
-          cluster_template.trackBy = cluster_template.id;
-          return cluster_template;
+        function addTrackBy(clusterTemplate) {
+          clusterTemplate.trackBy = clusterTemplate.id;
+          return clusterTemplate;
         }
       }
     }
@@ -149,8 +152,8 @@
    * @param {Object} $provide
    * @param {Object} $windowProvider
    * @param {Object} $routeProvider
-   * @description Routes used by this module.
    * @returns {undefined} Returns nothing
+   * @description Routes used by this module.
    */
   function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container-infra/cluster-templates/';

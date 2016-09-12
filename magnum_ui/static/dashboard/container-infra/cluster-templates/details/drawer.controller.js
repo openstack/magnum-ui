@@ -28,12 +28,9 @@
     .controller('horizon.dashboard.container-infra.cluster-templates.DrawerController', controller);
 
   controller.$inject = [
-    'horizon.app.core.openstack-service-api.magnum',
-    'horizon.dashboard.container-infra.cluster-templates.resourceType'
   ];
 
-  function controller(magnum, resourceType) {
-    var ctrl = this;
+  function controller() {
   }
 
 })();

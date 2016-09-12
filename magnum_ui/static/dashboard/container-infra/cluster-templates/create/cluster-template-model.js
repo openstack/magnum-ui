@@ -89,8 +89,9 @@
       // "network_drivers" and "volume_drivers" are used for pull-down options.
       // These are not for submittion.
       for (var key in finalSpec) {
-        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null || finalSpec[key] === ""
-            || key === "network_drivers" || key === "volume_drivers" || key === "docker_storage_drivers") {
+        if (finalSpec.hasOwnProperty(key) && finalSpec[key] === null || finalSpec[key] === "" ||
+            key === "network_drivers" || key === "volume_drivers" ||
+            key === "docker_storage_drivers") {
           delete finalSpec[key];
         }
       }

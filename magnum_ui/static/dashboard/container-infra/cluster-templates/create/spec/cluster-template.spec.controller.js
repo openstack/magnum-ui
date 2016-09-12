@@ -55,25 +55,23 @@
 
     function onGetImages(response) {
       angular.forEach(response.items, function(item) {
-        this.push({id: item.name, name: item.name});
-      }, ctrl.images);
+        ctrl.images.push({id: item.name, name: item.name});
+      });
     }
 
     function onGetFlavors(response) {
       angular.forEach(response.items, function(item) {
-        this.push({id: item.name, name: item.name});
-      }, ctrl.nflavors);
+        ctrl.nflavors.push({id: item.name, name: item.name});
+      });
       angular.forEach(response.items, function(item) {
-        this.push({id: item.name, name: item.name});
-      }, ctrl.mflavors);
+        ctrl.mflavors.push({id: item.name, name: item.name});
+      });
     }
 
     function onGetKeypairs(response) {
       angular.forEach(response.items, function(item) {
-        this.push({id: item.keypair.name, name: item.keypair.name});
-      }, ctrl.keypairs);
+        ctrl.keypairs.push({id: item.keypair.name, name: item.keypair.name});
+      });
     }
-
-  };
-
+  }
 })();

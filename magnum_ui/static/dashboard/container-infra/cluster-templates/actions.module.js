@@ -22,8 +22,12 @@
    * @description
    * Provides all of the actions for cluster templates.
    */
-  angular.module('horizon.dashboard.container-infra.cluster-templates.actions', ['horizon.framework', 'horizon.dashboard.container-infra'])
-   .run(registerClusterTemplateActions);
+  angular.module('horizon.dashboard.container-infra.cluster-templates.actions',
+    [
+      'horizon.framework',
+      'horizon.dashboard.container-infra'
+    ])
+    .run(registerClusterTemplateActions);
 
   registerClusterTemplateActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
@@ -31,7 +35,7 @@
     'horizon.dashboard.container-infra.cluster-templates.create.service',
     'horizon.dashboard.container-infra.cluster-templates.delete.service',
     'horizon.dashboard.container-infra.clusters.create.service',
-    'horizon.dashboard.container-infra.cluster-templates.resourceType',
+    'horizon.dashboard.container-infra.cluster-templates.resourceType'
   ];
 
   function registerClusterTemplateActions(
@@ -40,8 +44,8 @@
     createClusterTemplateService,
     deleteClusterTemplateService,
     createClusterService,
-    resourceType)
-  {
+    resourceType) {
+
     var templateResourceType = registry.getResourceType(resourceType);
     templateResourceType.itemActions
       .append({
@@ -78,5 +82,4 @@
         }
       });
   }
-
 })();

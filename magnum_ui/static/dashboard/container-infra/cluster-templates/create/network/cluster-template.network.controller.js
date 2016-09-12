@@ -30,14 +30,9 @@
     .controller('createClusterTemplateNetworkController', createClusterTemplateNetworkController);
 
   createClusterTemplateNetworkController.$inject = [
-    '$q',
-    '$scope',
-    'horizon.dashboard.container-infra.basePath',
-    'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createClusterTemplateNetworkController($q, $scope, basePath, magnum) {
-    var ctrl = this;
-  };
+  function createClusterTemplateNetworkController() {
+  }
 
 })();

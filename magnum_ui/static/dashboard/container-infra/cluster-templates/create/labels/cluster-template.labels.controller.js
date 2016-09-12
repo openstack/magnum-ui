@@ -30,14 +30,9 @@
     .controller('createClusterTemplateLabelsController', createClusterTemplateLabelsController);
 
   createClusterTemplateLabelsController.$inject = [
-    '$q',
-    '$scope',
-    'horizon.dashboard.container-infra.basePath',
-    'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createClusterTemplateLabelsController($q, $scope, basePath, magnum) {
-    var ctrl = this;
+  function createClusterTemplateLabelsController() {
   }
 
 })();

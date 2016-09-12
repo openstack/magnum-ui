@@ -20,24 +20,16 @@
 
   ClusterTemplateOverviewController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.glance',
-    'horizon.dashboard.container-infra.cluster-templates.resourceType',
-    'horizon.dashboard.container-infra.cluster-templates.events',
-    'horizon.dashboard.container-infra.clusters.events',
-    'horizon.framework.conf.resource-type-registry.service'
+    'horizon.app.core.openstack-service-api.glance'
   ];
 
   function ClusterTemplateOverviewController(
     $scope,
-    glance,
-    resourceType,
-    events,
-    clusterEvents,
-    registry
+    glance
   ) {
     var ctrl = this;
     ctrl.cluster_template = {};
-    ctrl.image_uuid;
+    ctrl.image_uuid = "";
 
     $scope.context.loadPromise.then(onGetClusterTemplate);
 
