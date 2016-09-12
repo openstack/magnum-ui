@@ -9,3 +9,6 @@ magnum_ui/test/.secret_key_store
 *.lock
 *.egg*
 *.swp
+.coverage
+coverage.xml
+htmlcov
