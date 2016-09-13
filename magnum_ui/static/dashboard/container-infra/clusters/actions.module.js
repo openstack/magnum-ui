@@ -47,14 +47,6 @@
     var clusterResourceType = registry.getResourceType(resourceType);
     clusterResourceType.itemActions
       .append({
-        id: 'deleteClusterAction',
-        service: deleteClusterService,
-        template: {
-          type: 'delete',
-          text: gettext('Delete Cluster')
-        }
-      })
-      .append({
         id: 'showCertificateAction',
         service: showCertificateService,
         template: {
@@ -66,6 +58,14 @@
         service: signCertificateService,
         template: {
           text: gettext('Sign Certificate')
+        }
+      })
+      .append({
+        id: 'deleteClusterAction',
+        service: deleteClusterService,
+        template: {
+          type: 'delete',
+          text: gettext('Delete Cluster')
         }
       });
 
