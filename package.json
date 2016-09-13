@@ -1,0 +1,33 @@
+{
+  "name": "magnum-ui",
+  "description": "Magnum UI JavaScript tests",
+  "repository": {
+    "type": "git",
+    "url": "git://git.openstack.org/openstack/magnum-ui"
+  },
+  "version": "0.0.0",
+  "private": true,
+  "license": "Apache 2.0",
+  "author": "Openstack <openstack-dev@lists.openstack.org>",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-openstack": "^1.2.4",
+    "eslint-plugin-angular": "1.0.1",
+    "jasmine-core": "2.4.1",
+    "karma": "1.1.2",
+    "karma-chrome-launcher": "1.0.1",
+    "karma-cli": "1.0.1",
+    "karma-coverage": "1.1.1",
+    "karma-jasmine": "1.0.2",
+    "karma-ng-html2js-preprocessor": "1.0.0",
+    "karma-phantomjs-launcher": "0.2.0",
+    "karma-threshold-reporter": "0.1.15",
+    "phantomjs": "1.9.17"
+  },
+  "dependencies": {},
+  "scripts": {
+    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/py27 ]; then tox -epy27 --notest; fi",
+    "lint": "eslint --no-color magnum_ui/static",
+    "test": "karma start magnum_ui/karma.conf.js --single-run"
+  }
+}

@@ -1,8 +1,11 @@
 AUTHORS
 ChangeLog
 build
+coverage-karma
 doc/source/sourcecode
 magnum_ui/test/.secret_key_store
+node_modules
+npm-debug.log
 .venv
 .tox
 *.pyc
