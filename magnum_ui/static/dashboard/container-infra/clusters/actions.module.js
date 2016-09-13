@@ -31,6 +31,7 @@
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.clusters.delete.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
+    'horizon.dashboard.container-infra.clusters.sign-certificate.service',
     'horizon.dashboard.container-infra.clusters.resourceType',
   ];
 
@@ -40,6 +41,7 @@
     createClusterService,
     deleteClusterService,
     showCertificateService,
+    signCertificateService,
     resourceType)
   {
     var clusterResourceType = registry.getResourceType(resourceType);
@@ -57,6 +59,13 @@
         service: showCertificateService,
         template: {
           text: gettext('Show Certificate')
+        }
+      })
+      .append({
+        id: 'signCertificateAction',
+        service: signCertificateService,
+        template: {
+          text: gettext('Sign Certificate')
         }
       });
 
