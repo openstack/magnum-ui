@@ -365,6 +365,10 @@ function run_tests_all {
   if [ "$NOSE_WITH_HTML_OUTPUT" = '1' ]; then
     export NOSE_HTML_OUT_FILE='dashboard_nose_results.html'
   fi
+  if [ $with_coverage -eq 1 ]; then
+    ${command_wrapper} python -m coverage.__main__ erase
+    coverage_run="python -m coverage.__main__ run -p"
+  fi
   ${command_wrapper} ${coverage_run} $root/manage.py test magnum_ui --settings=openstack_dashboard.test.settings $testopts
   # get results of the openstack_dashboard tests
   DASHBOARD_RESULT=$?
@@ -372,8 +376,8 @@ function run_tests_all {
   if [ $with_coverage -eq 1 ]; then
     echo "Generating coverage reports"
     ${command_wrapper} python -m coverage.__main__ combine
-    ${command_wrapper} python -m coverage.__main__ xml -i --include="horizon/*,openstack_dashboard/*" --omit='/usr*,setup.py,*egg*,.venv/*'
-    ${command_wrapper} python -m coverage.__main__ html -i --include="horizon/*,openstack_dashboard/*" --omit='/usr*,setup.py,*egg*,.venv/*' -d reports
+    ${command_wrapper} python -m coverage.__main__ xml -i --include="magnum_ui/*" --omit='/usr*,setup.py,*egg*,.venv/*'
+    ${command_wrapper} python -m coverage.__main__ html -i --include="magnum_ui/*" --omit='/usr*,setup.py,*egg*,.venv/*' -d reports
   fi
   # Remove the leftover coverage files from the -p flag earlier.
   rm -f .coverage.*
