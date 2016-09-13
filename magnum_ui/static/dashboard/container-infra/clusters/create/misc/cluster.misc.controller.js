@@ -30,14 +30,9 @@
     .controller('createClusterMiscController', createClusterMiscController);
 
   createClusterMiscController.$inject = [
-    '$scope',
-    'horizon.dashboard.container-infra.basePath',
-    'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createClusterMiscController($scope, basePath, magnum) {
-    var ctrl = this;
-
+  function createClusterMiscController() {
   }
 
 })();

@@ -22,7 +22,9 @@
    */
   angular
     .module('horizon.dashboard.container-infra.clusters')
-    .factory('horizon.dashboard.container-infra.clusters.sign-certificate.service', signCertificateService);
+    .factory(
+      'horizon.dashboard.container-infra.clusters.sign-certificate.service',
+      signCertificateService);
 
   signCertificateService.$inject = [
     '$modal',
@@ -41,8 +43,8 @@
   ) {
 
     var message = {
-        success: gettext('Certificate %s was successfully signed.')
-      };
+      success: gettext('Certificate %s was successfully signed.')
+    };
 
     var service = {
       initScope: initScope,
@@ -54,7 +56,7 @@
 
     //////////////
 
-    function initScope($scope) {
+    function initScope() {
     }
 
     function signCertificateModal(html, $modal) {
@@ -76,7 +78,7 @@
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function submit(){
+    function submit() {
       return model.signCertificate().then(success);
     }
 

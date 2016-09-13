@@ -22,7 +22,9 @@
    */
   angular
     .module('horizon.dashboard.container-infra.clusters')
-    .factory('horizon.dashboard.container-infra.clusters.show-certificate.service', showCertificateService);
+    .factory(
+      'horizon.dashboard.container-infra.clusters.show-certificate.service',
+      showCertificateService);
 
   showCertificateService.$inject = [
     'horizon.framework.util.q.extensions',
@@ -43,7 +45,7 @@
 
     //////////////
 
-    function initScope($scope) {
+    function initScope() {
     }
 
     function perform(selected) {

@@ -30,11 +30,11 @@
       'horizon.dashboard.container-infra.cluster-templates',
       'ngRoute'
     ])
-    .config(config)
+    .config(config);
 
-  config.$inject = ['$provide', '$windowProvider', '$routeProvider'];
+  config.$inject = ['$provide', '$windowProvider'];
 
-  function config($provide, $windowProvider, $routeProvider) {
+  function config($provide, $windowProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container-infra/';
     $provide.constant('horizon.dashboard.container-infra.basePath', path);
   }

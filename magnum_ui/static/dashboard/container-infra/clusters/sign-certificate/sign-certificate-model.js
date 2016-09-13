@@ -34,10 +34,10 @@
       signCertificate: signCertificate
     };
 
-    function init(cluster_id) {
+    function init(clusterId) {
       // Reset the new Certificate spec
       model.newCertificateSpec = {
-        cluster_uuid: cluster_id,
+        cluster_uuid: clusterId,
         csr: ""
       };
       model.cluster_name = "";

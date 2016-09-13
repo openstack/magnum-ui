@@ -39,7 +39,8 @@
 
   /**
    * @ngdoc constant
-   * @name horizon.dashboard.container-infra.clusters.events
+   * @name clusters.events
+   * @returns {Object} The event object
    * @description A list of events used by Clusters
    */
   function events() {
@@ -60,7 +61,7 @@
     registry.getResourceType(resourceType)
     .setNames(gettext('Cluster'), gettext('Clusters'))
 
-    // for detail summary view on table row 
+    // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     // for table row items and detail summary view.
     .setProperty('name', {

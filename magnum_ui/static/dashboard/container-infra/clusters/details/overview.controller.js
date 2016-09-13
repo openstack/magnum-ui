@@ -20,18 +20,12 @@
 
   ClusterOverviewController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.magnum',
-    'horizon.dashboard.container-infra.clusters.resourceType',
-    'horizon.dashboard.container-infra.clusters.events',
-    'horizon.framework.conf.resource-type-registry.service'
+    'horizon.app.core.openstack-service-api.magnum'
   ];
 
   function ClusterOverviewController(
     $scope,
-    magnum,
-    resourceType,
-    events,
-    registry
+    magnum
   ) {
     var ctrl = this;
     ctrl.cluster = {};
@@ -44,8 +38,8 @@
       magnum.getClusterTemplate(ctrl.cluster.cluster_template_id).success(onGetClusterTemplate);
     }
 
-    function onGetClusterTemplate(cluster_template) {
-      ctrl.cluster_template = cluster_template;
+    function onGetClusterTemplate(clusteTemplate) {
+      ctrl.clusteTemplate = clusteTemplate;
     }
   }
 })();
