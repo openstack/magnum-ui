@@ -58,13 +58,14 @@ class MagnumRestTestCase(test.TestCase):
     def test_cluster_template_delete(self, client):
         test_cluster_template = TEST.cluster_templates.first()
         request = self.mock_rest_request(
-            body='{"baymodel_id":' + str(test_cluster_template['uuid']) + '}')
+            body='{"cluster_template_id":'
+                 + str(test_cluster_template['uuid']) + '}')
         response = magnum.ClusterTemplates().delete(request)
 
         self.assertStatusCode(response, 204)
         client.cluster_template_delete.assert_called_once_with(
             request,
-            u'baymodel_id')
+            u'cluster_template_id')
 
     # Clusters
     @mock.patch.object(magnum, 'magnum')
@@ -97,13 +98,13 @@ class MagnumRestTestCase(test.TestCase):
     def test_cluster_delete(self, client):
         test_cluster = TEST.clusters.first()
         request = self.mock_rest_request(
-            body='{"bay_id":' + str(test_cluster['uuid']) + '}')
+            body='{"cluster_id":' + str(test_cluster['uuid']) + '}')
         response = magnum.Clusters().delete(request)
 
         self.assertStatusCode(response, 204)
         client.cluster_delete.assert_called_once_with(
             request,
-            u'bay_id')
+            u'cluster_id')
 
     # Certificates
     @mock.patch.object(magnum, 'magnum')

@@ -15,14 +15,14 @@
           <span class="hz-icon-required fa fa-asterisk"></span>
         </label>
         <select class="form-control" name="cluster-model" id="cluster-model"
-          ng-model="model.newClusterSpec.baymodel_id"
+          ng-model="model.newClusterSpec.cluster_template_id"
           ng-required="true"
           ng-options="cluster_template.id as cluster_template.name|noName for cluster_template in ctrl.cluster_templates"
           ng-change="changeClusterTemplate()">
         </select>
       </div>
 
-      <div class="detail" ng-show="model.newClusterSpec.baymodel_id">
+      <div class="detail" ng-show="model.newClusterSpec.cluster_template_id">
         <span translate class="h4">Cluster Template Detail</span>
         <dl class="dl-horizontal">
           <dt translate>Name</dt>

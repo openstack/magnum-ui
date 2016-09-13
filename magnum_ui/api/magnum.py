@@ -36,8 +36,8 @@ CLUSTER_TEMPLATE_CREATE_ATTRS = ['name', 'image_id', 'flavor_id',
                                  'floating_ip_enabled', 'master_lb_enabled',
                                  'insecure_registry']
 
-CLUSTER_CREATE_ATTRS = ['name', 'baymodel_id', 'node_count',
-                        'discovery_url', 'cluster_create_timeout',
+CLUSTER_CREATE_ATTRS = ['name', 'cluster_template_id', 'node_count',
+                        'discovery_url', 'create_timeout',
                         'master_count']
 
 CERTIFICATE_CREATE_ATTRS = ['cluster_uuid', 'csr']
@@ -83,21 +83,21 @@ def cluster_template_create(request, **kwargs):
                 kv = v.split("=", 1)
                 labels[kv[0]] = kv[1]
             args["labels"] = labels
-    return magnumclient(request).baymodels.create(**args)
+    return magnumclient(request).cluster_templates.create(**args)
 
 
 def cluster_template_delete(request, id):
-    return magnumclient(request).baymodels.delete(id)
+    return magnumclient(request).cluster_templates.delete(id)
 
 
 def cluster_template_list(request, limit=None, marker=None, sort_key=None,
                           sort_dir=None, detail=True):
-    return magnumclient(request).baymodels.list(limit, marker, sort_key,
-                                                sort_dir, detail)
+    return magnumclient(request).cluster_templates.list(
+        limit, marker, sort_key, sort_dir, detail)
 
 
 def cluster_template_show(request, id):
-    return magnumclient(request).baymodels.get(id)
+    return magnumclient(request).cluster_templates.get(id)
 
 
 def cluster_create(request, **kwargs):
@@ -108,25 +108,25 @@ def cluster_create(request, **kwargs):
         else:
             raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(CLUSTER_CREATE_ATTRS))
-    return magnumclient(request).bays.create(**args)
+    return magnumclient(request).clusters.create(**args)
 
 
 def cluster_update(request, id, patch):
-    return magnumclient(request).bays.update(id, patch)
+    return magnumclient(request).clusters.update(id, patch)
 
 
 def cluster_delete(request, id):
-    return magnumclient(request).bays.delete(id)
+    return magnumclient(request).clusters.delete(id)
 
 
 def cluster_list(request, limit=None, marker=None, sort_key=None,
                  sort_dir=None, detail=True):
-    return magnumclient(request).bays.list(limit, marker, sort_key,
-                                           sort_dir, detail)
+    return magnumclient(request).clusters.list(limit, marker, sort_key,
+                                               sort_dir, detail)
 
 
 def cluster_show(request, id):
-    return magnumclient(request).bays.get(id)
+    return magnumclient(request).clusters.get(id)
 
 
 def certificate_create(request, **kwargs):
