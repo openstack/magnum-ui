@@ -51,11 +51,11 @@ def data(TEST):
     # Clusters
     cluster_dict_1 = {"uuid": 1,
                       "name": "peopleknowme",
-                      "baymodel": cluster_template_dict_1["uuid"],
-                      "node-count": "",
-                      "master-count": "",
-                      "discovery-url": "",
-                      "timeout": 0}
+                      "cluster_template_id": cluster_template_dict_1["uuid"],
+                      "node_count": "",
+                      "master_count": "",
+                      "discovery_url": "",
+                      "create_timeout": 0}
 
     TEST.clusters.add(cluster_dict_1)
 

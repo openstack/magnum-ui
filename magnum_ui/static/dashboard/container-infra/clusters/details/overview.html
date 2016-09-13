@@ -48,12 +48,12 @@
         <dd>{$ ctrl.cluster.discovery_url $}</dd>
         <dt translate>Cluster Create Timeout</dt>
         <dd>
-          <div ng-switch on="ctrl.cluster.bay_create_timeout === 0 || ctrl.cluster.bay_create_timeout === null">
+          <div ng-switch on="ctrl.cluster.create_timeout === 0 || ctrl.cluster.create_timeout === null">
             <div ng-switch-when="true" translate>Infinite</div>
             <div ng-switch-default translate
-              translate-n="ctrl.cluster.bay_create_timeout"
-              translate-plural="{$ ctrl.cluster.bay_create_timeout $} minutes">
-                {$ ctrl.cluster.bay_create_timeout $} minute
+              translate-n="ctrl.cluster.create_timeout"
+              translate-plural="{$ ctrl.cluster.create_timeout $} minutes">
+                {$ ctrl.cluster.create_timeout $} minute
             </div>
           </div>
         </dd>

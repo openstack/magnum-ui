@@ -37,11 +37,11 @@
     function initNewClusterSpec() {
       model.newClusterSpec = {
         name: null,
-        baymodel_id: null,
+        cluster_template_id: null,
         master_count: null,
         node_count: null,
         discover_url: null,
-        bay_create_timeout: null
+        create_timeout: null
       };
     }
 

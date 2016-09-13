@@ -41,7 +41,7 @@
 
     function onGetCluster(cluster) {
       ctrl.cluster = cluster.data;
-      magnum.getClusterTemplate(ctrl.cluster.baymodel_id).success(onGetClusterTemplate);
+      magnum.getClusterTemplate(ctrl.cluster.cluster_template_id).success(onGetClusterTemplate);
     }
 
     function onGetClusterTemplate(cluster_template) {

@@ -39,7 +39,7 @@
   function createClusterInfoController($q, $scope, basePath, magnum) {
     var ctrl = this;
     ctrl.cluster_templates = [{id:"", name: gettext("Choose a Cluster Template")}];
-    $scope.model.newClusterSpec.baymodel_id = "";
+    $scope.model.newClusterSpec.cluster_template_id = "";
     $scope.cluster_template_detail = {
         name: "",
         id: "",
@@ -53,7 +53,7 @@
 
     $scope.changeClusterTemplate = function(){
       angular.forEach(ctrl.cluster_templates, function(model, idx){
-        if($scope.model.newClusterSpec.baymodel_id === model.id){
+        if($scope.model.newClusterSpec.cluster_template_id === model.id){
           $scope.cluster_template_detail.name = model.name;
           $scope.cluster_template_detail.id = model.id;
           $scope.cluster_template_detail.coe = model.coe;
@@ -75,7 +75,7 @@
     function onGetClusterTemplates(response) {
       Array.prototype.push.apply(ctrl.cluster_templates, response.items);
       if($scope.selected instanceof Object){
-        $scope.model.newClusterSpec.baymodel_id = $scope.selected.id;
+        $scope.model.newClusterSpec.cluster_template_id = $scope.selected.id;
         $scope.changeClusterTemplate();
       }
     }
