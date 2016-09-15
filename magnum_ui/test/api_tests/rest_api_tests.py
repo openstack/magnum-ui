@@ -18,9 +18,9 @@ import mock
 from magnum_ui.api.rest import magnum
 from magnum_ui.test import test_data
 from openstack_dashboard.test import helpers as test
-from openstack_dashboard.test.test_data.utils import TestData
+from openstack_dashboard.test.test_data import utils
 
-TEST = TestData(test_data.data)
+TEST = utils.TestData(test_data.data)
 
 
 class MagnumRestTestCase(test.TestCase):
