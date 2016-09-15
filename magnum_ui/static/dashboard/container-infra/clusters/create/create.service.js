@@ -39,7 +39,8 @@
   ];
 
   function createService(
-    $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast, model, events, resourceType, createWorkflow
+    $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast,
+    model, events, resourceType, createWorkflow
   ) {
 
     var scope;
@@ -79,7 +80,7 @@
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function submit(){
+    function submit() {
       return model.createCluster().then(success);
     }
 
@@ -88,9 +89,9 @@
       toast.add('success', interpolate(message.success, [response.data.id]));
       var result = actionResult.getActionResult()
                    .created(resourceType, response.data.id);
-      if(result.result.failed.length == 0 && result.result.created.length > 0){
+      if (result.result.failed.length === 0 && result.result.created.length > 0) {
         $location.path("/project/clusters");
-      }else{
+      } else {
         return result.result;
       }
     }

@@ -22,8 +22,12 @@
    * @description
    * Provides all of the actions for clusters.
    */
-  angular.module('horizon.dashboard.container-infra.clusters.actions', ['horizon.framework', 'horizon.dashboard.container-infra'])
-   .run(registerClusterActions);
+  angular.module('horizon.dashboard.container-infra.clusters.actions',
+    [
+      'horizon.framework',
+      'horizon.dashboard.container-infra'
+    ])
+    .run(registerClusterActions);
 
   registerClusterActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
@@ -32,18 +36,18 @@
     'horizon.dashboard.container-infra.clusters.delete.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.sign-certificate.service',
-    'horizon.dashboard.container-infra.clusters.resourceType',
+    'horizon.dashboard.container-infra.clusters.resourceType'
   ];
 
-  function registerClusterActions(
+  function registerClusterActions (
     registry,
     gettext,
     createClusterService,
     deleteClusterService,
     showCertificateService,
     signCertificateService,
-    resourceType)
-  {
+    resourceType) {
+
     var clusterResourceType = registry.getResourceType(resourceType);
     clusterResourceType.itemActions
       .append({

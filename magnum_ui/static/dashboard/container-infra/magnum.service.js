@@ -41,7 +41,7 @@
       deleteClusterTemplates: deleteClusterTemplates,
       showCertificate: showCertificate,
       signCertificate: signCertificate,
-      downloadTextAsFile: downloadTextAsFile,
+      downloadTextAsFile: downloadTextAsFile
     };
 
     return service;
@@ -51,11 +51,11 @@
     //////////////
 
     function createCluster(params) {
-        return apiService.post('/api/container_infra/clusters/', params)
-          .error(function() {
-            toastService.add('error', gettext('Unable to create cluster.'));
-          });
-      }
+      return apiService.post('/api/container_infra/clusters/', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to create cluster.'));
+        });
+    }
 
     function getCluster(id) {
       return apiService.get('/api/container_infra/clusters/' + id)
@@ -125,7 +125,7 @@
       return apiService.delete('/api/container_infra/cluster_templates/', ids)
         .error(function() {
           toastService.add('error', gettext('Unable to delete the cluster templates.'));
-        })
+        });
     }
 
     //////////////////
@@ -146,7 +146,7 @@
         });
     }
 
-    function downloadTextAsFile(text, filename){
+    function downloadTextAsFile(text, filename) {
       // create text file as object url
       var blob = new Blob([ text ], { "type" : "text/plain" });
       window.URL = window.URL || window.webkitURL;

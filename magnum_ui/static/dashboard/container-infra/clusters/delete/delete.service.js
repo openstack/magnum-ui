@@ -35,15 +35,27 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.container-infra.clusters.delete.service
-   *
-   * @Description
+   * @name clusters.delete.service
+   * @param {Object} $location
+   * @param {Object} $q
+   * @param {Object} magnum
+   * @param {Object} policy
+   * @param {Object} actionResult
+   * @param {Object} gettext
+   * @param {Object} $qExtensions
+   * @param {Object} deleteModal
+   * @param {Object} toast
+   * @param {Object} resourceType
+   * @param {Object} events
+   * @returns {Object} delete service
+   * @description
    * Brings up the delete clusters confirmation modal dialog.
    * On submit, delete selected resources.
    * On cancel, do nothing.
    */
   function deleteService(
-    $location, $q, magnum, policy, actionResult, gettext, $qExtensions, deleteModal, toast, resourceType, events
+    $location, $q, magnum, policy, actionResult, gettext, $qExtensions,
+    deleteModal, toast, resourceType, events
   ) {
     var scope;
     var context = {
@@ -74,26 +86,26 @@
 
     // delete selected resource objects
     function perform(selected) {
-      var selected = angular.isArray(selected) ? selected : [selected];
+      selected = angular.isArray(selected) ? selected : [selected];
       context.labels = labelize(selected.length);
       return $qExtensions.allSettled(selected.map(checkPermission)).then(afterCheck);
     }
 
-    function labelize(count){
+    function labelize(count) {
       return {
-          title: ngettext('Confirm Delete Cluster',
-                          'Confirm Delete Clusters', count),
-          /* eslint-disable max-len */
-          message: ngettext('You have selected "%s". Please confirm your selection. Deleted cluster is not recoverable.',
-                            'You have selected "%s". Please confirm your selection. Deleted clusters are not recoverable.', count),
-          /* eslint-enable max-len */
-          submit: ngettext('Delete Cluster',
-                           'Delete Clusters', count),
-          success: ngettext('Deleted cluster: %s.',
-                            'Deleted clusters: %s.', count),
-          error: ngettext('Unable to delete cluster: %s.',
-                          'Unable to delete clusters: %s.', count)
-        };
+        title: ngettext('Confirm Delete Cluster',
+                        'Confirm Delete Clusters', count),
+        /* eslint-disable max-len */
+        message: ngettext('You have selected "%s". Please confirm your selection. Deleted cluster is not recoverable.',
+                          'You have selected "%s". Please confirm your selection. Deleted clusters are not recoverable.', count),
+        /* eslint-enable max-len */
+        submit: ngettext('Delete Cluster',
+                         'Delete Clusters', count),
+        success: ngettext('Deleted cluster: %s.',
+                          'Deleted clusters: %s.', count),
+        error: ngettext('Unable to delete cluster: %s.',
+                        'Unable to delete clusters: %s.', count)
+      };
     }
 
     // for batch delete
@@ -102,7 +114,7 @@
     }
 
     // for batch delete
-    function afterCheck(result){
+    function afterCheck(result) {
       var outcome = $q.reject();  // Reject the promise by default
       if (result.fail.length > 0) {
         toast.add('error', getMessage(notAllowedMessage, result.fail));
@@ -124,9 +136,9 @@
       deleteModalResult.fail.forEach(function markFailed(item) {
         result.failed(resourceType, getEntity(item).id);
       });
-      if(result.result.failed.length == 0 && result.result.deleted.length > 0){
+      if (result.result.failed.length === 0 && result.result.deleted.length > 0) {
         $location.path("/project/clusters");
-      }else{
+      } else {
         return result.result;
       }
     }
@@ -145,7 +157,7 @@
     }
 
     // call delete REST API
-    function deleteEntity(id){
+    function deleteEntity(id) {
       return magnum.deleteCluster(id, true);
     }
   }

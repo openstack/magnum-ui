@@ -25,7 +25,9 @@
    */
   angular
     .module('horizon.dashboard.container-infra.clusters')
-    .controller('horizon.dashboard.container-infra.clusters.signCertificateController', signCertificateController);
+    .controller(
+      'horizon.dashboard.container-infra.clusters.signCertificateController',
+      signCertificateController);
 
   signCertificateController.$inject = [
     'horizon.app.core.openstack-service-api.magnum',
@@ -49,11 +51,11 @@
         // load csr file and set into model
         var reader = new FileReader();
         reader.readAsText(files[0]);
-        reader.onload = function(ev){
+        reader.onload = function() {
           model.newCertificateSpec.csr = reader.result;
           ctrl.model.csrfile = files[0];
           ctrl.form.$setDirty();
-        }
+        };
         // Note that a $scope.$digest() is now needed for the change to the ngModel to be
         // reflected in the page (since this callback is fired from inside a DOM event)
         // but the on-file-changed directive currently does a digest after this callback

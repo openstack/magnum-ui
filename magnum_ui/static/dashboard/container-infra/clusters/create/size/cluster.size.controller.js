@@ -30,14 +30,9 @@
     .controller('createClusterSizeController', createClusterSizeController);
 
   createClusterSizeController.$inject = [
-    '$scope',
-    'horizon.dashboard.container-infra.basePath',
-    'horizon.app.core.openstack-service-api.magnum'
   ];
 
-  function createClusterSizeController($scope, basePath, magnum) {
-    var ctrl = this;
-
+  function createClusterSizeController() {
   }
 
 })();

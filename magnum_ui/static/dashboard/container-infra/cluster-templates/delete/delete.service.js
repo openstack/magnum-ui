@@ -48,7 +48,7 @@
    * @param {Object} resourceType
    * @param {Object} events
    * @returns {Object} delete service
-   * @Description
+   * @description
    * Brings up the delete cluster templates confirmation modal dialog.
    * On submit, delete selected resources.
    * On cancel, do nothing.
