@@ -158,7 +158,7 @@
   function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/container-infra/cluster-templates/';
     $provide.constant('horizon.dashboard.container-infra.cluster-templates.basePath', path);
-    $routeProvider.when('/project/cluster_templates/', {
+    $routeProvider.when('/project/cluster_templates', {
       templateUrl: path + 'panel.html'
     });
   }
