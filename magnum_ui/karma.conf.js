@@ -65,6 +65,8 @@ module.exports = function (config) {
       toxPath + 'xstatic/pkg/tv4/data/tv4.js',
       toxPath + 'xstatic/pkg/objectpath/data/ObjectPath.js',
       toxPath + 'xstatic/pkg/angular_schema_form/data/schema-form.js',
+      toxPath + 'xstatic/pkg/angular_fileupload/data/ng-file-upload.js',
+
 
       // TODO: These should be mocked.
       toxPath + '/horizon/static/horizon/js/horizon.js',
