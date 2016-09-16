@@ -38,8 +38,8 @@
       magnum.getClusterTemplate(ctrl.cluster.cluster_template_id).success(onGetClusterTemplate);
     }
 
-    function onGetClusterTemplate(clusteTemplate) {
-      ctrl.clusteTemplate = clusteTemplate;
+    function onGetClusterTemplate(clusterTemplate) {
+      ctrl.cluster_template = clusterTemplate;
     }
   }
 })();
