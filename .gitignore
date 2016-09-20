@@ -6,6 +6,7 @@ doc/source/sourcecode
 magnum_ui/test/.secret_key_store
 node_modules
 npm-debug.log
+releasenotes/build
 .coverage*
 .jshintrc
 .project
@@ -18,3 +19,4 @@ npm-debug.log
 *.pyc
 *.swp
 *.mo
+
