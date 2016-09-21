@@ -1,0 +1,49 @@
+---
+prelude: >
+    Magnum changes its service scope as Container
+    Infrastructure Management service. Also Magnum-UI
+    change rename service 'container' to
+    'container-infra', and container management functions
+    removed.
+    Magnum uses terms 'cluster' and 'cluster template'
+    instead of 'bay' and 'baymodel', because the use of
+    new Magnum term of 'bay' has caused confusion with
+    users.
+features:
+  - >
+    Support 'ca-show'. The function of downloading CA from
+    cluster is added.
+  - >
+    Support 'ca-sign'. The function of signing of
+    certificates to cluster is added.
+  - |
+    Add following options to cluster template creation
+    and views.
+
+    * 'docker_storage_driver'
+    * 'fixed_subnet'
+    * 'floating_ip_enabled'
+    * 'master_lb_enabled'
+upgrade:
+  - >
+    Service is renamed from 'container' to
+    'container-infra'. Renaming targets are URLs, Angular
+    module name, slugs for panel, etc.
+  - >
+    'bay' and 'baymodel' are changed to 'cluster' and
+    'cluster template'.
+deprecations:
+  - >
+    Container panel is removed. According to decision of
+    Magnum that changes service scope, container
+    management functions are removed.
+fixes:
+  - >
+    Fixes issue that there is no way to specify for
+    insecure magnumclient as a result api throws 500 and
+    SSL cert verify errors. 'insecure' and 'ca-cert'
+    options are added for magnumclient.
+other:
+  - >
+    Support for Horizon's Angular registry service,
+    generic table and detail view, action service.
