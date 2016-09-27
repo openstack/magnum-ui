@@ -70,6 +70,15 @@
     .setProperty('id', {
       label: gettext('ID')
     })
+    .setProperty('status', {
+      label: gettext('Status')
+    })
+    .setProperty('master_count', {
+      label: gettext('Master Count')
+    })
+    .setProperty('node_count', {
+      label: gettext('Node Count')
+    })
     .setListFunction(listFunction)
     .tableColumns
     .append({
