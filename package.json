@@ -20,9 +20,7 @@
     "karma-coverage": "1.1.1",
     "karma-jasmine": "1.0.2",
     "karma-ng-html2js-preprocessor": "1.0.0",
-    "karma-phantomjs-launcher": "0.2.0",
-    "karma-threshold-reporter": "0.1.15",
-    "phantomjs": "1.9.17"
+    "karma-threshold-reporter": "0.1.15"
   },
   "dependencies": {},
   "scripts": {
