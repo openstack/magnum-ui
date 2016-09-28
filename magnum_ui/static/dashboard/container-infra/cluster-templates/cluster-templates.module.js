@@ -54,12 +54,12 @@
 
   run.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
-    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.container-infra.cluster-templates.service',
     'horizon.dashboard.container-infra.cluster-templates.basePath',
     'horizon.dashboard.container-infra.cluster-templates.resourceType'
   ];
 
-  function run(registry, magnum, basePath, resourceType) {
+  function run(registry, clusterTemplatesService, basePath, resourceType) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Cluster Template'), gettext('Cluster Templates'))
 
@@ -78,14 +78,14 @@
     .setProperty('network_driver', {
       label: gettext('Network Driver')
     })
-    .setListFunction(listFunction)
+    .setListFunction(clusterTemplatesService.getClusterTemplatesPromise)
     .tableColumns
     .append({
       id: 'name',
       priority: 1,
       sortDefault: true,
       filters: ['noName'],
-      urlFunction: urlFunction
+      urlFunction: clusterTemplatesService.urlFunction
     })
     .append({
       id: 'id',
@@ -122,23 +122,6 @@
         {label: gettext('Mesos'), key: 'mesos'}
       ]
     });
-
-    function listFunction(params) {
-      return magnum.getClusterTemplates(params).then(modifyResponse);
-
-      function modifyResponse(response) {
-        return {data: {items: response.data.items.map(addTrackBy)}};
-
-        function addTrackBy(clusterTemplate) {
-          clusterTemplate.trackBy = clusterTemplate.id;
-          return clusterTemplate;
-        }
-      }
-    }
-
-    function urlFunction(item) {
-      return 'project/ngdetails/OS::Magnum::ClusterTemplate/' + item.id;
-    }
   }
 
   config.$inject = [

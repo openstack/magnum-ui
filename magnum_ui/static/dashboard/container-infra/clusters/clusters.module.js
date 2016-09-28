@@ -52,12 +52,12 @@
 
   run.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
-    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.dashboard.container-infra.clusters.service',
     'horizon.dashboard.container-infra.clusters.basePath',
     'horizon.dashboard.container-infra.clusters.resourceType'
   ];
 
-  function run(registry, magnum, basePath, resourceType) {
+  function run(registry, clustersService, basePath, resourceType) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Cluster'), gettext('Clusters'))
 
@@ -79,14 +79,14 @@
     .setProperty('node_count', {
       label: gettext('Node Count')
     })
-    .setListFunction(listFunction)
+    .setListFunction(clustersService.getClustersPromise)
     .tableColumns
     .append({
       id: 'name',
       priority: 1,
       sortDefault: true,
       filters: ['noName'],
-      urlFunction: urlFunction
+      urlFunction: clustersService.urlFunction
     })
     .append({
       id: 'id',
@@ -149,23 +149,6 @@
       'name': 'node_count',
       'singleton': true
     });
-
-    function listFunction(params) {
-      return magnum.getClusters(params).then(modifyResponse);
-
-      function modifyResponse(response) {
-        return {data: {items: response.data.items.map(addTrackBy)}};
-
-        function addTrackBy(cluster) {
-          cluster.trackBy = cluster.id;
-          return cluster;
-        }
-      }
-    }
-
-    function urlFunction(item) {
-      return 'project/ngdetails/OS::Magnum::Cluster/' + item.id;
-    }
   }
 
   config.$inject = [
