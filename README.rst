@@ -1,8 +1,8 @@
-===============================
-magnum-ui
-===============================
+=========
+Magnum-UI
+=========
 
-Magnum Dashboard
+Horizon plugin for Magnum
 
 * Free software: Apache license
 * Source: http://git.openstack.org/cgit/openstack/magnum-ui
