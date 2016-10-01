@@ -1,13 +1,14 @@
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
+# Robert Simai <robert.simai@suse.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev22\n"
+"Project-Id-Version: magnum-ui 2.1.2.dev1\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-09-27 02:59+0000\n"
+"POT-Creation-Date: 2016-09-29 12:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-26 07:57+0000\n"
+"PO-Revision-Date: 2016-09-30 11:10+0000\n"
 "Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -24,14 +25,14 @@ msgid "API Server Port"
 msgstr "API Server Port"
 
 msgid "An arbitrary human-readable name"
-msgstr "Ein willkürlicher menschenlesbarer Name"
+msgstr "Ein beliebiger menschenlesbarer Name"
 
 msgid ""
 "Arbitrary labels in the form of key=value pairs to associate with a cluster "
 "templates. May be used multiple times."
 msgstr ""
-"Willkürliche Bezeichnungen in der Form Schlüssel=Wert verbunden in der "
-"Cluster Vorlage. Kann mehrmals verwendet werden."
+"Beliebige Bezeichnungen in der Form Schlüssel=Wert, zu verbunden mit einer "
+"Clustervorlage. Kann mehrmals verwendet werden."
 
 msgid "CHECK COMPLETE"
 msgstr "ÜBERPRÜFUNG KOMPLETT"
@@ -62,7 +63,7 @@ msgid "Choose a Cluster Template"
 msgstr "Wähle eine Cluster Vorlage"
 
 msgid "Choose a Container Orchestration Engine"
-msgstr "Wählen Sie ein Container Orchestrierungswerkzeug"
+msgstr "Wählen Sie ein Container-Orchestrierungswerkzeug"
 
 msgid "Choose a Flavor for the Master Node"
 msgstr "Wähle eine Variante für den Master-Knoten"
@@ -102,23 +103,23 @@ msgid "Cluster Name"
 msgstr "Cluster Name"
 
 msgid "Cluster Template"
-msgstr "Cluster Vorlage"
+msgstr "Clustervorlage"
 
 msgid "Cluster Template Detail"
 msgstr "Cluster Vorlage Detail"
 
 msgid "Cluster Template Name"
-msgstr "Cluster Vorlagenname"
+msgstr "Cluster-Vorlagenname"
 
 msgid "Cluster Templates"
-msgstr "Cluster Vorlagen"
+msgstr "Clustervorlagen"
 
 msgid "Cluster Type"
 msgstr "Clustertyp"
 
 #, python-format
 msgid "Cluster template %s was successfully created."
-msgstr "Cluster Vorlage %s erfolgreich angelegt."
+msgstr "Clustervorlage %s erfolgreich angelegt."
 
 msgid "Clusters"
 msgstr "Cluster"
@@ -134,7 +135,7 @@ msgstr[0] "Bestätige Löschen von Cluster Vorlage"
 msgstr[1] "Bestätige Löschen von Cluster Vorlagen"
 
 msgid "Container Orchestration Engine"
-msgstr "Container Orchestration Engine"
+msgstr "Container-Orchestrierungswerkzeug"
 
 msgid "Create"
 msgstr "Erstellen"
@@ -195,7 +196,7 @@ msgid "Disable TLS"
 msgstr "TLS deaktivieren"
 
 msgid "Disable TLS in the cluster template. Default: False"
-msgstr "Deaktiviere TLS in  der Cluster Vorlage. Standard: False"
+msgstr "Deaktiviere TLS in  der Clustervorlage. Standard: False"
 
 msgid "Discovery URL"
 msgstr "Discovery URL"
@@ -204,7 +205,7 @@ msgid "Docker"
 msgstr "Docker"
 
 msgid "Docker Storage Driver"
-msgstr "Docker Storage Treiber"
+msgstr "Docker Storage-Treiber"
 
 msgid "Docker Swarm"
 msgstr "Docker Swarm"
@@ -219,10 +220,10 @@ msgid "Enable Registry"
 msgstr "Aktiviere Registry"
 
 msgid "Enable docker registry in the cluster temlate. Default: False"
-msgstr "Akiviere Docker Registry in der Cluster Vorlage. Standard: False"
+msgstr "Aktiviere Docker Registry in der Clustervorlage. Standard: False"
 
 msgid "External Network ID"
-msgstr "Externe Netzwerk ID"
+msgstr "Externe Netzwerk-ID"
 
 msgid "Fixed Network"
 msgstr "Fixes Netzwerk"
@@ -296,7 +297,7 @@ msgid "Labels"
 msgstr "Bezeichnungen"
 
 msgid "Make cluster template public. Default: False"
-msgstr "Mach Cluster Vorlage public. Standard: False"
+msgstr "Clustervorlage öffentlich machen. Standard: False"
 
 msgid "Master Addresses"
 msgstr "Masteradressen"
@@ -329,7 +330,7 @@ msgid "Name"
 msgstr "Name"
 
 msgid "Name of the cluster template to create."
-msgstr "Name für die Cluster Vorlage erstellt."
+msgstr "Name für die zu erstellende Clustervorlage."
 
 msgid "Name of the cluster to create."
 msgstr "Name des zu erstellenden Cluster."
@@ -414,7 +415,7 @@ msgstr "Wählen Sie ein Container Orchestrierungswerkzeug."
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
-msgstr "Gibt den Nameserver für die Cluster Vorlage an. Standard: 8.8.8.8"
+msgstr "Gibt den Nameserver für die Clustervorlage an. Standard: 8.8.8.8"
 
 msgid "Specify the number of master nodes and cluster nodes for the cluster."
 msgstr ""
@@ -433,13 +434,14 @@ msgid "TLS Disabled"
 msgstr "TLS deaktiviert"
 
 msgid "The DNS nameserver to use for this cluster template"
-msgstr "Der DNS Nameserver zur Benutzung in der Cluster Vorlage"
+msgstr "Der DNS Nameserver zur Benutzung in dieser Cluster Vorlage"
 
 msgid "The cluster node count."
 msgstr "Die Cluster Knotenanzahl."
 
 msgid "The external Neutron network ID to connect to this cluster template"
-msgstr "Die externe Neutron Netzwerk-ID zur Verbindung zur Cluster Vorlage"
+msgstr ""
+"Die externe Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
 
 msgid "The http_proxy address to use for nodes in cluster"
 msgstr "Die http_proxy Adresse zur Benutzung von Knoten im Cluster"
@@ -449,7 +451,7 @@ msgstr "Die https_proxy Adresse zur Benutzung von Knoten im Cluster"
 
 msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
 msgstr ""
-"Der Name oder UUID des SSH Schlüsselpaares zum Laden in den Cluster-Knoten."
+"Der Name oder UUID des SSH Schlüsselpaares zum Laden in die Cluster-Knoten."
 
 msgid "The name or UUID of the base image to customize for the cluster."
 msgstr "Der Name oder UUID des Basis-Abbildes zum Anpassen für den Cluster."
@@ -476,10 +478,12 @@ msgid "The number of master nodes for the cluster."
 msgstr "Die Anzahl der Master Knoten für den Cluster."
 
 msgid "The private Neutron network name to connect to this cluster template"
-msgstr "Die private Neutron Netzwerk-ID zur Verbindung zur Cluster Vorlage"
+msgstr ""
+"Die private Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
 
 msgid "The private Neutron subnet name to connect to this cluster template"
-msgstr "Der private Neutron Subnetzname zur Verbindung zur Cluster Vorlage"
+msgstr ""
+"Der private Neutron Subnetzname zur Verbindung mit dieser Cluster Vorlage"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Größe des Docker Datenträgers in GB. Standard: 25"
@@ -510,7 +514,7 @@ msgid "UPDATE IN PROGRESS"
 msgstr "AKTUALISIERUNG IN ARBEIT"
 
 msgid "Unable to create cluster template."
-msgstr "Cluster Vorlage kann nicht erstellt werden."
+msgstr "Clustervorlage kann nicht erstellt werden."
 
 msgid "Unable to create cluster."
 msgstr "Cluster kann nicht erzeugt werden."
@@ -529,10 +533,10 @@ msgstr[1] "Die Cluster können nicht gelöscht werden: %s."
 
 #, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
-msgstr "Cluster Vorlage mit ID %(id)s konnte nicht gelöscht werden"
+msgstr "Clustervorlage mit ID %(id)s konnte nicht gelöscht werden"
 
 msgid "Unable to delete the cluster templates."
-msgstr "Cluster Vorlagen konnten nicht gelöscht werden."
+msgstr "Clustervorlagen konnten nicht gelöscht werden."
 
 #, python-format
 msgid "Unable to delete the cluster with id: %(id)s"
@@ -545,10 +549,10 @@ msgid "Unable to retrieve the certificate."
 msgstr "Konnte Zertifikat nicht abrufen."
 
 msgid "Unable to retrieve the cluster template."
-msgstr "Cluster Vorlage kann nicht abgerufen werden."
+msgstr "Clustervorlage kann nicht abgerufen werden."
 
 msgid "Unable to retrieve the cluster templates."
-msgstr "Cluster Vorlagen können nicht abgerufen werden."
+msgstr "Clustervorlagen können nicht abgerufen werden."
 
 msgid "Unable to retrieve the cluster."
 msgstr "Cluster kann nicht abgerufen werden."
@@ -563,7 +567,7 @@ msgid "Updated"
 msgstr "Aktualisiert"
 
 msgid "Volume Driver"
-msgstr "Datenträger Treiber"
+msgstr "Datenträgertreiber"
 
 #, python-format
 msgid "You are not allowed to delete cluster templates: %s"
