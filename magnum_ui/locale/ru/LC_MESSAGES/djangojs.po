@@ -1,14 +1,15 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Veronika Stepurova <vstepurova@hystax.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 1.0.1.dev41\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev33\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-29 05:32+0000\n"
+"POT-Creation-Date: 2016-10-04 12:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-27 11:09+0000\n"
-"Last-Translator: Ilya Alekseyev <ilyaalekseyev@acm.org>\n"
+"PO-Revision-Date: 2016-10-05 06:12+0000\n"
+"Last-Translator: Veronika Stepurova <vstepurova@hystax.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -240,6 +241,31 @@ msgstr ""
 
 msgid "Timeout"
 msgstr "Таймаут"
+
+msgid "Unable to create cluster template."
+msgstr "Не удалось создать шаблон кластера."
+
+msgid "Unable to create cluster."
+msgstr "Не удалось создать кластер."
+
+#, python-format
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "Не удается удалить шаблон кластера с ИД: %(id)s"
+
+msgid "Unable to delete the clusters."
+msgstr "Не удается удалить кластера."
+
+msgid "Unable to retrieve the cluster template."
+msgstr "Не удалось получить шаблон кластера."
+
+msgid "Unable to retrieve the cluster templates."
+msgstr "Не удалось получить шаблоны кластера."
+
+msgid "Unable to retrieve the cluster."
+msgstr "Не удалось получить кластер."
+
+msgid "Unable to retrieve the clusters."
+msgstr "Не удалось получить кластеры."
 
 msgid "Updated"
 msgstr "Обновлено"
