@@ -2,13 +2,13 @@
 # Robert Simai <robert.simai@suse.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.2.dev1\n"
+"Project-Id-Version: magnum-ui 2.1.2.dev7\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-09-29 12:01+0000\n"
+"POT-Creation-Date: 2016-10-06 12:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-30 11:10+0000\n"
+"PO-Revision-Date: 2016-10-11 02:45+0000\n"
 "Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -35,13 +35,13 @@ msgstr ""
 "Clustervorlage. Kann mehrmals verwendet werden."
 
 msgid "CHECK COMPLETE"
-msgstr "ÜBERPRÜFUNG KOMPLETT"
+msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
 
 msgid "COE"
 msgstr "COE"
 
 msgid "CREATE COMPLETE"
-msgstr "ERSTELLUNG KOMPLETT"
+msgstr "ERSTELLUNG ABGESCHLOSSEN"
 
 msgid "CREATE FAILED"
 msgstr "ERSTELLUNG FEHLGESCHLAGEN"
@@ -60,7 +60,7 @@ msgid "Certificate %s was successfully signed."
 msgstr "Zertifikat %s wurde erfolgreich signiert."
 
 msgid "Choose a Cluster Template"
-msgstr "Wähle eine Cluster Vorlage"
+msgstr "Wähle eine Clustervorlage"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Wählen Sie ein Container-Orchestrierungswerkzeug"
@@ -94,7 +94,7 @@ msgid "Cluster %s was successfully created."
 msgstr "Cluster %s wurde erfolgreich erstellt."
 
 msgid "Cluster Create Timeout"
-msgstr "Timeout Cluster Erstellung"
+msgstr "Zeitlimit Clustererstellung"
 
 msgid "Cluster Distro"
 msgstr "Cluster Distro"
@@ -106,7 +106,7 @@ msgid "Cluster Template"
 msgstr "Clustervorlage"
 
 msgid "Cluster Template Detail"
-msgstr "Cluster Vorlage Detail"
+msgstr "Clustervorlage Detail"
 
 msgid "Cluster Template Name"
 msgstr "Cluster-Vorlagenname"
@@ -131,8 +131,8 @@ msgstr[1] "Bestätige die Cluster zu löschen"
 
 msgid "Confirm Delete Cluster Template"
 msgid_plural "Confirm Delete Cluster Templates"
-msgstr[0] "Bestätige Löschen von Cluster Vorlage"
-msgstr[1] "Bestätige Löschen von Cluster Vorlagen"
+msgstr[0] "Löschen der Clustervorlage bestätigen"
+msgstr[1] "Löschen der Clustervorlagen bestätigen"
 
 msgid "Container Orchestration Engine"
 msgstr "Container-Orchestrierungswerkzeug"
@@ -150,7 +150,7 @@ msgid "Created"
 msgstr "Erstellt"
 
 msgid "DELETE COMPLETE"
-msgstr "LÖSCHUNG KOMPLETT"
+msgstr "LÖSCHUNG ABGESCHLOSSEN"
 
 msgid "DELETE FAILED"
 msgstr "LÖSCHUNG FEHLGESCHLAGEN"
@@ -180,8 +180,8 @@ msgstr "Cluster löschen"
 #, python-format
 msgid "Deleted cluster template: %s."
 msgid_plural "Deleted cluster templates: %s."
-msgstr[0] "Gelöschte Cluster Vorlage: %s."
-msgstr[1] "Gelöschte Cluster Vorlagen: %s."
+msgstr[0] "Gelöschte Clustervorlage: %s."
+msgstr[1] "Gelöschte Clustervorlagen: %s."
 
 #, python-format
 msgid "Deleted cluster: %s."
@@ -303,7 +303,7 @@ msgid "Master Addresses"
 msgstr "Masteradressen"
 
 msgid "Master Count"
-msgstr "Master Zähler"
+msgstr "Anzahl Master"
 
 msgid "Master Flavor"
 msgstr "Master Variante"
@@ -333,7 +333,7 @@ msgid "Name of the cluster template to create."
 msgstr "Name für die zu erstellende Clustervorlage."
 
 msgid "Name of the cluster to create."
-msgstr "Name des zu erstellenden Cluster."
+msgstr "Name des zu erstellenden Clusters."
 
 msgid "Network"
 msgstr "Netzwerk"
@@ -348,7 +348,7 @@ msgid "Node Addresses"
 msgstr "Knotenadressen"
 
 msgid "Node Count"
-msgstr "Knoten Zähler"
+msgstr "Knotenzähler"
 
 msgid "Node Spec"
 msgstr "Knotenspezifikation"
@@ -366,13 +366,13 @@ msgid "Public"
 msgstr "Öffentlich"
 
 msgid "RESTORE COMPLETE"
-msgstr "WIEDERHERSTELLUNG KOMPLETT"
+msgstr "WIEDERHERSTELLUNG ABGESCHLOSSEN"
 
 msgid "RESUME COMPLETE"
-msgstr "WIEDERAUFNAHME KOMPLETT"
+msgstr "WIEDERAUFNAHME ABGESCHLOSSEN"
 
 msgid "ROLLBACK COMPLETE"
-msgstr "ROLLBACK KOMPLETT"
+msgstr "RÜCKABWICKLUNG ABGESCHLOSSEN"
 
 msgid "Record Properties"
 msgstr "Datensatzeigenschaften"
@@ -384,7 +384,7 @@ msgid "Rexray"
 msgstr "Rexray"
 
 msgid "SNAPSHOT COMPLETE"
-msgstr "SCHATTENKOPIE KOMPLETT"
+msgstr "SCHATTENKOPIE ABGESCHLOSSEN"
 
 msgid "Server Type"
 msgstr "Servertyp"
@@ -396,19 +396,19 @@ msgid "Sign Certificate"
 msgstr "Zertifikate signieren"
 
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
-msgstr "Signiertes Zertifikat für Cluster: {$ ctrl.model.cluster_name $}"
+msgstr "Signiere Zertifikat für Cluster: {$ ctrl.model.cluster_name $}"
 
 msgid "Size"
 msgstr "Größe"
 
 msgid "Specifies custom discovery url for node discovery."
-msgstr "Gibt angepasste Discovery Url für Knoten Discovery an."
+msgstr "Gibt angepasste Discovery-URL zum Auffinden der Knoten an."
 
 msgid "Specify cluster name and choose cluster template"
-msgstr "Spezifiziere Cluster Name und wähle Cluster Vorlage"
+msgstr "Geben Sie den Clusternamen an und wählen Sie die Clustervorlage"
 
 msgid "Specify conditions for cluster creation."
-msgstr "Gibt Konditionen zur Cluster Erstellung an."
+msgstr "Gibt Bedingungen zur Clustererstellung an."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Wählen Sie ein Container Orchestrierungswerkzeug."
@@ -419,7 +419,7 @@ msgstr "Gibt den Nameserver für die Clustervorlage an. Standard: 8.8.8.8"
 
 msgid "Specify the number of master nodes and cluster nodes for the cluster."
 msgstr ""
-"Bestimmt die Anzahl der Master Knoten und Cluster Knoten für den Cluster."
+"Bestimmt die Anzahl der Masterknoten und Clusterknoten für den Cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Gibt die Grösse des Docker Datenträgers in GB an"
@@ -437,7 +437,7 @@ msgid "The DNS nameserver to use for this cluster template"
 msgstr "Der DNS Nameserver zur Benutzung in dieser Cluster Vorlage"
 
 msgid "The cluster node count."
-msgstr "Die Cluster Knotenanzahl."
+msgstr "Die Anzahl der Clusterknoten."
 
 msgid "The external Neutron network ID to connect to this cluster template"
 msgstr ""
@@ -475,7 +475,7 @@ msgstr ""
 "Clusters. Standard: m1.small"
 
 msgid "The number of master nodes for the cluster."
-msgstr "Die Anzahl der Master Knoten für den Cluster."
+msgstr "Die Anzahl der Masterknoten für den Cluster."
 
 msgid "The private Neutron network name to connect to this cluster template"
 msgstr ""
@@ -492,8 +492,8 @@ msgid ""
 "The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
 "default is no timeout."
 msgstr ""
-"Timeout zur Cluster Erstellung in Minuten. 0 bedeutet kein Timeout. Der "
-"Standard ist kein Timeout."
+"Zeitlimit zur Clustererstellung in Minuten. 0 bedeutet kein Limit. Der "
+"Standard ist kein Limit."
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "Der Datenträgertreibername für instanziierende Containerdatenträger."
@@ -505,7 +505,7 @@ msgid "Timeout"
 msgstr "Zeitüberschreitung"
 
 msgid "UPDATE COMPLETE"
-msgstr "AKTUALISIERUNG KOMPLETT"
+msgstr "AKTUALISIERUNG ABGESCHLOSSEN"
 
 msgid "UPDATE FAILED"
 msgstr "AKTUALISIERUNG FEHLGESCHLAGEN"
@@ -522,8 +522,8 @@ msgstr "Cluster kann nicht erzeugt werden."
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
-msgstr[0] "Konnte Cluster Vorlage %s nicht löschen."
-msgstr[1] "Konnte Cluster Vorlagen %s nicht löschen."
+msgstr[0] "Konnte Clustervorlage %s nicht löschen."
+msgstr[1] "Konnte Clustervorlagen %s nicht löschen."
 
 #, python-format
 msgid "Unable to delete cluster: %s."
@@ -571,11 +571,11 @@ msgstr "Datenträgertreiber"
 
 #, python-format
 msgid "You are not allowed to delete cluster templates: %s"
-msgstr "Sie sind nicht berechtigt zum Löschen von Cluster Vorlagen: %s"
+msgstr "Sie sind nicht zum Löschen von Clustevorlagen berechtigt: %s"
 
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
-msgstr "Sie sind nicht zum Löschen von Cluster %s berechtigt."
+msgstr "Sie sind nicht zum Löschen von Clustern berechtigt: %s"
 
 #, python-format
 msgid ""
@@ -585,8 +585,8 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted clusters "
 "are not recoverable."
 msgstr[0] ""
-"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
-"Cluster können nicht wiederhergestellt werden."
+"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschter "
+"Cluster kann nicht wiederhergestellt werden."
 msgstr[1] ""
 "Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
 "Cluster können nicht wiederhergestellt werden."
@@ -600,10 +600,10 @@ msgid_plural ""
 "templates are not recoverable."
 msgstr[0] ""
 "Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
-"Cluster Vorlagen können nicht wiederhergestellt werden."
+"Clustervorlage kann nicht wiederhergestellt werden."
 msgstr[1] ""
 "Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
-"Cluster Vorlagen können nicht wiederhergestellt werden."
+"Clustervorlagen können nicht wiederhergestellt werden."
 
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
