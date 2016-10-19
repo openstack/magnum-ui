@@ -98,7 +98,7 @@
           title: ngettext('title', 'titles', count),
           message: ngettext('message', 'messages', count),
           submit: ngettext('submit', 'submits', count),
-          success: ngettext('success', 'successs', count),
+          success: ngettext('success', 'successes', count),
           error: ngettext('error', 'errors', count)
         };
       }
