@@ -48,9 +48,9 @@
     init();
 
     function init() {
-      glance.getImages().success(onGetImages);
-      nova.getFlavors(false, false).success(onGetFlavors); // isPublic, getExtras
-      nova.getKeypairs().success(onGetKeypairs);
+      glance.getImages().then(onGetImages);
+      nova.getFlavors(false, false).then(onGetFlavors); // isPublic, getExtras
+      nova.getKeypairs().then(onGetKeypairs);
     }
 
     function onGetImages(response) {

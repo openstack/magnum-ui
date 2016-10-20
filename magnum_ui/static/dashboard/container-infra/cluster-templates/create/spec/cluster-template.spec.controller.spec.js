@@ -18,34 +18,38 @@
   'use strict';
 
   describe('createClusterTemplateSpecController tests', function() {
-    var controller, glance, nova;
-
-    function fakePromise() {
-      return { success: angular.noop };
-    }
+    var controller, glance, nova, deferred, KeyDeferred, $q;
 
     beforeEach(module('horizon.dashboard.container-infra.cluster-templates'));
 
-    beforeEach(inject(function ($injector) {
+    beforeEach(inject(function ($injector, _$q_) {
+      $q = _$q_;
       controller = $injector.get('$controller');
       glance = $injector.get('horizon.app.core.openstack-service-api.glance');
       nova = $injector.get('horizon.app.core.openstack-service-api.nova');
 
-      spyOn(glance, 'getImages').and.callFake(fakePromise);
-      spyOn(nova, 'getFlavors').and.callFake(fakePromise);
-      spyOn(nova, 'getKeypairs').and.callFake(fakePromise);
+      deferred = $q.defer();
+      deferred.resolve({items:{1:{name:1},2:{name:2}}});
+      KeyDeferred = $q.defer();
+      KeyDeferred.resolve({items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}});
+
+      spyOn(glance, 'getImages').and.returnValue(deferred.promise);
+      spyOn(nova, 'getFlavors').and.returnValue(deferred.promise);
+      spyOn(nova, 'getKeypairs').and.returnValue(KeyDeferred.promise);
+
     }));
 
     function createController(scope) {
       return controller('createClusterTemplateSpecController', {$scope: scope});
     }
 
-    it('should initialise the controller when created', function() {
+    it('should initialise the controller when created', inject(function($timeout) {
       var ctrl = createController({});
+      $timeout.flush();
       expect(ctrl.images).toBeDefined();
       expect(ctrl.nflavors).toBeDefined();
       expect(ctrl.mflavors).toBeDefined();
       expect(ctrl.keypairs).toBeDefined();
-    });
+    }));
   });
 })();
