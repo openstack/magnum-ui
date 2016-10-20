@@ -1,0 +1,638 @@
+# Frank Kloeker <eumel@arcor.de>, 2016. #zanata
+# Robert Simai <robert.simai@suse.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: magnum-ui 2.1.1.dev42\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-10-19 11:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-20 07:17+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "ADOPT COMPLETE"
+msgstr "ÜBERNAHME ABGESCHLOSSEN"
+
+msgid "API Address"
+msgstr "API Adresse"
+
+msgid "API Server Port"
+msgstr "API Server Port"
+
+msgid "An arbitrary human-readable name"
+msgstr "Ein beliebiger menschenlesbarer Name"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr ""
+"Beliebige Bezeichnungen in der Form Schlüssel=Wert, zu verbunden mit einer "
+"Clustervorlage. Kann mehrmals verwendet werden."
+
+msgid "CHECK COMPLETE"
+msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
+
+msgid "COE"
+msgstr "COE"
+
+msgid "CREATE COMPLETE"
+msgstr "ERSTELLUNG ABGESCHLOSSEN"
+
+msgid "CREATE FAILED"
+msgstr "ERSTELLUNG FEHLGESCHLAGEN"
+
+msgid "CREATE IN PROGRESS"
+msgstr "ERSTELLUNG IN ARBEIT"
+
+msgid "CSR File"
+msgstr "CSR Datei"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#, python-format
+msgid "Certificate %s was successfully signed."
+msgstr "Zertifikat %s wurde erfolgreich signiert."
+
+msgid "Choose a Cluster Template"
+msgstr "Wähle eine Clustervorlage"
+
+msgid "Choose a Container Orchestration Engine"
+msgstr "Wählen Sie ein Container-Orchestrierungswerkzeug"
+
+msgid "Choose a Flavor for the Master Node"
+msgstr "Wähle eine Variante für den Master-Knoten"
+
+msgid "Choose a Flavor for the Node"
+msgstr "Wähle eine Variante für den Knoten"
+
+msgid "Choose a Keypair"
+msgstr "Wählen Sie ein Schlüsselpaar"
+
+msgid "Choose a Network Driver"
+msgstr "Wählen Sie einen Netzwerktreiber"
+
+msgid "Choose a Volume Driver"
+msgstr "Wählen Sie einen Datenträger-Treiber"
+
+msgid "Choose an Image"
+msgstr "Wähle ein Abbild"
+
+msgid "Cinder"
+msgstr "Cinder"
+
+msgid "Cluster"
+msgstr "Cluster"
+
+#, python-format
+msgid "Cluster %s was successfully created."
+msgstr "Cluster %s wurde erfolgreich erstellt."
+
+msgid "Cluster Create Timeout"
+msgstr "Zeitlimit Clustererstellung"
+
+msgid "Cluster Distro"
+msgstr "Cluster Distro"
+
+msgid "Cluster Name"
+msgstr "Cluster Name"
+
+msgid "Cluster Template"
+msgstr "Clustervorlage"
+
+msgid "Cluster Template Detail"
+msgstr "Clustervorlage Detail"
+
+msgid "Cluster Template Name"
+msgstr "Cluster-Vorlagenname"
+
+msgid "Cluster Templates"
+msgstr "Clustervorlagen"
+
+msgid "Cluster Type"
+msgstr "Clustertyp"
+
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "Clustervorlage %s erfolgreich angelegt."
+
+msgid "Clusters"
+msgstr "Cluster"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "Bestätige den Cluster zu löschen"
+msgstr[1] "Bestätige die Cluster zu löschen"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "Löschen der Clustervorlage bestätigen"
+msgstr[1] "Löschen der Clustervorlagen bestätigen"
+
+msgid "Container Orchestration Engine"
+msgstr "Container-Orchestrierungswerkzeug"
+
+msgid "Create"
+msgstr "Erstellen"
+
+msgid "Create Cluster"
+msgstr "Erstelle Cluster"
+
+msgid "Create Cluster Template"
+msgstr "Clustervorlage erstellen"
+
+msgid "Created"
+msgstr "Erstellt"
+
+msgid "DELETE COMPLETE"
+msgstr "LÖSCHUNG ABGESCHLOSSEN"
+
+msgid "DELETE FAILED"
+msgstr "LÖSCHUNG FEHLGESCHLAGEN"
+
+msgid "DELETE IN PROGRESS"
+msgstr "LÖSCHUNG IN ARBEIT"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "Cluster löschen"
+msgstr[1] "Cluster löschen"
+
+msgid "Delete Cluster Template"
+msgid_plural "Delete Cluster Templates"
+msgstr[0] "Clustervorlage löschen"
+msgstr[1] "Clustervorlagen löschen"
+
+msgid "Delete Cluster Templates"
+msgstr "Clustervorlagen löschen"
+
+msgid "Delete Clusters"
+msgstr "Cluster löschen"
+
+#, python-format
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "Gelöschte Clustervorlage: %s."
+msgstr[1] "Gelöschte Clustervorlagen: %s."
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "Gelöschter Cluster: %s."
+msgstr[1] "Gelöschte Cluster: %s."
+
+msgid "Device Mapper"
+msgstr "Device Mapper"
+
+msgid "Disable TLS"
+msgstr "TLS deaktivieren"
+
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "Deaktiviere TLS in  der Clustervorlage. Standard: Falsch"
+
+msgid "Discovery URL"
+msgstr "Discovery URL"
+
+msgid "Docker"
+msgstr "Docker"
+
+msgid "Docker Storage Driver"
+msgstr "Docker Storage-Treiber"
+
+msgid "Docker Swarm"
+msgstr "Docker Swarm"
+
+msgid "Docker Volume Size"
+msgstr "Docker Datenträgergrösse"
+
+msgid "Docker Volume Size (GB)"
+msgstr "Docker Datenträgergrösse (GB)"
+
+msgid "Enable Registry"
+msgstr "Aktiviere Registry"
+
+msgid "Enable docker registry in the cluster temlate. Default: False"
+msgstr "Aktiviere Docker Registry in der Clustervorlage. Standard: Falsch"
+
+msgid "External Network ID"
+msgstr "Externe Netzwerk-ID"
+
+msgid "Fixed Network"
+msgstr "Fixes Netzwerk"
+
+msgid "Fixed Subnet"
+msgstr "Festes Subnetz"
+
+msgid "Flannel"
+msgstr "Flannel"
+
+msgid "Flavor"
+msgstr "Variante"
+
+msgid "Flavor ID"
+msgstr "Variante ID"
+
+msgid "Floating IP"
+msgstr "Floating IP"
+
+msgid "Floating IP Enabled"
+msgstr "Floating IP aktiviert"
+
+msgid "HTTP Proxy"
+msgstr "HTTP-Proxy"
+
+msgid "HTTPS Proxy"
+msgstr "HTTPS-Proxy"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Image"
+msgstr "Abbild"
+
+msgid "Image ID"
+msgstr "Abbild ID"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"Macht kenntlich, ob der erstellte Cluster eine Floating IP haben soll oder "
+"nicht. Standard: Wahr"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"Macht kenntlich, ob der erstellte Cluster einen Loadbalancer für den Master-"
+"Knoten haben soll oder nicht. Standard: Falsch"
+
+msgid "Infinite"
+msgstr "Unendlich"
+
+msgid "Info"
+msgstr "Info"
+
+msgid "KEY1=VALUE1,KEY2=VALUE2..."
+msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+
+msgid "Keypair"
+msgstr "Schlüsselpaar"
+
+msgid "Keypair ID"
+msgstr "Schlüsselpaar ID"
+
+msgid "Kubernetes"
+msgstr "Kubernetes"
+
+msgid "Labels"
+msgstr "Bezeichnungen"
+
+msgid "Make cluster template public. Default: False"
+msgstr "Clustervorlage öffentlich machen. Standard: Falsch"
+
+msgid "Master Addresses"
+msgstr "Masteradressen"
+
+msgid "Master Count"
+msgstr "Anzahl Master"
+
+msgid "Master Flavor"
+msgstr "Master Variante"
+
+msgid "Master Flavor ID"
+msgstr "Master Variante ID"
+
+msgid "Master LB"
+msgstr "Master LB"
+
+msgid "Master LB Enabled"
+msgstr "Master LB aktiviert"
+
+msgid "Mesos"
+msgstr "Mesos"
+
+msgid "Misc"
+msgstr "Verschiedenes"
+
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name of the cluster template to create."
+msgstr "Name für die zu erstellende Clustervorlage."
+
+msgid "Name of the cluster to create."
+msgstr "Name des zu erstellenden Clusters."
+
+msgid "Network"
+msgstr "Netzwerk"
+
+msgid "Network Driver"
+msgstr "Netzwerktreiber"
+
+msgid "No Proxy"
+msgstr "Kein Proxy"
+
+msgid "Node Addresses"
+msgstr "Knotenadressen"
+
+msgid "Node Count"
+msgstr "Knotenzähler"
+
+msgid "Node Spec"
+msgstr "Knotenspezifikation"
+
+msgid "Nodes"
+msgstr "Knoten"
+
+msgid "Overley"
+msgstr "Overley"
+
+msgid "Overview"
+msgstr "Übersicht"
+
+msgid "Public"
+msgstr "Öffentlich"
+
+msgid "RESTORE COMPLETE"
+msgstr "WIEDERHERSTELLUNG ABGESCHLOSSEN"
+
+msgid "RESUME COMPLETE"
+msgstr "WIEDERAUFNAHME ABGESCHLOSSEN"
+
+msgid "ROLLBACK COMPLETE"
+msgstr "RÜCKABWICKLUNG ABGESCHLOSSEN"
+
+msgid "Record Properties"
+msgstr "Datensatzeigenschaften"
+
+msgid "Registry Enabled"
+msgstr "Registry aktiviert"
+
+msgid "Rexray"
+msgstr "Rexray"
+
+msgid "SNAPSHOT COMPLETE"
+msgstr "SCHATTENKOPIE ABGESCHLOSSEN"
+
+msgid "Server Type"
+msgstr "Servertyp"
+
+msgid "Show Certificate"
+msgstr "Zertifikat anzeigen"
+
+msgid "Sign Certificate"
+msgstr "Zertifikate signieren"
+
+msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
+msgstr "Signiere Zertifikat für Cluster: {$ ctrl.model.cluster_name $}"
+
+msgid "Size"
+msgstr "Größe"
+
+msgid "Specifies custom discovery url for node discovery."
+msgstr "Gibt angepasste Discovery-URL zum Auffinden der Knoten an."
+
+msgid "Specify cluster name and choose cluster template"
+msgstr "Geben Sie den Clusternamen an und wählen Sie die Clustervorlage"
+
+msgid "Specify conditions for cluster creation."
+msgstr "Gibt Bedingungen zur Clustererstellung an."
+
+msgid "Specify the Container Orchestration Engine to use."
+msgstr "Wählen Sie ein Container Orchestrierungswerkzeug."
+
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr "Geben Sie den Nameserver für die Clustervorlage an. Standard: 8.8.8.8"
+
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr ""
+"Bestimmt die Anzahl der Masterknoten und Clusterknoten für den Cluster."
+
+msgid "Specify the size in GB for the docker volume"
+msgstr "Gibt die Grösse des Docker Datenträgers in GB an"
+
+msgid "Stack ID"
+msgstr "Stack ID"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "TLS Disabled"
+msgstr "TLS deaktiviert"
+
+msgid "The DNS nameserver to use for this cluster template"
+msgstr "Der DNS Nameserver zur Benutzung in dieser Cluster Vorlage"
+
+msgid "The cluster node count."
+msgstr "Die Anzahl der Clusterknoten."
+
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr ""
+"Die externe Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
+
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "Die http_proxy Adresse zur Benutzung von Knoten im Cluster"
+
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "Die https_proxy Adresse zur Benutzung von Knoten im Cluster"
+
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr ""
+"Der Name oder UUID des SSH Schlüsselpaares zum Laden in die Cluster-Knoten."
+
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr "Der Name oder UUID des Basis-Abbildes zum Anpassen für den Cluster."
+
+msgid "The network driver name for instantiating container networks"
+msgstr "Der Netzwerktreibername für instanziierende Container-Netzwerke"
+
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "Die no_proxy Adresse zur Benutzung von Knoten im Cluster"
+
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
+msgstr ""
+"Die Nova Varianten-ID zur Benutzung beim Starten des Clusters. Standard: m1."
+"small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the cluster. "
+"Default: m1.small"
+msgstr ""
+"Die Nova Varianten-ID zur Benutzung beim Starten des Master-Knotens des "
+"Clusters. Standard: m1.small"
+
+msgid "The number of master nodes for the cluster."
+msgstr "Die Anzahl der Masterknoten für den Cluster."
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr ""
+"Die private Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
+
+msgid "The private Neutron subnet name to connect to this cluster template"
+msgstr ""
+"Der private Neutron Subnetzname zur Verbindung mit dieser Cluster Vorlage"
+
+msgid "The size in GB for Docker Volume. Default: 25"
+msgstr "Größe des Docker Datenträgers in GB. Standard: 25"
+
+msgid ""
+"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
+"default is no timeout."
+msgstr ""
+"Zeitlimit zur Clustererstellung in Minuten. 0 bedeutet kein Limit. Der "
+"Standard ist kein Limit."
+
+msgid "The volume driver name for instantiating container volume."
+msgstr "Der Datenträgertreibername für instanziierende Containerdatenträger."
+
+msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
+msgstr ""
+"Das sollte wirklich nach fixed-network-cidr benannt werden. Standard: "
+"10.0.0.0/24"
+
+msgid "Timeout"
+msgstr "Zeitüberschreitung"
+
+msgid "UPDATE COMPLETE"
+msgstr "AKTUALISIERUNG ABGESCHLOSSEN"
+
+msgid "UPDATE FAILED"
+msgstr "AKTUALISIERUNG FEHLGESCHLAGEN"
+
+msgid "UPDATE IN PROGRESS"
+msgstr "AKTUALISIERUNG IN ARBEIT"
+
+msgid "Unable to create cluster template."
+msgstr "Clustervorlage kann nicht erstellt werden."
+
+msgid "Unable to create cluster."
+msgstr "Cluster kann nicht erzeugt werden."
+
+#, python-format
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "Konnte Clustervorlage %s nicht löschen."
+msgstr[1] "Konnte Clustervorlagen %s nicht löschen."
+
+#, python-format
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "Der Cluster kann nicht gelöscht werden: %s."
+msgstr[1] "Die Cluster können nicht gelöscht werden: %s."
+
+#, python-format
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "Clustervorlage mit ID %(id)s kann nicht gelöscht werden"
+
+msgid "Unable to delete the cluster templates."
+msgstr "Clustervorlagen können nicht gelöscht werden."
+
+#, python-format
+msgid "Unable to delete the cluster with id: %(id)s"
+msgstr "Cluster mit der ID %(id)s kann nicht gelöscht werden."
+
+msgid "Unable to delete the clusters."
+msgstr "Die Cluster konnten nicht gelöscht werden."
+
+msgid "Unable to retrieve the certificate."
+msgstr "Zertifikat kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the cluster template."
+msgstr "Clustervorlage kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the cluster templates."
+msgstr "Clustervorlagen können nicht abgerufen werden."
+
+msgid "Unable to retrieve the cluster."
+msgstr "Cluster kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the clusters."
+msgstr "Cluster können nicht abgerufen werden."
+
+msgid "Unable to sign certificate."
+msgstr "Zertifikat kann nicht signiert werden."
+
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "Volume Driver"
+msgstr "Datenträgertreiber"
+
+#, python-format
+msgid "You are not allowed to delete cluster templates: %s"
+msgstr "Sie sind nicht zum Löschen von Clustevorlagen berechtigt: %s"
+
+#, python-format
+msgid "You are not allowed to delete clusters: %s"
+msgstr "Sie sind nicht zum Löschen von Clustern berechtigt: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] ""
+"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschter "
+"Cluster kann nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Cluster können nicht wiederhergestellt werden."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Clustervorlage kann nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Clustervorlagen können nicht wiederhergestellt werden."
+
+msgid "error"
+msgid_plural "errors"
+msgstr[0] "Fehler"
+msgstr[1] "Fehler"
+
+msgid "message"
+msgid_plural "messages"
+msgstr[0] "Nachricht"
+msgstr[1] "Nachrichten"
+
+msgid "submit"
+msgid_plural "submits"
+msgstr[0] "Übergabe"
+msgstr[1] "Übergaben"
+
+msgid "success"
+msgid_plural "successes"
+msgstr[0] "Erfolg"
+msgstr[1] "Erfolge"
+
+msgid "title"
+msgid_plural "titles"
+msgstr[0] "Titel"
+msgstr[1] "Titel"
+
+msgid "{$ ctrl.cluster.create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.create_timeout $} Minute"
+msgstr[1] "{$ ctrl.cluster.create_timeout $} Minuten"
