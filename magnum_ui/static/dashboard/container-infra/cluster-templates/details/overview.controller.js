@@ -35,7 +35,7 @@
 
     function onGetClusterTemplate(template) {
       ctrl.cluster_template = template.data;
-      glance.getImages().success(onGetImages);
+      glance.getImages().then(onGetImages);
     }
 
     function onGetImages(images) {
