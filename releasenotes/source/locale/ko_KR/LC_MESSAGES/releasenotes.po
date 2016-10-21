@@ -1,0 +1,123 @@
+# Eunseop Shin <kairos9603@gmail.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Magnum UI Release Notes 2.1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-19 11:57+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-20 10:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: Korean (South Korea)\n"
+"Language: ko-KR\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "'bay' and 'baymodel' are changed to 'cluster' and 'cluster template'."
+msgstr ""
+"'베이(bay)'와 '베이모델(baymodle)'은 '클러스터(cluster)'와 '클러스터 템플릿"
+"(cluster template)'로 바뀌었습니다."
+
+msgid "'docker_storage_driver'"
+msgstr "'docker_storage_driver'"
+
+msgid "'fixed_subnet'"
+msgstr "'fixed_subnet'"
+
+msgid "'floating_ip_enabled'"
+msgstr "'floating_ip_enabled'"
+
+msgid "'master_lb_enabled'"
+msgstr "'master_lb_enabled'"
+
+msgid "2.1.0-44"
+msgstr "2.1.0-44"
+
+msgid "2.1.1"
+msgstr "2.1.1"
+
+msgid "Add following options to cluster template creation and views."
+msgstr "클러스터 템플릿 생성과 뷰에 다음 옵션을 추가하세요."
+
+msgid "Bug Fixes"
+msgstr "버그 수정"
+
+msgid ""
+"Container panel is removed. According to decision of Magnum that changes "
+"service scope, container management functions are removed."
+msgstr ""
+"컨테이너 패널이 삭제되었습니다. Magnum의 결정에 의해 서비스 범위가 바뀌었으"
+"며, 컨테이너 관리 기능들은 삭제되었습니다."
+
+msgid "Current Series Release Notes"
+msgstr "최신 시리즈에 대한 릴리즈 노트"
+
+msgid "Deprecation Notes"
+msgstr "지원 종료된 기능 노트"
+
+msgid ""
+"Fixes issue that there is no way to specify for insecure magnumclient as a "
+"result api throws 500 and SSL cert verify errors. 'insecure' and 'ca-cert' "
+"options are added for magnumclient."
+msgstr ""
+"안전하지 않은 매그넘 클라이언트에의해 API가 500을 던지거나 SSL cert 검증 에러"
+"가 났을때 상세정보를 확인 할 수 없는 에러가 수정되었습니다. 'insecure' 과 "
+"'ca-cert'옵션이 매그넘 클라이언트에 추가되었습니다."
+
+msgid "Magnum UI Release Notes"
+msgstr "Magnum UI 릴리즈 노트"
+
+msgid ""
+"Magnum changes its service scope as Container Infrastructure Management "
+"service. Also Magnum-UI change rename service 'container' to 'container-"
+"infra', and container management functions removed. Magnum uses terms "
+"'cluster' and 'cluster template' instead of 'bay' and 'baymodel', because "
+"the use of new Magnum term of 'bay' has caused confusion with users."
+msgstr ""
+"Magnum은 컨테이너 인프라 관리 서비스로 서비스 범위를 변경하였습니다. 또한 "
+"Magnum-UI에서 '컨테이너(container)' 가 '컨테이너-인프라(container-infra)'로 "
+"서비스 이름이 바뀌고, 컨테이너 관리 기능은 제거되었습니다. 이제 Magnum은 '베"
+"이(bay)'와 '베이모델(baymodel)'대신에 '클러스터(cluster)'와 '클러스터 템플릿"
+"(cluster template)'라는 용어를 사용합니다. 왜냐하면 '베이(bay)'라는 Magnum의 "
+"새로운 단어는 사용자들을 혼란 시켰기 때문입니다."
+
+msgid "New Features"
+msgstr "새로운 기능"
+
+msgid "Newton Series Release Notes"
+msgstr "Newton 시리즈에 대한 릴리즈 노트"
+
+msgid "Other Notes"
+msgstr "기타 기능"
+
+msgid ""
+"Service is renamed from 'container' to 'container-infra'. Renaming targets "
+"are URLs, Angular module name, slugs for panel, etc."
+msgstr ""
+"'컨테이너(container)' 에서 '컨테이너-인프라(container-infra)'로 서비스의 이름"
+"이 바뀌었습니다. 이름이 바뀔 대상으로 URL, 앵귤러 모듈, 패널의 슬러그, 등이 "
+"있습니다."
+
+msgid ""
+"Support 'ca-show'. The function of downloading CA from cluster is added."
+msgstr ""
+"'ca-show'를 지원합니다. 클러스터에서 CA를 다운받는 기능이 추가되었습니다."
+
+msgid ""
+"Support 'ca-sign'. The function of signing of certificates to cluster is "
+"added."
+msgstr "'ca-sign'을 지원합니다. 클러스터에 인증서 서명 기능이 추가되었습니다."
+
+msgid ""
+"Support for Horizon's Angular registry service, generic table and detail "
+"view, action service."
+msgstr ""
+"Horizon의 Angular 레지스트리 서비스, Generic 테이블과 뷰, 액션 서비스를 지원"
+"합니다."
+
+msgid "Switch to reno for managing release notes."
+msgstr "릴리즈 노트를 관리하려면 reno로 전환하십시오."
+
+msgid "Upgrade Notes"
+msgstr "업그레이드 노트"

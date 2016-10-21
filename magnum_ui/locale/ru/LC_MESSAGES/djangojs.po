@@ -1,20 +1,25 @@
+# Aleksey Alekseenko <9118250541@mail.ru>, 2016. #zanata
+# Alexander <ainikitenkov@gmail.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Veronika Stepurova <vstepurova@hystax.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev33\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev42\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-04 12:38+0000\n"
+"POT-Creation-Date: 2016-10-19 11:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-05 06:12+0000\n"
-"Last-Translator: Veronika Stepurova <vstepurova@hystax.com>\n"
+"PO-Revision-Date: 2016-10-19 02:20+0000\n"
+"Last-Translator: Alexander <ainikitenkov@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 3.7.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid "ADOPT COMPLETE"
+msgstr "Принятие завершено"
 
 msgid "API Address"
 msgstr "Адрес API"
@@ -25,8 +30,40 @@ msgstr "Серверный порт API"
 msgid "An arbitrary human-readable name"
 msgstr "Произвольное человеко-читаемое имя"
 
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr ""
+"Произвольные метки в форме пар ключь=значение связанные с шаблонами "
+"кластера. Могут быть использованы несколько раз."
+
+msgid "CHECK COMPLETE"
+msgstr "Проверка завершена"
+
 msgid "COE"
 msgstr "COE"
+
+msgid "CREATE COMPLETE"
+msgstr "Создание завершено"
+
+msgid "CREATE FAILED"
+msgstr "Создание не удалось"
+
+msgid "CREATE IN PROGRESS"
+msgstr "Выполняется создание"
+
+msgid "CSR File"
+msgstr "CSR Файл"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+#, python-format
+msgid "Certificate %s was successfully signed."
+msgstr "Сертификат %s успешно подписан."
+
+msgid "Choose a Cluster Template"
+msgstr "Выберите шаблон кластера"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Выберите движок оркестрации контейнеров."
@@ -52,11 +89,55 @@ msgstr "Выберите образ"
 msgid "Cinder"
 msgstr "Cinder"
 
+msgid "Cluster"
+msgstr "Кластер"
+
+#, python-format
+msgid "Cluster %s was successfully created."
+msgstr "Кластер %s создан успешно."
+
+msgid "Cluster Create Timeout"
+msgstr "Таймаут создания кластера"
+
 msgid "Cluster Distro"
 msgstr "Дистрибутив кластера"
 
+msgid "Cluster Name"
+msgstr "Имя кластера"
+
+msgid "Cluster Template"
+msgstr "Шаблон кластера"
+
+msgid "Cluster Template Detail"
+msgstr "Сведения шаблона кластера"
+
+msgid "Cluster Template Name"
+msgstr "Имя шаблона кластера"
+
+msgid "Cluster Templates"
+msgstr "Шаблоны кластера"
+
 msgid "Cluster Type"
 msgstr "Тип кластера"
+
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "Шаблон кластера %s создан успешно."
+
+msgid "Clusters"
+msgstr "Кластеры"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "Подтвердите удаление кластера"
+msgstr[1] "Подтвердите удаление кластеров"
+msgstr[2] "Подтвердите удаление кластеров"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "Подтвердите Удаление Шаблона Кластера"
+msgstr[1] "Подтвердите Удаление Шаблонов Кластера"
+msgstr[2] "Подтвердите Удаление Шаблонов Кластера"
 
 msgid "Container Orchestration Engine"
 msgstr "Движок оркестрации контейнеров"
@@ -64,20 +145,76 @@ msgstr "Движок оркестрации контейнеров"
 msgid "Create"
 msgstr "Создать"
 
+msgid "Create Cluster"
+msgstr "Создать кластер"
+
+msgid "Create Cluster Template"
+msgstr "Создать шаблон кластера"
+
 msgid "Created"
 msgstr "Создано"
+
+msgid "DELETE COMPLETE"
+msgstr "Удаление завершено"
+
+msgid "DELETE FAILED"
+msgstr "Удаление не удалось"
+
+msgid "DELETE IN PROGRESS"
+msgstr "Выполняется удаление"
 
 msgid "DNS"
 msgstr "DNS"
 
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "Удалить кластер"
+msgstr[1] "Удалить кластеры"
+msgstr[2] "Удалить кластеры"
+
+msgid "Delete Cluster Template"
+msgid_plural "Delete Cluster Templates"
+msgstr[0] "Удалить шаблон кластера"
+msgstr[1] "Удалить шаблоны кластера"
+msgstr[2] "Удалить шаблоны кластера"
+
+msgid "Delete Cluster Templates"
+msgstr "Удалить шаблоны кластера"
+
+msgid "Delete Clusters"
+msgstr "Удалить кластеры"
+
+#, python-format
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "Удален шаблон кластера: %s."
+msgstr[1] "Удалены шаблоны кластера: %s."
+msgstr[2] "Удалены шаблоны кластера: %s."
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "Кластер удален: %s."
+msgstr[1] "Кластеры удалены: %s."
+msgstr[2] "Кластеры удалены: %s."
+
+msgid "Device Mapper"
+msgstr "Сопоставитель устройств"
+
 msgid "Disable TLS"
 msgstr "Выключить TLS."
+
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "Выключить TLS в шаблоне кластера. По умолчанию: Нет."
 
 msgid "Discovery URL"
 msgstr "URL поиска"
 
 msgid "Docker"
 msgstr "Docker"
+
+msgid "Docker Storage Driver"
+msgstr "Драйвер хранилища Docker"
 
 msgid "Docker Swarm"
 msgstr "Docker Swarm"
@@ -91,11 +228,17 @@ msgstr "Размер диска Docker (ГБ)"
 msgid "Enable Registry"
 msgstr "Разрешить реестр"
 
+msgid "Enable docker registry in the cluster temlate. Default: False"
+msgstr "Разрешить реестр docker в шаблоне кластера.  По умолчанию: Нет."
+
 msgid "External Network ID"
 msgstr "ID внешней сети"
 
 msgid "Fixed Network"
 msgstr "Фиксированная сеть"
+
+msgid "Fixed Subnet"
+msgstr "Фиксированная Подсеть"
 
 msgid "Flannel"
 msgstr "Фланнель"
@@ -105,6 +248,12 @@ msgstr "Тип инстанса"
 
 msgid "Flavor ID"
 msgstr "ID типа инстанса"
+
+msgid "Floating IP"
+msgstr "Назначаемый IP"
+
+msgid "Floating IP Enabled"
+msgstr "Плавающий IP Включен"
 
 msgid "HTTP Proxy"
 msgstr "HTTP Proxy"
@@ -120,6 +269,20 @@ msgstr "Образ"
 
 msgid "Image ID"
 msgstr "ID образа"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"Указывает должен ли созданный кластер иметь назначаемый IP или нет. По "
+"умолчанию: Да"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"Указывает должен ли созданный кластер иметь  балансировщика нагрузки для "
+"узлов мастера или нет. По умолчанию: Да"
 
 msgid "Infinite"
 msgstr "Бесконечно"
@@ -142,6 +305,9 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Метки"
 
+msgid "Make cluster template public. Default: False"
+msgstr "Сделать шаблон кластера общедоступным. По умолчанию: Нет"
+
 msgid "Master Addresses"
 msgstr "Адреса мастеров"
 
@@ -154,6 +320,12 @@ msgstr "Тип инстанса мастера"
 msgid "Master Flavor ID"
 msgstr "ID типа инстанса Master"
 
+msgid "Master LB"
+msgstr "Главный балансировщик нагрузки"
+
+msgid "Master LB Enabled"
+msgstr "Главный Балансировщик Нагрузки Разрешен "
+
 msgid "Mesos"
 msgstr "Mesos"
 
@@ -165,6 +337,12 @@ msgstr "Другое"
 
 msgid "Name"
 msgstr "Имя"
+
+msgid "Name of the cluster template to create."
+msgstr "Имя создаваемого шаблона кластера."
+
+msgid "Name of the cluster to create."
+msgstr "Имя создаваемого кластера."
 
 msgid "Network"
 msgstr "Сеть"
@@ -187,11 +365,23 @@ msgstr "Спека узла"
 msgid "Nodes"
 msgstr "Узлы"
 
+msgid "Overley"
+msgstr "Покрытие"
+
 msgid "Overview"
 msgstr "Обзор"
 
 msgid "Public"
 msgstr "Публичный"
+
+msgid "RESTORE COMPLETE"
+msgstr "Восстановление завершено"
+
+msgid "RESUME COMPLETE"
+msgstr "Возобновление завершено"
+
+msgid "ROLLBACK COMPLETE"
+msgstr "Откат завершен"
 
 msgid "Record Properties"
 msgstr "Свойства записи"
@@ -202,8 +392,20 @@ msgstr "Реестр разрешен"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "SNAPSHOT COMPLETE"
+msgstr "Снимок создан успешно"
+
 msgid "Server Type"
 msgstr "Тип сервера"
+
+msgid "Show Certificate"
+msgstr "Показать сертификат"
+
+msgid "Sign Certificate"
+msgstr "Подписать сертификат"
+
+msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
+msgstr "Подписать Сертификат Для Кластера:{$ ctrl.model.cluster_name $}"
 
 msgid "Size"
 msgstr "Размер"
@@ -211,8 +413,23 @@ msgstr "Размер"
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Укажите url поиска для поиска узлов."
 
+msgid "Specify cluster name and choose cluster template"
+msgstr "Укажите имя кластера и выберите шаблон кластера "
+
+msgid "Specify conditions for cluster creation."
+msgstr "Укажите условия создания кластера."
+
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Укажите движок оркестрации контейнеров."
+
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr ""
+"Укажите сервер имен для использования в шаблоне кластера. По умолчанию: "
+"8.8.8.8"
+
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr "Укажите количество мастер узлов и кластерных узлов для кластера."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Укажите размер диска Docker в ГБ."
@@ -226,11 +443,63 @@ msgstr "Статус"
 msgid "TLS Disabled"
 msgstr "TLS запрещен"
 
+msgid "The DNS nameserver to use for this cluster template"
+msgstr "Сервер имен DNS для использования в этом шаблоне кластера"
+
+msgid "The cluster node count."
+msgstr "Количество узлов кластера."
+
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "ID внешней сети Neutron для подключения к этому шаблону кластера"
+
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "Адреса http_proxy для узлов в кластере."
+
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "Адреса https_proxy для узлов в кластере."
+
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr "Имя или UUID ключевой пары SSH, для загрузки в узлы кластера."
+
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr "Имя или UUID базового образа для настройки кластера."
+
 msgid "The network driver name for instantiating container networks"
 msgstr "Имя драйвера сети для создания контейнерных сетей"
 
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "Адрес no_proxy для использования узлами в кластере."
+
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
+msgstr ""
+"ID типа инстанса nova для использования при запуске кластера. По умолчанию: "
+"m1.small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the cluster. "
+"Default: m1.small"
+msgstr ""
+"ID типа инстанса nova для использования при запуске мастер узла кластера. По "
+"умолчанию: m1.small"
+
+msgid "The number of master nodes for the cluster."
+msgstr "Количество главных узлов для кластера."
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr "Имя приватной сети Neutron для подключения к этому шаблону кластера"
+
+msgid "The private Neutron subnet name to connect to this cluster template"
+msgstr "Имя приватной подсети Neutron для подключения к этому шаблону кластера"
+
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Размер диска Docker в ГБ. По умолчанию: 25"
+
+msgid ""
+"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
+"default is no timeout."
+msgstr ""
+"Таймаут в минутах для создания кластера. Значение 0 отменяет тайм-аут. По "
+"умолчанию таймаута нет."
 
 msgid "The volume driver name for instantiating container volume."
 msgstr "Имя драйвера дисков для создания контейнерных дисков"
@@ -242,6 +511,15 @@ msgstr ""
 msgid "Timeout"
 msgstr "Таймаут"
 
+msgid "UPDATE COMPLETE"
+msgstr "Обновление завершено"
+
+msgid "UPDATE FAILED"
+msgstr "Обновление не удалось"
+
+msgid "UPDATE IN PROGRESS"
+msgstr "Выполняется обновление"
+
 msgid "Unable to create cluster template."
 msgstr "Не удалось создать шаблон кластера."
 
@@ -249,11 +527,35 @@ msgid "Unable to create cluster."
 msgstr "Не удалось создать кластер."
 
 #, python-format
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "Не удалось удалить шаблон кластера: %s."
+msgstr[1] "Не удалось удалить шаблоны кластера: %s."
+msgstr[2] "Не удалось удалить шаблоны кластера: %s."
+
+#, python-format
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "Не удалось удалить кластер: %s."
+msgstr[1] "Не удалось удалить кластера: %s."
+msgstr[2] "Не удалось удалить кластера: %s."
+
+#, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
 msgstr "Не удается удалить шаблон кластера с ИД: %(id)s"
 
+msgid "Unable to delete the cluster templates."
+msgstr "Не удается удалить шаблоны кластера."
+
+#, python-format
+msgid "Unable to delete the cluster with id: %(id)s"
+msgstr "Не удается удалить кластер с ИД: %(id)s"
+
 msgid "Unable to delete the clusters."
 msgstr "Не удается удалить кластера."
+
+msgid "Unable to retrieve the certificate."
+msgstr "Не удается получить сертификат."
 
 msgid "Unable to retrieve the cluster template."
 msgstr "Не удалось получить шаблон кластера."
@@ -267,8 +569,89 @@ msgstr "Не удалось получить кластер."
 msgid "Unable to retrieve the clusters."
 msgstr "Не удалось получить кластеры."
 
+msgid "Unable to sign certificate."
+msgstr "Не удается подписать сертификат."
+
 msgid "Updated"
 msgstr "Обновлено"
 
 msgid "Volume Driver"
 msgstr "Драйвер диска"
+
+#, python-format
+msgid "You are not allowed to delete cluster templates: %s"
+msgstr "Вам не разрешено удалять шаблоны кластера: %s"
+
+#, python-format
+msgid "You are not allowed to delete clusters: %s"
+msgstr "Вам не разрешено удалять кластеры: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластера "
+"необратимо."
+msgstr[1] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластеров "
+"необратимо."
+msgstr[2] ""
+"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластеров "
+"необратимо."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластера "
+"необратимо."
+msgstr[1] ""
+"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластеров "
+"необратимо."
+msgstr[2] ""
+"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластеров "
+"необратимо."
+
+msgid "error"
+msgid_plural "errors"
+msgstr[0] "ошибка"
+msgstr[1] "ошибки"
+msgstr[2] "ошибок"
+
+msgid "message"
+msgid_plural "messages"
+msgstr[0] "сообщение"
+msgstr[1] "сообщения"
+msgstr[2] "сообщений"
+
+msgid "submit"
+msgid_plural "submits"
+msgstr[0] "отправка"
+msgstr[1] "отправки"
+msgstr[2] "отправки"
+
+msgid "success"
+msgid_plural "successes"
+msgstr[0] "успех"
+msgstr[1] "успехи"
+msgstr[2] "успехи"
+
+msgid "title"
+msgid_plural "titles"
+msgstr[0] "заголовок"
+msgstr[1] "заголовки"
+msgstr[2] "заголовки"
+
+msgid "{$ ctrl.cluster.create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.create_timeout $} минута"
+msgstr[1] "{$ ctrl.cluster.create_timeout $} минуты"
+msgstr[2] "{$ ctrl.cluster.create_timeout $} минут"
