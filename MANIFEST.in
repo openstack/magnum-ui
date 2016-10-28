@@ -1,2 +1,0 @@
-include setup.py
-recursive-include magnum_ui/templates *
