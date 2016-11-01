@@ -1,13 +1,13 @@
 # Gérald LONLAS <g.lonlas@gmail.com>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev51\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev52\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-25 12:26+0000\n"
+"POT-Creation-Date: 2016-10-28 09:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-26 04:28+0000\n"
+"PO-Revision-Date: 2016-10-27 07:02+0000\n"
 "Last-Translator: Gérald LONLAS <g.lonlas@gmail.com>\n"
 "Language-Team: French\n"
 "Language: fr\n"
@@ -19,6 +19,12 @@ msgstr "ADOPTION TERMINÉE"
 
 msgid "API Address"
 msgstr "Adresse de l'API"
+
+msgid "API Server Port"
+msgstr "Port du serveur de l'API"
+
+msgid "An arbitrary human-readable name"
+msgstr "Un nom arbitraire compréhensible"
 
 msgid "CHECK COMPLETE"
 msgstr "VÉRIFICATION TERMINÉE"
@@ -48,6 +54,12 @@ msgstr "Le certificat %s a été signé avec succès."
 msgid "Choose a Cluster Template"
 msgstr "Choisir le modèle de cluster"
 
+msgid "Choose a Container Orchestration Engine"
+msgstr "Choisissez un moteur d'orchestration de conteneurs"
+
+msgid "Choose a Flavor for the Master Node"
+msgstr "Choisissez un gabarit pour le nœud maître"
+
 msgid "Choose a Flavor for the Node"
 msgstr "Choisir un gabarit pour le noeud."
 
@@ -75,6 +87,9 @@ msgstr "Le cluster %s a été créé avec succès."
 
 msgid "Cluster Create Timeout"
 msgstr "Délai d'attente à la création du cluster"
+
+msgid "Cluster Distro"
+msgstr "Cluster Distro"
 
 msgid "Cluster Name"
 msgstr "Nom du cluster"
@@ -110,6 +125,9 @@ msgid "Confirm Delete Cluster Template"
 msgid_plural "Confirm Delete Cluster Templates"
 msgstr[0] "Confirmer la suppression du modèle de cluster"
 msgstr[1] "Confirmer la suppression des modèles de cluster"
+
+msgid "Container Orchestration Engine"
+msgstr "Moteur d'orchestration de conteneurs"
 
 msgid "Create"
 msgstr "Créer"
@@ -166,6 +184,12 @@ msgstr[1] "Clusters supprimés : %s"
 msgid "Disable TLS"
 msgstr "Désactiver TLS"
 
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "Désactiver TLS dans le modèle du cluster. Par défaut : False"
+
+msgid "Discovery URL"
+msgstr "Discovery URL"
+
 msgid "Docker"
 msgstr "Docker"
 
@@ -183,6 +207,10 @@ msgstr "Taille du volume Docker (Go)"
 
 msgid "Enable Registry"
 msgstr "Activer le registre"
+
+msgid "Enable docker registry in the cluster temlate. Default: False"
+msgstr ""
+"Activer le registre Docker dans le modèle du cluster. Par défaut : False"
 
 msgid "External Network ID"
 msgstr "ID du réseau externe"
@@ -244,9 +272,18 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Libellés"
 
+msgid "Make cluster template public. Default: False"
+msgstr "Rendre le modèle de cluster public. Par défaut : False"
+
 #, fuzzy
 msgid "Master Addresses"
 msgstr "Adresse principale"
+
+msgid "Master Flavor"
+msgstr "Gabarit maître"
+
+msgid "Master Flavor ID"
+msgstr "ID Gabarit maître"
 
 msgid "Master LB"
 msgstr "LB maître"
@@ -265,6 +302,9 @@ msgstr "Divers"
 
 msgid "Name"
 msgstr "Nom"
+
+msgid "Name of the cluster template to create."
+msgstr "Nom du modèle de cluster à créer."
 
 msgid "Name of the cluster to create."
 msgstr "Nom du cluster à créer."
@@ -332,14 +372,28 @@ msgstr "Signer un Certificat  pour le cluster : {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Taille"
 
+#, fuzzy
+msgid "Specifies custom discovery url for node discovery."
+msgstr "Spécifiez  le Discovery URL personnalisé pour le node discovery."
+
 msgid "Specify cluster name and choose cluster template"
 msgstr "Entrer le nom du cluster et choisir son modèle"
+
+msgid "Specify conditions for cluster creation."
+msgstr "Spécifiez les conditions pour la création du cluster."
+
+msgid "Specify the Container Orchestration Engine to use."
+msgstr "Spécifiez le moteur d'orchestration de conteneurs à utiliser"
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Spécifier le nameserver à utiliser pour le modèle de cluster. Défaut : "
 "8.8.8.8"
+
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr ""
+"Spécifiez le nombre de noeud maître et de noeud de cluster pour le cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Spécifier la taille en Go pour le volume Docker."
@@ -359,14 +413,45 @@ msgstr "Le DNS nameserver à utiliser pour ce modèle de cluster."
 msgid "The cluster node count."
 msgstr "Nombre de noeuds du cluster"
 
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "L'ID du réseau Neutron externe à connecter à ce modèle de cluster"
+
 msgid "The http_proxy address to use for nodes in cluster"
 msgstr "L'adresse http_proxy à utiliser pour les nœuds du cluster"
 
 msgid "The https_proxy address to use for nodes in cluster"
 msgstr "Adresse https_proxy à utiliser pour les noeuds du cluster."
 
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr ""
+"Le nom ou le UUID de la keypair SSH à charger dans les nœuds du cluster"
+
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr "Le nom ou le UUID de l'image de base à personnaliser pour le cluster"
+
+msgid "The network driver name for instantiating container networks"
+msgstr "Le nom du pilote réseau pour instancier le containeur réseau."
+
 msgid "The no_proxy address to use for nodes in cluster"
 msgstr "L'adresse no_proxy à utiliser pour les nœuds du cluster"
+
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
+msgstr ""
+"L'ID du gabarit Nova à utiliser quand le cluster démarrera. Par défaut : m1."
+"small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the cluster. "
+"Default: m1.small"
+msgstr ""
+"L'ID du gabarit Nova à utiliser quand le nœud maître du cluster démarrera. "
+"Par défaut : m1.small"
+
+msgid "The number of master nodes for the cluster."
+msgstr "Nombre de noeuds maître pour le cluster."
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr "Le nom du réseau Neutron privé à connecter à ce modèle de cluster"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Taille en Go du volume Docker. Défaut : 25"
@@ -377,6 +462,9 @@ msgid ""
 msgstr ""
 "Délai d'attente en minutes, pour la création du cluster. Définir 0 quand il "
 "n'y a pas de délai d'attente. Par défaut il n'y a pas de délais d'attente."
+
+msgid "The volume driver name for instantiating container volume."
+msgstr "Le nom du pilote pour instancier le volume du containeur."
 
 msgid "Timeout"
 msgstr "Délai d'attente"
@@ -453,6 +541,34 @@ msgstr "Vous n'êtes pas autorisé à supprimer les modèles de cluster : %s"
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
 msgstr "Vous n'êtes pas autorisé à supprimer les clusters : %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] ""
+"Vous avez sélectionné \"%s\". Veuillez confirmer votre sélection. Le cluster "
+"supprimé ne sera pas récupérable."
+msgstr[1] ""
+"Vous avez sélectionné \"%s\". Veuillez confirmer votre sélection. Les "
+"clusters supprimés ne seront pas récupérable.."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"Vous avez sélectionné \"%s\". Veuillez confirmer votre sélection. Le modèle "
+"de cluster supprimé ne sera pas récupérable."
+msgstr[1] ""
+"Vous avez sélectionné \"%s\". Veuillez confirmer votre sélection. Les "
+"modèles de cluster supprimés ne seront pas récupérable.."
 
 msgid "error"
 msgid_plural "errors"
