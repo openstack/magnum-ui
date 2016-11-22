@@ -2,13 +2,13 @@
 # Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev78\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev82\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-11-15 19:22+0000\n"
+"POT-Creation-Date: 2016-11-21 09:44+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-11-16 11:52+0000\n"
+"PO-Revision-Date: 2016-11-21 11:09+0000\n"
 "Last-Translator: Stanislav Ulrych <stanislav.ulrych@ultimum.io>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -23,6 +23,13 @@ msgstr "Port serveru API"
 
 msgid "An arbitrary human-readable name"
 msgstr "Libovolný čitelný název"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr ""
+"Libovolné popisky ve tvaru klíč=hodnota asociované s šablonou clusteru. Může "
+"být použito vícekrát."
 
 msgid "COE"
 msgstr "COE"
@@ -66,6 +73,10 @@ msgstr "Šablony clusterů"
 msgid "Cluster Type"
 msgstr "Typ clusteru"
 
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "Šablona clusteru %s byla úspěšně vytvořena."
+
 msgid "Container Orchestration Engine"
 msgstr "Technologie kontejnerové orchestrace"
 
@@ -95,6 +106,9 @@ msgstr "Smazat šablony clusterů"
 
 msgid "Disable TLS"
 msgstr "Zakázat TLS"
+
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "Zakázat TLS v šabloně clusteru. Výchozí: Ne"
 
 msgid "Discovery URL"
 msgstr "Discovery URL"
@@ -153,6 +167,19 @@ msgstr "Obraz"
 msgid "Image ID"
 msgstr "ID obrazu"
 
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"Určuje, zda vytvořené clustery budou mít floating IP nebo ne. Výchozí: ne."
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"Určuje, zda vytvořené clustery budou mít load balancer pro hlavní uzly nebo "
+"ne. Výchozí: ne."
+
 msgid "Infinite"
 msgstr "Nekonečný"
 
@@ -174,6 +201,9 @@ msgstr "Kubernetes"
 msgid "Labels"
 msgstr "Štítky"
 
+msgid "Make cluster template public. Default: False"
+msgstr "Zvěřejnit šablonu clusteru. Výchozí: Ne"
+
 msgid "Master Addresses"
 msgstr "Hlavní adresy"
 
@@ -182,6 +212,9 @@ msgstr "Hlavní typ"
 
 msgid "Master Flavor ID"
 msgstr "Hlavní typ ID"
+
+msgid "Master LB"
+msgstr "Master LB"
 
 msgid "Mesos"
 msgstr "Mesos"
@@ -194,6 +227,9 @@ msgstr "Různé"
 
 msgid "Name"
 msgstr "Název"
+
+msgid "Name of the cluster template to create."
+msgstr "Název šablony clusteru."
 
 msgid "Network"
 msgstr "Síť"
@@ -243,6 +279,10 @@ msgstr "Specifikujte vlastní discovery url pro discovery uzel."
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Zadejte technologii kontejnerové orchestrace k použití."
 
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr "Zadejte jmenný server pro použití v šabloně clusteru. Výchozí: 8.8.8.8"
+
 msgid "Specify the size in GB for the docker volume"
 msgstr "Zadejte velikost pro svazek docker v GB"
 
@@ -258,8 +298,23 @@ msgstr "TLS zakázáno"
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "Server DNS pro použití v bay"
 
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "ID externí Neutron sítě pro připojení do clusteru"
+
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "Adresa http_proxy, která bude použita v uzlech clusteru"
+
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "Adresa https_proxy, která bude použita v uzlech clusteru"
+
 msgid "The network driver name for instantiating container networks"
 msgstr "Název síťového ovladače pro spouštění sítí kontejneru."
+
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "Adresa no_proxy, která bude použita v uzlech clusteru"
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr "Název privátní Neutron sítě pro připojení do clusteru"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Velikost v GB pro svazek docker. Výchozí: 25"
@@ -273,8 +328,15 @@ msgstr "Toto by se mělo jmenovat fixed-network-cidr. Výchozí: 10.0.0.0/24"
 msgid "Timeout"
 msgstr "Časový limit"
 
+msgid "Unable to create cluster template."
+msgstr "Nelze vytvořit šablonu clusteru."
+
 msgid "Unable to create cluster."
 msgstr "Nelze vytvořit cluster"
+
+#, python-format
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "Nelze smazat šablonu clusteru s id: %(id)s"
 
 msgid "Unable to delete the cluster templates."
 msgstr "Nelze smazat šablony clusterů."
