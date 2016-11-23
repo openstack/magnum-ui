@@ -2,13 +2,13 @@
 # Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev82\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev83\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-11-21 09:44+0000\n"
+"POT-Creation-Date: 2016-11-22 10:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-11-21 11:09+0000\n"
+"PO-Revision-Date: 2016-11-22 09:09+0000\n"
 "Last-Translator: Stanislav Ulrych <stanislav.ulrych@ultimum.io>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -34,6 +34,19 @@ msgstr ""
 msgid "COE"
 msgstr "COE"
 
+msgid "CSR File"
+msgstr "CSR soubor"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+#, python-format
+msgid "Certificate %s was successfully signed."
+msgstr "Certifikát %s byl úspěšně podepsán."
+
+msgid "Choose a Cluster Template"
+msgstr "Zvolte šablonu clusteru"
+
 msgid "Choose a Container Orchestration Engine"
 msgstr "Zvolte technologii kontejnerové orchestrace"
 
@@ -58,11 +71,20 @@ msgstr "Zvolit obraz"
 msgid "Cinder"
 msgstr "Cinder"
 
+msgid "Cluster"
+msgstr "Cluster"
+
 msgid "Cluster Distro"
 msgstr "Distribuce clusteru"
 
+msgid "Cluster Name"
+msgstr "Název clusteru"
+
 msgid "Cluster Template"
 msgstr "Šablona clusteru"
+
+msgid "Cluster Template Detail"
+msgstr "Detaily šablony clusteru"
 
 msgid "Cluster Template Name"
 msgstr "Jméno šablony clusteru"
@@ -76,6 +98,21 @@ msgstr "Typ clusteru"
 #, python-format
 msgid "Cluster template %s was successfully created."
 msgstr "Šablona clusteru %s byla úspěšně vytvořena."
+
+msgid "Clusters"
+msgstr "Clustery"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "Potvrdit smazání clusteru"
+msgstr[1] "Potvrdit smazání clusterů"
+msgstr[2] "Potvrdit smazání clusterů"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "Potvrdit smazání šablony clusteru"
+msgstr[1] "Potvrdit smazání šablon clusterů"
+msgstr[2] "Potvrdit smazání šablon clusterů"
 
 msgid "Container Orchestration Engine"
 msgstr "Technologie kontejnerové orchestrace"
@@ -95,6 +132,12 @@ msgstr "Vytvořeno"
 msgid "DNS"
 msgstr "DNS"
 
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "Smazat cluster"
+msgstr[1] "Smazat clustery"
+msgstr[2] "Smazat clustery"
+
 msgid "Delete Cluster Template"
 msgid_plural "Delete Cluster Templates"
 msgstr[0] "Smazat šablonu clusteru"
@@ -103,6 +146,23 @@ msgstr[2] "Smazat šablony clusterů"
 
 msgid "Delete Cluster Templates"
 msgstr "Smazat šablony clusterů"
+
+msgid "Delete Clusters"
+msgstr "Smazat clustery"
+
+#, python-format
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "Smazaná šablona clusteru: %s."
+msgstr[1] "Smazané šablony clusterů: %s."
+msgstr[2] "Smazané šablony clusterů: %s."
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "Smazán cluster: %s."
+msgstr[1] "Smazany clustery: %s."
+msgstr[2] "Smazano clustery: %s."
 
 msgid "Disable TLS"
 msgstr "Zakázat TLS"
@@ -231,6 +291,9 @@ msgstr "Název"
 msgid "Name of the cluster template to create."
 msgstr "Název šablony clusteru."
 
+msgid "Name of the cluster to create."
+msgstr "Název clusteru"
+
 msgid "Network"
 msgstr "Síť"
 
@@ -270,11 +333,23 @@ msgstr "Rexray"
 msgid "Server Type"
 msgstr "Typ serveru"
 
+msgid "Show Certificate"
+msgstr "Ukázat certifikát"
+
+msgid "Sign Certificate"
+msgstr "Podepsat certifikát"
+
 msgid "Size"
 msgstr "Velikost"
 
 msgid "Specifies custom discovery url for node discovery."
 msgstr "Specifikujte vlastní discovery url pro discovery uzel."
+
+msgid "Specify cluster name and choose cluster template"
+msgstr "Specifikujte název clusteru a zvolte šablonu clusteru"
+
+msgid "Specify conditions for cluster creation."
+msgstr "Zadejte podmínky pro vytvoření clusteru."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Zadejte technologii kontejnerové orchestrace k použití."
@@ -319,6 +394,13 @@ msgstr "Název privátní Neutron sítě pro připojení do clusteru"
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Velikost v GB pro svazek docker. Výchozí: 25"
 
+msgid ""
+"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
+"default is no timeout."
+msgstr ""
+"Časový limit pro vytvoření clusteru v minutách. Nastavte 0 pro žádný časový "
+"limit. Výchozí hodnota je žádný časový limit."
+
 msgid "The volume driver name for instantiating container volume."
 msgstr "Název ovladače svazku pro spouštění svazku kontejneru."
 
@@ -333,6 +415,20 @@ msgstr "Nelze vytvořit šablonu clusteru."
 
 msgid "Unable to create cluster."
 msgstr "Nelze vytvořit cluster"
+
+#, python-format
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "Nelze smazat šablonu clusteru: %s."
+msgstr[1] "Nelze smazat šablony clusterů: %s."
+msgstr[2] "Nelze smazat šablony clusterů: %s."
+
+#, python-format
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "Nelze smazat cluster: %s."
+msgstr[1] "Nelze smazat clustery: %s."
+msgstr[2] "Nelze smazat clustery: %s."
 
 #, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
@@ -376,6 +472,40 @@ msgstr "Ovladač svazku"
 msgid "You are not allowed to delete cluster templates: %s"
 msgstr "Nemáte oprávnění smazat šablony clusterů: %s"
 
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazaný cluster nelze "
+"obnovit."
+msgstr[1] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané clustery nelze "
+"obnovit."
+msgstr[2] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané clustery  nelze "
+"obnovit."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazanou šablonu clusteru "
+"nelze obnovit."
+msgstr[1] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané šablony clusterů "
+"nelze obnovit."
+msgstr[2] ""
+"Vybrali jste \"%s\". Prosím potvrďte svůj výběr. Smazané šablony clusterů "
+"nelze obnovit."
+
 msgid "error"
 msgid_plural "errors"
 msgstr[0] "chyba"
@@ -388,6 +518,12 @@ msgstr[0] "zpráva"
 msgstr[1] "zprávy"
 msgstr[2] "zpráv"
 
+msgid "submit"
+msgid_plural "submits"
+msgstr[0] "odeslání"
+msgstr[1] "odeslání"
+msgstr[2] "odeslání"
+
 msgid "success"
 msgid_plural "successes"
 msgstr[0] "úšpěch"
@@ -399,3 +535,9 @@ msgid_plural "titles"
 msgstr[0] "název"
 msgstr[1] "názvy"
 msgstr[2] "názvů"
+
+msgid "{$ ctrl.cluster.create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.create_timeout $} minuta"
+msgstr[1] "{$ ctrl.cluster.create_timeout $} minut"
+msgstr[2] "{$ ctrl.cluster.create_timeout $} minut"
