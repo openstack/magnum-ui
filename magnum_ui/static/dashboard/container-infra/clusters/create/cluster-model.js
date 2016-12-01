@@ -41,7 +41,8 @@
         master_count: null,
         node_count: null,
         discover_url: null,
-        create_timeout: null
+        create_timeout: null,
+        keypair: null
       };
     }
 

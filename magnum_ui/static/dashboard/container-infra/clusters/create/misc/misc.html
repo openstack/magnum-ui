@@ -13,5 +13,13 @@
                ng-model="model.newClusterSpec.create_timeout" id="cluster-timeout"
                placeholder="{$ 'The timeout for cluster creation in minutes. Set to 0 for no timeout. The default is no timeout.'|translate $}">
       </div>
+      <div class="form-group">
+        <label class="control-label" for="cluster-keypair" translate>Keypair</label>
+        <select name="cluster-keypair" type="text" class="form-control" id="cluster-keypair"
+                ng-model="model.newClusterSpec.keypair" ng-required="false"
+                ng-options="keypair.id as keypair.name for keypair in ctrl.keypairs">
+        </select>
+      </div>
     </div>
+  </div>
 </div>

@@ -38,7 +38,7 @@ CLUSTER_TEMPLATE_CREATE_ATTRS = ['name', 'image_id', 'flavor_id',
 
 CLUSTER_CREATE_ATTRS = ['name', 'cluster_template_id', 'node_count',
                         'discovery_url', 'create_timeout',
-                        'master_count']
+                        'master_count', 'keypair']
 
 CERTIFICATE_CREATE_ATTRS = ['cluster_uuid', 'csr']
 

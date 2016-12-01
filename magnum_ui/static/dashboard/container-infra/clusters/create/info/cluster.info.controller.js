@@ -48,7 +48,8 @@
       public: "",
       registry_enabled: "",
       tls_disabled: "",
-      apiserver_port: ""
+      apiserver_port: "",
+      keypair: ""
     };
 
     $scope.changeClusterTemplate = function() {
@@ -62,6 +63,7 @@
           $scope.cluster_template_detail.registry_enabled = model.registry_enabled;
           $scope.cluster_template_detail.tls_disabled = model.tls_disabled;
           $scope.cluster_template_detail.apiserver_port = model.apiserver_port;
+          $scope.cluster_template_detail.keypair = model.keypair;
         }
       });
     };
