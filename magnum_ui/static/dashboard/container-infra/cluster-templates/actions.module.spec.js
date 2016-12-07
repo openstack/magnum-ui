@@ -25,6 +25,16 @@
       registry = $injector.get('horizon.framework.conf.resource-type-registry.service');
     }));
 
+    it('registers Create ClusterTemplate as a batch action', function() {
+      var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').globalActions;
+      expect(actionHasId(actions, 'createClusterTemplateAction')).toBe(true);
+    });
+
+    it('registers Delete ClusterTemplate as a batch action', function() {
+      var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').batchActions;
+      expect(actionHasId(actions, 'batchDeleteClusterTemplateAction')).toBe(true);
+    });
+
     it('registers Create Cluster as an item action', function() {
       var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').itemActions;
       expect(actionHasId(actions, 'createClusterAction')).toBe(true);
@@ -33,16 +43,6 @@
     it('registers Delete ClusterTemplate as an item action', function() {
       var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').itemActions;
       expect(actionHasId(actions, 'deleteClusterTemplateAction')).toBe(true);
-    });
-
-    it('registers Create ClusterTemplate as a batch action', function() {
-      var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').batchActions;
-      expect(actionHasId(actions, 'createClusterTemplateAction')).toBe(true);
-    });
-
-    it('registers Delete ClusterTemplate as a batch action', function() {
-      var actions = registry.getResourceType('OS::Magnum::ClusterTemplate').batchActions;
-      expect(actionHasId(actions, 'batchDeleteClusterTemplateAction')).toBe(true);
     });
 
     function actionHasId(list, value) {

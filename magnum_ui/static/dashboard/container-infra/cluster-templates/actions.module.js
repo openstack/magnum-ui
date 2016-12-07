@@ -47,6 +47,27 @@
     resourceType) {
 
     var templateResourceType = registry.getResourceType(resourceType);
+
+    templateResourceType.globalActions
+      .append({
+        id: 'createClusterTemplateAction',
+        service: createClusterTemplateService,
+        template: {
+          type: 'create',
+          text: gettext('Create Cluster Template')
+        }
+      });
+
+    templateResourceType.batchActions
+      .append({
+        id: 'batchDeleteClusterTemplateAction',
+        service: deleteClusterTemplateService,
+        template: {
+          type: 'delete-selected',
+          text: gettext('Delete Cluster Templates')
+        }
+      });
+
     templateResourceType.itemActions
       .append({
         id: 'createClusterAction',
@@ -61,24 +82,6 @@
         template: {
           type: 'delete',
           text: gettext('Delete Cluster Template')
-        }
-      });
-
-    templateResourceType.batchActions
-      .append({
-        id: 'createClusterTemplateAction',
-        service: createClusterTemplateService,
-        template: {
-          type: 'create',
-          text: gettext('Create Cluster Template')
-        }
-      })
-      .append({
-        id: 'batchDeleteClusterTemplateAction',
-        service: deleteClusterTemplateService,
-        template: {
-          type: 'delete-selected',
-          text: gettext('Delete Cluster Templates')
         }
       });
   }
