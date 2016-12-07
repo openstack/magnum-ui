@@ -28,6 +28,7 @@
   function ClusterModel(magnum) {
     var model = {
       newClusterSpec: {},
+      templateKeypair: null,
 
       // API methods
       init: init,

@@ -49,21 +49,22 @@
       registry_enabled: "",
       tls_disabled: "",
       apiserver_port: "",
-      keypair: ""
+      keypair_id: ""
     };
 
     $scope.changeClusterTemplate = function() {
-      angular.forEach(ctrl.cluster_templates, function(model) {
-        if ($scope.model.newClusterSpec.cluster_template_id === model.id) {
-          $scope.cluster_template_detail.name = model.name;
-          $scope.cluster_template_detail.id = model.id;
-          $scope.cluster_template_detail.coe = model.coe;
-          $scope.cluster_template_detail.image_id = model.image_id;
-          $scope.cluster_template_detail.public = model.public;
-          $scope.cluster_template_detail.registry_enabled = model.registry_enabled;
-          $scope.cluster_template_detail.tls_disabled = model.tls_disabled;
-          $scope.cluster_template_detail.apiserver_port = model.apiserver_port;
-          $scope.cluster_template_detail.keypair = model.keypair;
+      angular.forEach(ctrl.cluster_templates, function(template) {
+        if ($scope.model.newClusterSpec.cluster_template_id === template.id) {
+          $scope.cluster_template_detail.name = template.name;
+          $scope.cluster_template_detail.id = template.id;
+          $scope.cluster_template_detail.coe = template.coe;
+          $scope.cluster_template_detail.image_id = template.image_id;
+          $scope.cluster_template_detail.public = template.public;
+          $scope.cluster_template_detail.registry_enabled = template.registry_enabled;
+          $scope.cluster_template_detail.tls_disabled = template.tls_disabled;
+          $scope.cluster_template_detail.apiserver_port = template.apiserver_port;
+          $scope.cluster_template_detail.keypair = template.keypair_id;
+          $scope.model.templateKeypair = template.keypair_id;
         }
       });
     };

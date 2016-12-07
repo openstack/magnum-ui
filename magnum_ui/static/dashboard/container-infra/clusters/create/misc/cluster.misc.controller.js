@@ -50,6 +50,17 @@
         ctrl.keypairs.push({id: item.keypair.name, name: item.keypair.name});
       });
     }
-  }
 
+    function getKeypair() {
+      return $scope.model.templateKeypair;
+    }
+
+    function toggleKeypairRequirement(newValue) {
+      ctrl.templateKeypair = newValue;
+    }
+    var keypairWatcher = $scope.$watch(getKeypair, toggleKeypairRequirement, true);
+    $scope.$on('$destroy', function() {
+      keypairWatcher();
+    });
+  }
 })();

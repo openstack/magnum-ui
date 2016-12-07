@@ -29,9 +29,9 @@
       nova = $injector.get('horizon.app.core.openstack-service-api.nova');
 
       deferred = $q.defer();
-      deferred.resolve({items:{1:{name:1},2:{name:2}}});
+      deferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
       KeyDeferred = $q.defer();
-      KeyDeferred.resolve({items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}});
+      KeyDeferred.resolve({data:{items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}}});
 
       spyOn(glance, 'getImages').and.returnValue(deferred.promise);
       spyOn(nova, 'getFlavors').and.returnValue(deferred.promise);

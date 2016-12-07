@@ -54,22 +54,20 @@
     }
 
     function onGetImages(response) {
-      angular.forEach(response.items, function(item) {
+      angular.forEach(response.data.items, function(item) {
         ctrl.images.push({id: item.name, name: item.name});
       });
     }
 
     function onGetFlavors(response) {
-      angular.forEach(response.items, function(item) {
+      angular.forEach(response.data.items, function(item) {
         ctrl.nflavors.push({id: item.name, name: item.name});
-      });
-      angular.forEach(response.items, function(item) {
         ctrl.mflavors.push({id: item.name, name: item.name});
       });
     }
 
     function onGetKeypairs(response) {
-      angular.forEach(response.items, function(item) {
+      angular.forEach(response.data.items, function(item) {
         ctrl.keypairs.push({id: item.keypair.name, name: item.keypair.name});
       });
     }

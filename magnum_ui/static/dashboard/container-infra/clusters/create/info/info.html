@@ -35,6 +35,8 @@
           <dd>{$ cluster_template_detail.coe $}</dd>
           <dt translate>Image ID</dt>
           <dd>{$ cluster_template_detail.image_id $}</dd>
+          <dt translate>Keypair</dt>
+          <dd>{$ cluster_template_detail.keypair|noValue $}</dd>
           <dt translate>Public</dt>
           <dd>{$ cluster_template_detail.public $}</dd>
           <dt translate>Registry Enabled</dt>
@@ -42,7 +44,7 @@
           <dt translate>TLS Disabled</dt>
           <dd>{$ cluster_template_detail.tls_disabled $}</dd>
           <dt translate>API Server Port</dt>
-          <dd>{$ cluster_template_detail.apiserver_port $}</dd>
+          <dd>{$ cluster_template_detail.apiserver_port|noValue $}</dd>
         </dl>
       </div>
     </div>

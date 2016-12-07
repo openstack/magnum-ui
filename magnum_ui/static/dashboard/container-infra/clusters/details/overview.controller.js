@@ -39,7 +39,7 @@
     }
 
     function onGetClusterTemplate(clusterTemplate) {
-      ctrl.cluster_template = clusterTemplate;
+      ctrl.cluster_template = clusterTemplate.data;
     }
   }
 })();

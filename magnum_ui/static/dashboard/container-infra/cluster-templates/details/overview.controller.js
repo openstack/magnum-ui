@@ -39,7 +39,7 @@
     }
 
     function onGetImages(images) {
-      angular.forEach(images.items, function(image) {
+      angular.forEach(images.data.items, function(image) {
         if (image.name === ctrl.cluster_template.image_id) {
           ctrl.image_uuid = image.id;
         }

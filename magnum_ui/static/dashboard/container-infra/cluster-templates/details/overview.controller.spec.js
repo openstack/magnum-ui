@@ -26,7 +26,7 @@
     beforeEach(inject(function($controller, $q, $injector) {
       glance = $injector.get('horizon.app.core.openstack-service-api.glance');
       deferred = $q.defer();
-      deferred.resolve({data: {image_id: 1},items:{1:{name:1,id:1},2:{name:2,id:2}}});
+      deferred.resolve({data: {image_id: 1, items: {1: {name: 1, id: 1},2: {name: 2, id: 2}}}});
       spyOn(glance, 'getImages').and.returnValue(deferred.promise);
       ctrl = $controller('ClusterTemplateOverviewController',
         {

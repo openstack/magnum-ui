@@ -75,6 +75,9 @@
     .setProperty('coe', {
       label: gettext('COE')
     })
+    .setProperty('keypair_id', {
+      label: gettext('Keypair')
+    })
     .setProperty('network_driver', {
       label: gettext('Network Driver')
     })
@@ -94,6 +97,11 @@
     .append({
       id: 'coe',
       priority: 1
+    })
+    .append({
+      id: 'keypair_id',
+      priority: 1,
+      filters: ['noValue']
     })
     .append({
       id: 'network_driver',
