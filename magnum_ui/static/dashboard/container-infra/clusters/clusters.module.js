@@ -79,6 +79,9 @@
     .setProperty('node_count', {
       label: gettext('Node Count')
     })
+    .setProperty('keypair', {
+      label: gettext('Keypair')
+    })
     .setListFunction(clustersService.getClustersPromise)
     .tableColumns
     .append({
@@ -102,6 +105,10 @@
     })
     .append({
       id: 'node_count',
+      priority: 2
+    })
+    .append({
+      id: 'keypair',
       priority: 2
     });
 
@@ -147,6 +154,11 @@
     .append({
       'label': gettext('Node Count'),
       'name': 'node_count',
+      'singleton': true
+    })
+    .append({
+      'label': gettext('Keypair'),
+      'name': 'keypair',
       'singleton': true
     });
   }

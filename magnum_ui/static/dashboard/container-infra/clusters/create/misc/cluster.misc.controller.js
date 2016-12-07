@@ -30,9 +30,26 @@
     .controller('createClusterMiscController', createClusterMiscController);
 
   createClusterMiscController.$inject = [
+    '$scope',
+    'horizon.app.core.openstack-service-api.nova'
   ];
 
-  function createClusterMiscController() {
+  function createClusterMiscController($scope, nova) {
+    var ctrl = this;
+    ctrl.keypairs = [{id:null, name: gettext("Choose a Keypair")}];
+    $scope.model.newClusterSpec.keypair = null;
+
+    init();
+
+    function init() {
+      nova.getKeypairs().success(onGetKeypairs);
+    }
+
+    function onGetKeypairs(response) {
+      angular.forEach(response.items, function(item) {
+        ctrl.keypairs.push({id: item.keypair.name, name: item.keypair.name});
+      });
+    }
   }
 
 })();
