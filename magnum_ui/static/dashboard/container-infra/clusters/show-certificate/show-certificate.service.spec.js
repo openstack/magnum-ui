@@ -45,7 +45,7 @@
       selected = {
         id: '1'
       };
-      service.initScope();
+      service.initAction();
       service.perform(selected);
       expect(magnum.showCertificate).toHaveBeenCalled();
     });

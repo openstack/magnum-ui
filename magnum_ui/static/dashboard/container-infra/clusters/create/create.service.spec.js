@@ -56,8 +56,8 @@
 
     it('open the modal and should destroy event watchers', function() {
       spyOn(wizardModalService, 'modal').and.callThrough();
-      service.initScope($scope);
-      service.perform();
+      service.initAction();
+      service.perform(null, $scope);
 
       $scope.$emit('$destroy');
 
@@ -74,8 +74,8 @@
 
       spyOn(wizardModalService, 'modal').and.callThrough();
 
-      service.initScope($scope);
-      service.perform();
+      service.initAction();
+      service.perform(null, $scope);
       var modalArgs = wizardModalService.modal.calls.argsFor(0)[0];
       modalArgs.submit();
       $timeout.flush();

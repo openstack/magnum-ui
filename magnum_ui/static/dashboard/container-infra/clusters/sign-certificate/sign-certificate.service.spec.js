@@ -65,7 +65,7 @@
     it('should pass submit() and success()', inject(function($timeout) {
 
       var selected = {id : 1};
-      service.initScope();
+      service.initAction();
       service.perform(selected);
       $timeout.flush();
 

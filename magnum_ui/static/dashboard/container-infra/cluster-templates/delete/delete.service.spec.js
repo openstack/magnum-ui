@@ -90,7 +90,7 @@
 
       beforeEach(function() {
         spyOn(deleteModalService, 'open').and.callThrough();
-        service.initScope($scope, labelize);
+        service.initAction(labelize);
       });
 
       function labelize(count) {
@@ -117,7 +117,7 @@
 
       function testDoubleObject() {
         var templates = generateTemplate(2);
-        service.perform(templates);
+        service.perform(templates, $scope);
         $scope.$apply();
 
         expect(deleteModalService.open).toHaveBeenCalled();
@@ -129,7 +129,7 @@
         spyOn(magnumAPI, 'deleteEntity');
         var templates = generateTemplate(1);
         var template = templates[0];
-        service.perform(templates);
+        service.perform(templates, $scope);
         $scope.$apply();
 
         var contextArg = deleteModalService.open.calls.argsFor(0)[2];

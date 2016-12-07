@@ -36,7 +36,7 @@
   ) {
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -45,7 +45,7 @@
 
     //////////////
 
-    function initScope() {
+    function initAction() {
     }
 
     function perform(selected) {

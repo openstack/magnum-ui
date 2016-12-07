@@ -50,7 +50,7 @@
     };
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -59,15 +59,15 @@
 
     //////////////
 
-    function initScope($scope) {
+    function initAction() {
+    }
+
+    function perform(selected, $scope) {
       scope = $scope;
       scope.workflow = createWorkflow;
       scope.model = model;
       scope.$on('$destroy', function() {
       });
-    }
-
-    function perform() {
       scope.model.init();
       return wizardModalService.modal({
         scope: scope,
