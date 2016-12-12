@@ -12,6 +12,8 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import mock
+
 from magnum_ui import api
 from magnum_ui.test import test_data
 from magnumclient.v1 import client as magnum_client
@@ -36,6 +38,6 @@ class APITestCase(helpers.APITestCase):
 
     def stub_magnumclient(self):
         if not hasattr(self, "magnumclient"):
-            self.mox.StubOutWithMock(magnum_client, 'Client')
-            self.magnumclient = self.mox.CreateMock(magnum_client.Client)
+            magnum_client.Client = mock.Mock()
+            self.magnumclient = magnum_client.Client
         return self.magnumclient
