@@ -27,7 +27,7 @@
       signCertificateService);
 
   signCertificateService.$inject = [
-    '$modal',
+    '$uibModal',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
@@ -39,7 +39,7 @@
   ];
 
   function signCertificateService(
-    $modal, magnum, actionResult, gettext, $qExtensions, toast, basePath, resourceType, model
+    $uibModal, magnum, actionResult, gettext, $qExtensions, toast, basePath, resourceType, model
   ) {
 
     var message = {
@@ -59,19 +59,18 @@
     function initAction() {
     }
 
-    function signCertificateModal(html, $modal) {
+    function signCertificateModal() {
       var localSpec = {
         backdrop: 'static',
         controller: 'horizon.dashboard.container-infra.clusters.signCertificateController as ctrl',
-        templateUrl: html
+        templateUrl: basePath + 'sign-certificate/sign-certificate-modal.html'
       };
-      return $modal.open(localSpec).result;
+      return $uibModal.open(localSpec).result;
     }
 
     function perform(selected) {
       model.init(selected.id);
-      return signCertificateModal(basePath + 'sign-certificate/sign-certificate-modal.html', $modal)
-        .then(submit);
+      return signCertificateModal().then(submit);
     }
 
     function allowed() {

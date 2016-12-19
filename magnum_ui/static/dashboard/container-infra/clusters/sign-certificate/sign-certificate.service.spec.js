@@ -40,7 +40,7 @@
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.dashboard.container-infra.clusters'));
 
-    beforeEach(inject(function($injector, _$rootScope_, _$q_, $modal) {
+    beforeEach(inject(function($injector, _$rootScope_, _$q_, $uibModal) {
       $q = _$q_;
       service = $injector.get(
         'horizon.dashboard.container-infra.clusters.sign-certificate.service');
@@ -54,7 +54,7 @@
       fakeDeferred.resolve(fakesignCertificate);
       spyOn(model, 'signCertificate').and.returnValue(fakeDeferred.promise);
 
-      spyOn($modal, 'open').and.returnValue(fakeModal);
+      spyOn($uibModal, 'open').and.returnValue(fakeModal);
     }));
 
     it('should pass allow()', function() {
