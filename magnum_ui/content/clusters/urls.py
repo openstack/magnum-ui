@@ -13,10 +13,13 @@
 #    under the License.
 
 from django.conf.urls import url
+from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
 
 
+title = _("Container Infra - Clusters")
 urlpatterns = [
-    url(r'^[0-9a-f\-]{36}$', views.AngularIndexView.as_view(), name='detail'),
-    url(r'^$', views.AngularIndexView.as_view(), name='index'),
+    url(r'^[0-9a-f\-]{36}$', views.AngularIndexView.as_view(title=title),
+        name='detail'),
+    url(r'^$', views.AngularIndexView.as_view(title=title), name='index'),
 ]
