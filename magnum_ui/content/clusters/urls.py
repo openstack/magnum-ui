@@ -13,10 +13,10 @@
 #    under the License.
 
 from django.conf.urls import url
-from magnum_ui.content.clusters import views
+from horizon.browsers import views
 
 
 urlpatterns = [
-    url(r'^[0-9a-f\-]{36}$', views.IndexView.as_view(), name='detail'),
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^[0-9a-f\-]{36}$', views.AngularIndexView.as_view(), name='detail'),
+    url(r'^$', views.AngularIndexView.as_view(), name='index'),
 ]
