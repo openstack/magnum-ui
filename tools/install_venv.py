@@ -68,4 +68,4 @@ def main(argv):
     print_help(venv, root)
 
 if __name__ == '__main__':
-    main(sys.argv)
+    sys.exit(main(sys.argv))
