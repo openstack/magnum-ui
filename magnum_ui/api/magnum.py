@@ -43,6 +43,59 @@ CLUSTER_CREATE_ATTRS = ['name', 'cluster_template_id', 'node_count',
 CERTIFICATE_CREATE_ATTRS = ['cluster_uuid', 'csr']
 
 
+def _cleanup_params(attrs, check, **params):
+    args = {}
+    for (key, value) in params.items():
+        if key in attrs:
+            if value is None:
+                value = ''
+            args[str(key)] = str(value)
+        elif check:
+            raise exceptions.BadRequest(
+                "Key must be in %s" % ",".join(attrs))
+        if key == "labels":
+            if isinstance(value, str) or isinstance(value, unicode):
+                labels = {}
+                vals = value.split(",")
+                for v in vals:
+                    kv = v.split("=", 1)
+                    labels[kv[0]] = kv[1]
+                args["labels"] = labels
+            else:
+                args["labels"] = value
+    return args
+
+
+def _create_patches(old, new):
+    """"Create patches for updating cluster template and cluster
+
+    Returns patches include operations for each parameters to update values
+    """
+    # old = {'a': 'A', 'b': 'B', 'c': 'C', 'd': 'D', 'e': 'E'}
+    # new = {'a': 'A', 'c': 'c', 'd': None, 'e': '', 'f': 'F'}
+    # patch = [
+    #     {'op': 'add', 'path': '/f', 'value': 'F'}
+    #     {'op': 'remove', 'path': '/e'},
+    #     {'op': 'remove', 'path': '/d'},
+    #     {'op': 'replace', 'path': '/c', 'value': 'c'}
+    # ]
+
+    patch = []
+
+    for key in new:
+        path = '/' + key
+        if key in old and old[key] != new[key]:
+            if new[key] is None or new[key] is '':
+                patch.append({'op': 'remove', 'path': path})
+            else:
+                patch.append({'op': 'replace', 'path': path,
+                              'value': new[key]})
+        elif key not in old:
+            patch.append({'op': 'add', 'path': path, 'value': new[key]})
+
+    return patch
+
+
 @memoized
 def magnumclient(request):
     magnum_url = ""
@@ -69,21 +122,16 @@ def magnumclient(request):
 
 
 def cluster_template_create(request, **kwargs):
-    args = {}
-    for (key, value) in kwargs.items():
-        if key in CLUSTER_TEMPLATE_CREATE_ATTRS:
-            args[str(key)] = str(value)
-        else:
-            raise exceptions.BadRequest(
-                "Key must be in %s" % ",".join(CLUSTER_TEMPLATE_CREATE_ATTRS))
-        if key == "labels":
-            labels = {}
-            vals = value.split(",")
-            for v in vals:
-                kv = v.split("=", 1)
-                labels[kv[0]] = kv[1]
-            args["labels"] = labels
+    args = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, True, **kwargs)
     return magnumclient(request).cluster_templates.create(**args)
+
+
+def cluster_template_update(request, id, **kwargs):
+    new = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, True, **kwargs)
+    old = magnumclient(request).cluster_templates.get(id).to_dict()
+    old = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, False, **old)
+    patch = _create_patches(old, new)
+    return magnumclient(request).cluster_templates.update(id, patch)
 
 
 def cluster_template_delete(request, id):

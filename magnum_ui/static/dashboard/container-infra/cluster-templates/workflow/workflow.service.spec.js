@@ -19,7 +19,7 @@
 
   describe('horizon.dashboard.container-infra.cluster-templates.workflow', function() {
 
-    var createWorkflow, nova, glance, $q, deferred, keyDeferred;
+    var workflow, nova, glance, $q, deferred, keyDeferred;
 
     beforeEach(module('horizon.app.core'));
     beforeEach(module('horizon.framework'));
@@ -27,7 +27,7 @@
 
     beforeEach(inject(function($injector, _$q_) {
       $q = _$q_;
-      createWorkflow = $injector.get(
+      workflow = $injector.get(
         'horizon.dashboard.container-infra.cluster-templates.workflow');
       nova = $injector.get('horizon.app.core.openstack-service-api.nova');
       glance = $injector.get('horizon.app.core.openstack-service-api.glance');
@@ -42,7 +42,7 @@
     }));
 
     it('should be init', inject(function($timeout) {
-      var config = createWorkflow.init();
+      var config = workflow.init('create', 'Create Cluster Template');
       $timeout.flush();
       expect(config.title).toBeDefined();
       expect(config.schema).toBeDefined();

@@ -36,7 +36,7 @@
       init: init
     };
 
-    function init() {
+    function init(action, title) {
       var schema, form, model;
       var images = [{value:"", name: gettext("Choose an Image")}];
       var nflavors = [{value:"", name: gettext("Choose a Flavor for the Node")}];
@@ -76,7 +76,7 @@
             type: 'string',
             'x-schema-form': {
               type: 'string',
-              placeholder: gettext('Name of the cluster template to create.')
+              placeholder: gettext('Name of the cluster template.')
             }
           },
           'coe': {
@@ -206,8 +206,7 @@
               placeholder: gettext('KEY1=VALUE1, KEY2=VALUE2...')
             }
           }
-        },
-        required: ['coe', 'image_id', 'external_network_id']
+        }
       };
 
       // form
@@ -217,7 +216,7 @@
           tabs: [
             {
               title: gettext('Info'),
-              help: basePath + 'cluster-templates/create/info.help.html',
+              help: basePath + 'cluster-templates/workflow/info.help.html',
               type: 'section',
               htmlClass: 'row',
               items: [
@@ -232,6 +231,7 @@
                       key: 'coe',
                       type: 'select',
                       titleMap: coes,
+                      required: true,
                       onChange: function() {
                         if (model.coe) {
                           form[0].tabs[2].items[0].items[0].items[0].titleMap =
@@ -267,12 +267,11 @@
                   ]
                 }
               ],
-              required: ['coe']
-
+              required: true
             },
             {
               title: gettext('Node Spec'),
-              help: basePath + 'cluster-templates/create/spec.help.html',
+              help: basePath + 'cluster-templates/workflow/spec.help.html',
               type: 'section',
               htmlClass: 'row',
               items: [
@@ -287,7 +286,8 @@
                         {
                           key: 'image_id',
                           type: 'select',
-                          titleMap: images
+                          titleMap: images,
+                          required: true
                         },
                         {
                           key: 'flavor_id',
@@ -353,11 +353,11 @@
                   ]
                 }
               ],
-              required: ['image_id']
+              required: true
             },
             {
               title: gettext('Network'),
-              help: basePath + 'cluster-templates/create/network.help.html',
+              help: basePath + 'cluster-templates/workflow/network.help.html',
               type: 'section',
               htmlClass: 'row',
               items: [
@@ -388,7 +388,8 @@
                           key: 'no_proxy'
                         },
                         {
-                          key: 'external_network_id'
+                          key: 'external_network_id',
+                          required: true
                         },
                         {
                           key: 'fixed_network'
@@ -410,11 +411,11 @@
                   ]
                 }
               ],
-              required: ['external_network_id']
+              required: true
             },
             {
               title: gettext('Labels'),
-              help: basePath + 'cluster-templates/create/labels.help.html',
+              help: basePath + 'cluster-templates/workflow/labels.help.html',
               type: 'section',
               htmlClass: 'row',
               items: [
@@ -427,7 +428,9 @@
                       htmlClass: 'col-xs-12',
                       items: [
                         {
-                          key: 'labels'
+                          key: 'labels',
+                          // fixme: to be available, needs to fix bug/1638863
+                          readonly: action === 'update'
                         }
                       ]
                     }
@@ -489,7 +492,7 @@
       };
 
       var config = {
-        title: gettext('Create Cluster Template'),
+        title: title,
         schema: schema,
         form: form,
         model: model

@@ -47,7 +47,9 @@
         return {data: {items: response.data.items.map(addTrackBy)}};
 
         function addTrackBy(clusterTemplate) {
-          clusterTemplate.trackBy = clusterTemplate.id;
+          /* eslint-disable max-len */
+          var timestamp = clusterTemplate.updated_at ? clusterTemplate.updated_at : clusterTemplate.created_at;
+          clusterTemplate.trackBy = clusterTemplate.id + timestamp;
           return clusterTemplate;
         }
       }
