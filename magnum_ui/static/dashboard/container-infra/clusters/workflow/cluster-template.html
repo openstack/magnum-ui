@@ -1,0 +1,27 @@
+<div ng-controller="horizon.dashboard.container-infra.clusters.workflow.clusterTemplateController as ctrl">
+  <div class="detail" ng-show="ctrl.clusterTemplate.id">
+    <span translate class="h4">Cluster Template Detail</span>
+    <dl class="dl-horizontal">
+      <dt translate>Name</dt>
+      <dd><a ng-href="project/ngdetails/OS::Magnum::ClusterTemplate/{$ ctrl.clusterTemplate.id $}" ng-click="cancel()">
+          {$ ctrl.clusterTemplate.name|noName $}
+      </a></dd>
+      <dt translate>ID</dt>
+      <dd>{$ ctrl.clusterTemplate.id $}</dd>
+      <dt translate>COE</dt>
+      <dd>{$ ctrl.clusterTemplate.coe $}</dd>
+      <dt translate>Image ID</dt>
+      <dd>{$ ctrl.clusterTemplate.image_id $}</dd>
+      <dt translate>Keypair</dt>
+      <dd>{$ ctrl.clusterTemplate.keypair_id|noValue $}</dd>
+      <dt translate>Public</dt>
+      <dd>{$ ctrl.clusterTemplate.public $}</dd>
+      <dt translate>Registry Enabled</dt>
+      <dd>{$ ctrl.clusterTemplate.registry_enabled $}</dd>
+      <dt translate>TLS Disabled</dt>
+      <dd>{$ ctrl.clusterTemplate.tls_disabled $}</dd>
+      <dt translate>API Server Port</dt>
+      <dd>{$ ctrl.clusterTemplate.apiserver_port|noValue $}</dd>
+    </dl>
+  </div>
+</div>
