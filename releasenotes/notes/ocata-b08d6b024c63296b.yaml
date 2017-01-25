@@ -1,0 +1,26 @@
+---
+prelude: >
+    Magnum UI keeps on following changes for Horizon's
+    AngularJS-based framework. So we can use recent
+    Horizon's feature. And hundreds of JavaScript tests
+    are added. This ensures quality of Magnum UI.
+features:
+  - >
+    Allow to create cluster template without keypair.
+    Also, allow change or set keypair in cluster creation.
+    Following change in Magnum, also Magnum UI allows this
+    feature.
+  - >
+    Change creation actions to global actions. Cluster
+    Template creation and Cluster creation actions are
+    changed from batchAction to globalAction. This means
+    these actions are callable from other panels.
+  - >
+    Use initAction() instead initScope(). initScope() is
+    deprecated from Horizon in Ocata and will be removed
+    in Queens.
+  - >
+    Use horizon's common "views" module for Angular. This
+    proceeds independence against Django framework for
+    plugins.
+  - Reasonable name is set to browser title bar.
