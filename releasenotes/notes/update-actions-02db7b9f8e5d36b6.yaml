@@ -1,0 +1,14 @@
+---
+prelude: >
+    Update actions are added for cluster template and
+    cluster. Also, Form maintainability is proceeded by
+    angular-json-schema.
+features:
+  - >
+    Update actions are added for cluster template and
+    cluster.
+  - >
+    angular-json-schema library is used for create and
+    update dialog, their forms are integrated into one
+    workflow service. It proceeds maintainability for
+    forms.
