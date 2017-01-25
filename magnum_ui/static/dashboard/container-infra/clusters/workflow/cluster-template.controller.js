@@ -66,9 +66,7 @@
 
     function onGetClusterTemplate(response) {
       ctrl.clusterTemplate = response.data;
-      if (response.data.keypair_id === null) {
-        $scope.model.keypair = "";
-      } else {
+      if ($scope.model.keypair === "") {
         $scope.model.keypair = response.data.keypair_id;
       }
     }

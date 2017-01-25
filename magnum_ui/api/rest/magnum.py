@@ -101,6 +101,19 @@ class Cluster(generic.View):
         """Get a specific cluster"""
         return change_to_id(magnum.cluster_show(request, cluster_id).to_dict())
 
+    @rest_utils.ajax(data_required=True)
+    def patch(self, request, cluster_id):
+        """Update a Cluster.
+
+        Returns the Cluster object on success.
+        """
+        params = request.DATA
+        updated_cluster = magnum.cluster_update(
+            request, cluster_id, **params)
+        return rest_utils.CreatedResponse(
+            '/api/container_infra/cluster/%s' % cluster_id,
+            updated_cluster.to_dict())
+
 
 @urls.register
 class Clusters(generic.View):

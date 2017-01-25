@@ -34,6 +34,7 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.clusters.delete.service',
+    'horizon.dashboard.container-infra.clusters.update.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.sign-certificate.service',
     'horizon.dashboard.container-infra.clusters.resourceType'
@@ -44,6 +45,7 @@
     gettext,
     createClusterService,
     deleteClusterService,
+    updateClusterService,
     showCertificateService,
     signCertificateService,
     resourceType) {
@@ -82,6 +84,13 @@
         service: signCertificateService,
         template: {
           text: gettext('Sign Certificate')
+        }
+      })
+      .append({
+        id: 'updateClusterAction',
+        service: updateClusterService,
+        template: {
+          text: gettext('Update Cluster')
         }
       })
       .append({
