@@ -35,6 +35,7 @@
       deleteCluster: deleteCluster,
       deleteClusters: deleteClusters,
       createClusterTemplate: createClusterTemplate,
+      updateClusterTemplate: updateClusterTemplate,
       getClusterTemplate: getClusterTemplate,
       getClusterTemplates: getClusterTemplates,
       deleteClusterTemplate: deleteClusterTemplate,
@@ -95,6 +96,13 @@
       return apiService.post('/api/container_infra/cluster_templates/', params)
         .error(function() {
           toastService.add('error', gettext('Unable to create cluster template.'));
+        });
+    }
+
+    function updateClusterTemplate(id, params) {
+      return apiService.patch('/api/container_infra/cluster_templates/' + id, params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to update cluster template.'));
         });
     }
 

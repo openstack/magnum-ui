@@ -34,6 +34,7 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.cluster-templates.create.service',
     'horizon.dashboard.container-infra.cluster-templates.delete.service',
+    'horizon.dashboard.container-infra.cluster-templates.update.service',
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.cluster-templates.resourceType'
   ];
@@ -43,6 +44,7 @@
     gettext,
     createClusterTemplateService,
     deleteClusterTemplateService,
+    updateClusterTemplateService,
     createClusterService,
     resourceType) {
 
@@ -74,6 +76,13 @@
         service: createClusterService,
         template: {
           text: gettext('Create Cluster')
+        }
+      })
+      .append({
+        id: 'updateClusterTemplateAction',
+        service: updateClusterTemplateService,
+        template: {
+          text: gettext('Update Cluster Template')
         }
       })
       .append({

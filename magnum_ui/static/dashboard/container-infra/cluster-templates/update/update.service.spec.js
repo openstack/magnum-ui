@@ -1,5 +1,5 @@
 /**
- *    (c) Copyright 2016 NEC Corporation
+ * Copyright 2017 NEC Corporation
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -17,10 +17,14 @@
 (function() {
   'use strict';
 
-  describe('horizon.dashboard.container-infra.cluster-templates.create.service', function() {
+  describe('horizon.dashboard.container-infra.cluster-templates.update.service', function() {
 
-    var service, $scope, $q, deferred, magnum, workflow;
+    var service, $scope, $q, deferred, magnum;
+    var selected = {
+      id: 1
+    };
     var model = {
+      id: 1,
       tabs: "",
       keypair_id: "",
       coe: null
@@ -33,6 +37,12 @@
         return deferred.promise;
       }
     };
+    var workflow = {
+      init: function (action, title) {
+        action = title;
+        return {model: model};
+      }
+    };
 
     ///////////////////
 
@@ -41,6 +51,7 @@
     beforeEach(module('horizon.dashboard.container-infra.cluster-templates'));
 
     beforeEach(module(function($provide) {
+      $provide.value('horizon.dashboard.container-infra.cluster-templates.workflow', workflow);
       $provide.value('horizon.framework.widgets.form.ModalFormService', modal);
     }));
 
@@ -48,31 +59,32 @@
       $q = _$q_;
       $scope = _$rootScope_.$new();
       service = $injector.get(
-        'horizon.dashboard.container-infra.cluster-templates.create.service');
+        'horizon.dashboard.container-infra.cluster-templates.update.service');
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
-      workflow = $injector.get(
-        'horizon.dashboard.container-infra.cluster-templates.workflow');
       deferred = $q.defer();
-      deferred.resolve({data: {uuid: 1}});
-      spyOn(magnum, 'createClusterTemplate').and.returnValue(deferred.promise);
-      spyOn(modal, 'open').and.callThrough();
+      deferred.resolve({data: {uuid: 1, labels: "key1:val1,key2:val2"}});
+      spyOn(magnum, 'getClusterTemplate').and.returnValue(deferred.promise);
+      spyOn(magnum, 'updateClusterTemplate').and.returnValue(deferred.promise);
       spyOn(workflow, 'init').and.returnValue({model: model});
+      spyOn(modal, 'open').and.callThrough();
     }));
 
-    it('should check the policy if the user is allowed to create cluster template', function() {
+    it('should check the policy if the user is allowed to update cluster template', function() {
       var allowed = service.allowed();
       expect(allowed).toBeTruthy();
     });
 
     it('open the modal', inject(function($timeout) {
-      service.perform();
+      service.perform(selected, $scope);
 
-      expect(modal.open).toHaveBeenCalled();
+      expect(workflow.init).toHaveBeenCalled();
+
+      expect(modal.open).toHaveBeenCalledWith({model: model});
 
       $timeout.flush();
       $scope.$apply();
 
-      expect(magnum.createClusterTemplate).toHaveBeenCalled();
+      expect(magnum.updateClusterTemplate).toHaveBeenCalled();
     }));
   });
 })();

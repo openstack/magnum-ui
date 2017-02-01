@@ -32,16 +32,14 @@
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.modal.wizard-modal.service',
+    'horizon.framework.widgets.form.ModalFormService',
     'horizon.framework.widgets.toast.service',
     'horizon.dashboard.container-infra.cluster-templates.resourceType',
-    'horizon.dashboard.container-infra.cluster-templates.workflow',
-    'horizon.framework.widgets.form.ModalFormService'
+    'horizon.dashboard.container-infra.cluster-templates.workflow'
   ];
 
   function createService(
-    magnum, policy, actionResult, gettext, $qExtensions, wizardModalService,
-    toast, resourceType, createWorkflow, modal
+    magnum, policy, actionResult, gettext, $qExtensions, modal, toast, resourceType, workflow
   ) {
 
     var config;
@@ -59,7 +57,7 @@
     //////////////
 
     function perform() {
-      config = createWorkflow.init();
+      config = workflow.init('create', gettext('Create Cluster Template'));
       return modal.open(config).then(submit);
     }
 

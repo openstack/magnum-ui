@@ -41,6 +41,19 @@ class ClusterTemplate(generic.View):
         return change_to_id(magnum.cluster_template_show(request, template_id)
                             .to_dict())
 
+    @rest_utils.ajax(data_required=True)
+    def patch(self, request, template_id):
+        """Update a Cluster Template.
+
+        Returns the Cluster Template object on success.
+        """
+        params = request.DATA
+        updated_template = magnum.cluster_template_update(
+            request, template_id, **params)
+        return rest_utils.CreatedResponse(
+            '/api/container_infra/cluster_template/%s' % template_id,
+            updated_template.to_dict())
+
 
 @urls.register
 class ClusterTemplates(generic.View):
