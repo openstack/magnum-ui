@@ -30,6 +30,7 @@
   function MagnumAPI($timeout, apiService, toastService, gettext) {
     var service = {
       createCluster: createCluster,
+      updateCluster: updateCluster,
       getCluster: getCluster,
       getClusters: getClusters,
       deleteCluster: deleteCluster,
@@ -55,6 +56,13 @@
       return apiService.post('/api/container_infra/clusters/', params)
         .error(function() {
           toastService.add('error', gettext('Unable to create cluster.'));
+        });
+    }
+
+    function updateCluster(id, params) {
+      return apiService.patch('/api/container_infra/clusters/' + id, params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to update cluster.'));
         });
     }
 

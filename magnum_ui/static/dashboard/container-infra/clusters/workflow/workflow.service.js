@@ -96,13 +96,15 @@
                   items: [
                     {
                       key: 'name',
-                      placeholder: gettext('Name of the cluster.')
+                      placeholder: gettext('Name of the cluster.'),
+                      readonly: action === 'update'
                     },
                     {
                       key: 'cluster_template_id',
                       type: 'select',
                       titleMap: clusterTemplates,
-                      required: true
+                      required: true,
+                      readonly: action === 'update'
                     },
                     {
                       type: 'template',
@@ -110,7 +112,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              required: true
             },
             {
               title: gettext('Size'),
@@ -124,7 +127,8 @@
                   items: [
                     {
                       key: 'master_count',
-                      placeholder: gettext('The number of master nodes for the cluster.')
+                      placeholder: gettext('The number of master nodes for the cluster.'),
+                      readonly: action === 'update'
                     },
                     {
                       key: 'node_count',
@@ -146,23 +150,27 @@
                   items: [
                     {
                       key: 'discovery_url',
-                      placeholder: gettext('Specifies custom discovery url for node discovery.')
+                      placeholder: gettext('Specifies custom discovery url for node discovery.'),
+                      readonly: action === 'update'
                     },
                     {
                       key: 'create_timeout',
                       /* eslint-disable max-len */
                       placeholder: gettext('The timeout for cluster creation in minutes.'),
-                      description: gettext('Set to 0 for no timeout. The default is no timeout.')
+                      description: gettext('Set to 0 for no timeout. The default is no timeout.'),
+                      readonly: action === 'update'
                     },
                     {
                       key: 'keypair',
                       type: 'select',
                       titleMap: keypairs,
-                      required: true
+                      required: true,
+                      readonly: action === 'update'
                     }
                   ]
                 }
-              ]
+              ],
+              required: true
             }
           ]
         }

@@ -47,7 +47,8 @@
         return {data: {items: response.data.items.map(addTrackBy)}};
 
         function addTrackBy(cluster) {
-          cluster.trackBy = cluster.id;
+          var timestamp = cluster.updated_at ? cluster.updated_at : cluster.created_at;
+          cluster.trackBy = cluster.id + timestamp;
           return cluster;
         }
       }

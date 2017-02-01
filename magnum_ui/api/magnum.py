@@ -149,17 +149,15 @@ def cluster_template_show(request, id):
 
 
 def cluster_create(request, **kwargs):
-    args = {}
-    for (key, value) in kwargs.items():
-        if key in CLUSTER_CREATE_ATTRS:
-            args[key] = value
-        else:
-            raise exceptions.BadRequest(
-                "Key must be in %s" % ",".join(CLUSTER_CREATE_ATTRS))
+    args = _cleanup_params(CLUSTER_CREATE_ATTRS, True, **kwargs)
     return magnumclient(request).clusters.create(**args)
 
 
-def cluster_update(request, id, patch):
+def cluster_update(request, id, **kwargs):
+    new = _cleanup_params(CLUSTER_CREATE_ATTRS, True, **kwargs)
+    old = magnumclient(request).clusters.get(id).to_dict()
+    old = _cleanup_params(CLUSTER_CREATE_ATTRS, False, **old)
+    patch = _create_patches(old, new)
     return magnumclient(request).clusters.update(id, patch)
 
 

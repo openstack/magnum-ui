@@ -25,7 +25,8 @@
       $q = _$q_;
       $scope = _$rootScope_.$new();
       $scope.model = {
-        cluster_template_id: '1'
+        cluster_template_id: '1',
+        keypair: ''
       };
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
       controller = $injector.get('$controller');
@@ -49,11 +50,12 @@
     });
 
     it('should keypair is changed by cluster template\'s keypair', function() {
+      $scope.model.cluster_template_id = '1';
       $scope.$apply();
       expect($scope.model.keypair).toBe('1');
 
       $scope.model.cluster_template_id = '';
-      $scope.$digest();
+      $scope.$apply();
       expect($scope.model.keypair).toBe('');
     });
   });
