@@ -1,7 +1,7 @@
 ---
 prelude: >
     Update actions are added for cluster template and
-    cluster. Also, Form maintainability is proceeded by
+    cluster. Also, the form maintainability is proceeded by
     angular-json-schema.
 features:
   - >

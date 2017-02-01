@@ -191,7 +191,7 @@
             }
           },
           'master_lb_enabled': {
-            title: gettext('MasterL LB'),
+            title: gettext('Master LB'),
             type: 'boolean'
           },
           'floating_ip_enabled': {
