@@ -1,14 +1,15 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev96\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev139\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-12-08 05:35+0000\n"
+"POT-Creation-Date: 2017-02-01 03:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-11-29 12:41+0000\n"
+"PO-Revision-Date: 2017-02-01 03:56+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -93,6 +94,10 @@ msgstr "クラスター"
 msgid "Cluster %s was successfully created."
 msgstr "クラスター %s が正常に作成されました。"
 
+#, python-format
+msgid "Cluster %s was successfully updated."
+msgstr "クラスター %s が正常に更新されました。"
+
 msgid "Cluster Create Timeout"
 msgstr "クラスター作成のタイムアウト"
 
@@ -120,6 +125,10 @@ msgstr "クラスター種別"
 #, python-format
 msgid "Cluster template %s was successfully created."
 msgstr "クラスターテンプレート %s が正常に作成されました。"
+
+#, python-format
+msgid "Cluster template %s was successfully updated."
+msgstr "クラスターテンプレート %s が正常に更新されました。"
 
 msgid "Clusters"
 msgstr "クラスター"
@@ -277,8 +286,8 @@ msgstr "無制限"
 msgid "Info"
 msgstr "情報"
 
-msgid "KEY1=VALUE1,KEY2=VALUE2..."
-msgstr "KEY1=VALUE1,KEY2=VALUE2..."
+msgid "KEY1=VALUE1, KEY2=VALUE2..."
+msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
 msgid "Keypair"
 msgstr "キーペア"
@@ -322,11 +331,11 @@ msgstr "その他"
 msgid "Name"
 msgstr "名前"
 
-msgid "Name of the cluster template to create."
-msgstr "作成するクラスターテンプレートの名前。"
+msgid "Name of the cluster template."
+msgstr "クラスターテンプレートの名前。"
 
-msgid "Name of the cluster to create."
-msgstr "作成するクラスターの名前。"
+msgid "Name of the cluster."
+msgstr "クラスターの名前。"
 
 msgid "Network"
 msgstr "ネットワーク"
@@ -381,6 +390,10 @@ msgstr "スナップショット作成完了"
 
 msgid "Server Type"
 msgstr "サーバー種別"
+
+msgid "Set to 0 for no timeout. The default is no timeout."
+msgstr ""
+"タイムアウトなしにするには 0 を設定します。デフォルトはタイムアウトしません。"
 
 msgid "Show Certificate"
 msgstr "証明書の表示"
@@ -448,9 +461,6 @@ msgstr ""
 "このクラスターテンプレートで、カスタマイズのベースとなるイメージの名前または "
 "UUID。"
 
-msgid "The network driver name for instantiating container networks"
-msgstr "コンテナーネットワークの作成に使用するネットワークドライバー名"
-
 msgid "The no_proxy address to use for nodes in cluster"
 msgstr "クラスターのノードで使用するプロキシー例外のアドレス。"
 
@@ -479,15 +489,8 @@ msgstr ""
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
 
-msgid ""
-"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
-"default is no timeout."
-msgstr ""
-"クラスターの作成タイムアウト時間 (単位: 分)。タイムアウトなしにするには 0 を"
-"設定します。デフォルトはタイムアウトしません。"
-
-msgid "The volume driver name for instantiating container volume."
-msgstr "コンテナーボリュームの作成時に使用するボリュームドライバー名。"
+msgid "The timeout for cluster creation in minutes."
+msgstr "クラスターの作成タイムアウト時間 (単位: 分)。"
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
@@ -552,6 +555,18 @@ msgstr "クラスターの一覧を取得できません"
 
 msgid "Unable to sign certificate."
 msgstr "証明書で署名できません。"
+
+msgid "Unable to update cluster template."
+msgstr "クラスターテンプレートを更新できません。"
+
+msgid "Unable to update cluster."
+msgstr "クラスターを更新できません。"
+
+msgid "Update Cluster"
+msgstr "クラスターの更新"
+
+msgid "Update Cluster Template"
+msgstr "クラスターテンプレートの更新"
 
 msgid "Updated"
 msgstr "更新時刻"

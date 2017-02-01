@@ -2,9 +2,9 @@
 # Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev96\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev139\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-12-08 05:35+0000\n"
+"POT-Creation-Date: 2017-02-01 03:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,9 +253,6 @@ msgstr "Nekonečný"
 msgid "Info"
 msgstr "Informace"
 
-msgid "KEY1=VALUE1,KEY2=VALUE2..."
-msgstr "KLÍČ1=HODNOTA1,KLÍČ2=HODNOTA2..."
-
 msgid "Keypair"
 msgstr "Klíč"
 
@@ -291,12 +288,6 @@ msgstr "Různé"
 
 msgid "Name"
 msgstr "Název"
-
-msgid "Name of the cluster template to create."
-msgstr "Název šablony clusteru."
-
-msgid "Name of the cluster to create."
-msgstr "Název clusteru"
 
 msgid "Network"
 msgstr "Síť"
@@ -389,9 +380,6 @@ msgstr "Adresa http_proxy, která bude použita v uzlech clusteru"
 msgid "The https_proxy address to use for nodes in cluster"
 msgstr "Adresa https_proxy, která bude použita v uzlech clusteru"
 
-msgid "The network driver name for instantiating container networks"
-msgstr "Název síťového ovladače pro spouštění sítí kontejneru."
-
 msgid "The no_proxy address to use for nodes in cluster"
 msgstr "Adresa no_proxy, která bude použita v uzlech clusteru"
 
@@ -400,16 +388,6 @@ msgstr "Název privátní Neutron sítě pro připojení do clusteru"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Velikost v GB pro svazek docker. Výchozí: 25"
-
-msgid ""
-"The timeout for cluster creation in minutes. Set to 0 for no timeout. The "
-"default is no timeout."
-msgstr ""
-"Časový limit pro vytvoření clusteru v minutách. Nastavte 0 pro žádný časový "
-"limit. Výchozí hodnota je žádný časový limit."
-
-msgid "The volume driver name for instantiating container volume."
-msgstr "Název ovladače svazku pro spouštění svazku kontejneru."
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr "Toto by se mělo jmenovat fixed-network-cidr. Výchozí: 10.0.0.0/24"
