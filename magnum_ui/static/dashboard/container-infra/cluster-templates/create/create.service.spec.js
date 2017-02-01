@@ -19,13 +19,18 @@
 
   describe('horizon.dashboard.container-infra.cluster-templates.create.service', function() {
 
-    var service, $scope, $q, deferred, deferredModal, magnum;
-
-    var wizardModalService = {
-      modal: function (config) {
-        deferredModal = $q.defer();
-        deferredModal.resolve(config.scope.model);
-        return {result: deferredModal.promise};
+    var service, $scope, $q, deferred, magnum, createWorkflow;
+    var model = {
+      tabs: "",
+      keypair_id: "",
+      coe: null
+    };
+    var modal = {
+      open: function(config) {
+        config.model = model;
+        deferred = $q.defer();
+        deferred.resolve(config);
+        return deferred.promise;
       }
     };
 
@@ -36,17 +41,22 @@
     beforeEach(module('horizon.dashboard.container-infra.cluster-templates'));
 
     beforeEach(module(function($provide) {
-      $provide.value('horizon.framework.widgets.modal.wizard-modal.service', wizardModalService);
+      $provide.value('horizon.framework.widgets.form.ModalFormService', modal);
     }));
 
     beforeEach(inject(function($injector, _$rootScope_, _$q_) {
       $q = _$q_;
       $scope = _$rootScope_.$new();
-      service = $injector.get('horizon.dashboard.container-infra.cluster-templates.create.service');
+      service = $injector.get(
+        'horizon.dashboard.container-infra.cluster-templates.create.service');
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
+      createWorkflow = $injector.get(
+        'horizon.dashboard.container-infra.cluster-templates.workflow');
       deferred = $q.defer();
       deferred.resolve({data: {uuid: 1}});
       spyOn(magnum, 'createClusterTemplate').and.returnValue(deferred.promise);
+      spyOn(modal, 'open').and.callThrough();
+      spyOn(createWorkflow, 'init').and.returnValue({model: model});
     }));
 
     it('should check the policy if the user is allowed to create cluster template', function() {
@@ -54,35 +64,15 @@
       expect(allowed).toBeTruthy();
     });
 
-    it('open the modal and should destroy event watchers', function() {
-      spyOn(wizardModalService, 'modal').and.callThrough();
-      service.initAction();
-      service.perform(null, $scope);
+    it('open the modal', inject(function($timeout) {
+      service.perform();
 
-      $scope.$emit('$destroy');
+      expect(modal.open).toHaveBeenCalled();
 
-      expect(wizardModalService.modal).toHaveBeenCalled();
-
-      var modalArgs = wizardModalService.modal.calls.argsFor(0)[0];
-      expect(modalArgs.scope).toEqual($scope);
-      expect(modalArgs.workflow).toBeDefined();
-      expect(modalArgs.submit).toBeDefined();
-
-    });
-
-    it('should submit create', inject(function($timeout) {
-
-      spyOn(wizardModalService, 'modal').and.callThrough();
-
-      service.initAction();
-      service.perform(null, $scope);
-      var modalArgs = wizardModalService.modal.calls.argsFor(0)[0];
-      modalArgs.submit();
       $timeout.flush();
       $scope.$apply();
 
       expect(magnum.createClusterTemplate).toHaveBeenCalled();
-
     }));
   });
 })();
