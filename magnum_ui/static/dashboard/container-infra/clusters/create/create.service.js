@@ -26,30 +26,28 @@
 
   createService.$inject = [
     '$location',
+    'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.framework.util.actions.action-result.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.modal.wizard-modal.service',
+    'horizon.framework.widgets.form.ModalFormService',
     'horizon.framework.widgets.toast.service',
-    'horizon.dashboard.container-infra.clusters.model',
-    'horizon.dashboard.container-infra.clusters.events',
     'horizon.dashboard.container-infra.clusters.resourceType',
     'horizon.dashboard.container-infra.clusters.workflow'
   ];
 
   function createService(
-    $location, policy, actionResult, gettext, $qExtensions, wizardModalService, toast,
-    model, events, resourceType, createWorkflow
+    $location, magnum, policy, actionResult, gettext, $qExtensions, modal, toast,
+    resourceType, workflow
   ) {
 
-    var scope;
+    var config;
     var message = {
       success: gettext('Cluster %s was successfully created.')
     };
 
     var service = {
-      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -58,30 +56,33 @@
 
     //////////////
 
-    function initAction() {
-    }
-
     function perform(selected, $scope) {
-      scope = $scope;
-      scope.workflow = createWorkflow;
-      scope.model = model;
-      scope.$on('$destroy', function() {
-      });
-      scope.model.init();
-      scope.selected = selected;
-      return wizardModalService.modal({
-        scope: scope,
-        workflow: createWorkflow,
-        submit: submit
-      }).result;
+      config = workflow.init('create', gettext('Create'), $scope);
+      if (typeof selected !== 'undefined') {
+        config.model.cluster_template_id = selected.id;
+      }
+      return modal.open(config).then(submit);
     }
 
     function allowed() {
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function submit() {
-      return model.createCluster().then(success);
+    function submit(context) {
+      context.model = cleanNullProperties(context.model);
+      return magnum.createCluster(context.model, false).then(success, true);
+    }
+
+    function cleanNullProperties(model) {
+      // Initially clean fields that don't have any value.
+      // Not only "null", blank too.
+      for (var key in model) {
+        if (model.hasOwnProperty(key) && model[key] === null || model[key] === "" ||
+            key === "tabs") {
+          delete model[key];
+        }
+      }
+      return model;
     }
 
     function success(response) {
