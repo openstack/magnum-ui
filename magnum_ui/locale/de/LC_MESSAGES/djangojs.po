@@ -1,15 +1,16 @@
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Robert Simai <robert.simai@suse.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev139\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev142\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-02-01 03:31+0000\n"
+"POT-Creation-Date: 2017-02-01 09:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-20 07:17+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2017-02-01 07:20+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -93,6 +94,10 @@ msgstr "Cluster"
 msgid "Cluster %s was successfully created."
 msgstr "Cluster %s wurde erfolgreich erstellt."
 
+#, python-format
+msgid "Cluster %s was successfully updated."
+msgstr "Cluster %s wurde erfolgreich aktualisiert."
+
 msgid "Cluster Create Timeout"
 msgstr "Zeitlimit Clustererstellung"
 
@@ -120,6 +125,10 @@ msgstr "Clustertyp"
 #, python-format
 msgid "Cluster template %s was successfully created."
 msgstr "Clustervorlage %s erfolgreich angelegt."
+
+#, python-format
+msgid "Cluster template %s was successfully updated."
+msgstr "Clustervorlage %s erfolgreich aktualisiert."
 
 msgid "Clusters"
 msgstr "Cluster"
@@ -281,6 +290,9 @@ msgstr "Unendlich"
 msgid "Info"
 msgstr "Info"
 
+msgid "KEY1=VALUE1, KEY2=VALUE2..."
+msgstr "KEY1=VALUE1, KEY2=VALUE2..."
+
 msgid "Keypair"
 msgstr "Schlüsselpaar"
 
@@ -322,6 +334,12 @@ msgstr "Verschiedenes"
 
 msgid "Name"
 msgstr "Name"
+
+msgid "Name of the cluster template."
+msgstr "Name für die Clustervorlage."
+
+msgid "Name of the cluster."
+msgstr "Name des Clusters."
 
 msgid "Network"
 msgstr "Netzwerk"
@@ -376,6 +394,9 @@ msgstr "SCHATTENKOPIE ABGESCHLOSSEN"
 
 msgid "Server Type"
 msgstr "Servertyp"
+
+msgid "Set to 0 for no timeout. The default is no timeout."
+msgstr "0 bedeutet kein Limit. Der Standard ist kein Limit."
 
 msgid "Show Certificate"
 msgstr "Zertifikat anzeigen"
@@ -473,6 +494,9 @@ msgstr ""
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Größe des Docker Datenträgers in GB. Standard: 25"
 
+msgid "The timeout for cluster creation in minutes."
+msgstr "Zeitlimit zur Clustererstellung in Minuten."
+
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Das sollte wirklich nach fixed-network-cidr benannt werden. Standard: "
@@ -539,6 +563,18 @@ msgstr "Cluster können nicht abgerufen werden."
 
 msgid "Unable to sign certificate."
 msgstr "Zertifikat kann nicht signiert werden."
+
+msgid "Unable to update cluster template."
+msgstr "Clustervorlage kann nicht aktualisiert werden."
+
+msgid "Unable to update cluster."
+msgstr "Cluster kann nicht aktualisiert werden."
+
+msgid "Update Cluster"
+msgstr "Cluster aktualisieren"
+
+msgid "Update Cluster Template"
+msgstr "Clustervorlage aktualisieren"
 
 msgid "Updated"
 msgstr "Aktualisiert"
