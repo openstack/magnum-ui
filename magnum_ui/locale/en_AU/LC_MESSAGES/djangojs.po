@@ -343,8 +343,8 @@ msgstr "Node Spec"
 msgid "Nodes"
 msgstr "Nodes"
 
-msgid "Overley"
-msgstr "Overley"
+msgid "Overlay"
+msgstr "Overlay"
 
 msgid "Overview"
 msgstr "Overview"

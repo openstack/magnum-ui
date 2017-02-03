@@ -336,7 +336,7 @@
                           type: 'select',
                           titleMap: [
                             {value: "devicemapper", name: gettext("Device Mapper")},
-                            {value: "overlay", name: gettext("Overley")}
+                            {value: "overlay", name: gettext("Overlay")}
                           ]
                         }
                       ]

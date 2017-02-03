@@ -337,8 +337,8 @@ msgstr "Node Spec"
 msgid "Nodes"
 msgstr "Nodes (simpul)"
 
-msgid "Overley"
-msgstr "Overley"
+msgid "Overlay"
+msgstr "Overlay"
 
 msgid "Overview"
 msgstr "Overview (ikhtisar)"
