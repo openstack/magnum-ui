@@ -339,7 +339,7 @@ msgstr "노드 사양"
 msgid "Nodes"
 msgstr "노드"
 
-msgid "Overley"
+msgid "Overlay"
 msgstr "오버레이"
 
 msgid "Overview"

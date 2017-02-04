@@ -336,7 +336,7 @@ msgstr "节点规格"
 msgid "Nodes"
 msgstr "节点列表。"
 
-msgid "Overley"
+msgid "Overlay"
 msgstr "Overlay"
 
 msgid "Overview"

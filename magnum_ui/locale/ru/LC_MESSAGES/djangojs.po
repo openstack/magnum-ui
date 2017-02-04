@@ -353,7 +353,7 @@ msgstr "Спека узла"
 msgid "Nodes"
 msgstr "Узлы"
 
-msgid "Overley"
+msgid "Overlay"
 msgstr "Покрытие"
 
 msgid "Overview"

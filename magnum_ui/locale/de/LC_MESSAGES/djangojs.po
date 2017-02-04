@@ -362,8 +362,8 @@ msgstr "Knotenspezifikation"
 msgid "Nodes"
 msgstr "Knoten"
 
-msgid "Overley"
-msgstr "Overley"
+msgid "Overlay"
+msgstr "Overlay"
 
 msgid "Overview"
 msgstr "Übersicht"
