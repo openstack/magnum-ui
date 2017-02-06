@@ -1,14 +1,15 @@
 # Andi Chandler <andi@gowling.com>, 2016. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev139\n"
+"Project-Id-Version: magnum-ui 2.1.1.dev147\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-02-01 03:31+0000\n"
+"POT-Creation-Date: 2017-02-06 00:13+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-06-29 01:23+0000\n"
-"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"PO-Revision-Date: 2017-02-05 08:28+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en-GB\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -178,6 +179,9 @@ msgstr "Node Spec"
 
 msgid "Nodes"
 msgstr "Nodes"
+
+msgid "Overlay"
+msgstr "Overlay"
 
 msgid "Overview"
 msgstr "Overview"
