@@ -1,0 +1,23 @@
+---
+prelude: >
+    Ocata release summary.
+features:
+  - |
+    https://review.openstack.org/424984 Added an update action for clusters.
+    https://review.openstack.org/422477 Added update action for cluster templ.
+    https://review.openstack.org/424536 Action for json schema adjusted.
+    https://review.openstack.org/421693 Python 3.5 classifier and venv added.
+    https://review.openstack.org/415321 Improved tracebacks for exceptions.
+    https://review.openstack.org/414810 Adopted horizon views for Angular
+    https://review.openstack.org/408039 Replace mox with mock
+    Added numerous unit tests.
+fixes:
+  - |
+    https://launchpad.net/bugs/1651054 $model is deprecated
+    https://launchpad.net/bugs/1647921 initScope is deprecated
+    https://launchpad.net/bugs/1645754 allow keypair in cluster creation
+    Fixed numerous typos
+other:
+  - |
+    We removed the Xstatic packages from requirements, as those are not needed
+    anymore. Horizon includes what it needs.
