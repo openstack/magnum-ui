@@ -2,13 +2,13 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Magnum UI Release Notes 2.1.1\n"
+"Project-Id-Version: Magnum UI Release Notes 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-13 19:28+0000\n"
+"POT-Creation-Date: 2017-02-16 10:02+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-01 11:03+0000\n"
+"PO-Revision-Date: 2017-02-16 02:26+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -31,11 +31,11 @@ msgstr "'floating_ip_enabled'"
 msgid "'master_lb_enabled'"
 msgstr "'master_lb_enabled'"
 
-msgid "2.1.0-108"
-msgstr "2.1.0-108"
-
 msgid "2.1.1"
 msgstr "2.1.1"
+
+msgid "2.2.0"
+msgstr "2.2.0"
 
 msgid "Add following options to cluster template creation and views."
 msgstr ""
@@ -121,6 +121,12 @@ msgstr "Neue Funktionen"
 msgid "Newton Series Release Notes"
 msgstr "Newton Serie Release Notes"
 
+msgid "Ocata Series Release Notes"
+msgstr "Ocata Serie Releasenotes"
+
+msgid "Ocata release summary."
+msgstr "Ocata Release Zusammenfassung."
+
 msgid "Other Notes"
 msgstr "Andere Notizen"
 
@@ -184,6 +190,13 @@ msgid ""
 msgstr ""
 "initAction() wird an Stelle von initScope() verwendet. initScope() gilt für "
 "Ocata in Horizon als veraltet und wird in Queens entfernt werden."
+
+msgid ""
+"We removed the Xstatic packages from requirements, as those are not needed "
+"anymore. Horizon includes what it needs."
+msgstr ""
+"Xstatic Pakete wurden aus den Anforderungen entfernt, denn sie werden nicht "
+"mehr benötigt. Horizon beinhaltet alles, was es braucht."
 
 msgid ""
 "angular-json-schema library is used for create and update dialog, their "
