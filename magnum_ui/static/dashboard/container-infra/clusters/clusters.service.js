@@ -21,6 +21,7 @@
 
   clustersService.$inject = [
     '$filter',
+    'horizon.app.core.detailRoute',
     'horizon.app.core.openstack-service-api.magnum'
   ];
 
@@ -34,7 +35,7 @@
    * but do not need to be restricted to such use.  Each exposed function
    * is documented below.
    */
-  function clustersService($filter, magnum) {
+  function clustersService($filter, detailRoute, magnum) {
     return {
       getClustersPromise: getClustersPromise,
       urlFunction: urlFunction
@@ -55,7 +56,7 @@
     }
 
     function urlFunction(item) {
-      return 'project/ngdetails/OS::Magnum::Cluster/' + item.id;
+      return detailRoute + 'OS::Magnum::Cluster/' + item.id;
     }
   }
 })();

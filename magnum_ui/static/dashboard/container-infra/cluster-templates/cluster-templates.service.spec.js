@@ -16,10 +16,11 @@
   "use strict";
 
   describe('cluster templates service', function() {
-    var service;
+    var service, detailRoute;
     beforeEach(module('horizon.dashboard.container-infra.cluster-templates'));
     beforeEach(inject(function($injector) {
       service = $injector.get('horizon.dashboard.container-infra.cluster-templates.service');
+      detailRoute = $injector.get('horizon.app.core.detailRoute');
     }));
 
     describe('getClusterTemplatesPromise', function() {
@@ -42,7 +43,7 @@
     describe('urlFunction', function() {
       it("get url", inject(function() {
         var result = service.urlFunction({id:"123abc"});
-        expect(result).toBe("project/ngdetails/OS::Magnum::ClusterTemplate/123abc");
+        expect(result).toBe(detailRoute + "OS::Magnum::ClusterTemplate/123abc");
       }));
     });
 
