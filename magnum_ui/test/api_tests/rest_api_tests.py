@@ -119,7 +119,7 @@ class MagnumRestTestCase(test.TestCase):
         client.certificate_create.return_value = test_res
 
         response = magnum.Certificates().post(request)
-        res_body = json.loads(response.content)
+        res_body = json.loads(response.content.decode('utf-8'))
 
         self.assertStatusCode(response, 201)
         self.assertEqual(res_body['pem'], test_res.to_dict()['pem'])

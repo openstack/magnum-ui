@@ -63,7 +63,7 @@ And enable it in Horizon::
 
 To run horizon with the newly enabled Magnum UI plugin run::
 
-    ./run_tests.sh --runserver 0.0.0.0:8080
+    python manage.py runserver 0.0.0.0:8080
 
 to have the application start on port 8080 and the horizon dashboard will be
 available in your browser at http://localhost:8080/
