@@ -1,0 +1,646 @@
+# işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: magnum-ui 2.2.1.dev24\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-05-17 11:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-05-22 09:36+0000\n"
+"Last-Translator: işbaran akçayır <isbaran@gmail.com>\n"
+"Language-Team: Turkish (Turkey)\n"
+"Language: tr-TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Zanata 3.9.6\n"
+"X-POOTLE-MTIME: 1495445554.000000\n"
+
+msgid "ADOPT COMPLETE"
+msgstr "ADOPT TAMAMLANDI"
+
+msgid "API Address"
+msgstr "API Adresi"
+
+msgid "API Server Port"
+msgstr "API Sunucu Bağlantı Noktası"
+
+msgid "An arbitrary human-readable name"
+msgstr "Keyfi okunabilir bir isim"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr ""
+"Küme şablonuyla ilişkilendirilecek anahtar=değer biçimindeki keyfi "
+"etiketler. Birden fazla kez kullanılabilir."
+
+msgid "CHECK COMPLETE"
+msgstr "KONTROL TAMAMLANDI"
+
+msgid "COE"
+msgstr "COE"
+
+msgid "CREATE COMPLETE"
+msgstr "OLUŞTURMA TAMAMLANDI"
+
+msgid "CREATE FAILED"
+msgstr "OLUŞTURMA BAŞARISIZ"
+
+msgid "CREATE IN PROGRESS"
+msgstr "OLUŞTURMA SÜRÜYOR"
+
+msgid "CSR File"
+msgstr "CSR Dosyası"
+
+msgid "Cancel"
+msgstr "İptal"
+
+#, python-format
+msgid "Certificate %s was successfully signed."
+msgstr "Sertifika %s başarıyla imzalandı."
+
+msgid "Choose a Cluster Template"
+msgstr "Bir Küme Şablonu Seçin"
+
+msgid "Choose a Container Orchestration Engine"
+msgstr "Bir Kapsayıcı Düzenleme Motoru Seçin"
+
+msgid "Choose a Flavor for the Master Node"
+msgstr "Ana Düğüm için bir Nitelik Seçin"
+
+msgid "Choose a Flavor for the Node"
+msgstr "Düğüm için bir Nitelik seçin"
+
+msgid "Choose a Keypair"
+msgstr "Bir Anahtar Çifti seçin"
+
+msgid "Choose a Network Driver"
+msgstr "Bir Ağ Sürücü Seçin"
+
+msgid "Choose a Volume Driver"
+msgstr "Birim Sürücü Seçin"
+
+msgid "Choose an Image"
+msgstr "Bir imaj seçin"
+
+msgid "Cinder"
+msgstr "Cinder"
+
+msgid "Cluster"
+msgstr "Küme"
+
+#, python-format
+msgid "Cluster %s was successfully created."
+msgstr "Küme %s başarıyla oluşturuldu."
+
+#, python-format
+msgid "Cluster %s was successfully updated."
+msgstr "Küme %s başarıyla güncellendi."
+
+msgid "Cluster Create Timeout"
+msgstr "Küme Oluşturma Zaman Aşımı"
+
+msgid "Cluster Distro"
+msgstr "Küme Dağıtımı"
+
+msgid "Cluster Name"
+msgstr "Küme İsmi"
+
+msgid "Cluster Template"
+msgstr "Küme Şablonu"
+
+msgid "Cluster Template Detail"
+msgstr "Küme Şablonu Ayrıntısı"
+
+msgid "Cluster Template Name"
+msgstr "Küme Şablon İsmi"
+
+msgid "Cluster Templates"
+msgstr "Küme Şablonları"
+
+msgid "Cluster Type"
+msgstr "Küme Türü"
+
+#, python-format
+msgid "Cluster template %s was successfully created."
+msgstr "Küme şablonu %s başarıyla oluşturuldu."
+
+#, python-format
+msgid "Cluster template %s was successfully updated."
+msgstr "Küme şablonu %s başarıyla güncellendi."
+
+msgid "Clusters"
+msgstr "Kümeler"
+
+msgid "Confirm Delete Cluster"
+msgid_plural "Confirm Delete Clusters"
+msgstr[0] "Küme Silimini Onayla"
+msgstr[1] "Kümelerin Silimini Onayla"
+
+msgid "Confirm Delete Cluster Template"
+msgid_plural "Confirm Delete Cluster Templates"
+msgstr[0] "Küme Şablonu Silmeyi Onayla"
+msgstr[1] "Küme Şablonları Silmeyi Onayla"
+
+msgid "Container Orchestration Engine"
+msgstr "Kapsayıcı Düzenleme Motoru"
+
+msgid "Create"
+msgstr "Oluştur"
+
+msgid "Create Cluster"
+msgstr "Küme Oluştur"
+
+msgid "Create Cluster Template"
+msgstr "Küme Şablonu Oluştur"
+
+msgid "Created"
+msgstr "Oluşturuldu"
+
+msgid "DC/OS"
+msgstr "DC/OS"
+
+msgid "DELETE COMPLETE"
+msgstr "SİLME TAMAMLANDI"
+
+msgid "DELETE FAILED"
+msgstr "SİLME BAŞARISIZ"
+
+msgid "DELETE IN PROGRESS"
+msgstr "SİLME SÜRÜYOR"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "Delete Cluster"
+msgid_plural "Delete Clusters"
+msgstr[0] "Küme Sil"
+msgstr[1] "Kümeleri Sil"
+
+msgid "Delete Cluster Template"
+msgid_plural "Delete Cluster Templates"
+msgstr[0] "Küme Şablonunu Sil"
+msgstr[1] "Küme Şablonlarını Sil"
+
+msgid "Delete Cluster Templates"
+msgstr "Küme Şablonlarını Sil"
+
+msgid "Delete Clusters"
+msgstr "Kümeleri Sil"
+
+#, python-format
+msgid "Deleted cluster template: %s."
+msgid_plural "Deleted cluster templates: %s."
+msgstr[0] "Küme şablonu silindi: %s."
+msgstr[1] "Küme şablonları silindi: %s."
+
+#, python-format
+msgid "Deleted cluster: %s."
+msgid_plural "Deleted clusters: %s."
+msgstr[0] "Küme silindi: %s."
+msgstr[1] "Kümeler silindi: %s."
+
+msgid "Device Mapper"
+msgstr "Aygıt Eşleştirici"
+
+msgid "Disable TLS"
+msgstr "TLS'i Kapat"
+
+msgid "Disable TLS in the cluster template. Default: False"
+msgstr "Küme şablonunda TLS'i kapat. Öntanımlı: Yanlış"
+
+msgid "Discovery URL"
+msgstr "Keşif URL'si"
+
+msgid "Docker"
+msgstr "Docker"
+
+msgid "Docker Storage Driver"
+msgstr "Docker Depolama Sürücüsü"
+
+msgid "Docker Swarm"
+msgstr "Docker Swarm"
+
+msgid "Docker Volume Size"
+msgstr "Docker Birim Boyutu"
+
+msgid "Docker Volume Size (GB)"
+msgstr "Docker Birim Boyutu (GB)"
+
+msgid "Enable Registry"
+msgstr "Kaydı Etkinleştir"
+
+msgid "Enable docker registry in the cluster temlate. Default: False"
+msgstr "Küme şablonunda docker kaydını etkinleştir. Öntanımlı: Yanlış"
+
+msgid "External Network ID"
+msgstr "Harici Ağ ID'si"
+
+msgid "Fixed Network"
+msgstr "Sabit Ağ"
+
+msgid "Fixed Subnet"
+msgstr "Sabit Alt Ağ"
+
+msgid "Flannel"
+msgstr "Flannel"
+
+msgid "Flavor"
+msgstr "Nitelik"
+
+msgid "Flavor ID"
+msgstr "Nitelik ID'si"
+
+msgid "Floating IP"
+msgstr "Değişken IP"
+
+msgid "Floating IP Enabled"
+msgstr "Değişken IP Etkin"
+
+msgid "HTTP Proxy"
+msgstr "HTTP Vekili"
+
+msgid "HTTPS Proxy"
+msgstr "HTTPS Vekili"
+
+msgid "ID"
+msgstr "Kimlik"
+
+msgid "Image"
+msgstr "İmaj"
+
+msgid "Image ID"
+msgstr "İmaj ID'si"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"Oluşturulan kümelerin değişken ip'lerinin olup olmayacağını gösterir. "
+"Öntanımlı: Doğru"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"Oluşturulan kümelerin ana düğümler için yük dengeleyicilerinin olup "
+"olmayacağını belirtir. Öntanımlı: Yanlış"
+
+msgid "Infinite"
+msgstr "Sonsuz"
+
+msgid "Info"
+msgstr "Bilgi"
+
+msgid "KEY1=VALUE1, KEY2=VALUE2..."
+msgstr "ANAHTAR1=DEĞER1, ANAHTAR2=DEĞER2..."
+
+msgid "Keypair"
+msgstr "Anahtar çifti"
+
+msgid "Kubernetes"
+msgstr "Kubernetes"
+
+msgid "Labels"
+msgstr "Etiketler"
+
+msgid "Make cluster template public. Default: False"
+msgstr "Küme şablonunu açık yap. Öntanımlı: Yanlış"
+
+msgid "Master Addresses"
+msgstr "Ana Adresleri"
+
+msgid "Master Count"
+msgstr "Ana Sayısı"
+
+msgid "Master Flavor"
+msgstr "Ana Nitelik"
+
+msgid "Master Flavor ID"
+msgstr "Ana Nitelik ID'si"
+
+msgid "Master LB"
+msgstr "Ana LB"
+
+msgid "Master LB Enabled"
+msgstr "Ana LB Etkin"
+
+msgid "Mesos"
+msgstr "Mesos"
+
+msgid "Misc"
+msgstr "Çeşitli"
+
+msgid "Miscellaneous"
+msgstr "Çeşitli"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "Name of the cluster template."
+msgstr "Küme şablonu ismi."
+
+msgid "Name of the cluster."
+msgstr "Küme ismi."
+
+msgid "Network"
+msgstr "Ağ"
+
+msgid "Network Driver"
+msgstr "Ağ Sürücüsü"
+
+msgid "No Proxy"
+msgstr "Vekil Yok"
+
+msgid "Node Addresses"
+msgstr "Düğüm Adresleri"
+
+msgid "Node Count"
+msgstr "Düğüm Sayısı"
+
+msgid "Node Spec"
+msgstr "Düğüm Özelliği"
+
+msgid "Nodes"
+msgstr "Düğümler"
+
+msgid "Overlay"
+msgstr "Overlay"
+
+msgid "Overview"
+msgstr "Genel Görünüm"
+
+msgid "Public"
+msgstr "Açık"
+
+msgid "RESTORE COMPLETE"
+msgstr "GERİ YÜKLEME TAMAMLANDI"
+
+msgid "RESUME COMPLETE"
+msgstr "DEVAM ETME TAMAMLANDI"
+
+msgid "ROLLBACK COMPLETE"
+msgstr "GERİ ALMA TAMAMLANDI"
+
+msgid "Record Properties"
+msgstr "Kayıt Özellikleri"
+
+msgid "Registry Enabled"
+msgstr "Kayıt Etkin"
+
+msgid "Rexray"
+msgstr "Rexray"
+
+msgid "SNAPSHOT COMPLETE"
+msgstr "ANLIK GÖRÜNTÜ TAMAMLANDI"
+
+msgid "Server Type"
+msgstr "Sunucu Türü"
+
+msgid "Set to 0 for no timeout. The default is no timeout."
+msgstr ""
+"Zaman aşımı olmaması için 0 ayarlayın. Öntanımlı olarak zaman aşımı yoktur."
+
+msgid "Show Certificate"
+msgstr "Sertifikayı Göster"
+
+msgid "Sign Certificate"
+msgstr "Sertifikayı İmzala"
+
+msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
+msgstr "Sertifikayı Kümeye İmzala: {$ ctrl.model.cluster_name $}"
+
+msgid "Size"
+msgstr "Boyut"
+
+msgid "Specifies custom discovery url for node discovery."
+msgstr "Düğüm keşfi için özel keşif url'si belirtir."
+
+msgid "Specify cluster name and choose cluster template"
+msgstr "Küme ismi belirtin ve küme şablonu seçin"
+
+msgid "Specify conditions for cluster creation."
+msgstr "Küme oluşturma için şartları belirtin."
+
+msgid "Specify the Container Orchestration Engine to use."
+msgstr "Kullanılacak Kapsayıcı Düzenleme Motorunu Belirtin."
+
+msgid ""
+"Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
+msgstr ""
+"Küme şablonu için kullanılacak isim sunucuyu belirtin. Öntanımlı: 8.8.8.8"
+
+msgid "Specify the number of master nodes and cluster nodes for the cluster."
+msgstr "Küme için ana düğüm sayısını ve küme düğümlerini belirtin."
+
+msgid "Specify the size in GB for the docker volume"
+msgstr "Docker birimi için boyutu GB olarak belirtin"
+
+msgid "Stack ID"
+msgstr "Yığın ID'si"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "TLS Disabled"
+msgstr "TLS Kapalı"
+
+msgid "The DNS nameserver to use for this cluster template"
+msgstr "Bu küme şablonu için kullanılacak DNS isim sunucu"
+
+msgid "The cluster node count."
+msgstr "Küme düğüm sayısı."
+
+msgid "The external Neutron network ID to connect to this cluster template"
+msgstr "Bu küme şablonuna bağlanacak harici Neutron ağ ID'si"
+
+msgid "The http_proxy address to use for nodes in cluster"
+msgstr "Kümedeki düğümler için kullanılacak http_proxy adresi"
+
+msgid "The https_proxy address to use for nodes in cluster"
+msgstr "Kümedeki düğümler için kullanılacak https_proxy adresi"
+
+msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
+msgstr "Küme düğümlerine yüklenece SSH anahtar çiftinin ismi veya UUID'si."
+
+msgid "The name or UUID of the base image to customize for the cluster."
+msgstr "Küme için özelleştirilecek taban imajın ismi veya UUID'si."
+
+msgid "The no_proxy address to use for nodes in cluster"
+msgstr "Kümedeki düğümler için kullanılacak no_proxy adresi"
+
+msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
+msgstr ""
+"Küme başlatılırken kullanılacak Nova nitelik kimliği. Öntanımlı: m1.small"
+
+msgid ""
+"The nova flavor id to use when launching the master node of the cluster. "
+"Default: m1.small"
+msgstr ""
+"Kümenin ana düğümü başlatılırken kullanılacak Nova nitelik kimliği. "
+"Öntanımlı: m1.small"
+
+msgid "The number of master nodes for the cluster."
+msgstr "Küme için ana düğüm sayısı."
+
+msgid "The private Neutron network name to connect to this cluster template"
+msgstr "Bu küme şablonuna bağlanacak özel Neutron ağ ismi"
+
+msgid "The private Neutron subnet name to connect to this cluster template"
+msgstr "Bu küme şablonuna bağlanacak özel Neutron alt ağ ismi"
+
+msgid "The size in GB for Docker Volume. Default: 25"
+msgstr "Docker Birimi için GB olarak boyut: Varsayılan: 25"
+
+msgid "The timeout for cluster creation in minutes."
+msgstr "Küme oluşturma için dakika olarak zaman aşımı."
+
+msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
+msgstr ""
+"Bunun gerçekten fixed-network-cidr olarak isimlendirilmesi gerekir. "
+"Öntanımlı: 10.0.0.0/24"
+
+msgid "Timeout"
+msgstr "Zaman aşımı"
+
+msgid "UPDATE COMPLETE"
+msgstr "GÜNCELLEME TAMAMLANDI"
+
+msgid "UPDATE FAILED"
+msgstr "GÜNCELLEME BAŞARISIZ"
+
+msgid "UPDATE IN PROGRESS"
+msgstr "GÜNCELLEME SÜRÜYOR"
+
+msgid "Unable to create cluster template."
+msgstr "Küme şablonu oluşturulamıyor."
+
+msgid "Unable to create cluster."
+msgstr "Küme oluşturulamıyor."
+
+#, python-format
+msgid "Unable to delete cluster template: %s."
+msgid_plural "Unable to delete cluster templates: %s."
+msgstr[0] "Küme şablonu silinemiyor: %s."
+msgstr[1] "Küme şablonları silinemiyor: %s."
+
+#, python-format
+msgid "Unable to delete cluster: %s."
+msgid_plural "Unable to delete clusters: %s."
+msgstr[0] "Küme silinemiyor: %s."
+msgstr[1] "Kümeler silinemiyor: %s."
+
+#, python-format
+msgid "Unable to delete the cluster template with id: %(id)s"
+msgstr "Şu kimliğe sahip küme şablonu silinemedi: %(id)s"
+
+msgid "Unable to delete the cluster templates."
+msgstr "Küme şablonları silinemedi."
+
+#, python-format
+msgid "Unable to delete the cluster with id: %(id)s"
+msgstr "Şu kimliğe sahip küme silinemedi: %(id)s"
+
+msgid "Unable to delete the clusters."
+msgstr "Kümeler silinemiyor."
+
+msgid "Unable to retrieve the certificate."
+msgstr "Sertifika alınamadı."
+
+msgid "Unable to retrieve the cluster template."
+msgstr "Küme şablonu alınamadı."
+
+msgid "Unable to retrieve the cluster templates."
+msgstr "Küme şablonları alınamadı."
+
+msgid "Unable to retrieve the cluster."
+msgstr "Küme alınamıyor."
+
+msgid "Unable to retrieve the clusters."
+msgstr "Kümeler alınamıyor."
+
+msgid "Unable to sign certificate."
+msgstr "Sertifika imzalanamadı."
+
+msgid "Unable to update cluster template."
+msgstr "Küme şablonu güncellenemedi."
+
+msgid "Unable to update cluster."
+msgstr "Küme güncellenemiyor."
+
+msgid "Update Cluster"
+msgstr "Kümeyi Güncelle"
+
+msgid "Update Cluster Template"
+msgstr "Küme Şablonunu Güncelle"
+
+msgid "Updated"
+msgstr "Güncellendi"
+
+msgid "Volume Driver"
+msgstr "Birim Sürücüsü"
+
+#, python-format
+msgid "You are not allowed to delete cluster templates: %s"
+msgstr "Küme şablonlarını silme yetkiniz yok: %s"
+
+#, python-format
+msgid "You are not allowed to delete clusters: %s"
+msgstr "Kümeleri silme yetkiniz yok: %s"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted clusters "
+"are not recoverable."
+msgstr[0] ""
+"\"%s\" seçtiniz. Lütfen seçiminizi onaylayın. Silinen küme geri getirilemez."
+msgstr[1] ""
+"\"%s\" seçtiniz. Lütfen seçiminizi onaylayın. Silinen kümeler geri "
+"getirilemez."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"template is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted cluster "
+"templates are not recoverable."
+msgstr[0] ""
+"\"%s\" seçtiniz. Lütfen seçiminizi onaylayın. Silinen küme şablonu geri "
+"getirilemez."
+msgstr[1] ""
+"\"%s\" seçtiniz. Lütfen seçiminizi onaylayın. Silinen küme şablonları geri "
+"getirilemez."
+
+msgid "error"
+msgid_plural "errors"
+msgstr[0] "hata"
+msgstr[1] "hatalar"
+
+msgid "message"
+msgid_plural "messages"
+msgstr[0] "ileti"
+msgstr[1] "iletiler"
+
+msgid "submit"
+msgid_plural "submits"
+msgstr[0] "gönder"
+msgstr[1] "gönderiler"
+
+msgid "success"
+msgid_plural "successes"
+msgstr[0] "başarı"
+msgstr[1] "başarılar"
+
+msgid "title"
+msgid_plural "titles"
+msgstr[0] "başlık"
+msgstr[1] "başlıklar"
+
+msgid "{$ ctrl.cluster.create_timeout $} minute"
+msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
+msgstr[0] "{$ ctrl.cluster.create_timeout $} dakika"
+msgstr[1] "{$ ctrl.cluster.create_timeout $} dakika"

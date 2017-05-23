@@ -1,0 +1,30 @@
+# işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: magnum-ui 2.2.1.dev24\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-05-17 11:54+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-05-22 09:09+0000\n"
+"Last-Translator: işbaran akçayır <isbaran@gmail.com>\n"
+"Language-Team: Turkish (Turkey)\n"
+"Language: tr-TR\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n>1)\n"
+
+msgid "Cluster Templates"
+msgstr "Küme şablonları"
+
+msgid "Clusters"
+msgstr "Kümeler"
+
+msgid "Container Infra"
+msgstr "Kapsayıcı Altyapısı"
+
+msgid "Container Infra - Cluster Templates"
+msgstr "Kapsayıcı Altyapısı - Küme Şablonları"
+
+msgid "Container Infra - Clusters"
+msgstr "Kapsayıcı Altyapısı - Kümeler"
