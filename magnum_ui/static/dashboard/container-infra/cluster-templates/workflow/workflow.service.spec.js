@@ -19,7 +19,7 @@
 
   describe('horizon.dashboard.container-infra.cluster-templates.workflow', function() {
 
-    var workflow, nova, glance, $q, deferred, keyDeferred;
+    var workflow, magnum, nova, glance, $q, deferred, keyDeferred;
 
     beforeEach(module('horizon.app.core'));
     beforeEach(module('horizon.framework'));
@@ -31,6 +31,7 @@
         'horizon.dashboard.container-infra.cluster-templates.workflow');
       nova = $injector.get('horizon.app.core.openstack-service-api.nova');
       glance = $injector.get('horizon.app.core.openstack-service-api.glance');
+      magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
       deferred = $q.defer();
       deferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
       keyDeferred = $q.defer();
@@ -38,7 +39,7 @@
       spyOn(glance, 'getImages').and.returnValue(deferred.promise);
       spyOn(nova, 'getFlavors').and.returnValue(deferred.promise);
       spyOn(nova, 'getKeypairs').and.returnValue(keyDeferred.promise);
-
+      spyOn(magnum, 'getNetworks').and.returnValue(deferred.promise);
     }));
 
     it('should be init', inject(function($timeout) {

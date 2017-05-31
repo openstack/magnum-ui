@@ -41,6 +41,8 @@
       init: function (action, title) {
         action = title;
         return {model: model};
+      },
+      update: function () {
       }
     };
 
@@ -66,6 +68,7 @@
       spyOn(magnum, 'getClusterTemplate').and.returnValue(deferred.promise);
       spyOn(magnum, 'updateClusterTemplate').and.returnValue(deferred.promise);
       spyOn(workflow, 'init').and.returnValue({model: model});
+      spyOn(workflow, 'update').and.callThrough();
       spyOn(modal, 'open').and.callThrough();
     }));
 
