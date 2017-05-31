@@ -56,8 +56,9 @@
 
     function loadClusterTemplate(id, old) {
       if (id !== old) {
-        if (id === '') {
+        if (id === '' || typeof id === 'undefined') {
           $scope.model.keypair = "";
+          init();
         } else {
           magnum.getClusterTemplate(id).then(onGetClusterTemplate);
         }
@@ -67,7 +68,11 @@
     function onGetClusterTemplate(response) {
       ctrl.clusterTemplate = response.data;
       if ($scope.model.keypair === "") {
-        $scope.model.keypair = response.data.keypair_id;
+        if (response.data.keypair_id === null) {
+          $scope.model.keypair = "";
+        } else {
+          $scope.model.keypair = response.data.keypair_id;
+        }
       }
     }
 
