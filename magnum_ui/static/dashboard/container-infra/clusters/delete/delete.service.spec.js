@@ -32,7 +32,7 @@
     };
 
     var magnumAPI = {
-      deleteEntity: function() {
+      deleteCluster: function() {
         return;
       }
     };
@@ -57,7 +57,7 @@
     }));
 
     beforeEach(module('horizon.app.core.openstack-service-api', function($provide) {
-      $provide.value('horizon.app.core.openstack-service-api.mugnum', magnumAPI);
+      $provide.value('horizon.app.core.openstack-service-api.magnum', magnumAPI);
       $provide.value('horizon.app.core.openstack-service-api.policy', policyAPI);
       spyOn(policyAPI, 'ifAllowed').and.callThrough();
     }));
@@ -126,7 +126,7 @@
       it('should pass in a function that deletes a cluster', testMagnum);
 
       function testMagnum() {
-        spyOn(magnumAPI, 'deleteEntity');
+        spyOn(magnumAPI, 'deleteCluster');
         var clusters = generateCluster(1);
         var cluster = clusters[0];
         service.perform(clusters, $scope);

@@ -32,7 +32,7 @@
     };
 
     var magnumAPI = {
-      deleteEntity: function() {
+      deleteClusterTemplate: function() {
         return;
       }
     };
@@ -58,7 +58,7 @@
     }));
 
     beforeEach(module('horizon.app.core.openstack-service-api', function($provide) {
-      $provide.value('horizon.app.core.openstack-service-api.mugnum', magnumAPI);
+      $provide.value('horizon.app.core.openstack-service-api.magnum', magnumAPI);
       $provide.value('horizon.app.core.openstack-service-api.policy', policyAPI);
       spyOn(policyAPI, 'ifAllowed').and.callThrough();
     }));
@@ -126,7 +126,7 @@
       it('should pass in a function that deletes an template', testMagnum);
 
       function testMagnum() {
-        spyOn(magnumAPI, 'deleteEntity');
+        spyOn(magnumAPI, 'deleteClusterTemplate');
         var templates = generateTemplate(1);
         var template = templates[0];
         service.perform(templates, $scope);
