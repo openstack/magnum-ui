@@ -117,6 +117,9 @@
           }
         }
         config.model.labels = labels; //
+
+        // update workflow
+        workflow.update(config);
       }
 
       return modal.open(config).then(submit);

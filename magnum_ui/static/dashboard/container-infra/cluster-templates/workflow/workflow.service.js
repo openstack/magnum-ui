@@ -24,25 +24,27 @@
       ClusterTemplateWorkflow);
 
   ClusterTemplateWorkflow.$inject = [
+    '$q',
     'horizon.dashboard.container-infra.basePath',
     'horizon.app.core.workflow.factory',
     'horizon.framework.util.i18n.gettext',
+    'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.nova',
     'horizon.app.core.openstack-service-api.glance'
   ];
 
-  function ClusterTemplateWorkflow(basePath, workflowService, gettext, nova, glance) {
+  function ClusterTemplateWorkflow($q, basePath, workflowService, gettext, magnum, nova, glance) {
     var workflow = {
-      init: init
+      init: init,
+      update: update
     };
 
-    function init(action, title) {
-      var schema, form, model;
-      var images = [{value:"", name: gettext("Choose an Image")}];
-      var nflavors = [{value:"", name: gettext("Choose a Flavor for the Node")}];
-      var mflavors = [{value:"", name: gettext("Choose a Flavor for the Master Node")}];
-      var keypairs = [{value:"", name: gettext("Choose a Keypair")}];
+    var form, model, images, nflavors, mflavors, keypairs,
+      externalNetworks, fixedNetworks, fixedSubnets;
+    var fixedSubnetsInitial = gettext("Choose a Private Network at first");
 
+    function init(action, title) {
+      var schema;
       var coes = [{value: '', name: gettext("Choose a Container Orchestration Engine")},
                    {value: "swarm", name: gettext("Docker Swarm")},
                    {value: "kubernetes", name: gettext("Kubernetes")},
@@ -161,30 +163,15 @@
           },
           'external_network_id': {
             title: gettext('External Network ID'),
-            type: 'string',
-            'x-schema-form': {
-              type: 'string',
-              placeholder: gettext(
-                'The external Neutron network ID to connect to this cluster template')
-            }
+            type: 'string'
           },
           'fixed_network': {
             title: gettext('Fixed Network'),
-            type: 'string',
-            'x-schema-form': {
-              type: 'string',
-              placeholder: gettext(
-                'The private Neutron network name to connect to this cluster template')
-            }
+            type: 'string'
           },
           'fixed_subnet': {
             title: gettext('Fixed Subnet'),
-            type: 'string',
-            'x-schema-form': {
-              type: 'string',
-              placeholder: gettext(
-                'The private Neutron subnet name to connect to this cluster template')
-            }
+            type: 'string'
           },
           'dns_nameserver': {
             title: gettext('DNS'),
@@ -393,13 +380,22 @@
                         },
                         {
                           key: 'external_network_id',
+                          type: 'select',
+                          titleMap: externalNetworks,
                           required: true
                         },
                         {
-                          key: 'fixed_network'
+                          key: 'fixed_network',
+                          type: 'select',
+                          titleMap: fixedNetworks,
+                          onChange: function () {
+                            changeFixedNetwork(model);
+                          }
                         },
                         {
-                          key: 'fixed_subnet'
+                          key: 'fixed_subnet',
+                          type: 'select',
+                          titleMap: fixedSubnets
                         },
                         {
                           key: 'dns_nameserver'
@@ -446,29 +442,6 @@
         }
       ];
 
-      glance.getImages().then(onGetImages);
-      nova.getFlavors(false, false).then(onGetFlavors);
-      nova.getKeypairs().then(onGetKeypairs);
-
-      function onGetImages(response) {
-        angular.forEach(response.data.items, function(item) {
-          images.push({value: item.name, name: item.name});
-        });
-      }
-
-      function onGetFlavors(response) {
-        angular.forEach(response.data.items, function(item) {
-          nflavors.push({value: item.name, name: item.name});
-          mflavors.push({value: item.name, name: item.name});
-        });
-      }
-
-      function onGetKeypairs(response) {
-        angular.forEach(response.data.items, function(item) {
-          keypairs.push({value: item.keypair.name, name: item.keypair.name});
-        });
-      }
-
       model = {
         name: "",
         coe: "",
@@ -502,10 +475,95 @@
         model: model
       };
 
+      update(config);
       return config;
+    }
+
+    // called by update.service
+    function update(config) {
+      $q.all({
+        images: glance.getImages().then(onGetImages),
+        flavors: nova.getFlavors(false, false).then(onGetFlavors),
+        keypairs: nova.getKeypairs().then(onGetKeypairs),
+        networks: magnum.getNetworks().then(onGetNetworks)
+      }).then(function() {
+        changeFixedNetwork(config.model, init);
+      });
+    }
+
+    function onGetImages(response) {
+      images = [{value:"", name: gettext("Choose an Image")}];
+      angular.forEach(response.data.items, function(item) {
+        images.push({value: item.name, name: item.name});
+      });
+      form[0].tabs[1].items[0].items[0].items[0].titleMap = images;
+      var deferred = $q.defer();
+      deferred.resolve(images);
+      return deferred.promise;
+    }
+
+    function onGetFlavors(response) {
+      nflavors = [{value:"", name: gettext("Choose a Flavor for the Node")}];
+      mflavors = [{value:"", name: gettext("Choose a Flavor for the Master Node")}];
+      angular.forEach(response.data.items, function(item) {
+        nflavors.push({value: item.name, name: item.name});
+        mflavors.push({value: item.name, name: item.name});
+      });
+      form[0].tabs[1].items[0].items[0].items[1].titleMap = nflavors;
+      form[0].tabs[1].items[0].items[1].items[1].titleMap = mflavors;
+      var deferred = $q.defer();
+      deferred.resolve(nflavors);
+      return deferred.promise;
+    }
+
+    function onGetKeypairs(response) {
+      keypairs = [{value:"", name: gettext("Choose a Keypair")}];
+      angular.forEach(response.data.items, function(item) {
+        keypairs.push({value: item.keypair.name, name: item.keypair.name});
+      });
+      form[0].tabs[1].items[0].items[1].items[0].titleMap = keypairs;
+      var deferred = $q.defer();
+      deferred.resolve(keypairs);
+      return deferred.promise;
+    }
+
+    function onGetNetworks(response) {
+      externalNetworks = [{value:"", name: gettext("Choose a External Network")}];
+      fixedNetworks = [{value:"", name: gettext("Choose a Private Network")}];
+      angular.forEach(response.data.items, function(item) {
+        if (item["router:external"]) {
+          externalNetworks.push({value: item.id, name: item.name});
+        } else {
+          fixedNetworks.push({value: item.id, name: item.name, subnets: item.subnets});
+        }
+      });
+      form[0].tabs[2].items[0].items[0].items[4].titleMap = externalNetworks;
+      form[0].tabs[2].items[0].items[0].items[5].titleMap = fixedNetworks;
+      var deferred = $q.defer();
+      deferred.resolve({
+        externalNetworks: externalNetworks,
+        fixedNetworks: fixedNetworks
+      });
+      return deferred.promise;
+    }
+
+    function changeFixedNetwork(model) {
+      if (model.fixed_network) {
+        fixedSubnets = [{value:"", name: gettext("Choose a Private Subnet")}];
+        angular.forEach(fixedNetworks, function(fixed) {
+          if (fixed.value === model.fixed_network) {
+            angular.forEach(fixed.subnets, function(subnet) {
+              fixedSubnets.push({value: subnet.id, name: subnet.name});
+            });
+          }
+        });
+      } else {
+        fixedSubnets = [{value:"", name: fixedSubnetsInitial}];
+        model.fixed_subnet = "";
+      }
+      form[0].tabs[2].items[0].items[0].items[6].titleMap = fixedSubnets;
     }
 
     return workflow;
   }
-
 })();

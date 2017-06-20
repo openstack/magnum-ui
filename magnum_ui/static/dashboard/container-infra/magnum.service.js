@@ -43,7 +43,8 @@
       deleteClusterTemplates: deleteClusterTemplates,
       showCertificate: showCertificate,
       signCertificate: signCertificate,
-      downloadTextAsFile: downloadTextAsFile
+      downloadTextAsFile: downloadTextAsFile,
+      getNetworks: getNetworks
     };
 
     return service;
@@ -180,5 +181,24 @@
         a.remove();
       }, 0);
     }
+
+    //////////////////
+    // Networks     //
+    //////////////////
+
+    /**
+     * @name getNetworks
+     * @description
+     * Get a list of networks for a tenant including external and private.
+     * Also, each network has subnets.
+     * @returns {Object} An object with property "items". Each item is a network.
+     */
+    function getNetworks() {
+      return apiService.get('/api/container_infra/networks/')
+        .error(function () {
+          toastService.add('error', gettext('Unable to retrieve the networks.'));
+        });
+    }
+
   }
 }());

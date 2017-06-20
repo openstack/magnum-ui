@@ -16,6 +16,7 @@ from django.views import generic
 
 from magnum_ui.api import magnum
 
+from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
 
@@ -181,3 +182,23 @@ class Certificates(generic.View):
         return rest_utils.CreatedResponse(
             '/api/container_infra/certificates/',
             new_cert.to_dict())
+
+
+@urls.register
+class Networks(generic.View):
+    """API for Neutron networks for Cluster Templates creation"""
+    url_regex = r'container_infra/networks/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Networks for a project.
+
+        Networks includes external and private. Also, each network
+        has subnets.
+        The returned result is an object with property 'items' and each
+        item under this is a Network.
+        """
+        tenant_id = request.user.tenant_id
+        result = neutron.network_list_for_tenant(request, tenant_id,
+                                                 include_external=True)
+        return {'items': [n.to_dict() for n in result]}
