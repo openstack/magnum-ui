@@ -1,9 +1,9 @@
 # işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev24\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev33\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-05-17 11:54+0000\n"
+"POT-Creation-Date: 2017-06-20 12:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -451,9 +451,6 @@ msgstr "Bu küme şablonu için kullanılacak DNS isim sunucu"
 msgid "The cluster node count."
 msgstr "Küme düğüm sayısı."
 
-msgid "The external Neutron network ID to connect to this cluster template"
-msgstr "Bu küme şablonuna bağlanacak harici Neutron ağ ID'si"
-
 msgid "The http_proxy address to use for nodes in cluster"
 msgstr "Kümedeki düğümler için kullanılacak http_proxy adresi"
 
@@ -482,12 +479,6 @@ msgstr ""
 
 msgid "The number of master nodes for the cluster."
 msgstr "Küme için ana düğüm sayısı."
-
-msgid "The private Neutron network name to connect to this cluster template"
-msgstr "Bu küme şablonuna bağlanacak özel Neutron ağ ismi"
-
-msgid "The private Neutron subnet name to connect to this cluster template"
-msgstr "Bu küme şablonuna bağlanacak özel Neutron alt ağ ismi"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker Birimi için GB olarak boyut: Varsayılan: 25"

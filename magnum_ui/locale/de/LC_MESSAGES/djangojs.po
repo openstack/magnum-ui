@@ -4,13 +4,13 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev30\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev33\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-19 04:46+0000\n"
+"POT-Creation-Date: 2017-06-20 12:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-06-01 04:31+0000\n"
+"PO-Revision-Date: 2017-06-21 10:14+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -67,6 +67,9 @@ msgstr "Wähle eine Clustervorlage"
 msgid "Choose a Container Orchestration Engine"
 msgstr "Wählen Sie ein Container-Orchestrierungswerkzeug"
 
+msgid "Choose a External Network"
+msgstr "Wählen Sie ein externes Netzwerk"
+
 msgid "Choose a Flavor for the Master Node"
 msgstr "Wähle eine Variante für den Master-Knoten"
 
@@ -78,6 +81,15 @@ msgstr "Wählen Sie ein Schlüsselpaar"
 
 msgid "Choose a Network Driver"
 msgstr "Wählen Sie einen Netzwerktreiber"
+
+msgid "Choose a Private Network"
+msgstr "Wählen Sie ein privates Netzwerk"
+
+msgid "Choose a Private Network at first"
+msgstr "Wählen Sie zuerst ein privates Netzwerk aus"
+
+msgid "Choose a Private Subnet"
+msgstr "Wählen Sie ein privates Subnetz"
 
 msgid "Choose a Volume Driver"
 msgstr "Wählen Sie einen Datenträger-Treiber"
@@ -452,10 +464,6 @@ msgstr "Der DNS Nameserver zur Benutzung in dieser Cluster Vorlage"
 msgid "The cluster node count."
 msgstr "Die Anzahl der Clusterknoten."
 
-msgid "The external Neutron network ID to connect to this cluster template"
-msgstr ""
-"Die externe Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
-
 msgid "The http_proxy address to use for nodes in cluster"
 msgstr "Die http_proxy Adresse zur Benutzung von Knoten im Cluster"
 
@@ -486,14 +494,6 @@ msgstr ""
 
 msgid "The number of master nodes for the cluster."
 msgstr "Die Anzahl der Masterknoten für den Cluster."
-
-msgid "The private Neutron network name to connect to this cluster template"
-msgstr ""
-"Die private Neutron Netzwerk-ID zur Verbindung mit dieser Cluster Vorlage"
-
-msgid "The private Neutron subnet name to connect to this cluster template"
-msgstr ""
-"Der private Neutron Subnetzname zur Verbindung mit dieser Cluster Vorlage"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Größe des Docker Datenträgers in GB. Standard: 25"
@@ -564,6 +564,9 @@ msgstr "Cluster kann nicht abgerufen werden."
 
 msgid "Unable to retrieve the clusters."
 msgstr "Cluster können nicht abgerufen werden."
+
+msgid "Unable to retrieve the networks."
+msgstr "Die Netzwerke können nicht abgerufen werden."
 
 msgid "Unable to sign certificate."
 msgstr "Zertifikat kann nicht signiert werden."

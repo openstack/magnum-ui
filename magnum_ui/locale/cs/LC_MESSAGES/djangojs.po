@@ -2,9 +2,9 @@
 # Stanislav Ulrych <stanislav.ulrych@ultimum.io>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.1.1.dev139\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev33\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-02-01 03:31+0000\n"
+"POT-Creation-Date: 2017-06-20 12:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: Stanislav Ulrych <stanislav.ulrych@ultimum.io>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 
 msgid "API Address"
@@ -371,9 +371,6 @@ msgstr "Server DNS pro použití v bay"
 msgid "The cluster node count."
 msgstr "Počet uzlů clusteru."
 
-msgid "The external Neutron network ID to connect to this cluster template"
-msgstr "ID externí Neutron sítě pro připojení do clusteru"
-
 msgid "The http_proxy address to use for nodes in cluster"
 msgstr "Adresa http_proxy, která bude použita v uzlech clusteru"
 
@@ -382,9 +379,6 @@ msgstr "Adresa https_proxy, která bude použita v uzlech clusteru"
 
 msgid "The no_proxy address to use for nodes in cluster"
 msgstr "Adresa no_proxy, která bude použita v uzlech clusteru"
-
-msgid "The private Neutron network name to connect to this cluster template"
-msgstr "Název privátní Neutron sítě pro připojení do clusteru"
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Velikost v GB pro svazek docker. Výchozí: 25"
