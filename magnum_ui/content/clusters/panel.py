@@ -18,7 +18,7 @@ import horizon
 # DO NOT REMOVE
 # This needs for register url of REST API.
 # Dashboard plugins load REST API from here.
-from magnum_ui.api.rest import magnum  # noqa
+from magnum_ui.api.rest import magnum  # noqa: F401
 
 
 class Clusters(horizon.Panel):

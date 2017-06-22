@@ -13,4 +13,4 @@
 # limitations under the License.
 
 # Import REST modules here
-from . import magnum  # noqa
+from . import magnum  # noqa: F401
