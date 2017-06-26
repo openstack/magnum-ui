@@ -13,8 +13,8 @@
 #    under the License.
 
 # Default to Horizons test settings to avoid any missing keys
-from horizon.test.settings import *  # noqa
-from openstack_dashboard.test.settings import *  # noqa
+from horizon.test.settings import *  # noqa: F403,H303
+from openstack_dashboard.test.settings import *  # noqa: F403,H303
 
 # pop these keys to avoid log warnings about deprecation
 # update_dashboards will populate them anyway
