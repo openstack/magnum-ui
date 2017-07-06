@@ -25,7 +25,7 @@
         <dt translate>Image ID</dt>
         <dd><a href="project/images/{$ ctrl.image_uuid $}/" target="_self">{$ ctrl.cluster_template.image_id $}</a></dd>
         <dt translate>Keypair</dt>
-        <dd ng-if="ctrl.cluster_template.keypair_id!==null"><a href="project/access_and_security/keypairs/{$ ctrl.cluster_template.keypair_id $}/" target="_self">{$ ctrl.cluster_template.keypair_id $}</a></dd>
+        <dd ng-if="ctrl.cluster_template.keypair_id!==null"><a href="project/key_pairs/{$ ctrl.cluster_template.keypair_id $}/" target="_self">{$ ctrl.cluster_template.keypair_id $}</a></dd>
         <dd ng-if="ctrl.cluster_template.keypair_id===null">-</dd>
         <dt translate>Flavor ID</dt>
         <dd>{$ ctrl.cluster_template.flavor_id $}</dd>
