@@ -43,6 +43,7 @@
       deleteClusterTemplates: deleteClusterTemplates,
       showCertificate: showCertificate,
       signCertificate: signCertificate,
+      rotateCertificate: rotateCertificate,
       downloadTextAsFile: downloadTextAsFile,
       getNetworks: getNetworks
     };
@@ -160,6 +161,13 @@
       return apiService.get('/api/container_infra/certificates/' + id)
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the certificate.'));
+        });
+    }
+
+    function rotateCertificate(id) {
+      return apiService.delete('/api/container_infra/certificates/' + id, [id])
+        .error(function() {
+          toastService.add('error', gettext('Unable to rotate the certificate.'));
         });
     }
 

@@ -166,6 +166,14 @@ class Certificate(generic.View):
         ca = magnum.certificate_show(request, cluster_id)
         return ca.to_dict()
 
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, cluster_id):
+        """Rotate a certificate from a clsuter.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        magnum.certificate_rotate(request, cluster_id)
+
 
 @urls.register
 class Certificates(generic.View):

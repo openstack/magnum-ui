@@ -45,6 +45,11 @@
       expect(actionHasId(actions, 'signCertificateAction')).toBe(true);
     });
 
+    it('registers Rotate Certificate as an item action', function() {
+      var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
+      expect(actionHasId(actions, 'rotateCertificateAction')).toBe(true);
+    });
+
     it('registers Delete Cluster as an item action', function() {
       var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
       expect(actionHasId(actions, 'deleteClusterAction')).toBe(true);
