@@ -1,0 +1,30 @@
+# Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: magnum-ui 2.2.1.dev47\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-07-06 13:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-07-06 12:35+0000\n"
+"Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt-BR\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "Cluster Templates"
+msgstr "Modelos de Cluster"
+
+msgid "Clusters"
+msgstr "Clusters"
+
+msgid "Container Infra"
+msgstr "Infraestrutura de Contêiner"
+
+msgid "Container Infra - Cluster Templates"
+msgstr "Infraestrutura de Contêiner - Modelos de Cluster"
+
+msgid "Container Infra - Clusters"
+msgstr "Infraestrutura de Contêiner - Clusters"
