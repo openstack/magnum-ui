@@ -186,3 +186,9 @@ def certificate_show(request, id):
 def certificate_rotate(request, id):
     args = {"cluster_uuid": id}
     return magnumclient(request).certificates.rotate_ca(**args)
+
+
+def stats_list(request, limit=None, marker=None, sort_key=None,
+               sort_dir=None, detail=True):
+    return magnumclient(request).stats.list(
+        limit, marker, sort_key, sort_dir, detail)

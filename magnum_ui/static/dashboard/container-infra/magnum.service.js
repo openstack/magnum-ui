@@ -44,8 +44,9 @@
       showCertificate: showCertificate,
       signCertificate: signCertificate,
       rotateCertificate: rotateCertificate,
-      downloadTextAsFile: downloadTextAsFile,
-      getNetworks: getNetworks
+      getStats: getStats,
+      getNetworks: getNetworks,
+      downloadTextAsFile: downloadTextAsFile
     };
 
     return service;
@@ -171,23 +172,15 @@
         });
     }
 
-    function downloadTextAsFile(text, filename) {
-      // create text file as object url
-      var blob = new Blob([ text ], { "type" : "text/plain" });
-      window.URL = window.URL || window.webkitURL;
-      var fileurl = window.URL.createObjectURL(blob);
+    ///////////
+    // Stats //
+    ///////////
 
-      // provide text as downloaded file
-      $timeout(function() {
-        //Update view
-        var a = angular.element('<a></a>');
-        a.attr("href", fileurl);
-        a.attr("download", filename);
-        a.attr("target", "_blank");
-        angular.element(document.body).append(a);
-        a[0].click();
-        a.remove();
-      }, 0);
+    function getStats() {
+      return apiService.get('/api/container_infra/stats/')
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the stats.'));
+        });
     }
 
     //////////////////
@@ -208,5 +201,27 @@
         });
     }
 
+    ///////////
+    // Utils //
+    ///////////
+
+    function downloadTextAsFile(text, filename) {
+      // create text file as object url
+      var blob = new Blob([ text ], { "type" : "text/plain" });
+      window.URL = window.URL || window.webkitURL;
+      var fileurl = window.URL.createObjectURL(blob);
+
+      // provide text as downloaded file
+      $timeout(function() {
+        //Update view
+        var a = angular.element('<a></a>');
+        a.attr("href", fileurl);
+        a.attr("download", filename);
+        a.attr("target", "_blank");
+        angular.element(document.body).append(a);
+        a[0].click();
+        a.remove();
+      }, 0);
+    }
   }
 }());

@@ -193,6 +193,22 @@ class Certificates(generic.View):
 
 
 @urls.register
+class Stats(generic.View):
+    """API for Magnum Stats"""
+    url_regex = r'container_infra/stats/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Stats.
+
+        The returned result is an object with property 'items' and each
+        item under this is a Stat.
+        """
+        result = magnum.stats_list(request)
+        return {'items': [change_to_id(n.to_dict()) for n in result]}
+
+
+@urls.register
 class Networks(generic.View):
     """API for Neutron networks for Cluster Templates creation"""
     url_regex = r'container_infra/networks/$'

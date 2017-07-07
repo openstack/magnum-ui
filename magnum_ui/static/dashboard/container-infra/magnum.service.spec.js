@@ -160,6 +160,12 @@
         "data": [123],
         "error": "Unable to rotate the certificate.",
         "testInput": [123, [123]]
+      },
+      {
+        "func": "getStats",
+        "method": "get",
+        "path": "/api/container_infra/stats/",
+        "error": "Unable to retrieve the stats."
       }
     ];
 
