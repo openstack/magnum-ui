@@ -81,6 +81,10 @@
           'docker_volume_size': {
             title: gettext('Docker Volume Size (GB)'),
             type: 'number'
+          },
+          'rollback': {
+            title: gettext('Rollback cluster on update failure'),
+            type: 'boolean'
           }
         }
       };
@@ -145,6 +149,10 @@
                       placeholder: gettext('Specify the size in GB for the docker volume'),
                       description: dockerVolumeSizeDescription,
                       readonly: action === 'update'
+                    },
+                    {
+                      key: 'rollback',
+                      condition: action === 'create'
                     }
                   ]
                 }
@@ -209,6 +217,7 @@
         master_count: null,
         node_count: null,
         docker_volume_size: "",
+        rollback: false,
         discovery_url: "",
         create_timeout: null,
         keypair: ""
