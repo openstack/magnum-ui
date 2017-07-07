@@ -48,7 +48,8 @@
         registry_enabled: "",
         tls_disabled: "",
         apiserver_port: "",
-        keypair_id: ""
+        keypair_id: "",
+        docker_volume_size: ""
       };
     }
 
@@ -72,6 +73,13 @@
           $scope.model.keypair = "";
         } else {
           $scope.model.keypair = response.data.keypair_id;
+        }
+      }
+      if ($scope.model.docker_volume_size === "") {
+        if (response.data.docker_volume_size === null) {
+          $scope.model.docker_volume_size = "";
+        } else {
+          $scope.model.docker_volume_size = response.data.docker_volume_size;
         }
       }
     }

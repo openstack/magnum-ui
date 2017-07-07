@@ -17,30 +17,21 @@ from __future__ import absolute_import
 import logging
 
 from django.conf import settings
-from magnumclient.v1 import client as magnum_client
 
 from horizon import exceptions
 from horizon.utils.memoized import memoized
 from openstack_dashboard.api import base
 
+from magnumclient.v1 import certificates
+from magnumclient.v1 import client as magnum_client
+from magnumclient.v1 import cluster_templates
+from magnumclient.v1 import clusters
+
 LOG = logging.getLogger(__name__)
 
-CLUSTER_TEMPLATE_CREATE_ATTRS = ['name', 'image_id', 'flavor_id',
-                                 'master_flavor_id', 'keypair_id',
-                                 'external_network_id', 'fixed_network',
-                                 'dns_nameserver', 'docker_volume_size',
-                                 'labels', 'coe', 'http_proxy', 'https_proxy',
-                                 'no_proxy', 'network_driver', 'volume_driver',
-                                 'public', 'registry_enabled', 'tls_disabled',
-                                 'docker_storage_driver', 'fixed_subnet',
-                                 'floating_ip_enabled', 'master_lb_enabled',
-                                 'insecure_registry']
-
-CLUSTER_CREATE_ATTRS = ['name', 'cluster_template_id', 'node_count',
-                        'discovery_url', 'create_timeout',
-                        'master_count', 'keypair']
-
-CERTIFICATE_CREATE_ATTRS = ['cluster_uuid', 'csr']
+CLUSTER_TEMPLATE_CREATE_ATTRS = cluster_templates.CREATION_ATTRIBUTES
+CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
+CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
 
 
 def _cleanup_params(attrs, check, **params):
