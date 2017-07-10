@@ -71,7 +71,7 @@ def write_autodoc_index():
                     modlist.append(result)
         return modlist
 
-    RSTDIR = os.path.abspath(os.path.join(BASE_DIR, "sourcecode"))
+    RSTDIR = os.path.abspath(os.path.join(BASE_DIR, "contributor/api"))
     SRCS = [('magnum_ui', ROOT), ]
 
     EXCLUDED_MODULES = ()

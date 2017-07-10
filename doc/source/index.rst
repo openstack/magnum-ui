@@ -8,24 +8,20 @@ Horizon plugin for Magnum
 * Source: http://git.openstack.org/cgit/openstack/magnum-ui
 * Bugs: http://bugs.launchpad.net/magnum-ui
 
-Usage
------
+User Documentation
+------------------
 
 .. toctree::
-  :maxdepth: 1
+   :maxdepth: 2
 
-  install
+   install/index
+   Release Notes <https://docs.openstack.org/releasenotes/magnum-ui/>
 
-Release Notes
--------------
-
-* https://docs.openstack.org/releasenotes/magnum-ui/
-
-Source Code Reference
----------------------
+Contributor Guide
+-----------------
 
 .. toctree::
-  :glob:
-  :maxdepth: 1
+   :glob:
+   :maxdepth: 2
 
-  sourcecode/autoindex
+   contributor/index
