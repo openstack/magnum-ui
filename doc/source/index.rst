@@ -15,6 +15,7 @@ User Documentation
    :maxdepth: 2
 
    install/index
+   configuration/index
    Release Notes <https://docs.openstack.org/releasenotes/magnum-ui/>
 
 Contributor Guide
