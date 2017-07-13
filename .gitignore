@@ -2,7 +2,7 @@ AUTHORS
 ChangeLog
 build
 cover
-doc/source/sourcecode
+doc/source/contributor/api/
 magnum_ui/test/.secret_key_store
 node_modules
 npm-debug.log
