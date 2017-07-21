@@ -181,3 +181,8 @@ def certificate_create(request, **kwargs):
 
 def certificate_show(request, id):
     return magnumclient(request).certificates.get(id)
+
+
+def certificate_rotate(request, id):
+    args = {"cluster_uuid": id}
+    return magnumclient(request).certificates.rotate_ca(**args)

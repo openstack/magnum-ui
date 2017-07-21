@@ -152,6 +152,14 @@
         "path": "/api/container_infra/certificates/123",
         "error": "Unable to retrieve the certificate.",
         "testInput": [123]
+      },
+      {
+        "func": "rotateCertificate",
+        "method": "delete",
+        "path": "/api/container_infra/certificates/123",
+        "data": [123],
+        "error": "Unable to rotate the certificate.",
+        "testInput": [123, [123]]
       }
     ];
 

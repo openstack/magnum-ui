@@ -37,6 +37,7 @@
     'horizon.dashboard.container-infra.clusters.update.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.sign-certificate.service',
+    'horizon.dashboard.container-infra.clusters.rotate-certificate.service',
     'horizon.dashboard.container-infra.clusters.resourceType'
   ];
 
@@ -48,6 +49,7 @@
     updateClusterService,
     showCertificateService,
     signCertificateService,
+    rotateCertificateService,
     resourceType) {
 
     var clusterResourceType = registry.getResourceType(resourceType);
@@ -84,6 +86,13 @@
         service: signCertificateService,
         template: {
           text: gettext('Sign Certificate')
+        }
+      })
+      .append({
+        id: 'rotateCertificateAction',
+        service: rotateCertificateService,
+        template: {
+          text: gettext('Rotate Certificate')
         }
       })
       .append({
