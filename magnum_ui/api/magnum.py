@@ -140,16 +140,18 @@ def cluster_template_show(request, id):
 
 
 def cluster_create(request, **kwargs):
+    kwargs.pop("rollback")
     args = _cleanup_params(CLUSTER_CREATE_ATTRS, True, **kwargs)
     return magnumclient(request).clusters.create(**args)
 
 
 def cluster_update(request, id, **kwargs):
+    rollback = kwargs.pop("rollback")
     new = _cleanup_params(CLUSTER_CREATE_ATTRS, True, **kwargs)
     old = magnumclient(request).clusters.get(id).to_dict()
     old = _cleanup_params(CLUSTER_CREATE_ATTRS, False, **old)
     patch = _create_patches(old, new)
-    return magnumclient(request).clusters.update(id, patch)
+    return magnumclient(request).clusters.update(id, patch, rollback=rollback)
 
 
 def cluster_delete(request, id):
