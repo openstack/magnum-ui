@@ -40,6 +40,8 @@
       var schema, form, model;
       var clusterTemplates = [{value:"", name: gettext("Choose a Cluster Template")}];
       var keypairs = [{value:"", name: gettext("Choose a Keypair")}];
+      var dockerVolumeSizeDescription = gettext(
+        "If not specified, the value specified in Clsuter Template will be used.");
 
       // schema
       schema = {
@@ -75,6 +77,10 @@
           'keypair': {
             title: gettext('Keypair'),
             type: 'string'
+          },
+          'docker_volume_size': {
+            title: gettext('Docker Volume Size (GB)'),
+            type: 'number'
           }
         }
       };
@@ -133,6 +139,12 @@
                     {
                       key: 'node_count',
                       placeholder: gettext('The cluster node count.')
+                    },
+                    {
+                      key: 'docker_volume_size',
+                      placeholder: gettext('Specify the size in GB for the docker volume'),
+                      description: dockerVolumeSizeDescription,
+                      readonly: action === 'update'
                     }
                   ]
                 }
@@ -196,6 +208,7 @@
         cluster_template_id: "",
         master_count: null,
         node_count: null,
+        docker_volume_size: "",
         discovery_url: "",
         create_timeout: null,
         keypair: ""

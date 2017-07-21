@@ -77,6 +77,8 @@
           ? response.data.create_timeout : null;
         config.model.keypair = response.data.keypair
           ? response.data.keypair : "";
+        config.model.docker_volume_size = response.data.docker_volume_size
+          ? response.data.docker_volume_size : "";
       }
 
       return modal.open(config).then(submit);
