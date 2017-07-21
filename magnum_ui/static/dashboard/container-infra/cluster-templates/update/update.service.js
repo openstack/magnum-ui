@@ -67,6 +67,8 @@
           ? response.data.name : "";
         config.model.coe = response.data.coe
           ? response.data.coe : "";
+        config.model.server_type = response.data.server_type
+          ? response.data.server_type : "";
         config.model.public = response.data.public
           ? response.data.public : false;
         config.model.registry_enabled = response.data.registry_enabled

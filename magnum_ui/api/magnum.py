@@ -34,14 +34,17 @@ CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
 CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
 
 
-def _cleanup_params(attrs, check, **params):
+def _cleanup_params(attrs, create, **params):
     args = {}
     for (key, value) in params.items():
         if key in attrs:
             if value is None:
-                value = ''
+                if create:
+                    value = ''
+                else:
+                    continue
             args[str(key)] = str(value)
-        elif check:
+        elif create:
             raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(attrs))
         if key == "labels":
@@ -66,6 +69,7 @@ def _create_patches(old, new):
     # new = {'a': 'A', 'c': 'c', 'd': None, 'e': '', 'f': 'F'}
     # patch = [
     #     {'op': 'add', 'path': '/f', 'value': 'F'}
+    #     {'op': 'remove', 'path': '/b'},
     #     {'op': 'remove', 'path': '/e'},
     #     {'op': 'remove', 'path': '/d'},
     #     {'op': 'replace', 'path': '/c', 'value': 'c'}
@@ -83,6 +87,11 @@ def _create_patches(old, new):
                               'value': new[key]})
         elif key not in old:
             patch.append({'op': 'add', 'path': path, 'value': new[key]})
+
+    for key in old:
+        path = '/' + key
+        if key not in new:
+            patch.append({'op': 'remove', 'path': path})
 
     return patch
 

@@ -445,6 +445,7 @@
       model = {
         name: "",
         coe: "",
+        server_type: "",
         public: "",
         registry_enabled: "",
         tls_disabled: "",
