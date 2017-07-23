@@ -3,13 +3,13 @@
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev57\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-14 00:24+0000\n"
+"POT-Creation-Date: 2017-07-21 12:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-13 02:50+0000\n"
+"PO-Revision-Date: 2017-07-21 07:21+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt-BR\n"
@@ -55,6 +55,10 @@ msgstr "Arquivo CSR"
 
 msgid "Cancel"
 msgstr "Cancelar"
+
+#, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "Certificado %s foi rotacionado com sucesso."
 
 #, python-format
 msgid "Certificate %s was successfully signed."
@@ -279,6 +283,11 @@ msgstr "Proxy HTTPS"
 msgid "ID"
 msgstr "ID"
 
+msgid "If not specified, the value specified in Clsuter Template will be used."
+msgstr ""
+"Se não especificado, o valor especificado em Modelo de Cluster será "
+"utilizado."
+
 msgid "Image"
 msgstr "Imagem"
 
@@ -403,6 +412,12 @@ msgstr "Registro Habilitado"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rollback cluster on update failure"
+msgstr "Reverter o cluster na falha de atualização."
+
+msgid "Rotate Certificate"
+msgstr "Rotacionar Certificado"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "SNAPSHOT FINALIZADO"
 
@@ -442,8 +457,12 @@ msgstr ""
 "Especifique o servidor de nomes para usar para o modelo de cluster. Padrão: "
 "8.8.8.8"
 
-msgid "Specify the number of master nodes and cluster nodes for the cluster."
-msgstr "Especifique o número de nós mestre e nós de cluster para o cluster."
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr ""
+"Especifique o número de nós mestre, nós de cluster e tamanho de volume "
+"docker para o cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Especifique o tamanho em GB que o volume do docker usará."
@@ -563,6 +582,12 @@ msgstr "Não é possível recuperar os clusters."
 
 msgid "Unable to retrieve the networks."
 msgstr "Não é possível recuperar as redes."
+
+msgid "Unable to retrieve the stats."
+msgstr "Não é possível recuperar as estatísticas."
+
+msgid "Unable to rotate the certificate."
+msgstr "Não é possível rotacionar o certificado."
 
 msgid "Unable to sign certificate."
 msgstr "Não é possível assinar o certificado."

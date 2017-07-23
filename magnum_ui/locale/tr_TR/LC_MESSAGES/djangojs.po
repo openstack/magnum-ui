@@ -1,9 +1,9 @@
 # işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev33\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-20 12:43+0000\n"
+"POT-Creation-Date: 2017-07-21 12:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -429,9 +429,6 @@ msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Küme şablonu için kullanılacak isim sunucuyu belirtin. Öntanımlı: 8.8.8.8"
-
-msgid "Specify the number of master nodes and cluster nodes for the cluster."
-msgstr "Küme için ana düğüm sayısını ve küme düğümlerini belirtin."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker birimi için boyutu GB olarak belirtin"
