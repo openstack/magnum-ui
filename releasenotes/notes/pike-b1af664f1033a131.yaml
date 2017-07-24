@@ -1,0 +1,43 @@
+---
+features:
+  - >
+    [`blueprint stats-list <https://blueprints.launchpad.net/magnum-ui/+spec/stats-list>`_]
+    REST API and Angular service for stats list are added.
+    This allows to implement usage views for cluster and
+    nodes.
+  - >
+    [`blueprint add-ca-rotate <https://blueprints.launchpad.net/magnum-ui/+spec/add-ca-rotate>`_]
+    Support rotate certificates. This adds
+    "Rotate Certificate" action for cluster as item action.
+  - >
+    [`blueprint add-rollback-option <https://blueprints.launchpad.net/magnum-ui/+spec/add-rollback-option>`_]
+    Support rollback option in cluster update. This adds
+    checkbox into cluster update dialog for rollback on
+    failure in update.
+  - >
+    [`blueprint add-docker-volume-size-option <https://blueprints.launchpad.net/magnum-ui/+spec/add-docker-volume-size-option>`_]
+    Support docker volume size option in cluster creation.
+  - >
+    [`bug/1570668 <https://bugs.launchpad.net/magnum-ui/+bug/1570668>`_]
+    To be convinient to input netwok settings, this changes
+    input forms for External Network, Fixed Network and
+    Fixed Subnet in Cluster Template create/update dialogs
+    to pulldowns.
+fixes:
+  - >
+    [`bug/1694634 <https://bugs.launchpad.net/magnum-ui/+bug/1694634>`_]
+    When selected Cluster Template doesn't have Keypair
+    setting, Keypair doesn't be set properly on Create
+    Cluster dialog. This fixes the issue.
+upgrade:
+  - >
+    Support python 3.5.
+  - >
+    Use only tox for test and remove run_tests.sh that is
+    no longer used.
+  - >
+    Switch theme for documentation from oslosphinx to
+    openstackdocstheme.
+  - >
+    Use pbr autodoc feature rather than custom logic.
+
