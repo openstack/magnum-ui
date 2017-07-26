@@ -4,17 +4,18 @@
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # sunanchen <KF.sunanchen@h3c.com>, 2016. #zanata
 # zzxwill <zzxwill@gmail.com>, 2016. #zanata
+# Bin <liubin@glab.cn>, 2017. #zanata
 # Gaoxiao Zhu <zhu.gaoxiao@h3c.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev72\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-21 12:33+0000\n"
+"POT-Creation-Date: 2017-07-25 01:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-09 02:02+0000\n"
-"Last-Translator: Gaoxiao Zhu <zhu.gaoxiao@h3c.com>\n"
+"PO-Revision-Date: 2017-07-24 03:46+0000\n"
+"Last-Translator: Bin <liubin@glab.cn>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -59,6 +60,10 @@ msgid "Cancel"
 msgstr "取消"
 
 #, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "证书%s成功轮换。"
+
+#, python-format
 msgid "Certificate %s was successfully signed."
 msgstr "证书%s成功签发了。"
 
@@ -67,6 +72,9 @@ msgstr "选择集群模板"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "选择容器编排引擎"
+
+msgid "Choose a External Network"
+msgstr "选择一个外部网络"
 
 msgid "Choose a Flavor for the Master Node"
 msgstr "为主节点选择一个云主机类型。"
@@ -79,6 +87,15 @@ msgstr "选择密钥对"
 
 msgid "Choose a Network Driver"
 msgstr "选择网络驱动程序"
+
+msgid "Choose a Private Network"
+msgstr "选择一个私有网络"
+
+msgid "Choose a Private Network at first"
+msgstr "首先选择一个私有网络"
+
+msgid "Choose a Private Subnet"
+msgstr "选择一个私有子网"
 
 msgid "Choose a Volume Driver"
 msgstr "选择一个卷驱动"
@@ -157,6 +174,9 @@ msgstr "创建集群模板"
 
 msgid "Created"
 msgstr "已经创建的。"
+
+msgid "DC/OS"
+msgstr "DC/OS"
 
 msgid "DELETE COMPLETE"
 msgstr "删除完成"
@@ -259,6 +279,9 @@ msgstr "HTTPS 代理。"
 
 msgid "ID"
 msgstr "ID"
+
+msgid "If not specified, the value specified in Clsuter Template will be used."
+msgstr "如果不指定，集群模版中的指定值将被使用。"
 
 msgid "Image"
 msgstr "镜像"
@@ -381,6 +404,12 @@ msgstr "启用Registry"
 msgid "Rexray"
 msgstr "雷克斯射线"
 
+msgid "Rollback cluster on update failure"
+msgstr "回滚集群更新失败"
+
+msgid "Rotate Certificate"
+msgstr "轮换证书"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "快照完成"
 
@@ -417,6 +446,11 @@ msgstr "申明应使用的容器编排引擎。"
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "明确集群模板使用的nameserver地址，默认：8.8.8.8"
+
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr "为集群指定主节点的数量、集群节点和docker磁盘大小。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "指定容器卷的大小用GB来衡量。"
@@ -527,6 +561,15 @@ msgstr "无法批量获取集群"
 
 msgid "Unable to retrieve the clusters."
 msgstr "无法获取集群"
+
+msgid "Unable to retrieve the networks."
+msgstr "无法获取网络。"
+
+msgid "Unable to retrieve the stats."
+msgstr "无法获取统计信息。"
+
+msgid "Unable to rotate the certificate."
+msgstr "无法轮换证书。"
 
 msgid "Unable to sign certificate."
 msgstr "无法签名证书"

@@ -3,13 +3,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev72\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-21 12:33+0000\n"
+"POT-Creation-Date: 2017-07-25 01:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-06-26 03:09+0000\n"
+"PO-Revision-Date: 2017-07-24 05:35+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -55,6 +55,10 @@ msgstr "CSR ファイル"
 
 msgid "Cancel"
 msgstr "取り消し"
+
+#, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "証明書 %s が正常に更新されました。"
 
 #, python-format
 msgid "Certificate %s was successfully signed."
@@ -276,6 +280,10 @@ msgstr "HTTPS プロキシー"
 msgid "ID"
 msgstr "ID"
 
+msgid "If not specified, the value specified in Clsuter Template will be used."
+msgstr ""
+"指定しない場合、クラスターテンプレートに指定されている値が使用されます。"
+
 msgid "Image"
 msgstr "イメージ"
 
@@ -400,6 +408,12 @@ msgstr "レジストリーの有効化"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rollback cluster on update failure"
+msgstr "更新失敗時のクラスターのロールバック"
+
+msgid "Rotate Certificate"
+msgstr "証明書の更新"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "スナップショット作成完了"
 
@@ -437,6 +451,13 @@ msgstr "使用するコンテナーオーケストレーションエンジンを
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "クラスターテンプレートで使用するネームサーバーを指定してください。"
+
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr ""
+"クラスターのマスターノードとクラスターノードの数、およびDocker のボリュームサ"
+"イズを指定してください。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker のボリュームのサイズを GB 単位で指定してください"
@@ -556,6 +577,12 @@ msgstr "クラスターの一覧を取得できません"
 
 msgid "Unable to retrieve the networks."
 msgstr "ネットワーク一覧を取得できません。"
+
+msgid "Unable to retrieve the stats."
+msgstr "統計を取得できません。"
+
+msgid "Unable to rotate the certificate."
+msgstr "証明書を更新できません。"
 
 msgid "Unable to sign certificate."
 msgstr "証明書で署名できません。"
