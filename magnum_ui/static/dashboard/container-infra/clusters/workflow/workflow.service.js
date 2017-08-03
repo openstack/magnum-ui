@@ -41,7 +41,7 @@
       var clusterTemplates = [{value:"", name: gettext("Choose a Cluster Template")}];
       var keypairs = [{value:"", name: gettext("Choose a Keypair")}];
       var dockerVolumeSizeDescription = gettext(
-        "If not specified, the value specified in Clsuter Template will be used.");
+        "If not specified, the value specified in Cluster Template will be used.");
 
       // schema
       schema = {
