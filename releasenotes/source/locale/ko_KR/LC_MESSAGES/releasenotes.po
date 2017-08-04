@@ -1,24 +1,23 @@
 # Eunseop Shin <kairos9603@khu.ac.kr>, 2016. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # jtjang <jang.jitae@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Magnum UI Release Notes 2.1.1\n"
+"Project-Id-Version: Magnum UI Release Notes 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-06 09:49+0000\n"
+"POT-Creation-Date: 2017-08-01 03:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-06 08:03+0000\n"
-"Last-Translator: jtjang <jang.jitae@gmail.com>\n"
+"PO-Revision-Date: 2017-08-03 04:52+0000\n"
+"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "'bay' and 'baymodel' are changed to 'cluster' and 'cluster template'."
-msgstr ""
-"'베이(bay)'와 '베이모델(baymodle)'은 '클러스터(cluster)'와 '클러스터 템플릿"
-"(cluster template)'로 바뀌었습니다."
+msgstr "'bay'와 'baymodle'은 'cluster'와 'cluster template'으로 바뀌었습니다."
 
 msgid "'docker_storage_driver'"
 msgstr "'docker_storage_driver'"
@@ -34,6 +33,12 @@ msgstr "'master_lb_enabled'"
 
 msgid "2.1.1"
 msgstr "2.1.1"
+
+msgid "2.2.0"
+msgstr "2.2.0"
+
+msgid "2.2.0-55"
+msgstr "2.2.0-55"
 
 msgid "Add following options to cluster template creation and views."
 msgstr "클러스터 템플릿 생성과 뷰에 다음 옵션을 추가하세요."
@@ -94,6 +99,9 @@ msgstr "새로운 기능"
 
 msgid "Newton Series Release Notes"
 msgstr "Newton 시리즈에 대한 릴리즈 노트"
+
+msgid "Ocata Series Release Notes"
+msgstr "Ocata 시리즈에 대한 릴리즈 노트"
 
 msgid "Other Notes"
 msgstr "기타 기능"

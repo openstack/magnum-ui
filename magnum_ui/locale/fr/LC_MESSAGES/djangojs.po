@@ -1,15 +1,16 @@
 # Gérald LONLAS <g.lonlas@gmail.com>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
+# Mateusz Kowalski <mateusz.kowalski@cern.ch>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev79\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-21 12:33+0000\n"
+"POT-Creation-Date: 2017-08-01 03:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-05 08:28+0000\n"
-"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"PO-Revision-Date: 2017-08-01 09:05+0000\n"
+"Last-Translator: Mateusz Kowalski <mateusz.kowalski@cern.ch>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -26,6 +27,13 @@ msgstr "Port du serveur de l'API"
 
 msgid "An arbitrary human-readable name"
 msgstr "Un nom arbitraire compréhensible"
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"templates. May be used multiple times."
+msgstr ""
+"Libellés arbitraires sous forme de paires clé=valeur à associer à un modèle "
+"de cluster. Peut être utilisé plusieurs fois."
 
 msgid "CHECK COMPLETE"
 msgstr "VÉRIFICATION TERMINÉE"
@@ -49,6 +57,10 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "Le certificat %s a été mis à jour avec succès."
+
+#, python-format
 msgid "Certificate %s was successfully signed."
 msgstr "Le certificat %s a été signé avec succès."
 
@@ -57,6 +69,9 @@ msgstr "Choisir le modèle de cluster"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Choisissez un moteur d'orchestration de conteneurs"
+
+msgid "Choose a External Network"
+msgstr "Choisissez la réseau externe"
 
 msgid "Choose a Flavor for the Master Node"
 msgstr "Choisissez un gabarit pour le nœud maître"
@@ -69,6 +84,15 @@ msgstr "Choisir une paire de clés"
 
 msgid "Choose a Network Driver"
 msgstr "Choisir un pilote réseau"
+
+msgid "Choose a Private Network"
+msgstr "Choisissez la réseau privé"
+
+msgid "Choose a Private Network at first"
+msgstr "Premièrement, choisissez la réseau privé"
+
+msgid "Choose a Private Subnet"
+msgstr "Choisissez la sous-réseau privé"
 
 msgid "Choose a Volume Driver"
 msgstr "Choisir un pilote de volume"
@@ -85,6 +109,10 @@ msgstr "Cluster"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Le cluster %s a été créé avec succès."
+
+#, python-format
+msgid "Cluster %s was successfully updated."
+msgstr "Le cluster %s a été mis à jour avec succès."
 
 msgid "Cluster Create Timeout"
 msgstr "Délai d'attente à la création du cluster"
@@ -114,6 +142,10 @@ msgstr "Type de cluster"
 msgid "Cluster template %s was successfully created."
 msgstr "Le modèle de cluster %s a été créé avec succès."
 
+#, python-format
+msgid "Cluster template %s was successfully updated."
+msgstr "Le modèle de cluster %s a été mis à jour avec succès."
+
 msgid "Clusters"
 msgstr "Clusters"
 
@@ -141,6 +173,9 @@ msgstr "Créer un modèle de cluster"
 
 msgid "Created"
 msgstr "Créé"
+
+msgid "DC/OS"
+msgstr "DC/OS"
 
 msgid "DELETE COMPLETE"
 msgstr "SUPPRESSION TERMINÉE"
@@ -181,6 +216,9 @@ msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "Cluster supprimé : %s"
 msgstr[1] "Clusters supprimés : %s"
+
+msgid "Device Mapper"
+msgstr "Device Mapper"
 
 msgid "Disable TLS"
 msgstr "Désactiver TLS"
@@ -246,6 +284,11 @@ msgstr "Proxy HTTPS"
 msgid "ID"
 msgstr "ID"
 
+msgid "If not specified, the value specified in Clsuter Template will be used."
+msgstr ""
+"S'il n'est pas spécifié, la valeur spécifié au modèle de cluster sera "
+"utilisé."
+
 msgid "Image"
 msgstr "Image"
 
@@ -257,6 +300,9 @@ msgstr "Infini"
 
 msgid "Info"
 msgstr "Info"
+
+msgid "KEY1=VALUE1, KEY2=VALUE2..."
+msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
 msgid "Keypair"
 msgstr "Paire de clés"
@@ -270,9 +316,11 @@ msgstr "Libellés"
 msgid "Make cluster template public. Default: False"
 msgstr "Rendre le modèle de cluster public. Par défaut : False"
 
-#, fuzzy
 msgid "Master Addresses"
-msgstr "Adresse principale"
+msgstr "Adresse du nœud Master"
+
+msgid "Master Count"
+msgstr "Nombre de nœuds Master"
 
 msgid "Master Flavor"
 msgstr "Gabarit maître"
@@ -297,6 +345,12 @@ msgstr "Divers"
 
 msgid "Name"
 msgstr "Nom"
+
+msgid "Name of the cluster template."
+msgstr "Nom du modèle de cluster."
+
+msgid "Name of the cluster."
+msgstr "Nom du cluster."
 
 msgid "Network"
 msgstr "Réseau"
@@ -346,6 +400,12 @@ msgstr "Registre activé"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rollback cluster on update failure"
+msgstr "Retour arrière en cas d'échec"
+
+msgid "Rotate Certificate"
+msgstr "Mettez à jour le certificat"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "INSTANTANÉ TERMINÉE"
 
@@ -382,6 +442,13 @@ msgid ""
 msgstr ""
 "Spécifier le nameserver à utiliser pour le modèle de cluster. Défaut : "
 "8.8.8.8"
+
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr ""
+"Spécifiez le nombre de noeud maître, noeud de cluster et la taille de volume "
+"Docker pour le cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Spécifier la taille en Go pour le volume Docker."
@@ -435,6 +502,9 @@ msgstr "Nombre de noeuds maître pour le cluster."
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Taille en Go du volume Docker. Défaut : 25"
 
+msgid "The timeout for cluster creation in minutes."
+msgstr "Délai d'expiration (en minutes) pour la création de cluster. "
+
 msgid "Timeout"
 msgstr "Délai d'attente"
 
@@ -448,10 +518,10 @@ msgid "UPDATE IN PROGRESS"
 msgstr "MISE À JOUR EN COURS"
 
 msgid "Unable to create cluster template."
-msgstr "Impossible de créer le modèle de cluster"
+msgstr "Impossible de créer le modèle de cluster."
 
 msgid "Unable to create cluster."
-msgstr "Impossible de créer le cluster"
+msgstr "Impossible de créer le cluster."
 
 #, python-format
 msgid "Unable to delete cluster template: %s."
@@ -494,8 +564,29 @@ msgstr "Impossible de récupérer le cluster."
 msgid "Unable to retrieve the clusters."
 msgstr "Impossible de récupérer les clusters."
 
+msgid "Unable to retrieve the networks."
+msgstr "Impossible d'obtenir les réseaux."
+
+msgid "Unable to retrieve the stats."
+msgstr "Impossible d'obtenir des statistiques."
+
+msgid "Unable to rotate the certificate."
+msgstr "Impossible de mettre à jour le certificat."
+
 msgid "Unable to sign certificate."
 msgstr "Impossible de signer le certificat."
+
+msgid "Unable to update cluster template."
+msgstr "Impossible de mettre à jour le modèle de cluster."
+
+msgid "Unable to update cluster."
+msgstr "Impossible de mettre à jour le cluster."
+
+msgid "Update Cluster"
+msgstr "Mettez à jour le cluster"
+
+msgid "Update Cluster Template"
+msgstr "Mettre à jour le Modèle de Cluster"
 
 msgid "Updated"
 msgstr "Mis à jour"
