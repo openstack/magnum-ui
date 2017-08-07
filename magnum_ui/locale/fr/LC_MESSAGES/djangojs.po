@@ -3,9 +3,9 @@
 # Mateusz Kowalski <mateusz.kowalski@cern.ch>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev79\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev82\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-08-01 03:14+0000\n"
+"POT-Creation-Date: 2017-08-07 01:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -283,11 +283,6 @@ msgstr "Proxy HTTPS"
 
 msgid "ID"
 msgstr "ID"
-
-msgid "If not specified, the value specified in Clsuter Template will be used."
-msgstr ""
-"S'il n'est pas spécifié, la valeur spécifié au modèle de cluster sera "
-"utilisé."
 
 msgid "Image"
 msgstr "Image"

@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Magnum UI Release Notes 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 04:48+0000\n"
+"POT-Creation-Date: 2017-08-07 01:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-27 02:44+0000\n"
+"PO-Revision-Date: 2017-08-07 06:58+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -37,6 +37,9 @@ msgstr "2.1.1"
 
 msgid "2.2.0"
 msgstr "2.2.0"
+
+msgid "2.2.0-57"
+msgstr "2.2.0-57"
 
 msgid "Add following options to cluster template creation and views."
 msgstr "以下のオプションをクラスターテンプレートの作成と表示に追加しました。"
@@ -126,6 +129,9 @@ msgstr "Ocata リリースの概要。"
 
 msgid "Other Notes"
 msgstr "その他の注意点"
+
+msgid "Prelude"
+msgstr "紹介"
 
 msgid "Reasonable name is set to browser title bar."
 msgstr "合理的な名前をブラウザのタイトルバーに設定します。"
