@@ -1,18 +1,15 @@
-# Eunseop Shin <kairos9603@khu.ac.kr>, 2016. #zanata
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
-# jtjang <jang.jitae@gmail.com>, 2017. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev79\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-21 12:33+0000\n"
+"POT-Creation-Date: 2017-08-01 03:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-06 07:58+0000\n"
-"Last-Translator: jtjang <jang.jitae@gmail.com>\n"
+"PO-Revision-Date: 2017-08-03 04:48+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -59,6 +56,10 @@ msgid "Cancel"
 msgstr "취소"
 
 #, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "인증서 %s를 성공적으로 교체하였습니다."
+
+#, python-format
 msgid "Certificate %s was successfully signed."
 msgstr "클러스터 %s 를 성공적으로 서명하였습니다."
 
@@ -67,6 +68,9 @@ msgstr "클러스터 템플릿 선택"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "컨테이너 오케스트레이션 엔진 선택"
+
+msgid "Choose a External Network"
+msgstr "외부 네트워크 선택"
 
 msgid "Choose a Flavor for the Master Node"
 msgstr "마스터 노드에 대한 Flavor 선택"
@@ -79,6 +83,15 @@ msgstr "키 페어 선택"
 
 msgid "Choose a Network Driver"
 msgstr "네트워크 드라이버 선택"
+
+msgid "Choose a Private Network"
+msgstr "Private 네트워크 선택"
+
+msgid "Choose a Private Network at first"
+msgstr "첫 Private 네트워크 선택"
+
+msgid "Choose a Private Subnet"
+msgstr "Private 서브넷 선택"
 
 msgid "Choose a Volume Driver"
 msgstr "볼륨 드라이버 선택"
@@ -157,6 +170,9 @@ msgstr "클러스터 템플릿 생성"
 
 msgid "Created"
 msgstr "생성됨"
+
+msgid "DC/OS"
+msgstr "DC/OS"
 
 msgid "DELETE COMPLETE"
 msgstr "DELETE COMPLETE"
@@ -286,6 +302,9 @@ msgstr "무제한"
 msgid "Info"
 msgstr "정보"
 
+msgid "KEY1=VALUE1, KEY2=VALUE2..."
+msgstr "KEY1=VALUE1, KEY2=VALUE2..."
+
 msgid "Keypair"
 msgstr "키 페어"
 
@@ -382,6 +401,12 @@ msgstr "저장소가 사용됨"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rollback cluster on update failure"
+msgstr "업데이트 실패시 클러스터 롤백"
+
+msgid "Rotate Certificate"
+msgstr "인증서 교체"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "SNAPSHOT COMPLETE"
 
@@ -418,6 +443,12 @@ msgstr "사용할 컨테이너 오케스트레이션 엔진을 지정하십시�
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "클러스터 템플릿에 사용할 네임서버를 지정하십시오. 기본값: 8.8.8.8"
+
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr ""
+"클러스터의 마스터 노드 수, 클러스터 노드와 docker 볼륨 크기를 지정하십시오."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker 볼륨에 대한 크기를 GB로 지정합니다"
@@ -504,7 +535,7 @@ msgstr[0] "클러스터를 삭제할 수 없습니다: %s."
 
 #, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
-msgstr "ID가 %(id)s인 클러스터 템플릿을 삭제할 수 없습니다."
+msgstr "클러스터 템플릿 ID 을 삭제할 수 없습니다: %(id)s"
 
 msgid "Unable to delete the cluster templates."
 msgstr "클러스터 템플릿을 삭제할 수 없습니다."
@@ -530,6 +561,15 @@ msgstr "클러스터를 가져올 수 없습니다."
 
 msgid "Unable to retrieve the clusters."
 msgstr "클러스터를 가져올 수 없습니다."
+
+msgid "Unable to retrieve the networks."
+msgstr "네트워크를 검색할 수 없습니다."
+
+msgid "Unable to retrieve the stats."
+msgstr "통계를 검색할 수 없습니다."
+
+msgid "Unable to rotate the certificate."
+msgstr "인증서를 교체할 수 없습니다."
 
 msgid "Unable to sign certificate."
 msgstr "인증서에 서명할 수 없습니다."
