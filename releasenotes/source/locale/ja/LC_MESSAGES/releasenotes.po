@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Magnum UI Release Notes 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 01:37+0000\n"
+"POT-Creation-Date: 2017-08-08 05:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,9 +37,6 @@ msgstr "2.1.1"
 
 msgid "2.2.0"
 msgstr "2.2.0"
-
-msgid "2.2.0-57"
-msgstr "2.2.0-57"
 
 msgid "Add following options to cluster template creation and views."
 msgstr "以下のオプションをクラスターテンプレートの作成と表示に追加しました。"

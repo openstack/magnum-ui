@@ -1,16 +1,17 @@
 # Gérald LONLAS <g.lonlas@gmail.com>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # Mateusz Kowalski <mateusz.kowalski@cern.ch>, 2017. #zanata
+# Pascal Larivée <pascal@larivee.photo>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev82\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev83\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-08-07 01:37+0000\n"
+"POT-Creation-Date: 2017-08-08 05:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-01 09:05+0000\n"
-"Last-Translator: Mateusz Kowalski <mateusz.kowalski@cern.ch>\n"
+"PO-Revision-Date: 2017-08-10 03:15+0000\n"
+"Last-Translator: Pascal Larivée <pascal@larivee.photo>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -284,11 +285,29 @@ msgstr "Proxy HTTPS"
 msgid "ID"
 msgstr "ID"
 
+msgid "If not specified, the value specified in Cluster Template will be used."
+msgstr ""
+"Si elle n'est pas spécifiée, la valeur définie dans le  modèle de cluster "
+"sera utilisée."
+
 msgid "Image"
 msgstr "Image"
 
 msgid "Image ID"
 msgstr "ID de l'image"
+
+msgid ""
+"Indicates whether created clusters should have a floating ip or not. "
+"Default: True"
+msgstr ""
+"Indique si le cluster créé devrait avoir une ip flottante. Défaut: Vrai"
+
+msgid ""
+"Indicates whether created clusters should have a load balancer for master "
+"nodes or not. Default: False"
+msgstr ""
+"Indique si le cluster créé devrait avoir un load balancer pour les nodes "
+"maîtresses . Défaut: Faux"
 
 msgid "Infinite"
 msgstr "Infini"
@@ -407,6 +426,11 @@ msgstr "INSTANTANÉ TERMINÉE"
 msgid "Server Type"
 msgstr "Type de serveur"
 
+msgid "Set to 0 for no timeout. The default is no timeout."
+msgstr ""
+"Mettre à 0 pour aucun délai d'expiration. Le défaut est aucun délai "
+"d'expiration."
+
 msgid "Show Certificate"
 msgstr "Afficher le certificat"
 
@@ -419,9 +443,10 @@ msgstr "Signer un Certificat  pour le cluster : {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Taille"
 
-#, fuzzy
 msgid "Specifies custom discovery url for node discovery."
-msgstr "Spécifiez  le Discovery URL personnalisé pour le node discovery."
+msgstr ""
+"Indique une URL de reconnaissance personnalisée pour la reconnaissance de "
+"noeud."
 
 msgid "Specify cluster name and choose cluster template"
 msgstr "Entrer le nom du cluster et choisir son modèle"
@@ -499,6 +524,9 @@ msgstr "Taille en Go du volume Docker. Défaut : 25"
 
 msgid "The timeout for cluster creation in minutes."
 msgstr "Délai d'expiration (en minutes) pour la création de cluster. "
+
+msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
+msgstr "Ceci devrait être nommé cidr-réseaux-fixe. Défaut: 10.0.0.0/24"
 
 msgid "Timeout"
 msgstr "Délai d'attente"
