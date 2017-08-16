@@ -1,16 +1,17 @@
 # Eunseop Shin <kairos9603@khu.ac.kr>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # jtjang <jang.jitae@gmail.com>, 2017. #zanata
+# minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Magnum UI Release Notes 2.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 01:37+0000\n"
+"POT-Creation-Date: 2017-08-15 13:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-03 04:52+0000\n"
-"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
+"PO-Revision-Date: 2017-08-16 07:34+0000\n"
+"Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -37,6 +38,9 @@ msgstr "2.1.1"
 msgid "2.2.0"
 msgstr "2.2.0"
 
+msgid "2.2.0-59"
+msgstr "2.2.0-59"
+
 msgid "Add following options to cluster template creation and views."
 msgstr "클러스터 템플릿 생성과 뷰에 다음 옵션을 추가하세요."
 
@@ -51,6 +55,15 @@ msgstr ""
 
 msgid "Bug Fixes"
 msgstr "버그 수정"
+
+msgid ""
+"Change creation actions to global actions. Cluster Template creation and "
+"Cluster creation actions are changed from batchAction to globalAction. This "
+"means these actions are callable from other panels."
+msgstr ""
+"생성 동작을 전역 동작으로 변경하십시오. 클러스터 템플릿 작성 및 클러스터 작"
+"성 액션이 batchAction에서 globalAction으로 변경됩니다. 즉, 이러한 작업은 다"
+"른 패널에서 호출 할 수 있습니다."
 
 msgid ""
 "Container panel is removed. According to decision of Magnum that changes "
@@ -78,6 +91,16 @@ msgid "Magnum UI Release Notes"
 msgstr "Magnum UI 릴리즈 노트"
 
 msgid ""
+"Magnum UI keeps on following changes for Horizon's AngularJS-based "
+"framework. So we can use recent Horizon's feature. And hundreds of "
+"JavaScript tests are added. This ensures quality of Magnum UI."
+msgstr ""
+"Magnum UI는 Horizon의 AngularJS 기반 프레임워크에 대한 다음과 같은 변경 사항"
+"을 계속 유지합니다. 그래서 우리는 최근 Horizon의 기능을 사용할 수 있습니다. "
+"수백 가지 JavaScript 테스트가 추가되었습니다. 이것은 매그넘 UI의 품질을 보장"
+"합니다."
+
+msgid ""
 "Magnum changes its service scope as Container Infrastructure Management "
 "service. Also Magnum-UI change rename service 'container' to 'container-"
 "infra', and container management functions removed. Magnum uses terms "
@@ -100,8 +123,14 @@ msgstr "Newton 시리즈에 대한 릴리즈 노트"
 msgid "Ocata Series Release Notes"
 msgstr "Ocata 시리즈에 대한 릴리즈 노트"
 
+msgid "Ocata release summary."
+msgstr "Ocata 릴리즈 요약"
+
 msgid "Other Notes"
 msgstr "기타 기능"
+
+msgid "Prelude"
+msgstr "Prelude"
 
 msgid "Reasonable name is set to browser title bar."
 msgstr "합리적인 이름이 브라우저의 제목 표시줄에 설정됩니다."
@@ -130,6 +159,9 @@ msgid ""
 msgstr ""
 "Horizon의 Angular 레지스트리 서비스, Generic 테이블과 뷰, 액션 서비스를 지원"
 "합니다."
+
+msgid "Support python 3.5."
+msgstr "파이썬 3.5를 지원합니다."
 
 msgid "Switch to reno for managing release notes."
 msgstr "릴리즈 노트를 관리하려면 reno로 전환하십시오."
