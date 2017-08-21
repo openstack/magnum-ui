@@ -1,14 +1,15 @@
 # işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+# yasemin demiral <yasemin.demiral@tubitak.gov.tr>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 2.2.1.dev69\n"
+"Project-Id-Version: magnum-ui 2.2.1.dev85\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-07-21 12:33+0000\n"
+"POT-Creation-Date: 2017-08-16 15:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-05-22 09:36+0000\n"
-"Last-Translator: işbaran akçayır <isbaran@gmail.com>\n"
+"PO-Revision-Date: 2017-08-16 12:16+0000\n"
+"Last-Translator: yasemin demiral <yasemin.demiral@tubitak.gov.tr>\n"
 "Language-Team: Turkish (Turkey)\n"
 "Language: tr-TR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -56,6 +57,10 @@ msgid "Cancel"
 msgstr "İptal"
 
 #, python-format
+msgid "Certificate %s was successfully rotated."
+msgstr "%s sertifikası başarılı bir şekilde çevrildi."
+
+#, python-format
 msgid "Certificate %s was successfully signed."
 msgstr "Sertifika %s başarıyla imzalandı."
 
@@ -64,6 +69,9 @@ msgstr "Bir Küme Şablonu Seçin"
 
 msgid "Choose a Container Orchestration Engine"
 msgstr "Bir Kapsayıcı Düzenleme Motoru Seçin"
+
+msgid "Choose a External Network"
+msgstr "Bir Dış Ağ Seçin"
 
 msgid "Choose a Flavor for the Master Node"
 msgstr "Ana Düğüm için bir Nitelik Seçin"
@@ -75,10 +83,19 @@ msgid "Choose a Keypair"
 msgstr "Bir Anahtar Çifti seçin"
 
 msgid "Choose a Network Driver"
-msgstr "Bir Ağ Sürücü Seçin"
+msgstr "Bir Ağ Sürücüsü Seçin"
+
+msgid "Choose a Private Network"
+msgstr "Bir Özel Ağ Seçin"
+
+msgid "Choose a Private Network at first"
+msgstr "İlk önce bir Özel Ağ seçin"
+
+msgid "Choose a Private Subnet"
+msgstr "Bir Özel Alt Ağ Seçin"
 
 msgid "Choose a Volume Driver"
-msgstr "Birim Sürücü Seçin"
+msgstr "Mantıksal Sürücü Sürücüsü Seçin"
 
 msgid "Choose an Image"
 msgstr "Bir imaj seçin"
@@ -222,10 +239,10 @@ msgid "Docker Swarm"
 msgstr "Docker Swarm"
 
 msgid "Docker Volume Size"
-msgstr "Docker Birim Boyutu"
+msgstr "Docker Mantıksal Sürücü Boyutu"
 
 msgid "Docker Volume Size (GB)"
-msgstr "Docker Birim Boyutu (GB)"
+msgstr "Docker Mantıksal Sürücü Boyutu (GB)"
 
 msgid "Enable Registry"
 msgstr "Kaydı Etkinleştir"
@@ -246,10 +263,10 @@ msgid "Flannel"
 msgstr "Flannel"
 
 msgid "Flavor"
-msgstr "Nitelik"
+msgstr "Şablon"
 
 msgid "Flavor ID"
-msgstr "Nitelik ID'si"
+msgstr "Şablon ID'si"
 
 msgid "Floating IP"
 msgstr "Değişken IP"
@@ -265,6 +282,10 @@ msgstr "HTTPS Vekili"
 
 msgid "ID"
 msgstr "Kimlik"
+
+msgid "If not specified, the value specified in Cluster Template will be used."
+msgstr ""
+"Eğer belirtilmemişse, Küme Şablonu'nda belirtilen değer kullanılacaktır."
 
 msgid "Image"
 msgstr "İmaj"
@@ -314,10 +335,10 @@ msgid "Master Count"
 msgstr "Ana Sayısı"
 
 msgid "Master Flavor"
-msgstr "Ana Nitelik"
+msgstr "Ana Şablon"
 
 msgid "Master Flavor ID"
-msgstr "Ana Nitelik ID'si"
+msgstr "Ana Şablon ID'si"
 
 msgid "Master LB"
 msgstr "Ana LB"
@@ -391,6 +412,12 @@ msgstr "Kayıt Etkin"
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rollback cluster on update failure"
+msgstr "Kümedeki hatalı güncellemeleri geri al "
+
+msgid "Rotate Certificate"
+msgstr "Sertifikayı döndür"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "ANLIK GÖRÜNTÜ TAMAMLANDI"
 
@@ -430,8 +457,15 @@ msgid ""
 msgstr ""
 "Küme şablonu için kullanılacak isim sunucuyu belirtin. Öntanımlı: 8.8.8.8"
 
+msgid ""
+"Specify the number of master nodes, cluster nodes and docker volume size for "
+"the cluster."
+msgstr ""
+"Küme için ana düğümlerin, küme düğümlerinin ve docker mantıksal sürücü "
+"boyutunu belirtin."
+
 msgid "Specify the size in GB for the docker volume"
-msgstr "Docker birimi için boyutu GB olarak belirtin"
+msgstr "Docker mantıksal sürücüsü için boyutu GB olarak belirtin"
 
 msgid "Stack ID"
 msgstr "Yığın ID'si"
@@ -547,6 +581,15 @@ msgstr "Küme alınamıyor."
 msgid "Unable to retrieve the clusters."
 msgstr "Kümeler alınamıyor."
 
+msgid "Unable to retrieve the networks."
+msgstr "Ağlar alınamadı."
+
+msgid "Unable to retrieve the stats."
+msgstr "Stat'lar alınamadı."
+
+msgid "Unable to rotate the certificate."
+msgstr "Sertifika döndürülemiyor."
+
 msgid "Unable to sign certificate."
 msgstr "Sertifika imzalanamadı."
 
@@ -566,7 +609,7 @@ msgid "Updated"
 msgstr "Güncellendi"
 
 msgid "Volume Driver"
-msgstr "Birim Sürücüsü"
+msgstr "Mantıksal Sürücü Sürücüsü"
 
 #, python-format
 msgid "You are not allowed to delete cluster templates: %s"
