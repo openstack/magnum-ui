@@ -25,9 +25,8 @@
 
   function CertificateModel(magnum) {
     var model = {
-      newClusterSpec: {},
+      newCertificateSpec: {},
       cluster_name: "",
-      csrfile: null,
 
       // API methods
       init: init,
@@ -41,7 +40,6 @@
         csr: ""
       };
       model.cluster_name = "";
-      model.csrfile = null;
     }
 
     function signCertificate() {

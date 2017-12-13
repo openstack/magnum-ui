@@ -11,16 +11,12 @@
   <div class="modal-body">
     <div class="row">
       <div class="col-sm-6">
-        <fieldset>
-          <div class="form-group">
-            <label class="control-label required" for="csr-file">
-              <translate>CSR File</translate>
-              <span class="hz-icon-required fa fa-asterisk"></span>
-            </label>
-            <input id="csr-file" type="file" name="file" required
-                   ng-model="ctrl.model.csrfile" on-file-change="ctrl.changeFile">
-          </div>
-        </fieldset>
+        <load-edit title="{$ ctrl.title $}"
+           model="ctrl.model.newCertificateSpec.csr"
+           max-bytes="{$ 16 * 1024 $}"
+           key="public-key"
+           rows=8 required="true">
+        </load-edit>
       </div>
     </div>
   </div>

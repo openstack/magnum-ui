@@ -36,35 +36,13 @@
 
   function signCertificateController(magnum, model) {
     var ctrl = this;
-    ctrl.changeFile = changeFile;
     ctrl.model = model;
     ctrl.form = null;
+    ctrl.title = gettext("CSR");
     magnum.getCluster(model.newCertificateSpec.cluster_uuid).success(onGetCluster);
 
     function onGetCluster(response) {
       ctrl.model.cluster_name = response.name;
-    }
-
-    function changeFile(files) {
-      // NOTE: this uses on-file-changed directive in Swift-UI included Horizon.
-      if (files.length) {
-        // load csr file and set into model
-        var reader = new FileReader();
-        reader.readAsText(files[0]);
-        reader.onload = function() {
-          model.newCertificateSpec.csr = reader.result;
-          ctrl.model.csrfile = files[0];
-          ctrl.form.$setDirty();
-        };
-        // Note that a $scope.$digest() is now needed for the change to the ngModel to be
-        // reflected in the page (since this callback is fired from inside a DOM event)
-        // but the on-file-changed directive currently does a digest after this callback
-        // is invoked.
-      } else {
-        model.newCertificateSpec.csr = "";
-        ctrl.model.csrfile = null;
-        ctrl.form.$setPristine();
-      }
     }
   }
 })();
