@@ -8,6 +8,7 @@ node_modules
 npm-debug.log
 releasenotes/build
 .coverage*
+.idea
 .jshintrc
 .project
 .pydevproject
