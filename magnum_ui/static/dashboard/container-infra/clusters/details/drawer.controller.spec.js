@@ -1,6 +1,4 @@
 /**
- * (c) Copyright 2016 NEC Corporation.
- *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
  * a copy of the License at
@@ -17,28 +15,14 @@
 (function() {
   'use strict';
 
-  describe('cluster overview controller', function() {
+  describe('cluster drawer controller', function() {
 
-    var ctrl, magnum, deferred;
+    var ctrl;
 
     beforeEach(module('horizon.dashboard.container-infra.clusters'));
 
-    beforeEach(inject(function($controller, $q, $injector) {
-      magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
-      deferred = $q.defer();
-      deferred.resolve({data: {image_id: 1},items:{1:{name:1,id:1},2:{name:2,id:2}}});
-      spyOn(magnum, 'getClusterTemplate').and.returnValue(deferred.promise);
-      ctrl = $controller('ClusterOverviewController',
-        {
-          '$scope' : {context : {loadPromise: deferred.promise}}
-        }
-      );
-    }));
-
-    it('sets ctrl', inject(function($timeout) {
-      $timeout.flush();
-      expect(ctrl.cluster_template).toBeDefined();
-      expect(ctrl.cluster).toBeDefined();
+    beforeEach(inject(function($controller) {
+      ctrl = $controller('horizon.dashboard.container-infra.clusters.DrawerController', {});
     }));
 
     it('objLen returns number of attributes of object', inject(function() {

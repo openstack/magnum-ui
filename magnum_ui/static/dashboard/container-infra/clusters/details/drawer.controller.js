@@ -31,6 +31,15 @@
   ];
 
   function controller() {
-  }
+    var ctrl = this;
+    ctrl.objLen = objLen;
 
+    function objLen(obj) {
+      var length = 0;
+      if (typeof obj === 'object') {
+        length = Object.keys(obj).length;
+      }
+      return length;
+    }
+  }
 })();
