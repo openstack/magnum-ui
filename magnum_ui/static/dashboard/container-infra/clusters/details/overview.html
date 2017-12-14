@@ -25,13 +25,11 @@
         <dt translate>API Address</dt>
         <dd>{$ ctrl.cluster.api_address $}</dd>
         <dt translate>Master Addresses</dt>
-        <dd>
-          <div ng-repeat="addr in ctrl.cluster.master_addresses">{$ addr $}</div>
-        </dd>
+        <dd ng-if="ctrl.objLen(ctrl.cluster.master_addresses) === 0" translate>None</dd>
+        <dd ng-repeat="addr in ctrl.cluster.master_addresses">{$ addr $}</dd>
         <dt translate>Node Addresses</dt>
-        <dd>
-          <div ng-repeat="addr in ctrl.cluster.node_addresses">{$ addr $}</div>
-        </dd>
+        <dd ng-if="ctrl.objLen(ctrl.cluster.node_addresses) === 0" translate>None</dd>
+        <dd ng-repeat="addr in ctrl.cluster.node_addresses">{$ addr $}</dd>
       </dl>
     </div>
   </div>
@@ -40,10 +38,6 @@
       <h3 translate>Miscellaneous</h3>
       <hr>
       <dl class="dl-horizontal">
-        <dt translate>Stack ID</dt>
-        <dd><a ng-href="project/stacks/stack/{$ ctrl.cluster.stack_id $}" target="_self">
-          {$ ctrl.cluster.stack_id $}
-        </a></dd>
         <dt translate>Discovery URL</dt>
         <dd>{$ ctrl.cluster.discovery_url $}</dd>
         <dt translate>Cluster Create Timeout</dt>
@@ -59,6 +53,38 @@
         </dd>
         <dt translate>Keypair</dt>
         <dd>{$ ctrl.cluster.keypair $}</dd>
+        <dt translate>Docker Volume Size</dt>
+        <dd>{$ ctrl.cluster.docker_volume_size | noValue $} GB</dd>
+        <dt translate>Master Flavor ID</dt>
+        <dd>{$ ctrl.cluster.master_flavor_id | noValue $}</dd>
+        <dt translate>COE Version</dt>
+        <dd>{$ ctrl.cluster.coe_version | noValue $}</dd>
+        <dt translate>Container Version</dt>
+        <dd>{$ ctrl.cluster.container_version | noValue $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Labels</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dd ng-if="ctrl.objLen(ctrl.cluster.labels) === 0" translate>None</dd>
+        <dt ng-repeat-start="(key, value) in ctrl.cluster.labels">{$ key $}</dt>
+        <dd ng-repeat-end>{$ value $}</dd>
+      </dl>
+    </div>
+    <div class="col-md-6 detail">
+      <h3 translate>Stack</h3>
+      <hr>
+      <dl class="dl-horizontal">
+        <dt translate>Stack ID</dt>
+        <dd><a ng-href="project/stacks/stack/{$ ctrl.cluster.stack_id $}" target="_self">
+          {$ ctrl.cluster.stack_id $}
+        </a></dd>
+        <dt translate>Stack Faults</dt>
+        <dd ng-if="ctrl.objLen(ctrl.cluster.faults) === 0" translate>None</dd>
+        <dd ng-if="ctrl.objLen(ctrl.cluster.faults) > 0" translate>as follows:</dd>
+        <dt ng-repeat-start="(key, value) in ctrl.cluster.faults">{$ key $}</dt>
+        <dd ng-repeat-end>{$ value $}</dd>
       </dl>
     </div>
     <div class="col-md-6 detail">
@@ -73,6 +99,8 @@
         <dd>{$ ctrl.cluster.id $}</dd>
         <dt translate>Status</dt>
         <dd>{$ ctrl.cluster.status $}</dd>
+        <dt translate>Status Reason</dt>
+        <dd>{$ ctrl.cluster.status_reason | noValue $}</dd>
       </dl>
     </div>
   </div>
