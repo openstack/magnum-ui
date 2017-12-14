@@ -441,9 +441,7 @@
                       htmlClass: 'col-xs-12',
                       items: [
                         {
-                          key: 'labels',
-                          // fixme: to be available, needs to fix bug/1638863
-                          readonly: action === 'update'
+                          key: 'labels'
                         }
                       ]
                     }
