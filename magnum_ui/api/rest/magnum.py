@@ -254,7 +254,7 @@ class Quotas(generic.View):
         item under this is a Quota.
         """
         result = magnum.quotas_list(request)
-        return {'items': [change_to_id(n.to_dict()) for n in result]}
+        return {'items': [n.to_dict() for n in result]}
 
     @rest_utils.ajax(data_required=True)
     def post(self, request):
@@ -264,7 +264,7 @@ class Quotas(generic.View):
         """
         created = magnum.quotas_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            ('/api/container_infra/quotas/%s/%s' % created.uuid,
+            ('/api/container_infra/quotas/%s/%s' % created.id,
              created.resource),
             created.to_dict())
 

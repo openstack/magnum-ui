@@ -28,6 +28,7 @@
     .module('horizon.dashboard.container-infra', [
       'horizon.dashboard.container-infra.clusters',
       'horizon.dashboard.container-infra.cluster-templates',
+      'horizon.dashboard.container-infra.quotas',
       'ngRoute'
     ])
     .config(config);
