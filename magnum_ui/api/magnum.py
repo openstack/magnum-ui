@@ -26,12 +26,14 @@ from magnumclient.v1 import certificates
 from magnumclient.v1 import client as magnum_client
 from magnumclient.v1 import cluster_templates
 from magnumclient.v1 import clusters
+from magnumclient.v1 import quotas
 
 LOG = logging.getLogger(__name__)
 
 CLUSTER_TEMPLATE_CREATE_ATTRS = cluster_templates.CREATION_ATTRIBUTES
 CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
 CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
+QUOTA_CREATION_ATTRIBUTES = quotas.CREATION_ATTRIBUTES
 
 
 def _cleanup_params(attrs, create, **params):
@@ -197,7 +199,32 @@ def certificate_rotate(request, id):
     return magnumclient(request).certificates.rotate_ca(**args)
 
 
-def stats_list(request, limit=None, marker=None, sort_key=None,
-               sort_dir=None, detail=True):
-    return magnumclient(request).stats.list(
-        limit, marker, sort_key, sort_dir, detail)
+def stats_list(request, project_id=None):
+    return magnumclient(request).stats.list(project_id=project_id)
+
+
+def quotas_list(request, limit=None, marker=None, sort_key=None,
+                sort_dir=None, all_tenants=True):
+    return magnumclient(request).quotas.list(
+        limit, marker, sort_key, sort_dir, all_tenants)
+
+
+def quotas_show(request, project_id, resource):
+    return magnumclient(request).quotas.get(project_id, resource)
+
+
+def quotas_create(request, **kwargs):
+    args = _cleanup_params(QUOTA_CREATION_ATTRIBUTES, True, **kwargs)
+    return magnumclient(request).quotas.create(**args)
+
+
+def quotas_update(request, project_id, resource, **kwargs):
+    new = _cleanup_params(QUOTA_CREATION_ATTRIBUTES, True, **kwargs)
+    old = magnumclient(request).quotas.get(project_id, resource).to_dict()
+    old = _cleanup_params(QUOTA_CREATION_ATTRIBUTES, False, **old)
+    patch = _create_patches(old, new)
+    return magnumclient(request).quotas.update(project_id, resource, patch)
+
+
+def quotas_delete(request, project_id, resource):
+    return magnumclient(request).quotas.delete(project_id, resource)
