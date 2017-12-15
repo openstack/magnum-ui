@@ -30,6 +30,7 @@
     var ctrl = this;
     ctrl.cluster = {};
     ctrl.cluster_template = {};
+    ctrl.objLen = objLen;
 
     $scope.context.loadPromise.then(onGetCluster);
 
@@ -40,6 +41,14 @@
 
     function onGetClusterTemplate(clusterTemplate) {
       ctrl.cluster_template = clusterTemplate.data;
+    }
+
+    function objLen(obj) {
+      var length = 0;
+      if (typeof obj === 'object') {
+        length = Object.keys(obj).length;
+      }
+      return length;
     }
   }
 })();

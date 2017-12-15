@@ -1,27 +1,43 @@
 <div ng-controller="horizon.dashboard.container-infra.clusters.DrawerController as drawerCtrl">
   <div class="row">
     <span class="rsp-alt-p2">
-      <dl class="col-md-5">
+      <dl class="col-md-6">
         <dt translate>ID</dt>
         <dd>{$ item.id $}</dd>
       </dl>
-      <dl class="col-md-3">
+      <dl class="col-md-2">
         <dt translate>Master Count</dt>
         <dd>{$ item.master_count $}</dd>
       </dl>
-      <dl class="col-md-3">
+      <dl class="col-md-2">
         <dt translate>Node Count</dt>
         <dd>{$ item.node_count $}</dd>
+      </dl>
+      <dl class="col-md-2">
+        <dt translate>Keypair</dt>
+        <dd>{$ item.keypair $}</dd>
       </dl>
     </span>
   </div>
   <div class="row">
-    <dl class="col-md-5">
+    <dl class="col-md-6">
       <dt translate>Cluster Template</dt>
       <dd><a ng-href="ngdetails/OS::Magnum::ClusterTemplate/{$ item.cluster_template_id $}">{$ item.cluster_template_id $}</a></dd>
     </dl>
-    <dl class="col-md-3">
+    <dl class="col-md-6">
+      <dt translate>API Address</dt>
+      <dd>{$ item.api_address $}</dd>
+    </dl>
+  </div>
+  <div class="row">
+    <dl class="col-md-6">
+      <dt translate>Master Addresses</dt>
+      <dd ng-if="drawerCtrl.objLen(item.master_addresses) === 0" translate>None</dd>
+      <dd ng-repeat="addr in item.master_addresses">{$ addr $}</dd>
+    </dl>
+    <dl class="col-md-6">
       <dt translate>Node Addresses</dt>
+      <dd ng-if="drawerCtrl.objLen(item.node_addresses) === 0" translate>None</dd>
       <dd ng-repeat="addr in item.node_addresses">{$ addr $}</dd>
     </dl>
   </div>
