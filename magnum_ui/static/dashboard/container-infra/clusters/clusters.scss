@@ -1,0 +1,45 @@
+.pie-chart {
+  display: block;
+  .svg-pie-chart {
+    .slice {
+      &.exists {
+        fill: lighten(blue, 20%);
+      }
+      &.margin {
+        fill: $gray-lighter;
+      }
+    }
+  }
+  .pie-chart-legend {
+    display: inline-block;
+    margin-left: 20px;
+    .slice-legend {
+      .slice-key {
+        &.exists {
+          background-color: lighten(blue, 20%);
+        }
+        &.margin {
+          background-color: $gray-lighter;
+        }
+      }
+      .chartless {
+        &.exists {
+          color: lighten(blue, 20%);
+        }
+        &.margin {
+          color: $gray-lighter;
+        }
+      }
+    }
+  }
+}
+.chart-tooltip {
+  span.fa {
+    &.exists {
+      color: lighten(blue, 20%);
+    }
+    &.margin {
+      color: $gray-lighter;
+    }
+  }
+}

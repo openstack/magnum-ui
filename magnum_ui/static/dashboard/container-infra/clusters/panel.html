@@ -1,4 +1,27 @@
 <hz-resource-panel resource-type-name="OS::Magnum::Cluster">
+  <div ng-controller="horizon.dashboard.container-infra.clusters.clusterStatsController as ctrl">
+    <div class="row">
+      <div class="col-md-12 detail">
+        <div class="row">
+          <div class="col-md-6">
+            <pie-chart chart-data="ctrl.chartDataClusters"
+                       chart-settings="ctrl.chartSettings"></pie-chart>
+          </div>
+          <div class="col-md-6">
+            <h3 translate>Stats</h3>
+            <hr>
+            <dl class="dl-horizontal">
+              <dt translate>Clusters</dt>
+              <dd translate>Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}</dd>
+              <dt translate>Nodes</dt>
+              <dd>{$ ctrl.stats.nodes $}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
   <hz-resource-table resource-type-name="OS::Magnum::Cluster"
                      track-by="trackBy"></hz-resource-table>
 </hz-resource-panel>
