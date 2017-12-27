@@ -30,6 +30,7 @@
     var ctrl = this;
     ctrl.cluster_template = {};
     ctrl.image_uuid = "";
+    ctrl.objLen = objLen;
 
     $scope.context.loadPromise.then(onGetClusterTemplate);
 
@@ -44,6 +45,14 @@
           ctrl.image_uuid = image.id;
         }
       });
+    }
+
+    function objLen(obj) {
+      var length = 0;
+      if (typeof obj === 'object') {
+        length = Object.keys(obj).length;
+      }
+      return length;
     }
   }
 })();
