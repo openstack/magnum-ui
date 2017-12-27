@@ -78,6 +78,10 @@ def _create_patches(old, new):
     patch = []
 
     for key in new:
+        if key == 'labels':
+            # NOTE(shu-mutou): labels for cluster template and cluster
+            # are not updatable.
+            continue
         path = '/' + key
         if key in old and old[key] != new[key]:
             if new[key] is None or new[key] is '':
@@ -89,6 +93,10 @@ def _create_patches(old, new):
             patch.append({'op': 'add', 'path': path, 'value': new[key]})
 
     for key in old:
+        if key == 'labels':
+            # NOTE(shu-mutou): labels for cluster template and cluster
+            # are not updatable.
+            continue
         path = '/' + key
         if key not in new:
             patch.append({'op': 'remove', 'path': path})
