@@ -1,16 +1,17 @@
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2017. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 3.0.1.dev22\n"
+"Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-15 05:01+0000\n"
+"POT-Creation-Date: 2017-12-26 02:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-16 07:32+0000\n"
-"Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
+"PO-Revision-Date: 2017-12-27 02:46+0000\n"
+"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -41,6 +42,9 @@ msgstr "CHECK COMPLETE"
 msgid "COE"
 msgstr "COE"
 
+msgid "COE Version"
+msgstr "COE 버전"
+
 msgid "CREATE COMPLETE"
 msgstr "CREATE COMPLETE"
 
@@ -49,6 +53,9 @@ msgstr "CREATE FAILED"
 
 msgid "CREATE IN PROGRESS"
 msgstr "CREATE IN PROGRESS"
+
+msgid "CSR"
+msgstr "CSR"
 
 msgid "Cancel"
 msgstr "취소"
@@ -156,6 +163,9 @@ msgstr[0] "클러스터 템플릿 삭제 확인"
 
 msgid "Container Orchestration Engine"
 msgstr "컨테이너 오케스트레이션 엔진"
+
+msgid "Container Version"
+msgstr "컨테이너 버전"
 
 msgid "Create"
 msgstr "생성"
@@ -375,6 +385,9 @@ msgstr "노드 사양"
 msgid "Nodes"
 msgstr "노드"
 
+msgid "None"
+msgstr "없음"
+
 msgid "Overlay"
 msgstr "오버레이"
 
@@ -454,11 +467,20 @@ msgstr ""
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker 볼륨에 대한 크기를 GB로 지정합니다"
 
+msgid "Stack"
+msgstr "스택"
+
+msgid "Stack Faults"
+msgstr "스택 장애"
+
 msgid "Stack ID"
 msgstr "스택 ID"
 
 msgid "Status"
 msgstr "상태"
+
+msgid "Status Reason"
+msgstr "상태 원인"
 
 msgid "TLS Disabled"
 msgstr "TLS 가 사용되지 않음"
@@ -622,6 +644,9 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\"을(를) 선택했습니다. 선택을 확인하십시오. 삭제한 클러스터 템플릿은 복구"
 "할 수 없습니다."
+
+msgid "as follows:"
+msgstr "다음과 같이:"
 
 msgid "error"
 msgid_plural "errors"
