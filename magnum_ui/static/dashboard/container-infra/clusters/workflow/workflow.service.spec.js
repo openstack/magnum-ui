@@ -37,8 +37,8 @@
       keyDeferred = $q.defer();
       keyDeferred.resolve({data:{items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}}});
       spyOn(magnum, 'getClusterTemplates').and.returnValue(deferred.promise);
+      spyOn(nova, 'getFlavors').and.returnValue(deferred.promise);
       spyOn(nova, 'getKeypairs').and.returnValue(keyDeferred.promise);
-
     }));
 
     it('should be init', inject(function($timeout) {

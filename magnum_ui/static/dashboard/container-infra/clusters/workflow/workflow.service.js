@@ -37,7 +37,7 @@
     };
 
     function init(action, title, $scope) {
-      var schema, form, model;
+      var schema, form, model, nflavors, mflavors;
       var clusterTemplates = [{value:"", name: gettext("Choose a Cluster Template")}];
       var keypairs = [{value:"", name: gettext("Choose a Keypair")}];
       var dockerVolumeSizeDescription = gettext(
@@ -82,9 +82,21 @@
             title: gettext('Docker Volume Size (GB)'),
             type: 'number'
           },
+          'master_flavor_id': {
+            title: gettext('Master Flavor ID'),
+            type: 'string'
+          },
+          'flavor_id': {
+            title: gettext('Node Flavor ID'),
+            type: 'string'
+          },
           'rollback': {
             title: gettext('Rollback cluster on update failure'),
             type: 'boolean'
+          },
+          'labels': {
+            title: gettext('Labels'),
+            type: 'string'
           }
         }
       };
@@ -188,9 +200,53 @@
                       readonly: action === 'update'
                     }
                   ]
+                },
+                {
+                  type: 'section',
+                  htmlClass: 'col-xs-6',
+                  items: [
+                    {
+                      key: 'master_flavor_id',
+                      type: 'select',
+                      titleMap: mflavors,
+                      readonly: action === 'update'
+                    }
+                  ]
+                },
+                {
+                  type: 'section',
+                  htmlClass: 'col-xs-6',
+                  items: [
+                    {
+                      key: 'flavor_id',
+                      type: 'select',
+                      titleMap: nflavors,
+                      readonly: action === 'update'
+                    }
+                  ]
                 }
               ],
               required: true
+            },
+            {
+              title: gettext('Labels'),
+              help: basePath + 'clusters/workflow/labels.help.html',
+              type: 'section',
+              htmlClass: 'row',
+              items: [
+                {
+                  type: 'section',
+                  htmlClass: 'col-xs-12',
+                  items: [
+                    {
+                      key: 'labels',
+                      type: 'textarea',
+                      placeholder: gettext('KEY1=VALUE1, KEY2=VALUE2...'),
+                      readonly: action === 'update'
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -198,11 +254,23 @@
 
       magnum.getClusterTemplates().then(onGetClusterTemplates);
       nova.getKeypairs().then(onGetKeypairs);
+      nova.getFlavors(false, false).then(onGetFlavors);
 
       function onGetKeypairs(response) {
         angular.forEach(response.data.items, function(item) {
           keypairs.push({value: item.keypair.name, name: item.keypair.name});
         });
+      }
+
+      function onGetFlavors(response) {
+        nflavors = [{value:"", name: gettext("Choose a Flavor for the Node")}];
+        mflavors = [{value:"", name: gettext("Choose a Flavor for the Master Node")}];
+        angular.forEach(response.data.items, function(item) {
+          nflavors.push({value: item.name, name: item.name});
+          mflavors.push({value: item.name, name: item.name});
+        });
+        form[0].tabs[2].items[1].items[0].titleMap = nflavors;
+        form[0].tabs[2].items[2].items[0].titleMap = mflavors;
       }
 
       function onGetClusterTemplates(response) {
@@ -220,7 +288,10 @@
         rollback: false,
         discovery_url: "",
         create_timeout: null,
-        keypair: ""
+        keypair: "",
+        flavor_id: "",
+        master_flavor_id: "",
+        labels: ""
       };
 
       var config = {

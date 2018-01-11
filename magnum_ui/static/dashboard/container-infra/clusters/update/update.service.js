@@ -79,6 +79,16 @@
           ? response.data.keypair : "";
         config.model.docker_volume_size = response.data.docker_volume_size
           ? response.data.docker_volume_size : "";
+        var labels = "";
+        for (var key in response.data.labels) {
+          if (response.data.labels.hasOwnProperty(key)) {
+            if (labels !== "") {
+              labels += ",";
+            }
+            labels += key + "=" + response.data.labels[key];
+          }
+        }
+        config.model.labels = labels;
       }
 
       return modal.open(config).then(submit);
