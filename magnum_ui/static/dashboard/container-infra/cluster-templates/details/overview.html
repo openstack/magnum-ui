@@ -28,15 +28,15 @@
         <dd ng-if="ctrl.cluster_template.keypair_id!==null"><a href="project/key_pairs/{$ ctrl.cluster_template.keypair_id $}/" target="_self">{$ ctrl.cluster_template.keypair_id $}</a></dd>
         <dd ng-if="ctrl.cluster_template.keypair_id===null">-</dd>
         <dt translate>Flavor ID</dt>
-        <dd>{$ ctrl.cluster_template.flavor_id $}</dd>
+        <dd>{$ ctrl.cluster_template.flavor_id | noValue $}</dd>
         <dt translate>Master Flavor ID</dt>
-        <dd>{$ ctrl.cluster_template.master_flavor_id $}</dd>
+        <dd>{$ ctrl.cluster_template.master_flavor_id | noValue $}</dd>
         <dt translate>Volume Driver</dt>
-        <dd>{$ ctrl.cluster_template.volume_driver $}</dd>
+        <dd>{$ ctrl.cluster_template.volume_driver | noValue $}</dd>
         <dt translate>Docker Storage Driver</dt>
-        <dd>{$ ctrl.cluster_template.docker_storage_driver $}</dd>
+        <dd>{$ ctrl.cluster_template.docker_storage_driver | noValue $}</dd>
         <dt translate>Docker Volume Size</dt>
-        <dd>{$ ctrl.cluster_template.docker_volume_size | gb $}</dd>
+        <dd>{$ ctrl.cluster_template.docker_volume_size | gb | noValue $}</dd>
       </dl>
     </div>
   </div>
@@ -48,19 +48,19 @@
         <dt translate>Network Driver</dt>
         <dd>{$ ctrl.cluster_template.network_driver $}</dd>
         <dt translate>HTTP Proxy</dt>
-        <dd>{$ ctrl.cluster_template.http_proxy $}</dd>
+        <dd>{$ ctrl.cluster_template.http_proxy | noValue $}</dd>
         <dt translate>HTTPS Proxy</dt>
-        <dd>{$ ctrl.cluster_template.https_proxy $}</dd>
+        <dd>{$ ctrl.cluster_template.https_proxy | noValue $}</dd>
         <dt translate>No Proxy</dt>
-        <dd>{$ ctrl.cluster_template.no_proxy $}</dd>
+        <dd>{$ ctrl.cluster_template.no_proxy | noValue $}</dd>
         <dt translate>External Network ID</dt>
         <dd>{$ ctrl.cluster_template.external_network_id $}</dd>
         <dt translate>Fixed Network</dt>
-        <dd>{$ ctrl.cluster_template.fixed_network $}</dd>
+        <dd>{$ ctrl.cluster_template.fixed_network | noValue $}</dd>
         <dt translate>Fixed Subnet</dt>
-        <dd>{$ ctrl.cluster_template.fixed_subnet $}</dd>
+        <dd>{$ ctrl.cluster_template.fixed_subnet | noValue $}</dd>
         <dt translate>DNS</dt>
-        <dd>{$ ctrl.cluster_template.dns_nameserver $}</dd>
+        <dd>{$ ctrl.cluster_template.dns_nameserver | noValue $}</dd>
         <dt translate>Master LB Enabled</dt>
         <dd>{$ ctrl.cluster_template.master_lb_enabled | yesno $}</dd>
         <dt translate>Floating IP Enabled</dt>
@@ -71,10 +71,9 @@
       <h3 translate>Labels</h3>
       <hr>
       <dl class="dl-horizontal">
-        <div ng-repeat="(key, value) in ctrl.cluster_template.labels">
-          <dt>{$ key $}</dt>
-          <dd>{$ value $}</dd>
-        </div>
+        <dd ng-if="ctrl.objLen(ctrl.cluster_template.labels) === 0" translate>None</dd>
+        <dt ng-repeat-start="(key, value) in ctrl.cluster_template.labels">{$ key $}</dt>
+        <dd ng-repeat-end>{$ value $}</dd>
       </dl>
     </div>
   </div>
@@ -86,7 +85,7 @@
         <dt translate>Created</dt>
         <dd>{$ ctrl.cluster_template.created_at | date:'short' $}</dd>
         <dt translate>Updated</dt>
-        <dd>{$ ctrl.cluster_template.updated_at | date:'short' $}</dd>
+        <dd>{$ ctrl.cluster_template.updated_at | date:'short' | noValue $}</dd>
         <dt translate>ID</dt>
         <dd>{$ ctrl.cluster_template.id $}</dd>
       </dl>

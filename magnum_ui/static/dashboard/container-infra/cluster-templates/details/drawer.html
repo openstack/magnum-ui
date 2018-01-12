@@ -22,6 +22,7 @@
     </dl>
     <dl class="col-md-4">
       <dt translate>Labels</dt>
+      <dd ng-if="drawerCtrl.objLen(item.labels) === 0" translate>None</dd>
       <dd ng-repeat="(key, value) in item.labels">{$ key + '=' + value $}</dd>
     </dl>
   </div>
