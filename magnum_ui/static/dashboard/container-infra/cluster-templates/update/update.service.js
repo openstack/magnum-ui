@@ -91,6 +91,8 @@
           ? response.data.network_driver : "";
         config.model.volume_driver = response.data.volume_driver
           ? response.data.volume_driver : "";
+        config.model.insecure_registry = response.data.insecure_registry
+          ? response.data.insecure_registry : "";
         config.model.http_proxy = response.data.http_proxy
           ? response.data.http_proxy : "";
         config.model.https_proxy = response.data.https_proxy

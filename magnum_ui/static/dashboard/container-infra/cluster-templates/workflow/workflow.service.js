@@ -133,6 +133,10 @@
               placeholder: gettext('Specify the size in GB for the docker volume')
             }
           },
+          'insecure_registry': {
+            title: gettext('Insecure Registry'),
+            type: 'string'
+          },
           'network_driver': {
             title: gettext('Network Driver'),
             type: 'string'
@@ -340,6 +344,15 @@
                           key: 'docker_volume_size'
                         }
                       ]
+                    },
+                    {
+                      type: 'section',
+                      htmlClass: 'col-xs-12',
+                      items: [
+                        {
+                          key: 'insecure_registry'
+                        }
+                      ]
                     }
                   ]
                 }
@@ -457,6 +470,7 @@
         keypair_id: "",
         network_driver: "",
         volume_driver: "",
+        insecure_registry: "",
         http_proxy: "",
         https_proxy: "",
         no_proxy: "",
