@@ -29,17 +29,19 @@
   signCertificateService.$inject = [
     '$uibModal',
     'horizon.app.core.openstack-service-api.magnum',
-    'horizon.framework.util.actions.action-result.service',
-    'horizon.framework.util.i18n.gettext',
-    'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.toast.service',
     'horizon.dashboard.container-infra.clusters.basePath',
     'horizon.dashboard.container-infra.clusters.resourceType',
-    'horizon.dashboard.container-infra.clusters.sign-certificate-model'
+    'horizon.dashboard.container-infra.clusters.sign-certificate-model',
+    'horizon.framework.util.actions.action-result.service',
+    'horizon.framework.util.file.text-download',
+    'horizon.framework.util.i18n.gettext',
+    'horizon.framework.util.q.extensions',
+    'horizon.framework.widgets.toast.service'
   ];
 
   function signCertificateService(
-    $uibModal, magnum, actionResult, gettext, $qExtensions, toast, basePath, resourceType, model
+    $uibModal, magnum, basePath, resourceType, model, actionResult, textDownload,
+    gettext, $qExtensions, toast
   ) {
 
     var message = {
@@ -82,7 +84,7 @@
     }
 
     function success(response) {
-      magnum.downloadTextAsFile(response.data.pem, model.cluster_name + "_cert.pem");
+      textDownload.downloadTextFile(response.data.pem, model.cluster_name + "_cert.pem");
 
       response.data.id = response.data.uuid;
       toast.add('success', interpolate(message.success, [response.data.id]));

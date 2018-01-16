@@ -20,7 +20,7 @@
   describe('horizon.dashboard.container-infra.clusters.sign-certificate.service',
   function() {
 
-    var $q, service, magnum, deferred, fakeDeferred, model;
+    var $q, service, textDownload, deferred, fakeDeferred, model;
 
     var fakeModal = {
       result: {
@@ -44,10 +44,10 @@
       $q = _$q_;
       service = $injector.get(
         'horizon.dashboard.container-infra.clusters.sign-certificate.service');
-      magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
+      textDownload = $injector.get('horizon.framework.util.file.text-download');
       deferred = $q.defer();
       deferred.resolve({data: {uuid: 1}});
-      spyOn(magnum, 'downloadTextAsFile').and.returnValue(deferred.promise);
+      spyOn(textDownload, 'downloadTextFile').and.returnValue(deferred.promise);
 
       model = $injector.get('horizon.dashboard.container-infra.clusters.sign-certificate-model');
       fakeDeferred = $q.defer();
@@ -70,7 +70,7 @@
       $timeout.flush();
 
       expect(model.signCertificate).toHaveBeenCalled();
-      expect(magnum.downloadTextAsFile).toHaveBeenCalled();
+      expect(textDownload.downloadTextFile).toHaveBeenCalled();
 
     }));
 

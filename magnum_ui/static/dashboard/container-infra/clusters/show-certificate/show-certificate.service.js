@@ -27,12 +27,13 @@
       showCertificateService);
 
   showCertificateService.$inject = [
-    'horizon.framework.util.q.extensions',
-    'horizon.app.core.openstack-service-api.magnum'
+    'horizon.app.core.openstack-service-api.magnum',
+    'horizon.framework.util.file.text-download',
+    'horizon.framework.util.q.extensions'
   ];
 
   function showCertificateService(
-    $qExtensions, magnum
+    magnum, textDownload, $qExtensions
   ) {
 
     var service = {
@@ -51,7 +52,7 @@
     function perform(selected) {
       // get certificate
       return magnum.showCertificate(selected.id).success(function(response) {
-        magnum.downloadTextAsFile(response.pem, selected.name + "_ca.pem");
+        textDownload.downloadTextFile(response.pem, selected.name + "_ca.pem");
       });
     }
 
