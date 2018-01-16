@@ -205,7 +205,68 @@ class Stats(generic.View):
         item under this is a Stat.
         """
         result = magnum.stats_list(request)
+        return {'stats': {'clusters': result.clusters, 'nodes': result.nodes}}
+
+
+@urls.register
+class Quota(generic.View):
+    """API for retrieving a single Quota"""
+    url_regex =\
+        r'container_infra/quotas/(?P<project_id>[^/]+)/(?P<resource>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, project_id, resource):
+        """Get a specific quota"""
+        return magnum.quotas_show(request, project_id, resource).to_dict()
+
+    @rest_utils.ajax(data_required=True)
+    def patch(self, request, project_id, resource):
+        """Update a Quota.
+
+        Returns the Quota object on success.
+        """
+        params = request.DATA
+        updated = magnum.quotas_update(
+            request, project_id, resource, **params)
+        return rest_utils.CreatedResponse(
+            ('/api/container_infra/quotas/%s/%s' % project_id, resource),
+            updated.to_dict())
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, project_id, resource):
+        """Delete one Quota by id and resource.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        magnum.quotas_delete(request, project_id, resource)
+
+
+@urls.register
+class Quotas(generic.View):
+    """API for Magnum Quotas"""
+    url_regex = r'container_infra/quotas/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Quotas for a project.
+
+        The returned result is an object with property 'items' and each
+        item under this is a Quota.
+        """
+        result = magnum.quotas_list(request)
         return {'items': [change_to_id(n.to_dict()) for n in result]}
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request):
+        """Create a new Quota.
+
+        Returns the new Quota object on success.
+        """
+        created = magnum.quotas_create(request, **request.DATA)
+        return rest_utils.CreatedResponse(
+            ('/api/container_infra/quotas/%s/%s' % created.uuid,
+             created.resource),
+            created.to_dict())
 
 
 @urls.register

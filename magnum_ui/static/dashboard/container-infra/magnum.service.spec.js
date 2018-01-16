@@ -61,7 +61,6 @@
         "path": "/api/container_infra/clusters/123",
         "error": "Unable to retrieve the cluster.",
         "testInput": ["123"]
-
       },
       {
         "func": "getClusters",
@@ -160,6 +159,66 @@
         "data": [123],
         "error": "Unable to rotate the certificate.",
         "testInput": [123, [123]]
+      },
+      {
+        "func": "getQuotas",
+        "method": "get",
+        "path": "/api/container_infra/quotas/",
+        "error": "Unable to retrieve the quotas."
+      },
+      {
+        "func": "getQuota",
+        "method": "get",
+        "path": "/api/container_infra/quotas/123/Cluster",
+        "error": "Unable to retrieve the quota.",
+        "testInput": ["123", "Cluster"]
+      },
+      {
+        "func": "createQuota",
+        "method": "post",
+        "path": "/api/container_infra/quotas/123/Cluster",
+        "data": {
+          "project_id": "123",
+          "resource": "Cluster",
+          "hard_limit": "1"
+        },
+        "error": "Unable to create quota.",
+        "testInput": [
+          "123",
+          "Cluster",
+          {
+            "project_id": "123",
+            "resource": "Cluster",
+            "hard_limit": "1"
+          }
+        ]
+      },
+      {
+        "func": "updateQuota",
+        "method": "patch",
+        "path": "/api/container_infra/quotas/123/Cluster",
+        "data": {
+          "project_id": "123",
+          "resource": "Cluster",
+          "hard_limit": "1"
+        },
+        "error": "Unable to update quota.",
+        "testInput": [
+          "123",
+          "Cluster",
+          {
+            "project_id": "123",
+            "resource": "Cluster",
+            "hard_limit": "1"
+          }
+        ]
+      },
+      {
+        "func": "deleteQuota",
+        "method": "delete",
+        "path": "/api/container_infra/quotas/123/Cluster",
+        "error": "Unable to delete the quota with project id: 123 and resource: Cluster.",
+        "testInput": ["123", "Cluster"]
       },
       {
         "func": "getStats",

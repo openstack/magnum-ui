@@ -45,6 +45,11 @@
       signCertificate: signCertificate,
       rotateCertificate: rotateCertificate,
       getStats: getStats,
+      getQuotas: getQuotas,
+      getQuota: getQuota,
+      createQuota: createQuota,
+      updateQuota: updateQuota,
+      deleteQuota: deleteQuota,
       getNetworks: getNetworks,
       downloadTextAsFile: downloadTextAsFile
     };
@@ -181,6 +186,48 @@
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the stats.'));
         });
+    }
+
+    //////////////
+    // Quotas //
+    //////////////
+
+    function getQuotas() {
+      return apiService.get('/api/container_infra/quotas/')
+        .error(function() {
+          toastService.add('error', gettext('Unable to retrieve the quotas.'));
+        });
+    }
+
+    function getQuota(projectId, resource, suppressError) {
+      var promise = apiService.get('/api/container_infra/quotas/' + projectId + '/' + resource);
+      return suppressError ? promise : promise.error(function() {
+        toastService.add('error', gettext('Unable to retrieve the quota.'));
+      });
+    }
+
+    function createQuota(projectId, resource, params) {
+      return apiService.post('/api/container_infra/quotas/' + projectId + '/' + resource, params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to create quota.'));
+        });
+    }
+
+    function updateQuota(projectId, resource, params) {
+      return apiService.patch('/api/container_infra/quotas/' + projectId + '/' + resource, params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to update quota.'));
+        });
+    }
+
+    function deleteQuota(projectId, resource, suppressError) {
+      var promise = apiService.delete('/api/container_infra/quotas/' + projectId + '/' + resource);
+      return suppressError ? promise : promise.error(function() {
+        var msg = gettext('Unable to delete the quota with project id: %(projectId)s and ' +
+          'resource: %(resource)s.');
+        toastService.add('error',
+          interpolate(msg, { projectId: projectId, resource: resource }, true));
+      });
     }
 
     //////////////////
