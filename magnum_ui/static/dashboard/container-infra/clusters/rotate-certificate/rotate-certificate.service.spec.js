@@ -17,21 +17,20 @@
 
   describe('horizon.dashboard.container-infra.clusters.rotate-certificate.service', function() {
 
-    var service, selected, magnum;
-
-    function fakePromise() {
-      return { success: angular.noop };
-    }
+    var $q, service, selected, magnum, deferred;
 
     beforeEach(module('horizon.app.core'));
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.dashboard.container-infra.clusters'));
 
-    beforeEach(inject(function($injector) {
+    beforeEach(inject(function($injector, _$q_) {
+      $q = _$q_;
       service = $injector.get(
         'horizon.dashboard.container-infra.clusters.rotate-certificate.service');
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
-      spyOn(magnum, 'rotateCertificate').and.callFake(fakePromise);
+      deferred = $q.defer();
+      deferred.resolve({});
+      spyOn(magnum, 'rotateCertificate').and.returnValue(deferred.promise);
     }));
 
     it('should check the policy', function() {

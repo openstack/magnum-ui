@@ -58,7 +58,7 @@
 
     function perform(selected) {
       // rotate certificate
-      return magnum.rotateCertificate(selected.id).success(success);
+      return magnum.rotateCertificate(selected.id).then(success);
     }
 
     function success(response) {

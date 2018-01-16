@@ -16,22 +16,36 @@
   "use strict";
 
   describe('cluster templates service', function() {
-    var service, detailRoute;
+    var service, detailRoute, magnum;
     beforeEach(module('horizon.dashboard.container-infra.cluster-templates'));
     beforeEach(inject(function($injector) {
       service = $injector.get('horizon.dashboard.container-infra.clusters.service');
       detailRoute = $injector.get('horizon.app.core.detailRoute');
+      magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
     }));
 
     describe('getClustersPromise', function() {
       it("provides a promise", inject(function($q, $injector, $timeout) {
-        var magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
         var deferred = $q.defer();
         spyOn(magnum, 'getClusters').and.returnValue(deferred.promise);
         var result = service.getClustersPromise({});
         deferred.resolve({
           data:{
             items: [{id: 123, name: 'cluster1'}]
+          }
+        });
+        $timeout.flush();
+        expect(magnum.getClusters).toHaveBeenCalled();
+        expect(result.$$state.value.data.items[0].name).toBe('cluster1');
+      }));
+
+      it("provides a promise with updated_at", inject(function($q, $injector, $timeout) {
+        var deferred = $q.defer();
+        spyOn(magnum, 'getClusters').and.returnValue(deferred.promise);
+        var result = service.getClustersPromise({});
+        deferred.resolve({
+          data:{
+            items: [{id: 123, name: 'cluster1', updated_at: '2017-01-16'}]
           }
         });
         $timeout.flush();
@@ -46,7 +60,5 @@
         expect(result).toBe(detailRoute + "OS::Magnum::Cluster/123abc");
       }));
     });
-
   });
-
 })();

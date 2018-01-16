@@ -51,7 +51,7 @@
 
     function perform(selected) {
       // get certificate
-      return magnum.showCertificate(selected.id).success(function(response) {
+      return magnum.showCertificate(selected.id).then(function(response) {
         textDownload.downloadTextFile(response.pem, selected.name + "_ca.pem");
       });
     }
