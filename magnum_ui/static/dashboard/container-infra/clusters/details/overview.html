@@ -79,9 +79,7 @@
       <hr>
       <dl class="dl-horizontal">
         <dt translate>Stack ID</dt>
-        <dd><a ng-href="project/stacks/stack/{$ ctrl.cluster.stack_id $}" target="_self">
-          {$ ctrl.cluster.stack_id $}
-        </a></dd>
+        <dd>{$ ctrl.cluster.stack_id $}</dd>
         <dt translate>Stack Faults</dt>
         <dd ng-if="ctrl.objLen(ctrl.cluster.faults) === 0" translate>None</dd>
         <dd ng-if="ctrl.objLen(ctrl.cluster.faults) > 0" translate>as follows:</dd>
