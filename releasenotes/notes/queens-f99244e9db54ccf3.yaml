@@ -1,0 +1,48 @@
+---
+features:
+  - >
+    Used text-download service on horizon. The text-download service have
+    been ported from Magnum UI to Horizon, so we use it.
+  - >
+    Added API service for Quotas. APIs for CLI, REST API for Ajax
+    and REST service for Angular are added. Also stats and quota
+    information are added into cluster table view.
+  - >
+    insecure_registry for cluster template creation is added.
+    This parameter is also shown in update dialog and details view.
+  - >
+    Filled up empty values with '-' on table view and details view
+    using noValue filters. Also show 'None' for empty objects.
+  - >
+    flavor_id and master_flavor_id parameters for cluster creation
+    are added. These parameters are originally set by cluster template,
+    but we can customize them when cluster create now.
+  - >
+    Added some attributes for cluster to show.
+    Keypair, API address and Master Addresses are added into
+    drawer on table view.
+    Docker Volume Size, Stack Faults, Master Flavor ID, Node Flavor ID,
+    COE Version, Container Version, Labels and Status Reason are
+    added into details view.
+  - >
+    The load-edit directive is used. The CSR field on Sign Certificate
+    dialog use load-edit directive newly added into Horizon.
+issues:
+  - >
+    [`bug/1638863 <https://bugs.launchpad.net/magnum/+bug/1638863>`_]
+    Magnum has issue for updating labels of cluster template and cluster.
+  - >
+    Removed link to Stack. Panel for Stack, i.e. Heat Dashboard,
+    was separated to independent UI Plugin.
+    So we removed link to Stack panel on details view for Cluster.
+    We might restore the link if we can find the installed plugins
+    and paths to link.
+fixes:
+  - >
+    [`bug/1742599 <https://bugs.launchpad.net/magnum-ui/+bug/1742599>`_]
+    Fixed issue the deleted item is selected again with batch delete.
+    Items recently deleted with batch action had been shown in deletion
+    confirmation dialog when execute the batch delete action again.
+    And this had caused the conflict error due to trying to delete
+    unexisting item.
+
