@@ -2,16 +2,17 @@
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # jtjang <jang.jitae@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Magnum UI Release Notes 3.0.1\n"
+"Project-Id-Version: Magnum UI Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-27 23:54+0000\n"
+"POT-Creation-Date: 2018-01-24 06:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-09-20 05:25+0000\n"
-"Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
+"PO-Revision-Date: 2018-01-29 12:27+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -166,8 +167,21 @@ msgstr ""
 msgid "Support python 3.5."
 msgstr "파이썬 3.5를 지원합니다."
 
+msgid "Switch theme for documentation from oslosphinx to openstackdocstheme."
+msgstr "oslosphinx에서 openstackdocstheme로 문서 테마 전환."
+
 msgid "Switch to reno for managing release notes."
 msgstr "릴리즈 노트를 관리하려면 reno로 전환하십시오."
+
+msgid "Update actions are added for cluster template and cluster."
+msgstr "클러스터 템플릿 및 클러스터에 대해 수행 업데이트를 추가하였습니다."
+
+msgid ""
+"Update actions are added for cluster template and cluster. Also, the form "
+"maintainability is proceeded by angular-json-schema."
+msgstr ""
+"클러스터 템플릿 및 클러스터에 대해 수행 업데이트를 추가하였습니다. 또한, 폼 "
+"유지 관리를 angular-json-schema에 의해 진행합니다."
 
 msgid "Upgrade Notes"
 msgstr "업그레이드 노트"

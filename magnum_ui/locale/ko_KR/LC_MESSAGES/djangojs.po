@@ -2,16 +2,17 @@
 # ByungYeol Woo <wby1089@gmail.com>, 2017. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-26 02:11+0000\n"
+"POT-Creation-Date: 2018-01-24 06:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-12-27 02:46+0000\n"
-"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
+"PO-Revision-Date: 2018-01-29 12:26+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -35,6 +36,13 @@ msgid ""
 msgstr ""
 "클러스터 템플릿과 연관시킬 키=값 쌍 형식의 임의 레이블입니다. 여러 번 사용할 "
 "수 있습니다."
+
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a "
+"clusters. May be used multiple times."
+msgstr ""
+"클러스터와 연관시킬 키=값 쌍 형식의 임의 레이블입니다. 여러 번 사용할 수 있습"
+"니다."
 
 msgid "CHECK COMPLETE"
 msgstr "CHECK COMPLETE"
@@ -251,6 +259,9 @@ msgstr "레지스트리 활성화"
 msgid "Enable docker registry in the cluster temlate. Default: False"
 msgstr "클러스터 템플릿 내에서 docker 레지스트리를 활성화합니다. 기본값: False"
 
+msgid "Exists"
+msgstr "Exists"
+
 msgid "External Network ID"
 msgstr "외부 네트워크 ID"
 
@@ -313,6 +324,9 @@ msgstr "무제한"
 msgid "Info"
 msgstr "정보"
 
+msgid "Insecure Registry"
+msgstr "보안에 취약한 레지스트리"
+
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
@@ -327,6 +341,9 @@ msgstr "레이블"
 
 msgid "Make cluster template public. Default: False"
 msgstr "클러스터를 공용으로 만듭니다. 기본값: False"
+
+msgid "Margin"
+msgstr "Margin"
 
 msgid "Master Addresses"
 msgstr "마스터 주소"
@@ -378,6 +395,9 @@ msgstr "노드 주소"
 
 msgid "Node Count"
 msgstr "노드 수"
+
+msgid "Node Flavor ID"
+msgstr "노드 Flavor ID"
 
 msgid "Node Spec"
 msgstr "노드 사양"
@@ -476,6 +496,9 @@ msgstr "스택 장애"
 msgid "Stack ID"
 msgstr "스택 ID"
 
+msgid "Stats"
+msgstr "Stats"
+
 msgid "Status"
 msgstr "상태"
 
@@ -487,6 +510,9 @@ msgstr "TLS 가 사용되지 않음"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "이 클러스터 템플릿에 사용할 DNS 네임 서버입니다."
+
+msgid "The URL of docker registry."
+msgstr "Docker 레지스트리 URL."
 
 msgid "The cluster node count."
 msgstr "클러스터 노드 수입니다."
@@ -546,6 +572,9 @@ msgstr "클러스터 템플릿을 생성할 수 없습니다."
 msgid "Unable to create cluster."
 msgstr "클러스터를 생성할 수 없습니다."
 
+msgid "Unable to create quota."
+msgstr "할당량을 생성할 수 없습니다."
+
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
@@ -570,6 +599,14 @@ msgstr "ID가 %(id)s인 클러스터를 삭제할 수 없습니다."
 msgid "Unable to delete the clusters."
 msgstr "클러스터를 삭제할 수 없습니다."
 
+#, python-format
+msgid ""
+"Unable to delete the quota with project id: %(projectId)s and resource: "
+"%(resource)s."
+msgstr ""
+"프로젝트 ID: %(projectId)s 및 자원: %(resource)s 에 대한 할당량을 삭제할 수 "
+"없습니다."
+
 msgid "Unable to retrieve the certificate."
 msgstr "인증서를 가져올 수 없습니다."
 
@@ -588,6 +625,12 @@ msgstr "클러스터를 가져올 수 없습니다."
 msgid "Unable to retrieve the networks."
 msgstr "네트워크를 검색할 수 없습니다."
 
+msgid "Unable to retrieve the quota."
+msgstr "해당 할당량을 가져올 수 없습니다."
+
+msgid "Unable to retrieve the quotas."
+msgstr "할당량을 가져올 수 없습니다."
+
 msgid "Unable to retrieve the stats."
 msgstr "통계를 검색할 수 없습니다."
 
@@ -603,6 +646,9 @@ msgstr "클러스터 템플릿을 업데이트 할 수 없습니다."
 msgid "Unable to update cluster."
 msgstr "클러스터를 업데이트 할 수 없습니다."
 
+msgid "Unable to update quota."
+msgstr "할당량을 업데이트할 수 없습니다."
+
 msgid "Update Cluster"
 msgstr "클러스터 업데이트"
 
@@ -611,6 +657,9 @@ msgstr "클러스터 템플릿을 업데이트 합니다."
 
 msgid "Updated"
 msgstr "업데이트됨"
+
+msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
+msgstr "{$ ctrl.quota.clusters $} 에서 {$ ctrl.stats.clusters $} 사용함"
 
 msgid "Volume Driver"
 msgstr "볼륨 드라이버"
