@@ -1,15 +1,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 3.0.1.dev22\n"
+"Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-15 05:01+0000\n"
+"POT-Creation-Date: 2018-02-05 01:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-07 06:58+0000\n"
+"PO-Revision-Date: 2018-02-05 05:08+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -35,11 +36,21 @@ msgstr ""
 "クラスターテンプレートには、「key=value」形式で任意のラベルを関連付けできま"
 "す。複数個指定できます。"
 
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a "
+"clusters. May be used multiple times."
+msgstr ""
+"クラスターには、「key=value」形式で任意のラベルを関連付けできます。複数個指定"
+"できます。"
+
 msgid "CHECK COMPLETE"
 msgstr "チェック完了"
 
 msgid "COE"
 msgstr "COE"
+
+msgid "COE Version"
+msgstr "COE バージョン"
 
 msgid "CREATE COMPLETE"
 msgstr "作成完了"
@@ -49,6 +60,9 @@ msgstr "作成に失敗"
 
 msgid "CREATE IN PROGRESS"
 msgstr "作成中"
+
+msgid "CSR"
+msgstr "CSR"
 
 msgid "Cancel"
 msgstr "取り消し"
@@ -157,6 +171,9 @@ msgstr[0] "クラスターテンプレートの削除の確認"
 msgid "Container Orchestration Engine"
 msgstr "コンテナーオーケストレーションエンジン"
 
+msgid "Container Version"
+msgstr "コンテナーバージョン"
+
 msgid "Create"
 msgstr "作成"
 
@@ -244,6 +261,9 @@ msgstr ""
 "このクラスターテンプレートにおいて、 Docker のレジストリーを有効にします。デ"
 "フォルト: False"
 
+msgid "Exists"
+msgstr "使用"
+
 msgid "External Network ID"
 msgstr "外部ネットワーク ID"
 
@@ -306,6 +326,9 @@ msgstr "無制限"
 msgid "Info"
 msgstr "情報"
 
+msgid "Insecure Registry"
+msgstr "セキュアーではないレジストリー"
+
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
@@ -320,6 +343,9 @@ msgstr "ラベル"
 
 msgid "Make cluster template public. Default: False"
 msgstr "クラスターテンプレートをパブリックに設定します。デフォルト: False"
+
+msgid "Margin"
+msgstr "空き"
 
 msgid "Master Addresses"
 msgstr "マスターのアドレス"
@@ -372,11 +398,17 @@ msgstr "ノードのアドレス"
 msgid "Node Count"
 msgstr "ノードの数"
 
+msgid "Node Flavor ID"
+msgstr "ノードフレーバー ID"
+
 msgid "Node Spec"
 msgstr "ノードのスペック"
 
 msgid "Nodes"
 msgstr "ノード"
+
+msgid "None"
+msgstr "なし"
 
 msgid "Overlay"
 msgstr "Overlay"
@@ -459,17 +491,32 @@ msgstr ""
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker のボリュームのサイズを GB 単位で指定してください"
 
+msgid "Stack"
+msgstr "スタック"
+
+msgid "Stack Faults"
+msgstr "スタックの失敗"
+
 msgid "Stack ID"
 msgstr "スタック ID"
 
+msgid "Stats"
+msgstr "統計情報"
+
 msgid "Status"
 msgstr "ステータス"
+
+msgid "Status Reason"
+msgstr "ステータスの理由"
 
 msgid "TLS Disabled"
 msgstr "TLS の無効化"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "このクラスターテンプレートで使用する DNS ネームサーバー。"
+
+msgid "The URL of docker registry."
+msgstr "Docker レジストリーの URL"
 
 msgid "The cluster node count."
 msgstr "クラスターノードの数"
@@ -533,6 +580,9 @@ msgstr "クラスターテンプレートを作成できません。"
 msgid "Unable to create cluster."
 msgstr "クラスターを作成できません"
 
+msgid "Unable to create quota."
+msgstr "クォータを作成できません。"
+
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
@@ -557,6 +607,14 @@ msgstr "ID %(id)s のクラスターを削除できません。"
 msgid "Unable to delete the clusters."
 msgstr "クラスターを削除できません。"
 
+#, python-format
+msgid ""
+"Unable to delete the quota with project id: %(projectId)s and resource: "
+"%(resource)s."
+msgstr ""
+"次のプロジェクト ID のクォータを削除できません: %(projectId)s and resource: "
+"%(resource)s."
+
 msgid "Unable to retrieve the certificate."
 msgstr "証明書を取得できません。"
 
@@ -575,6 +633,12 @@ msgstr "クラスターの一覧を取得できません"
 msgid "Unable to retrieve the networks."
 msgstr "ネットワーク一覧を取得できません。"
 
+msgid "Unable to retrieve the quota."
+msgstr "クォータを取得できません。"
+
+msgid "Unable to retrieve the quotas."
+msgstr "クォータの一覧を取得できません。"
+
 msgid "Unable to retrieve the stats."
 msgstr "統計を取得できません。"
 
@@ -590,6 +654,9 @@ msgstr "クラスターテンプレートを更新できません。"
 msgid "Unable to update cluster."
 msgstr "クラスターを更新できません。"
 
+msgid "Unable to update quota."
+msgstr "クォータを更新できません。"
+
 msgid "Update Cluster"
 msgstr "クラスターの更新"
 
@@ -598,6 +665,9 @@ msgstr "クラスターテンプレートの更新"
 
 msgid "Updated"
 msgstr "更新時刻"
+
+msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
+msgstr "{$ ctrl.quota.clusters $} 中 {$ ctrl.stats.clusters $} 使用"
 
 msgid "Volume Driver"
 msgstr "ボリュームドライバー"
@@ -631,6 +701,9 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\" を選択しました。選択内容を確認してください。削除されたクラスターテンプ"
 "レートは元に戻せません。"
+
+msgid "as follows:"
+msgstr "以下の通り:"
 
 msgid "error"
 msgid_plural "errors"
