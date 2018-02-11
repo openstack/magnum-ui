@@ -2,16 +2,17 @@
 # Robert Simai <robert.simai@suse.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
+# Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 3.0.1.dev22\n"
+"Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-15 05:01+0000\n"
+"POT-Creation-Date: 2018-02-09 00:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-14 11:20+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2018-02-10 09:40+0000\n"
+"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -36,11 +37,21 @@ msgstr ""
 "Beliebige Bezeichnungen in der Form Schlüssel=Wert, zu verbunden mit einer "
 "Clustervorlage. Kann mehrmals verwendet werden."
 
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a "
+"clusters. May be used multiple times."
+msgstr ""
+"Beliebige Beschriftungen in Form von Schlüssel = Wert-Paaren, die mit einem "
+"Cluster verknüpft werden sollen. Kann mehrmals verwendet werden."
+
 msgid "CHECK COMPLETE"
 msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
 
 msgid "COE"
 msgstr "COE"
+
+msgid "COE Version"
+msgstr "COE Version"
 
 msgid "CREATE COMPLETE"
 msgstr "ERSTELLUNG ABGESCHLOSSEN"
@@ -50,6 +61,9 @@ msgstr "ERSTELLUNG FEHLGESCHLAGEN"
 
 msgid "CREATE IN PROGRESS"
 msgstr "ERSTELLUNG IN ARBEIT"
+
+msgid "CSR"
+msgstr "CSR"
 
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -160,6 +174,9 @@ msgstr[1] "Löschen der Clustervorlagen bestätigen"
 msgid "Container Orchestration Engine"
 msgstr "Container-Orchestrierungswerkzeug"
 
+msgid "Container Version"
+msgstr "Container Version"
+
 msgid "Create"
 msgstr "Erstellen"
 
@@ -248,6 +265,9 @@ msgstr "Aktiviere Registry"
 msgid "Enable docker registry in the cluster temlate. Default: False"
 msgstr "Aktiviere Docker Registry in der Clustervorlage. Standard: Falsch"
 
+msgid "Exists"
+msgstr "Existiert"
+
 msgid "External Network ID"
 msgstr "Externe Netzwerk-ID"
 
@@ -310,6 +330,9 @@ msgstr "Unendlich"
 msgid "Info"
 msgstr "Info"
 
+msgid "Insecure Registry"
+msgstr "Unsichere Registrierung"
+
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
@@ -324,6 +347,9 @@ msgstr "Bezeichnungen"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Clustervorlage öffentlich machen. Standard: Falsch"
+
+msgid "Margin"
+msgstr "Spanne"
 
 msgid "Master Addresses"
 msgstr "Masteradressen"
@@ -376,11 +402,17 @@ msgstr "Knotenadressen"
 msgid "Node Count"
 msgstr "Knotenzähler"
 
+msgid "Node Flavor ID"
+msgstr "Knoten-Varianten-ID"
+
 msgid "Node Spec"
 msgstr "Knotenspezifikation"
 
 msgid "Nodes"
 msgstr "Knoten"
+
+msgid "None"
+msgstr "kein"
 
 msgid "Overlay"
 msgstr "Overlay"
@@ -462,17 +494,32 @@ msgstr ""
 msgid "Specify the size in GB for the docker volume"
 msgstr "Gibt die Grösse des Docker Datenträgers in GB an"
 
+msgid "Stack"
+msgstr "Stapel"
+
+msgid "Stack Faults"
+msgstr "Stapelfehler"
+
 msgid "Stack ID"
 msgstr "Stack ID"
 
+msgid "Stats"
+msgstr "Stats"
+
 msgid "Status"
 msgstr "Status"
+
+msgid "Status Reason"
+msgstr "Statusgrund"
 
 msgid "TLS Disabled"
 msgstr "TLS deaktiviert"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "Der DNS Nameserver zur Benutzung in dieser Cluster Vorlage"
+
+msgid "The URL of docker registry."
+msgstr "Die URL der Docker-Registrierung"
 
 msgid "The cluster node count."
 msgstr "Die Anzahl der Clusterknoten."
@@ -537,6 +584,9 @@ msgstr "Clustervorlage kann nicht erstellt werden."
 msgid "Unable to create cluster."
 msgstr "Cluster kann nicht erzeugt werden."
 
+msgid "Unable to create quota."
+msgstr "Konnte Kontingent nicht erstellen."
+
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
@@ -563,6 +613,14 @@ msgstr "Cluster mit der ID %(id)s kann nicht gelöscht werden."
 msgid "Unable to delete the clusters."
 msgstr "Die Cluster konnten nicht gelöscht werden."
 
+#, python-format
+msgid ""
+"Unable to delete the quota with project id: %(projectId)s and resource: "
+"%(resource)s."
+msgstr ""
+"Konnte Kontingent mit der Project-ID: %(projectId)s und Ressource: "
+"%(resource)s nicht löschen."
+
 msgid "Unable to retrieve the certificate."
 msgstr "Zertifikat kann nicht abgerufen werden."
 
@@ -581,6 +639,12 @@ msgstr "Cluster können nicht abgerufen werden."
 msgid "Unable to retrieve the networks."
 msgstr "Die Netzwerke können nicht abgerufen werden."
 
+msgid "Unable to retrieve the quota."
+msgstr "Konnte Kontingent nicht abrufen."
+
+msgid "Unable to retrieve the quotas."
+msgstr "Kontingente können nicht abgerufen werden."
+
 msgid "Unable to retrieve the stats."
 msgstr "Statistiken können nicht abgerufen werden."
 
@@ -596,6 +660,9 @@ msgstr "Clustervorlage kann nicht aktualisiert werden."
 msgid "Unable to update cluster."
 msgstr "Cluster kann nicht aktualisiert werden."
 
+msgid "Unable to update quota."
+msgstr "Konnte Kontingent nicht aktualisieren."
+
 msgid "Update Cluster"
 msgstr "Cluster aktualisieren"
 
@@ -604,6 +671,9 @@ msgstr "Clustervorlage aktualisieren"
 
 msgid "Updated"
 msgstr "Aktualisiert"
+
+msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
+msgstr "Benutzt {$ ctrl.stats.clusters $} von {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
 msgstr "Datenträgertreiber"
@@ -643,6 +713,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
 "Clustervorlagen können nicht wiederhergestellt werden."
+
+msgid "as follows:"
+msgstr "wie folgt:"
 
 msgid "error"
 msgid_plural "errors"
