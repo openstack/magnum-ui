@@ -1,15 +1,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2017. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
+# Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 3.0.1.dev22\n"
+"Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-15 05:01+0000\n"
+"POT-Creation-Date: 2018-02-14 06:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-14 07:35+0000\n"
+"PO-Revision-Date: 2018-02-14 02:07+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt-BR\n"
@@ -35,11 +36,21 @@ msgstr ""
 "Etiquetas arbitrárias no formato de pares de chave=valor para associar com "
 "modelos de cluster. Pode ser utilizado várias vezes."
 
+msgid ""
+"Arbitrary labels in the form of key=value pairs to associate with a "
+"clusters. May be used multiple times."
+msgstr ""
+"Etiquetas arbitrárias na forma de pares de chave=valor para associar com um "
+"cluster. Podem ser usadas várias vezes."
+
 msgid "CHECK COMPLETE"
 msgstr "VERIFICAÇÃO FINALIZADA"
 
 msgid "COE"
 msgstr "MOC"
+
+msgid "COE Version"
+msgstr "Versão COE"
 
 msgid "CREATE COMPLETE"
 msgstr "CRIAÇÃO FINALIZADA"
@@ -49,6 +60,9 @@ msgstr "CRIAÇÃO FALHOU"
 
 msgid "CREATE IN PROGRESS"
 msgstr "CRIAÇÃO EM PROGRESSO"
+
+msgid "CSR"
+msgstr "CSR"
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -159,6 +173,9 @@ msgstr[1] "Confirmar Exclusão de Modelos de Cluster"
 msgid "Container Orchestration Engine"
 msgstr "Mecanismo de Orquestração de Contêiner"
 
+msgid "Container Version"
+msgstr "Versão do Contêiner"
+
 msgid "Create"
 msgstr "Criar"
 
@@ -247,6 +264,9 @@ msgstr "Habilitar Registro"
 msgid "Enable docker registry in the cluster temlate. Default: False"
 msgstr "Habilitar registro docker no modelo de cluster. Padrão: False"
 
+msgid "Exists"
+msgstr "Existe"
+
 msgid "External Network ID"
 msgstr "ID da Rede Externa"
 
@@ -310,6 +330,9 @@ msgstr "Infinito"
 msgid "Info"
 msgstr "Informação"
 
+msgid "Insecure Registry"
+msgstr "Registro Inseguro"
+
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "CHAVE1=VALOR1, CHAVE2=VALOR2..."
 
@@ -324,6 +347,9 @@ msgstr "Rótulos"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Tornar o modelo de cluster público. Padrão: False"
+
+msgid "Margin"
+msgstr "Margem"
 
 msgid "Master Addresses"
 msgstr "Endereço Principal"
@@ -376,11 +402,17 @@ msgstr "Endereços dos Nós"
 msgid "Node Count"
 msgstr "Contagem de nós"
 
+msgid "Node Flavor ID"
+msgstr "ID de Flavor do Nó"
+
 msgid "Node Spec"
 msgstr "Especificação do Nó"
 
 msgid "Nodes"
 msgstr "Nós"
+
+msgid "None"
+msgstr "Nenhum"
 
 msgid "Overlay"
 msgstr "Overlay"
@@ -464,17 +496,32 @@ msgstr ""
 msgid "Specify the size in GB for the docker volume"
 msgstr "Especifique o tamanho em GB que o volume do docker usará."
 
+msgid "Stack"
+msgstr "Pilha"
+
+msgid "Stack Faults"
+msgstr "Falhas de Pilha"
+
 msgid "Stack ID"
 msgstr "ID Pilha"
 
+msgid "Stats"
+msgstr "Estatísticas"
+
 msgid "Status"
 msgstr "Status"
+
+msgid "Status Reason"
+msgstr "Motivo do Estado"
 
 msgid "TLS Disabled"
 msgstr "TLS Desabilitado"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "O nome do servidor DNS a utilizar para este modelo de cluster"
+
+msgid "The URL of docker registry."
+msgstr "A URL de registro docker."
 
 msgid "The cluster node count."
 msgstr "A contagem de nós do cluster."
@@ -536,6 +583,9 @@ msgstr "Não é possível criar modelo de cluster."
 msgid "Unable to create cluster."
 msgstr "Não é possível criar cluster."
 
+msgid "Unable to create quota."
+msgstr "Não é possível criar quota."
+
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
@@ -562,6 +612,14 @@ msgstr "Não é possível excluir o cluster com id:  %(id)s"
 msgid "Unable to delete the clusters."
 msgstr "Não é possível excluir os clusters."
 
+#, python-format
+msgid ""
+"Unable to delete the quota with project id: %(projectId)s and resource: "
+"%(resource)s."
+msgstr ""
+"Não é possível excluir a quota com ID de projeto: %(projectId)s e recurso: "
+"%(resource)s."
+
 msgid "Unable to retrieve the certificate."
 msgstr "Não é possível recuperar o certificado."
 
@@ -580,6 +638,12 @@ msgstr "Não é possível recuperar os clusters."
 msgid "Unable to retrieve the networks."
 msgstr "Não é possível recuperar as redes."
 
+msgid "Unable to retrieve the quota."
+msgstr "Não é possível recuperar a quota."
+
+msgid "Unable to retrieve the quotas."
+msgstr "Não é possível recuperar as quotas."
+
 msgid "Unable to retrieve the stats."
 msgstr "Não é possível recuperar as estatísticas."
 
@@ -595,6 +659,9 @@ msgstr "Não é possível atualizar modelo de cluster."
 msgid "Unable to update cluster."
 msgstr "Não é possível atualizar cluster."
 
+msgid "Unable to update quota."
+msgstr "Não é possível atualizar quota."
+
 msgid "Update Cluster"
 msgstr "Atualizar Cluster"
 
@@ -603,6 +670,9 @@ msgstr "Atualizar Modelo de Cluster"
 
 msgid "Updated"
 msgstr "Atualizado"
+
+msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
+msgstr "Utilizados {$ ctrl.stats.clusters $} de {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
 msgstr "Driver do Volume"
@@ -642,6 +712,9 @@ msgstr[0] ""
 msgstr[1] ""
 "Você selecionou \"%s\". Por favor, confirme sua seleção. Modelos de cluster "
 "excluídos são irrecuperáveis."
+
+msgid "as follows:"
+msgstr "como segue:"
 
 msgid "error"
 msgid_plural "errors"
