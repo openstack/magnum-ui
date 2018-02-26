@@ -2,16 +2,17 @@
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # Mateusz Kowalski <mateusz.kowalski@cern.ch>, 2017. #zanata
 # Pascal Larivée <pascal@larivee.photo>, 2017. #zanata
+# JF Taltavull <jftalta@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui 3.0.1.dev22\n"
+"Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-12-15 05:01+0000\n"
+"POT-Creation-Date: 2018-02-23 09:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-10 03:15+0000\n"
-"Last-Translator: Pascal Larivée <pascal@larivee.photo>\n"
+"PO-Revision-Date: 2018-02-25 06:29+0000\n"
+"Last-Translator: Gérald LONLAS <g.lonlas@gmail.com>\n"
 "Language-Team: French\n"
 "Language: fr\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -41,6 +42,9 @@ msgstr "VÉRIFICATION TERMINÉE"
 
 msgid "COE"
 msgstr "COE"
+
+msgid "COE Version"
+msgstr "Version du COE"
 
 msgid "CREATE COMPLETE"
 msgstr "CRÉATION TERMINÉE"
@@ -194,11 +198,11 @@ msgstr[1] "Supprimer les clusters"
 
 msgid "Delete Cluster Template"
 msgid_plural "Delete Cluster Templates"
-msgstr[0] "Supprimer le Modèle de Cluster"
-msgstr[1] "Supprimer les Modèles de Cluster"
+msgstr[0] "Supprimer le modèle de cCluster"
+msgstr[1] "Supprimer les modèles de cluster"
 
 msgid "Delete Cluster Templates"
-msgstr "Supprimer un modèle de cluster"
+msgstr "Supprimer les modèles de cluster"
 
 msgid "Delete Clusters"
 msgstr "Supprimer les clusters"
@@ -248,6 +252,9 @@ msgstr "Activer le registre"
 msgid "Enable docker registry in the cluster temlate. Default: False"
 msgstr ""
 "Activer le registre Docker dans le modèle du cluster. Par défaut : False"
+
+msgid "Exists"
+msgstr "Existe"
 
 msgid "External Network ID"
 msgstr "ID du réseau externe"
@@ -326,6 +333,9 @@ msgstr "Libellés"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Rendre le modèle de cluster public. Par défaut : False"
+
+msgid "Margin"
+msgstr "Marge"
 
 msgid "Master Addresses"
 msgstr "Adresse du nœud Master"
@@ -473,6 +483,9 @@ msgstr "Spécifier la taille en Go pour le volume Docker."
 msgid "Stack ID"
 msgstr "ID Stack"
 
+msgid "Stats"
+msgstr "Stats"
+
 msgid "Status"
 msgstr "Statut"
 
@@ -481,6 +494,9 @@ msgstr "TLS désactivé"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "Le DNS nameserver à utiliser pour ce modèle de cluster."
+
+msgid "The URL of docker registry."
+msgstr "URL de la registry docker"
 
 msgid "The cluster node count."
 msgstr "Nombre de noeuds du cluster"
@@ -543,6 +559,9 @@ msgstr "Impossible de créer le modèle de cluster."
 msgid "Unable to create cluster."
 msgstr "Impossible de créer le cluster."
 
+msgid "Unable to create quota."
+msgstr "Impossible de créer le quota."
+
 #, python-format
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
@@ -585,10 +604,16 @@ msgid "Unable to retrieve the clusters."
 msgstr "Impossible de récupérer les clusters."
 
 msgid "Unable to retrieve the networks."
-msgstr "Impossible d'obtenir les réseaux."
+msgstr "Impossible de récupérer les réseaux."
+
+msgid "Unable to retrieve the quota."
+msgstr "Impossible de récupérer le quota."
+
+msgid "Unable to retrieve the quotas."
+msgstr "Impossible de récupérer les quotas."
 
 msgid "Unable to retrieve the stats."
-msgstr "Impossible d'obtenir des statistiques."
+msgstr "Impossible de récupérer les statistiques."
 
 msgid "Unable to rotate the certificate."
 msgstr "Impossible de mettre à jour le certificat."
@@ -602,14 +627,20 @@ msgstr "Impossible de mettre à jour le modèle de cluster."
 msgid "Unable to update cluster."
 msgstr "Impossible de mettre à jour le cluster."
 
+msgid "Unable to update quota."
+msgstr "Impossible de mettre à jour le quota."
+
 msgid "Update Cluster"
 msgstr "Mettez à jour le cluster"
 
 msgid "Update Cluster Template"
-msgstr "Mettre à jour le Modèle de Cluster"
+msgstr "Mettre à jour le modèle de cluster"
 
 msgid "Updated"
 msgstr "Mis à jour"
+
+msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
+msgstr "Utilisés {$ ctrl.stats.clusters $} sur {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
 msgstr "Pilote de volume"
@@ -648,7 +679,7 @@ msgstr[0] ""
 "de cluster supprimé ne sera pas récupérable."
 msgstr[1] ""
 "Vous avez sélectionné \"%s\". Veuillez confirmer votre sélection. Les "
-"modèles de cluster supprimés ne seront pas récupérable.."
+"modèles de cluster supprimés ne seront pas récupérables."
 
 msgid "error"
 msgid_plural "errors"
