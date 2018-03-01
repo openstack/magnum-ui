@@ -5,15 +5,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Magnum UI Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-22 17:10+0000\n"
+"POT-Creation-Date: 2018-02-26 11:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-21 03:26+0000\n"
+"PO-Revision-Date: 2018-02-28 12:38+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "'bay' and 'baymodel' are changed to 'cluster' and 'cluster template'."
@@ -39,6 +39,9 @@ msgstr "2.2.0"
 
 msgid "3.0.0"
 msgstr "3.0.0"
+
+msgid "4.0.0"
+msgstr "4.0.0"
 
 msgid "Add following options to cluster template creation and views."
 msgstr ""
@@ -163,6 +166,9 @@ msgstr "Catatan Rilis Seri Pike"
 
 msgid "Prelude"
 msgstr "Prelude"
+
+msgid "Queens Series Release Notes"
+msgstr "Catatan Rilis Seri Queens"
 
 msgid "Reasonable name is set to browser title bar."
 msgstr "Nama wajar diatur untuk bar judul browser."
