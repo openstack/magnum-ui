@@ -24,5 +24,3 @@ selenium>=2.50.1 # Apache-2.0
 sphinx!=1.6.6,>=1.6.2 # BSD
 # This also needs xvfb library installed on your OS
 xvfbwrapper>=0.1.3 #license: MIT
-# Include horizon as test requirement
-http://tarballs.openstack.org/horizon/horizon-master.tar.gz#egg=horizon
