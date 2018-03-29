@@ -8,7 +8,7 @@ Team and repository tags
 .. Change things from this point on
 
 =========
-Magnum-UI
+Magnum UI
 =========
 
 Horizon plugin for Magnum
@@ -17,6 +17,7 @@ Horizon plugin for Magnum
 * Source: http://git.openstack.org/cgit/openstack/magnum-ui
 * Bugs: http://bugs.launchpad.net/magnum-ui
 * Documentation: https://docs.openstack.org/magnum-ui/latest/
+* Release notes: https://docs.openstack.org/releasenotes/magnum-ui/
 
 Enabling in DevStack
 --------------------
