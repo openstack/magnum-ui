@@ -227,11 +227,7 @@ def quotas_create(request, **kwargs):
 
 
 def quotas_update(request, project_id, resource, **kwargs):
-    new = _cleanup_params(QUOTA_CREATION_ATTRIBUTES, True, **kwargs)
-    old = magnumclient(request).quotas.get(project_id, resource).to_dict()
-    old = _cleanup_params(QUOTA_CREATION_ATTRIBUTES, False, **old)
-    patch = _create_patches(old, new)
-    return magnumclient(request).quotas.update(project_id, resource, patch)
+    return magnumclient(request).quotas.update(project_id, resource, kwargs)
 
 
 def quotas_delete(request, project_id, resource):

@@ -33,6 +33,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.quotas.create.service',
+    'horizon.dashboard.container-infra.quotas.update.service',
     'horizon.dashboard.container-infra.quotas.delete.service',
     'horizon.dashboard.container-infra.quotas.resourceType'
   ];
@@ -41,6 +42,7 @@
     registry,
     gettext,
     createQuotaService,
+    updateQuotaService,
     deleteQuotaService,
     resourceType) {
 
@@ -66,6 +68,13 @@
       });
 
     quotaResourceType.itemActions
+      .append({
+        id: 'updateQuotaService',
+        service: updateQuotaService,
+        template: {
+          text: gettext('Update Quota')
+        }
+      })
       .append({
         id: 'deleteQuotaService',
         service: deleteQuotaService,

@@ -227,9 +227,9 @@ class Quota(generic.View):
         """
         params = request.DATA
         updated = magnum.quotas_update(
-            request, project_id, resource, **params)
+            request, **params)
         return rest_utils.CreatedResponse(
-            ('/api/container_infra/quotas/%s/%s' % project_id, resource),
+            ('/api/container_infra/quotas/%s/%s' % (project_id, resource)),
             updated.to_dict())
 
     @rest_utils.ajax(data_required=True)
