@@ -33,6 +33,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.quotas.create.service',
+    'horizon.dashboard.container-infra.quotas.delete.service',
     'horizon.dashboard.container-infra.quotas.resourceType'
   ];
 
@@ -40,6 +41,7 @@
     registry,
     gettext,
     createQuotaService,
+    deleteQuotaService,
     resourceType) {
 
     var quotaResourceType = registry.getResourceType(resourceType);
@@ -50,6 +52,26 @@
         template: {
           type: 'create',
           text: gettext('Create Quota')
+        }
+      });
+
+    quotaResourceType.batchActions
+      .append({
+        id: 'batchDeleteQuotaService',
+        service: deleteQuotaService,
+        template: {
+          type: 'delete-selected',
+          text: gettext('Delete Quotas')
+        }
+      });
+
+    quotaResourceType.itemActions
+      .append({
+        id: 'deleteQuotaService',
+        service: deleteQuotaService,
+        template: {
+          type: 'delete',
+          text: gettext('Delete Quota')
         }
       });
   }

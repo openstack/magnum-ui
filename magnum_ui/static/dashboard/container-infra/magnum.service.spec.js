@@ -214,6 +214,10 @@
       {
         "func": "deleteQuota",
         "method": "delete",
+        "data": {
+          "project_id": "123",
+          "resource": "Cluster"
+        },
         "path": "/api/container_infra/quotas/123/Cluster",
         "error": "Unable to delete the quota with project id: 123 and resource: Cluster.",
         "testInput": ["123", "Cluster"]
