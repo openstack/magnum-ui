@@ -205,8 +205,8 @@
       });
     }
 
-    function createQuota(projectId, resource, params) {
-      return apiService.post('/api/container_infra/quotas/' + projectId + '/' + resource, params)
+    function createQuota(params) {
+      return apiService.post('/api/container_infra/quotas/', params)
         .error(function() {
           toastService.add('error', gettext('Unable to create quota.'));
         });

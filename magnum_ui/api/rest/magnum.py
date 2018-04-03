@@ -264,8 +264,8 @@ class Quotas(generic.View):
         """
         created = magnum.quotas_create(request, **request.DATA)
         return rest_utils.CreatedResponse(
-            ('/api/container_infra/quotas/%s/%s' % created.id,
-             created.resource),
+            ('/api/container_infra/quotas/%s/%s' % (
+                created.project_id, created.resource)),
             created.to_dict())
 
 
