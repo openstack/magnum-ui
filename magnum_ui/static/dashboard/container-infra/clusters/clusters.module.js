@@ -60,7 +60,7 @@
   function run(registry, clustersService, basePath, resourceType) {
     registry.getResourceType(resourceType)
     .setNames(gettext('Cluster'), gettext('Clusters'))
-
+    .setDefaultIndexUrl('/project/clusters/')
     // for detail summary view on table row.
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
     // for table row items and detail summary view.
