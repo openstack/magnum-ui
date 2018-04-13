@@ -19,7 +19,9 @@ var path = require('path');
 
 module.exports = function (config) {
   // This tox venv is setup in the post-install npm step
-  var toxPath = '../.tox/py27/lib/python2.7/site-packages/';
+  var toxPath = '../.tox/karma/lib/python2.7/site-packages/';
+
+  process.env.PHANTOMJS_BIN = 'node_modules/phantomjs-prebuilt/bin/phantomjs';
 
   config.set({
     preprocessors: {
@@ -69,7 +71,7 @@ module.exports = function (config) {
 
 
       // TODO: These should be mocked.
-      toxPath + '/horizon/static/horizon/js/horizon.js',
+      toxPath + 'horizon/static/horizon/js/horizon.js',
 
       /**
        * Include framework source code from horizon that we need.
@@ -120,7 +122,8 @@ module.exports = function (config) {
 
     frameworks: ['jasmine'],
 
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
     browserNoActivityTimeout: 60000,
 
@@ -128,6 +131,7 @@ module.exports = function (config) {
 
     plugins: [
       'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-jasmine',
       'karma-ng-html2js-preprocessor',
       'karma-coverage',
