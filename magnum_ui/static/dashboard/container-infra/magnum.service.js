@@ -220,7 +220,8 @@
     }
 
     function deleteQuota(projectId, resource, suppressError) {
-      var promise = apiService.delete('/api/container_infra/quotas/' + projectId + '/' + resource);
+      var promise = apiService.delete('/api/container_infra/quotas/' + projectId + '/' + resource,
+        {project_id: projectId, resource: resource});
       return suppressError ? promise : promise.error(function() {
         var msg = gettext('Unable to delete the quota with project id: %(projectId)s and ' +
           'resource: %(resource)s.');
