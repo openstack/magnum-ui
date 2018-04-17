@@ -176,20 +176,18 @@
       {
         "func": "createQuota",
         "method": "post",
-        "path": "/api/container_infra/quotas/123/Cluster",
+        "path": "/api/container_infra/quotas/",
         "data": {
           "project_id": "123",
           "resource": "Cluster",
-          "hard_limit": "1"
+          "hard_limit": 1
         },
         "error": "Unable to create quota.",
         "testInput": [
-          "123",
-          "Cluster",
           {
             "project_id": "123",
             "resource": "Cluster",
-            "hard_limit": "1"
+            "hard_limit": 1
           }
         ]
       },

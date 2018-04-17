@@ -25,7 +25,8 @@
   angular
     .module('horizon.dashboard.container-infra.quotas',
     [
-      'ngRoute'
+      'ngRoute',
+      'horizon.dashboard.container-infra.quotas.actions'
     ])
     .constant('horizon.dashboard.container-infra.quotas.events', events())
     .constant(
