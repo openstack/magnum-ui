@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-26 11:52+0000\n"
+"POT-Creation-Date: 2018-04-17 01:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-16 10:57+0000\n"
+"PO-Revision-Date: 2018-04-17 11:04+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -188,6 +188,9 @@ msgstr "Create Cluster Template"
 msgid "Created"
 msgstr "Created"
 
+msgid "Created At"
+msgstr "Created At"
+
 msgid "DC/OS"
 msgstr "DC/OS"
 
@@ -296,6 +299,9 @@ msgstr "HTTP Proxy"
 
 msgid "HTTPS Proxy"
 msgstr "HTTPS Proxy"
+
+msgid "Hard Limit"
+msgstr "Hard Limit"
 
 msgid "ID"
 msgstr "ID"
@@ -420,8 +426,17 @@ msgstr "Overlay"
 msgid "Overview"
 msgstr "Overview"
 
+msgid "Project ID"
+msgstr "Project ID"
+
 msgid "Public"
 msgstr "Public"
+
+msgid "Quota"
+msgstr "Quota"
+
+msgid "Quotas"
+msgstr "Quotas"
 
 msgid "RESTORE COMPLETE"
 msgstr "RESTORE COMPLETE"
@@ -437,6 +452,9 @@ msgstr "Record Properties"
 
 msgid "Registry Enabled"
 msgstr "Registry Enabled"
+
+msgid "Resource"
+msgstr "Resource"
 
 msgid "Rexray"
 msgstr "Rexray"
@@ -668,6 +686,9 @@ msgstr "Update Cluster Template"
 
 msgid "Updated"
 msgstr "Updated"
+
+msgid "Updated At"
+msgstr "Updated At"
 
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
