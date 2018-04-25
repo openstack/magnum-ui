@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-26 11:52+0000\n"
+"POT-Creation-Date: 2018-04-20 04:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-14 02:07+0000\n"
+"PO-Revision-Date: 2018-04-24 07:28+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -105,6 +105,9 @@ msgstr "Escolha primeiro a Rede Privada"
 msgid "Choose a Private Subnet"
 msgstr "Escolha uma Subrede Privada"
 
+msgid "Choose a Project"
+msgstr "Escolher um  Projeto"
+
 msgid "Choose a Volume Driver"
 msgstr "Escolha um Driver de Volume"
 
@@ -170,6 +173,11 @@ msgid_plural "Confirm Delete Cluster Templates"
 msgstr[0] "Confirmar Exclusão de Modelo de Cluster"
 msgstr[1] "Confirmar Exclusão de Modelos de Cluster"
 
+msgid "Confirm Delete Quota"
+msgid_plural "Confirm Delete Quotas"
+msgstr[0] "Confirmar Exclusão de Quota"
+msgstr[1] "Confirmar Exclusão de Quotas"
+
 msgid "Container Orchestration Engine"
 msgstr "Mecanismo de Orquestração de Contêiner"
 
@@ -185,8 +193,14 @@ msgstr "Criar Cluster"
 msgid "Create Cluster Template"
 msgstr "Criar Modelo de Cluster"
 
+msgid "Create Quota"
+msgstr "Criar Quota"
+
 msgid "Created"
 msgstr "Criado"
+
+msgid "Created At"
+msgstr "Criado Em"
 
 msgid "DC/OS"
 msgstr "DC/OS"
@@ -219,6 +233,14 @@ msgstr "Excluir Modelos de Cluster"
 msgid "Delete Clusters"
 msgstr "Excluir Clusters"
 
+msgid "Delete Quota"
+msgid_plural "Delete Quotas"
+msgstr[0] "Excluir Quota"
+msgstr[1] "Excluir Quotas"
+
+msgid "Delete Quotas"
+msgstr "Excluir Quotas"
+
 #, python-format
 msgid "Deleted cluster template: %s."
 msgid_plural "Deleted cluster templates: %s."
@@ -230,6 +252,12 @@ msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "Cluster excluído: %s."
 msgstr[1] "Clusters excluídos: %s."
+
+#, python-format
+msgid "Deleted quota: %s."
+msgid_plural "Deleted quotas: %s."
+msgstr[0] "Quota excluída: %s."
+msgstr[1] "Quotas excluídas: %s."
 
 msgid "Device Mapper"
 msgstr "Mapeador de Dispositivos"
@@ -297,6 +325,9 @@ msgstr "Proxy HTTP"
 msgid "HTTPS Proxy"
 msgstr "Proxy HTTPS"
 
+msgid "Hard Limit"
+msgstr "Limite Físico"
+
 msgid "ID"
 msgstr "ID"
 
@@ -344,6 +375,9 @@ msgstr "Kubernetes"
 
 msgid "Labels"
 msgstr "Rótulos"
+
+msgid "Limit for this resource."
+msgstr "Limite para este recurso"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Tornar o modelo de cluster público. Padrão: False"
@@ -420,8 +454,28 @@ msgstr "Overlay"
 msgid "Overview"
 msgstr "Visão Geral"
 
+msgid "Project"
+msgstr "Projeto"
+
+msgid "Project ID"
+msgstr "ID do Projeto"
+
 msgid "Public"
 msgstr "Público"
+
+msgid "Quota"
+msgstr "Quota"
+
+#, python-format
+msgid "Quota %s was successfully created."
+msgstr "A quota %s foi criada com sucesso."
+
+#, python-format
+msgid "Quota %s/%s was successfully updated."
+msgstr "A quota  %s/%s foi atualizada com sucesso."
+
+msgid "Quotas"
+msgstr "Quotas"
 
 msgid "RESTORE COMPLETE"
 msgstr "RESTAURAÇÃO FINALIZADA"
@@ -437,6 +491,9 @@ msgstr "Propriedades do Registro"
 
 msgid "Registry Enabled"
 msgstr "Registro Habilitado"
+
+msgid "Resource"
+msgstr "Recurso"
 
 msgid "Rexray"
 msgstr "Rexray"
@@ -599,6 +656,12 @@ msgstr[0] "Impossível excluir cluster: %s."
 msgstr[1] "Impossível excluir clusters: %s."
 
 #, python-format
+msgid "Unable to delete quota: %s."
+msgid_plural "Unable to delete quotas: %s."
+msgstr[0] "Não é possível excluir quota: %s."
+msgstr[1] "Não é possível excluir quotas: %s."
+
+#, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
 msgstr "Não é possível excluir o modelo de cluster com id: %(id)s"
 
@@ -668,8 +731,14 @@ msgstr "Atualizar Cluster"
 msgid "Update Cluster Template"
 msgstr "Atualizar Modelo de Cluster"
 
+msgid "Update Quota"
+msgstr "Atualizar Quotas"
+
 msgid "Updated"
 msgstr "Atualizado"
+
+msgid "Updated At"
+msgstr "Atualizado Em"
 
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Utilizados {$ ctrl.stats.clusters $} de {$ ctrl.quota.clusters $}"
@@ -684,6 +753,10 @@ msgstr "Você não está autorizado a excluir modelos de cluster: %s"
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
 msgstr "Você não está autorizado a excluir clusters: %s"
+
+#, python-format
+msgid "You are not allowed to delete quotas: %s"
+msgstr "Você não tem permissão para excluir quotas: %s"
 
 #, python-format
 msgid ""
@@ -712,6 +785,20 @@ msgstr[0] ""
 msgstr[1] ""
 "Você selecionou \"%s\". Por favor, confirme sua seleção. Modelos de cluster "
 "excluídos são irrecuperáveis."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted quota is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted quotas are "
+"not recoverable."
+msgstr[0] ""
+"Você selecionou \"%s\". Por favor, confirme sua seleção. Quota excluída não "
+"é recuperável."
+msgstr[1] ""
+"Você selecionou \"%s\". Por favor, confirme sua seleção. Quotas excluídas "
+"não são recuperáveis."
 
 msgid "as follows:"
 msgstr "como segue:"
