@@ -19,7 +19,7 @@ var path = require('path');
 
 module.exports = function (config) {
   // This tox venv is setup in the post-install npm step
-  var toxPath = '../.tox/karma/lib/python2.7/site-packages/';
+  var toxPath = '../.tox/karma/lib/python3.5/site-packages/';
 
   process.env.PHANTOMJS_BIN = 'node_modules/phantomjs-prebuilt/bin/phantomjs';
 
