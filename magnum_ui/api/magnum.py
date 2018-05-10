@@ -15,6 +15,7 @@
 
 from __future__ import absolute_import
 import logging
+import six
 
 from django.conf import settings
 
@@ -50,7 +51,7 @@ def _cleanup_params(attrs, create, **params):
             raise exceptions.BadRequest(
                 "Key must be in %s" % ",".join(attrs))
         if key == "labels":
-            if isinstance(value, str) or isinstance(value, unicode):
+            if isinstance(value, str) or isinstance(value, six.text_type):
                 labels = {}
                 vals = value.split(",")
                 for v in vals:
