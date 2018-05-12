@@ -3,19 +3,20 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
+# Robert Simai <robert.simai@suse.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-09 00:54+0000\n"
+"POT-Creation-Date: 2018-05-10 05:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-10 09:40+0000\n"
-"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
+"PO-Revision-Date: 2018-05-11 02:30+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgid "ADOPT COMPLETE"
@@ -106,6 +107,9 @@ msgstr "Wählen Sie zuerst ein privates Netzwerk aus"
 msgid "Choose a Private Subnet"
 msgstr "Wählen Sie ein privates Subnetz"
 
+msgid "Choose a Project"
+msgstr "Projekt auswählen"
+
 msgid "Choose a Volume Driver"
 msgstr "Wählen Sie einen Datenträger-Treiber"
 
@@ -171,6 +175,11 @@ msgid_plural "Confirm Delete Cluster Templates"
 msgstr[0] "Löschen der Clustervorlage bestätigen"
 msgstr[1] "Löschen der Clustervorlagen bestätigen"
 
+msgid "Confirm Delete Quota"
+msgid_plural "Confirm Delete Quotas"
+msgstr[0] "Kontingent löschen bestätigen"
+msgstr[1] "Kontingente löschen bestätigen"
+
 msgid "Container Orchestration Engine"
 msgstr "Container-Orchestrierungswerkzeug"
 
@@ -186,8 +195,14 @@ msgstr "Erstelle Cluster"
 msgid "Create Cluster Template"
 msgstr "Clustervorlage erstellen"
 
+msgid "Create Quota"
+msgstr "Kontingent erstellen"
+
 msgid "Created"
 msgstr "Erstellt"
+
+msgid "Created At"
+msgstr "Erstellt am"
 
 msgid "DC/OS"
 msgstr "DC/OS"
@@ -220,6 +235,14 @@ msgstr "Clustervorlagen löschen"
 msgid "Delete Clusters"
 msgstr "Cluster löschen"
 
+msgid "Delete Quota"
+msgid_plural "Delete Quotas"
+msgstr[0] "Kontingent löschen"
+msgstr[1] "Kontingente löschen"
+
+msgid "Delete Quotas"
+msgstr "Kontingente löschen"
+
 #, python-format
 msgid "Deleted cluster template: %s."
 msgid_plural "Deleted cluster templates: %s."
@@ -231,6 +254,12 @@ msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "Gelöschter Cluster: %s."
 msgstr[1] "Gelöschte Cluster: %s."
+
+#, python-format
+msgid "Deleted quota: %s."
+msgid_plural "Deleted quotas: %s."
+msgstr[0] "Gelöschtes Kontingent: %s."
+msgstr[1] "Gelöschte Kontingente: %s."
 
 msgid "Device Mapper"
 msgstr "Device Mapper"
@@ -298,6 +327,9 @@ msgstr "HTTP-Proxy"
 msgid "HTTPS Proxy"
 msgstr "HTTPS-Proxy"
 
+msgid "Hard Limit"
+msgstr "Hartes Limit"
+
 msgid "ID"
 msgstr "ID"
 
@@ -344,6 +376,9 @@ msgstr "Kubernetes"
 
 msgid "Labels"
 msgstr "Bezeichnungen"
+
+msgid "Limit for this resource."
+msgstr "Limit für die Ressource."
 
 msgid "Make cluster template public. Default: False"
 msgstr "Clustervorlage öffentlich machen. Standard: Falsch"
@@ -420,8 +455,28 @@ msgstr "Overlay"
 msgid "Overview"
 msgstr "Übersicht"
 
+msgid "Project"
+msgstr "Projekt"
+
+msgid "Project ID"
+msgstr "Projekt-ID"
+
 msgid "Public"
 msgstr "Öffentlich"
+
+msgid "Quota"
+msgstr "Kontingent"
+
+#, python-format
+msgid "Quota %s was successfully created."
+msgstr "Kontingent %s wurde erfolgreich erstellt."
+
+#, python-format
+msgid "Quota %s/%s was successfully updated."
+msgstr "Kontingent %s/%s wurde erfolgreich aktualisiert."
+
+msgid "Quotas"
+msgstr "Kontingente"
 
 msgid "RESTORE COMPLETE"
 msgstr "WIEDERHERSTELLUNG ABGESCHLOSSEN"
@@ -437,6 +492,9 @@ msgstr "Datensatzeigenschaften"
 
 msgid "Registry Enabled"
 msgstr "Registry aktiviert"
+
+msgid "Resource"
+msgstr "Ressource"
 
 msgid "Rexray"
 msgstr "Rexray"
@@ -600,6 +658,12 @@ msgstr[0] "Der Cluster kann nicht gelöscht werden: %s."
 msgstr[1] "Die Cluster können nicht gelöscht werden: %s."
 
 #, python-format
+msgid "Unable to delete quota: %s."
+msgid_plural "Unable to delete quotas: %s."
+msgstr[0] "Kontingent kann nicht gelöscht werden: %s."
+msgstr[1] "Kontingente können nicht gelöscht werden: %s."
+
+#, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
 msgstr "Clustervorlage mit ID %(id)s kann nicht gelöscht werden"
 
@@ -669,8 +733,14 @@ msgstr "Cluster aktualisieren"
 msgid "Update Cluster Template"
 msgstr "Clustervorlage aktualisieren"
 
+msgid "Update Quota"
+msgstr "Kontingente aktualisieren"
+
 msgid "Updated"
 msgstr "Aktualisiert"
+
+msgid "Updated At"
+msgstr "Aktualisiert am"
 
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Benutzt {$ ctrl.stats.clusters $} von {$ ctrl.quota.clusters $}"
@@ -685,6 +755,10 @@ msgstr "Sie sind nicht zum Löschen von Clustevorlagen berechtigt: %s"
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
 msgstr "Sie sind nicht zum Löschen von Clustern berechtigt: %s"
+
+#, python-format
+msgid "You are not allowed to delete quotas: %s"
+msgstr "Sie haben keine Berechtigung zum Löschen von Kontingenten: %s"
 
 #, python-format
 msgid ""
@@ -713,6 +787,20 @@ msgstr[0] ""
 msgstr[1] ""
 "Sie haben ausgewählt: \"%s\". Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
 "Clustervorlagen können nicht wiederhergestellt werden."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted quota is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted quotas are "
+"not recoverable."
+msgstr[0] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschtes "
+"Kontingent känn nicht wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben \"%s\" ausgewählt. Bitte bestätigen Sie Ihre Auswahl. Gelöschte "
+"Kontingente können nicht wiederhergestellt werden."
 
 msgid "as follows:"
 msgstr "wie folgt:"

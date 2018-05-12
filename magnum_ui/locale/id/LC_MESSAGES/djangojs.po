@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-01-19 03:31+0000\n"
+"POT-Creation-Date: 2018-05-10 05:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-18 01:34+0000\n"
+"PO-Revision-Date: 2018-05-09 04:34+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "ADOPT COMPLETE"
@@ -105,6 +105,9 @@ msgstr "Pilih Private Network pada awalnya"
 msgid "Choose a Private Subnet"
 msgstr "Pilih Private Subnet"
 
+msgid "Choose a Project"
+msgstr "Choose a Project"
+
 msgid "Choose a Volume Driver"
 msgstr "Pilih driver volume"
 
@@ -168,6 +171,10 @@ msgid "Confirm Delete Cluster Template"
 msgid_plural "Confirm Delete Cluster Templates"
 msgstr[0] "Confirm Delete Cluster Template"
 
+msgid "Confirm Delete Quota"
+msgid_plural "Confirm Delete Quotas"
+msgstr[0] "Confirm Delete Quota"
+
 msgid "Container Orchestration Engine"
 msgstr "Container Orchestration Engine (mesin Orchestration kontainer)"
 
@@ -183,8 +190,14 @@ msgstr "Buat klaster"
 msgid "Create Cluster Template"
 msgstr "Create Cluster Template"
 
+msgid "Create Quota"
+msgstr "Create Quota"
+
 msgid "Created"
 msgstr "Created (dibuat)"
+
+msgid "Created At"
+msgstr "Created At"
 
 msgid "DC/OS"
 msgstr "DC/OS"
@@ -215,6 +228,13 @@ msgstr "Delete Cluster Templates (hapus template klaster)"
 msgid "Delete Clusters"
 msgstr "Delete Clusters (hapus klaster)"
 
+msgid "Delete Quota"
+msgid_plural "Delete Quotas"
+msgstr[0] "Delete Quota"
+
+msgid "Delete Quotas"
+msgstr "Delete Quotas"
+
 #, python-format
 msgid "Deleted cluster template: %s."
 msgid_plural "Deleted cluster templates: %s."
@@ -224,6 +244,11 @@ msgstr[0] "Deleted cluster template: %s."
 msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "Deleted cluster: %s."
+
+#, python-format
+msgid "Deleted quota: %s."
+msgid_plural "Deleted quotas: %s."
+msgstr[0] "Deleted quota: %s."
 
 msgid "Device Mapper"
 msgstr "Device Mapper"
@@ -291,6 +316,9 @@ msgstr "HTTP Proxy"
 msgid "HTTPS Proxy"
 msgstr "HTTPS Proxy"
 
+msgid "Hard Limit"
+msgstr "Hard Limit"
+
 msgid "ID"
 msgstr "ID (id)"
 
@@ -339,6 +367,9 @@ msgstr "Kubernetes"
 
 msgid "Labels"
 msgstr "Labels"
+
+msgid "Limit for this resource."
+msgstr "Batasi untuk sumber daya ini."
 
 msgid "Make cluster template public. Default: False"
 msgstr "Membuat publik template klaster. Default: False"
@@ -415,8 +446,28 @@ msgstr "Overlay"
 msgid "Overview"
 msgstr "Overview (ikhtisar)"
 
+msgid "Project"
+msgstr "Project"
+
+msgid "Project ID"
+msgstr "Project ID"
+
 msgid "Public"
 msgstr "Public (publik)"
+
+msgid "Quota"
+msgstr "Quota"
+
+#, python-format
+msgid "Quota %s was successfully created."
+msgstr "Kuota %s berhasil dibuat."
+
+#, python-format
+msgid "Quota %s/%s was successfully updated."
+msgstr "Kuota %s/%s berhasil diperbarui."
+
+msgid "Quotas"
+msgstr "Quotas"
 
 msgid "RESTORE COMPLETE"
 msgstr "RESTORE COMPLETE (mengembalikan lengkap)"
@@ -432,6 +483,9 @@ msgstr "Record Properties (properti record)"
 
 msgid "Registry Enabled"
 msgstr "Registry Enabled (Registri diaktifkan)"
+
+msgid "Resource"
+msgstr "Resource"
 
 msgid "Rexray"
 msgstr "Rexray"
@@ -595,6 +649,11 @@ msgid_plural "Unable to delete clusters: %s."
 msgstr[0] "Unable to delete cluster: %s."
 
 #, python-format
+msgid "Unable to delete quota: %s."
+msgid_plural "Unable to delete quotas: %s."
+msgstr[0] "Unable to delete quota: %s."
+
+#, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
 msgstr "Tidak dapat menghapus template klaster dengan id: %(id)s"
 
@@ -664,8 +723,14 @@ msgstr "Perbarui klaster"
 msgid "Update Cluster Template"
 msgstr "Perbaharui template klaster"
 
+msgid "Update Quota"
+msgstr "Update Quota"
+
 msgid "Updated"
 msgstr "Updated (diperbaharui)"
+
+msgid "Updated At"
+msgstr "Updated At"
 
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Used {$ ctrl.stats.clusters $} dari {$ ctrl.quota.clusters $}"
@@ -680,6 +745,10 @@ msgstr "Anda tidak diizinkan untuk menghapus klaster template: %s"
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
 msgstr "Anda tidak diizinkan untuk menghapus cluster: %s"
+
+#, python-format
+msgid "You are not allowed to delete quotas: %s"
+msgstr "Anda tidak diizinkan untuk menghapus kuota: %s"
 
 #, python-format
 msgid ""
@@ -702,6 +771,17 @@ msgid_plural ""
 msgstr[0] ""
 "You have selected \"%s\". Please confirm your selection. Deleted cluster "
 "template is not recoverable."
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted quota is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted quotas are "
+"not recoverable."
+msgstr[0] ""
+"You have selected \"%s\". Please confirm your selection. Deleted quota is "
+"not recoverable."
 
 msgid "as follows:"
 msgstr "sebagai berikut:"
