@@ -1,11 +1,17 @@
 - project:
     check:
       jobs:
+        - horizon-openstack-tox-py35dj20:
+            required-projects:
+              openstack/horizon
         - openstack-tox-lower-constraints:
             required-projects:
-              - openstack/horizon
+              openstack/horizon
     gate:
       jobs:
+        - horizon-openstack-tox-py35dj20:
+            required-projects:
+              openstack/horizon
         - openstack-tox-lower-constraints:
             required-projects:
-              - openstack/horizon
+              openstack/horizon
