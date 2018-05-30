@@ -1,20 +1,20 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
-# Shu Muto <shu-mutou@rf.jp.nec.com>, 2018. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2016. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2017. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-05 01:18+0000\n"
+"POT-Creation-Date: 2018-05-16 02:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-05 05:08+0000\n"
-"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"PO-Revision-Date: 2018-05-29 08:34+0000\n"
+"Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "ADOPT COMPLETE"
@@ -105,6 +105,9 @@ msgstr "最初にプライベートネットワークを選択してください
 msgid "Choose a Private Subnet"
 msgstr "プライベートサブネットを選択してください"
 
+msgid "Choose a Project"
+msgstr "プロジェクトを選択してください。"
+
 msgid "Choose a Volume Driver"
 msgstr "ボリュームドライバーを選択してください"
 
@@ -168,6 +171,10 @@ msgid "Confirm Delete Cluster Template"
 msgid_plural "Confirm Delete Cluster Templates"
 msgstr[0] "クラスターテンプレートの削除の確認"
 
+msgid "Confirm Delete Quota"
+msgid_plural "Confirm Delete Quotas"
+msgstr[0] "クォータの削除の確認"
+
 msgid "Container Orchestration Engine"
 msgstr "コンテナーオーケストレーションエンジン"
 
@@ -183,7 +190,13 @@ msgstr "クラスターの作成"
 msgid "Create Cluster Template"
 msgstr "クラスターテンプレートの作成"
 
+msgid "Create Quota"
+msgstr "クォータの作成"
+
 msgid "Created"
+msgstr "作成時刻"
+
+msgid "Created At"
 msgstr "作成時刻"
 
 msgid "DC/OS"
@@ -215,6 +228,13 @@ msgstr "クラスターテンプレートの削除"
 msgid "Delete Clusters"
 msgstr "クラスターの削除"
 
+msgid "Delete Quota"
+msgid_plural "Delete Quotas"
+msgstr[0] "クォータの削除"
+
+msgid "Delete Quotas"
+msgstr "クォータの削除"
+
 #, python-format
 msgid "Deleted cluster template: %s."
 msgid_plural "Deleted cluster templates: %s."
@@ -224,6 +244,11 @@ msgstr[0] "クラスターテンプレート %s を削除しました。"
 msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "クラスター %s を削除しました。"
+
+#, python-format
+msgid "Deleted quota: %s."
+msgid_plural "Deleted quotas: %s."
+msgstr[0] "クォータ %s を削除しました。"
 
 msgid "Device Mapper"
 msgstr "Device Mapper"
@@ -294,6 +319,9 @@ msgstr "HTTP プロキシー"
 msgid "HTTPS Proxy"
 msgstr "HTTPS プロキシー"
 
+msgid "Hard Limit"
+msgstr "上限値"
+
 msgid "ID"
 msgstr "ID"
 
@@ -340,6 +368,9 @@ msgstr "Kubernetes"
 
 msgid "Labels"
 msgstr "ラベル"
+
+msgid "Limit for this resource."
+msgstr "このリソースの上限"
 
 msgid "Make cluster template public. Default: False"
 msgstr "クラスターテンプレートをパブリックに設定します。デフォルト: False"
@@ -416,8 +447,28 @@ msgstr "Overlay"
 msgid "Overview"
 msgstr "概要"
 
+msgid "Project"
+msgstr "プロジェクト"
+
+msgid "Project ID"
+msgstr "プロジェクト ID"
+
 msgid "Public"
 msgstr "パブリック"
+
+msgid "Quota"
+msgstr "クォータ"
+
+#, python-format
+msgid "Quota %s was successfully created."
+msgstr "クォータ %s を作成しました。"
+
+#, python-format
+msgid "Quota %s/%s was successfully updated."
+msgstr "クォータ %s/%s が正常に更新されました。"
+
+msgid "Quotas"
+msgstr "クォータ"
 
 msgid "RESTORE COMPLETE"
 msgstr "リストア完了"
@@ -433,6 +484,9 @@ msgstr "レコードのプロパティー"
 
 msgid "Registry Enabled"
 msgstr "レジストリーの有効化"
+
+msgid "Resource"
+msgstr "リソース"
 
 msgid "Rexray"
 msgstr "Rexray"
@@ -594,6 +648,11 @@ msgid_plural "Unable to delete clusters: %s."
 msgstr[0] "クラスターを削除できません: %s"
 
 #, python-format
+msgid "Unable to delete quota: %s."
+msgid_plural "Unable to delete quotas: %s."
+msgstr[0] "クォータを削除できません: %s"
+
+#, python-format
 msgid "Unable to delete the cluster template with id: %(id)s"
 msgstr "ID %(id)s のクラスターテンプレートを削除できません。"
 
@@ -663,8 +722,14 @@ msgstr "クラスターの更新"
 msgid "Update Cluster Template"
 msgstr "クラスターテンプレートの更新"
 
+msgid "Update Quota"
+msgstr "クォータの更新"
+
 msgid "Updated"
 msgstr "更新時刻"
+
+msgid "Updated At"
+msgstr "最終更新"
 
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "{$ ctrl.quota.clusters $} 中 {$ ctrl.stats.clusters $} 使用"
@@ -679,6 +744,10 @@ msgstr "クラスターテンプレートの削除は許可されていません
 #, python-format
 msgid "You are not allowed to delete clusters: %s"
 msgstr "クラスターの削除は許可されていません: %s"
+
+#, python-format
+msgid "You are not allowed to delete quotas: %s"
+msgstr "クォータの削除は許可されていません: %s"
 
 #, python-format
 msgid ""
@@ -701,6 +770,17 @@ msgid_plural ""
 msgstr[0] ""
 "\"%s\" を選択しました。選択内容を確認してください。削除されたクラスターテンプ"
 "レートは元に戻せません。"
+
+#, python-format
+msgid ""
+"You have selected \"%s\". Please confirm your selection. Deleted quota is "
+"not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Please confirm your selection. Deleted quotas are "
+"not recoverable."
+msgstr[0] ""
+"\"%s\" を選択しました。選択内容を確認してください。削除されたクォータは元に戻"
+"せません。"
 
 msgid "as follows:"
 msgstr "以下の通り:"
