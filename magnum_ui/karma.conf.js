@@ -16,10 +16,16 @@
 
 var fs = require('fs');
 var path = require('path');
+var child_process = require("child_process");
 
 module.exports = function (config) {
   // This tox venv is setup in the post-install npm step
-  var toxPath = '../.tox/karma/lib/python3.5/site-packages/';
+  var pythonVersion = "python3.";
+  var stdout = child_process.execFileSync("python3", ["--version"]);
+  pythonVersion += stdout.toString().split(".")[1];
+  var toxPath = '../.tox/karma/lib/' + pythonVersion + '/site-packages/';
+  console.log("Karma will check on directory: ", toxPath);
+
 
   process.env.PHANTOMJS_BIN = 'node_modules/phantomjs-prebuilt/bin/phantomjs';
 
