@@ -14,7 +14,6 @@ releasenotes/build
 .pydevproject
 .settings
 .tox
-.venv
 *.egg*
 *.lock
 *.pyc
