@@ -20,3 +20,4 @@ releasenotes/build
 *.swp
 *.mo
 *nose_results.html
+.DS_Store
