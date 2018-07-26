@@ -1,0 +1,26 @@
+---
+features:
+  - >
+    [`blueprint add-quotas-panel <https://blueprints.launchpad.net/magnum-ui/+spec/add-quotas-panel>`_]
+    Added quotas panel for admin. This panel has CRUD operations for quotas.
+    For now, admin user can limit only the number of clusters for each project.
+    To enable quotas panel, copy
+    `magnum_ui/enabled/_2370_admin_container_infra_panel_group.py` and
+    `magnum_ui/enabled/_2371_admin_container_infra_quotas_panel.py` into
+    horizon's `enabled` directory.
+fixes:
+  - >
+    [`bug/1777545 <https://bugs.launchpad.net/magnum-ui/+bug/1777545>`_]
+    Fixed issue the deleted item is selected again with batch delete.
+    Item selections on table view for batch actions does not be cleared
+    after execution of actions. To ensure to clear item selections,
+    `hzTable:clearSelection` event is emitted.
+  - >
+    [`bug/1638863 <https://bugs.launchpad.net/magnum-ui/+bug/1638863>`_]
+    Fixed failure updating labels for cluster template.
+  - >
+    [`bug/1746706 <https://bugs.launchpad.net/magnum-ui/+bug/1746706>`_]
+    Reproduced navigations when refreshing details view. Previously the fix
+    for [`bug/1681627 <https://bugs.launchpad.net/horizon/+bug/1681627>`_]
+    allowed us to reload or directly open Angular-based detail page (ngdetail),
+    but the navigation menu was not reproduced correctly.
