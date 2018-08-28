@@ -54,6 +54,10 @@
       config.form[0].tabs[0].items[0].items[1].onChange();
       config.model.coe = 'swarm';
       config.form[0].tabs[0].items[0].items[1].onChange();
+
+      config.model.coe = 'swarm-mode';
+      config.form[0].tabs[0].items[0].items[1].onChange();
+      expect(config.form[0].tabs[2].items[0].items[0].items[0].titleMap[0].value).toEqual('docker');
     }));
 
   });
