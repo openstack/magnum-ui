@@ -30,10 +30,20 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.app.core.openstack-service-api.magnum',
     'horizon.app.core.openstack-service-api.nova',
-    'horizon.app.core.openstack-service-api.glance'
+    'horizon.app.core.openstack-service-api.glance',
+    'horizon.dashboard.container-infra.cluster-templates.distros'
   ];
 
-  function ClusterTemplateWorkflow($q, basePath, workflowService, gettext, magnum, nova, glance) {
+  function ClusterTemplateWorkflow(
+    $q,
+    basePath,
+    workflowService,
+    gettext,
+    magnum,
+    nova,
+    glance,
+    distros
+  ) {
     var workflow = {
       init: init,
       update: update
@@ -507,7 +517,10 @@
     function onGetImages(response) {
       images = [{value:"", name: gettext("Choose an Image")}];
       angular.forEach(response.data.items, function(item) {
-        images.push({value: item.name, name: item.name});
+        if (!angular.isUndefined(item.properties) &&
+          distros.indexOf(item.properties.os_distro) >= 0) {
+          images.push({value: item.name, name: item.name});
+        }
       });
       form[0].tabs[1].items[0].items[0].items[0].titleMap = images;
       var deferred = $q.defer();
