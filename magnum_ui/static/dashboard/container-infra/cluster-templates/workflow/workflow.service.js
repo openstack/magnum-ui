@@ -65,8 +65,10 @@
       var supportedNetworkDrivers = {
         initial: [{value:"", name: gettext("Choose a Network Driver")},
                   {value: "docker", name: gettext("Docker")},
-                  {value: "flannel", name: gettext("Flannel")}],
-        kubernetes: [{value:"flannel", name: gettext("Flannel")}],
+                  {value: "flannel", name: gettext("Flannel")},
+                  {value: "calico", name: gettext("Calico")}],
+        kubernetes: [{value:"flannel", name: gettext("Flannel")},
+                     {value: "calico", name: gettext("Calico")}],
         swarm: [{value:"docker", name: gettext("Docker")},
                 {value:"flannel", name: gettext("Flannel")}],
         "swarm-mode": [{value:"docker", name: gettext("Docker")},
