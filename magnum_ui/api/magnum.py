@@ -106,8 +106,9 @@ def _create_patches(old, new):
 @memoized
 def magnumclient(request):
     magnum_url = ""
+    service_type = 'container-infra'
     try:
-        magnum_url = base.url_for(request, 'container-infra')
+        magnum_url = base.url_for(request, service_type)
     except exceptions.ServiceCatalogException:
         LOG.debug('No Container Infrastructure Management service is '
                   'configured.')
@@ -118,12 +119,15 @@ def magnumclient(request):
 
     insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
     cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
+    openstack_api_versions = getattr(settings, 'OPENSTACK_API_VERSIONS', {})
+    magnum_api_version = openstack_api_versions.get(service_type, 1.1)
 
     c = magnum_client.Client(username=request.user.username,
                              project_id=request.user.tenant_id,
                              input_auth_token=request.user.token.id,
                              magnum_url=magnum_url,
                              insecure=insecure,
+                             api_version=magnum_api_version,
                              cacert=cacert)
     return c
 
