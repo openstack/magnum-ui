@@ -79,6 +79,10 @@
           ? response.data.keypair : "";
         config.model.docker_volume_size = response.data.docker_volume_size
           ? response.data.docker_volume_size : "";
+        config.model.master_flavor_id = response.data.master_flavor_id
+          ? response.data.master_flavor_id : "";
+        config.model.flavor_id = response.data.flavor_id
+          ? response.data.flavor_id : "";
         var labels = "";
         for (var key in response.data.labels) {
           if (response.data.labels.hasOwnProperty(key)) {
