@@ -70,7 +70,9 @@
     }
 
     function allowed() {
-      return $qExtensions.booleanAsPromise(true);
+      // NOTE(flwang): So far, Magnum doesn't support rotate certificate, so
+      // let's disable it now until we can support it.
+      return $qExtensions.booleanAsPromise(false);
     }
   }
 })();
