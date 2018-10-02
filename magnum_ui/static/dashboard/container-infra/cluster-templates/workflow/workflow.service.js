@@ -331,11 +331,7 @@
                         {
                           key: 'volume_driver',
                           type: 'select',
-                          titleMap: [
-                            {value: '', name: gettext('Choose a Volume Driver')},
-                            {value: 'cinder', name: gettext('Cinder')},
-                            {value: 'rexray', name: gettext('Rexray')}
-                          ]
+                          titleMap: supportedVolumeDrivers.initial
                         }
                       ]
                     },
@@ -393,11 +389,7 @@
                         {
                           key: 'network_driver',
                           type: 'select',
-                          titleMap: [
-                            {value: "", name: gettext("Choose a Network Driver")},
-                            {value: "docker", name: gettext("Docker")},
-                            {value: "flannel", name: gettext("Flannel")}
-                          ]
+                          titleMap: supportedNetworkDrivers.initial
                         },
                         {
                           key: 'http_proxy'
