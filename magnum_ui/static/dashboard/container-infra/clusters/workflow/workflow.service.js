@@ -269,8 +269,8 @@
           nflavors.push({value: item.name, name: item.name});
           mflavors.push({value: item.name, name: item.name});
         });
-        form[0].tabs[2].items[1].items[0].titleMap = nflavors;
-        form[0].tabs[2].items[2].items[0].titleMap = mflavors;
+        form[0].tabs[2].items[1].items[0].titleMap = mflavors;
+        form[0].tabs[2].items[2].items[0].titleMap = nflavors;
       }
 
       function onGetClusterTemplates(response) {
