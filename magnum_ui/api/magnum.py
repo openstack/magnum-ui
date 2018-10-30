@@ -143,11 +143,6 @@ def cluster_template_update(request, id, **kwargs):
     old = magnumclient(request).cluster_templates.get(id).to_dict()
     old = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, False, **old)
     patch = _create_patches(old, new)
-    # NOTE(flwang): Now Magnum only support updating the node count for
-    # cluster upddate action. So let's simplify it by only passing the
-    # /node_count dict which can avoid many potential bugs.
-    patch = [d for d in patch if d['path']
-             in CLUSTER_UPDATE_ALLOWED_PROPERTIES]
     return magnumclient(request).cluster_templates.update(id, patch)
 
 
@@ -177,6 +172,13 @@ def cluster_update(request, id, **kwargs):
     old = magnumclient(request).clusters.get(id).to_dict()
     old = _cleanup_params(CLUSTER_CREATE_ATTRS, False, **old)
     patch = _create_patches(old, new)
+
+    # NOTE(flwang): Now Magnum only support updating the node count for
+    # cluster update action. So let's simplify it by only passing the
+    # /node_count dict which can avoid many potential bugs.
+    patch = [d for d in patch if d['path']
+             in CLUSTER_UPDATE_ALLOWED_PROPERTIES]
+
     return magnumclient(request).clusters.update(id, patch, rollback=rollback)
 
 
