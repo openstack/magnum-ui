@@ -19,7 +19,7 @@ features:
     Support docker volume size option in cluster creation.
   - >
     [`bug/1570668 <https://bugs.launchpad.net/magnum-ui/+bug/1570668>`_]
-    To be convinient to input netwok settings, this changes
+    To be convenient to input netwok settings, this changes
     input forms for External Network, Fixed Network and
     Fixed Subnet in Cluster Template create/update dialogs
     to pulldowns.
