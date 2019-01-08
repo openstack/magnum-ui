@@ -11,6 +11,6 @@ the workflow documented at:
 
 Pull requests submitted through GitHub will be ignored.
 
-Bugs should be filed on Launchpad, not GitHub:
+Bugs should be filed on Storyboard, not GitHub:
 
-   http://bugs.launchpad.net/magnum-ui
+   https://storyboard.openstack.org/#!/project/openstack/magnum-ui
