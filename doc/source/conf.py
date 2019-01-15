@@ -29,6 +29,8 @@ import sys
 
 import django
 
+from magnum_ui import version as magnumui_ver
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(BASE_DIR, "..", ".."))
 
@@ -42,8 +44,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 # require that django.setup() be called first.
 # https://docs.djangoproject.com/en/1.8/releases/1.7/#standalone-scripts
 django.setup()
-
-from magnum_ui import version as magnumui_ver
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the

@@ -58,8 +58,8 @@ class MagnumRestTestCase(test.TestCase):
     def test_cluster_template_delete(self, client):
         test_cluster_template = TEST.cluster_templates.first()
         request = self.mock_rest_request(
-            body='{"cluster_template_id":'
-                 + str(test_cluster_template['uuid']) + '}')
+            body='{"cluster_template_id":' +
+                 str(test_cluster_template['uuid']) + '}')
         response = magnum.ClusterTemplates().delete(request)
 
         self.assertStatusCode(response, 204)
