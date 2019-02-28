@@ -12,8 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import json
 import mock
+
+from oslo_serialization import jsonutils
 
 from magnum_ui.api.rest import magnum
 from magnum_ui.test import test_data
@@ -42,7 +43,7 @@ class MagnumRestTestCase(test.TestCase):
     def test_cluster_template_create(self, client):
         test_cluster_templates = mock_resource(TEST.cluster_templates.list())
         test_cluster_template = test_cluster_templates[0]
-        test_body = json.dumps(test_cluster_template.to_dict())
+        test_body = jsonutils.dumps(test_cluster_template.to_dict())
         request = self.mock_rest_request(body=test_body)
         client.cluster_template_create.return_value = test_cluster_template
         response = magnum.ClusterTemplates().post(request)
@@ -83,7 +84,7 @@ class MagnumRestTestCase(test.TestCase):
     def test_cluster_create(self, client):
         test_clusters = mock_resource(TEST.clusters.list())
         test_cluster = test_clusters[0]
-        test_body = json.dumps(test_cluster.to_dict())
+        test_body = jsonutils.dumps(test_cluster.to_dict())
         request = self.mock_rest_request(body=test_body)
         client.cluster_create.return_value = test_cluster
         response = magnum.Clusters().post(request)
@@ -111,7 +112,7 @@ class MagnumRestTestCase(test.TestCase):
     def test_certificate_create(self, client):
         test_certificates = mock_resource(TEST.certificates.list())
         test_certificate = test_certificates[0]
-        test_body = json.dumps(test_certificate.to_dict())
+        test_body = jsonutils.dumps(test_certificate.to_dict())
         request = self.mock_rest_request(body=test_body)
 
         test_res_list = mock_resource(TEST.certificate_res_list.list())
@@ -119,7 +120,7 @@ class MagnumRestTestCase(test.TestCase):
         client.certificate_create.return_value = test_res
 
         response = magnum.Certificates().post(request)
-        res_body = json.loads(response.content.decode('utf-8'))
+        res_body = jsonutils.loads(response.content.decode('utf-8'))
 
         self.assertStatusCode(response, 201)
         self.assertEqual(res_body['pem'], test_res.to_dict()['pem'])
