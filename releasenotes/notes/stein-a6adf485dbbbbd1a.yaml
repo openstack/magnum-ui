@@ -1,0 +1,55 @@
+---
+features:
+  - |
+    Added attributes for cluster to show. Following cluster attributes
+    were added.
+
+    In drawer on table view:
+
+    - Keypair
+    - API address
+    - Master Addresses
+
+    In details view
+
+    - Docker Volume Size
+    - Stack Faults
+    - Master Flavor ID
+    - COE Version
+    - Container Version
+    - Labels
+    - Status Reason
+
+    Also, reconstructed layouts for drawer and details views.
+  - |
+    Added flavor_id, master_flavor_id and labels for cluster creation
+    as flavor, master flavor and labels.
+  - |
+    Supported Calico as network driver for kubernetes.
+  - |
+    Limit cluster update properties
+  - |
+    [`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_]
+    Added master_flavor_id and flavor_id to show in cluster update dialog.
+fixes:
+  - |
+    [`story 2003614 <https://storyboard.openstack.org/#!/story/2003614>`_]
+    Added image filtering for magnum. When open a image selector for cluster
+    creation dialog, many invalid images were shown. If a project has a lot
+    of images, options can be quite long, and cause wrong selection by mistake.
+    Now, images that has "os_distro" property and its value is one of
+    "fedora-atomic", "coreos" and "ubuntu" would be shown.
+  - |
+    Disabled action for rotate certificate, due to Magnum API has not
+    support rotate certificate yet. This action will be enabled in the future.
+  - |
+    [`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_]
+    Magnum only allows the node count in cluster update now.
+    Properties for cluster update filtered in favor of Magnum API.
+  - |
+    Supported api-version for client. Magnum API is using micro versions
+    and to get the correct fuctions support, user or client have to
+    initialize the correct client with parameter 'api_version'.
+    Magnum UI also follow the same way as other OpenStack services
+    to read the version from OPENSTACK_API_VERSIONS of Horizon
+    local_settings.py.
