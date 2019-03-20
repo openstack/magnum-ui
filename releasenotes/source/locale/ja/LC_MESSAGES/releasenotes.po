@@ -1,15 +1,16 @@
 # Shu Muto <shu.mutow@gmail.com>, 2016. #zanata
 # Shu Muto <shu.mutow@gmail.com>, 2017. #zanata
 # Shu Muto <shu.mutow@gmail.com>, 2018. #zanata
+# Shu Muto <shu.mutow@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-08 09:09+0000\n"
+"POT-Creation-Date: 2019-03-19 09:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-11-14 07:53+0000\n"
+"PO-Revision-Date: 2019-03-20 02:09+0000\n"
 "Last-Translator: Shu Muto <shu.mutow@gmail.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -45,6 +46,12 @@ msgstr "4.0.0"
 msgid "5.0.0"
 msgstr "5.0.0"
 
+msgid "5.0.0-47"
+msgstr "5.0.0-47"
+
+msgid "API address"
+msgstr "API アドレス"
+
 msgid "Add following options to cluster template creation and views."
 msgstr "以下のオプションをクラスターテンプレートの作成と表示に追加しました。"
 
@@ -56,6 +63,20 @@ msgstr ""
 "クォータ用の API サービスを追加しました。CLI の API 、Ajax 用の REST API 、"
 "Angular 用の REST サービスが追加されています。また、統計情報とクォータ情報が"
 "クラスター一覧ビューに追加されています。"
+
+msgid ""
+"Added attributes for cluster to show. Following cluster attributes were "
+"added."
+msgstr ""
+"表示用のクラスターの属性を追加しました。以下のクラスターの属性が追加されまし"
+"た。"
+
+msgid ""
+"Added flavor_id, master_flavor_id and labels for cluster creation as flavor, "
+"master flavor and labels."
+msgstr ""
+"クラスター作成のための flavor_id 、master_flavor_id 、および labels を、フ"
+"レーバー、マスターフレーバー、およびラベルとして追加しました。"
 
 msgid ""
 "Added some attributes for cluster to show. Keypair, API address and Master "
@@ -79,8 +100,14 @@ msgstr ""
 "Magnum の変更に追随して、 Magnum UI でもこの機能を使用できるようになりまし"
 "た。"
 
+msgid "Also, reconstructed layouts for drawer and details views."
+msgstr "また、ドロワーと詳細画面のレイアウトも再構築されました。"
+
 msgid "Bug Fixes"
 msgstr "バグ修正"
+
+msgid "COE Version"
+msgstr "COE バージョン"
 
 msgid ""
 "Change creation actions to global actions. Cluster Template creation and "
@@ -91,6 +118,9 @@ msgstr ""
 "作成とクラスターの作成のアクションは、バッチアクションからグローバルアクショ"
 "ンに変更しました。これは、これらのアクションが他のパネルから呼び出し可能なこ"
 "とを意味します。"
+
+msgid "Container Version"
+msgstr "コンテナーバージョン"
 
 msgid ""
 "Container panel is removed. According to decision of Magnum that changes "
@@ -104,6 +134,16 @@ msgstr "開発中バージョンのリリースノート"
 
 msgid "Deprecation Notes"
 msgstr "廃止予定の機能"
+
+msgid ""
+"Disabled action for rotate certificate, due to Magnum API has not support "
+"rotate certificate yet. This action will be enabled in the future."
+msgstr ""
+"Magnum API は証明書の更新をまだサポートしていないため、証明書の更新アクション"
+"を無効化しました。このアクションは将来有効になるやもしれません。"
+
+msgid "Docker Volume Size"
+msgstr "Docker のボリューム容量"
 
 msgid ""
 "Filled up empty values with '-' on table view and details view using noValue "
@@ -121,8 +161,23 @@ msgstr ""
 "証明書の検証エラーを返す問題を解決しました。'insecure' と 'ca-cert' オプショ"
 "ンを magnumclient 用に追加しました。"
 
+msgid "In details view"
+msgstr "詳細画面"
+
+msgid "In drawer on table view:"
+msgstr "テーブル画面のドロワー"
+
+msgid "Keypair"
+msgstr "キーペア"
+
 msgid "Known Issues"
 msgstr "既知の問題"
+
+msgid "Labels"
+msgstr "ラベル"
+
+msgid "Limit cluster update properties"
+msgstr "更新できるクラスターのプロパティの制限"
 
 msgid "Magnum UI Release Notes"
 msgstr "Magnum UI リリースノート"
@@ -149,6 +204,12 @@ msgstr ""
 "ナー管理機能を削除しました。「ベイ」という新しい Magnum の用語の使用がユー"
 "ザーに混乱を招いたため、Magnum は「ベイ」と「ベイモデル」の代わりに「クラス"
 "ター」と「クラスターテンプレート」という用語を使用します。"
+
+msgid "Master Addresses"
+msgstr "マスターのアドレス"
+
+msgid "Master Flavor ID"
+msgstr "マスターノードのフレーバー ID"
 
 msgid "New Features"
 msgstr "新機能"
@@ -199,6 +260,12 @@ msgstr ""
 "サービスを「コンテナー」から「コンテナーインフラ」に名称変更しました。名称変"
 "更の対象は、URL 、Angular モジュール名、パネルの slug などです。"
 
+msgid "Stack Faults"
+msgstr "スタックの失敗"
+
+msgid "Status Reason"
+msgstr "ステータスの理由"
+
 msgid ""
 "Support 'ca-show'. The function of downloading CA from cluster is added."
 msgstr ""
@@ -221,6 +288,22 @@ msgstr ""
 
 msgid "Support python 3.5."
 msgstr "Python 3.5 をサポートしました。"
+
+msgid "Supported Calico as network driver for kubernetes."
+msgstr "Kubernetes のネットワークドライバーとして、Calico をサポートしました。"
+
+msgid ""
+"Supported api-version for client. Magnum API is using micro versions and to "
+"get the correct fuctions support, user or client have to initialize the "
+"correct client with parameter 'api_version'. Magnum UI also follow the same "
+"way as other OpenStack services to read the version from "
+"OPENSTACK_API_VERSIONS of Horizon local_settings.py."
+msgstr ""
+"クライアントの api-version をサポートしました。Magnum API はマイクロバージョ"
+"ンを使用しており、正しく機能サポートを使用するには、ユーザーやクライアントが"
+"「api_version」パラメーターを使用してクライアントを正しく初期化する必要があり"
+"ます。Magnum UI も他の OpenStack サービスと同様に、Horizon の local_settings."
+"py の OPENSTACK_API_VERSIONS からバージョンを読み込みます。"
 
 msgid "Switch theme for documentation from oslosphinx to openstackdocstheme."
 msgstr ""
@@ -412,6 +495,39 @@ msgstr ""
 "一括アクションにおけるアイテム選択が、アクション実行後にクリアされませんでし"
 "た。アイテム選択を確実に実行するために、`hzTable:clearSelection` イベントを発"
 "火するようにしました。"
+
+msgid ""
+"[`story 2003614 <https://storyboard.openstack.org/#!/story/2003614>`_] Added "
+"image filtering for magnum. When open a image selector for cluster creation "
+"dialog, many invalid images were shown. If a project has a lot of images, "
+"options can be quite long, and cause wrong selection by mistake. Now, images "
+"that has \"os_distro\" property and its value is one of \"fedora-atomic\", "
+"\"coreos\" and \"ubuntu\" would be shown."
+msgstr ""
+"[`story 2003614 <https://storyboard.openstack.org/#!/story/2003614>`_] "
+"Magnum 用のイメージフィルタリングを追加しました。クラスター作成ダイアログのイ"
+"メージ選択を開いたときに、大量の無効なイメージが表示されていました。プロジェ"
+"クトに多くのイメージがある場合に、このオプションはとても長くなり、選択ミスを"
+"引き起こしやすくなっていました。現在は、「os_distro」プロパティを持つイメージ"
+"で、その値が「fedora-atomic」、「coreos」、「ubuntu」のうちのいずれかであるも"
+"のだけが表示されます。"
+
+msgid ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] Added "
+"master_flavor_id and flavor_id to show in cluster update dialog."
+msgstr ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] 表示用"
+"に「master_flavor_id」と「flavor_id」をクラスター更新ダイアログに追加しまし"
+"た。"
+
+msgid ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] "
+"Magnum only allows the node count in cluster update now. Properties for "
+"cluster update filtered in favor of Magnum API."
+msgstr ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] 現"
+"在、 Magnum はクラスター更新でノード数のみを許可しています。クラスター更新の"
+"プロパティは、Magnum API に合わせてフィルタリングされます。"
 
 msgid ""
 "angular-json-schema library is used for create and update dialog, their "
