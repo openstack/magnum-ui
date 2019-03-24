@@ -3,7 +3,7 @@
   "description": "Magnum UI JavaScript tests",
   "repository": {
     "type": "git",
-    "url": "git://git.openstack.org/openstack/magnum-ui"
+    "url": "https://git.openstack.org/openstack/magnum-ui"
   },
   "version": "0.0.0",
   "private": true,
