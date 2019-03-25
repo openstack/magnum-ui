@@ -10,11 +10,13 @@
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - nodejs-npm-run-test:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
     gate:
@@ -22,11 +24,13 @@
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
         - nodejs-npm-run-test:
             vars:
               node_version: 4
+            nodeset: ubuntu-xenial
             required-projects:
               - openstack/horizon
 
