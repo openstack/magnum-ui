@@ -14,7 +14,7 @@ Magnum UI
 Horizon plugin for Magnum
 
 * Free software: Apache license
-* Source: https://git.openstack.org/cgit/openstack/magnum-ui
+* Source: https://opendev.org/openstack/magnum-ui
 * Bugs: https://bugs.launchpad.net/magnum-ui
 * Documentation: https://docs.openstack.org/magnum-ui/latest/
 * Release notes: https://docs.openstack.org/releasenotes/magnum-ui/
