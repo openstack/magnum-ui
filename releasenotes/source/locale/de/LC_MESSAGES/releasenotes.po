@@ -5,15 +5,16 @@
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Reik Keutterling <spielkind@gmail.com>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
+# Robert Simai <robert.simai@suse.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-18 03:13+0000\n"
+"POT-Creation-Date: 2019-04-15 07:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-09-17 01:14+0000\n"
+"PO-Revision-Date: 2019-05-03 02:15+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -47,6 +48,12 @@ msgstr "4.0.0"
 
 msgid "5.0.0"
 msgstr "5.0.0"
+
+msgid "5.1.0"
+msgstr "5.1.0"
+
+msgid "API address"
+msgstr "API Addresse"
 
 msgid "Add following options to cluster template creation and views."
 msgstr ""
@@ -87,6 +94,9 @@ msgstr ""
 msgid "Bug Fixes"
 msgstr "Fehlerkorrekturen"
 
+msgid "COE Version"
+msgstr "COE Version"
+
 msgid ""
 "Change creation actions to global actions. Cluster Template creation and "
 "Cluster creation actions are changed from batchAction to globalAction. This "
@@ -95,6 +105,9 @@ msgstr ""
 "Erzeugeaktionen in globale Aktionen geändert. Clustervorlagenerstellung und "
 "Cluster-Erzeugungsaktionen wurden von batchAction in globalAction geändert. "
 "Das bedeutet, die Aktionen sind von anderen Paneelen aufrufbar."
+
+msgid "Container Version"
+msgstr "Container Version"
 
 msgid ""
 "Container panel is removed. According to decision of Magnum that changes "
@@ -109,6 +122,9 @@ msgstr "Aktuelle Serie Release Notes"
 
 msgid "Deprecation Notes"
 msgstr "Ablaufwarnungen"
+
+msgid "Docker Volume Size"
+msgstr "Docker Datenträgergrösse"
 
 msgid ""
 "Filled up empty values with '-' on table view and details view using noValue "
@@ -127,8 +143,14 @@ msgstr ""
 "Zertifikatverifizierungsfehler ausgegeben. Die Optionen 'insecure' und 'ca-"
 "cert' wurden dem Magnumklienten hinzugefügt."
 
+msgid "Keypair"
+msgstr "Schlüsselpaar"
+
 msgid "Known Issues"
 msgstr "Bekannte Fehler"
+
+msgid "Labels"
+msgstr "Bezeichnungen"
 
 msgid "Magnum UI Release Notes"
 msgstr "Magnum UI Release Notes"
@@ -156,6 +178,12 @@ msgstr ""
 "entfernt. Magnum verwendet die Begriffe 'Cluster' und 'Clustervorlage' "
 "anstelle von 'Bay' und 'Baymodell', um Verwechslungen mit dem neuen Magnum-"
 "Begriff \"Bay\" zu vermeiden."
+
+msgid "Master Addresses"
+msgstr "Masteradressen"
+
+msgid "Master Flavor ID"
+msgstr "Master Variante ID"
 
 msgid "New Features"
 msgstr "Neue Funktionen"
@@ -205,6 +233,15 @@ msgid ""
 msgstr ""
 "Dienst wurde von 'container' nach 'container-infra' umbenannt. Ziele der "
 "Umbenennung sind URLs, Angular-Modulname, \"slugs for panel\" etc."
+
+msgid "Stack Faults"
+msgstr "Stapelfehler"
+
+msgid "Status Reason"
+msgstr "Status Grund"
+
+msgid "Stein Series Release Notes"
+msgstr "Stein Serie Releasenotes"
 
 msgid ""
 "Support 'ca-show'. The function of downloading CA from cluster is added."

@@ -5,15 +5,16 @@
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 # Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-29 08:44+0000\n"
+"POT-Creation-Date: 2019-04-15 07:55+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-31 11:37+0000\n"
+"PO-Revision-Date: 2019-05-01 11:12+0000\n"
 "Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
@@ -47,6 +48,12 @@ msgstr "4.0.0"
 msgid "5.0.0"
 msgstr "5.0.0"
 
+msgid "5.1.0"
+msgstr "5.1.0"
+
+msgid "API address"
+msgstr "API 주소"
+
 msgid "Add following options to cluster template creation and views."
 msgstr "클러스터 템플릿 생성과 뷰에 다음 옵션을 추가하세요."
 
@@ -58,6 +65,19 @@ msgstr ""
 "Quotas에 대한 API 서비스를 추가하였습니다. CLI에 대한 API, Ajax에 대한 REST "
 "API, 그리고 Angular에 대한 REST 서비스를 추가하였습니다. 또한 통계 및 할당량"
 "에 대한 정보를 클러스터 테이블 뷰에 추가하였습니다."
+
+msgid ""
+"Added attributes for cluster to show. Following cluster attributes were "
+"added."
+msgstr ""
+"보여줄 클러스터 속성이 추가되었습니다. 다음 클러스터 속성이 추가되었습니다."
+
+msgid ""
+"Added flavor_id, master_flavor_id and labels for cluster creation as flavor, "
+"master flavor and labels."
+msgstr ""
+"클러스터 생성용 flavor_id, master_flavor_id, label이 flavor, master flavor, "
+"label으로 추가되었습니다. "
 
 msgid ""
 "Added some attributes for cluster to show. Keypair, API address and Master "
@@ -79,8 +99,14 @@ msgstr ""
 "를 변경하거나 설정할 수 있습니다. Magnum의 변경에 이어 Magnum UI 또한 이 기능"
 "을 허용합니다."
 
+msgid "Also, reconstructed layouts for drawer and details views."
+msgstr "또한, 드로워와 상세보기에 대한 재구성된 레이아웃."
+
 msgid "Bug Fixes"
 msgstr "버그 수정"
+
+msgid "COE Version"
+msgstr "COE 버전"
 
 msgid ""
 "Change creation actions to global actions. Cluster Template creation and "
@@ -90,6 +116,9 @@ msgstr ""
 "생성 동작을 전역 동작으로 변경하십시오. 클러스터 템플릿 작성 및 클러스터 작"
 "성 액션이 batchAction에서 globalAction으로 변경됩니다. 즉, 이러한 작업은 다"
 "른 패널에서 호출 할 수 있습니다."
+
+msgid "Container Version"
+msgstr "컨테이너 버전"
 
 msgid ""
 "Container panel is removed. According to decision of Magnum that changes "
@@ -103,6 +132,16 @@ msgstr "최신 시리즈에 대한 릴리즈 노트"
 
 msgid "Deprecation Notes"
 msgstr "지원 종료된 기능 노트"
+
+msgid ""
+"Disabled action for rotate certificate, due to Magnum API has not support "
+"rotate certificate yet. This action will be enabled in the future."
+msgstr ""
+"Magnum API가 인증서 회전을 아직 지원하지 않기 때문에, 인증서 회전의 비활성화"
+"된 작업. 이 작업은 향후 활성화될 예정입니다."
+
+msgid "Docker Volume Size"
+msgstr "Docker 볼륨 크기"
 
 msgid ""
 "Filled up empty values with '-' on table view and details view using noValue "
@@ -120,8 +159,23 @@ msgstr ""
 "가 났을때 상세정보를 확인 할 수 없는 에러가 수정되었습니다. 'insecure' 과 "
 "'ca-cert'옵션이 매그넘 클라이언트에 추가되었습니다."
 
+msgid "In details view"
+msgstr "상세 보기에서"
+
+msgid "In drawer on table view:"
+msgstr "테이블 보기의 드로워에서:"
+
+msgid "Keypair"
+msgstr "키페어"
+
 msgid "Known Issues"
 msgstr "알려진 이슈"
+
+msgid "Labels"
+msgstr "레이블"
+
+msgid "Limit cluster update properties"
+msgstr "클러스터 업데이트 속성 제한"
 
 msgid "Magnum UI Release Notes"
 msgstr "Magnum UI 릴리즈 노트"
@@ -149,6 +203,12 @@ msgstr ""
 "이(bay)'와 '베이모델(baymodel)'대신에 '클러스터(cluster)'와 '클러스터 템플릿"
 "(cluster template)'라는 용어를 사용합니다. 왜냐하면 '베이(bay)'라는 Magnum의 "
 "새로운 단어는 사용자들을 혼란 시켰기 때문입니다."
+
+msgid "Master Addresses"
+msgstr "마스터 주소"
+
+msgid "Master Flavor ID"
+msgstr "마스터 Flavor ID"
 
 msgid "New Features"
 msgstr "새로운 기능"
@@ -199,6 +259,12 @@ msgstr ""
 "이 바뀌었습니다. 이름이 바뀔 대상으로 URL, 앵귤러 모듈, 패널의 슬러그, 등이 "
 "있습니다."
 
+msgid "Stack Faults"
+msgstr "스택 장애"
+
+msgid "Status Reason"
+msgstr "상태 원인"
+
 msgid ""
 "Support 'ca-show'. The function of downloading CA from cluster is added."
 msgstr ""
@@ -218,6 +284,22 @@ msgstr ""
 
 msgid "Support python 3.5."
 msgstr "파이썬 3.5를 지원합니다."
+
+msgid "Supported Calico as network driver for kubernetes."
+msgstr "쿠버네티스용 네트워크 드라이버로서 Calio를 지원"
+
+msgid ""
+"Supported api-version for client. Magnum API is using micro versions and to "
+"get the correct fuctions support, user or client have to initialize the "
+"correct client with parameter 'api_version'. Magnum UI also follow the same "
+"way as other OpenStack services to read the version from "
+"OPENSTACK_API_VERSIONS of Horizon local_settings.py."
+msgstr ""
+"클라이언트용 api-version를 지원. Magnum API는 마이크로 버전을 사용하고 올바"
+"른 기능을 지원하기 위해, 사용자나 클라이언트는 'api_version' 매개변수와 함께 "
+"올바른 클라이언트를 초기화해야 합니다. Magnum UI는 Horizon local_settings.py"
+"의 OPENSTACK_API_VERSIONS에서 버전 정보를 읽기 위해 다른 오픈스택 서비스와 동"
+"일한 방식을 따릅니다."
 
 msgid "Switch theme for documentation from oslosphinx to openstackdocstheme."
 msgstr "oslosphinx에서 openstackdocstheme로 문서 테마 전환."
