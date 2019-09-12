@@ -1,0 +1,10 @@
+---
+features:
+  - >
+    Improve cluster launch workflow form.
+  - >
+    Add configuration for specifying ingress controllers and addon software
+    supported / available for use with clusters.
+  - >
+    Adds REST endpoints for retrieving configured ingress controllers and addon
+    software.

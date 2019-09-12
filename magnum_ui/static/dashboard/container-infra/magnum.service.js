@@ -48,6 +48,8 @@
       signCertificate: signCertificate,
       rotateCertificate: rotateCertificate,
       getStats: getStats,
+      getIngressControllers: getIngressControllers,
+      getAddons: getAddons,
       getQuotas: getQuotas,
       getQuota: getQuota,
       createQuota: createQuota,
@@ -210,6 +212,31 @@
       return apiService.get('/api/container_infra/stats/')
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the stats.'));
+        });
+    }
+
+    /////////////////
+    // Ingress     //
+    // Controllers //
+    /////////////////
+
+    function getIngressControllers() {
+      return apiService.get('/api/container_infra/ingress_controllers/')
+        .error(function() {
+          toastService.add('error',
+            gettext('Unable to retrieve available ingress controllers.'));
+        });
+    }
+
+    //////////////
+    // Add-Ons //
+    //////////////
+
+    function getAddons() {
+      return apiService.get('/api/container_infra/available_addons/')
+        .error(function() {
+          toastService.add('error',
+            gettext('Unable to retrieve available add-ons.'));
         });
     }
 

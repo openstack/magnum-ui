@@ -279,6 +279,18 @@
         "method": "get",
         "path": "/api/container_infra/stats/",
         "error": "Unable to retrieve the stats."
+      },
+      {
+        "func": "getIngressControllers",
+        "method": "get",
+        "path": "/api/container_infra/ingress_controllers/",
+        "error": "Unable to retrieve available ingress controllers."
+      },
+      {
+        "func": "getAddons",
+        "method": "get",
+        "path": "/api/container_infra/available_addons/",
+        "error": "Unable to retrieve available add-ons."
       }
     ];
 

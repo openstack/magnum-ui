@@ -67,19 +67,60 @@
     }
 
     function onGetClusterTemplate(response) {
-      ctrl.clusterTemplate = response.data;
-      if ($scope.model.keypair === "") {
-        if (response.data.keypair_id === null) {
-          $scope.model.keypair = "";
-        } else {
-          $scope.model.keypair = response.data.keypair_id;
+      var MODEL_DEFAULTS = $scope.model.DEFAULTS;
+      var template = response.data;
+
+      ctrl.clusterTemplate = template;
+
+      // master_lb_enabled=false? Only allow a single Master Node
+      $scope.model.isSingleMasterNode = template.hasOwnProperty('master_lb_enabled') &&
+        template.master_lb_enabled === false;
+      $scope.model.master_count = $scope.model.isSingleMasterNode ? 1 : $scope.model.master_count;
+
+      // Only alter the model if the value is default and exists in the response
+      // Warning: This is loosely coupled with default states.
+      // Sets response.key -> model.key
+      setResponseAsDefaultIfUnset('keypair_id', 'keypair');
+      setResponseAsDefaultIfUnset('master_count', 'master_count');
+      setResponseAsDefaultIfUnset('master_flavor_id', 'master_flavor_id');
+      setResponseAsDefaultIfUnset('node_count', 'node_count');
+      setResponseAsDefaultIfUnset('flavor_id', 'flavor_id');
+
+      if (template.floating_ip_enabled !== null) {
+        $scope.model.floating_ip_enabled = template.floating_ip_enabled;
+      }
+
+      if (!template.labels) { return; }
+
+      $scope.model.templateLabels = template.labels;
+
+      // If a template label exists as a field on the form -> Set it as a default
+      setLabelResponseAsDefault('auto_scaling_enabled', 'auto_scaling_enabled', true);
+      setLabelResponseAsDefault('auto_healing_enabled', 'auto_healing_enabled', true);
+
+      // Set default `ingress_controller` based on its label
+      if (template.labels.ingress_controller !== null &&
+        $scope.model.ingressControllers && $scope.model.ingressControllers.length > 0) {
+        $scope.model.ingress_controller = MODEL_DEFAULTS.ingress_controller;
+        $scope.model.ingressControllers.forEach(function(controller) {
+          if (controller.labels && controller.labels.ingress_controller &&
+            controller.labels.ingress_controller === template.labels.ingress_controller) {
+            $scope.model.ingress_controller = controller;
+          }
+        });
+      }
+
+      function setResponseAsDefaultIfUnset(responseKey, modelKey) {
+        if ($scope.model[modelKey] === MODEL_DEFAULTS[modelKey] &&
+          template[responseKey] !== null) {
+          $scope.model[modelKey] = template[responseKey];
         }
       }
-      if ($scope.model.docker_volume_size === "") {
-        if (response.data.docker_volume_size === null) {
-          $scope.model.docker_volume_size = "";
-        } else {
-          $scope.model.docker_volume_size = response.data.docker_volume_size;
+      function setLabelResponseAsDefault(labelKey, modelKey, isValueBoolean) {
+        if (template.labels[labelKey] !== null) {
+          $scope.model[modelKey] = isValueBoolean
+            ? template.labels[labelKey] === 'true'
+            : template.labels[labelKey];
         }
       }
     }
