@@ -103,6 +103,25 @@
         "testInput": [1]
       },
       {
+        "func": "upgradeCluster",
+        "method": "post",
+        "path": "/api/container_infra/clusters/123/upgrade",
+        "data": {
+          "cluster_template": "ABC",
+          "max_batch_size": 1,
+          "node_group": "production_group"
+        },
+        "error": "Unable to perform rolling upgrade.",
+        "testInput": [
+          "123",
+          {
+            "cluster_template": "ABC",
+            "max_batch_size": 1,
+            "node_group": "production_group"
+          }
+        ]
+      },
+      {
         "func": "deleteClusters",
         "method": "delete",
         "path": "/api/container_infra/clusters/",
@@ -138,6 +157,13 @@
         "method": "get",
         "path": "/api/container_infra/cluster_templates/",
         "error": "Unable to retrieve the cluster templates."
+      },
+      {
+        "func": "getClusterTemplates",
+        "method": "get",
+        "path": "/api/container_infra/cluster_templates/?related_to=123",
+        "error": "Unable to retrieve the cluster templates.",
+        "testInput": [123]
       },
       {
         "func": "deleteClusterTemplate",
