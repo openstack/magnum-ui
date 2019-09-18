@@ -229,15 +229,23 @@ latex_elements = {
     # 'pointsize': '10pt',
 
     # Additional stuff for the LaTeX preamble.
-    # 'preamble': '',
+    # openany: Skip blank pages in generated PDFs
+    'extraclassoptions': 'openany,oneside',
+    'makeindex': '',
+    'printindex': '',
+    'preamble': r'\setcounter{tocdepth}{3}',
 }
+
+# Disable usage of xindy https://bugzilla.redhat.com/show_bug.cgi?id=1643664
+# Some distros are missing xindy
+latex_use_xindy = False
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
 # [howto/manual]).
 latex_documents = [
-    ('index', 'Horizon.tex', u'Horizon Documentation',
-     u'OpenStack Foundation', 'manual'),
+    ('index', 'doc-magnum-ui.tex', u'Magnum UI Documentation',
+     u'OpenStack Foundation', 'howto', True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
