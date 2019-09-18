@@ -209,6 +209,13 @@ def cluster_resize(request, cluster_id, node_count,
         nodes_to_remove=nodes_to_remove, nodegroup=nodegroup)
 
 
+def cluster_upgrade(request, cluster_uuid, cluster_template,
+                    max_batch_size=1, nodegroup=None):
+    return magnumclient(request).clusters.upgrade(
+        cluster_uuid, cluster_template,
+        max_batch_size=max_batch_size, nodegroup=None)
+
+
 def certificate_create(request, **kwargs):
     args = {}
     for (key, value) in kwargs.items():

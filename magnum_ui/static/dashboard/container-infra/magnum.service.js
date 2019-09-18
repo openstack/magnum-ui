@@ -31,6 +31,7 @@
     var service = {
       createCluster: createCluster,
       updateCluster: updateCluster,
+      upgradeCluster: upgradeCluster,
       getCluster: getCluster,
       getClusters: getClusters,
       getClusterNodes: getClusterNodes,
@@ -72,6 +73,13 @@
       return apiService.patch('/api/container_infra/clusters/' + id, params)
         .error(function() {
           toastService.add('error', gettext('Unable to update cluster.'));
+        });
+    }
+
+    function upgradeCluster(id, params) {
+      return apiService.post('/api/container_infra/clusters/' + id + '/upgrade', params)
+        .error(function() {
+          toastService.add('error', gettext('Unable to perform rolling upgrade.'));
         });
     }
 
@@ -145,8 +153,9 @@
         });
     }
 
-    function getClusterTemplates() {
-      return apiService.get('/api/container_infra/cluster_templates/')
+    function getClusterTemplates(relatedTemplateId) {
+      var filterQuery = relatedTemplateId ? '?related_to=' + relatedTemplateId : '';
+      return apiService.get('/api/container_infra/cluster_templates/' + filterQuery)
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the cluster templates.'));
         });
