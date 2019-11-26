@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Fix an issue where a user was unable to create or update a cluster template
+    on Horizon due to missing hidden option expected by the API.

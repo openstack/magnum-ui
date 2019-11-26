@@ -71,6 +71,8 @@
           ? response.data.server_type : "";
         config.model.public = response.data.public
           ? response.data.public : false;
+        config.model.hidden = response.data.hidden
+          ? response.data.hidden : false;
         config.model.registry_enabled = response.data.registry_enabled
           ? response.data.registry_enabled : false;
         config.model.tls_disabled = response.data.tls_disabled
