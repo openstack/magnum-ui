@@ -480,7 +480,7 @@
         flavor_id: "",
         master_flavor_id: "",
         docker_volume_size: "",
-        docker_storage_driver: "devicemapper",
+        docker_storage_driver: "",
         keypair_id: "",
         network_driver: "",
         volume_driver: "",
