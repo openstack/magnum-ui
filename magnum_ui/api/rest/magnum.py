@@ -12,10 +12,13 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from django.http import HttpResponseNotFound
 from django.views import generic
 
+from magnum_ui.api import heat
 from magnum_ui.api import magnum
 
+from openstack_dashboard import api
 from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
@@ -114,6 +117,51 @@ class Cluster(generic.View):
         return rest_utils.CreatedResponse(
             '/api/container_infra/cluster/%s' % cluster_id,
             updated_cluster.to_dict())
+
+
+@urls.register
+class ClusterResize(generic.View):
+
+    url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)/resize$'
+
+    @rest_utils.ajax()
+    def get(self, request, cluster_id):
+        """Get cluster details for resize"""
+        try:
+            cluster = magnum.cluster_show(request, cluster_id).to_dict()
+        except AttributeError as e:
+            print(e)
+            return HttpResponseNotFound()
+
+        stack = heat.stack_get(request, cluster["stack_id"])
+        search_opts = {"name": "%s-minion" % stack.stack_name}
+        servers = api.nova.server_list(request, search_opts=search_opts)[0]
+
+        worker_nodes = []
+        for server in servers:
+            worker_nodes.append({"name": server.name, "id": server.id})
+
+        return {"cluster": change_to_id(cluster),
+                "worker_nodes": worker_nodes}
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, cluster_id):
+        """Resize a cluster"""
+
+        nodes_to_remove = request.DATA.get("nodes_to_remove", None)
+        nodegroup = request.DATA.get("nodegroup", None)
+        node_count = request.DATA.get("node_count")
+
+        # Result will be 'None' unless error is raised response will be '204'
+        try:
+            return magnum.cluster_resize(
+                request, cluster_id, node_count,
+                nodes_to_remove=nodes_to_remove, nodegroup=nodegroup)
+        except AttributeError as e:
+            # If cluster is not found magnum-client throws Attribute error
+            # catch and respond with 404
+            print(e)
+            return HttpResponseNotFound()
 
 
 @urls.register

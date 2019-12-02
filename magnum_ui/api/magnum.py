@@ -84,7 +84,7 @@ def _create_patches(old, new):
     for key in new:
         path = '/' + key
         if key in old and old[key] != new[key]:
-            if new[key] is None or new[key] is '':
+            if new[key] is None or new[key] == '':
                 patch.append({'op': 'remove', 'path': path})
             else:
                 patch.append({'op': 'replace', 'path': path,
@@ -194,6 +194,19 @@ def cluster_list(request, limit=None, marker=None, sort_key=None,
 
 def cluster_show(request, id):
     return magnumclient(request).clusters.get(id)
+
+
+def cluster_resize(request, cluster_id, node_count,
+                   nodes_to_remove=None, nodegroup=None):
+
+    if nodes_to_remove is None:
+        nodes_to_remove = []
+
+    # Note: Magnum client does not use any return statement so result will
+    # be None unless an exception is raised.
+    return magnumclient(request).clusters.resize(
+        cluster_id, node_count,
+        nodes_to_remove=nodes_to_remove, nodegroup=nodegroup)
 
 
 def certificate_create(request, **kwargs):

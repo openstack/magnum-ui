@@ -34,6 +34,7 @@
     'horizon.framework.util.i18n.gettext',
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.clusters.delete.service',
+    'horizon.dashboard.container-infra.clusters.resize.service',
     'horizon.dashboard.container-infra.clusters.update.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.sign-certificate.service',
@@ -46,6 +47,7 @@
     gettext,
     createClusterService,
     deleteClusterService,
+    resizeClusterService,
     updateClusterService,
     showCertificateService,
     signCertificateService,
@@ -93,6 +95,13 @@
         service: rotateCertificateService,
         template: {
           text: gettext('Rotate Certificate')
+        }
+      })
+      .append({
+        id: 'resizeClusterAction',
+        service: resizeClusterService,
+        template: {
+          text: gettext('Resize Cluster')
         }
       })
       .append({
