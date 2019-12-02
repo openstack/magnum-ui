@@ -1,0 +1,10 @@
+---
+features:
+  - >
+    REST Api and Angular service for resizing clusters is addedd. Angular view
+    supports resizing number of worker nodes only.
+other:
+  - >
+    Bump python-magnumclient lowerconstraint to >= 2.15.0
+  - >
+    Adds python-heatclient >= 1.18.0 dependency

@@ -50,6 +50,16 @@
       expect(actionHasId(actions, 'rotateCertificateAction')).toBe(true);
     });
 
+    it('registers Resize Cluster as an item action', function() {
+      var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
+      expect(actionHasId(actions, 'resizeClusterAction')).toBe(true);
+    });
+
+    it('registers Update Cluster as an item action', function() {
+      var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
+      expect(actionHasId(actions, 'updateClusterAction')).toBe(true);
+    });
+
     it('registers Delete Cluster as an item action', function() {
       var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
       expect(actionHasId(actions, 'deleteClusterAction')).toBe(true);

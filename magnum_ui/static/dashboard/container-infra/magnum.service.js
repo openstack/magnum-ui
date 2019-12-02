@@ -33,6 +33,8 @@
       updateCluster: updateCluster,
       getCluster: getCluster,
       getClusters: getClusters,
+      getClusterNodes: getClusterNodes,
+      resizeCluster: resizeCluster,
       deleteCluster: deleteCluster,
       deleteClusters: deleteClusters,
       createClusterTemplate: createClusterTemplate,
@@ -84,6 +86,21 @@
       return apiService.get('/api/container_infra/clusters/')
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the clusters.'));
+        });
+    }
+
+    function getClusterNodes(id) {
+      return apiService.get('/api/container_infra/clusters/' + id + '/resize')
+        .error(function() {
+          toastService.add('error', gettext('Unable to get cluster\'s working nodes.'));
+        });
+    }
+
+    function resizeCluster(id, params) {
+      return apiService.post('/api/container_infra/clusters/' + id + '/resize', params)
+        .error(function() {
+          var msg = gettext('Unable to resize given cluster id: %(id)s.');
+          toastService.add('error', interpolate(msg, { id: id }, true));
         });
     }
 
