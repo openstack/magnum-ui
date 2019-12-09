@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Add fedora-coreos image support. User can choose an image with property
+    'os_distro=fedora-coreos' on horizon UI when creating a k8s cluster template.
