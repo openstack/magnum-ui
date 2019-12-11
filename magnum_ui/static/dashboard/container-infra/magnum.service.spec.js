@@ -69,6 +69,32 @@
         "error": "Unable to retrieve the clusters."
       },
       {
+        "func": "getClusterNodes",
+        "method": "get",
+        "path": "/api/container_infra/clusters/123/resize",
+        "error": "Unable to get cluster\'s working nodes.",
+        "testInput": ["123"]
+      },
+      {
+        "func": "resizeCluster",
+        "method": "post",
+        "path": "/api/container_infra/clusters/123/resize",
+        "data": {
+          "node_count": 2,
+          "nodes_to_remove": ["456"],
+          "nodegroup": "production_group"
+        },
+        "error": "Unable to resize given cluster id: 123.",
+        "testInput": [
+          "123",
+          {
+            "node_count": 2,
+            "nodes_to_remove": ["456"],
+            "nodegroup": "production_group"
+          }
+        ]
+      },
+      {
         "func": "deleteCluster",
         "method": "delete",
         "path": "/api/container_infra/clusters/",
