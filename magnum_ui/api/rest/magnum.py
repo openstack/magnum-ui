@@ -200,6 +200,7 @@ class ClusterResize(generic.View):
             return HttpResponseNotFound()
 
 
+@urls.register
 class ClusterUpgrade(generic.View):
 
     url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)/upgrade$'
