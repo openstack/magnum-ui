@@ -32,6 +32,7 @@
       'horizon.dashboard.container-infra.clusters.actions',
       'horizon.dashboard.container-infra.clusters.details'
     ])
+    .decorator('actionsDirective', actionsDirectiveDecorator)
     .constant('horizon.dashboard.container-infra.clusters.events', events())
     .constant('horizon.dashboard.container-infra.clusters.resourceType', 'OS::Magnum::Cluster')
     .run(run)
@@ -195,5 +196,28 @@
     $routeProvider.when('/project/clusters', {
       templateUrl: path + 'panel.html'
     });
+  }
+
+  actionsDirectiveDecorator.$inject = [
+    '$delegate',
+    'horizon.dashboard.container-infra.clusters.utils'
+  ];
+
+  /**
+   * @param {Object} $delegate
+   * @param {Object} clustersUtils
+   * @description Extends behaviour of `horizon.framework.widgets.action-list.directive:actions`
+   * with business logic in clusters.getActionsDirectiveLinkFn();
+   * @return {Object} Returns the ammended directive.
+   */
+  function actionsDirectiveDecorator($delegate, clustersUtils) {
+    var directive = $delegate[0];
+
+    // Angular's `link` is wrapped inside the compile function
+    directive.compile = function() {
+      return clustersUtils.getActionsDirectiveLinkFn(directive);
+    };
+
+    return $delegate;
   }
 })();

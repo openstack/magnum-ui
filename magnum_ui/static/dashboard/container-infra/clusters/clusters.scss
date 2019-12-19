@@ -43,3 +43,13 @@
     }
   }
 }
+
+.dropdown-menu > li.disabled {
+  cursor: not-allowed;
+}
+
+// prevents click propagation to ng-click
+.split-button.disabled,
+.dropdown-menu > li.disabled > a {
+  pointer-events: none;
+}
