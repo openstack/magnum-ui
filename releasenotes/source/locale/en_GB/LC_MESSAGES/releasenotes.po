@@ -1,14 +1,15 @@
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
+# Andi Chandler <andi@gowling.com>, 2019. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-20 06:02+0000\n"
+"POT-Creation-Date: 2019-12-29 09:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-08-20 12:51+0000\n"
+"PO-Revision-Date: 2019-12-21 02:42+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -42,6 +43,22 @@ msgstr "4.0.0"
 msgid "5.0.0"
 msgstr "5.0.0"
 
+msgid "5.1.0"
+msgstr "5.1.0"
+
+msgid "5.2.1"
+msgstr "5.2.1"
+
+msgid "API address"
+msgstr "API address"
+
+msgid ""
+"Add fedora-coreos image support. User can choose an image with property "
+"'os_distro=fedora-coreos' on horizon UI when creating a k8s cluster template."
+msgstr ""
+"Add fedora-coreos image support. User can choose an image with property "
+"'os_distro=fedora-coreos' on horizon UI when creating a k8s cluster template."
+
 msgid "Add following options to cluster template creation and views."
 msgstr "Add following options to cluster template creation and views."
 
@@ -55,6 +72,20 @@ msgstr ""
 "into cluster table view."
 
 msgid ""
+"Added attributes for cluster to show. Following cluster attributes were "
+"added."
+msgstr ""
+"Added attributes for cluster to show. Following cluster attributes were "
+"added."
+
+msgid ""
+"Added flavor_id, master_flavor_id and labels for cluster creation as flavor, "
+"master flavor and labels."
+msgstr ""
+"Added flavor_id, master_flavor_id and labels for cluster creation as "
+"flavour, master flavour and labels."
+
+msgid ""
 "Added some attributes for cluster to show. Keypair, API address and Master "
 "Addresses are added into drawer on table view. Docker Volume Size, Stack "
 "Faults, Master Flavor ID, Node Flavor ID, COE Version, Container Version, "
@@ -66,6 +97,14 @@ msgstr ""
 "Labels and Status Reason are added into details view."
 
 msgid ""
+"Adds REST api and Angular service for rolling upgrade action on cluster."
+msgstr ""
+"Adds REST api and Angular service for rolling upgrade action on cluster."
+
+msgid "Adds python-heatclient >= 1.18.0 dependency"
+msgstr "Adds python-heatclient >= 1.18.0 dependency"
+
+msgid ""
 "Allow to create cluster template without keypair. Also, allow change or set "
 "keypair in cluster creation. Following change in Magnum, also Magnum UI "
 "allows this feature."
@@ -74,8 +113,17 @@ msgstr ""
 "keypair in cluster creation. Following change in Magnum, also Magnum UI "
 "allows this feature."
 
+msgid "Also, reconstructed layouts for drawer and details views."
+msgstr "Also, reconstructed layouts for drawer and details views."
+
 msgid "Bug Fixes"
 msgstr "Bug Fixes"
+
+msgid "Bump python-magnumclient lowerconstraint to >= 2.15.0"
+msgstr "Bump python-magnumclient lowerconstraint to >= 2.15.0"
+
+msgid "COE Version"
+msgstr "COE Version"
 
 msgid ""
 "Change creation actions to global actions. Cluster Template creation and "
@@ -85,6 +133,9 @@ msgstr ""
 "Change creation actions to global actions. Cluster Template creation and "
 "Cluster creation actions are changed from batchAction to globalAction. This "
 "means these actions are callable from other panels."
+
+msgid "Container Version"
+msgstr "Container Version"
 
 msgid ""
 "Container panel is removed. According to decision of Magnum that changes "
@@ -100,11 +151,28 @@ msgid "Deprecation Notes"
 msgstr "Deprecation Notes"
 
 msgid ""
+"Disabled action for rotate certificate, due to Magnum API has not support "
+"rotate certificate yet. This action will be enabled in the future."
+msgstr ""
+"Disabled action for rotate certificate, due to Magnum API has not support "
+"rotate certificate yet. This action will be enabled in the future."
+
+msgid "Docker Volume Size"
+msgstr "Docker Volume Size"
+
+msgid ""
 "Filled up empty values with '-' on table view and details view using noValue "
 "filters. Also show 'None' for empty objects."
 msgstr ""
 "Filled up empty values with '-' on table view and details view using noValue "
 "filters. Also show 'None' for empty objects."
+
+msgid ""
+"Fix an issue where a user was unable to create or update a cluster template "
+"on Horizon due to missing hidden option expected by the API."
+msgstr ""
+"Fix an issue where a user was unable to create or update a cluster template "
+"on Horizon due to missing hidden option expected by the API."
 
 msgid ""
 "Fixes issue that there is no way to specify for insecure magnumclient as a "
@@ -115,8 +183,23 @@ msgstr ""
 "result API throws 500 and SSL cert verify errors. 'insecure' and 'ca-cert' "
 "options are added for magnumclient."
 
+msgid "In details view"
+msgstr "In details view"
+
+msgid "In drawer on table view:"
+msgstr "In drawer on table view:"
+
+msgid "Keypair"
+msgstr "Keypair"
+
 msgid "Known Issues"
 msgstr "Known Issues"
+
+msgid "Labels"
+msgstr "Labels"
+
+msgid "Limit cluster update properties"
+msgstr "Limit cluster update properties"
 
 msgid "Magnum UI Release Notes"
 msgstr "Magnum UI Release Notes"
@@ -143,6 +226,12 @@ msgstr ""
 "'cluster' and 'cluster template' instead of 'bay' and 'baymodel', because "
 "the use of new Magnum term of 'bay' has caused confusion with users."
 
+msgid "Master Addresses"
+msgstr "Master Addresses"
+
+msgid "Master Flavor ID"
+msgstr "Master Flavour ID"
+
 msgid "New Features"
 msgstr "New Features"
 
@@ -166,6 +255,13 @@ msgstr "Prelude"
 
 msgid "Queens Series Release Notes"
 msgstr "Queens Series Release Notes"
+
+msgid ""
+"REST Api and Angular service for resizing clusters is addedd. Angular view "
+"supports resizing number of worker nodes only."
+msgstr ""
+"REST Api and Angular service for resizing clusters is addedd. Angular view "
+"supports resizing number of worker nodes only."
 
 msgid "Reasonable name is set to browser title bar."
 msgstr "Reasonable name is set to browser title bar."
@@ -191,6 +287,15 @@ msgstr ""
 "Service is renamed from 'container' to 'container-infra'. Renaming targets "
 "are URLs, Angular module name, slugs for panel, etc."
 
+msgid "Stack Faults"
+msgstr "Stack Faults"
+
+msgid "Status Reason"
+msgstr "Status Reason"
+
+msgid "Stein Series Release Notes"
+msgstr "Stein Series Release Notes"
+
 msgid ""
 "Support 'ca-show'. The function of downloading CA from cluster is added."
 msgstr ""
@@ -213,6 +318,22 @@ msgstr ""
 msgid "Support python 3.5."
 msgstr "Support python 3.5."
 
+msgid "Supported Calico as network driver for kubernetes."
+msgstr "Supported Calico as network driver for kubernetes."
+
+msgid ""
+"Supported api-version for client. Magnum API is using micro versions and to "
+"get the correct fuctions support, user or client have to initialize the "
+"correct client with parameter 'api_version'. Magnum UI also follow the same "
+"way as other OpenStack services to read the version from "
+"OPENSTACK_API_VERSIONS of Horizon local_settings.py."
+msgstr ""
+"Supported api-version for client. Magnum API is using micro versions and to "
+"get the correct fuctions support, user or client have to initialise the "
+"correct client with parameter 'api_version'. Magnum UI also follow the same "
+"way as other OpenStack services to read the version from "
+"OPENSTACK_API_VERSIONS of Horizon local_settings.py."
+
 msgid "Switch theme for documentation from oslosphinx to openstackdocstheme."
 msgstr "Switch theme for documentation from oslosphinx to openstackdocstheme."
 
@@ -225,6 +346,9 @@ msgid ""
 msgstr ""
 "The load-edit directive is used. The CSR field on Sign Certificate dialogue "
 "use load-edit directive newly added into Horizon."
+
+msgid "Train Series Release Notes"
+msgstr "Train Series Release Notes"
 
 msgid "Update actions are added for cluster template and cluster."
 msgstr "Update actions are added for cluster template and cluster."
@@ -400,6 +524,37 @@ msgstr ""
 "on table view for batch actions does not be cleared after execution of "
 "actions. To ensure to clear item selections, `hzTable:clearSelection` event "
 "is emitted."
+
+msgid ""
+"[`story 2003614 <https://storyboard.openstack.org/#!/story/2003614>`_] Added "
+"image filtering for magnum. When open a image selector for cluster creation "
+"dialog, many invalid images were shown. If a project has a lot of images, "
+"options can be quite long, and cause wrong selection by mistake. Now, images "
+"that has \"os_distro\" property and its value is one of \"fedora-atomic\", "
+"\"coreos\" and \"ubuntu\" would be shown."
+msgstr ""
+"[`story 2003614 <https://storyboard.openstack.org/#!/story/2003614>`_] Added "
+"image filtering for magnum. When open a image selector for cluster creation "
+"dialog, many invalid images were shown. If a project has a lot of images, "
+"options can be quite long, and cause wrong selection by mistake. Now, images "
+"that has \"os_distro\" property and its value is one of \"fedora-atomic\", "
+"\"coreos\" and \"ubuntu\" would be shown."
+
+msgid ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] Added "
+"master_flavor_id and flavor_id to show in cluster update dialog."
+msgstr ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] Added "
+"master_flavor_id and flavor_id to show in cluster update dialogue."
+
+msgid ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] "
+"Magnum only allows the node count in cluster update now. Properties for "
+"cluster update filtered in favor of Magnum API."
+msgstr ""
+"[`story 2003865 <https://storyboard.openstack.org/#!/story/2003865>`_] "
+"Magnum only allows the node count in cluster update now. Properties for "
+"cluster update filtered in favour of Magnum API."
 
 msgid ""
 "angular-json-schema library is used for create and update dialog, their "
