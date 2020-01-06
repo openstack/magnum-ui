@@ -19,7 +19,7 @@ function configure_magnum_ui {
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${MAGNUM_UI_DIR}/magnum_ui/locale ]; then
-        (cd ${MAGNUM_UI_DIR}/magnum_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings ../manage.py compilemessages)
+        (cd ${MAGNUM_UI_DIR}/magnum_ui; DJANGO_SETTINGS_MODULE=openstack_dashboard.settings $PYTHON ../manage.py compilemessages)
     fi
 }
 
