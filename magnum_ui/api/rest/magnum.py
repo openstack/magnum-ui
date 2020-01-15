@@ -12,6 +12,9 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+from collections import defaultdict
+
+from django.conf import settings
 from django.http import HttpResponseNotFound
 from django.views import generic
 
@@ -22,6 +25,8 @@ from openstack_dashboard import api
 from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
+
+import re
 
 
 def change_to_id(obj):
@@ -70,9 +75,40 @@ class ClusterTemplates(generic.View):
 
         The returned result is an object with property 'items' and each
         item under this is a Cluster Template.
+
+        If a GET query param for 'related_to' is specified, and
+        the setting for template filtering is set, then Horizon will
+        only return template groups which the given template
+        falls into, or all if none match.
         """
-        result = magnum.cluster_template_list(request)
-        return {'items': [change_to_id(n.to_dict()) for n in result]}
+        templates = magnum.cluster_template_list(request)
+
+        template_filters = getattr(
+            settings, "CLUSTER_TEMPLATE_GROUP_FILTERS", None)
+        related_to_id = request.GET.get("related_to")
+
+        if template_filters and related_to_id:
+            templates_by_id = {t.uuid: t for t in templates}
+            related_to = templates_by_id.get(related_to_id)
+
+            if related_to:
+                matched_groups = []
+                groups = defaultdict(list)
+                for group, regex in template_filters.items():
+                    pattern = re.compile(regex)
+                    if pattern.match(related_to.name):
+                        matched_groups.append(group)
+                    for template in templates:
+                        if pattern.match(template.name):
+                            groups[group].append(template)
+
+                if matched_groups:
+                    new_templates = []
+                    for group in matched_groups:
+                        new_templates += groups[group]
+                    templates = set(new_templates)
+
+        return {'items': [change_to_id(n.to_dict()) for n in templates]}
 
     @rest_utils.ajax(data_required=True)
     def delete(self, request):
@@ -162,6 +198,23 @@ class ClusterResize(generic.View):
             # catch and respond with 404
             print(e)
             return HttpResponseNotFound()
+
+
+@urls.register
+class ClusterUpgrade(generic.View):
+
+    url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)/upgrade$'
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, cluster_id):
+        """Upgrade a cluster"""
+        cluster_template = request.DATA.get("cluster_template")
+        max_batch_size = request.DATA.get("max_batch_size", 1)
+        nodegroup = request.DATA.get("nodegroup", None)
+
+        return magnum.cluster_upgrade(
+            request, cluster_id, cluster_template,
+            max_batch_size=max_batch_size, nodegroup=nodegroup)
 
 
 @urls.register

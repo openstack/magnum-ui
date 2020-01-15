@@ -1,0 +1,4 @@
+---
+features:
+  - |
+    Adds REST api and Angular service for rolling upgrade action on cluster.
