@@ -17,6 +17,15 @@
 (function() {
   'use strict';
 
+  /**
+   * @ngdoc overview
+   * @name horizon.dashboard.container-infra.clusters.workflow
+   * @ngModule
+   *
+   * @description
+   * Provides business logic for Cluster creation workflow, including data model,
+   * UI form schema and configuration, fetching and processing of required data.
+   */
   angular
     .module('horizon.dashboard.container-infra.clusters')
     .factory(
@@ -24,225 +33,424 @@
       ClusterWorkflow);
 
   ClusterWorkflow.$inject = [
+    '$q',
     'horizon.dashboard.container-infra.basePath',
-    'horizon.app.core.workflow.factory',
     'horizon.framework.util.i18n.gettext',
     'horizon.app.core.openstack-service-api.magnum',
+    'horizon.app.core.openstack-service-api.neutron',
     'horizon.app.core.openstack-service-api.nova'
   ];
 
-  function ClusterWorkflow(basePath, workflowService, gettext, magnum, nova) {
+  // comma-separated key=value with optional space after comma
+  var REGEXP_KEY_VALUE = /^(\w+=[^,]+,?\s?)+$/;
+
+  function ClusterWorkflow($q, basePath, gettext, magnum, neutron, nova) {
     var workflow = {
       init: init
     };
 
-    function init(action, title, $scope) {
-      var schema, form, model, nflavors, mflavors;
-      var clusterTemplates = [{value:"", name: gettext("Choose a Cluster Template")}];
-      var keypairs = [{value:"", name: gettext("Choose a Keypair")}];
-      var dockerVolumeSizeDescription = gettext(
-        "If not specified, the value specified in Cluster Template will be used.");
+    function init(title, $scope) {
+      var schema, form;
 
-      // schema
+      // Default <option>s; will be shown in selector as a placeholder
+      var templateTitleMap = [{value: '', name: gettext('Choose a Cluster Template') }];
+      var availabilityZoneTitleMap = [{value: '',
+        name: gettext('Choose an Availability Zone')}];
+      var keypairsTitleMap = [{value: '', name: gettext('Choose a Keypair')}];
+      var masterFlavorTitleMap = [{value: '',
+        name: gettext('Choose a Flavor for the Master Node')}];
+      var workerFlavorTitleMap = [{value: '',
+        name: gettext('Choose a Flavor for the Worker Node')}];
+      var networkTitleMap = [{value: '', name: gettext('Choose an existing network')}];
+      var ingressTitleMap = [{value: '', name: gettext('Choose an ingress controller')}];
+
+      var addonsTitleMap = [];
+
+      var MODEL_DEFAULTS = getModelDefaults();
+      var model = getModelDefaults();
+
       schema = {
         type: 'object',
         properties: {
-          'name': {
-            title: gettext('Cluster Name'),
-            type: 'string'
+          'name': { type: 'string' },
+          'cluster_template_id': { type: 'string' },
+          'availability_zone': { type: 'string' },
+          'keypair': { type: 'string' },
+          'addons': {
+            type: 'array',
+            items: { type: 'object' },
+            minItems: 0
           },
-          'cluster_template_id': {
-            title: gettext('Cluster Template'),
-            type: 'string'
-          },
+
           'master_count': {
-            title: gettext('Master Count'),
             type: 'number',
             minimum: 1
           },
+          'master_flavor_id': { type: 'string' },
           'node_count': {
-            title: gettext('Node Count'),
             type: 'number',
             minimum: 1
           },
-          'discovery_url': {
-            title: gettext('Discovery URL'),
-            type: 'string'
-          },
-          'create_timeout': {
-            title: gettext('Timeout'),
+          'flavor_id': { type: 'string' },
+          'auto_scaling_enabled': { type: 'boolean' },
+          'min_node_count': {
             type: 'number',
-            minimum: 0
+            minimum: 1
           },
-          'keypair': {
-            title: gettext('Keypair'),
-            type: 'string'
-          },
-          'docker_volume_size': {
-            title: gettext('Docker Volume Size (GB)'),
-            type: 'number'
-          },
-          'master_flavor_id': {
-            title: gettext('Master Flavor ID'),
-            type: 'string'
-          },
-          'flavor_id': {
-            title: gettext('Node Flavor ID'),
-            type: 'string'
-          },
-          'rollback': {
-            title: gettext('Rollback cluster on update failure'),
-            type: 'boolean'
-          },
-          'labels': {
-            title: gettext('Labels'),
-            type: 'string'
-          }
+          'max_node_count': { type: 'number' },
+
+          'create_network': { type: 'boolean' },
+          'fixed_network': { type: 'string' },
+          'floating_ip_enabled': { type: 'boolean' },
+          'ingress_controller': { type: 'object' },
+
+          'auto_healing_enabled': { type: 'boolean' },
+
+          'labels': { type: 'string' },
+          'override_labels': { type: 'boolean' }
         }
       };
 
-      // form
+      var formMasterCount = {
+        key: 'master_count',
+        title: gettext('Number of Master Nodes'),
+        placeholder: gettext('The number of master nodes for the cluster'),
+        required: true
+      };
+
+      // Disable the Master Count field, if only a single master is allowed
+      var isSingleMasterNodeWatcher = $scope.$watch(
+        function() { return model.isSingleMasterNode; },
+        function(isSingle) {
+          if (typeof isSingle !== 'undefined') {
+            formMasterCount.readonly = isSingle;
+          }
+        },
+        true);
+
       form = [
         {
           type:'tabs',
           tabs: [
             {
-              title: gettext('Info'),
-              help: basePath + 'clusters/workflow/info.help.html',
+              title: gettext('Details'),
+              help: basePath + 'clusters/workflow/details.help.html',
               type: 'section',
               htmlClass: 'row',
+              required: true,
               items: [
                 {
                   type: 'section',
-                  htmlClass: 'col-xs-12',
+                  htmlClass: 'col-md-8',
                   items: [
                     {
                       key: 'name',
-                      placeholder: gettext('Name of the cluster.'),
-                      readonly: action === 'update'
+                      title: gettext('Cluster Name'),
+                      placeholder: gettext('Name of the cluster'),
+                      required: true
                     },
                     {
                       key: 'cluster_template_id',
                       type: 'select',
-                      titleMap: clusterTemplates,
-                      required: true,
-                      readonly: action === 'update'
+                      title: gettext('Cluster Template'),
+                      titleMap: templateTitleMap,
+                      required: true
                     },
+                    // Details of the chosen Cluster Template
                     {
                       type: 'template',
                       templateUrl: basePath + 'clusters/workflow/cluster-template.html'
-                    }
-                  ]
-                }
-              ],
-              required: true
-            },
-            {
-              title: gettext('Size'),
-              help: basePath + 'clusters/workflow/size.help.html',
-              type: 'section',
-              htmlClass: 'row',
-              items: [
-                {
-                  type: 'section',
-                  htmlClass: 'col-xs-12',
-                  items: [
-                    {
-                      key: 'master_count',
-                      placeholder: gettext('The number of master nodes for the cluster.'),
-                      readonly: action === 'update'
                     },
                     {
-                      key: 'node_count',
-                      placeholder: gettext('The cluster node count.')
+                      key: 'availability_zone',
+                      type: 'select',
+                      title: gettext('Availability Zone'),
+                      titleMap: availabilityZoneTitleMap,
+                      required: true
                     },
                     {
-                      key: 'docker_volume_size',
-                      placeholder: gettext('Specify the size in GB for the docker volume'),
-                      description: dockerVolumeSizeDescription,
-                      readonly: action === 'update'
+                      key: 'keypair',
+                      type: 'select',
+                      title: gettext('Keypair'),
+                      titleMap: keypairsTitleMap,
+                      required: true,
                     },
                     {
-                      key: 'rollback',
-                      condition: action === 'create'
+                      key: 'addons',
+                      type: 'checkboxes',
+                      title: gettext('Addon Software'),
+                      disableSuccessState: true,
+                      titleMap: addonsTitleMap
                     }
                   ]
                 }
               ]
             },
             {
-              title: gettext('Misc'),
-              help: basePath + 'clusters/workflow/misc.help.html',
+              title: gettext('Size'),
+              help: basePath + 'clusters/workflow/size.help.html',
               type: 'section',
               htmlClass: 'row',
+              required: true,
               items: [
                 {
                   type: 'section',
-                  htmlClass: 'col-xs-12',
+                  htmlClass: 'col-md-8',
                   items: [
                     {
-                      key: 'discovery_url',
-                      placeholder: gettext('Specifies custom discovery url for node discovery.'),
-                      readonly: action === 'update'
+                      type: 'fieldset',
+                      title: gettext('Master Nodes'),
+                      items: [
+                        formMasterCount,
+                        // Info message explaining why only single master node is enabled
+                        {
+                          type: 'template',
+                          template: '<div class="alert alert-info">' +
+                            '<span class="fa fa-info-circle"></span> ' +
+                            gettext('The selected Cluster Template does not support ' +
+                            'multiple master nodes.') +
+                            '</div>',
+                          condition: 'model.isSingleMasterNode == true'
+                        },
+                        {
+                          key: 'master_flavor_id',
+                          title: gettext('Flavor of Master Nodes'),
+                          type: 'select',
+                          titleMap: masterFlavorTitleMap,
+                          required: true
+                        }
+                      ]
                     },
                     {
-                      key: 'create_timeout',
-                      /* eslint-disable max-len */
-                      placeholder: gettext('The timeout for cluster creation in minutes.'),
-                      description: gettext('Set to 0 for no timeout. The default is no timeout.'),
-                      readonly: action === 'update'
+                      type: 'fieldset',
+                      title: gettext('Worker Nodes'),
+                      items: [
+                        {
+                          key: 'node_count',
+                          title: gettext('Number of Worker Nodes'),
+                          placeholder: gettext('The number of worker nodes for the cluster'),
+                          required: true,
+                          onChange: autosetScalingModelValues
+                        },
+                        {
+                          key: 'flavor_id',
+                          title: gettext('Flavor of Worker Nodes'),
+                          type: 'select',
+                          titleMap: workerFlavorTitleMap,
+                          required: true
+                        }
+                      ]
                     },
                     {
-                      key: 'keypair',
-                      type: 'select',
-                      titleMap: keypairs,
-                      required: true,
-                      readonly: action === 'update'
+                      type: 'fieldset',
+                      title: gettext('Auto Scaling'),
+                      items: [
+                        {
+                          key: 'auto_scaling_enabled',
+                          type: 'checkbox',
+                          title: gettext('Auto-scale Worker Nodes'),
+                          onChange: function(isAutoScaling) {
+                            // Reset dependant model fields to defaults first
+                            model.min_node_count = MODEL_DEFAULTS.min_node_count;
+                            model.max_node_count = MODEL_DEFAULTS.max_node_count;
+
+                            if (isAutoScaling) { autosetScalingModelValues(); }
+                          }
+                        },
+                        {
+                          key: 'min_node_count',
+                          title: gettext('Minimum Number of Worker Nodes'),
+                          placeholder: gettext('Minimum Number of Worker Nodes'),
+                          validationMessage: {
+                            101: gettext('You cannot auto-scale to less than ' +
+                              'a single Worker Node.'),
+                            103: gettext('The minimum number of Worker Nodes a ' +
+                              'new cluster can auto scale to cannot exceed the ' +
+                              'total amount of Worker Nodes.'),
+                            maximumExceeded: gettext('A minimum number of Worker ' +
+                              'Nodes cannot be higher than the default number of Worker Nodes.')
+                          },
+                          $validators: {
+                            maximumExceeded: function(minNodeCount) {
+                              return !model.node_count || minNodeCount <= model.node_count;
+                            }
+                          },
+                          condition: 'model.auto_scaling_enabled === true',
+                          required: true
+                        },
+                        {
+                          key: 'max_node_count',
+                          title: gettext('Maximum number of Worker Nodes'),
+                          placeholder: gettext('Maximum number of Worker Nodes'),
+                          validationMessage: {
+                            101: gettext('The maximum number of Worker Nodes a new cluster ' +
+                              'can auto-scale to cannot be less than the total amount of ' +
+                              'Worker Nodes.'),
+                            minimumExceeded: gettext('The maximum number of Worker Nodes cannot ' +
+                              'be less than the default number of Worker Nodes and 1.')
+                          },
+                          $validators: {
+                            minimumExceeded: function(maxNodeCount) {
+                              return maxNodeCount > 0 && (!model.node_count ||
+                                maxNodeCount >= model.node_count);
+                            }
+                          },
+                          condition: 'model.auto_scaling_enabled === true',
+                          required: true
+                        }
+                      ]
                     }
+
                   ]
-                },
+                }
+              ]
+            },
+            {
+              title: gettext('Network'),
+              help: basePath + 'clusters/workflow/network.help.html',
+              type: 'section',
+              htmlClass: 'row',
+              required: true,
+              items: [
                 {
                   type: 'section',
-                  htmlClass: 'col-xs-6',
+                  htmlClass: 'col-md-8',
                   items: [
                     {
-                      key: 'master_flavor_id',
-                      type: 'select',
-                      titleMap: mflavors,
-                      readonly: action === 'update'
-                    }
-                  ]
-                },
-                {
-                  type: 'section',
-                  htmlClass: 'col-xs-6',
-                  items: [
+                      type: 'fieldset',
+                      title: gettext('Network'),
+                      items: [
+                        {
+                          key: 'create_network',
+                          title: gettext('Create New Network'),
+                          onChange: function(isNewNetwork) {
+                            if (isNewNetwork) {
+                              model.fixed_network = MODEL_DEFAULTS.fixed_network;
+                            }
+                          }
+                        },
+                        {
+                          key: 'fixed_network',
+                          type: 'select',
+                          title: gettext('Use an Existing Network'),
+                          titleMap: networkTitleMap,
+                          condition: 'model.create_network === false',
+                          required: true
+                        }
+                      ]
+                    },
                     {
-                      key: 'flavor_id',
-                      type: 'select',
-                      titleMap: nflavors,
-                      readonly: action === 'update'
+                      type: 'fieldset',
+                      title: gettext('Network Access Control'),
+                      items: [
+                        {
+                          key: 'floating_ip_enabled',
+                          type: 'select',
+                          title: gettext('Cluster API'),
+                          titleMap: [
+                            {value: false, name: gettext('Accessible on private network only')},
+                            {value: true, name: gettext('Accessible on the public internet')}
+                          ]
+                        },
+                        // Warning message for the Cluster API
+                        {
+                          type: 'template',
+                          template: '<div class="alert alert-warning">' +
+                            '<span class="fa fa-warning"></span> ' +
+                            gettext('It is generally not recommended to give public access.') +
+                            '</div>',
+                          condition: 'model.floating_ip_enabled == true'
+                        }
+                      ]
+                    },
+                    {
+                      type: 'fieldset',
+                      title: gettext('Ingress'),
+                      items: [
+                        {
+                          key: 'ingress_controller',
+                          title: gettext('Ingress Controller'),
+                          type: 'select',
+                          titleMap: ingressTitleMap
+                        }
+                      ]
                     }
                   ]
                 }
-              ],
-              required: true
+              ]
             },
             {
-              title: gettext('Labels'),
-              help: basePath + 'clusters/workflow/labels.help.html',
+              title: gettext('Management'),
+              help: basePath + 'clusters/workflow/management.help.html',
               type: 'section',
               htmlClass: 'row',
               items: [
                 {
                   type: 'section',
-                  htmlClass: 'col-xs-12',
+                  htmlClass: 'col-md-8',
                   items: [
                     {
-                      key: 'labels',
-                      type: 'textarea',
-                      placeholder: gettext('KEY1=VALUE1, KEY2=VALUE2...'),
-                      readonly: action === 'update'
+                      type: 'fieldset',
+                      title: gettext('Auto Healing'),
+                      items: [
+                        {
+                          key: 'auto_healing_enabled',
+                          type: 'checkbox',
+                          title: gettext('Automatically Repair Unhealthy Nodes')
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              title: gettext('Advanced'),
+              help: basePath + 'clusters/workflow/advanced.help.html',
+              type: 'section',
+              htmlClass: 'row',
+              items: [
+                {
+                  type: 'section',
+                  htmlClass: 'col-md-8',
+                  items: [
+                    {
+                      type: 'fieldset',
+                      title: gettext('Labels'),
+                      items: [
+                        {
+                          key: 'labels',
+                          type: 'textarea',
+                          title: gettext('Additional Labels'),
+                          placeholder: gettext('key=value,key2=value2...'),
+                          validationMessage: {
+                            invalidFormat: gettext('Invalid format. Must be a comma-separated ' +
+                              'key-value string: key=value,key2=value2')
+                          },
+                          $validators: {
+                            invalidFormat: function(labelsString) {
+                              return labelsString === '' || REGEXP_KEY_VALUE.test(labelsString);
+                            }
+                          },
+                          disableSuccessState: true
+                        },
+                        {
+                          key: 'override_labels',
+                          type: 'checkbox',
+                          title: gettext('I do want to override Template and Workflow Labels'),
+                          condition: 'model.labels !== ""',
+                        },
+                        // Warning message for the label override
+                        {
+                          type: 'template',
+                          template: '<div class="alert alert-warning">' +
+                            '<span class="fa fa-warning"></span> ' +
+                            gettext('Overriding labels already defined by cluster template or' +
+                              'workflow might result in unpredictable behaviour.') +
+                            '</div>',
+                          condition: 'model.override_labels == true'
+                        }
+                      ]
                     }
                   ]
                 }
@@ -252,58 +460,160 @@
         }
       ];
 
-      magnum.getClusterTemplates().then(onGetClusterTemplates);
-      nova.getKeypairs().then(onGetKeypairs);
-      nova.getFlavors(false, false).then(onGetFlavors);
+      function getModelDefaults() {
+        return {
+          // Props used by the form
+          name: '',
+          cluster_template_id: '',
+          availability_zone: '',
+          keypair: '',
+          addons: [],
+
+          master_count: null,
+          master_flavor_id: '',
+          node_count: null,
+          flavor_id: '',
+          auto_scaling_enabled: false,
+          min_node_count: null,
+          max_node_count: null,
+
+          create_network: true,
+          fixed_network: '',
+          floating_ip_enabled: false,
+          ingress_controller: '',
+
+          auto_healing_enabled: true,
+          labels: '',
+          override_labels: false,
+
+          // Utility properties (not actively used in the form,
+          // populated dynamically)
+          id: null,
+          templateLabels: null,
+          ingressControllers: null,
+          isSingleMasterNode: false
+        };
+      }
+
+      function autosetScalingModelValues() {
+        var nodeCount = model.node_count;
+        if (nodeCount && nodeCount > 0 && model.auto_scaling_enabled) {
+
+          // Set defaults to related modal fields (have they not been changed)
+          if (model.min_node_count === MODEL_DEFAULTS.min_node_count) {
+            model.min_node_count = nodeCount > 1 ? nodeCount - 1 : 1;
+          } else if (nodeCount < model.min_node_count) {
+            model.min_node_count = nodeCount;
+          }
+
+          if (model.max_node_count === MODEL_DEFAULTS.max_node_count) {
+            model.max_node_count = nodeCount + 1;
+          } else if (nodeCount > model.max_node_count) {
+            model.max_node_count = nodeCount;
+          }
+        }
+      }
 
       function onGetKeypairs(response) {
-        angular.forEach(response.data.items, function(item) {
-          keypairs.push({value: item.keypair.name, name: item.keypair.name});
+        var items = response.data.items;
+
+        angular.forEach(items, function(item) {
+          keypairsTitleMap.push({
+            value: item.keypair.name,
+            name: item.keypair.name
+          });
+        });
+
+        if (items.length === 1) {
+          model.keypair = items[0].keypair.name;
+        }
+      }
+
+      function onGetAvailabilityZones(response) {
+        angular.forEach(response.data.items, function(availabilityZone) {
+          availabilityZoneTitleMap.push({
+            value: availabilityZone.zoneName,
+            name: availabilityZone.zoneName
+          });
+        });
+
+        setSingleItemAsDefault(response.data.items, 'availability_zone', 'zoneName');
+      }
+
+      function onGetAddons(response) {
+        angular.forEach(response.data.addons, function(addon) {
+          addonsTitleMap.push({ value: addon, name: addon.name });
+          // Pre-selected by default
+          if (addon.selected) { model.addons.push(addon); }
         });
       }
 
       function onGetFlavors(response) {
-        nflavors = [{value:"", name: gettext("Choose a Flavor for the Node")}];
-        mflavors = [{value:"", name: gettext("Choose a Flavor for the Master Node")}];
-        angular.forEach(response.data.items, function(item) {
-          nflavors.push({value: item.name, name: item.name});
-          mflavors.push({value: item.name, name: item.name});
+        angular.forEach(response.data.items, function(flavor) {
+          workerFlavorTitleMap.push({value: flavor.name, name: flavor.name});
+          masterFlavorTitleMap.push({value: flavor.name, name: flavor.name});
         });
-        form[0].tabs[2].items[1].items[0].titleMap = mflavors;
-        form[0].tabs[2].items[2].items[0].titleMap = nflavors;
       }
 
       function onGetClusterTemplates(response) {
-        angular.forEach(response.data.items, function(item) {
-          clusterTemplates.push({value: item.id, name: item.name});
+        angular.forEach(response.data.items, function(clusterTemplate) {
+          templateTitleMap.push({value: clusterTemplate.id, name: clusterTemplate.name});
         });
       }
 
-      model = {
-        name: "",
-        cluster_template_id: "",
-        master_count: null,
-        node_count: null,
-        docker_volume_size: "",
-        rollback: false,
-        discovery_url: "",
-        create_timeout: null,
-        keypair: "",
-        flavor_id: "",
-        master_flavor_id: "",
-        labels: ""
-      };
+      function onGetNetworks(response) {
+        angular.forEach(response.data.items, function(network) {
+          networkTitleMap.push({value: network.id, name: network.name + ' (' + network.id + ')'});
+        });
 
-      var config = {
-        title: title,
-        schema: schema,
-        form: form,
-        model: model
-      };
+        setSingleItemAsDefault(response.data.items, 'fixed_network', 'id');
+      }
 
-      $scope.model = model;
+      function onGetIngressControllers(response) {
+        angular.forEach(response.data.controllers, function(ingressController) {
+          ingressTitleMap.push({value: ingressController, name: ingressController.name});
+        });
 
-      return config;
+        model.ingressControllers = response.data.controllers;
+
+        // Set first item to defaults
+        if (model.ingressControllers.length > 0) {
+          model.ingress_controller = ingressTitleMap[1].value;
+        }
+      }
+
+      function setSingleItemAsDefault(itemsList, modelKey, itemKey) {
+        if (itemsList.length === 1) {
+          model[modelKey] = itemsList[0][itemKey];
+        }
+      }
+
+      $scope.$on('$destroy', function() {
+        isSingleMasterNodeWatcher();
+      });
+
+      // Fetch all the dependencies from APIs and return Promise
+      // with a form configuration object.
+      return $q.all([
+        magnum.getClusterTemplates().then(onGetClusterTemplates),
+        nova.getAvailabilityZones().then(onGetAvailabilityZones),
+        nova.getKeypairs().then(onGetKeypairs),
+        neutron.getNetworks().then(onGetNetworks),
+        magnum.getAddons().then(onGetAddons),
+        nova.getFlavors(false, false).then(onGetFlavors),
+        magnum.getIngressControllers().then(onGetIngressControllers)
+      ]).then(function() {
+        $scope.model = model;
+        $scope.model.DEFAULTS = MODEL_DEFAULTS;
+
+        // Modal Config
+        return {
+          title: title,
+          schema: schema,
+          form: form,
+          model: model
+        };
+      });
     }
 
     return workflow;

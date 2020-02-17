@@ -19,15 +19,26 @@
 
   describe('horizon.dashboard.container-infra.clusters.create.service', function() {
 
-    var service, $scope, $q, deferred, magnum, workflow;
+    var service, $scope, $q, deferred, magnum, workflow, spinnerModal, modalConfig, configDeferred;
+
     var model = {
-      id: 1
+      id: 1,
+      labels: 'key1=value1,key2=value2',
+      auto_scaling_enabled: true,
+      templateLabels: {key1:'default value'},
+      override_labels: true,
+      master_count: 1,
+      create_network: true,
+      addons: [{labels:{}},{labels:{}}],
+      ingress_controller: {labels:{ingress_controller:''}},
+      DEFAULTS: {labels:''}
     };
     var modal = {
       open: function(config) {
-        config.model = model;
         deferred = $q.defer();
         deferred.resolve(config);
+        modalConfig = config;
+
         return deferred.promise;
       }
     };
@@ -48,11 +59,25 @@
       service = $injector.get('horizon.dashboard.container-infra.clusters.create.service');
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
       workflow = $injector.get('horizon.dashboard.container-infra.clusters.workflow');
+
+      spinnerModal = $injector.get('horizon.framework.widgets.modal-wait-spinner.service');
+      spyOn(spinnerModal, 'showModalSpinner').and.callFake(function() {});
+      spyOn(spinnerModal, 'hideModalSpinner').and.callFake(function() {});
+
       deferred = $q.defer();
       deferred.resolve({data: {uuid: 1}});
+
+      configDeferred = $q.defer();
+      configDeferred.resolve({
+        title: 'Create New Cluster',
+        schema: {},
+        form: {},
+        model: model
+      });
+
       spyOn(magnum, 'createCluster').and.returnValue(deferred.promise);
+      spyOn(workflow, 'init').and.returnValue(configDeferred.promise);
       spyOn(modal, 'open').and.callThrough();
-      spyOn(workflow, 'init').and.returnValue({model: model});
     }));
 
     it('should check the policy if the user is allowed to create cluster', function() {
@@ -60,15 +85,36 @@
       expect(allowed).toBeTruthy();
     });
 
-    it('open the modal', inject(function($timeout) {
-      service.perform(model, $scope);
+    it('should open the modal, hide the loading spinner and have valid ' +
+      'form model', inject(function($timeout) {
+        service.perform(null, $scope);
 
-      expect(modal.open).toHaveBeenCalled();
+        $timeout(function() {
+          expect(modal.open).toHaveBeenCalled();
+          expect(magnum.createCluster).toHaveBeenCalled();
+          // Check if the form's model skeleton is correct
+          expect(modalConfig.model).toBeDefined();
+          expect(modalConfig.schema).toBeDefined();
+          expect(modalConfig.form).toBeDefined();
+          expect(modalConfig.title).toEqual('Create New Cluster');
+        }, 0);
+
+        $timeout.flush();
+        $scope.$apply();
+      }));
+
+    it('should not crash unexpectedly with empty form model', inject(function($timeout) {
+      model.auto_scaling_enabled = null;
+      model.templateLabels = null;
+      model.override_labels = null;
+      model.create_network = null;
+      model.addons = null;
+      model.labels = 'invalid label';
+
+      service.perform(null, $scope);
 
       $timeout.flush();
       $scope.$apply();
-
-      expect(magnum.createCluster).toHaveBeenCalled();
     }));
   });
 })();

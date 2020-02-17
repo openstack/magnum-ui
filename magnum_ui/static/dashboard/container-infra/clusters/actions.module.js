@@ -35,7 +35,6 @@
     'horizon.dashboard.container-infra.clusters.create.service',
     'horizon.dashboard.container-infra.clusters.delete.service',
     'horizon.dashboard.container-infra.clusters.resize.service',
-    'horizon.dashboard.container-infra.clusters.update.service',
     'horizon.dashboard.container-infra.clusters.rolling-upgrade.service',
     'horizon.dashboard.container-infra.clusters.show-certificate.service',
     'horizon.dashboard.container-infra.clusters.sign-certificate.service',
@@ -49,7 +48,6 @@
     createClusterService,
     deleteClusterService,
     resizeClusterService,
-    updateClusterService,
     rollingUpgradeClusterService,
     showCertificateService,
     signCertificateService,
@@ -104,13 +102,6 @@
         service: resizeClusterService,
         template: {
           text: gettext('Resize Cluster')
-        }
-      })
-      .append({
-        id: 'updateClusterAction',
-        service: updateClusterService,
-        template: {
-          text: gettext('Update Cluster')
         }
       })
       .append({

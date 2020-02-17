@@ -12,9 +12,13 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import logging
+import re
+
 from collections import defaultdict
 
 from django.conf import settings
+from django.http import HttpResponse
 from django.http import HttpResponseNotFound
 from django.views import generic
 
@@ -26,7 +30,7 @@ from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
 
-import re
+LOG = logging.getLogger(__name__)
 
 
 def change_to_id(obj):
@@ -37,6 +41,59 @@ def change_to_id(obj):
     """
     obj['id'] = obj.pop('uuid')
     return obj
+
+
+@urls.register
+class IngressControllers(generic.View):
+    url_regex = r'container_infra/ingress_controllers/'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        configured_controllers = getattr(
+            settings, "MAGNUM_INGRESS_CONTROLLERS", [])
+        available_controllers = []
+
+        for controller in configured_controllers:
+            try:
+                parsed = {}
+                parsed["name"] = controller["name"]
+                parsed["labels"] = controller["labels"]
+                assert type(parsed["labels"]) is dict
+                available_controllers.append(parsed)
+            except KeyError as e:
+                LOG.exception(e)
+            except AssertionError as e:
+                LOG.exception(e)
+
+        return {"controllers": available_controllers}
+
+
+@urls.register
+class Addons(generic.View):
+    url_regex = r'container_infra/available_addons/'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        available_addons = []
+
+        configured_addons = getattr(
+            settings, "MAGNUM_AVAILABLE_ADDONS", [])
+
+        for configured_addon in configured_addons:
+            addon = {}
+            try:
+                addon["name"] = configured_addon["name"]
+                addon["selected"] = configured_addon["selected"]
+                assert type(addon["selected"]) is bool
+                addon["labels"] = configured_addon["labels"]
+                assert type(addon["labels"]) is dict
+                available_addons.append(addon)
+            except KeyError as e:
+                LOG.exception(e)
+            except AssertionError as e:
+                LOG.exception(e)
+
+        return {"addons": available_addons}
 
 
 @urls.register
@@ -318,7 +375,13 @@ class Quota(generic.View):
     @rest_utils.ajax()
     def get(self, request, project_id, resource):
         """Get a specific quota"""
-        return magnum.quotas_show(request, project_id, resource).to_dict()
+        try:
+            return magnum.quotas_show(request, project_id, resource).to_dict()
+        except AttributeError as e:
+            LOG.exception(e)
+            message = ("Quota could not be found: "
+                       "project_id %s resource %s" % (project_id, resource))
+            return HttpResponse(message, status=404)
 
     @rest_utils.ajax(data_required=True)
     def patch(self, request, project_id, resource):

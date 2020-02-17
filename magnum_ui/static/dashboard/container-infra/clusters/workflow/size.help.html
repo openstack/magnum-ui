@@ -1,1 +1,6 @@
-<p translate>Specify the number of master nodes, cluster nodes and docker volume size for the cluster.</p>
+<h1 class="h4" translate>Auto Scaling</h1>
+
+<p translate>If enabled, the minimum and maximum number of worker nodes must be specified.</p>
+<p translate>Auto scaling requires the use of CPU and memory limits on the resource definition of Pods.</p>
+<p translate>If Kubernetes is unable to schedule a Pod due to insuficient CPU or memory in the cluster, a worker node will be added, as long as the maximum number of worker nodes has not been reached.</p>
+<p translate>If the aggregate resource limits of all existing Pods is lower than 50% of the cluster capacity, a worker node will be removed, as long as the minimum number of worker nodes has not been reached.</p>
