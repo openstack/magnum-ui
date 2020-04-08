@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-12-29 09:43+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,13 +44,6 @@ msgid ""
 msgstr ""
 "Произвольные метки в форме пар ключь=значение связанные с шаблонами "
 "кластера. Могут быть использованы несколько раз."
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"clusters. May be used multiple times."
-msgstr ""
-"Произвольные метки в форме пары ключ=значение для ассоциации с кластером. "
-"Могут быть использованы несколько раз."
 
 msgid "CHECK COMPLETE"
 msgstr "Проверка завершена"
@@ -141,10 +134,6 @@ msgstr "Кластер"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Кластер %s создан успешно."
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "Кластер %s был успешно обновлен."
 
 msgid "Cluster Create Timeout"
 msgstr "Таймаут создания кластера"
@@ -370,9 +359,6 @@ msgstr "Скрытый"
 msgid "ID"
 msgstr "ID"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr "Если не задано, будет использовано значение из шаблона кластера."
-
 msgid "Image"
 msgstr "Образ"
 
@@ -450,9 +436,6 @@ msgstr "Максимальный размер пакета"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "Другое"
-
 msgid "Miscellaneous"
 msgstr "Другое"
 
@@ -461,9 +444,6 @@ msgstr "Имя"
 
 msgid "Name of the cluster template."
 msgstr "Имя шаблона кластера"
-
-msgid "Name of the cluster."
-msgstr "Имя кластера."
 
 msgid "Network"
 msgstr "Сеть"
@@ -548,9 +528,6 @@ msgstr "Ресурс"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Rollback cluster on update failure"
-msgstr "Откатить кластер при ошибке обновления"
-
 msgid "Rolling Cluster Upgrade"
 msgstr "Пошаговое обновление Кластера"
 
@@ -562,9 +539,6 @@ msgstr "Снимок создан успешно"
 
 msgid "Server Type"
 msgstr "Тип сервера"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr "Задайте 0 для отключение таймаута. По умолчанию таймаут не задан."
 
 msgid "Show Certificate"
 msgstr "Показать сертификат"
@@ -578,15 +552,6 @@ msgstr "Подписать Сертификат Для Кластера:{$ ctrl.
 msgid "Size"
 msgstr "Размер"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "Укажите url поиска для поиска узлов."
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "Укажите имя кластера и выберите шаблон кластера "
-
-msgid "Specify conditions for cluster creation."
-msgstr "Укажите условия создания кластера."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Укажите движок оркестрации контейнеров."
 
@@ -595,13 +560,6 @@ msgid ""
 msgstr ""
 "Укажите сервер имен для использования в шаблоне кластера. По умолчанию: "
 "8.8.8.8"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr ""
-"Укажите количество мастер нод, кластер нод и размер диска docker для "
-"кластера."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Укажите размер диска Docker в ГБ."
@@ -666,21 +624,12 @@ msgstr ""
 "ID типа инстанса nova для использования при запуске мастер узла кластера. По "
 "умолчанию: m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "Количество главных узлов для кластера."
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Размер диска Docker в ГБ. По умолчанию: 25"
-
-msgid "The timeout for cluster creation in minutes."
-msgstr "Таймаут для создания кластера в минутах."
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Здесь должен быть указан CIDR фиксированной сети. По умолчанию: 10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "Таймаут"
 
 msgid "UPDATE COMPLETE"
 msgstr "Обновление завершено"
@@ -793,9 +742,6 @@ msgstr "Не удалось обновить кластер."
 
 msgid "Unable to update quota."
 msgstr "Не удалось обновить квоту."
-
-msgid "Update Cluster"
-msgstr "Обновить Кластер"
 
 msgid "Update Cluster Template"
 msgstr "Обновить Шаблон Кластера"

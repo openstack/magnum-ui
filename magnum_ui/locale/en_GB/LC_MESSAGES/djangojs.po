@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-12-29 09:43+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -42,13 +42,6 @@ msgid ""
 msgstr ""
 "Arbitrary labels in the form of key=value pairs to associate with a cluster "
 "templates. May be used multiple times."
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"clusters. May be used multiple times."
-msgstr ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"clusters. May be used multiple times."
 
 msgid "CHECK COMPLETE"
 msgstr "CHECK COMPLETE"
@@ -139,10 +132,6 @@ msgstr "Cluster"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Cluster %s was successfully created."
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "Cluster %s was successfully updated."
 
 msgid "Cluster Create Timeout"
 msgstr "Cluster Create Timeout"
@@ -359,10 +348,6 @@ msgstr "Hidden"
 msgid "ID"
 msgstr "ID"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr ""
-"If not specified, the value specified in Cluster Template will be used."
-
 msgid "Image"
 msgstr "Image"
 
@@ -440,9 +425,6 @@ msgstr "Maximum Batch Size"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "Misc"
-
 msgid "Miscellaneous"
 msgstr "Miscellaneous"
 
@@ -451,9 +433,6 @@ msgstr "Name"
 
 msgid "Name of the cluster template."
 msgstr "Name of the cluster template."
-
-msgid "Name of the cluster."
-msgstr "Name of the cluster."
 
 msgid "Network"
 msgstr "Network"
@@ -538,9 +517,6 @@ msgstr "Resource"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Rollback cluster on update failure"
-msgstr "Rollback cluster on update failure"
-
 msgid "Rolling Cluster Upgrade"
 msgstr "Rolling Cluster Upgrade"
 
@@ -552,9 +528,6 @@ msgstr "SNAPSHOT COMPLETE"
 
 msgid "Server Type"
 msgstr "Server Type"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr "Set to 0 for no timeout. The default is no timeout."
 
 msgid "Show Certificate"
 msgstr "Show Certificate"
@@ -568,15 +541,6 @@ msgstr "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Size"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "Specifies custom discovery URL for node discovery."
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "Specify cluster name and choose cluster template"
-
-msgid "Specify conditions for cluster creation."
-msgstr "Specify conditions for cluster creation."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Specify the Container Orchestration Engine to use."
 
@@ -584,13 +548,6 @@ msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Specify the size in GB for the docker volume"
@@ -654,20 +611,11 @@ msgstr ""
 "The nova flavour id to use when launching the master node of the cluster. "
 "Default: m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "The number of master nodes for the cluster."
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "The size in GB for Docker Volume. Default: 25"
 
-msgid "The timeout for cluster creation in minutes."
-msgstr "The timeout for cluster creation in minutes."
-
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "Timeout"
 
 msgid "UPDATE COMPLETE"
 msgstr "UPDATE COMPLETE"
@@ -778,9 +726,6 @@ msgstr "Unable to update cluster."
 
 msgid "Unable to update quota."
 msgstr "Unable to update quota."
-
-msgid "Update Cluster"
-msgstr "Update Cluster"
 
 msgid "Update Cluster Template"
 msgstr "Update Cluster Template"

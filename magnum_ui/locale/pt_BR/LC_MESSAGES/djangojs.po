@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-04-20 04:21+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,13 +35,6 @@ msgid ""
 msgstr ""
 "Etiquetas arbitrárias no formato de pares de chave=valor para associar com "
 "modelos de cluster. Pode ser utilizado várias vezes."
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"clusters. May be used multiple times."
-msgstr ""
-"Etiquetas arbitrárias na forma de pares de chave=valor para associar com um "
-"cluster. Podem ser usadas várias vezes."
 
 msgid "CHECK COMPLETE"
 msgstr "VERIFICAÇÃO FINALIZADA"
@@ -123,10 +116,6 @@ msgstr "Cluster"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Cluster %s foi criado com sucesso."
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "Cluster %s foi atualizado com sucesso."
 
 msgid "Cluster Create Timeout"
 msgstr "Tempo Limite de Criação de Cluster"
@@ -331,11 +320,6 @@ msgstr "Limite Físico"
 msgid "ID"
 msgstr "ID"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr ""
-"Se não especificado, o valor especificado no Modelo de Cluster será "
-"utilizado."
-
 msgid "Image"
 msgstr "Imagem"
 
@@ -406,9 +390,6 @@ msgstr "LB Mestre Ativado"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "Outros"
-
 msgid "Miscellaneous"
 msgstr "Diversos"
 
@@ -417,9 +398,6 @@ msgstr "Nome"
 
 msgid "Name of the cluster template."
 msgstr "Nome do modelo de cluster."
-
-msgid "Name of the cluster."
-msgstr "Nome do Cluster."
 
 msgid "Network"
 msgstr "Rede"
@@ -498,9 +476,6 @@ msgstr "Recurso"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Rollback cluster on update failure"
-msgstr "Reverter o cluster na falha de atualização."
-
 msgid "Rotate Certificate"
 msgstr "Rotacionar Certificado"
 
@@ -509,9 +484,6 @@ msgstr "SNAPSHOT FINALIZADO"
 
 msgid "Server Type"
 msgstr "Tipo de Servidor"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr "Definir 0 para sem tempo limite. O padrão é não ter tempo limite."
 
 msgid "Show Certificate"
 msgstr "Mostrar Certificado"
@@ -525,15 +497,6 @@ msgstr "Assinar Certificado para o Cluster: {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Tamanho"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "Especifica uma URL de descoberta customizada para a descoberta do nó. "
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "Especifique o nome do cluster e escolha o modelo de cluster"
-
-msgid "Specify conditions for cluster creation."
-msgstr "Especifique as condições para a criação do cluster."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Especifique o Mecanismo de Orquestração de Container"
 
@@ -542,13 +505,6 @@ msgid ""
 msgstr ""
 "Especifique o servidor de nomes para usar para o modelo de cluster. Padrão: "
 "8.8.8.8"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr ""
-"Especifique o número de nós mestre, nós de cluster e tamanho de volume "
-"docker para o cluster."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Especifique o tamanho em GB que o volume do docker usará."
@@ -610,20 +566,11 @@ msgstr ""
 "O id do flavor do Nova a utilizar ao lançar o nó mestre do cluster. Padrão: "
 "m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "O número de nós mestre para o cluster."
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "O tamanho em GB para o Volume do Docker. Default: 25"
 
-msgid "The timeout for cluster creation in minutes."
-msgstr "O tempo limite para criação do cluster em minutos."
-
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr "Isto deveria ser chamado de fixed-network-cidr. Padrão: 10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "Tempo limite"
 
 msgid "UPDATE COMPLETE"
 msgstr "ATUALIZAÇÃO FINALIZADA"
@@ -724,9 +671,6 @@ msgstr "Não é possível atualizar cluster."
 
 msgid "Unable to update quota."
 msgstr "Não é possível atualizar quota."
-
-msgid "Update Cluster"
-msgstr "Atualizar Cluster"
 
 msgid "Update Cluster Template"
 msgstr "Atualizar Modelo de Cluster"

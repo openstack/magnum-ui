@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-12-21 02:34+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,10 +110,6 @@ msgstr "集群"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "成功创建集群：%s"
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "成功更新集群%s。"
 
 msgid "Cluster Create Timeout"
 msgstr "创建集群超时"
@@ -278,9 +274,6 @@ msgstr "HTTPS 代理。"
 msgid "ID"
 msgstr "ID"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr "如果不指定，集群模版中的指定值将被使用。"
-
 msgid "Image"
 msgstr "镜像"
 
@@ -339,9 +332,6 @@ msgstr "允许主负载均衡"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "杂项"
-
 msgid "Miscellaneous"
 msgstr "繁杂"
 
@@ -350,9 +340,6 @@ msgstr "名字。"
 
 msgid "Name of the cluster template."
 msgstr "集群模版名称"
-
-msgid "Name of the cluster."
-msgstr "集群的名字。"
 
 msgid "Network"
 msgstr "网络"
@@ -402,9 +389,6 @@ msgstr "启用Registry"
 msgid "Rexray"
 msgstr "雷克斯射线"
 
-msgid "Rollback cluster on update failure"
-msgstr "回滚集群更新失败"
-
 msgid "Rotate Certificate"
 msgstr "轮换证书"
 
@@ -413,9 +397,6 @@ msgstr "快照完成"
 
 msgid "Server Type"
 msgstr "服务器类型"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr "设置为0表示没有超时上限。默认情况为没有超时上限。"
 
 msgid "Show Certificate"
 msgstr "显示证书"
@@ -429,26 +410,12 @@ msgstr "给集群{$ ctrl.model.cluster_name $}签发证书"
 msgid "Size"
 msgstr "大小。"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "为节点指定url"
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "指定集群名称和选择集群模板"
-
-msgid "Specify conditions for cluster creation."
-msgstr "指定集群创建的条件"
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "申明应使用的容器编排引擎。"
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "明确集群模板使用的nameserver地址，默认：8.8.8.8"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr "为集群指定主节点的数量、集群节点和docker磁盘大小。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "指定容器卷的大小用GB来衡量。"
@@ -491,20 +458,11 @@ msgid ""
 "Default: m1.small"
 msgstr "当启动集群主节点时候，计算服务类型的id，默认m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "集群中主节点数量"
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker卷的大小(以GB计)，默认是25G。"
 
-msgid "The timeout for cluster creation in minutes."
-msgstr "集群创建操作以分钟为单位的超时时间。"
-
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr "这应该称为真正的固定网络CIRD，默认地址为10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "超时"
 
 msgid "UPDATE COMPLETE"
 msgstr "更新完成"
@@ -577,9 +535,6 @@ msgstr "无法更新集群模版。"
 
 msgid "Unable to update cluster."
 msgstr "无法更新集群。"
-
-msgid "Update Cluster"
-msgstr "更新集群"
 
 msgid "Update Cluster Template"
 msgstr "更新集群模版"

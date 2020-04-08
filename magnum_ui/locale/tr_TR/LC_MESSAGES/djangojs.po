@@ -4,11 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-26 11:52+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-16 12:16+0000\n"
+"PO-Revision-Date: 2017-08-16 12:11+0000\n"
 "Last-Translator: yasemin demiral <yasemin.demiral@tubitak.gov.tr>\n"
 "Language-Team: Turkish (Turkey)\n"
 "Language: tr_TR\n"
@@ -106,10 +106,6 @@ msgstr "Küme"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Küme %s başarıyla oluşturuldu."
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "Küme %s başarıyla güncellendi."
 
 msgid "Cluster Create Timeout"
 msgstr "Küme Oluşturma Zaman Aşımı"
@@ -280,10 +276,6 @@ msgstr "HTTPS Vekili"
 msgid "ID"
 msgstr "Kimlik"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr ""
-"Eğer belirtilmemişse, Küme Şablonu'nda belirtilen değer kullanılacaktır."
-
 msgid "Image"
 msgstr "İmaj"
 
@@ -346,9 +338,6 @@ msgstr "Ana LB Etkin"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "Çeşitli"
-
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
@@ -357,9 +346,6 @@ msgstr "İsim"
 
 msgid "Name of the cluster template."
 msgstr "Küme şablonu ismi."
-
-msgid "Name of the cluster."
-msgstr "Küme ismi."
 
 msgid "Network"
 msgstr "Ağ"
@@ -409,9 +395,6 @@ msgstr "Kayıt Etkin"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Rollback cluster on update failure"
-msgstr "Kümedeki hatalı güncellemeleri geri al "
-
 msgid "Rotate Certificate"
 msgstr "Sertifikayı döndür"
 
@@ -420,10 +403,6 @@ msgstr "ANLIK GÖRÜNTÜ TAMAMLANDI"
 
 msgid "Server Type"
 msgstr "Sunucu Türü"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr ""
-"Zaman aşımı olmaması için 0 ayarlayın. Öntanımlı olarak zaman aşımı yoktur."
 
 msgid "Show Certificate"
 msgstr "Sertifikayı Göster"
@@ -437,15 +416,6 @@ msgstr "Sertifikayı Kümeye İmzala: {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Boyut"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "Düğüm keşfi için özel keşif url'si belirtir."
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "Küme ismi belirtin ve küme şablonu seçin"
-
-msgid "Specify conditions for cluster creation."
-msgstr "Küme oluşturma için şartları belirtin."
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Kullanılacak Kapsayıcı Düzenleme Motorunu Belirtin."
 
@@ -453,13 +423,6 @@ msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Küme şablonu için kullanılacak isim sunucuyu belirtin. Öntanımlı: 8.8.8.8"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr ""
-"Küme için ana düğümlerin, küme düğümlerinin ve docker mantıksal sürücü "
-"boyutunu belirtin."
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker mantıksal sürücüsü için boyutu GB olarak belirtin"
@@ -505,22 +468,13 @@ msgstr ""
 "Kümenin ana düğümü başlatılırken kullanılacak Nova nitelik kimliği. "
 "Öntanımlı: m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "Küme için ana düğüm sayısı."
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker Birimi için GB olarak boyut: Varsayılan: 25"
-
-msgid "The timeout for cluster creation in minutes."
-msgstr "Küme oluşturma için dakika olarak zaman aşımı."
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Bunun gerçekten fixed-network-cidr olarak isimlendirilmesi gerekir. "
 "Öntanımlı: 10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "Zaman aşımı"
 
 msgid "UPDATE COMPLETE"
 msgstr "GÜNCELLEME TAMAMLANDI"
@@ -595,9 +549,6 @@ msgstr "Küme şablonu güncellenemedi."
 
 msgid "Unable to update cluster."
 msgstr "Küme güncellenemiyor."
-
-msgid "Update Cluster"
-msgstr "Kümeyi Güncelle"
 
 msgid "Update Cluster Template"
 msgstr "Küme Şablonunu Güncelle"

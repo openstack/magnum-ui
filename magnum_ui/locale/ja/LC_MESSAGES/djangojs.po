@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-11-08 09:09+0000\n"
+"POT-Creation-Date: 2020-04-02 03:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,13 +35,6 @@ msgid ""
 msgstr ""
 "クラスターテンプレートには、「key=value」形式で任意のラベルを関連付けできま"
 "す。複数個指定できます。"
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a "
-"clusters. May be used multiple times."
-msgstr ""
-"クラスターには、「key=value」形式で任意のラベルを関連付けできます。複数個指定"
-"できます。"
 
 msgid "CHECK COMPLETE"
 msgstr "チェック完了"
@@ -126,10 +119,6 @@ msgstr "クラスター"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "クラスター %s が正常に作成されました。"
-
-#, python-format
-msgid "Cluster %s was successfully updated."
-msgstr "クラスター %s が正常に更新されました。"
 
 msgid "Cluster Create Timeout"
 msgstr "クラスター作成のタイムアウト"
@@ -331,10 +320,6 @@ msgstr "上限値"
 msgid "ID"
 msgstr "ID"
 
-msgid "If not specified, the value specified in Cluster Template will be used."
-msgstr ""
-"指定しない場合、クラスターテンプレートに指定されている値が使用されます。"
-
 msgid "Image"
 msgstr "イメージ"
 
@@ -405,9 +390,6 @@ msgstr "マスターノード LB の有効化"
 msgid "Mesos"
 msgstr "Mesos"
 
-msgid "Misc"
-msgstr "その他"
-
 msgid "Miscellaneous"
 msgstr "その他"
 
@@ -416,9 +398,6 @@ msgstr "名前"
 
 msgid "Name of the cluster template."
 msgstr "クラスターテンプレートの名前。"
-
-msgid "Name of the cluster."
-msgstr "クラスターの名前。"
 
 msgid "Network"
 msgstr "ネットワーク"
@@ -497,9 +476,6 @@ msgstr "リソース"
 msgid "Rexray"
 msgstr "Rexray"
 
-msgid "Rollback cluster on update failure"
-msgstr "更新失敗時のクラスターのロールバック"
-
 msgid "Rotate Certificate"
 msgstr "証明書の更新"
 
@@ -508,10 +484,6 @@ msgstr "スナップショット作成完了"
 
 msgid "Server Type"
 msgstr "サーバー種別"
-
-msgid "Set to 0 for no timeout. The default is no timeout."
-msgstr ""
-"タイムアウトなしにするには 0 を設定します。デフォルトはタイムアウトしません。"
 
 msgid "Show Certificate"
 msgstr "証明書の表示"
@@ -525,28 +497,12 @@ msgstr "証明書をクラスターに署名します: {$ ctrl.model.cluster_nam
 msgid "Size"
 msgstr "サイズ"
 
-msgid "Specifies custom discovery url for node discovery."
-msgstr "ノードの探索のためのカスタム探索 URL を設定してください。"
-
-msgid "Specify cluster name and choose cluster template"
-msgstr "クラスターの名前を指定し、クラスターテンプレートを選択してください"
-
-msgid "Specify conditions for cluster creation."
-msgstr "クラスターの作成条件を指定してください。"
-
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "使用するコンテナーオーケストレーションエンジンを指定してください。"
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr "クラスターテンプレートで使用するネームサーバーを指定してください。"
-
-msgid ""
-"Specify the number of master nodes, cluster nodes and docker volume size for "
-"the cluster."
-msgstr ""
-"クラスターのマスターノードとクラスターノードの数、およびDocker のボリュームサ"
-"イズを指定してください。"
 
 msgid "Specify the size in GB for the docker volume"
 msgstr "Docker のボリュームのサイズを GB 単位で指定してください"
@@ -609,21 +565,12 @@ msgstr ""
 "クラスターのマスターノードを起動するときに使用する Nova のフレーバー ID。デ"
 "フォルト: m1.small"
 
-msgid "The number of master nodes for the cluster."
-msgstr "このクラスターのマスターノードの数。"
-
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Docker のボリュームの GB 単位のサイズ。デフォルト: 25"
-
-msgid "The timeout for cluster creation in minutes."
-msgstr "クラスターの作成タイムアウト時間 (単位: 分)。"
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "固定ネットワークの CIDR を指定する必要があります。デフォルト: 10.0.0.0/24"
-
-msgid "Timeout"
-msgstr "タイムアウト"
 
 msgid "UPDATE COMPLETE"
 msgstr "更新完了"
@@ -721,9 +668,6 @@ msgstr "クラスターを更新できません。"
 
 msgid "Unable to update quota."
 msgstr "クォータを更新できません。"
-
-msgid "Update Cluster"
-msgstr "クラスターの更新"
 
 msgid "Update Cluster Template"
 msgstr "クラスターテンプレートの更新"
