@@ -82,7 +82,7 @@
         "data": {
           "node_count": 2,
           "nodes_to_remove": ["456"],
-          "nodegroup": "production_group"
+          "nodegroup": "default-worker"
         },
         "error": "Unable to resize given cluster id: 123.",
         "testInput": [
@@ -90,7 +90,7 @@
           {
             "node_count": 2,
             "nodes_to_remove": ["456"],
-            "nodegroup": "production_group"
+            "nodegroup": "default-worker"
           }
         ]
       },
@@ -109,7 +109,7 @@
         "data": {
           "cluster_template": "ABC",
           "max_batch_size": 1,
-          "node_group": "production_group"
+          "node_group": "default-worker"
         },
         "error": "Unable to perform rolling upgrade.",
         "testInput": [
@@ -117,7 +117,7 @@
           {
             "cluster_template": "ABC",
             "max_batch_size": 1,
-            "node_group": "production_group"
+            "node_group": "default-worker"
           }
         ]
       },
