@@ -181,7 +181,7 @@
     function onModalSubmit() {
       var postRequestObject = {
         node_count: formModel.node_count,
-        nodegroup: 'production_group'
+        nodegroup: 'default-worker'
       };
 
       if (formModel.node_count < formModel.original_node_count &&
