@@ -203,7 +203,7 @@
       return magnum.upgradeCluster(formModel.id, {
         cluster_template: formModel.cluster_template_id,
         max_batch_size: formModel.max_batch_size,
-        nodegroup: 'production_group'
+        nodegroup: 'default-worker'
       }).then(onRequestSuccess);
     }
 
