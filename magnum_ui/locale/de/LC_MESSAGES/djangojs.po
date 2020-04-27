@@ -4,16 +4,17 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-02 03:39+0000\n"
+"POT-Creation-Date: 2020-04-21 09:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-23 12:19+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2020-04-26 06:12+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -146,6 +147,9 @@ msgstr "Clustervorlagen"
 msgid "Cluster Type"
 msgstr "Clustertyp"
 
+msgid "Cluster is being resized."
+msgstr "Größe des Clusters wird geändert."
+
 #, python-format
 msgid "Cluster template %s was successfully created."
 msgstr "Clustervorlage %s erfolgreich angelegt."
@@ -186,6 +190,9 @@ msgstr "Erstelle Cluster"
 
 msgid "Create Cluster Template"
 msgstr "Clustervorlage erstellen"
+
+msgid "Create New Cluster"
+msgstr "Neuen Cluster erstellen"
 
 msgid "Create Quota"
 msgstr "Kontingent erstellen"
@@ -325,6 +332,9 @@ msgstr "HTTPS-Proxy"
 msgid "Hard Limit"
 msgstr "Hartes Limit"
 
+msgid "Hidden"
+msgstr "Versteckt"
+
 msgid "ID"
 msgstr "ID"
 
@@ -371,6 +381,9 @@ msgstr "Bezeichnungen"
 
 msgid "Limit for this resource."
 msgstr "Limit für die Ressource."
+
+msgid "Loading"
+msgstr "Laden"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Clustervorlage öffentlich machen. Standard: Falsch"
@@ -478,6 +491,9 @@ msgstr "Datensatzeigenschaften"
 
 msgid "Registry Enabled"
 msgstr "Registry aktiviert"
+
+msgid "Resize Cluster"
+msgstr "Größe des Clusters ändern"
 
 msgid "Resource"
 msgstr "Ressource"
