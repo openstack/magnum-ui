@@ -4,16 +4,17 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2018. #zanata
 # Robert Simai <robert.simai@suse.com>, 2018. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-02 03:39+0000\n"
+"POT-Creation-Date: 2020-04-24 18:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-10-23 12:19+0000\n"
-"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
+"PO-Revision-Date: 2020-04-25 09:22+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -28,6 +29,12 @@ msgstr "API Adresse"
 msgid "API Server Port"
 msgstr "API Server Port"
 
+msgid "Additional Labels"
+msgstr "Zusätzliche Label"
+
+msgid "Advanced"
+msgstr "Fortgeschritten"
+
 msgid "An arbitrary human-readable name"
 msgstr "Ein beliebiger menschenlesbarer Name"
 
@@ -37,6 +44,9 @@ msgid ""
 msgstr ""
 "Beliebige Bezeichnungen in der Form Schlüssel=Wert, zu verbunden mit einer "
 "Clustervorlage. Kann mehrmals verwendet werden."
+
+msgid "Availability Zone"
+msgstr "Verfügbarkeitszone"
 
 msgid "CHECK COMPLETE"
 msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
@@ -187,6 +197,12 @@ msgstr "Erstelle Cluster"
 msgid "Create Cluster Template"
 msgstr "Clustervorlage erstellen"
 
+msgid "Create New Cluster"
+msgstr "Neuen Cluster erstellen"
+
+msgid "Create New Network"
+msgstr "Neues Netzwerk erstellen"
+
 msgid "Create Quota"
 msgstr "Kontingent erstellen"
 
@@ -252,6 +268,9 @@ msgid "Deleted quota: %s."
 msgid_plural "Deleted quotas: %s."
 msgstr[0] "Gelöschtes Kontingent: %s."
 msgstr[1] "Gelöschte Kontingente: %s."
+
+msgid "Details"
+msgstr "Details"
 
 msgid "Device Mapper"
 msgstr "Device Mapper"
@@ -325,6 +344,9 @@ msgstr "HTTPS-Proxy"
 msgid "Hard Limit"
 msgstr "Hartes Limit"
 
+msgid "Hidden"
+msgstr "Versteckt"
+
 msgid "ID"
 msgstr "ID"
 
@@ -354,6 +376,12 @@ msgstr "Unendlich"
 msgid "Info"
 msgstr "Info"
 
+msgid "Ingress"
+msgstr "Ingress"
+
+msgid "Ingress Controller"
+msgstr "Ingress Kontroller"
+
 msgid "Insecure Registry"
 msgstr "Unsichere Registrierung"
 
@@ -372,8 +400,14 @@ msgstr "Bezeichnungen"
 msgid "Limit for this resource."
 msgstr "Limit für die Ressource."
 
+msgid "Loading"
+msgstr "Laden"
+
 msgid "Make cluster template public. Default: False"
 msgstr "Clustervorlage öffentlich machen. Standard: Falsch"
+
+msgid "Management"
+msgstr "Management"
 
 msgid "Margin"
 msgstr "Spanne"
@@ -396,6 +430,9 @@ msgstr "Master LB"
 msgid "Master LB Enabled"
 msgstr "Master LB aktiviert"
 
+msgid "Master Nodes"
+msgstr "Master-Knoten"
+
 msgid "Mesos"
 msgstr "Mesos"
 
@@ -405,14 +442,23 @@ msgstr "Verschiedenes"
 msgid "Name"
 msgstr "Name"
 
+msgid "Name of the cluster"
+msgstr "Name des Clusters"
+
 msgid "Name of the cluster template."
 msgstr "Name für die Clustervorlage."
 
 msgid "Network"
 msgstr "Netzwerk"
 
+msgid "Network Access Control"
+msgstr "Netzwerkzugriffskontrolle"
+
 msgid "Network Driver"
 msgstr "Netzwerktreiber"
+
+msgid "New Cluster Template"
+msgstr "Neue Clustervorlage"
 
 msgid "No Proxy"
 msgstr "Kein Proxy"
@@ -434,6 +480,9 @@ msgstr "Knoten"
 
 msgid "None"
 msgstr "kein"
+
+msgid "Number of Worker Nodes"
+msgstr "Anzahl der Worker-Knoten"
 
 msgid "Overlay"
 msgstr "Overlay"
@@ -478,6 +527,9 @@ msgstr "Datensatzeigenschaften"
 
 msgid "Registry Enabled"
 msgstr "Registry aktiviert"
+
+msgid "Resize Cluster"
+msgstr "Größe des Clusters ändern"
 
 msgid "Resource"
 msgstr "Ressource"
@@ -694,11 +746,17 @@ msgstr "Aktualisiert"
 msgid "Updated At"
 msgstr "Aktualisiert am"
 
+msgid "Use an Existing Network"
+msgstr "Benutze existierendes Netzwerk"
+
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Benutzt {$ ctrl.stats.clusters $} von {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
 msgstr "Datenträgertreiber"
+
+msgid "Worker Nodes"
+msgstr "Worker-Knoten"
 
 #, python-format
 msgid "You are not allowed to delete cluster templates: %s"
