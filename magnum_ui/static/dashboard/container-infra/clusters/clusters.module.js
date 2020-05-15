@@ -73,6 +73,9 @@
     .setProperty('status', {
       label: gettext('Status')
     })
+    .setProperty('health_status', {
+      label: gettext('Health Status')
+    })
     .setProperty('master_count', {
       label: gettext('Master Count')
     })
@@ -97,6 +100,10 @@
     })
     .append({
       id: 'status',
+      priority: 1
+    })
+    .append({
+      id: 'health_status',
       priority: 1
     })
     .append({
@@ -145,6 +152,11 @@
         {label: gettext('UPDATE FAILED'), key: 'UPDATE_FAILED'},
         {label: gettext('UPDATE IN PROGRESS'), key: 'UPDATE_IN_PROGRESS'}
       ]
+    })
+    .append({
+      'label': gettext('Health Status'),
+      'name': 'health_status',
+      'singleton': true
     })
     .append({
       'label': gettext('Master Count'),
