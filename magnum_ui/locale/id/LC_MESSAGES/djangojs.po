@@ -3,20 +3,34 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2019. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2020. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-02 03:39+0000\n"
+"POT-Creation-Date: 2020-04-27 00:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-01-21 04:54+0000\n"
+"PO-Revision-Date: 2020-05-20 05:44+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
 "X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "<em>This cluster is already on the latest compatible template</em>"
+msgstr "<em>This cluster is already on the latest compatible template</em>"
+
+msgid "A batch cannot have less than one node."
+msgstr "Batch tidak boleh memiliki kurang dari satu node."
+
+msgid ""
+"A minimum number of Worker Nodes cannot be higher than the default number of "
+"Worker Nodes."
+msgstr ""
+"Jumlah minimum Worker Nodes tidak boleh lebih tinggi dari jumlah default "
+"Worker Nodes."
 
 msgid "ADOPT COMPLETE"
 msgstr "ADOPT COMPLETE (adopsi lengkap)"
@@ -27,8 +41,35 @@ msgstr "API Address (alamat API)"
 msgid "API Server Port"
 msgstr "API Server Port"
 
+msgid "Accessible on private network only"
+msgstr "Dapat diakses hanya di jaringan pribadi"
+
+msgid "Accessible on the public internet"
+msgstr "Dapat diakses di internet publik"
+
+msgid "Additional Labels"
+msgstr "Additional Labels"
+
+msgid "Addon Software"
+msgstr "Addon Software"
+
+msgid "Addon software"
+msgstr "Perangkat lunak addon"
+
+msgid "Advanced"
+msgstr "Advanced"
+
 msgid "An arbitrary human-readable name"
 msgstr "nama human-readable sebarang"
+
+msgid ""
+"Any addon software selected will be installed at the latest supported "
+"version when the cluster is deployed, but will not be upgraded automatically "
+"by rolling upgrades."
+msgstr ""
+"Setiap perangkat lunak addon yang dipilih akan diinstal pada versi yang "
+"didukung terbaru ketika cluster disebarkan, tetapi tidak akan ditingkatkan "
+"secara otomatis dengan menggulirkan peningkatan (rolling upgrades)."
 
 msgid ""
 "Arbitrary labels in the form of key=value pairs to associate with a cluster "
@@ -36,6 +77,28 @@ msgid ""
 msgstr ""
 "Label sebarang dalam bentuk key-value pairs untuk mengasosiasikan dengan "
 "template klaster. Dapat digunakan beberapa kali."
+
+msgid "Auto Healing"
+msgstr "Auto Healing"
+
+msgid "Auto Scaling"
+msgstr "Auto Scaling"
+
+msgid ""
+"Auto scaling requires the use of CPU and memory limits on the resource "
+"definition of Pods."
+msgstr ""
+"Penskalaan otomatis memerlukan penggunaan CPU dan batas memori pada definisi "
+"sumber daya dari Pods."
+
+msgid "Auto-scale Worker Nodes"
+msgstr "Auto-scale Worker Nodes"
+
+msgid "Automatically Repair Unhealthy Nodes"
+msgstr "Automatically Repair Unhealthy Nodes"
+
+msgid "Availability Zone"
+msgstr "Availability Zone"
 
 msgid "CHECK COMPLETE"
 msgstr "CHECK COMPLETE (cek lengkap)"
@@ -75,6 +138,9 @@ msgstr "Sertifikat %s berhasil ditandatangani."
 msgid "Choose a Cluster Template"
 msgstr "Pilih template cluster"
 
+msgid "Choose a Cluster Template to upgrade to"
+msgstr "Pilih Cluster Template untuk ditingkatkan"
+
 msgid "Choose a Container Orchestration Engine"
 msgstr "Pilih Container Orchestration Engine"
 
@@ -86,6 +152,9 @@ msgstr "Pilih Flavor untuk Master Node"
 
 msgid "Choose a Flavor for the Node"
 msgstr "Pilih Flavor untuk Node"
+
+msgid "Choose a Flavor for the Worker Node"
+msgstr "Pilih Flavour for the Worker Node"
 
 msgid "Choose a Keypair"
 msgstr "Pilih Keypair"
@@ -108,8 +177,20 @@ msgstr "Choose a Project"
 msgid "Choose a Volume Driver"
 msgstr "Pilih driver volume"
 
+msgid "Choose an Availability Zone"
+msgstr "Pilih Zona Ketersediaan (Availability Zone)"
+
 msgid "Choose an Image"
 msgstr "Pilih Image"
+
+msgid "Choose an existing network"
+msgstr "Pilih jaringan yang ada"
+
+msgid "Choose an ingress controller"
+msgstr "Pilih pengontrol ingress"
+
+msgid "Choose nodes to remove (Optional)"
+msgstr "Pilih node untuk dihapus (Opsional)"
 
 msgid "Cinder"
 msgstr "Cinder"
@@ -144,6 +225,12 @@ msgstr "Cluster Templates (template klaster)"
 
 msgid "Cluster Type"
 msgstr "Cluster Type (tipe klaster)"
+
+msgid "Cluster is being resized."
+msgstr "Cluster sedang diubah ukurannya."
+
+msgid "Cluster is being upgraded to the new Cluster template"
+msgstr "Cluster sedang ditingkatkan ke templat Cluster baru"
 
 #, python-format
 msgid "Cluster template %s was successfully created."
@@ -182,6 +269,12 @@ msgstr "Buat klaster"
 
 msgid "Create Cluster Template"
 msgstr "Create Cluster Template"
+
+msgid "Create New Cluster"
+msgstr "Create New Cluster"
+
+msgid "Create New Network"
+msgstr "Create New Network"
 
 msgid "Create Quota"
 msgstr "Create Quota"
@@ -243,6 +336,9 @@ msgid "Deleted quota: %s."
 msgid_plural "Deleted quotas: %s."
 msgstr[0] "Deleted quota: %s."
 
+msgid "Details"
+msgstr "Details"
+
 msgid "Device Mapper"
 msgstr "Device Mapper"
 
@@ -300,6 +396,12 @@ msgstr "Flavor"
 msgid "Flavor ID"
 msgstr "Flavor ID (ID flavor)"
 
+msgid "Flavor of Master Nodes"
+msgstr "Flavor of Master Nodes"
+
+msgid "Flavor of Worker Nodes"
+msgstr "Flavor of Worker Nodes"
+
 msgid "Floating IP"
 msgstr "Floating IP (IP mengambang)"
 
@@ -315,8 +417,38 @@ msgstr "HTTPS Proxy"
 msgid "Hard Limit"
 msgstr "Hard Limit"
 
+msgid "Hidden"
+msgstr "Hidden"
+
+msgid "I do want to override Template and Workflow Labels"
+msgstr "Saya ingin mengganti Label Template dan Workflow"
+
 msgid "ID"
 msgstr "ID (id)"
+
+msgid ""
+"If Kubernetes is unable to schedule a Pod due to insuficient CPU or memory "
+"in the cluster, a worker node will be added, as long as the maximum number "
+"of worker nodes has not been reached."
+msgstr ""
+"Jika Kubernetes tidak dapat menjadwalkan Pod karena kekurangan CPU atau "
+"memori di cluster, node pekerja akan ditambahkan, selama jumlah maksimum "
+"node pekerja belum tercapai."
+
+msgid ""
+"If enabled, the minimum and maximum number of worker nodes must be specified."
+msgstr ""
+"Jika diaktifkan, jumlah minimum dan maksimum node pekerja harus ditentukan."
+
+#, python-format
+msgid ""
+"If the aggregate resource limits of all existing Pods is lower than 50% of "
+"the cluster capacity, a worker node will be removed, as long as the minimum "
+"number of worker nodes has not been reached."
+msgstr ""
+"Jika batas sumber daya agregat dari semua Pod yang ada lebih rendah dari "
+"50% dari kapasitas cluster, node pekerja akan dihapus, selama jumlah minimum "
+"node pekerja belum tercapai."
 
 msgid "Image"
 msgstr "Image"
@@ -344,8 +476,24 @@ msgstr "Infinite (tak terbatas)"
 msgid "Info"
 msgstr "Info"
 
+msgid "Ingress"
+msgstr "Ingress"
+
+msgid "Ingress Controller"
+msgstr "Ingress Controller"
+
 msgid "Insecure Registry"
 msgstr "Registry tidak aman"
+
+msgid ""
+"Invalid format. Must be a comma-separated key-value string: key=value,"
+"key2=value2"
+msgstr ""
+"Format yang tidak valid. Harus berupa string key-value yang dipisahkan koma: "
+"key=value,key2=value2"
+
+msgid "It is generally not recommended to give public access."
+msgstr "Biasanya tidak disarankan untuk memberikan akses publik."
 
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
@@ -362,8 +510,34 @@ msgstr "Labels"
 msgid "Limit for this resource."
 msgstr "Batasi untuk sumber daya ini."
 
+msgid "Loading"
+msgstr "Loading"
+
 msgid "Make cluster template public. Default: False"
 msgstr "Membuat publik template klaster. Default: False"
+
+msgid ""
+"Making the Kubernetes API accessible from anywhere on the public internet is "
+"convenient, but may represent a security risk. <em>[When selecting this "
+"option, it is recommended to limit access to a trusted IP address range.]</"
+"em>"
+msgstr ""
+"Membuat API Kubernetes dapat diakses dari mana saja di internet publik "
+"adalah hal yang mudah, tetapi mungkin merupakan risiko keamanan. <em>[When "
+"selecting this option, it is recommended to limit access to a trusted IP "
+"address range.]</em>"
+
+msgid ""
+"Making the Kubernetes API accessible from the private network only is the "
+"most secure option (the default), but access will be limited to compute "
+"instances on the same private network or a VPN to that network."
+msgstr ""
+"Membuat API Kubernetes hanya dapat diakses dari jaringan pribadi adalah opsi "
+"yang paling aman (default), tetapi akses akan dibatasi untuk menghitung "
+"instance di jaringan pribadi yang sama atau VPN ke jaringan itu."
+
+msgid "Management"
+msgstr "Management"
 
 msgid "Margin"
 msgstr "Margin"
@@ -386,8 +560,20 @@ msgstr "Master LB"
 msgid "Master LB Enabled"
 msgstr "Master LB Enabled (master LB diaktifkan)"
 
+msgid "Master Nodes"
+msgstr "Master Nodes"
+
+msgid "Maximum Batch Size"
+msgstr "Maximum Batch Size"
+
+msgid "Maximum number of Worker Nodes"
+msgstr "Jumlah maksimum dari Worker Nodes"
+
 msgid "Mesos"
 msgstr "Mesos"
+
+msgid "Minimum Number of Worker Nodes"
+msgstr "Minimum Number of Worker Nodes"
 
 msgid "Miscellaneous"
 msgstr "Miscellaneous (lain-lain)"
@@ -395,14 +581,23 @@ msgstr "Miscellaneous (lain-lain)"
 msgid "Name"
 msgstr "Name (nama)"
 
+msgid "Name of the cluster"
+msgstr "Nama cluster"
+
 msgid "Name of the cluster template."
 msgstr "Nama dari template cluster."
 
 msgid "Network"
 msgstr "Network"
 
+msgid "Network Access Control"
+msgstr "Network Access Control"
+
 msgid "Network Driver"
 msgstr "Network Driver (driver jaringan)"
+
+msgid "New Cluster Template"
+msgstr "New Cluster Template"
 
 msgid "No Proxy"
 msgstr "No Proxy"
@@ -425,11 +620,34 @@ msgstr "Nodes (simpul)"
 msgid "None"
 msgstr "None"
 
+msgid "Number of Master Nodes"
+msgstr "Jumlah Master Nodes"
+
+msgid "Number of Worker Nodes"
+msgstr "Number of Worker Nodes"
+
 msgid "Overlay"
 msgstr "Overlay"
 
+msgid ""
+"Overriding labels already defined by cluster template orworkflow might "
+"result in unpredictable behaviour."
+msgstr ""
+"Mengganti label yang sudah ditentukan oleh templat klaster atau orworkflow "
+"dapat mengakibatkan perilaku yang tidak dapat diprediksi."
+
 msgid "Overview"
 msgstr "Overview (ikhtisar)"
+
+msgid ""
+"Please note that updates may cause application downtime if workloads "
+"deployed to Kubernetes are not following the best practices outlined in the "
+"documentation (for example, not using multiple replicas)."
+msgstr ""
+"Harap perhatikan bahwa pembaruan dapat menyebabkan waktu henti aplikasi jika "
+"beban kerja yang digunakan untuk Kubernetes tidak mengikuti praktik terbaik "
+"yang diuraikan dalam dokumentasi (misalnya, tidak menggunakan beberapa "
+"replika)."
 
 msgid "Project"
 msgstr "Project"
@@ -469,17 +687,26 @@ msgstr "Record Properties (properti record)"
 msgid "Registry Enabled"
 msgstr "Registry Enabled (Registri diaktifkan)"
 
+msgid "Resize Cluster"
+msgstr "Resize Cluster"
+
 msgid "Resource"
 msgstr "Resource"
 
 msgid "Rexray"
 msgstr "Rexray"
 
+msgid "Rolling Cluster Upgrade"
+msgstr "Rolling Cluster Upgrade"
+
 msgid "Rotate Certificate"
 msgstr "Putar Sertifikat"
 
 msgid "SNAPSHOT COMPLETE"
 msgstr "SNAPSHOT COMPLETE (snapshot lengkap)"
+
+msgid "Security Updates"
+msgstr "Security Updates"
 
 msgid "Server Type"
 msgstr "Server Type (tipe server)"
@@ -495,6 +722,17 @@ msgstr "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 
 msgid "Size"
 msgstr "Size (ukuran)"
+
+msgid ""
+"Specify additional kube_labels to apply to the cluster or override labels "
+"set by the cluster template. Overriding labels set by the cluster template "
+"may result in your cluster being misconfigured, unstable or unable to be "
+"created."
+msgstr ""
+"Tentukan kube_labels tambahan untuk diterapkan pada klaster atau timpa label "
+"yang ditetapkan oleh templat klaster. Mengganti label yang ditetapkan oleh "
+"templat klaster dapat mengakibatkan klaster Anda salah konfigurasi, tidak "
+"stabil atau tidak dapat dibuat."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Tentukan Container Orchestration Engine untuk digunakan."
@@ -544,6 +782,37 @@ msgstr "Alamat http_proxy digunakan untuk node dalam klaster"
 msgid "The https_proxy address to use for nodes in cluster"
 msgstr "Alamat http_proxy digunakan untuk node dalam klaster"
 
+msgid ""
+"The key=value pair string is case insensitive and will be converted to lower "
+"case."
+msgstr ""
+"The key=value pair string tidak sensitif huruf dan akan dikonversi ke huruf "
+"kecil."
+
+msgid ""
+"The maximum number of Worker Nodes a new cluster can auto-scale to cannot be "
+"less than the total amount of Worker Nodes."
+msgstr ""
+"Jumlah maksimum Worker Nodes yang dapat di-skala otomatis oleh cluster baru "
+"tidak boleh kurang dari jumlah total Worker Nodes."
+
+msgid ""
+"The maximum number of Worker Nodes cannot be less than the default number of "
+"Worker Nodes and 1."
+msgstr ""
+"Jumlah maksimum Worker Nodes tidak boleh kurang dari jumlah default Worker "
+"Nodes dan 1."
+
+msgid "The maximum number of nodes in the batch has been exceeded."
+msgstr "Jumlah maksimum node dalam kumpulan telah terlampaui."
+
+msgid ""
+"The minimum number of Worker Nodes a new cluster can auto scale to cannot "
+"exceed the total amount of Worker Nodes."
+msgstr ""
+"Jumlah minimum dari Worker Nodes yang dapat diukur secara otomatis oleh "
+"cluster baru tidak dapat melebihi jumlah total Worker Nodes."
+
 msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
 msgstr ""
 "Nama atau UUID dari pasangan kunci (keypair) SSH untuk memuat ke node "
@@ -565,6 +834,15 @@ msgid ""
 msgstr ""
 "id flavor nova untuk digunakan ketika peluncuran node master cluster. "
 "Default: m1.small"
+
+msgid "The number of master nodes for the cluster"
+msgstr "Jumlah node master untuk cluster"
+
+msgid "The number of worker nodes for the cluster"
+msgstr "Jumlah node pekerja untuk cluster"
+
+msgid "The selected Cluster Template does not support multiple master nodes."
+msgstr "Cluster Template yang dipilih tidak mendukung banyak node master."
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "Ukuran dalam GB untuk Docker Volume. Default: 25"
@@ -628,6 +906,27 @@ msgstr ""
 "Tidak dapat menghapus kuota dengan project id: %(projectId)s dan resource: "
 "%(resource)s."
 
+msgid "Unable to get cluster's working nodes."
+msgstr "Tidak bisa mendapatkan node kerja cluster."
+
+msgid "Unable to perform rolling upgrade."
+msgstr "Tidak dapat melakukan peningkatan versi bergulir (rolling upgrade)."
+
+msgid "Unable to process `Additional Labels`. Not all labels will be applied."
+msgstr ""
+"Tidak dapat memproses  `Additional Labels`. Tidak semua label akan "
+"diterapkan."
+
+#, python-format
+msgid "Unable to resize given cluster id: %(id)s."
+msgstr "Tidak dapat mengubah ukuran id cluster yang diberikan: %(id)s."
+
+msgid "Unable to retrieve available add-ons."
+msgstr "Tidak dapat mengambil pengaya (add-ons) yang tersedia."
+
+msgid "Unable to retrieve available ingress controllers."
+msgstr "Tidak dapat mengambil pengontrol masuk yang tersedia."
+
 msgid "Unable to retrieve the certificate."
 msgstr "Tidak dapat mengambil sertifikat."
 
@@ -682,11 +981,17 @@ msgstr "Updated (diperbaharui)"
 msgid "Updated At"
 msgstr "Updated At"
 
+msgid "Use an Existing Network"
+msgstr "Use an Existing Network"
+
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Used {$ ctrl.stats.clusters $} dari {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
 msgstr "Volume Driver (driver volume)"
+
+msgid "Worker Nodes"
+msgstr "Worker Nodes"
 
 #, python-format
 msgid "You are not allowed to delete cluster templates: %s"
@@ -699,6 +1004,12 @@ msgstr "Anda tidak diizinkan untuk menghapus cluster: %s"
 #, python-format
 msgid "You are not allowed to delete quotas: %s"
 msgstr "Anda tidak diizinkan untuk menghapus kuota: %s"
+
+msgid "You cannot auto-scale to less than a single Worker Node."
+msgstr "Anda tidak dapat skala otomatis hingga kurang dari satu Worker Node."
+
+msgid "You cannot resize to less than a single Worker Node."
+msgstr "Anda tidak dapat mengubah ukuran menjadi kurang dari satu Worker Node."
 
 #, python-format
 msgid ""
@@ -733,12 +1044,22 @@ msgstr[0] ""
 "You have selected \"%s\". Please confirm your selection. Deleted quota is "
 "not recoverable."
 
+msgid ""
+"You may only select as many nodes as you are reducing the original node "
+"count by."
+msgstr ""
+"Anda hanya dapat memilih sebanyak mungkin node yang Anda kurangi dari jumlah "
+"node semula."
+
 msgid "as follows:"
 msgstr "sebagai berikut:"
 
 msgid "error"
 msgid_plural "errors"
 msgstr[0] "kesalahan"
+
+msgid "key=value,key2=value2..."
+msgstr "key=value,key2=value2..."
 
 msgid "message"
 msgid_plural "messages"
