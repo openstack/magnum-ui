@@ -170,12 +170,14 @@ class ClusterResize(generic.View):
             return HttpResponseNotFound()
 
         stack = heat.stack_get(request, cluster["stack_id"])
-        search_opts = {"name": "%s-minion" % stack.stack_name}
+        search_opts = {"name": "%s-" % stack.stack_name}
         servers = api.nova.server_list(request, search_opts=search_opts)[0]
 
         worker_nodes = []
         for server in servers:
-            worker_nodes.append({"name": server.name, "id": server.id})
+            if (server.name.startswith("%s-minion" % stack.stack_name) or
+                    server.name.startswith("%s-node" % stack.stack_name)):
+                worker_nodes.append({"name": server.name, "id": server.id})
 
         return {"cluster": change_to_id(cluster),
                 "worker_nodes": worker_nodes}
@@ -183,7 +185,6 @@ class ClusterResize(generic.View):
     @rest_utils.ajax(data_required=True)
     def post(self, request, cluster_id):
         """Resize a cluster"""
-
         nodes_to_remove = request.DATA.get("nodes_to_remove", None)
         nodegroup = request.DATA.get("nodegroup", None)
         node_count = request.DATA.get("node_count")
@@ -192,7 +193,8 @@ class ClusterResize(generic.View):
         try:
             return magnum.cluster_resize(
                 request, cluster_id, node_count,
-                nodes_to_remove=nodes_to_remove, nodegroup=nodegroup)
+                nodes_to_remove=nodes_to_remove,
+                nodegroup=nodegroup).to_dict()
         except AttributeError as e:
             # If cluster is not found magnum-client throws Attribute error
             # catch and respond with 404
@@ -214,7 +216,7 @@ class ClusterUpgrade(generic.View):
 
         return magnum.cluster_upgrade(
             request, cluster_id, cluster_template,
-            max_batch_size=max_batch_size, nodegroup=nodegroup)
+            max_batch_size=max_batch_size, nodegroup=nodegroup).to_dict()
 
 
 @urls.register
