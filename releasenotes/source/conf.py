@@ -91,7 +91,7 @@ exclude_patterns = []
 # show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'native'
 
 # A list of ignored prefixes for module index sorting.
 # modindex_common_prefix = []
@@ -107,9 +107,10 @@ pygments_style = 'sphinx'
 html_theme = 'openstackdocs'
 
 # openstackdocstheme options
-repository_name = 'openstack/magnum-ui'
-bug_project = 'magnum-ui'
-bug_tag = ''
+openstackdocs_repo_name = 'openstack/magnum-ui'
+openstackdocs_auto_name = False
+openstackdocs_bug_project = 'magnum-ui'
+openstackdocs_bug_tag = ''
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -144,9 +145,6 @@ bug_tag = ''
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
 # html_extra_path = []
-
-# Must set this variable to include year, month, day, hours, and minutes.
-html_last_updated_fmt = '%Y-%m-%d %H:%M'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
