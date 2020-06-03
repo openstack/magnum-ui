@@ -445,9 +445,9 @@
                           type: 'template',
                           template: '<div class="alert alert-warning">' +
                             '<span class="fa fa-warning"></span> ' +
-                            gettext('Overriding labels already defined by cluster template or' +
-                              'workflow might result in unpredictable behaviour.') +
-                            '</div>',
+                            gettext('Overriding labels already defined by the cluster ' +
+                            'template or workflow might result in unpredictable ' +
+                            'behaviour.') + '</div>',
                           condition: 'model.override_labels == true'
                         }
                       ]
