@@ -7,9 +7,3 @@
       - openstack-python3-victoria-jobs-horizon
       - publish-openstack-docs-pti
       - release-notes-jobs-python3
-    check:
-      jobs:
-        - openstack-tox-py36:
-            voting: false
-            required-projects:
-              - openstack/horizon
