@@ -100,7 +100,8 @@
         cluster_template_id: model.cluster_template_id,
         keypair: model.keypair,
         floating_ip_enabled: model.floating_ip_enabled,
-        labels: requestLabels
+        labels: requestLabels,
+        master_lb_enabled: model.master_lb_enabled
       };
 
       // Optional request fields
