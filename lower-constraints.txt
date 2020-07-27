@@ -3,7 +3,7 @@ appdirs==1.4.3
 asn1crypto==0.24.0
 Babel==2.3.4
 certifi==2018.1.18
-cffi==1.11.5
+cffi==1.14
 chardet==3.0.4
 cliff==2.11.0
 cmd2==0.8.1
@@ -66,7 +66,7 @@ pep8==1.5.7
 Pint==0.8.1
 prettytable==0.7.2
 pycparser==2.18
-pyflakes==0.8.1
+pyflakes==2.1.1
 Pygments==2.2.0
 pyinotify==0.9.6
 pymongo==3.6.1
