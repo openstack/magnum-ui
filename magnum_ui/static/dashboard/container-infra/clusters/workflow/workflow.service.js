@@ -99,6 +99,7 @@
           },
           'max_node_count': { type: 'number' },
 
+          'master_lb_enabled': {type: 'boolean'},
           'create_network': { type: 'boolean' },
           'fixed_network': { type: 'string' },
           'floating_ip_enabled': { type: 'boolean' },
@@ -321,6 +322,11 @@
                       title: gettext('Network'),
                       items: [
                         {
+                          key: 'master_lb_enabled',
+                          type: 'checkbox',
+                          title: gettext('Enable Load Balancer for Master Nodes')
+                        },
+                        {
                           key: 'create_network',
                           title: gettext('Create New Network'),
                           onChange: function(isNewNetwork) {
@@ -477,6 +483,7 @@
           min_node_count: null,
           max_node_count: null,
 
+          master_lb_enabled: false,
           create_network: true,
           fixed_network: '',
           floating_ip_enabled: false,
