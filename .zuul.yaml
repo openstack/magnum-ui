@@ -4,6 +4,6 @@
       - horizon-non-primary-django-jobs
       - horizon-nodejs10-jobs
       - openstack-lower-constraints-jobs-horizon
-      - openstack-python3-victoria-jobs-horizon
+      - openstack-python3-wallaby-jobs-horizon
       - publish-openstack-docs-pti
       - release-notes-jobs-python3
