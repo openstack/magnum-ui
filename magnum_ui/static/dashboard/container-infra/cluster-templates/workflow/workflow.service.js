@@ -494,7 +494,7 @@
         fixed_subnet: "",
         dns_nameserver: "",
         master_lb_enabled: "",
-        floating_ip_enabled: "",
+        floating_ip_enabled: true,
         labels: ""
       };
 

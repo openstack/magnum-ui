@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Setting the `floating_ip_enabled` check box in the cluster_template
+    creation form to true by default, so as to match with the default in the
+    backend.
