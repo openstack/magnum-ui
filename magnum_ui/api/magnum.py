@@ -34,6 +34,7 @@ CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
 CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
 QUOTA_CREATION_ATTRIBUTES = quotas.CREATION_ATTRIBUTES
 CLUSTER_UPDATE_ALLOWED_PROPERTIES = set(['/node_count'])
+DEFAULT_API_VERSION = '1.10'
 
 
 def _cleanup_params(attrs, create, **params):
@@ -119,7 +120,9 @@ def magnumclient(request):
     insecure = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', False)
     cacert = getattr(settings, 'OPENSTACK_SSL_CACERT', None)
     openstack_api_versions = getattr(settings, 'OPENSTACK_API_VERSIONS', {})
-    magnum_api_version = openstack_api_versions.get(service_type, 1.1)
+    magnum_api_version = openstack_api_versions.get(service_type,
+                                                    DEFAULT_API_VERSION)
+    LOG.debug('Using magnum_api_version = %s.' % magnum_api_version)
 
     c = magnum_client.Client(username=request.user.username,
                              project_id=request.user.tenant_id,

@@ -101,7 +101,7 @@
           properties: {
             'node_count': {
               type: 'number',
-              minimum: 1
+              minimum: 0
             },
             'nodes_to_remove': {
               type: 'array',
@@ -119,7 +119,7 @@
             placeholder: gettext('The cluster node count.'),
             required: true,
             validationMessage: {
-              101: gettext('You cannot resize to less than a single Worker Node.')
+              101: gettext('You cannot resize to fewer than zero worker nodes.')
             },
             onChange: validateNodeRemovalCount
           },
