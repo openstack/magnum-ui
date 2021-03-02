@@ -75,11 +75,13 @@
       // set data for clusters chart
       var sum = dataClusters[0].value;
       var max = dataClusters[1].value;
-      if (response.data.hard_limit) {
-        max = response.data.hard_limit;
-        dataClusters[1].value = max - sum;
-      }
+      max = response.data.hard_limit;
+      dataClusters[1].value = max - sum;
       var percent = Math.round(sum / max * 100);
+      // shows 100% used if max = 0
+      if (max === 0) {
+        percent = 100;
+      }
       var overMax = percent > 100;
       ctrl.chartDataClusters = {
         title: gettext("Clusters"),

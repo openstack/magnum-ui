@@ -61,9 +61,9 @@
       expect(magnum.getQuota).toHaveBeenCalled();
     });
 
-    it('should load stats and default quotas', function() {
+    it('should load stats and zero quota', function() {
       deferredQuota = $q.defer();
-      deferredQuota.resolve({data: {hard_limit: null}});
+      deferredQuota.resolve({data: {hard_limit: 0}});
       spyOn(magnum, 'getQuota').and.returnValue(deferredQuota.promise);
 
       $scope.$apply();
