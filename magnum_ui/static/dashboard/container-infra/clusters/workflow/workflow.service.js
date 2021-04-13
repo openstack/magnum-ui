@@ -89,13 +89,13 @@
           'master_flavor_id': { type: 'string' },
           'node_count': {
             type: 'number',
-            minimum: 1
+            minimum: 0
           },
           'flavor_id': { type: 'string' },
           'auto_scaling_enabled': { type: 'boolean' },
           'min_node_count': {
             type: 'number',
-            minimum: 1
+            minimum: 0
           },
           'max_node_count': { type: 'number' },
 
