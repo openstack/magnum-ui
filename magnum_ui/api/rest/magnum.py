@@ -232,7 +232,7 @@ class ClusterResize(generic.View):
 
         worker_nodes = []
         for server in servers:
-            if (server.name.startswith("%s-minion" % stack.stack_name) or
+            if (server.name.startswith("%s-minion" % stack.stack_name) or  # noqa
                     server.name.startswith("%s-node" % stack.stack_name)):
                 worker_nodes.append({"name": server.name, "id": server.id})
 
