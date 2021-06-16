@@ -2,7 +2,7 @@
     templates:
       - check-requirements
       - horizon-non-primary-django-jobs
-      - horizon-nodejs10-jobs
+      - horizon-nodejs14-jobs
       - openstack-lower-constraints-jobs-horizon
       - openstack-python3-xena-jobs-horizon
       - publish-openstack-docs-pti
