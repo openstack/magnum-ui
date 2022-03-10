@@ -4,6 +4,6 @@
       - horizon-non-primary-django-jobs
       - horizon-nodejs14-jobs
       - openstack-lower-constraints-jobs-horizon
-      - openstack-python3-yoga-jobs-horizon
+      - openstack-python3-zed-jobs-horizon
       - publish-openstack-docs-pti
       - release-notes-jobs-python3
