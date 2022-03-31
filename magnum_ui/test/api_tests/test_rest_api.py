@@ -24,7 +24,7 @@ from openstack_dashboard.test.test_data import utils
 TEST = utils.TestData(test_data.data)
 
 
-class MagnumRestTestCase(test.TestCase):
+class MagnumRestTestCase(test.RestAPITestCase):
 
     # Cluster Templates
     @mock.patch.object(magnum, 'magnum')
