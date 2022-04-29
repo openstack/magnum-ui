@@ -10,7 +10,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.utils.translation import ugettext_lazy as _
 
 from horizon.browsers import views
@@ -20,7 +20,7 @@ from magnum_ui.content.container_infra.quotas import panel
 title = _("Container Infra - Quotas")
 page_title = panel.Quotas.name
 urlpatterns = [
-    url(r'^$',
-        views.AngularIndexView.as_view(title=title, page_title=page_title),
-        name='index'),
+    re_path(r'^$', views.AngularIndexView.as_view(
+            title=title, page_title=page_title),
+            name='index'),
 ]

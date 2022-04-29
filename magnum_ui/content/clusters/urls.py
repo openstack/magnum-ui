@@ -12,7 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import url
+from django.urls import re_path
 from django.utils.translation import ugettext_lazy as _
 from horizon.browsers import views
 from magnum_ui.content.clusters import panel
@@ -21,7 +21,7 @@ from magnum_ui.content.clusters import panel
 title = _("Container Infra - Clusters")
 page_title = panel.Clusters.name
 urlpatterns = [
-    url(r'^$',
-        views.AngularIndexView.as_view(title=title, page_title=page_title),
-        name='index'),
+    re_path(r'^$', views.AngularIndexView.as_view(
+            title=title, page_title=page_title),
+            name='index'),
 ]
