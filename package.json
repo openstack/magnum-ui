@@ -15,14 +15,12 @@
     "eslint-plugin-angular": "3.1.x",
     "jasmine-core": "2.8.x",
     "karma": "1.7.x",
-    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "2.1.0",
     "karma-cli": "1.0.x",
     "karma-coverage": "1.1.x",
     "karma-jasmine": "1.1.x",
     "karma-ng-html2js-preprocessor": "1.0.x",
-    "karma-phantomjs-launcher": "1.0.x",
-    "karma-threshold-reporter": "0.1.x",
-    "phantomjs-prebuilt": "2.1.x"
+    "karma-threshold-reporter": "0.1.x"
   },
   "dependencies": {},
   "scripts": {

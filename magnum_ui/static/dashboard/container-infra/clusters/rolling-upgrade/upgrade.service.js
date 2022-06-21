@@ -129,6 +129,7 @@
 
       function onError(err) {
         spinnerModal.hideModalSpinner();
+        deferred.promise.catch(angular.noop);
         return deferred.reject(err);
       }
 

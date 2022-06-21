@@ -19,7 +19,8 @@
 
   describe('horizon.dashboard.container-infra.clusters.create.service', function() {
 
-    var service, $scope, $q, deferred, magnum, workflow, spinnerModal, modalConfig, configDeferred;
+    var service, $scope, $q, deferred, magnum, workflow, spinnerModal, modalConfig, configDeferred,
+      $httpBackend;
 
     var model = {
       id: 1,
@@ -53,8 +54,9 @@
       $provide.value('horizon.framework.widgets.form.ModalFormService', modal);
     }));
 
-    beforeEach(inject(function($injector, _$rootScope_, _$q_) {
+    beforeEach(inject(function($injector, _$rootScope_, _$q_, _$httpBackend_) {
       $q = _$q_;
+      $httpBackend = _$httpBackend_;
       $scope = _$rootScope_.$new();
       service = $injector.get('horizon.dashboard.container-infra.clusters.create.service');
       magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
@@ -99,6 +101,7 @@
           expect(modalConfig.title).toEqual('Create New Cluster');
         }, 0);
 
+        $httpBackend.expectGET('/static/dashboard/container-infra/clusters/panel.html').respond({});
         $timeout.flush();
         $scope.$apply();
       }));
@@ -113,6 +116,7 @@
 
       service.perform(null, $scope);
 
+      $httpBackend.expectGET('/static/dashboard/container-infra/clusters/panel.html').respond({});
       $timeout.flush();
       $scope.$apply();
     }));

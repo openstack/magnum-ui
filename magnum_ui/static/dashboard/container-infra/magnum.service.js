@@ -66,49 +66,49 @@
 
     function createCluster(params) {
       return apiService.post('/api/container_infra/clusters/', params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to create cluster.'));
         });
     }
 
     function updateCluster(id, params) {
       return apiService.patch('/api/container_infra/clusters/' + id, params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to update cluster.'));
         });
     }
 
     function upgradeCluster(id, params) {
       return apiService.post('/api/container_infra/clusters/' + id + '/upgrade', params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to perform rolling upgrade.'));
         });
     }
 
     function getCluster(id) {
       return apiService.get('/api/container_infra/clusters/' + id)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the cluster.'));
         });
     }
 
     function getClusters() {
       return apiService.get('/api/container_infra/clusters/')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the clusters.'));
         });
     }
 
     function getClusterNodes(id) {
       return apiService.get('/api/container_infra/clusters/' + id + '/resize')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to get cluster\'s working nodes.'));
         });
     }
 
     function resizeCluster(id, params) {
       return apiService.post('/api/container_infra/clusters/' + id + '/resize', params)
-        .error(function() {
+        .catch(function onError() {
           var msg = gettext('Unable to resize given cluster id: %(id)s.');
           toastService.add('error', interpolate(msg, { id: id }, true));
         });
@@ -116,7 +116,7 @@
 
     function deleteCluster(id, suppressError) {
       var promise = apiService.delete('/api/container_infra/clusters/', [id]);
-      return suppressError ? promise : promise.error(function() {
+      return suppressError ? promise : promise.catch(function onError() {
         var msg = gettext('Unable to delete the cluster with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
@@ -125,7 +125,7 @@
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteClusters(ids) {
       return apiService.delete('/api/container_infra/clusters/', ids)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to delete the clusters.'));
         });
     }
@@ -136,21 +136,21 @@
 
     function createClusterTemplate(params) {
       return apiService.post('/api/container_infra/cluster_templates/', params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to create cluster template.'));
         });
     }
 
     function updateClusterTemplate(id, params) {
       return apiService.patch('/api/container_infra/cluster_templates/' + id, params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to update cluster template.'));
         });
     }
 
     function getClusterTemplate(id) {
       return apiService.get('/api/container_infra/cluster_templates/' + id)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the cluster template.'));
         });
     }
@@ -158,14 +158,14 @@
     function getClusterTemplates(relatedTemplateId) {
       var filterQuery = relatedTemplateId ? '?related_to=' + relatedTemplateId : '';
       return apiService.get('/api/container_infra/cluster_templates/' + filterQuery)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the cluster templates.'));
         });
     }
 
     function deleteClusterTemplate(id, suppressError) {
       var promise = apiService.delete('/api/container_infra/cluster_templates/', [id]);
-      return suppressError ? promise : promise.error(function() {
+      return suppressError ? promise : promise.catch(function onError() {
         var msg = gettext('Unable to delete the cluster template with id: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
@@ -174,7 +174,7 @@
     // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteClusterTemplates(ids) {
       return apiService.delete('/api/container_infra/cluster_templates/', ids)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to delete the cluster templates.'));
         });
     }
@@ -185,21 +185,21 @@
 
     function signCertificate(params) {
       return apiService.post('/api/container_infra/certificates/', params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to sign certificate.'));
         });
     }
 
     function showCertificate(id) {
       return apiService.get('/api/container_infra/certificates/' + id)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the certificate.'));
         });
     }
 
     function rotateCertificate(id) {
       return apiService.delete('/api/container_infra/certificates/' + id, [id])
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to rotate the certificate.'));
         });
     }
@@ -210,7 +210,7 @@
 
     function getStats() {
       return apiService.get('/api/container_infra/stats/')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the stats.'));
         });
     }
@@ -222,7 +222,7 @@
 
     function getIngressControllers() {
       return apiService.get('/api/container_infra/ingress_controllers/')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error',
             gettext('Unable to retrieve available ingress controllers.'));
         });
@@ -234,7 +234,7 @@
 
     function getAddons() {
       return apiService.get('/api/container_infra/available_addons/')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error',
             gettext('Unable to retrieve available add-ons.'));
         });
@@ -246,28 +246,28 @@
 
     function getQuotas() {
       return apiService.get('/api/container_infra/quotas/')
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the quotas.'));
         });
     }
 
     function getQuota(projectId, resource, suppressError) {
       var promise = apiService.get('/api/container_infra/quotas/' + projectId + '/' + resource);
-      return suppressError ? promise : promise.error(function() {
+      return suppressError ? promise : promise.catch(function onError() {
         toastService.add('error', gettext('Unable to retrieve the quota.'));
       });
     }
 
     function createQuota(params) {
       return apiService.post('/api/container_infra/quotas/', params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to create quota.'));
         });
     }
 
     function updateQuota(projectId, resource, params) {
       return apiService.patch('/api/container_infra/quotas/' + projectId + '/' + resource, params)
-        .error(function() {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to update quota.'));
         });
     }
@@ -275,7 +275,7 @@
     function deleteQuota(projectId, resource, suppressError) {
       var promise = apiService.delete('/api/container_infra/quotas/' + projectId + '/' + resource,
         {project_id: projectId, resource: resource});
-      return suppressError ? promise : promise.error(function() {
+      return suppressError ? promise : promise.catch(function onError() {
         var msg = gettext('Unable to delete the quota with project id: %(projectId)s and ' +
           'resource: %(resource)s.');
         toastService.add('error',
@@ -296,7 +296,7 @@
      */
     function getNetworks() {
       return apiService.get('/api/container_infra/networks/')
-        .error(function () {
+        .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the networks.'));
         });
     }

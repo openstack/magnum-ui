@@ -80,6 +80,7 @@
 
       function hideSpinnerOnError(error) {
         spinnerModal.hideModalSpinner();
+        deferred.promise.catch(angular.noop);
         return deferred.reject(error);
       }
 
