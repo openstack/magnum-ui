@@ -52,8 +52,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Magnum UI Release Notes'
-copyright = u'2016, Magnum UI Developers'
+project = 'Magnum UI Release Notes'
+copyright = '2016, Magnum UI Developers'
 
 # Release notes are version independent
 # The full version, including alpha/beta/rc tags.
@@ -205,8 +205,8 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     ('index', 'MagnumUIReleaseNotes.tex',
-     u'Magnum UI Release Notes Documentation',
-     u'Magnum UI Developers', 'manual'),
+     'Magnum UI Release Notes Documentation',
+     'Magnum UI Developers', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -236,8 +236,8 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'MagnumUIReleaseNotes',
-     u'Magnum UI Release Notes Documentation',
-     [u'Magnum UI Developers'], 1)
+     'Magnum UI Release Notes Documentation',
+     ['Magnum UI Developers'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -251,8 +251,8 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     ('index', 'MagnumUIReleaseNotes',
-     u'Magnum UI Release Notes Documentation',
-     u'Magnum UI Developers', 'MagnumUIReleaseNotes',
+     'Magnum UI Release Notes Documentation',
+     'Magnum UI Developers', 'MagnumUIReleaseNotes',
      'User Interface for Magnum.',
      'Miscellaneous'),
 ]

@@ -66,7 +66,7 @@ class MagnumRestTestCase(test.RestAPITestCase):
         self.assertStatusCode(response, 204)
         client.cluster_template_delete.assert_called_once_with(
             request,
-            u'cluster_template_id')
+            'cluster_template_id')
 
     # Clusters
     @mock.patch.object(magnum, 'magnum')
@@ -105,7 +105,7 @@ class MagnumRestTestCase(test.RestAPITestCase):
         self.assertStatusCode(response, 204)
         client.cluster_delete.assert_called_once_with(
             request,
-            u'cluster_id')
+            'cluster_id')
 
     # Certificates
     @mock.patch.object(magnum, 'magnum')
