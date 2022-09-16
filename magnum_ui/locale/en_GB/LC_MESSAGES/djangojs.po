@@ -4,15 +4,16 @@
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
 # Andi Chandler <andi@gowling.com>, 2019. #zanata
 # Andi Chandler <andi@gowling.com>, 2020. #zanata
+# Andi Chandler <andi@gowling.com>, 2022. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-09-23 09:52+0000\n"
+"POT-Creation-Date: 2022-09-01 09:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-10-03 10:29+0000\n"
+"PO-Revision-Date: 2022-05-25 09:19+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -650,6 +651,9 @@ msgstr "Number of Worker Nodes"
 msgid "Overlay"
 msgstr "Overlay"
 
+msgid "Overlay2"
+msgstr "Overlay2"
+
 msgid ""
 "Overriding labels already defined by the cluster template or workflow might "
 "result in unpredictable behaviour."
@@ -1025,8 +1029,8 @@ msgstr "You are not allowed to delete quotas: %s"
 msgid "You cannot auto-scale to less than a single Worker Node."
 msgstr "You cannot auto-scale to less than a single Worker Node."
 
-msgid "You cannot resize to less than a single Worker Node."
-msgstr "You cannot resize to less than a single Worker Node."
+msgid "You cannot resize to fewer than zero worker nodes."
+msgstr "You cannot resize to fewer than zero worker nodes."
 
 #, python-format
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-06-23 09:20+0000\n"
+"POT-Creation-Date: 2022-09-01 09:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -923,9 +923,6 @@ msgstr "Вам не разрешено удалять квоты: %s"
 
 msgid "You cannot auto-scale to less than a single Worker Node."
 msgstr "Вы не можете авто-масштабироваться менее, чем до одного рабочего узла"
-
-msgid "You cannot resize to less than a single Worker Node."
-msgstr "Вы не можете изменить размер до менее чем на одной рабочей ноды. "
 
 #, python-format
 msgid ""
