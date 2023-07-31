@@ -39,7 +39,7 @@
     ctrl.model = model;
     ctrl.form = null;
     ctrl.title = gettext("CSR");
-    magnum.getCluster(model.newCertificateSpec.cluster_uuid).success(onGetCluster);
+    magnum.getCluster(model.newCertificateSpec.cluster_uuid).then(onGetCluster);
 
     function onGetCluster(response) {
       ctrl.model.cluster_name = response.name;
