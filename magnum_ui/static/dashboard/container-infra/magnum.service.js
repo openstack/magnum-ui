@@ -33,6 +33,7 @@
       updateCluster: updateCluster,
       upgradeCluster: upgradeCluster,
       getCluster: getCluster,
+      getClusterConfig: getClusterConfig,
       getClusters: getClusters,
       getClusterNodes: getClusterNodes,
       resizeCluster: resizeCluster,
@@ -89,6 +90,13 @@
       return apiService.get('/api/container_infra/clusters/' + id)
         .catch(function onError() {
           toastService.add('error', gettext('Unable to retrieve the cluster.'));
+        });
+    }
+
+    function getClusterConfig(id) {
+      return apiService.get('/api/container_infra/clusters/' + id + '/config')
+        .catch(function onError() {
+          toastService.add('error', gettext('Unable to retrieve the cluster config.'));
         });
     }
 

@@ -63,6 +63,13 @@
         "testInput": ["123"]
       },
       {
+        "func": "getClusterConfig",
+        "method": "get",
+        "path": "/api/container_infra/clusters/123/config",
+        "error": "Unable to retrieve the cluster config.",
+        "testInput": ["123"]
+      },
+      {
         "func": "getClusters",
         "method": "get",
         "path": "/api/container_infra/clusters/",

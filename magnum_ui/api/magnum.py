@@ -21,6 +21,7 @@ from horizon import exceptions
 from horizon.utils.memoized import memoized
 from openstack_dashboard.api import base
 
+from magnumclient.common import utils as client_utils
 from magnumclient.v1 import certificates
 from magnumclient.v1 import client as magnum_client
 from magnumclient.v1 import cluster_templates
@@ -195,6 +196,32 @@ def cluster_list(request, limit=None, marker=None, sort_key=None,
 
 def cluster_show(request, id):
     return magnumclient(request).clusters.get(id)
+
+
+def cluster_config(request, id):
+    cluster = magnumclient(request).clusters.get(id)
+    if (hasattr(cluster, 'api_address') and cluster.api_address is None):
+        LOG.debug(f"api_address for cluster {id} is not known yet.")
+    cluster_template = magnumclient(request).cluster_templates.get(
+        cluster.cluster_template_id
+    )
+
+    opts = {
+        'cluster_uuid': cluster.uuid,
+    }
+    tls = {}
+    if not cluster_template.tls_disabled:
+        tls = client_utils.generate_csr_and_key()
+        tls["ca"] = magnumclient(request).certificates.get(**opts).pem
+        opts["csr"] = tls.pop("csr")
+        tls["cert"] = magnumclient(request).certificates.create(**opts).pem
+
+    config = client_utils.config_cluster(
+        cluster, cluster_template, cfg_dir="", direct_output=True
+    )
+    result = {"cluster_config": config}
+    result.update(tls)
+    return result
 
 
 def cluster_resize(request, cluster_id, node_count,

@@ -213,6 +213,17 @@ class Cluster(generic.View):
 
 
 @urls.register
+class ClusterConfig(generic.View):
+    """API for retrieving config for a single cluster"""
+    url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)/config$'
+
+    @rest_utils.ajax()
+    def get(self, request, cluster_id):
+        """Get config for a specific cluster"""
+        return magnum.cluster_config(request, cluster_id)
+
+
+@urls.register
 class ClusterResize(generic.View):
 
     url_regex = r'container_infra/clusters/(?P<cluster_id>[^/]+)/resize$'

@@ -60,6 +60,11 @@
       expect(actionHasId(actions, 'deleteClusterAction')).toBe(true);
     });
 
+    it('registers Get Cluster Config as an item action', function() {
+      var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
+      expect(actionHasId(actions, 'getClusterConfigAction')).toBe(true);
+    });
+
     function actionHasId(list, value) {
       return list.filter(matchesId).length === 1;
 
