@@ -31,12 +31,18 @@
         var result = service.getClusterTemplatesPromise({});
         deferred.resolve({
           data:{
-            items: [{id: 123, name: 'template1'}]
+            items: [
+              {id: 123, name: 'template1', updated_at: '2020-01-01'},
+              {id: 456, name: 'template2', created_at: '2021-12-12'},
+            ]
           }
         });
         $timeout.flush();
         expect(magnum.getClusterTemplates).toHaveBeenCalled();
         expect(result.$$state.value.data.items[0].name).toBe('template1');
+        expect(result.$$state.value.data.items[0].trackBy).toBe('1232020-01-01');
+        expect(result.$$state.value.data.items[1].name).toBe('template2');
+        expect(result.$$state.value.data.items[1].trackBy).toBe('4562021-12-12');
       }));
     });
 
