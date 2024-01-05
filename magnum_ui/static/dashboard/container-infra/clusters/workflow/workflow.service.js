@@ -52,6 +52,7 @@
     function init(title, $scope) {
       var schema, form;
 
+      var fixedSubnetsInitial = gettext('Choose an existing subnet');
       // Default <option>s; will be shown in selector as a placeholder
       var templateTitleMap = [{value: '', name: gettext('Choose a Cluster Template') }];
       var availabilityZoneTitleMap = [{value: '',
@@ -62,6 +63,7 @@
       var workerFlavorTitleMap = [{value: '',
         name: gettext('Choose a Flavor for the Worker Node')}];
       var networkTitleMap = [{value: '', name: gettext('Choose an existing network')}];
+      var subnetTitleMap = [{value: '', name: fixedSubnetsInitial}];
       var ingressTitleMap = [{value: '', name: gettext('Choose an ingress controller')}];
 
       var addonsTitleMap = [];
@@ -102,6 +104,7 @@
           'master_lb_enabled': {type: 'boolean'},
           'create_network': { type: 'boolean' },
           'fixed_network': { type: 'string' },
+          'fixed_subnet': { type: 'string' },
           'floating_ip_enabled': { type: 'boolean' },
           'ingress_controller': { type: 'object' },
 
@@ -332,6 +335,7 @@
                           onChange: function(isNewNetwork) {
                             if (isNewNetwork) {
                               model.fixed_network = MODEL_DEFAULTS.fixed_network;
+                              model.fixed_subnet = MODEL_DEFAULTS.fixed_subnet;
                             }
                           }
                         },
@@ -340,6 +344,17 @@
                           type: 'select',
                           title: gettext('Use an Existing Network'),
                           titleMap: networkTitleMap,
+                          condition: 'model.create_network === false',
+                          required: true,
+                          onChange: function () {
+                            changeFixedNetwork(model);
+                          }
+                        },
+                        {
+                          key: 'fixed_subnet',
+                          type: 'select',
+                          title: gettext('Use an Existing Subnet'),
+                          titleMap: subnetTitleMap,
                           condition: 'model.create_network === false',
                           required: true
                         }
@@ -486,6 +501,7 @@
           master_lb_enabled: false,
           create_network: true,
           fixed_network: '',
+          fixed_subnet: '',
           floating_ip_enabled: false,
           ingress_controller: '',
 
@@ -570,10 +586,31 @@
 
       function onGetNetworks(response) {
         angular.forEach(response.data.items, function(network) {
-          networkTitleMap.push({value: network.id, name: network.name + ' (' + network.id + ')'});
+          networkTitleMap.push({
+            value: network.id,
+            name: network.name + ' (' + network.id + ')',
+            subnets: network.subnets
+          });
         });
 
         setSingleItemAsDefault(response.data.items, 'fixed_network', 'id');
+      }
+
+      function changeFixedNetwork(model) {
+        if (model.fixed_network) {
+          subnetTitleMap = [{value:"", name: gettext("Choose an existing Subnet")}];
+          angular.forEach(networkTitleMap, function(network) {
+            if (network.value === model.fixed_network) {
+              angular.forEach(network.subnets, function(subnet) {
+                subnetTitleMap.push({value: subnet.id, name: subnet.name});
+              });
+            }
+          });
+        } else {
+          fixedSubnets = [{value:"", name: fixedSubnetsInitial}];
+          model.fixed_subnet = "";
+        }
+        form[0].tabs[2].items[0].items[0].items[3].titleMap = subnetTitleMap;
       }
 
       function onGetIngressControllers(response) {

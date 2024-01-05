@@ -112,6 +112,7 @@
 
       if (!model.create_network) {
         addFieldToRequestObjectIfSet('fixed_network','fixed_network');
+        addFieldToRequestObjectIfSet('fixed_subnet','fixed_subnet');
       }
       // Labels processing order (the following overrides previous):
       // Cluster Templates -> Create Form -> User-defined in 'labels' textarea
