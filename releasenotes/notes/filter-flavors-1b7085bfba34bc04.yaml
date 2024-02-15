@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Added options for filtering Compute flavors so only supported
+    flavors are selectable. These options are MAGNUM_MINIMUM_FLAVOR_RAM
+    and MAGNUM_MINIMUM_FLAVOR_VCPU, which can be set in configuration.

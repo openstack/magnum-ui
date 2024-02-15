@@ -56,7 +56,8 @@
       createQuota: createQuota,
       updateQuota: updateQuota,
       deleteQuota: deleteQuota,
-      getNetworks: getNetworks
+      getNetworks: getNetworks,
+      getFlavorMinimums: getFlavorMinimums,
     };
 
     return service;
@@ -111,6 +112,17 @@
       return apiService.get('/api/container_infra/clusters/' + id + '/resize')
         .catch(function onError() {
           toastService.add('error', gettext('Unable to get cluster\'s working nodes.'));
+        });
+    }
+
+    function getFlavorMinimums() {
+      return apiService
+        .get("/api/container_infra/flavor_minimums/")
+        .catch(function () {
+          toastService.add(
+            "error",
+            gettext("Unable to retrieve flavor minimums.")
+          );
         });
     }
 

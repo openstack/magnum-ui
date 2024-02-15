@@ -300,6 +300,23 @@ class ClusterUpgrade(generic.View):
 
 
 @urls.register
+class ClusterFlavorMinimums(generic.View):
+    """API for retrieving a single cluster template"""
+
+    url_regex = r"container_infra/flavor_minimums/$"
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get minimum flavor constraints"""
+        ram = getattr(settings, "MAGNUM_MINIMUM_FLAVOR_RAM", "2048")
+        vcpu = getattr(settings, "MAGNUM_MINIMUM_FLAVOR_VCPU", "2")
+        return {
+            "flavorMinimumRam": ram,
+            "flavorMinimumVcpu": vcpu,
+        }
+
+
+@urls.register
 class Clusters(generic.View):
     """API for Magnum Clusters"""
     url_regex = r'container_infra/clusters/$'
