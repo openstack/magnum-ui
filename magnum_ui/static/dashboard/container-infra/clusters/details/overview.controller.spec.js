@@ -42,7 +42,9 @@
     }));
 
     it('objLen returns number of attributes of object', inject(function() {
-      expect(ctrl.objLen(undefined)).toBe(0);
+      expect(ctrl.objLen()).toBe(0);
+      expect(ctrl.objLen(null)).toBe(0);
+      expect(ctrl.objLen({})).toBe(0);
       expect(ctrl.objLen({a: 0})).toBe(1);
     }));
   });

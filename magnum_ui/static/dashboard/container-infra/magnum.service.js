@@ -130,7 +130,7 @@
       });
     }
 
-    // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
+    // NOTE(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteClusters(ids) {
       return apiService.delete('/api/container_infra/clusters/', ids)
         .catch(function onError() {
@@ -179,7 +179,7 @@
       });
     }
 
-    // FIXME(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
+    // NOTE(shu-mutou): Unused for batch-delete in Horizon framework in Feb, 2016.
     function deleteClusterTemplates(ids) {
       return apiService.delete('/api/container_infra/cluster_templates/', ids)
         .catch(function onError() {

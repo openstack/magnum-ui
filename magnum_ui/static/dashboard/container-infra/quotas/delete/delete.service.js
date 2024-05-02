@@ -40,12 +40,14 @@
    * @name quotas.delete.service
    * @param {Object} $location
    * @param {Object} $q
+   * @param {Object} $rootScope
    * @param {Object} magnum
    * @param {Object} policy
    * @param {Object} actionResult
    * @param {Object} gettext
    * @param {Object} $qExtensions
    * @param {Object} deleteModal
+   * @param {Object} tableEvents
    * @param {Object} toast
    * @param {Object} resourceType
    * @param {Object} events
@@ -143,6 +145,7 @@
       if (result.result.failed.length === 0 && result.result.deleted.length > 0 &&
           currentPath !== indexPath) {
         $location.path(indexPath);
+        return null;
       } else {
         $rootScope.$broadcast(tableEvents.CLEAR_SELECTIONS);
         return result.result;

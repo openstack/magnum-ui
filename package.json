@@ -10,14 +10,14 @@
   "license": "Apache 2.0",
   "author": "Openstack <openstack-discuss@lists.openstack.org>",
   "devDependencies": {
-    "eslint": "3.19.x",
+    "eslint": "^3.19.0",
     "eslint-config-openstack": "^4.0.1",
     "eslint-plugin-angular": "3.1.x",
     "jasmine-core": "2.8.x",
     "karma": "1.7.x",
-    "karma-firefox-launcher": "2.1.0",
     "karma-cli": "1.0.x",
     "karma-coverage": "1.1.x",
+    "karma-firefox-launcher": "2.1.0",
     "karma-jasmine": "1.1.x",
     "karma-ng-html2js-preprocessor": "1.0.x",
     "karma-threshold-reporter": "0.1.x"

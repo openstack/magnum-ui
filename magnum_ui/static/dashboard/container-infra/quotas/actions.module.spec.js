@@ -32,9 +32,7 @@
       return list.filter(matchesId).length === 1;
 
       function matchesId(action) {
-        if (action.id === value) {
-          return true;
-        }
+        return action.id === value;
       }
     }
   });

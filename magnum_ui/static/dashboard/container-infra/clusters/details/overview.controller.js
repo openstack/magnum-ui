@@ -45,7 +45,7 @@
 
     function objLen(obj) {
       var length = 0;
-      if (typeof obj === 'object') {
+      if (obj && typeof obj === 'object') {
         length = Object.keys(obj).length;
       }
       return length;

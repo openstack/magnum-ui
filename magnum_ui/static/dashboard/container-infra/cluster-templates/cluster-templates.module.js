@@ -56,7 +56,7 @@
   /**
    * @ngdoc constant
    * @name distros
-   * @return [distros] available image distros
+   * @returns {String[]} List of available image distros
    * @description A list available image distros for magnum
   */
   function distros() {

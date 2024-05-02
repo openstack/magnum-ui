@@ -63,56 +63,42 @@
       // load current data
       magnum.getClusterTemplate(selected.id).then(onLoad);
       function onLoad(response) {
-        config.model.name = response.data.name
-          ? response.data.name : "";
-        config.model.coe = response.data.coe
-          ? response.data.coe : "";
-        config.model.server_type = response.data.server_type
-          ? response.data.server_type : "";
-        config.model.public = response.data.public
-          ? response.data.public : false;
-        config.model.hidden = response.data.hidden
-          ? response.data.hidden : false;
-        config.model.registry_enabled = response.data.registry_enabled
-          ? response.data.registry_enabled : false;
-        config.model.tls_disabled = response.data.tls_disabled
-          ? response.data.tls_disabled : false;
-        config.model.image_id = response.data.image_id
-          ? response.data.image_id : "";
-        config.model.flavor_id = response.data.flavor_id
-          ? response.data.flavor_id : "";
-        config.model.master_flavor_id = response.data.master_flavor_id
-          ? response.data.master_flavor_id : "";
-        config.model.docker_volume_size = response.data.docker_volume_size
-          ? response.data.docker_volume_size : "";
-        config.model.docker_storage_driver = response.data.docker_storage_driver
-          ? response.data.docker_storage_driver : "";
-        config.model.keypair_id = response.data.keypair_id
-          ? response.data.keypair_id : "";
-        config.model.network_driver = response.data.network_driver
-          ? response.data.network_driver : "";
-        config.model.volume_driver = response.data.volume_driver
-          ? response.data.volume_driver : "";
-        config.model.insecure_registry = response.data.insecure_registry
-          ? response.data.insecure_registry : "";
-        config.model.http_proxy = response.data.http_proxy
-          ? response.data.http_proxy : "";
-        config.model.https_proxy = response.data.https_proxy
-          ? response.data.https_proxy : "";
-        config.model.no_proxy = response.data.no_proxy
-          ? response.data.no_proxy : "";
-        config.model.external_network_id = response.data.external_network_id
-          ? response.data.external_network_id : "";
-        config.model.fixed_network = response.data.fixed_network
-          ? response.data.fixed_network : "";
-        config.model.fixed_subnet = response.data.fixed_subnet
-          ? response.data.fixed_subnet : "";
-        config.model.dns_nameserver = response.data.dns_nameserver
-          ? response.data.dns_nameserver : "";
-        config.model.master_lb_enabled = response.data.master_lb_enabled
-          ? response.data.master_lb_enabled : false;
-        config.model.floating_ip_enabled = response.data.floating_ip_enabled
-          ? response.data.floating_ip_enabled : false;
+
+        function setModelFromResponse(key, defaultValue) {
+          if (response.data[key]) {
+            config.model[key] = response.data[key];
+          } else {
+            config.model[key] = defaultValue;
+          }
+
+        }
+
+        setModelFromResponse('name', "");
+        setModelFromResponse('coe', "");
+        setModelFromResponse('server_type', "");
+        setModelFromResponse('public', false);
+        setModelFromResponse('hidden', false);
+        setModelFromResponse('registry_enabled', false);
+        setModelFromResponse('tls_disabled', false);
+        setModelFromResponse('image_id', "");
+        setModelFromResponse('flavor_id', "");
+        setModelFromResponse('master_flavor_id', "");
+        setModelFromResponse('docker_volume_size', "");
+        setModelFromResponse('docker_storage_driver', "");
+        setModelFromResponse('keypair_id', "");
+        setModelFromResponse('network_driver', "");
+        setModelFromResponse('volume_driver', "");
+        setModelFromResponse('insecure_registry', "");
+        setModelFromResponse('http_proxy', "");
+        setModelFromResponse('https_proxy', "");
+        setModelFromResponse('no_proxy', "");
+        setModelFromResponse('external_network_id', "");
+        setModelFromResponse('fixed_network', "");
+        setModelFromResponse('fixed_subnet', "");
+        setModelFromResponse('dns_nameserver', "");
+        setModelFromResponse('master_lb_enabled', false);
+        setModelFromResponse('floating_ip_enabled', false);
+
         var labels = "";
         for (var key in response.data.labels) {
           if (response.data.labels.hasOwnProperty(key)) {
