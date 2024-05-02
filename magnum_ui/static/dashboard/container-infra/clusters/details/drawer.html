@@ -25,13 +25,13 @@
       <dd><a ng-href="ngdetails/OS::Magnum::ClusterTemplate/{$ item.cluster_template_id $}">{$ item.cluster_template_id $}</a></dd>
     </dl>
     <dl class="col-md-6">
-      <dt translate>API Address</dt>
+      <dt translate>Kubernetes API Address</dt>
       <dd>{$ item.api_address $}</dd>
     </dl>
   </div>
   <div class="row">
     <dl class="col-md-6">
-      <dt translate>Master Addresses</dt>
+      <dt translate>Control Plane Addresses</dt>
       <dd ng-if="drawerCtrl.objLen(item.master_addresses) === 0" translate>None</dd>
       <dd ng-repeat="addr in item.master_addresses">{$ addr $}</dd>
     </dl>
@@ -39,6 +39,16 @@
       <dt translate>Node Addresses</dt>
       <dd ng-if="drawerCtrl.objLen(item.node_addresses) === 0" translate>None</dd>
       <dd ng-repeat="addr in item.node_addresses">{$ addr $}</dd>
+    </dl>
+  </div>
+  <div class="row">
+    <dl class="col-md-6">
+      <dt translate>Health Status Reason</dt>
+      <pre>{$ item.health_status_reason | json $}</pre>
+    </dl>
+    <dl class="col-md-6">
+      <dt translate>Status Reason</dt>
+      <dd>{$ item.status_reason $}</dd>
     </dl>
   </div>
 </div>
