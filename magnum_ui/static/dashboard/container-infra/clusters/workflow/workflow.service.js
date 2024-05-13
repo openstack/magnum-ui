@@ -44,6 +44,9 @@
   // comma-separated key=value with optional space after comma
   var REGEXP_KEY_VALUE = /^(\w+=[^,]+,?\s?)+$/;
 
+  // Comma-separated CIDR list. Allows lots of variation to include v4 and v6.
+  var REGEXP_CIDR_LIST = /^[a-f0-9\.:]+\/[0-9]+(,\s?[a-f0-9\.:]+\/[0-9]+)*$/;
+
   // Object name, must start with alphabetical character.
   var REGEXP_CLUSTER_NAME = /^[a-zA-Z][a-zA-Z0-9_\-\.]*$/;
 
@@ -109,7 +112,8 @@
           'create_network': { type: 'boolean' },
           'fixed_network': { type: 'string' },
           'fixed_subnet': { type: 'string' },
-          'floating_ip_enabled': { type: 'boolean' },
+          'master_lb_floating_ip_enabled': { type: 'boolean' },
+          'api_master_lb_allowed_cidrs': { type: 'string' },
           'ingress_controller': { type: 'object' },
 
           'auto_healing_enabled': { type: 'boolean' },
@@ -360,11 +364,6 @@
                       title: gettext('Network'),
                       items: [
                         {
-                          key: 'master_lb_enabled',
-                          type: 'checkbox',
-                          title: gettext('Enable Load Balancer for Master Nodes')
-                        },
-                        {
                           key: 'create_network',
                           title: gettext('Create New Network'),
                           onChange: function(isNewNetwork) {
@@ -398,25 +397,65 @@
                     },
                     {
                       type: 'fieldset',
-                      title: gettext('Network Access Control'),
+                      title: gettext('Kubernetes API Loadbalancer'),
                       items: [
                         {
-                          key: 'floating_ip_enabled',
+                          key: 'master_lb_enabled',
+                          type: 'checkbox',
+                          title: gettext('Enable Load Balancer for Kubernetes API'),
+                          onChange: function(value) {
+                            if (value) {
+                              model.master_count = MODEL_DEFAULTS.master_count;
+                              // Reset values to defaults. They are null after being disabled.
+                              model.master_lb_floating_ip_enabled =
+                                MODEL_DEFAULTS.master_lb_floating_ip_enabled;
+                              model.api_master_lb_allowed_cidrs =
+                                MODEL_DEFAULTS.api_master_lb_allowed_cidrs;
+                            } else {
+                              // Without master_lb_enabled, we can only support
+                              // a single master node.
+                              model.master_count = 1;
+                            }
+                            model.isSingleMasterNode = !value;
+                          }
+                        },
+                        {
+                          key: 'master_lb_floating_ip_enabled', // formerly floating_ip_enabled
                           type: 'select',
-                          title: gettext('Cluster API'),
+                          title: gettext('Floating IP'),
                           titleMap: [
                             {value: false, name: gettext('Accessible on private network only')},
-                            {value: true, name: gettext('Accessible on the public internet')}
-                          ]
+                            {value: true, name: gettext('Accessible with public floating IP')}
+                          ],
+                          condition: 'model.master_lb_enabled === true'
                         },
-                        // Warning message for the Cluster API
+                        {
+                          key: 'api_master_lb_allowed_cidrs',
+                          type: 'text',
+                          title: gettext('Allowed CIDRs'),
+                          validationMessage: {
+                            invalidFormat: gettext('Invalid format. Must be a comma-separated ' +
+                              'CIDR string: 192.168.1.5/32,10.0.0.1/24')
+                          },
+                          $validators: {
+                            invalidFormat: function(cidrString) {
+                              return cidrString === '' || REGEXP_CIDR_LIST.test(cidrString);
+                            }
+                          },
+                          condition: 'model.master_lb_enabled === true',
+                        },
+                        // Warning message when Kubernetes API has a Floating IP
                         {
                           type: 'template',
                           template: '<div class="alert alert-warning">' +
                             '<span class="fa fa-warning"></span> ' +
-                            gettext('It is generally not recommended to give public access.') +
+                            gettext('A public floating IP will mean the Kubernetes API is ' +
+                              'publically routable on the internet. It is generally not ' +
+                              'recommended to give public access to the Kubernetes API. ' +
+                              'Consider limiting the access using the Allowed CIDRs ' +
+                              'section.') +
                             '</div>',
-                          condition: 'model.floating_ip_enabled == true'
+                          condition: 'model.master_lb_floating_ip_enabled == true'
                         }
                       ]
                     },
@@ -538,7 +577,8 @@
           create_network: true,
           fixed_network: '',
           fixed_subnet: '',
-          floating_ip_enabled: false,
+          master_lb_floating_ip_enabled: false,
+          api_master_lb_allowed_cidrs: '',
           ingress_controller: '',
 
           auto_healing_enabled: true,

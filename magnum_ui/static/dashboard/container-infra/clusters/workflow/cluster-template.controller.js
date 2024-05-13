@@ -85,10 +85,7 @@
       setResponseAsDefaultIfUnset('master_flavor_id', 'master_flavor_id');
       setResponseAsDefaultIfUnset('node_count', 'node_count');
       setResponseAsDefaultIfUnset('flavor_id', 'flavor_id');
-
-      if (template.floating_ip_enabled !== null) {
-        $scope.model.floating_ip_enabled = template.floating_ip_enabled;
-      }
+      setResponseAsDefaultIfUnset('master_lb_enabled', 'master_lb_enabled');
 
       if (!template.labels) { return; }
 
@@ -97,6 +94,12 @@
       // If a template label exists as a field on the form -> Set it as a default
       setLabelResponseAsDefault('auto_scaling_enabled', 'auto_scaling_enabled', true);
       setLabelResponseAsDefault('auto_healing_enabled', 'auto_healing_enabled', true);
+      setLabelResponseAsDefault(
+        'master_lb_floating_ip_enabled',
+        'master_lb_floating_ip_enabled',
+        true);
+      // Forcibly clear allowed cidr values on template load. Otherwise this value becomes nil.
+      $scope.model.api_master_lb_allowed_cidrs = MODEL_DEFAULTS.api_master_lb_allowed_cidrs;
 
       // Set default `ingress_controller` based on its label
       if (template.labels.ingress_controller !== null &&

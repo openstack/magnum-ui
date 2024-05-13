@@ -99,7 +99,6 @@
         name: model.name,
         cluster_template_id: model.cluster_template_id,
         keypair: model.keypair,
-        floating_ip_enabled: model.floating_ip_enabled,
         labels: requestLabels,
         master_lb_enabled: model.master_lb_enabled
       };
@@ -126,6 +125,10 @@
       requestLabels.availability_zone = model.availability_zone;
       requestLabels.auto_scaling_enabled = model.auto_scaling_enabled;
       requestLabels.auto_healing_enabled = model.auto_healing_enabled;
+      requestLabels.master_lb_floating_ip_enabled = model.master_lb_floating_ip_enabled;
+      if (model.api_master_lb_allowed_cidrs !== '') {
+        requestLabels.api_master_lb_allowed_cidrs = model.api_master_lb_allowed_cidrs;
+      }
 
       if (model.auto_scaling_enabled) {
         requestLabels.min_node_count = model.min_node_count;

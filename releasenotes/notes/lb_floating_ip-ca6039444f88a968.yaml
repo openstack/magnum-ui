@@ -1,0 +1,8 @@
+---
+features:
+  - |
+    The Create Cluster workflow option `floating_ip_enabled` has been replaced
+    with `master_lb_floating_ip_enabled` label as the former added floating
+    IP's to all nodes, whereas the replacement only adds a floating IP to the
+    K8s API loadbalancer itself. The field `floating_ip_enabled` has not
+    changed behaviour and can still be used via the CLI.
