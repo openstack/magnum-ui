@@ -1,0 +1,8 @@
+---
+features:
+  - |
+    The Cluster Create workflow has been improved to provide better input
+    validation.
+  - |
+    "Master" has been renamed to "Control Plane" in user facing locations
+    in line with Kubernetes teminology. The Magnum API still uses old terms.

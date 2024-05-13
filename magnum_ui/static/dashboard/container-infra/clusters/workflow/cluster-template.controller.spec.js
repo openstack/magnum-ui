@@ -142,7 +142,7 @@
       templateResponse.flavor_id = 'ABC';
 
       var model = $scope.model;
-      model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
       expect(model.keypair).toBe(1);
@@ -168,7 +168,7 @@
       templateResponse.node_count = 1;
       templateResponse.flavor_id = 'ABC';
 
-      model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
       expect(model.keypair).toBe(99);
@@ -182,12 +182,12 @@
       'response contains negative `master_lb_enabled` flag', function() {
       $scope.model.master_count = 99;
       templateResponse.master_lb_enabled = false;
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
       expect($scope.model.master_count).toBe(1);
 
       $scope.model.master_count = MODEL_DEFAULTS.master_count;
-      $scope.model.cluster_template_id = '999'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '999'; // Triggers business logic revalidation
       $scope.$apply();
       expect($scope.model.master_count).toBe(1);
     });
@@ -196,7 +196,7 @@
       'template response', function() {
       templateResponse.labels = null;
       $scope.model.labels = MODEL_DEFAULTS.labels;
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
       expect($scope.model.labels).toEqual(MODEL_DEFAULTS.labels);
@@ -229,13 +229,13 @@
 
     it('should not fail if the cluster template response is empty', function() {
       templateResponse = {};
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
     });
 
     it('should not fail if the cluster template\'s labels are empty', function() {
       templateResponse = {labels:{}};
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
     });
 
@@ -250,7 +250,7 @@
 
       templateResponse.labels.ingress_controller = 'c2';
 
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
       expect($scope.model.ingress_controller.labels.ingress_controller).toBe('c2');
