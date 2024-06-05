@@ -77,13 +77,13 @@
       label: gettext('Health Status')
     })
     .setProperty('master_count', {
-      label: gettext('Master Count')
+      label: gettext('Control Plane Count')
     })
     .setProperty('node_count', {
       label: gettext('Node Count')
     })
-    .setProperty('keypair', {
-      label: gettext('Keypair')
+    .setProperty('coe_version', {
+      label: gettext('Kubernetes Version')
     })
     .setListFunction(clustersService.getClustersPromise)
     .tableColumns
@@ -115,7 +115,7 @@
       priority: 2
     })
     .append({
-      id: 'keypair',
+      id: 'coe_version',
       priority: 2
     });
 
@@ -159,7 +159,7 @@
       'singleton': true
     })
     .append({
-      'label': gettext('Master Count'),
+      'label': gettext('Control Plane Count'),
       'name': 'master_count',
       'singleton': true
     })
@@ -169,8 +169,8 @@
       'singleton': true
     })
     .append({
-      'label': gettext('Keypair'),
-      'name': 'keypair',
+      'label': gettext('Kubernetes Version'),
+      'name': 'coe_version',
       'singleton': true
     });
   }
