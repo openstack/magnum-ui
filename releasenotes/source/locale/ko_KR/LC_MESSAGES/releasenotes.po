@@ -8,9 +8,9 @@
 # ByungYeol Woo <wby1089@gmail.com>, 2019. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: magnum-ui\n"
+"Project-Id-Version: Magnum UI Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-15 07:55+0000\n"
+"POT-Creation-Date: 2024-06-06 07:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,6 +35,9 @@ msgstr "'floating_ip_enabled'"
 
 msgid "'master_lb_enabled'"
 msgstr "'master_lb_enabled'"
+
+msgid "2.1.1"
+msgstr "2.1.1"
 
 msgid "2.2.0"
 msgstr "2.2.0"
