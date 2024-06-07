@@ -29,7 +29,7 @@ features:
     dialog use load-edit directive newly added into Horizon.
 issues:
   - >
-    [`bug/1638863 <https://bugs.launchpad.net/magnum/+bug/1638863>`_]
+    [`bug/1638863 <https://bugs.launchpad.net/magnum/+bug/1638863>`__]
     Magnum has issue for updating labels of cluster template and cluster.
   - >
     Removed link to Stack. Panel for Stack, i.e. Heat Dashboard,
