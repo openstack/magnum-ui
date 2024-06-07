@@ -16,7 +16,7 @@ fixes:
     after execution of actions. To ensure to clear item selections,
     `hzTable:clearSelection` event is emitted.
   - >
-    [`bug/1638863 <https://bugs.launchpad.net/magnum-ui/+bug/1638863>`_]
+    [`bug/1638863 <https://bugs.launchpad.net/magnum-ui/+bug/1638863>`__]
     Fixed failure updating labels for cluster template.
   - >
     [`bug/1746706 <https://bugs.launchpad.net/magnum-ui/+bug/1746706>`_]
