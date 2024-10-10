@@ -204,12 +204,14 @@
 
     it('should always override some model properties by values from ' +
       'retrieved cluster template', function() {
-      $scope.model.floating_ip_enabled = !MODEL_DEFAULTS.floating_ip_enabled;
-      templateResponse.floating_ip_enabled = !$scope.model.floating_ip_enabled;
-      $scope.model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      $scope.model.master_lb_floating_ip_enabled = !MODEL_DEFAULTS.master_lb_floating_ip_enabled;
+      templateResponse.master_lb_floating_ip_enabled = !$scope.model.master_lb_floating_ip_enabled;
+      $scope.model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
-      expect($scope.model.floating_ip_enabled).toBe(templateResponse.floating_ip_enabled);
+      expect($scope.model.master_lb_floating_ip_enabled).toBe(
+        templateResponse.master_lb_floating_ip_enabled
+      );
     });
 
     it('should always override some model\'s properties by values from ' +
@@ -220,11 +222,16 @@
       templateResponse.labels.auto_scaling_enabled = 'true';
       model.auto_healing_enabled = true;
       templateResponse.labels.auto_healing_enabled = 'false';
-      model.cluster_template_id = '99'; // Triggers bussines logic revalidation
+      model.api_master_lb_allowed_cidrs = "192.168.67.0/24";
+      templateResponse.labels.api_master_lb_allowed_cidrs = "10.0.0.1/16";
+      model.cluster_template_id = '99'; // Triggers business logic revalidation
       $scope.$apply();
 
       expect(model.auto_scaling_enabled).toBe(true);
       expect(model.auto_healing_enabled).toBe(false);
+      expect($scope.model.api_master_lb_allowed_cidrs).toBe(
+        MODEL_DEFAULTS.api_master_lb_allowed_cidrs
+      );
     });
 
     it('should not fail if the cluster template response is empty', function() {
