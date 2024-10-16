@@ -25,6 +25,7 @@ from django.views import generic
 from magnum_ui.api import heat
 from magnum_ui.api import magnum
 
+from heatclient import exc as heatexc
 from openstack_dashboard import api
 from openstack_dashboard.api import neutron
 from openstack_dashboard.api.rest import urls
@@ -237,18 +238,29 @@ class ClusterResize(generic.View):
             print(e)
             return HttpResponseNotFound()
 
-        stack = heat.stack_get(request, cluster["stack_id"])
-        search_opts = {"name": "%s-" % stack.stack_name}
-        servers = api.nova.server_list(request, search_opts=search_opts)[0]
+        try:
+            ngs = magnum.nodegroup_list(request, cluster_id)
+            nodegroups = [n.to_dict() for n in ngs]
+        except AttributeError:
+            return HttpResponseNotFound()
 
+        try:
+            stack = heat.stack_get(request, cluster["stack_id"])
+        except heatexc.HTTPNotFound:
+            stack = None
         worker_nodes = []
-        for server in servers:
-            if (server.name.startswith("%s-minion" % stack.stack_name) or
-                    server.name.startswith("%s-node" % stack.stack_name)):
-                worker_nodes.append({"name": server.name, "id": server.id})
+        if stack:
+            search_opts = {"name": "%s-" % stack.stack_name}
+            servers = api.nova.server_list(request, search_opts=search_opts)[0]
+
+            for server in servers:
+                if (server.name.startswith("%s-minion" % stack.stack_name) or
+                        server.name.startswith("%s-node" % stack.stack_name)):
+                    worker_nodes.append({"name": server.name, "id": server.id})
 
         return {"cluster": change_to_id(cluster),
-                "worker_nodes": worker_nodes}
+                "worker_nodes": worker_nodes,
+                "nodegroups": nodegroups}
 
     @rest_utils.ajax(data_required=True)
     def post(self, request, cluster_id):
