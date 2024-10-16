@@ -67,10 +67,23 @@
 
     it('should open the modal, hide the loading spinner and check the form model',
       inject(function($timeout) {
-        var mockWorkerNodes = [{id: "456", name: "Worker Node 1"}];
+        // 2 nodegroups, default-worker and another-nodegroup, with 2 and 3
+        // nodes respectively. cluster.node_count will be total nodes in all
+        // nodegroups
+        var mockDefaultWorker = {name: 'default-worker', node_count: 2};
+        var mockNodegroups = [mockDefaultWorker,
+                              {name: 'default-master', node_count: 1},
+                              {name: 'another-nodegroup', node_count: 3}];
+        var mockCluster = {node_count: 5};
+
+        // only populated with heat, [] for capi
+        var mockWorkerNodes = [{id: "456", name: "Worker Node 1"},
+                               {id: "457", name: "Worker Node 2"}];
 
         deferred = $q.defer();
-        deferred.resolve({data: {cluster: {}, worker_nodes: mockWorkerNodes}});
+        deferred.resolve({data: {cluster: mockCluster,
+          worker_nodes: mockWorkerNodes,
+          nodegroups: mockNodegroups}});
         spyOn(magnum, 'getClusterNodes').and.returnValue(deferred.promise);
 
         service.perform(selected, $scope);
@@ -82,8 +95,8 @@
 
           // Check if the form's model skeleton is correct
           expect(modalConfig.model.id).toBe(selected.id);
-          expect(modalConfig.model.original_node_count).toBe(mockWorkerNodes.length);
-          expect(modalConfig.model.node_count).toBe(mockWorkerNodes.length);
+          expect(modalConfig.model.original_node_count).toBe(mockDefaultWorker.node_count);
+          expect(modalConfig.model.node_count).toBe(mockDefaultWorker.node_count);
           expect(modalConfig.title).toBeDefined();
           expect(modalConfig.schema).toBeDefined();
           expect(modalConfig.form).toBeDefined();

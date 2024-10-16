@@ -289,3 +289,8 @@ def quotas_update(request, project_id, resource, **kwargs):
 
 def quotas_delete(request, project_id, resource):
     return magnumclient(request).quotas.delete(project_id, resource)
+
+
+def nodegroup_list(request, cluster_id=None, limit=None, marker=None):
+    return magnumclient(request).nodegroups.list(cluster_id, limit=limit,
+                                                 marker=marker)
