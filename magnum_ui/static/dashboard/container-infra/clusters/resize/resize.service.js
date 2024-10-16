@@ -70,7 +70,7 @@
         formModel = getFormModelDefaults();
         formModel.id = selected.id;
 
-        modalConfig = constructModalConfig(response.data.worker_nodes);
+        modalConfig = constructModalConfig(response.data.nodegroups, response.data.worker_nodes);
 
         deferred.resolve(modal.open(modalConfig).then(onModalSubmit));
         $scope.model = formModel;
@@ -91,9 +91,13 @@
       return $qExtensions.booleanAsPromise(true);
     }
 
-    function constructModalConfig(workerNodesList) {
-      formModel.original_node_count = workerNodesList.length;
-      formModel.node_count = workerNodesList.length;
+    function constructModalConfig(nodegroups, workerNodesList) {
+      var defaultWorker = nodegroups.filter(function(ng) {
+        return ng.name === 'default-worker';
+      })[0];
+      formModel.original_node_count = defaultWorker.node_count;
+      formModel.node_count = defaultWorker.node_count;
+      formModel.worker_nodes = workerNodesList;
 
       return {
         title: gettext('Resize Cluster'),
@@ -116,8 +120,8 @@
         form: [
           {
             key: 'node_count',
-            title: gettext('Node Count'),
-            placeholder: gettext('The cluster node count.'),
+            title: gettext('Node Count (default-worker)'),
+            placeholder: gettext('The default-worker nodegroup node_count.'),
             required: true,
             validationMessage: {
               101: gettext('You cannot resize to fewer than zero worker nodes.')
@@ -129,7 +133,8 @@
             type: 'checkboxes',
             title: gettext('Choose nodes to remove (Optional)'),
             titleMap: generateNodesTitleMap(workerNodesList),
-            condition: 'model.node_count < model.original_node_count',
+            condition: 'model.node_count < model.original_node_count && ' +
+              'model.worker_nodes.length > 0',
             onChange: validateNodeRemovalCount,
             validationMessage: {
               nodeRemovalCountExceeded: gettext('You may only select as many nodes ' +
