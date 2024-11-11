@@ -686,7 +686,7 @@
           fixedSubnets = [{value: "", name: fixedSubnetsInitial}];
         }
         // NOTE(dalees): This hardcoded index could be improved by referencing an object instead.
-        form[0].tabs[2].items[0].items[0].items[3].titleMap = subnetTitleMap;
+        form[0].tabs[2].items[0].items[0].items[2].titleMap = subnetTitleMap;
         model.fixed_subnet = MODEL_DEFAULTS.fixed_subnet;
       }
 
