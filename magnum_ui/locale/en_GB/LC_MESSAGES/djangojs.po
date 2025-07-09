@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2024-06-06 07:30+0000\n"
+"POT-Creation-Date: 2024-06-11 12:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2024-04-18 12:35+0000\n"
+"PO-Revision-Date: 2024-07-08 11:19+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -150,11 +150,17 @@ msgstr "Choose a Container Orchestration Engine"
 msgid "Choose a External Network"
 msgstr "Choose a External Network"
 
+msgid "Choose a Flavor for the Control Plane nodes"
+msgstr "Choose a Flavour for the Control Plane nodes"
+
 msgid "Choose a Flavor for the Master Node"
 msgstr "Choose a Flavour for the Master Node"
 
 msgid "Choose a Flavor for the Node"
 msgstr "Choose a Flavour for the Node"
+
+msgid "Choose a Flavor for the Worker nodes"
+msgstr "Choose a Flavour for the Worker nodes"
 
 msgid "Choose a Keypair"
 msgstr "Choose a Keypair"
@@ -272,6 +278,18 @@ msgstr "Container Orchestration Engine"
 
 msgid "Container Version"
 msgstr "Container Version"
+
+msgid "Control Plane Addresses"
+msgstr "Control Plane Addresses"
+
+msgid "Control Plane Count"
+msgstr "Control Plane Count"
+
+msgid "Control Plane Nodes"
+msgstr "Control Plane Nodes"
+
+msgid "Control Plane size"
+msgstr "Control Plane size"
 
 msgid "Create"
 msgstr "Create"
@@ -417,6 +435,9 @@ msgstr "Flavour"
 msgid "Flavor ID"
 msgstr "Flavour ID"
 
+msgid "Flavor of Control Plane Nodes"
+msgstr "Flavour of Control Plane Nodes"
+
 msgid "Flavor of Worker Nodes"
 msgstr "Flavour of Worker Nodes"
 
@@ -452,6 +473,15 @@ msgstr "I do want to override Template and Workflow Labels"
 
 msgid "ID"
 msgstr "ID"
+
+msgid ""
+"If Kubernetes is unable to schedule a Pod due to insufficient CPU or memory "
+"in the cluster, a worker node will be added, as long as the maximum number "
+"of worker nodes has not been reached."
+msgstr ""
+"If Kubernetes is unable to schedule a Pod due to insufficient CPU or memory "
+"in the cluster, a worker node will be added, as long as the maximum number "
+"of worker nodes has not been reached."
 
 msgid ""
 "If enabled, the minimum and maximum number of worker nodes must be specified."
@@ -521,6 +551,12 @@ msgstr "Keypair"
 
 msgid "Kubernetes"
 msgstr "Kubernetes"
+
+msgid "Kubernetes API Address"
+msgstr "Kubernetes API Address"
+
+msgid "Kubernetes Version"
+msgstr "Kubernetes Version"
 
 msgid "Labels"
 msgstr "Labels"
@@ -635,8 +671,25 @@ msgstr "Nodes"
 msgid "None"
 msgstr "None"
 
+msgid "Number of Control Plane nodes"
+msgstr "Number of Control Plane nodes"
+
 msgid "Number of Worker Nodes"
 msgstr "Number of Worker Nodes"
+
+msgid ""
+"Only an uneven number of control plane nodes are allowed. This provides the "
+"best balance of fault tolerance and cost."
+msgstr ""
+"Only an uneven number of control plane nodes are allowed. This provides the "
+"best balance of fault tolerance and cost."
+
+msgid ""
+"Only uneven number of control plane nodes are supported. This provides the "
+"best balance of fault tolerance and cost for etcd."
+msgstr ""
+"Only uneven number of control plane nodes are supported. This provides the "
+"best balance of fault tolerance and cost for etcd."
 
 msgid "Overlay"
 msgstr "Overlay"
@@ -737,6 +790,15 @@ msgstr "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgid "Size"
 msgstr "Size"
 
+msgid ""
+"Specify additional labels to apply to the cluster or override labels set by "
+"the cluster template. Overriding labels set by the cluster template may "
+"result in your cluster being misconfigured, unstable or unable to be created."
+msgstr ""
+"Specify additional labels to apply to the cluster or override labels set by "
+"the cluster template. Overriding labels set by the cluster template may "
+"result in your cluster being misconfigured, unstable or unable to be created."
+
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Specify the Container Orchestration Engine to use."
 
@@ -835,8 +897,20 @@ msgstr ""
 "The nova flavour id to use when launching the master node of the cluster. "
 "Default: m1.small"
 
+msgid "The number of Control Plane nodes for the cluster"
+msgstr "The number of Control Plane nodes for the cluster"
+
 msgid "The number of worker nodes for the cluster"
 msgstr "The number of worker nodes for the cluster"
+
+msgid ""
+"The selected options do not support multiple control plane nodes. A "
+"Kubernetes API Load Balancer is required, and can be enabled in the Network "
+"tab."
+msgstr ""
+"The selected options do not support multiple control plane nodes. A "
+"Kubernetes API Load Balancer is required, and can be enabled in the Network "
+"tab."
 
 msgid "The size in GB for Docker Volume. Default: 25"
 msgstr "The size in GB for Docker Volume. Default: 25"
