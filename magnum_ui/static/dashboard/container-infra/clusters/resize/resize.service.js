@@ -121,7 +121,7 @@
           {
             key: 'node_count',
             title: gettext('Node Count (default-worker)'),
-            placeholder: gettext('The default-worker nodegroup node_count.'),
+            placeholder: gettext('The default-worker nodegroup node count.'),
             required: true,
             validationMessage: {
               101: gettext('You cannot resize to fewer than zero worker nodes.')
