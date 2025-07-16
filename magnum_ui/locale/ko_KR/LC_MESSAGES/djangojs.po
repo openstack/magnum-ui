@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-02 03:39+0000\n"
+"POT-Creation-Date: 2025-07-15 22:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,13 +30,6 @@ msgstr "API 서버 포트"
 
 msgid "An arbitrary human-readable name"
 msgstr "사람이 읽을 수 있는 임의의 이름"
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a cluster "
-"templates. May be used multiple times."
-msgstr ""
-"클러스터 템플릿과 연관시킬 키=값 쌍 형식의 임의 레이블입니다. 여러 번 사용할 "
-"수 있습니다."
 
 msgid "CHECK COMPLETE"
 msgstr "CHECK COMPLETE"
@@ -277,9 +270,6 @@ msgstr "Docker 볼륨 크기(GB)"
 msgid "Enable Registry"
 msgstr "레지스트리 활성화"
 
-msgid "Enable docker registry in the cluster temlate. Default: False"
-msgstr "클러스터 템플릿 내에서 docker 레지스트리를 활성화합니다. 기본값: False"
-
 msgid "Exists"
 msgstr "Exists"
 
@@ -491,6 +481,7 @@ msgstr "인증서 보기"
 msgid "Sign Certificate"
 msgstr "인증서 서명"
 
+#, python-brace-format
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgstr "클러스터: {$ ctrl.model.cluster_name $} 에 인증서 서명"
 
@@ -677,6 +668,7 @@ msgstr "업데이트됨"
 msgid "Updated At"
 msgstr "갱신 시점"
 
+#, python-brace-format
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "{$ ctrl.quota.clusters $} 에서 {$ ctrl.stats.clusters $} 사용함"
 
@@ -751,6 +743,7 @@ msgid "title"
 msgid_plural "titles"
 msgstr[0] "제목"
 
+#, python-brace-format
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
 msgstr[0] "{$ ctrl.cluster.create_timeout $} 분"

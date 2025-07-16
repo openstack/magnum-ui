@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-02 03:39+0000\n"
+"POT-Creation-Date: 2025-07-15 22:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,13 +28,6 @@ msgstr "API サーバーのポート"
 
 msgid "An arbitrary human-readable name"
 msgstr "人間が読むことができる任意の名前。"
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a cluster "
-"templates. May be used multiple times."
-msgstr ""
-"クラスターテンプレートには、「key=value」形式で任意のラベルを関連付けできま"
-"す。複数個指定できます。"
 
 msgid "CHECK COMPLETE"
 msgstr "チェック完了"
@@ -276,11 +269,6 @@ msgstr "Docker のボリューム容量 (GB)"
 msgid "Enable Registry"
 msgstr "レジストリーの有効化"
 
-msgid "Enable docker registry in the cluster temlate. Default: False"
-msgstr ""
-"このクラスターテンプレートにおいて、 Docker のレジストリーを有効にします。デ"
-"フォルト: False"
-
 msgid "Exists"
 msgstr "使用"
 
@@ -491,6 +479,7 @@ msgstr "証明書の表示"
 msgid "Sign Certificate"
 msgstr "証明書を署名する"
 
+#, python-brace-format
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgstr "証明書をクラスターに署名します: {$ ctrl.model.cluster_name $}"
 
@@ -681,6 +670,7 @@ msgstr "更新時刻"
 msgid "Updated At"
 msgstr "最終更新"
 
+#, python-brace-format
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "{$ ctrl.quota.clusters $} 中 {$ ctrl.stats.clusters $} 使用"
 
@@ -755,6 +745,7 @@ msgid "title"
 msgid_plural "titles"
 msgstr[0] "タイトル"
 
+#, python-brace-format
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
 msgstr[0] "{$ ctrl.cluster.create_timeout $} 分"

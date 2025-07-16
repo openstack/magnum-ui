@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2020-04-21 09:21+0000\n"
+"POT-Creation-Date: 2025-07-15 22:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,13 +31,6 @@ msgstr "API Server Port"
 
 msgid "An arbitrary human-readable name"
 msgstr "Ein beliebiger menschenlesbarer Name"
-
-msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a cluster "
-"templates. May be used multiple times."
-msgstr ""
-"Beliebige Bezeichnungen in der Form Schlüssel=Wert, zu verbunden mit einer "
-"Clustervorlage. Kann mehrmals verwendet werden."
 
 msgid "CHECK COMPLETE"
 msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
@@ -293,9 +286,6 @@ msgstr "Docker Datenträgergrösse (GB)"
 msgid "Enable Registry"
 msgstr "Aktiviere Registry"
 
-msgid "Enable docker registry in the cluster temlate. Default: False"
-msgstr "Aktiviere Docker Registry in der Clustervorlage. Standard: Falsch"
-
 msgid "Exists"
 msgstr "Existiert"
 
@@ -516,6 +506,7 @@ msgstr "Zertifikat anzeigen"
 msgid "Sign Certificate"
 msgstr "Zertifikate signieren"
 
+#, python-brace-format
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgstr "Signiere Zertifikat für Cluster: {$ ctrl.model.cluster_name $}"
 
@@ -710,6 +701,7 @@ msgstr "Aktualisiert"
 msgid "Updated At"
 msgstr "Aktualisiert am"
 
+#, python-brace-format
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Benutzt {$ ctrl.stats.clusters $} von {$ ctrl.quota.clusters $}"
 
@@ -798,6 +790,7 @@ msgid_plural "titles"
 msgstr[0] "Titel"
 msgstr[1] "Titel"
 
+#, python-brace-format
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
 msgstr[0] "{$ ctrl.cluster.create_timeout $} Minute"
