@@ -177,7 +177,7 @@
         "method": "delete",
         "path": "/api/container_infra/cluster_templates/",
         "data": [1],
-        "error": "Unable to delete the cluster template with id: 1",
+        "error": "Unable to delete the cluster template with ID: 1",
         "testInput": [1]
       },
       {
@@ -278,7 +278,7 @@
           "resource": "Cluster"
         },
         "path": "/api/container_infra/quotas/123/Cluster",
-        "error": "Unable to delete the quota with project id: 123 and resource: Cluster.",
+        "error": "Unable to delete the quota with project ID: 123 and resource: Cluster.",
         "testInput": ["123", "Cluster"]
       },
       {

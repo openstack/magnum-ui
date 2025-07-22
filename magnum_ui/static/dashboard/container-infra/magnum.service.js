@@ -174,7 +174,7 @@
     function deleteClusterTemplate(id, suppressError) {
       var promise = apiService.delete('/api/container_infra/cluster_templates/', [id]);
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete the cluster template with id: %(id)s');
+        var msg = gettext('Unable to delete the cluster template with ID: %(id)s');
         toastService.add('error', interpolate(msg, { id: id }, true));
       });
     }
@@ -284,7 +284,7 @@
       var promise = apiService.delete('/api/container_infra/quotas/' + projectId + '/' + resource,
         {project_id: projectId, resource: resource});
       return suppressError ? promise : promise.catch(function onError() {
-        var msg = gettext('Unable to delete the quota with project id: %(projectId)s and ' +
+        var msg = gettext('Unable to delete the quota with project ID: %(projectId)s and ' +
           'resource: %(resource)s.');
         toastService.add('error',
           interpolate(msg, { projectId: projectId, resource: resource }, true));
