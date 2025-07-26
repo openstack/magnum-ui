@@ -151,7 +151,7 @@
             type: 'number',
             'x-schema-form': {
               type: 'number',
-              placeholder: gettext('Specify the size in GB for the docker volume')
+              placeholder: gettext('Specify the size in GB for the Docker Volume')
             }
           },
           'insecure_registry': {
