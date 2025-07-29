@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-15 22:33+0000\n"
+"POT-Creation-Date: 2025-07-22 12:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -469,16 +469,6 @@ msgid ""
 msgstr ""
 "If enabled, the minimum and maximum number of worker nodes must be specified."
 
-#, python-format
-msgid ""
-"If the aggregate resource limits of all existing Pods is lower than 50% of "
-"the cluster capacity, a worker node will be removed, as long as the minimum "
-"number of worker nodes has not been reached."
-msgstr ""
-"If the aggregate resource limits of all existing Pods is lower than 50% of "
-"the cluster capacity, a worker node will be removed, as long as the minimum "
-"number of worker nodes has not been reached."
-
 msgid "Image"
 msgstr "Image"
 
@@ -790,9 +780,6 @@ msgstr "TLS Disabled"
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "The DNS nameserver to use for this cluster template"
 
-msgid "The URL of docker registry."
-msgstr "The URL of Docker registry."
-
 msgid "The cluster node count."
 msgstr "The cluster node count."
 
@@ -903,10 +890,6 @@ msgid_plural "Unable to delete quotas: %s."
 msgstr[0] "Unable to delete quota: %s."
 msgstr[1] "Unable to delete quotas: %s."
 
-#, python-format
-msgid "Unable to delete the cluster template with id: %(id)s"
-msgstr "Unable to delete the cluster template with id: %(id)s"
-
 msgid "Unable to delete the cluster templates."
 msgstr "Unable to delete the cluster templates."
 
@@ -916,14 +899,6 @@ msgstr "Unable to delete the cluster with id: %(id)s"
 
 msgid "Unable to delete the clusters."
 msgstr "Unable to delete the clusters."
-
-#, python-format
-msgid ""
-"Unable to delete the quota with project id: %(projectId)s and resource: "
-"%(resource)s."
-msgstr ""
-"Unable to delete the quota with project id: %(projectId)s and resource: "
-"%(resource)s."
 
 msgid "Unable to get cluster's working nodes."
 msgstr "Unable to get cluster's working nodes."

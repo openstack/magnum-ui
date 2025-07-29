@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-15 22:33+0000\n"
+"POT-Creation-Date: 2025-07-22 12:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -520,9 +520,6 @@ msgstr "TLS の無効化"
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "このクラスターテンプレートで使用する DNS ネームサーバー。"
 
-msgid "The URL of docker registry."
-msgstr "Docker レジストリーの URL"
-
 msgid "The cluster node count."
 msgstr "クラスターノードの数"
 
@@ -594,10 +591,6 @@ msgid "Unable to delete quota: %s."
 msgid_plural "Unable to delete quotas: %s."
 msgstr[0] "クォータを削除できません: %s"
 
-#, python-format
-msgid "Unable to delete the cluster template with id: %(id)s"
-msgstr "ID %(id)s のクラスターテンプレートを削除できません。"
-
 msgid "Unable to delete the cluster templates."
 msgstr "クラスターテンプレートを削除できません。"
 
@@ -607,14 +600,6 @@ msgstr "ID %(id)s のクラスターを削除できません。"
 
 msgid "Unable to delete the clusters."
 msgstr "クラスターを削除できません。"
-
-#, python-format
-msgid ""
-"Unable to delete the quota with project id: %(projectId)s and resource: "
-"%(resource)s."
-msgstr ""
-"次のプロジェクト ID のクォータを削除できません: %(projectId)s and resource: "
-"%(resource)s."
 
 msgid "Unable to retrieve the certificate."
 msgstr "証明書を取得できません。"

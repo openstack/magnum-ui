@@ -2,29 +2,30 @@
 # Alexander <ainikitenkov@gmail.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Veronika Stepurova <vstepurova@hystax.com>, 2016. #zanata
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # Dmitriy Rabotyagov <noonedeadpunk@ya.ru>, 2020. #zanata
+# Dmitriy Chubinidze <dcu995@gmail.com>, 2025. #zanata
+# Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2024-06-06 07:30+0000\n"
+"POT-Creation-Date: 2025-07-22 12:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-05-09 10:50+0000\n"
-"Last-Translator: Dmitriy Rabotyagov <noonedeadpunk@ya.ru>\n"
+"PO-Revision-Date: 2025-07-28 09:07+0000\n"
+"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 msgid "<em>This cluster is already on the latest compatible template</em>"
 msgstr "<em>Данный кластер уже использует последний совместимый шаблон</em>"
 
 msgid "A batch cannot have less than one node."
-msgstr "Пакет не может иметь менее одной ноды."
+msgstr "Пакет не может иметь менее одного узла."
 
 msgid ""
 "A minimum number of Worker Nodes cannot be higher than the default number of "
@@ -33,20 +34,36 @@ msgstr ""
 "Минимальное количество рабочих узлов не может превышать стандартное значение "
 "рабочих узлов."
 
+msgid ""
+"A public floating IP will mean the Kubernetes API is publically routable on "
+"the internet. It is generally not recommended to give public access to the "
+"Kubernetes API. Consider limiting the access using the Allowed CIDRs section."
+msgstr ""
+"Публичный плавающий IP-адрес означает, что API Kubernetes будет доступен для "
+"публичной маршрутизации в интернете. Как правило, не рекомендуется "
+"предоставлять публичный доступ к API Kubernetes. Рассмотрите возможность "
+"ограничения доступа с помощью раздела \"Разрешенные CIDR\"."
+
 msgid "ADOPT COMPLETE"
 msgstr "Принятие завершено"
 
 msgid "API Address"
 msgstr "Адрес API"
 
+msgid "API Loadbalancer: Allowed CIDRs"
+msgstr "API Loadbalancer: разрешенные CIDR"
+
+msgid "API Loadbalancer: Floating IP"
+msgstr "API Loadbalancer: плавающий IP"
+
 msgid "API Server Port"
-msgstr "Серверный порт API"
+msgstr "Порт API сервера"
 
 msgid "Accessible on private network only"
-msgstr "Доступен только на приватной сети"
+msgstr "Доступен только в приватной сети"
 
-msgid "Accessible on the public internet"
-msgstr "Доступен на публичной сети"
+msgid "Accessible with public floating IP"
+msgstr "Доступно по публичному плавающему IP-адресу"
 
 msgid "Additional Labels"
 msgstr "Дополнительные метки"
@@ -60,21 +77,40 @@ msgstr "Дополнительное программное обеспечени
 msgid "Advanced"
 msgstr "Дополнительно"
 
+msgid "Allowed CIDRs"
+msgstr "Разрешенные CIDR"
+
 msgid "An arbitrary human-readable name"
 msgstr "Произвольное человеко-читаемое имя"
 
 msgid ""
-"Arbitrary labels in the form of key=value pairs to associate with a cluster "
+"Any addon software selected will be installed at the latest supported "
+"version when the cluster is deployed, but will not be upgraded automatically "
+"by rolling upgrades."
+msgstr ""
+"Любое выбранное дополнительное программное обеспечение будет установлено в "
+"последней поддерживаемой версии при развертывании кластера, но не будет "
+"обновляться автоматически при последовательных обновлениях."
+
+msgid ""
+"Arbitrary labels in the form of key-value pairs to associate with a cluster "
 "templates. May be used multiple times."
 msgstr ""
-"Произвольные метки в форме пар ключь=значение связанные с шаблонами "
-"кластера. Могут быть использованы несколько раз."
+"Произвольные метки в виде пар \"ключ-значение\" для связывания с шаблонами "
+"кластера. Могут использоваться несколько раз."
 
 msgid "Auto Healing"
-msgstr "Авто восстановление"
+msgstr "Автоматическое восстановление"
 
 msgid "Auto Scaling"
 msgstr "Автоматическое масштабирование"
+
+msgid ""
+"Auto scaling requires the use of CPU and memory limits on the resource "
+"definition of Pods."
+msgstr ""
+"Автоматическое масштабирование требует использования ограничений CPU и "
+"памяти при определении ресурсов Pod."
 
 msgid "Auto-scale Worker Nodes"
 msgstr "Автоматическое масштабирование рабочих узлов"
@@ -118,7 +154,7 @@ msgstr "Сертификат %s был успешно обновлен."
 
 #, python-format
 msgid "Certificate %s was successfully signed."
-msgstr "Сертификат %s успешно подписан."
+msgstr "Сертификат %s был успешно подписан."
 
 msgid "Choose a Cluster Template"
 msgstr "Выберите шаблон кластера"
@@ -127,37 +163,43 @@ msgid "Choose a Cluster Template to upgrade to"
 msgstr "Выберите шаблон кластера для обновления"
 
 msgid "Choose a Container Orchestration Engine"
-msgstr "Выберите движок оркестрации контейнеров."
+msgstr "Выберите движок оркестрации контейнеров"
 
 msgid "Choose a External Network"
-msgstr "Выберите Внешнюю Сеть"
+msgstr "Выберите внешнюю сеть"
+
+msgid "Choose a Flavor for the Control Plane nodes"
+msgstr "Выберите шаблон конфигурации для узлов управляющего слоя"
 
 msgid "Choose a Flavor for the Master Node"
-msgstr "Выберите тип инстанса для мастер узла"
+msgstr "Выберите шаблон конфигураци для мастер узла"
 
 msgid "Choose a Flavor for the Node"
-msgstr "Выберите тип инстанса для узла."
+msgstr "Выберите шаблон конфигурации для узла"
+
+msgid "Choose a Flavor for the Worker nodes"
+msgstr "Выберите шаблон конфигурации для рабочих узлов"
 
 msgid "Choose a Keypair"
 msgstr "Выберите ключевую пару"
 
 msgid "Choose a Network Driver"
-msgstr "Выбрать сетевой драйвер"
+msgstr "Выберите сетевой драйвер"
 
 msgid "Choose a Private Network"
-msgstr "Выберите Приватную Сеть"
+msgstr "Выберите приватную сеть"
 
 msgid "Choose a Private Network at first"
-msgstr "Сначала выберите Приватную Сеть"
+msgstr "Сначала выберите приватную сеть"
 
 msgid "Choose a Private Subnet"
-msgstr "Выберите Приватную Подсеть"
+msgstr "Выберите приватную подсеть"
 
 msgid "Choose a Project"
 msgstr "Выберите проект"
 
 msgid "Choose a Volume Driver"
-msgstr "Выбрать драйвер диска"
+msgstr "Выберите драйвер тома"
 
 msgid "Choose an Availability Zone"
 msgstr "Выберите зону доступности"
@@ -165,14 +207,20 @@ msgstr "Выберите зону доступности"
 msgid "Choose an Image"
 msgstr "Выберите образ"
 
+msgid "Choose an existing Subnet"
+msgstr "Выберите существующую подсеть"
+
 msgid "Choose an existing network"
 msgstr "Выберите существующую сеть"
 
+msgid "Choose an existing subnet"
+msgstr "Выберите существующую подсеть"
+
 msgid "Choose an ingress controller"
-msgstr "Выберите входящий контроллер"
+msgstr "Выберите ingress контроллер"
 
 msgid "Choose nodes to remove (Optional)"
-msgstr "Выберите ноды для удаление (опционально)"
+msgstr "Выберите узлы для удаления (опционально)"
 
 msgid "Cinder"
 msgstr "Cinder"
@@ -182,10 +230,7 @@ msgstr "Кластер"
 
 #, python-format
 msgid "Cluster %s was successfully created."
-msgstr "Кластер %s создан успешно."
-
-msgid "Cluster API"
-msgstr "API Кластера"
+msgstr "Кластер %s был успешно создан."
 
 msgid "Cluster Create Timeout"
 msgstr "Таймаут создания кластера"
@@ -200,7 +245,7 @@ msgid "Cluster Template"
 msgstr "Шаблон кластера"
 
 msgid "Cluster Template Detail"
-msgstr "Сведения шаблона кластера"
+msgstr "Детали шаблона кластера"
 
 msgid "Cluster Template Name"
 msgstr "Имя шаблона кластера"
@@ -236,9 +281,9 @@ msgstr[2] "Подтвердите удаление кластеров"
 
 msgid "Confirm Delete Cluster Template"
 msgid_plural "Confirm Delete Cluster Templates"
-msgstr[0] "Подтвердите Удаление Шаблона Кластера"
-msgstr[1] "Подтвердите Удаление Шаблонов Кластера"
-msgstr[2] "Подтвердите Удаление Шаблонов Кластера"
+msgstr[0] "Подтвердите удаление шаблона кластера"
+msgstr[1] "Подтвердите удаление шаблонов кластера"
+msgstr[2] "Подтвердите удаление шаблонов кластера"
 
 msgid "Confirm Delete Quota"
 msgid_plural "Confirm Delete Quotas"
@@ -250,7 +295,19 @@ msgid "Container Orchestration Engine"
 msgstr "Движок оркестрации контейнеров"
 
 msgid "Container Version"
-msgstr "Версия Контейнера"
+msgstr "Версия контейнера"
+
+msgid "Control Plane Addresses"
+msgstr "Адреса управляющего слоя"
+
+msgid "Control Plane Count"
+msgstr "Количество управляющих слоев"
+
+msgid "Control Plane Nodes"
+msgstr "Узлы управляющего слоя"
+
+msgid "Control Plane size"
+msgstr "Размер управляющего слоя"
 
 msgid "Create"
 msgstr "Создать"
@@ -274,7 +331,7 @@ msgid "Created"
 msgstr "Создано"
 
 msgid "Created At"
-msgstr "Создано"
+msgstr "Создано в"
 
 msgid "DC/OS"
 msgstr "DC/OS"
@@ -346,10 +403,10 @@ msgid "Device Mapper"
 msgstr "Сопоставитель устройств"
 
 msgid "Disable TLS"
-msgstr "Выключить TLS."
+msgstr "Выключить TLS"
 
 msgid "Disable TLS in the cluster template. Default: False"
-msgstr "Выключить TLS в шаблоне кластера. По умолчанию: Нет."
+msgstr "Выключить TLS в шаблоне кластера. По умолчанию: Нет"
 
 msgid "Discovery URL"
 msgstr "URL поиска"
@@ -367,16 +424,19 @@ msgid "Docker Swarm Mode"
 msgstr "Режим Docker Swarm"
 
 msgid "Docker Volume Size"
-msgstr "Размер диска Docker"
+msgstr "Размер тома Docker"
 
 msgid "Docker Volume Size (GB)"
-msgstr "Размер диска Docker (ГБ)"
+msgstr "Размер тома Docker (ГБ)"
+
+msgid "Enable Docker Registry in the cluster template. Default: False"
+msgstr "Включить Docker Registry в шаблоне кластера. По умолчанию: Нет"
+
+msgid "Enable Load Balancer for Kubernetes API"
+msgstr "Включить балансировщик нагрузки для API Kubernetes"
 
 msgid "Enable Registry"
-msgstr "Разрешить реестр"
-
-msgid "Enable docker registry in the cluster temlate. Default: False"
-msgstr "Разрешить реестр docker в шаблоне кластера.  По умолчанию: Нет."
+msgstr "Включить Registry"
 
 msgid "Exists"
 msgstr "Существует"
@@ -388,43 +448,89 @@ msgid "Fixed Network"
 msgstr "Фиксированная сеть"
 
 msgid "Fixed Subnet"
-msgstr "Фиксированная Подсеть"
+msgstr "Фиксированная подсеть"
 
 msgid "Flannel"
-msgstr "Фланнель"
+msgstr "Flannel"
 
 msgid "Flavor"
-msgstr "Тип инстанса"
+msgstr "Шаблон конфигурации"
 
 msgid "Flavor ID"
-msgstr "ID типа инстанса"
+msgstr "ID шаблона конфигурации"
+
+msgid "Flavor of Control Plane Nodes"
+msgstr "Шаблон конфигурации узлов управляющего слоя"
 
 msgid "Flavor of Worker Nodes"
-msgstr "Тип рабочих нод"
+msgstr "Шаблон конфигурации рабочих узлов"
 
 msgid "Floating IP"
-msgstr "Назначаемый IP"
+msgstr "Плавающий IP"
 
 msgid "Floating IP Enabled"
-msgstr "Плавающий IP Включен"
+msgstr "Плавающий IP включен"
+
+msgid "Get Cluster Config"
+msgstr "Получить конфигурацию кластера"
 
 msgid "HTTP Proxy"
-msgstr "HTTP Proxy"
+msgstr "HTTP прокси"
 
 msgid "HTTPS Proxy"
-msgstr "HTTPS Proxy"
+msgstr "HTTPS прокси"
 
 msgid "Hard Limit"
 msgstr "Жесткий лимит"
+
+msgid "Health Status"
+msgstr "Статус"
+
+msgid "Health Status Reason"
+msgstr "Причина состояния"
 
 msgid "Hidden"
 msgstr "Скрытый"
 
 msgid "I do want to override Template and Workflow Labels"
-msgstr "Я хочу перезаписать Темплейт и Метки выполнения"
+msgstr "Я хочу перезаписать шаблон и метки выполнения"
 
 msgid "ID"
 msgstr "ID"
+
+msgid ""
+"If Kubernetes is unable to schedule a Pod due to insufficient CPU or memory "
+"in the cluster, a worker node will be added, as long as the maximum number "
+"of worker nodes has not been reached."
+msgstr ""
+"Если Kubernetes не может запланировать Pod из-за нехватки CPU или памяти в "
+"кластере, будет добавлен рабочий узел, пока не будет достигнуто максимальное "
+"количество рабочих узлов."
+
+msgid ""
+"If enabled, the minimum and maximum number of worker nodes must be specified."
+msgstr ""
+"Если включено, необходимо указать минимальное и максимальное количество "
+"рабочих узлов."
+
+msgid ""
+"If the aggregate resource limits of all existing Pods is lower than 50 "
+"percent of the cluster capacity, a worker node will be removed, as long as "
+"the minimum number of worker nodes has not been reached."
+msgstr ""
+"Если совокупные ограничения ресурсов всех существующих подов ниже 50 "
+"процентов емкости кластера, рабочий узел будет удален до тех пор, пока не "
+"будет достигнуто минимальное количество рабочих узлов. "
+
+msgid ""
+"If this field is left empty, the API Loadbalancer will accept connections "
+"from any address. When set to one or more CIDR then only those, plus the "
+"internal network, are permitted access to the Kubernetes API Loadbalancer."
+msgstr ""
+"Если это поле оставить пустым, API Loadbalancer будет принимать подключения "
+"с любого адреса. Если задано одно или несколько CIDR-адресов, то доступ к "
+"API Loadbalancer Kubernetes будет разрешён только этим адресам и внутренней "
+"сети."
 
 msgid "Image"
 msgstr "Образ"
@@ -436,15 +542,15 @@ msgid ""
 "Indicates whether created clusters should have a floating ip or not. "
 "Default: True"
 msgstr ""
-"Указывает должен ли созданный кластер иметь назначаемый IP или нет. По "
+"Указывает должен ли созданный кластер иметь плавающий IP или нет. По "
 "умолчанию: Да"
 
 msgid ""
 "Indicates whether created clusters should have a load balancer for master "
 "nodes or not. Default: False"
 msgstr ""
-"Указывает должен ли созданный кластер иметь  балансировщика нагрузки для "
-"узлов мастера или нет. По умолчанию: Да"
+"Указывает должен ли созданный кластер иметь балансировщика нагрузки для "
+"мастер узлов или нет. По умолчанию: Да"
 
 msgid "Infinite"
 msgstr "Бесконечно"
@@ -456,10 +562,17 @@ msgid "Ingress"
 msgstr "Входящий"
 
 msgid "Ingress Controller"
-msgstr "Входящий контроллер"
+msgstr "Ingress контроллер"
 
 msgid "Insecure Registry"
-msgstr "Небезопасный реестр"
+msgstr "Небезопасный Registry"
+
+msgid ""
+"Invalid format. Must be a comma-separated CIDR string: "
+"192.168.1.5/32,10.0.0.1/24"
+msgstr ""
+"Неверный формат. Должна быть строка CIDR, разделённая запятыми: "
+"192.168.1.5/32,10.0.0.1/24"
 
 msgid ""
 "Invalid format. Must be a comma-separated key-value string: key=value,"
@@ -467,9 +580,6 @@ msgid ""
 msgstr ""
 "Неправильный формат. Необходимо указать строку в формате ключ-значение, "
 "разделенные запятой: key=value,key2=value2"
-
-msgid "It is generally not recommended to give public access."
-msgstr "Обычно, не рекомендуется предоставлять публичный адрес."
 
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
@@ -480,17 +590,46 @@ msgstr "Ключевая пара"
 msgid "Kubernetes"
 msgstr "Kubernetes"
 
+msgid "Kubernetes API Address"
+msgstr "Адрес API Kubernetes"
+
+msgid "Kubernetes API Loadbalancer"
+msgstr "Kubernetes API Loadbalancer"
+
+msgid "Kubernetes Version"
+msgstr "Версия Kubernetes"
+
 msgid "Labels"
 msgstr "Метки"
 
 msgid "Limit for this resource."
-msgstr "Ограничение для данного ресурса"
+msgstr "Ограничение для данного ресурса."
 
 msgid "Loading"
 msgstr "Загрузка"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Сделать шаблон кластера общедоступным. По умолчанию: Нет"
+
+msgid ""
+"Making the Kubernetes API accessible from the public internet with a "
+"floating IP is convenient, but may represent a security risk. When selecting "
+"this option, it is recommended to set Allowed CIDRs to limit access to a "
+"trusted IP address range."
+msgstr ""
+"Обеспечение доступа к API Kubernetes из публичного интернета с помощью "
+"плавающего IP-адреса удобно, но может представлять угрозу безопасности. При "
+"выборе этого варианта рекомендуется настроить параметр \"Разрешенные CIDR\", "
+"чтобы ограничить доступ доверенным диапазонам IP-адресов."
+
+msgid ""
+"Making the Kubernetes API accessible from your private network only is the "
+"most secure option (the default), but access will be limited to compute "
+"instances on the same private network or a VPN to that network."
+msgstr ""
+"Самый безопасный вариант (по умолчанию) — предоставить доступ к API "
+"Kubernetes только из вашей частной сети, но доступ будет ограничен "
+"вычислительными инстансами в той же частной сети или VPN для этой сети."
 
 msgid "Management"
 msgstr "Управление"
@@ -505,16 +644,16 @@ msgid "Master Count"
 msgstr "Количество мастеров"
 
 msgid "Master Flavor"
-msgstr "Тип инстанса мастера"
+msgstr "Шаблон конфигурации мастера"
 
 msgid "Master Flavor ID"
-msgstr "ID типа инстанса Master"
+msgstr "ID шаблона конфигурации мастера"
 
 msgid "Master LB"
 msgstr "Главный балансировщик нагрузки"
 
 msgid "Master LB Enabled"
-msgstr "Главный Балансировщик Нагрузки Разрешен "
+msgstr "Главный балансировщик нагрузки включен"
 
 msgid "Maximum Batch Size"
 msgstr "Максимальный размер пакета"
@@ -538,13 +677,10 @@ msgid "Name of the cluster"
 msgstr "Имя кластера"
 
 msgid "Name of the cluster template."
-msgstr "Имя шаблона кластера"
+msgstr "Имя шаблона кластера."
 
 msgid "Network"
 msgstr "Сеть"
-
-msgid "Network Access Control"
-msgstr "Контроль доступа к сети"
 
 msgid "Network Driver"
 msgstr "Сетевой драйвер"
@@ -561,11 +697,14 @@ msgstr "Адреса узлов"
 msgid "Node Count"
 msgstr "Количество узлов"
 
+msgid "Node Count (default-worker)"
+msgstr "Количество узлов (рабочих узлов по умолчанию)"
+
 msgid "Node Flavor ID"
-msgstr "ID типа ноды"
+msgstr "ID шаблона конфигурации узла"
 
 msgid "Node Spec"
-msgstr "Спека узла"
+msgstr "Спецификация узла"
 
 msgid "Nodes"
 msgstr "Узлы"
@@ -573,14 +712,51 @@ msgstr "Узлы"
 msgid "None"
 msgstr "Нет"
 
+msgid "Number of Control Plane nodes"
+msgstr "Количество узлов управляющего слоя"
+
 msgid "Number of Worker Nodes"
 msgstr "Количество рабочих узлов"
 
+msgid ""
+"Only an uneven number of control plane nodes are allowed. This provides the "
+"best balance of fault tolerance and cost."
+msgstr ""
+"Разрешено только нечетное количество узлов управляющего слоя. Это "
+"обеспечивает наилучший баланс отказоустойчивости и стоимости."
+
+msgid ""
+"Only uneven number of control plane nodes are supported. This provides the "
+"best balance of fault tolerance and cost for etcd."
+msgstr ""
+"Поддерживается только нечетное количество узлов управляющего слоя. Это "
+"обеспечивает наилучший баланс отказоустойчивости и стоимости для etcd."
+
 msgid "Overlay"
-msgstr "Покрытие"
+msgstr "Overlay"
+
+msgid "Overlay2"
+msgstr "Overlay2"
+
+msgid ""
+"Overriding labels already defined by the cluster template or workflow might "
+"result in unpredictable behaviour."
+msgstr ""
+"Переопределение меток, уже определенных шаблоном кластера или рабочим "
+"процессом, может привести к непредсказуемому поведению."
 
 msgid "Overview"
 msgstr "Обзор"
+
+msgid ""
+"Please note that updates may cause application downtime if workloads "
+"deployed to Kubernetes are not following the best practices outlined in the "
+"documentation (for example, not using multiple replicas)."
+msgstr ""
+"Обратите внимание, что обновления могут привести к простою приложения, если "
+"рабочие нагрузки, развернутые в Kubernetes, не соответствуют лучшим "
+"практикам, изложенным в документации (например, не используются несколько "
+"реплик)."
 
 msgid "Project"
 msgstr "Проект"
@@ -618,10 +794,10 @@ msgid "Record Properties"
 msgstr "Свойства записи"
 
 msgid "Registry Enabled"
-msgstr "Реестр разрешен"
+msgstr "Registry включен"
 
 msgid "Resize Cluster"
-msgstr "Изменить размер Кластера"
+msgstr "Изменить размер кластера"
 
 msgid "Resource"
 msgstr "Ресурс"
@@ -630,16 +806,16 @@ msgid "Rexray"
 msgstr "Rexray"
 
 msgid "Rolling Cluster Upgrade"
-msgstr "Пошаговое обновление Кластера"
+msgstr "Пошаговое обновление кластера"
 
 msgid "Rotate Certificate"
-msgstr "Обновить Сертификат"
+msgstr "Обновить сертификат"
 
 msgid "SNAPSHOT COMPLETE"
 msgstr "Снимок создан успешно"
 
 msgid "Security Updates"
-msgstr "Обновления Безопасности"
+msgstr "Обновления безопасности"
 
 msgid "Server Type"
 msgstr "Тип сервера"
@@ -650,11 +826,22 @@ msgstr "Показать сертификат"
 msgid "Sign Certificate"
 msgstr "Подписать сертификат"
 
+#, python-brace-format
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
-msgstr "Подписать Сертификат Для Кластера:{$ ctrl.model.cluster_name $}"
+msgstr "Подписать cертификат для кластера: {$ ctrl.model.cluster_name $}"
 
 msgid "Size"
 msgstr "Размер"
+
+msgid ""
+"Specify additional labels to apply to the cluster or override labels set by "
+"the cluster template. Overriding labels set by the cluster template may "
+"result in your cluster being misconfigured, unstable or unable to be created."
+msgstr ""
+"Укажите дополнительные метки для применения к кластеру или переопределите "
+"метки, заданные шаблоном кластера. Переопределение меток, заданных шаблоном "
+"кластера, может привести к тому, что ваш кластер будет неправильно настроен, "
+"нестабилен или не сможет быть создан."
 
 msgid "Specify the Container Orchestration Engine to use."
 msgstr "Укажите движок оркестрации контейнеров."
@@ -666,7 +853,7 @@ msgstr ""
 "8.8.8.8"
 
 msgid "Specify the size in GB for the docker volume"
-msgstr "Укажите размер диска Docker в ГБ."
+msgstr "Укажите размер тома Docker в ГБ"
 
 msgid "Stack"
 msgstr "Стек"
@@ -687,25 +874,50 @@ msgid "Status Reason"
 msgstr "Причина статуса"
 
 msgid "TLS Disabled"
-msgstr "TLS запрещен"
+msgstr "TLS отключен"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "Сервер имен DNS для использования в этом шаблоне кластера"
 
-msgid "The URL of docker registry."
-msgstr "URL реестра Docker. "
+msgid "The URL of Docker Registry."
+msgstr "URL-адрес Docker Registry."
 
 msgid "The cluster node count."
 msgstr "Количество узлов кластера."
 
+msgid "The default-worker nodegroup node count."
+msgstr "Количество узлов в группе рабочих узлов по умолчанию."
+
 msgid "The http_proxy address to use for nodes in cluster"
-msgstr "Адреса http_proxy для узлов в кластере."
+msgstr "Адреса http_proxy для узлов в кластере"
 
 msgid "The https_proxy address to use for nodes in cluster"
-msgstr "Адреса https_proxy для узлов в кластере."
+msgstr "Адреса https_proxy для узлов в кластере"
+
+msgid ""
+"The key-value pair string is case insensitive and will be converted to lower "
+"case."
+msgstr ""
+"Строка пары \"ключ-значение\" нечувствительна к регистру и будет "
+"преобразована в нижний регистр."
+
+msgid ""
+"The maximum number of Worker Nodes a new cluster can auto-scale to cannot be "
+"less than the total amount of Worker Nodes."
+msgstr ""
+"Максимальное количество рабочих узлов, до которого новый кластер может "
+"автоматически масштабироваться, не может быть меньше общего количества "
+"рабочих узлов."
+
+msgid ""
+"The maximum number of Worker Nodes cannot be less than the default number of "
+"Worker Nodes and 1."
+msgstr ""
+"Максимальное количество рабочих узлов не может быть меньше количества "
+"рабочих узлов по умолчанию и меньше, чем 1."
 
 msgid "The maximum number of nodes in the batch has been exceeded."
-msgstr "Максимальное количество нод в пакете было превышено"
+msgstr "Максимальное количество узлов в пакете было превышено."
 
 msgid ""
 "The minimum number of Worker Nodes a new cluster can auto scale to cannot "
@@ -715,31 +927,43 @@ msgstr ""
 "масштабироваться не может превышать общее количество рабочих узлов."
 
 msgid "The name or UUID of the SSH keypair to load into the cluster nodes."
-msgstr "Имя или UUID ключевой пары SSH, для загрузки в узлы кластера."
+msgstr "Имя или UUID ключевой пары SSH для загрузки в узлы кластера."
 
 msgid "The name or UUID of the base image to customize for the cluster."
 msgstr "Имя или UUID базового образа для настройки кластера."
 
 msgid "The no_proxy address to use for nodes in cluster"
-msgstr "Адрес no_proxy для использования узлами в кластере."
+msgstr "Адрес no_proxy для использования узлами в кластере"
 
 msgid "The nova flavor id to use when launching the cluster. Default: m1.small"
 msgstr ""
-"ID типа инстанса nova для использования при запуске кластера. По умолчанию: "
-"m1.small"
+"ID шаблона конфигурации nova для использования при запуске кластера. По "
+"умолчанию: m1.small"
 
 msgid ""
 "The nova flavor id to use when launching the master node of the cluster. "
 "Default: m1.small"
 msgstr ""
-"ID типа инстанса nova для использования при запуске мастер узла кластера. По "
-"умолчанию: m1.small"
+"ID шаблона конфигурации при запуске мастер узла кластера. По умолчанию: m1."
+"small"
+
+msgid "The number of Control Plane nodes for the cluster"
+msgstr "Количество узлов управляющего слоя для кластера"
 
 msgid "The number of worker nodes for the cluster"
 msgstr "Количество рабочих узлов для кластера"
 
+msgid ""
+"The selected options do not support multiple control plane nodes. A "
+"Kubernetes API Load Balancer is required, and can be enabled in the Network "
+"tab."
+msgstr ""
+"Выбранные параметры не поддерживают несколько узлов управляющего слоя. "
+"Требуется балансировщик нагрузки API Kubernetes, который можно включить на "
+"вкладке \"Сеть\"."
+
 msgid "The size in GB for Docker Volume. Default: 25"
-msgstr "Размер диска Docker в ГБ. По умолчанию: 25"
+msgstr "Размер тома Docker в ГБ. По умолчанию: 25"
 
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
@@ -785,48 +1009,51 @@ msgstr[1] "Не удалось удалить квоты: %s."
 msgstr[2] "Не удалось удалить квоты: %s."
 
 #, python-format
-msgid "Unable to delete the cluster template with id: %(id)s"
-msgstr "Не удается удалить шаблон кластера с ИД: %(id)s"
+msgid "Unable to delete the cluster template with ID: %(id)s"
+msgstr "Не удалось удалить шаблон кластера с ID: %(id)s"
 
 msgid "Unable to delete the cluster templates."
-msgstr "Не удается удалить шаблоны кластера."
+msgstr "Не удалось удалить шаблоны кластера."
 
 #, python-format
 msgid "Unable to delete the cluster with id: %(id)s"
-msgstr "Не удается удалить кластер с ID: %(id)s"
+msgstr "Не удалось удалить кластер с ID: %(id)s"
 
 msgid "Unable to delete the clusters."
-msgstr "Не удается удалить кластера."
+msgstr "Не удалось удалить кластеры."
 
 #, python-format
 msgid ""
-"Unable to delete the quota with project id: %(projectId)s and resource: "
+"Unable to delete the quota with project ID: %(projectId)s and resource: "
 "%(resource)s."
 msgstr ""
-"Не удалось удалить квоты для проекта  %(projectId)s и ресурса %(resource)s."
+"Не удалось удалить квоту с ID проекта: %(projectId)s и ресурса: %(resource)s."
 
 msgid "Unable to get cluster's working nodes."
-msgstr "Не удалось получить работающие ноды кластера."
+msgstr "Не удалось получить работающие узлы кластера."
 
 msgid "Unable to perform rolling upgrade."
 msgstr "Не удалось выполнить поэтапное обновление."
 
 msgid "Unable to process `Additional Labels`. Not all labels will be applied."
 msgstr ""
-"Не удалось обработать `Дополнительные метки`. Не все метки будут применены."
+"Не удалось обработать \"Дополнительные метки\". Не все метки будут применены."
 
 #, python-format
 msgid "Unable to resize given cluster id: %(id)s."
-msgstr "Не удалось изменить размер кластера с ID: %(id)s"
+msgstr "Не удалось изменить размер кластера с ID: %(id)s."
 
 msgid "Unable to retrieve available add-ons."
 msgstr "Не удалось получить доступные дополнения."
 
 msgid "Unable to retrieve available ingress controllers."
-msgstr "Не удалось получить доступные входящие контроллеры."
+msgstr "Не удалось получить доступные ingress контроллеры."
 
 msgid "Unable to retrieve the certificate."
-msgstr "Не удается получить сертификат."
+msgstr "Не удалось получить сертификат."
+
+msgid "Unable to retrieve the cluster config."
+msgstr "Не удалось получить конфигурацию кластера."
 
 msgid "Unable to retrieve the cluster template."
 msgstr "Не удалось получить шаблон кластера."
@@ -856,7 +1083,7 @@ msgid "Unable to rotate the certificate."
 msgstr "Не удалось сменить сертификат."
 
 msgid "Unable to sign certificate."
-msgstr "Не удается подписать сертификат."
+msgstr "Не удалось подписать сертификат."
 
 msgid "Unable to update cluster template."
 msgstr "Не удалось обновить шаблон кластера."
@@ -868,7 +1095,7 @@ msgid "Unable to update quota."
 msgstr "Не удалось обновить квоту."
 
 msgid "Update Cluster Template"
-msgstr "Обновить Шаблон Кластера"
+msgstr "Обновить шаблон кластера"
 
 msgid "Update Quota"
 msgstr "Обновить квоту"
@@ -877,16 +1104,20 @@ msgid "Updated"
 msgstr "Обновлено"
 
 msgid "Updated At"
-msgstr "Обновлено"
+msgstr "Обновлено в"
 
 msgid "Use an Existing Network"
 msgstr "Использовать существующую сеть"
 
+msgid "Use an Existing Subnet"
+msgstr "Использовать существующую подсеть"
+
+#, python-brace-format
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Использовано {$ ctrl.stats.clusters $} из {$ ctrl.quota.clusters $}"
 
 msgid "Volume Driver"
-msgstr "Драйвер диска"
+msgstr "Драйвер тома"
 
 msgid "Worker Nodes"
 msgstr "Рабочие узлы"
@@ -903,8 +1134,27 @@ msgstr "Вам не разрешено удалять кластеры: %s"
 msgid "You are not allowed to delete quotas: %s"
 msgstr "Вам не разрешено удалять квоты: %s"
 
+msgid ""
+"You can choose to create a new network for this cluster, or use an existing "
+"network. If you use an existing, it needs to have a subnet and router with a "
+"gateway on the external network. You may also need to take care not to "
+"conflict with CIDRs in use by the Kubernetes pod and service network."
+msgstr ""
+"Вы можете создать новую сеть для этого кластера или использовать "
+"существующую. Если вы используете существующую сеть, она должна иметь "
+"подсеть и маршрутизатор со шлюзом во внешней сети. Также может потребоваться "
+"убедиться в отсутствии конфликтов с CIDR-маршрутизациями, используемыми "
+"модулем Kubernetes и сервисной сетью."
+
 msgid "You cannot auto-scale to less than a single Worker Node."
-msgstr "Вы не можете авто-масштабироваться менее, чем до одного рабочего узла"
+msgstr ""
+"Вы не можете выполнить автомасштабирование менее, чем до одного рабочего "
+"узла."
+
+msgid "You cannot resize to fewer than zero worker nodes."
+msgstr ""
+"Вы не можете уменьшить количество рабочих узлов до значения, меньшего, чем "
+"ноль."
 
 #, python-format
 msgid ""
@@ -914,13 +1164,13 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted clusters "
 "are not recoverable."
 msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластера "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление кластера "
 "необратимо."
 msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластеров "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление кластеров "
 "необратимо."
 msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление кластеров "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление кластеров "
 "необратимо."
 
 #, python-format
@@ -931,14 +1181,14 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted cluster "
 "templates are not recoverable."
 msgstr[0] ""
-"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластера "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление шаблона "
+"кластера необратимо."
 msgstr[1] ""
-"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластеров "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление шаблонов "
+"кластера необратимо."
 msgstr[2] ""
-"Вы выбрали\"%s\". Пожалуйста подтвердите ваш выбор. Удаление  кластеров "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление шаблонов "
+"кластера необратимо."
 
 #, python-format
 msgid ""
@@ -948,20 +1198,20 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted quotas are "
 "not recoverable."
 msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление квоты "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квоты "
 "необратимо."
 msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление квот "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квот "
 "необратимо."
 msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста подтвердите ваш выбор. Удаление квот "
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квот "
 "необратимо."
 
 msgid ""
 "You may only select as many nodes as you are reducing the original node "
 "count by."
 msgstr ""
-"Вы можете выбрать только то количество нод, на которое производите "
+"Вы можете выбрать только то количество узлов, на которое производите "
 "уменьшение размера."
 
 msgid "as follows:"
@@ -971,7 +1221,7 @@ msgid "error"
 msgid_plural "errors"
 msgstr[0] "ошибка"
 msgstr[1] "ошибки"
-msgstr[2] "ошибок"
+msgstr[2] "ошибки"
 
 msgid "key=value,key2=value2..."
 msgstr "key=value,key2=value2..."
@@ -980,7 +1230,7 @@ msgid "message"
 msgid_plural "messages"
 msgstr[0] "сообщение"
 msgstr[1] "сообщения"
-msgstr[2] "сообщений"
+msgstr[2] "сообщения"
 
 msgid "submit"
 msgid_plural "submits"
@@ -1000,8 +1250,9 @@ msgstr[0] "заголовок"
 msgstr[1] "заголовки"
 msgstr[2] "заголовки"
 
+#, python-brace-format
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
-msgstr[0] "{$ ctrl.cluster.create_timeout $} минута"
-msgstr[1] "{$ ctrl.cluster.create_timeout $} минуты"
-msgstr[2] "{$ ctrl.cluster.create_timeout $} минут"
+msgstr[0] "{$ ctrl.cluster.create_timeout $} мин."
+msgstr[1] "{$ ctrl.cluster.create_timeout $} мин."
+msgstr[2] "{$ ctrl.cluster.create_timeout $} мин."
