@@ -35,7 +35,7 @@ CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
 CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
 QUOTA_CREATION_ATTRIBUTES = quotas.CREATION_ATTRIBUTES
 CLUSTER_UPDATE_ALLOWED_PROPERTIES = set(['/node_count'])
-DEFAULT_API_VERSION = '1.10'
+DEFAULT_API_VERSION = '1.12'
 
 
 def _cleanup_params(attrs, create, **params):
@@ -262,6 +262,10 @@ def certificate_show(request, id):
 def certificate_rotate(request, id):
     args = {"cluster_uuid": id}
     return magnumclient(request).certificates.rotate_ca(**args)
+
+
+def credential_rotate(request, id):
+    return magnumclient(request).credentials.update(id)
 
 
 def stats_list(request, project_id=None):

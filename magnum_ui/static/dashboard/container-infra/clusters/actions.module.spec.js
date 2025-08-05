@@ -50,6 +50,11 @@
       expect(actionHasId(actions, 'rotateCertificateAction')).toBe(true);
     });
 
+    it('registers Rotate Credential as an item action', function() {
+      var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
+      expect(actionHasId(actions, 'rotateCredentialAction')).toBe(true);
+    });
+
     it('registers Resize Cluster as an item action', function() {
       var actions = registry.getResourceType('OS::Magnum::Cluster').itemActions;
       expect(actionHasId(actions, 'resizeClusterAction')).toBe(true);

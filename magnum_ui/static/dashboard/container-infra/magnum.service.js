@@ -48,6 +48,7 @@
       showCertificate: showCertificate,
       signCertificate: signCertificate,
       rotateCertificate: rotateCertificate,
+      rotateCredential: rotateCredential,
       getStats: getStats,
       getIngressControllers: getIngressControllers,
       getAddons: getAddons,
@@ -209,6 +210,25 @@
       return apiService.delete('/api/container_infra/certificates/' + id, [id])
         .catch(function onError() {
           toastService.add('error', gettext('Unable to rotate the certificate.'));
+        });
+    }
+
+    /////////////////
+    // Credentials //
+    /////////////////
+
+    function rotateCredential(id) {
+      return apiService.patch('/api/container_infra/credentials/' + id)
+        .catch(function onError(response) {
+          var msg, params;
+          if (response && response.data) {
+            msg = gettext('Unable to rotate credentials for cluster %(id)s: %(reason)s.');
+            params = { id: id, reason: response.data };
+          } else {
+            msg = gettext('Unable to rotate credentials for cluster %(id)s.');
+            params = { id: id };
+          }
+          toastService.add('error', interpolate(msg, params, true));
         });
     }
 

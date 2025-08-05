@@ -220,6 +220,13 @@
         "testInput": [123, [123]]
       },
       {
+        "func": "rotateCredential",
+        "method": "patch",
+        "path": "/api/container_infra/credentials/123",
+        "error": "Unable to rotate credentials for cluster 123.",
+        "testInput": [123]
+      },
+      {
         "func": "getQuotas",
         "method": "get",
         "path": "/api/container_infra/quotas/",

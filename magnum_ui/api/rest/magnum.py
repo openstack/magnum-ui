@@ -376,6 +376,17 @@ class Certificates(generic.View):
 
 
 @urls.register
+class RotateCredential(generic.View):
+    """API for rotating a cluster credential"""
+    url_regex = r'container_infra/credentials/(?P<cluster_id>[^/]+)$'
+
+    @rest_utils.ajax()
+    def patch(self, request, cluster_id):
+        """Rotate the existing credential"""
+        return magnum.credential_rotate(request, cluster_id).to_dict()
+
+
+@urls.register
 class Stats(generic.View):
     """API for Magnum Stats"""
     url_regex = r'container_infra/stats/$'
