@@ -561,17 +561,48 @@
     }
 
     function onGetNetworks(response) {
-      externalNetworks = [{value:"", name: gettext("Choose a External Network")}];
-      fixedNetworks = [{value:"", name: gettext("Choose a Private Network")}];
-      angular.forEach(response.data.items, function(item) {
-        if (item["router:external"]) {
-          externalNetworks.push({value: item.id, name: item.name});
+      var items = response && response.data &&
+        (response.data.items || response.data.networks) || [];
+
+      externalNetworks = [{ value: '', name: gettext('Choose a External Network') }];
+      fixedNetworks = [{ value: '', name: gettext('Choose a Private Network') }];
+
+      function isExternal(net) {
+        return net['router:external'] === true || net.is_router_external === true;
+      }
+
+      function normalizeSubnets(net) {
+        var out = [];
+        if (angular.isArray(net.subnets) && net.subnets.length) {
+          angular.forEach(net.subnets, function (s) {
+            var id = s.id || s;
+            var name = s.name || id;
+            out.push({ id: id, name: name });
+          });
+        } else if (angular.isArray(net.subnet_ids) && net.subnet_ids.length) {
+          angular.forEach(net.subnet_ids, function (id) {
+            out.push({ id: id, name: id });
+          });
+        }
+        return out;
+      }
+
+      angular.forEach(items, function (net) {
+        var label = net.name || net.id;
+        if (isExternal(net)) {
+          externalNetworks.push({ value: net.id, name: label });
         } else {
-          fixedNetworks.push({value: item.id, name: item.name, subnets: item.subnets});
+          fixedNetworks.push({
+            value: net.id,
+            name: label,
+            subnets: normalizeSubnets(net)
+          });
         }
       });
+
       form[0].tabs[2].items[0].items[0].items[4].titleMap = externalNetworks;
       form[0].tabs[2].items[0].items[0].items[5].titleMap = fixedNetworks;
+
       var deferred = $q.defer();
       deferred.resolve({
         externalNetworks: externalNetworks,
