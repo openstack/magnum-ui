@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-22 12:34+0000\n"
+"POT-Creation-Date: 2025-08-06 16:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-07-28 09:07+0000\n"
+"PO-Revision-Date: 2025-09-03 12:08+0000\n"
 "Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -39,7 +39,7 @@ msgid ""
 "the internet. It is generally not recommended to give public access to the "
 "Kubernetes API. Consider limiting the access using the Allowed CIDRs section."
 msgstr ""
-"Публичный плавающий IP-адрес означает, что API Kubernetes будет доступен для "
+"Публичный плавающий IP означает, что API Kubernetes будет доступен для "
 "публичной маршрутизации в интернете. Как правило, не рекомендуется "
 "предоставлять публичный доступ к API Kubernetes. Рассмотрите возможность "
 "ограничения доступа с помощью раздела \"Разрешенные CIDR\"."
@@ -62,8 +62,9 @@ msgstr "Порт API сервера"
 msgid "Accessible on private network only"
 msgstr "Доступен только в приватной сети"
 
+#, fuzzy
 msgid "Accessible with public floating IP"
-msgstr "Доступно по публичному плавающему IP-адресу"
+msgstr "Доступно с публичным плавающим IP"
 
 msgid "Additional Labels"
 msgstr "Дополнительные метки"
@@ -163,7 +164,7 @@ msgid "Choose a Cluster Template to upgrade to"
 msgstr "Выберите шаблон кластера для обновления"
 
 msgid "Choose a Container Orchestration Engine"
-msgstr "Выберите движок оркестрации контейнеров"
+msgstr "Выберите движок оркестрации контейнера"
 
 msgid "Choose a External Network"
 msgstr "Выберите внешнюю сеть"
@@ -172,7 +173,7 @@ msgid "Choose a Flavor for the Control Plane nodes"
 msgstr "Выберите шаблон конфигурации для узлов управляющего слоя"
 
 msgid "Choose a Flavor for the Master Node"
-msgstr "Выберите шаблон конфигураци для мастер узла"
+msgstr "Выберите шаблон конфигурации для мастер узла"
 
 msgid "Choose a Flavor for the Node"
 msgstr "Выберите шаблон конфигурации для узла"
@@ -259,12 +260,13 @@ msgstr "Тип кластера"
 msgid "Cluster is being resized."
 msgstr "Кластер в процессе изменения размера."
 
+#, fuzzy
 msgid "Cluster is being upgraded to the new Cluster template"
-msgstr "Кластер был обновлен до нового шаблона"
+msgstr "Кластер в процессе обновления до нового шаблона кластера"
 
 #, python-format
 msgid "Cluster template %s was successfully created."
-msgstr "Шаблон кластера %s создан успешно."
+msgstr "Шаблон кластера %s был успешно создан."
 
 #, python-format
 msgid "Cluster template %s was successfully updated."
@@ -292,7 +294,7 @@ msgstr[1] "Подтвердите удаление квот"
 msgstr[2] "Подтвердите удаление квот"
 
 msgid "Container Orchestration Engine"
-msgstr "Движок оркестрации контейнеров"
+msgstr "Движок оркестрации контейнера"
 
 msgid "Container Version"
 msgstr "Версия контейнера"
@@ -328,7 +330,7 @@ msgid "Create Quota"
 msgstr "Создать квоту"
 
 msgid "Created"
-msgstr "Создано"
+msgstr "Создан"
 
 msgid "Created At"
 msgstr "Создано в"
@@ -397,7 +399,7 @@ msgstr[1] "Удалены квоты: %s."
 msgstr[2] "Удалены квоты: %s."
 
 msgid "Details"
-msgstr "Детали"
+msgstr "Подробности"
 
 msgid "Device Mapper"
 msgstr "Сопоставитель устройств"
@@ -484,10 +486,10 @@ msgid "Hard Limit"
 msgstr "Жесткий лимит"
 
 msgid "Health Status"
-msgstr "Статус"
+msgstr "Состояние здоровья"
 
 msgid "Health Status Reason"
-msgstr "Причина состояния"
+msgstr "Причина состояния здоровья"
 
 msgid "Hidden"
 msgstr "Скрытый"
@@ -527,10 +529,10 @@ msgid ""
 "from any address. When set to one or more CIDR then only those, plus the "
 "internal network, are permitted access to the Kubernetes API Loadbalancer."
 msgstr ""
-"Если это поле оставить пустым, API Loadbalancer будет принимать подключения "
-"с любого адреса. Если задано одно или несколько CIDR-адресов, то доступ к "
-"API Loadbalancer Kubernetes будет разрешён только этим адресам и внутренней "
-"сети."
+"Если это поле оставить пустым, балансировщик нагрузки API будет принимать "
+"подключения с любого адреса. Если задано одно или несколько CIDR-адресов, то "
+"доступ к балансировщику нагрузки API Kubernetes будет разрешён только этим "
+"адресам и внутренней сети."
 
 msgid "Image"
 msgstr "Образ"
@@ -542,15 +544,15 @@ msgid ""
 "Indicates whether created clusters should have a floating ip or not. "
 "Default: True"
 msgstr ""
-"Указывает должен ли созданный кластер иметь плавающий IP или нет. По "
+"Указывает должны ли созданные кластеры иметь плавающий IP или нет. По "
 "умолчанию: Да"
 
 msgid ""
 "Indicates whether created clusters should have a load balancer for master "
 "nodes or not. Default: False"
 msgstr ""
-"Указывает должен ли созданный кластер иметь балансировщика нагрузки для "
-"мастер узлов или нет. По умолчанию: Да"
+"Указывает должны ли созданные кластеры иметь балансировщик нагрузки для "
+"мастер узлов или нет. По умолчанию: Нет"
 
 msgid "Infinite"
 msgstr "Бесконечно"
@@ -594,7 +596,7 @@ msgid "Kubernetes API Address"
 msgstr "Адрес API Kubernetes"
 
 msgid "Kubernetes API Loadbalancer"
-msgstr "Kubernetes API Loadbalancer"
+msgstr "Балансировщик нагрузки API Kubernetes"
 
 msgid "Kubernetes Version"
 msgstr "Версия Kubernetes"
@@ -772,7 +774,7 @@ msgstr "Квота"
 
 #, python-format
 msgid "Quota %s was successfully created."
-msgstr "Квота %s успешно создана."
+msgstr "Квота %s была успешно создана."
 
 #, python-format
 msgid "Quota %s/%s was successfully updated."
@@ -844,7 +846,7 @@ msgstr ""
 "нестабилен или не сможет быть создан."
 
 msgid "Specify the Container Orchestration Engine to use."
-msgstr "Укажите движок оркестрации контейнеров."
+msgstr "Укажите движок оркестрации контейнера для использования."
 
 msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
@@ -1101,7 +1103,7 @@ msgid "Update Quota"
 msgstr "Обновить квоту"
 
 msgid "Updated"
-msgstr "Обновлено"
+msgstr "Обновлен"
 
 msgid "Updated At"
 msgstr "Обновлено в"
