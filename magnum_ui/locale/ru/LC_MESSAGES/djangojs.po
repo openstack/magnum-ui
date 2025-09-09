@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-08-06 16:54+0000\n"
+"POT-Creation-Date: 2025-09-04 01:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-09-03 12:08+0000\n"
+"PO-Revision-Date: 2025-09-08 11:00+0000\n"
 "Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
@@ -62,9 +62,8 @@ msgstr "Порт API сервера"
 msgid "Accessible on private network only"
 msgstr "Доступен только в приватной сети"
 
-#, fuzzy
 msgid "Accessible with public floating IP"
-msgstr "Доступно с публичным плавающим IP"
+msgstr "Доступен по публичному плавающему IP"
 
 msgid "Additional Labels"
 msgstr "Дополнительные метки"
@@ -260,9 +259,8 @@ msgstr "Тип кластера"
 msgid "Cluster is being resized."
 msgstr "Кластер в процессе изменения размера."
 
-#, fuzzy
 msgid "Cluster is being upgraded to the new Cluster template"
-msgstr "Кластер в процессе обновления до нового шаблона кластера"
+msgstr "Кластер обновляется до нового шаблона кластера"
 
 #, python-format
 msgid "Cluster template %s was successfully created."
@@ -274,6 +272,9 @@ msgstr "Шаблон кластера %s был успешно обновлен.
 
 msgid "Clusters"
 msgstr "Кластеры"
+
+msgid "Confirm Credential Rotation"
+msgstr "Подтвердите ротацию учетных данных"
 
 msgid "Confirm Delete Cluster"
 msgid_plural "Confirm Delete Clusters"
@@ -335,6 +336,10 @@ msgstr "Создан"
 msgid "Created At"
 msgstr "Создано в"
 
+#, python-format
+msgid "Credentials successfully rotated for cluster \"%(name)s\" (%(id)s)."
+msgstr "Учетные данные успешно заменены для кластера \"%(name)s\" (%(id)s)."
+
 msgid "DC/OS"
 msgstr "DC/OS"
 
@@ -387,9 +392,9 @@ msgstr[2] "Удалены шаблоны кластера: %s."
 #, python-format
 msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
-msgstr[0] "Кластер удален: %s."
-msgstr[1] "Кластеры удалены: %s."
-msgstr[2] "Кластеры удалены: %s."
+msgstr[0] "Удален кластер: %s."
+msgstr[1] "Удалены кластеры: %s."
+msgstr[2] "Удалены кластеры: %s."
 
 #, python-format
 msgid "Deleted quota: %s."
@@ -813,6 +818,9 @@ msgstr "Пошаговое обновление кластера"
 msgid "Rotate Certificate"
 msgstr "Обновить сертификат"
 
+msgid "Rotate Cluster Credentials"
+msgstr "Ротировать учетные данные кластера"
+
 msgid "SNAPSHOT COMPLETE"
 msgstr "Снимок создан успешно"
 
@@ -1081,6 +1089,26 @@ msgstr "Не удалось получить квоты."
 msgid "Unable to retrieve the stats."
 msgstr "Не удалось получить статистику."
 
+#, python-format
+msgid "Unable to rotate credentials for cluster \"%(name)s\" (%(id)s)."
+msgstr ""
+"Не удалось ротировать учетные данные для кластера \"%(name)s\" (%(id)s)."
+
+#, python-format
+msgid ""
+"Unable to rotate credentials for cluster \"%(name)s\" (%(id)s): %(reason)s."
+msgstr ""
+"Не удалось ротировать учетные данные для кластера \"%(name)s\" (%(id)s): "
+"%(reason)s."
+
+#, python-format
+msgid "Unable to rotate credentials for cluster %(id)s."
+msgstr "Не удалось ротировать учетные данные для кластера %(id)s."
+
+#, python-format
+msgid "Unable to rotate credentials for cluster %(id)s: %(reason)s."
+msgstr "Не удалось ротировать учетные данные для кластера %(id)s: %(reason)s."
+
 msgid "Unable to rotate the certificate."
 msgstr "Не удалось сменить сертификат."
 
@@ -1157,6 +1185,16 @@ msgid "You cannot resize to fewer than zero worker nodes."
 msgstr ""
 "Вы не можете уменьшить количество рабочих узлов до значения, меньшего, чем "
 "ноль."
+
+#, python-format
+msgid ""
+"You have chosen to rotate the credentials for cluster \"%(name)s\" (%(id)s). "
+"If you are not already the owner of this cluster, the cluster ownership will "
+"transfer to you."
+msgstr ""
+"Вы решили сменить учетные данные для кластера \"%(name)s\" (%(id)s). Если вы "
+"ещё не являетесь владельцем этого кластера, право владения кластером "
+"перейдёт к вам."
 
 #, python-format
 msgid ""
