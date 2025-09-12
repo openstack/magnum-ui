@@ -1,15 +1,10 @@
-========================
-Team and repository tags
-========================
-
-.. image:: https://governance.openstack.org/tc/badges/magnum-ui.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
-
-.. Change things from this point on
-
 =========
 Magnum UI
 =========
+
+.. image:: https://governance.openstack.org/tc/badges/magnum-ui.svg
+
+.. Change things from this point on
 
 Horizon plugin for Magnum
 
@@ -25,15 +20,15 @@ Enabling in DevStack
 Add this repo as an external repository into your ``local.conf`` file::
 
     [[local|localrc]]
-    enable_plugin magnum-ui https://github.com/openstack/magnum-ui
+    enable_plugin magnum-ui https://opendev.org/openstack/magnum-ui
 
 Manual Installation
 -------------------
 
 Begin by cloning the Horizon and Magnum UI repositories::
 
-    git clone https://github.com/openstack/horizon
-    git clone https://github.com/openstack/magnum-ui
+    git clone https://opendev.org/openstack/horizon
+    git clone https://opendev.org/openstack/magnum-ui
 
 Create a virtual environment and install Horizon dependencies::
 
