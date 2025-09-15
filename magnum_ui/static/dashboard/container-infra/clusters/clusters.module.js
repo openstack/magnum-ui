@@ -137,21 +137,21 @@
       'name': 'status',
       'singleton': true,
       'options': [
-        {label: gettext('ADOPT COMPLETE'), key: 'ADOPT_COMPLETE'},
-        {label: gettext('CHECK COMPLETE'), key: 'CHECK_COMPLETE'},
-        {label: gettext('CREATE COMPLETE'), key: 'CREATE_COMPLETE'},
-        {label: gettext('CREATE FAILED'), key: 'CREATE_FAILED'},
-        {label: gettext('CREATE IN PROGRESS'), key: 'CREATE_IN_PROGRESS'},
-        {label: gettext('DELETE COMPLETE'), key: 'DELETE_COMPLETE'},
-        {label: gettext('DELETE FAILED'), key: 'DELETE_FAILED'},
-        {label: gettext('DELETE IN PROGRESS'), key: 'DELETE_IN_PROGRESS'},
-        {label: gettext('RESTORE COMPLETE'), key: 'RESTORE_COMPLETE'},
-        {label: gettext('RESUME COMPLETE'), key: 'RESUME_COMPLETE'},
-        {label: gettext('ROLLBACK COMPLETE'), key: 'ROLLBACK_COMPLETE'},
-        {label: gettext('SNAPSHOT COMPLETE'), key: 'SNAPSHOT_COMPLETE'},
-        {label: gettext('UPDATE COMPLETE'), key: 'UPDATE_COMPLETE'},
-        {label: gettext('UPDATE FAILED'), key: 'UPDATE_FAILED'},
-        {label: gettext('UPDATE IN PROGRESS'), key: 'UPDATE_IN_PROGRESS'}
+        {label: gettext('Adopt complete'), key: 'ADOPT_COMPLETE'},
+        {label: gettext('Check complete'), key: 'CHECK_COMPLETE'},
+        {label: gettext('Create complete'), key: 'CREATE_COMPLETE'},
+        {label: gettext('Create failed'), key: 'CREATE_FAILED'},
+        {label: gettext('Create in progress'), key: 'CREATE_IN_PROGRESS'},
+        {label: gettext('Delete complete'), key: 'DELETE_COMPLETE'},
+        {label: gettext('Delete failed'), key: 'DELETE_FAILED'},
+        {label: gettext('Delete in progress'), key: 'DELETE_IN_PROGRESS'},
+        {label: gettext('Restore complete'), key: 'RESTORE_COMPLETE'},
+        {label: gettext('Resume complete'), key: 'RESUME_COMPLETE'},
+        {label: gettext('Rollback complete'), key: 'ROLLBACK_COMPLETE'},
+        {label: gettext('Snapshot complete'), key: 'SNAPSHOT_COMPLETE'},
+        {label: gettext('Update complete'), key: 'UPDATE_COMPLETE'},
+        {label: gettext('Update failed'), key: 'UPDATE_FAILED'},
+        {label: gettext('Update in progress'), key: 'UPDATE_IN_PROGRESS'}
       ]
     })
     .append({
