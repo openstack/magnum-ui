@@ -1,6 +1,6 @@
-# Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# Sungjin Kang <ujuc@ujuc.me>, 2016. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2017. #zanata
-# Sungjin Kang <gang.sungjin@gmail.com>, 2017. #zanata
+# Sungjin Kang <ujuc@ujuc.me>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
 # Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-22 12:34+0000\n"
+"POT-Creation-Date: 2025-09-15 03:00+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,9 +19,6 @@ msgstr ""
 "X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-msgid "ADOPT COMPLETE"
-msgstr "ADOPT COMPLETE"
-
 msgid "API Address"
 msgstr "API 주소"
 
@@ -31,23 +28,11 @@ msgstr "API 서버 포트"
 msgid "An arbitrary human-readable name"
 msgstr "사람이 읽을 수 있는 임의의 이름"
 
-msgid "CHECK COMPLETE"
-msgstr "CHECK COMPLETE"
-
 msgid "COE"
 msgstr "COE"
 
 msgid "COE Version"
 msgstr "COE 버전"
-
-msgid "CREATE COMPLETE"
-msgstr "CREATE COMPLETE"
-
-msgid "CREATE FAILED"
-msgstr "CREATE FAILED"
-
-msgid "CREATE IN PROGRESS"
-msgstr "CREATE IN PROGRESS"
 
 msgid "CSR"
 msgstr "CSR"
@@ -188,15 +173,6 @@ msgstr "생성 시점"
 
 msgid "DC/OS"
 msgstr "DC/OS"
-
-msgid "DELETE COMPLETE"
-msgstr "DELETE COMPLETE"
-
-msgid "DELETE FAILED"
-msgstr "DELETE FAILED"
-
-msgid "DELETE IN PROGRESS"
-msgstr "DELETE IN PROGRESS"
 
 msgid "DNS"
 msgstr "DNS"
@@ -445,15 +421,6 @@ msgstr "할댱량 %s/%s 이 성공적으로 업데이트 되었습니다."
 msgid "Quotas"
 msgstr "할당량"
 
-msgid "RESTORE COMPLETE"
-msgstr "RESTORE COMPLETE"
-
-msgid "RESUME COMPLETE"
-msgstr "RESUME COMPLETE"
-
-msgid "ROLLBACK COMPLETE"
-msgstr "ROLLBACK COMPLETE"
-
 msgid "Record Properties"
 msgstr "레코드 속성"
 
@@ -468,9 +435,6 @@ msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "인증서 교체"
-
-msgid "SNAPSHOT COMPLETE"
-msgstr "SNAPSHOT COMPLETE"
 
 msgid "Server Type"
 msgstr "서버 유형"
@@ -555,15 +519,6 @@ msgstr "Docker 볼륨의 크기(GB)입니다. 기본값: 25"
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "실제로 fixed-network-cidr로 이름이 지정되어야 합니다. 기본값: 10.0.0.0/24"
-
-msgid "UPDATE COMPLETE"
-msgstr "UPDATE COMPLETE"
-
-msgid "UPDATE FAILED"
-msgstr "UPDATE FAILED"
-
-msgid "UPDATE IN PROGRESS"
-msgstr "UPDATE IN PROGRESS"
 
 msgid "Unable to create cluster template."
 msgstr "클러스터 템플릿을 생성할 수 없습니다."
