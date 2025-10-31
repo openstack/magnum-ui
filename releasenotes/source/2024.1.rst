@@ -3,4 +3,6 @@
 ===========================
 
 .. release-notes::
-   :branch: stable/2024.1
+   :branch: unmaintained/2024.1
+   :ignore-notes:
+     queens-f99244e9db54ccf3.yaml
