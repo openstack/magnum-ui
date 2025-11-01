@@ -9,12 +9,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-09-04 01:39+0000\n"
+"POT-Creation-Date: 2025-10-31 13:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2025-09-08 11:00+0000\n"
-"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
+"PO-Revision-Date: 2025-09-15 12:19+0000\n"
+"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -44,9 +44,6 @@ msgstr ""
 "предоставлять публичный доступ к API Kubernetes. Рассмотрите возможность "
 "ограничения доступа с помощью раздела \"Разрешенные CIDR\"."
 
-msgid "ADOPT COMPLETE"
-msgstr "Принятие завершено"
-
 msgid "API Address"
 msgstr "Адрес API"
 
@@ -73,6 +70,9 @@ msgstr "Дополнительное программное обеспечени
 
 msgid "Addon software"
 msgstr "Дополнительное программное обеспечение"
+
+msgid "Adopt complete"
+msgstr "Принятие завершено"
 
 msgid "Advanced"
 msgstr "Дополнительно"
@@ -121,23 +121,11 @@ msgstr "Автоматически восстанавливать нездоро
 msgid "Availability Zone"
 msgstr "Зона доступности"
 
-msgid "CHECK COMPLETE"
-msgstr "Проверка завершена"
-
 msgid "COE"
 msgstr "COE"
 
 msgid "COE Version"
 msgstr "Версия COE"
-
-msgid "CREATE COMPLETE"
-msgstr "Создание завершено"
-
-msgid "CREATE FAILED"
-msgstr "Создание не удалось"
-
-msgid "CREATE IN PROGRESS"
-msgstr "Выполняется создание"
 
 msgid "CSR"
 msgstr "CSR"
@@ -155,6 +143,9 @@ msgstr "Сертификат %s был успешно обновлен."
 #, python-format
 msgid "Certificate %s was successfully signed."
 msgstr "Сертификат %s был успешно подписан."
+
+msgid "Check complete"
+msgstr "Проверка завершена"
 
 msgid "Choose a Cluster Template"
 msgstr "Выберите шаблон кластера"
@@ -330,6 +321,15 @@ msgstr "Создать новую сеть"
 msgid "Create Quota"
 msgstr "Создать квоту"
 
+msgid "Create complete"
+msgstr "Создание завершено"
+
+msgid "Create failed"
+msgstr "Создание не удалось"
+
+msgid "Create in progress"
+msgstr "Выполняется создание"
+
 msgid "Created"
 msgstr "Создан"
 
@@ -342,15 +342,6 @@ msgstr "Учетные данные успешно заменены для кл�
 
 msgid "DC/OS"
 msgstr "DC/OS"
-
-msgid "DELETE COMPLETE"
-msgstr "Удаление завершено"
-
-msgid "DELETE FAILED"
-msgstr "Удаление не удалось"
-
-msgid "DELETE IN PROGRESS"
-msgstr "Выполняется удаление"
 
 msgid "DNS"
 msgstr "DNS"
@@ -381,6 +372,15 @@ msgstr[2] "Удалить квоты"
 
 msgid "Delete Quotas"
 msgstr "Удалить квоты"
+
+msgid "Delete complete"
+msgstr "Удаление завершено"
+
+msgid "Delete failed"
+msgstr "Удаление не удалось"
+
+msgid "Delete in progress"
+msgstr "Выполняется удаление"
 
 #, python-format
 msgid "Deleted cluster template: %s."
@@ -788,15 +788,6 @@ msgstr "Квота %s/%s была успешно обновлена."
 msgid "Quotas"
 msgstr "Квоты"
 
-msgid "RESTORE COMPLETE"
-msgstr "Восстановление завершено"
-
-msgid "RESUME COMPLETE"
-msgstr "Возобновление завершено"
-
-msgid "ROLLBACK COMPLETE"
-msgstr "Откат завершен"
-
 msgid "Record Properties"
 msgstr "Свойства записи"
 
@@ -809,8 +800,17 @@ msgstr "Изменить размер кластера"
 msgid "Resource"
 msgstr "Ресурс"
 
+msgid "Restore complete"
+msgstr "Восстановление завершено"
+
+msgid "Resume complete"
+msgstr "Возобновление завершено"
+
 msgid "Rexray"
 msgstr "Rexray"
+
+msgid "Rollback complete"
+msgstr "Откат завершен"
 
 msgid "Rolling Cluster Upgrade"
 msgstr "Пошаговое обновление кластера"
@@ -820,9 +820,6 @@ msgstr "Обновить сертификат"
 
 msgid "Rotate Cluster Credentials"
 msgstr "Ротировать учетные данные кластера"
-
-msgid "SNAPSHOT COMPLETE"
-msgstr "Снимок создан успешно"
 
 msgid "Security Updates"
 msgstr "Обновления безопасности"
@@ -842,6 +839,9 @@ msgstr "Подписать cертификат для кластера: {$ ctrl.
 
 msgid "Size"
 msgstr "Размер"
+
+msgid "Snapshot complete"
+msgstr "Снимок успешно создан"
 
 msgid ""
 "Specify additional labels to apply to the cluster or override labels set by "
@@ -978,15 +978,6 @@ msgstr "Размер тома Docker в ГБ. По умолчанию: 25"
 msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Здесь должен быть указан CIDR фиксированной сети. По умолчанию: 10.0.0.0/24"
-
-msgid "UPDATE COMPLETE"
-msgstr "Обновление завершено"
-
-msgid "UPDATE FAILED"
-msgstr "Обновление не удалось"
-
-msgid "UPDATE IN PROGRESS"
-msgstr "Выполняется обновление"
 
 msgid "Unable to create cluster template."
 msgstr "Не удалось создать шаблон кластера."
@@ -1129,6 +1120,15 @@ msgstr "Обновить шаблон кластера"
 
 msgid "Update Quota"
 msgstr "Обновить квоту"
+
+msgid "Update complete"
+msgstr "Обновление завершено"
+
+msgid "Update failed"
+msgstr "Обновление не удалось"
+
+msgid "Update in progress"
+msgstr "Выполняется обновление"
 
 msgid "Updated"
 msgstr "Обновлен"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-22 12:34+0000\n"
+"POT-Creation-Date: 2025-10-31 13:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,9 +20,6 @@ msgstr ""
 "X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-msgid "ADOPT COMPLETE"
-msgstr "ÜBERNAHME ABGESCHLOSSEN"
-
 msgid "API Address"
 msgstr "API Adresse"
 
@@ -32,23 +29,11 @@ msgstr "API Server Port"
 msgid "An arbitrary human-readable name"
 msgstr "Ein beliebiger menschenlesbarer Name"
 
-msgid "CHECK COMPLETE"
-msgstr "ÜBERPRÜFUNG ABGESCHLOSSEN"
-
 msgid "COE"
 msgstr "COE"
 
 msgid "COE Version"
 msgstr "COE Version"
-
-msgid "CREATE COMPLETE"
-msgstr "ERSTELLUNG ABGESCHLOSSEN"
-
-msgid "CREATE FAILED"
-msgstr "ERSTELLUNG FEHLGESCHLAGEN"
-
-msgid "CREATE IN PROGRESS"
-msgstr "ERSTELLUNG IN ARBEIT"
 
 msgid "CSR"
 msgstr "CSR"
@@ -198,15 +183,6 @@ msgstr "Erstellt am"
 
 msgid "DC/OS"
 msgstr "DC/OS"
-
-msgid "DELETE COMPLETE"
-msgstr "LÖSCHUNG ABGESCHLOSSEN"
-
-msgid "DELETE FAILED"
-msgstr "LÖSCHUNG FEHLGESCHLAGEN"
-
-msgid "DELETE IN PROGRESS"
-msgstr "LÖSCHUNG IN ARBEIT"
 
 msgid "DNS"
 msgstr "DNS"
@@ -467,15 +443,6 @@ msgstr "Kontingent %s/%s wurde erfolgreich aktualisiert."
 msgid "Quotas"
 msgstr "Kontingente"
 
-msgid "RESTORE COMPLETE"
-msgstr "WIEDERHERSTELLUNG ABGESCHLOSSEN"
-
-msgid "RESUME COMPLETE"
-msgstr "WIEDERAUFNAHME ABGESCHLOSSEN"
-
-msgid "ROLLBACK COMPLETE"
-msgstr "RÜCKABWICKLUNG ABGESCHLOSSEN"
-
 msgid "Record Properties"
 msgstr "Datensatzeigenschaften"
 
@@ -493,9 +460,6 @@ msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "Zertifikat rotieren"
-
-msgid "SNAPSHOT COMPLETE"
-msgstr "SCHATTENKOPIE ABGESCHLOSSEN"
 
 msgid "Server Type"
 msgstr "Servertyp"
@@ -585,15 +549,6 @@ msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Das sollte wirklich nach fixed-network-cidr benannt werden. Standard: "
 "10.0.0.0/24"
-
-msgid "UPDATE COMPLETE"
-msgstr "AKTUALISIERUNG ABGESCHLOSSEN"
-
-msgid "UPDATE FAILED"
-msgstr "AKTUALISIERUNG FEHLGESCHLAGEN"
-
-msgid "UPDATE IN PROGRESS"
-msgstr "AKTUALISIERUNG IN ARBEIT"
 
 msgid "Unable to create cluster template."
 msgstr "Clustervorlage kann nicht erstellt werden."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2025-07-22 12:34+0000\n"
+"POT-Creation-Date: 2025-10-31 13:49+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,9 +16,6 @@ msgstr ""
 "X-Generator: Zanata 4.3.3\n"
 "X-POOTLE-MTIME: 1495445554.000000\n"
 
-msgid "ADOPT COMPLETE"
-msgstr "ADOPT TAMAMLANDI"
-
 msgid "API Address"
 msgstr "API Adresi"
 
@@ -28,20 +25,8 @@ msgstr "API Sunucu Bağlantı Noktası"
 msgid "An arbitrary human-readable name"
 msgstr "Keyfi okunabilir bir isim"
 
-msgid "CHECK COMPLETE"
-msgstr "KONTROL TAMAMLANDI"
-
 msgid "COE"
 msgstr "COE"
-
-msgid "CREATE COMPLETE"
-msgstr "OLUŞTURMA TAMAMLANDI"
-
-msgid "CREATE FAILED"
-msgstr "OLUŞTURMA BAŞARISIZ"
-
-msgid "CREATE IN PROGRESS"
-msgstr "OLUŞTURMA SÜRÜYOR"
 
 msgid "Cancel"
 msgstr "İptal"
@@ -162,15 +147,6 @@ msgstr "Oluşturuldu"
 
 msgid "DC/OS"
 msgstr "DC/OS"
-
-msgid "DELETE COMPLETE"
-msgstr "SİLME TAMAMLANDI"
-
-msgid "DELETE FAILED"
-msgstr "SİLME BAŞARISIZ"
-
-msgid "DELETE IN PROGRESS"
-msgstr "SİLME SÜRÜYOR"
 
 msgid "DNS"
 msgstr "DNS"
@@ -367,15 +343,6 @@ msgstr "Genel Görünüm"
 msgid "Public"
 msgstr "Açık"
 
-msgid "RESTORE COMPLETE"
-msgstr "GERİ YÜKLEME TAMAMLANDI"
-
-msgid "RESUME COMPLETE"
-msgstr "DEVAM ETME TAMAMLANDI"
-
-msgid "ROLLBACK COMPLETE"
-msgstr "GERİ ALMA TAMAMLANDI"
-
 msgid "Record Properties"
 msgstr "Kayıt Özellikleri"
 
@@ -387,9 +354,6 @@ msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "Sertifikayı döndür"
-
-msgid "SNAPSHOT COMPLETE"
-msgstr "ANLIK GÖRÜNTÜ TAMAMLANDI"
 
 msgid "Server Type"
 msgstr "Sunucu Türü"
@@ -466,15 +430,6 @@ msgid "This should really be named fixed-network-cidr. Default: 10.0.0.0/24"
 msgstr ""
 "Bunun gerçekten fixed-network-cidr olarak isimlendirilmesi gerekir. "
 "Öntanımlı: 10.0.0.0/24"
-
-msgid "UPDATE COMPLETE"
-msgstr "GÜNCELLEME TAMAMLANDI"
-
-msgid "UPDATE FAILED"
-msgstr "GÜNCELLEME BAŞARISIZ"
-
-msgid "UPDATE IN PROGRESS"
-msgstr "GÜNCELLEME SÜRÜYOR"
 
 msgid "Unable to create cluster template."
 msgstr "Küme şablonu oluşturulamıyor."
