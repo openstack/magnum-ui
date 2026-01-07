@@ -85,9 +85,6 @@ Examples:
             "selected": True,
             "labels": {
                 "kube_dashboard_enabled": True
-            },
-            "labels_unselected": {
-                "kube_dashboard_enabled": False
             }
         },
         {
@@ -95,9 +92,6 @@ Examples:
             "selected": False,
             "labels": {
                 "influx_grafana_dashboard_enabled": True
-            },
-            "labels_unselected": {
-                "influx_grafana_dashboard_enabled": False
             }
         }
     ]
