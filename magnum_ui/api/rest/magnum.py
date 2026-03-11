@@ -166,6 +166,10 @@ class ClusterTemplates(generic.View):
                         new_templates += groups[group]
                     templates = set(new_templates)
 
+        # Sort clusters alphabetically by name.
+        # This should result in newer K8s versions at the bottom.
+        templates.sort(key=lambda t: t.name, reverse=False)
+
         return {'items': [change_to_id(n.to_dict()) for n in templates]}
 
     @rest_utils.ajax(data_required=True)
