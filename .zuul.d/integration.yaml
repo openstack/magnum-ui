@@ -1,0 +1,47 @@
+---
+- job:
+    name: magnum-ui-integration-tests-playwright
+    parent: devstack
+    nodeset: devstack-single-node-debian-bookworm
+    pre-run: playbooks/playwright/pre.yaml
+    run: playbooks/playwright/run.yaml
+    post-run: playbooks/playwright/post.yaml
+    required-projects:
+      - name: openstack/horizon
+      - name: openstack/magnum
+      - name: openstack/magnum-ui
+      - name: openstack/python-magnumclient
+    roles:
+      - zuul: openstack/devstack
+      - zuul: openstack/horizon
+    irrelevant-files:
+      - ^.*\.rst$
+      - ^doc/.*$
+      - ^releasenotes/.*$
+    vars:
+      zuul_copy_output:
+        '{{ zuul.project.src_dir }}/playwright': logs
+      devstack_plugins:
+        magnum: https://opendev.org/openstack/magnum
+        magnum-ui: https://opendev.org/openstack/magnum-ui
+      devstack_services:
+        horizon: true
+        s-account: false
+        s-container: false
+        s-object: false
+        s-proxy: false
+      tox_envlist: integration-playwright
+      tox_environment:
+        PLAYWRIGHT_BROWSER: webkit
+        PLAYWRIGHT_VIDEO: retain-on-failure
+        PLAYWRIGHT_TRACE: retain-on-failure
+        PLAYWRIGHT_HEADLESS: true
+
+- project-template:
+    name: magnum-ui-integration-jobs
+    check:
+      jobs:
+        - magnum-ui-integration-tests-playwright
+    gate:
+      jobs:
+        - magnum-ui-integration-tests-playwright

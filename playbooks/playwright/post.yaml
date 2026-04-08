@@ -1,0 +1,34 @@
+---
+- hosts: all
+  roles:
+    - fetch-tox-output
+    - fetch-subunit-output
+  tasks:
+    # Failed tests reference their screenshots, videos and traces as
+    # 'playwright/...' paths (see add_artifact_detail() in
+    # playwright_base.py) - turn them into links. testr_results.html is
+    # stored in the log root, while devstack jobs collect zuul_copy_output
+    # under '<host>/logs/' (e.g. controller/logs/playwright/...).
+    # fetch-subunit-output stores the report on the node when fetch-output
+    # is used, otherwise directly in the executor log root.
+    - name: Set testr_results.html location
+      ansible.builtin.set_fact:
+        _testr_on_node: "{{ zuul_use_fetch_output | default(zuul_site_use_fetch_output | default(false)) | bool }}"
+
+    - name: Set testr_results.html path
+      ansible.builtin.set_fact:
+        _testr_results: "{{ ((zuul_output_dir | default(ansible_user_dir ~ '/zuul-output')) ~ '/logs') if _testr_on_node else zuul.executor.log_root }}/testr_results.html"
+
+    - name: Check for testr_results.html
+      ansible.builtin.stat:
+        path: "{{ _testr_results }}"
+      register: _testr_results_stat
+      delegate_to: "{{ inventory_hostname if _testr_on_node else 'localhost' }}"
+
+    - name: Link Playwright artifacts in testr_results.html
+      ansible.builtin.replace:
+        path: "{{ _testr_results }}"
+        regexp: '(playwright/[\w./-]+\.(?:png|webm|zip))'
+        replace: '<a href="{{ inventory_hostname }}/logs/\g<1>">\g<1></a>'
+      when: _testr_results_stat.stat.exists
+      delegate_to: "{{ inventory_hostname if _testr_on_node else 'localhost' }}"

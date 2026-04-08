@@ -21,3 +21,8 @@ releasenotes/build
 *.mo
 *nose_results.html
 .DS_Store
+
+# Playwright test artifacts
+/playwright/
+/.playwright/
+.stestr/
