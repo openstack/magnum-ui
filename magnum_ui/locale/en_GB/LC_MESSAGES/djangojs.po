@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2024-06-11 12:17+0000\n"
+"POT-Creation-Date: 2026-01-08 21:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,9 +46,6 @@ msgstr "API Server Port"
 
 msgid "Accessible on private network only"
 msgstr "Accessible on private network only"
-
-msgid "Accessible on the public internet"
-msgstr "Accessible on the public Internet"
 
 msgid "Additional Labels"
 msgstr "Additional Labels"
@@ -213,9 +210,6 @@ msgstr "Cluster"
 #, python-format
 msgid "Cluster %s was successfully created."
 msgstr "Cluster %s was successfully created."
-
-msgid "Cluster API"
-msgstr "Cluster API"
 
 msgid "Cluster Create Timeout"
 msgstr "Cluster Create Timeout"
@@ -405,9 +399,6 @@ msgstr "Docker Volume Size"
 msgid "Docker Volume Size (GB)"
 msgstr "Docker Volume Size (GB)"
 
-msgid "Enable Load Balancer for Master Nodes"
-msgstr "Enable Load Balancer for Master Nodes"
-
 msgid "Enable Registry"
 msgstr "Enable Registry"
 
@@ -540,9 +531,6 @@ msgstr ""
 "Invalid format. Must be a comma-separated key-value string: key=value,"
 "key2=value2"
 
-msgid "It is generally not recommended to give public access."
-msgstr "It is generally not recommended to give public access."
-
 msgid "KEY1=VALUE1, KEY2=VALUE2..."
 msgstr "KEY1=VALUE1, KEY2=VALUE2..."
 
@@ -569,26 +557,6 @@ msgstr "Loading"
 
 msgid "Make cluster template public. Default: False"
 msgstr "Make cluster template public. Default: False"
-
-msgid ""
-"Making the Kubernetes API accessible from anywhere on the public internet is "
-"convenient, but may represent a security risk. <em>[When selecting this "
-"option, it is recommended to limit access to a trusted IP address range.]</"
-"em>"
-msgstr ""
-"Making the Kubernetes API accessible from anywhere on the public internet is "
-"convenient, but may represent a security risk. <em>[When selecting this "
-"option, it is recommended to limit access to a trusted IP address range.]</"
-"em>"
-
-msgid ""
-"Making the Kubernetes API accessible from the private network only is the "
-"most secure option (the default), but access will be limited to compute "
-"instances on the same private network or a VPN to that network."
-msgstr ""
-"Making the Kubernetes API accessible from the private network only is the "
-"most secure option (the default), but access will be limited to compute "
-"instances on the same private network or a VPN to that network."
 
 msgid "Management"
 msgstr "Management"
@@ -640,9 +608,6 @@ msgstr "Name of the cluster template."
 
 msgid "Network"
 msgstr "Network"
-
-msgid "Network Access Control"
-msgstr "Network Access Control"
 
 msgid "Network Driver"
 msgstr "Network Driver"
@@ -784,6 +749,7 @@ msgstr "Show Certificate"
 msgid "Sign Certificate"
 msgstr "Sign Certificate"
 
+#, python-brace-format
 msgid "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 msgstr "Sign Certificate To Cluster: {$ ctrl.model.cluster_name $}"
 
@@ -1058,6 +1024,7 @@ msgstr "Use an Existing Network"
 msgid "Use an Existing Subnet"
 msgstr "Use an existing Subnet"
 
+#, python-brace-format
 msgid "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 msgstr "Used {$ ctrl.stats.clusters $} of {$ ctrl.quota.clusters $}"
 
@@ -1165,6 +1132,7 @@ msgid_plural "titles"
 msgstr[0] "title"
 msgstr[1] "titles"
 
+#, python-brace-format
 msgid "{$ ctrl.cluster.create_timeout $} minute"
 msgid_plural "{$ ctrl.cluster.create_timeout $} minutes"
 msgstr[0] "{$ ctrl.cluster.create_timeout $} minute"
