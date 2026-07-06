@@ -56,10 +56,9 @@
     function init(action, title) {
       var schema;
       var coes = [{value: '', name: gettext("Choose a Container Orchestration Engine")},
-                   {value: "swarm", name: gettext("Docker Swarm")},
-                   {value: "swarm-mode", name: gettext("Docker Swarm Mode")},
                    {value: "kubernetes", name: gettext("Kubernetes")},
-                   {value: "dcos", name: gettext("DC/OS")}];
+                   {value: "swarm", name: gettext("Docker Swarm")},
+                   {value: "swarm-mode", name: gettext("Docker Swarm Mode")}];
       /* default is first value */
       var supportedNetworkDrivers = {
         initial: [{value:"", name: gettext("Choose a Network Driver")},
@@ -71,8 +70,7 @@
         swarm: [{value:"docker", name: gettext("Docker")},
                 {value:"flannel", name: gettext("Flannel")}],
         "swarm-mode": [{value:"docker", name: gettext("Docker")},
-                       {value:"flannel", name: gettext("Flannel")}],
-        dcos: [{value:"docker", name: gettext("Docker")}]};
+                       {value:"flannel", name: gettext("Flannel")}]};
       var supportedVolumeDrivers = {
         initial: [{value:"", name: gettext("Choose a Volume Driver")},
                   {value: "cinder", name: gettext("Cinder")},
@@ -82,9 +80,7 @@
         swarm: [{value:"", name: gettext("Choose a Volume Driver")},
                 {value:"rexray", name: gettext("Rexray")}],
         "swarm-mode": [{value:"", name: gettext("Choose a Volume Driver")},
-                       {value:"rexray", name: gettext("Rexray")}],
-        dcos: [{value:"", name: gettext("Choose a Volume Driver")},
-                {value:"rexray", name: gettext("Rexray")}]};
+                       {value:"rexray", name: gettext("Rexray")}]};
 
       // schema
       schema = {

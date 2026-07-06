@@ -136,10 +136,9 @@
       'name': 'coe',
       'singleton': true,
       options: [
-        {label: gettext('Docker Swarm'), key: 'swarm'},
-        {label: gettext('Docker Swarm Mode'), key: 'swarm-mode'},
         {label: gettext('Kubernetes'), key: 'kubernetes'},
-        {label: gettext('DC/OS'), key: 'dcos'}
+        {label: gettext('Docker Swarm'), key: 'swarm'},
+        {label: gettext('Docker Swarm Mode'), key: 'swarm-mode'}
       ]
     });
   }
