@@ -56,31 +56,19 @@
     function init(action, title) {
       var schema;
       var coes = [{value: '', name: gettext("Choose a Container Orchestration Engine")},
-                   {value: "kubernetes", name: gettext("Kubernetes")},
-                   {value: "swarm", name: gettext("Docker Swarm")},
-                   {value: "swarm-mode", name: gettext("Docker Swarm Mode")}];
+                   {value: "kubernetes", name: gettext("Kubernetes")}];
       /* default is first value */
       var supportedNetworkDrivers = {
         initial: [{value:"", name: gettext("Choose a Network Driver")},
-                  {value: "docker", name: gettext("Docker")},
                   {value: "flannel", name: gettext("Flannel")},
                   {value: "calico", name: gettext("Calico")}],
         kubernetes: [{value:"flannel", name: gettext("Flannel")},
-                     {value: "calico", name: gettext("Calico")}],
-        swarm: [{value:"docker", name: gettext("Docker")},
-                {value:"flannel", name: gettext("Flannel")}],
-        "swarm-mode": [{value:"docker", name: gettext("Docker")},
-                       {value:"flannel", name: gettext("Flannel")}]};
+                     {value: "calico", name: gettext("Calico")}]};
       var supportedVolumeDrivers = {
         initial: [{value:"", name: gettext("Choose a Volume Driver")},
-                  {value: "cinder", name: gettext("Cinder")},
-                  {value: "rexray", name: gettext("Rexray")}],
+                  {value: "cinder", name: gettext("Cinder")}],
         kubernetes: [{value:"", name: gettext("Choose a Volume Driver")},
-                     {value:"cinder", name: gettext("Cinder")}],
-        swarm: [{value:"", name: gettext("Choose a Volume Driver")},
-                {value:"rexray", name: gettext("Rexray")}],
-        "swarm-mode": [{value:"", name: gettext("Choose a Volume Driver")},
-                       {value:"rexray", name: gettext("Rexray")}]};
+                     {value:"cinder", name: gettext("Cinder")}]};
 
       // schema
       schema = {

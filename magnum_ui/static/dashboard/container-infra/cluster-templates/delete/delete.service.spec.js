@@ -74,8 +74,8 @@
       var data = {
         name: 'delete_test',
         id: '1',
-        coe: 'swarm',
-        network_driver: 'docker'
+        coe: 'kubernetes',
+        network_driver: 'flannel'
       };
 
       for (var index = 0; index < count; index++) {
