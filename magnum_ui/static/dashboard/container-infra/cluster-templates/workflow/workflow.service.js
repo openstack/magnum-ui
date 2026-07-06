@@ -59,7 +59,6 @@
                    {value: "swarm", name: gettext("Docker Swarm")},
                    {value: "swarm-mode", name: gettext("Docker Swarm Mode")},
                    {value: "kubernetes", name: gettext("Kubernetes")},
-                   {value: "mesos", name: gettext("Mesos")},
                    {value: "dcos", name: gettext("DC/OS")}];
       /* default is first value */
       var supportedNetworkDrivers = {
@@ -73,7 +72,6 @@
                 {value:"flannel", name: gettext("Flannel")}],
         "swarm-mode": [{value:"docker", name: gettext("Docker")},
                        {value:"flannel", name: gettext("Flannel")}],
-        mesos: [{value:"docker", name: gettext("Docker")}],
         dcos: [{value:"docker", name: gettext("Docker")}]};
       var supportedVolumeDrivers = {
         initial: [{value:"", name: gettext("Choose a Volume Driver")},
@@ -85,8 +83,6 @@
                 {value:"rexray", name: gettext("Rexray")}],
         "swarm-mode": [{value:"", name: gettext("Choose a Volume Driver")},
                        {value:"rexray", name: gettext("Rexray")}],
-        mesos: [{value:"", name: gettext("Choose a Volume Driver")},
-                {value:"rexray", name: gettext("Rexray")}],
         dcos: [{value:"", name: gettext("Choose a Volume Driver")},
                 {value:"rexray", name: gettext("Rexray")}]};
 
