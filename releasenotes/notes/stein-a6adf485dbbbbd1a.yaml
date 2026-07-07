@@ -48,7 +48,7 @@ fixes:
     Properties for cluster update filtered in favor of Magnum API.
   - |
     Supported api-version for client. Magnum API is using micro versions
-    and to get the correct fuctions support, user or client have to
+    and to get the correct functions support, user or client have to
     initialize the correct client with parameter 'api_version'.
     Magnum UI also follow the same way as other OpenStack services
     to read the version from OPENSTACK_API_VERSIONS of Horizon
