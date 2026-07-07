@@ -57,13 +57,15 @@
       var schema;
       var coes = [{value: '', name: gettext("Choose a Container Orchestration Engine")},
                    {value: "kubernetes", name: gettext("Kubernetes")}];
-      /* default is first value */
+      /* Default is first value, now - Calico */
       var supportedNetworkDrivers = {
         initial: [{value:"", name: gettext("Choose a Network Driver")},
-                  {value: "flannel", name: gettext("Flannel")},
-                  {value: "calico", name: gettext("Calico")}],
-        kubernetes: [{value:"flannel", name: gettext("Flannel")},
-                     {value: "calico", name: gettext("Calico")}]};
+                  {value: "calico", name: gettext("Calico")},
+                  {value: "cilium", name: gettext("Cilium")},
+                  {value: "flannel", name: gettext("Flannel")}],
+        kubernetes: [{value:"calico", name: gettext("Calico")},
+                     {value: "cilium", name: gettext("Cilium")},
+                     {value: "flannel", name: gettext("Flannel")}]};
       var supportedVolumeDrivers = {
         initial: [{value:"", name: gettext("Choose a Volume Driver")},
                   {value: "cinder", name: gettext("Cinder")}],
