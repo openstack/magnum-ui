@@ -69,6 +69,8 @@
                   {value: "cinder", name: gettext("Cinder")}],
         kubernetes: [{value:"", name: gettext("Choose a Volume Driver")},
                      {value:"cinder", name: gettext("Cinder")}]};
+      var dockerStorageDrivers = [
+        {value: "overlay2", name: gettext("Overlay2")}];
 
       // schema
       schema = {
@@ -328,9 +330,7 @@
                         {
                           key: 'docker_storage_driver',
                           type: 'select',
-                          titleMap: [
-                            {value: "overlay2", name: gettext("Overlay2")}
-                          ]
+                          titleMap: dockerStorageDrivers
                         }
                       ]
                     },
@@ -459,7 +459,10 @@
         flavor_id: "",
         master_flavor_id: "",
         docker_volume_size: "",
-        docker_storage_driver: "",
+        docker_storage_driver:
+          dockerStorageDrivers.length === 1
+            ? dockerStorageDrivers[0].value
+            : "",
         keypair_id: "",
         network_driver: "",
         volume_driver: "",
