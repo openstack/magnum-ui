@@ -58,7 +58,7 @@
 
   function run(registry, quotasService, basePath, resourceType) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Quota'), gettext('Quotas'))
+    .setNames('Quota', 'Quotas', ngettext('Quota', 'Quotas', 1))
     // for table row items.
     .setProperty('id', {
       label: gettext('ID')

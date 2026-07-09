@@ -72,7 +72,8 @@
 
   function run(registry, clusterTemplatesService, basePath, resourceType) {
     registry.getResourceType(resourceType)
-    .setNames(gettext('Cluster Template'), gettext('Cluster Templates'))
+    .setNames('Cluster Template', 'Cluster Templates',
+              ngettext('Cluster Template', 'Cluster Templates', 1))
     .setDefaultIndexUrl('/project/cluster_templates/')
     // for detail summary view on table row
     .setSummaryTemplateUrl(basePath + 'details/drawer.html')
