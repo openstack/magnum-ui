@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-04-13 05:19+0000\n"
+"POT-Creation-Date: 2026-07-07 05:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -169,9 +169,6 @@ msgstr "作成時刻"
 msgid "Created At"
 msgstr "作成時刻"
 
-msgid "DC/OS"
-msgstr "DC/OS"
-
 msgid "DNS"
 msgstr "DNS"
 
@@ -224,17 +221,8 @@ msgstr ""
 msgid "Discovery URL"
 msgstr "探索 URL"
 
-msgid "Docker"
-msgstr "Docker"
-
 msgid "Docker Storage Driver"
 msgstr "Docker のストレージドライバー"
-
-msgid "Docker Swarm"
-msgstr "Docker Swarm"
-
-msgid "Docker Swarm Mode"
-msgstr "Docker Swarm モード"
 
 msgid "Docker Volume Size"
 msgstr "Docker のボリューム容量"
@@ -351,9 +339,6 @@ msgstr "マスターノード LB"
 msgid "Master LB Enabled"
 msgstr "マスターノード LB の有効化"
 
-msgid "Mesos"
-msgstr "Mesos"
-
 msgid "Miscellaneous"
 msgstr "その他"
 
@@ -427,9 +412,6 @@ msgstr "レジストリーの有効化"
 
 msgid "Resource"
 msgstr "リソース"
-
-msgid "Rexray"
-msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "証明書の更新"

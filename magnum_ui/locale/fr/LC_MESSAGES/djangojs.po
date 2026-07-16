@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-04-13 05:19+0000\n"
+"POT-Creation-Date: 2026-07-07 05:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -150,9 +150,6 @@ msgstr "Créer un modèle de cluster"
 msgid "Created"
 msgstr "Créé"
 
-msgid "DC/OS"
-msgstr "DC/OS"
-
 msgid "DNS"
 msgstr "DNS"
 
@@ -196,14 +193,8 @@ msgstr "Désactiver TLS dans le modèle du cluster. Par défaut : False"
 msgid "Discovery URL"
 msgstr "Discovery URL"
 
-msgid "Docker"
-msgstr "Docker"
-
 msgid "Docker Storage Driver"
 msgstr "Pilote du stockage Docker"
-
-msgid "Docker Swarm"
-msgstr "Docker Swarm"
 
 msgid "Docker Volume Size"
 msgstr "Taille du volume Docker"
@@ -311,9 +302,6 @@ msgstr "LB maître"
 msgid "Master LB Enabled"
 msgstr "LB maître activé"
 
-msgid "Mesos"
-msgstr "Mesos"
-
 msgid "Miscellaneous"
 msgstr "Divers"
 
@@ -358,9 +346,6 @@ msgstr "Propriétés d'enregistrement"
 
 msgid "Registry Enabled"
 msgstr "Registre activé"
-
-msgid "Rexray"
-msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "Mettez à jour le certificat"

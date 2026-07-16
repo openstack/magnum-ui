@@ -3,12 +3,11 @@
 # Sungjin Kang <ujuc@ujuc.me>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2018. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2018. #zanata
-# Jaewook Oh <kyle.oh95@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-04-13 05:19+0000\n"
+"POT-Creation-Date: 2026-07-07 05:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -171,9 +170,6 @@ msgstr "생성됨"
 msgid "Created At"
 msgstr "생성 시점"
 
-msgid "DC/OS"
-msgstr "DC/OS"
-
 msgid "DNS"
 msgstr "DNS"
 
@@ -225,17 +221,8 @@ msgstr "클러스터 템플릿에서 TLS를 사용하지 않게 설정하십시�
 msgid "Discovery URL"
 msgstr "검색 URL"
 
-msgid "Docker"
-msgstr "Docker"
-
 msgid "Docker Storage Driver"
 msgstr "Docker 스토리지 드라이버"
-
-msgid "Docker Swarm"
-msgstr "Docker Swarm"
-
-msgid "Docker Swarm Mode"
-msgstr "Docker Swarm 모드"
 
 msgid "Docker Volume Size"
 msgstr "Docker 볼륨 크기"
@@ -353,9 +340,6 @@ msgstr "마스터 LB"
 msgid "Master LB Enabled"
 msgstr "마스터 LB 활성화됨"
 
-msgid "Mesos"
-msgstr "Mesos"
-
 msgid "Miscellaneous"
 msgstr "기타"
 
@@ -429,9 +413,6 @@ msgstr "저장소가 사용됨"
 
 msgid "Resource"
 msgstr "자원"
-
-msgid "Rexray"
-msgstr "Rexray"
 
 msgid "Rotate Certificate"
 msgstr "인증서 교체"
