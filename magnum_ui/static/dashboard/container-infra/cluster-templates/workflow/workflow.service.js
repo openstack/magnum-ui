@@ -329,8 +329,6 @@
                           key: 'docker_storage_driver',
                           type: 'select',
                           titleMap: [
-                            {value: "devicemapper", name: gettext("Device Mapper")},
-                            {value: "overlay", name: gettext("Overlay")},
                             {value: "overlay2", name: gettext("Overlay2")}
                           ]
                         }
