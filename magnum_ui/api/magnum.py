@@ -241,7 +241,7 @@ def cluster_upgrade(request, cluster_uuid, cluster_template,
                     max_batch_size=1, nodegroup=None):
     return magnumclient(request).clusters.upgrade(
         cluster_uuid, cluster_template,
-        max_batch_size=max_batch_size, nodegroup=None)
+        max_batch_size=max_batch_size, nodegroup=nodegroup)
 
 
 def certificate_create(request, **kwargs):
