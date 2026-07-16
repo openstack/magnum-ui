@@ -75,12 +75,12 @@
       </dl>
     </div>
     <div class="col-md-6 detail">
-      <h3 translate>Stack</h3>
+      <h3 translate>Cluster</h3>
       <hr>
       <dl class="dl-horizontal">
-        <dt translate>Stack ID</dt>
-        <dd>{$ ctrl.cluster.stack_id $}</dd>
-        <dt translate>Stack Faults</dt>
+        <dt translate>Cluster ID</dt>
+        <dd>{$ ctrl.cluster.cluster_id $}</dd>
+        <dt translate>Faults</dt>
         <dd ng-if="ctrl.objLen(ctrl.cluster.faults) === 0" translate>None</dd>
         <dd ng-if="ctrl.objLen(ctrl.cluster.faults) > 0" translate>as follows:</dd>
         <dt ng-repeat-start="(key, value) in ctrl.cluster.faults">{$ key $}</dt>
