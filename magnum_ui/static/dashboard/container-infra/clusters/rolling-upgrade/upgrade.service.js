@@ -148,6 +148,7 @@
             },
             'max_batch_size': {
               title: gettext('Maximum Batch Size'),
+              description: gettext('The maximum number of nodes in each upgrade batch.'),
               type: 'number',
               minimum: 1
             }
