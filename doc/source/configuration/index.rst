@@ -111,7 +111,7 @@ endpoint.
 MAGNUM_MINIMUM_FLAVOR_RAM
 -------------------------
 
-.. versionadded:: 16.0.0 (2026.1 Gazpacho)
+.. versionadded:: 19.0.0 (2026.2 Hibiscus)
 
 Default: ``2048``
 
@@ -129,7 +129,7 @@ Applies to both worker and control plane nodes.
 MAGNUM_MINIMUM_FLAVOR_VCPU
 --------------------------
 
-.. versionadded:: 16.0.0 (2026.1 Gazpacho)
+.. versionadded:: 19.0.0 (2026.2 Hibiscus)
 
 Default: ``2``
 
