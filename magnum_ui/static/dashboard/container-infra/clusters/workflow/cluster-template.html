@@ -17,11 +17,11 @@
       <dt translate>Docker Volume Size</dt>
       <dd>{$ ctrl.clusterTemplate.docker_volume_size|gb|noValue $}</dd>
       <dt translate>Public</dt>
-      <dd>{$ ctrl.clusterTemplate.public $}</dd>
+      <dd>{$ ctrl.clusterTemplate.public|yesno $}</dd>
       <dt translate>Registry Enabled</dt>
-      <dd>{$ ctrl.clusterTemplate.registry_enabled $}</dd>
+      <dd>{$ ctrl.clusterTemplate.registry_enabled|yesno $}</dd>
       <dt translate>TLS Disabled</dt>
-      <dd>{$ ctrl.clusterTemplate.tls_disabled $}</dd>
+      <dd>{$ ctrl.clusterTemplate.tls_disabled|yesno $}</dd>
       <dt translate>API Server Port</dt>
       <dd>{$ ctrl.clusterTemplate.apiserver_port|noValue $}</dd>
     </dl>
