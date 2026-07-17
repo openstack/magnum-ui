@@ -151,7 +151,10 @@
         {label: gettext('Snapshot complete'), key: 'SNAPSHOT_COMPLETE'},
         {label: gettext('Update complete'), key: 'UPDATE_COMPLETE'},
         {label: gettext('Update failed'), key: 'UPDATE_FAILED'},
-        {label: gettext('Update in progress'), key: 'UPDATE_IN_PROGRESS'}
+        {label: gettext('Update in progress'), key: 'UPDATE_IN_PROGRESS'},
+        {label: gettext('Resume failed'), key: 'RESUME_FAILED'},
+        {label: gettext('Rollback in progress'), key: 'ROLLBACK_IN_PROGRESS'},
+        {label: gettext('Rollback failed'), key: 'ROLLBACK_FAILED'}
       ]
     })
     .append({
