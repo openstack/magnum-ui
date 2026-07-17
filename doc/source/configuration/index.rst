@@ -31,7 +31,6 @@ template that will not work based on their current template type.
 This filtering is only relevant when choosing a new template for
 upgrading a cluster.
 
-
 MAGNUM_INGRESS_CONTROLLERS
 --------------------------
 
@@ -108,6 +107,42 @@ Examples of `Addon Software` include but are not limited to:
 Values specified in the ``MAGNUM_AVAILABLE_ADDONS`` setting map directly to the
 values returned in the response of the `api/container-infra/available_addons`
 endpoint.
+
+MAGNUM_MINIMUM_FLAVOR_RAM
+-------------------------
+
+.. versionadded:: 16.0.0 (2026.1 Gazpacho)
+
+Default: ``2048``
+
+Examples:
+
+.. code-block:: python
+
+   MAGNUM_MINIMUM_FLAVOR_RAM = 4096
+
+Specifies the minimum RAM (in MiB) required to run a Kubernetes node.
+
+This is used as a filter when displaying compute flavors in the dashboard.
+Applies to both worker and control plane nodes.
+
+MAGNUM_MINIMUM_FLAVOR_VCPU
+--------------------------
+
+.. versionadded:: 16.0.0 (2026.1 Gazpacho)
+
+Default: ``2``
+
+Examples:
+
+.. code-block:: python
+
+   MAGNUM_MINIMUM_FLAVOR_VCPU = 4
+
+Specifies the minimum number of vCPU required to run a Kubernetes node.
+
+This value is used as a filter when displaying compute flavors in the dashboard.
+Applies to both worker and control plane nodes.
 
 Horizon Settings
 ================

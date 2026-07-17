@@ -19,7 +19,8 @@
 
   describe('horizon.dashboard.container-infra.clusters.workflow', function() {
     var workflow, magnum, nova, neutron, $scope, $q, deferred, keyDeferred, controllersDeferred,
-      controllersResponse, networkDeferred, zoneDeferred, addonsResponse, addonDeferred;
+      controllersResponse, networkDeferred, zoneDeferred, addonsResponse, addonDeferred,
+      flavorMinimumResponse, flavorMinimumDeferred;
 
     beforeEach(module('horizon.app.core'));
     beforeEach(module('horizon.framework'));
@@ -69,7 +70,15 @@
       addonDeferred = $q.defer();
       addonDeferred.resolve({data: addonsResponse});
 
+      flavorMinimumResponse = {
+        "flavorMinimumRam": 2048,
+        "flavorMinimumVcpu": 2,
+      };
+      flavorMinimumDeferred = $q.defer();
+      flavorMinimumDeferred.resolve({data: flavorMinimumResponse});
+
       spyOn(magnum, 'getClusterTemplates').and.returnValue(deferred.promise);
+      spyOn(magnum, 'getFlavorMinimums').and.returnValue(flavorMinimumDeferred.promise);
       spyOn(magnum, 'getIngressControllers').and.returnValue(controllersDeferred.promise);
       spyOn(magnum, 'getAddons').and.returnValue(addonDeferred.promise);
       spyOn(nova, 'getAvailabilityZones').and.returnValue(zoneDeferred.promise);

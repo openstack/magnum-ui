@@ -64,6 +64,7 @@
       var availabilityZoneTitleMap = [{value: '',
         name: gettext('Choose an Availability Zone')}];
       var keypairsTitleMap = [{value: '', name: gettext('Choose a Keypair')}];
+      var flavorMinimums = {};
       var masterFlavorTitleMap = [{value: '',
         name: gettext('Choose a Flavor for the Control Plane nodes')}];
       var workerFlavorTitleMap = [{value: '',
@@ -647,10 +648,29 @@
         });
       }
 
+      function onGetFlavorMinimums(response) {
+        flavorMinimums = {
+          minimumRam: response.data.flavorMinimumRam,
+          minimumVcpu: response.data.flavorMinimumVcpu,
+        };
+      }
+
       function onGetFlavors(response) {
-        angular.forEach(response.data.items, function(flavor) {
-          workerFlavorTitleMap.push({value: flavor.name, name: flavor.name});
-          masterFlavorTitleMap.push({value: flavor.name, name: flavor.name});
+        angular.forEach(response.data.items, function (flavor) {
+          // Only add flavor to list if it has more than minimum RAM and number of VCPUs.
+          if (
+            flavor.ram >= flavorMinimums.minimumRam &&
+            flavor.vcpus >= flavorMinimums.minimumVcpu
+          ) {
+            workerFlavorTitleMap.push({
+              value: flavor.name,
+              name: flavor.name,
+            });
+            masterFlavorTitleMap.push({
+              value: flavor.name,
+              name: flavor.name,
+            });
+          }
         });
       }
 
@@ -717,6 +737,7 @@
       // with a form configuration object.
       return $q.all([
         magnum.getClusterTemplates().then(onGetClusterTemplates),
+        magnum.getFlavorMinimums().then(onGetFlavorMinimums),
         nova.getAvailabilityZones().then(onGetAvailabilityZones),
         nova.getKeypairs().then(onGetKeypairs),
         neutron.getNetworks().then(onGetNetworks),
