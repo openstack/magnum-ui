@@ -67,10 +67,10 @@
                      {value: "cilium", name: gettext("Cilium")},
                      {value: "flannel", name: gettext("Flannel")}]};
       var supportedVolumeDrivers = {
-        initial: [{value:"", name: gettext("Choose a Volume Driver")},
-                  {value: "cinder", name: gettext("Cinder")}],
-        kubernetes: [{value:"", name: gettext("Choose a Volume Driver")},
-                     {value:"cinder", name: gettext("Cinder")}]};
+        initial: [{value: "cinder", name: gettext("Cinder")},
+                  {value:"", name: gettext("Choose a Volume Driver")}],
+        kubernetes: [{value: "cinder", name: gettext("Cinder")},
+                     {value:"", name: gettext("Choose a Volume Driver")}]};
       var dockerStorageDrivers = [
         {value: "overlay2", name: gettext("Overlay2")}];
 
@@ -467,7 +467,7 @@
             : "",
         keypair_id: "",
         network_driver: "",
-        volume_driver: "",
+        volume_driver: "cinder",
         insecure_registry: "",
         http_proxy: "",
         https_proxy: "",
