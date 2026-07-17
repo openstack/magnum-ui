@@ -78,7 +78,7 @@
       label: gettext('Health Status')
     })
     .setProperty('master_count', {
-      label: gettext('Control Plane Count')
+      label: gettext('Control Plane Node Count')
     })
     .setProperty('node_count', {
       label: gettext('Node Count')
@@ -160,7 +160,7 @@
       'singleton': true
     })
     .append({
-      'label': gettext('Control Plane Count'),
+      'label': gettext('Control Plane Node Count'),
       'name': 'master_count',
       'singleton': true
     })
