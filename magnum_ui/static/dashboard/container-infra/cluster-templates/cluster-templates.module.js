@@ -83,9 +83,6 @@
     .setProperty('id', {
       label: gettext('ID')
     })
-    .setProperty('coe', {
-      label: gettext('COE')
-    })
     .setProperty('keypair_id', {
       label: gettext('Keypair')
     })
@@ -104,10 +101,6 @@
     .append({
       id: 'id',
       priority: 2
-    })
-    .append({
-      id: 'coe',
-      priority: 1
     })
     .append({
       id: 'keypair_id',
@@ -130,14 +123,6 @@
       'label': gettext('ID'),
       'name': 'id',
       'singleton': true
-    })
-    .append({
-      'label': gettext('COE'),
-      'name': 'coe',
-      'singleton': true,
-      options: [
-        {label: gettext('Kubernetes'), key: 'kubernetes'}
-      ]
     });
   }
 
