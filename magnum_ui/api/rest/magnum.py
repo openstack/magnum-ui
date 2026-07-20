@@ -20,7 +20,11 @@ from collections import defaultdict
 from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseNotFound
+from django.utils.decorators import method_decorator
+from django.utils.text import slugify
 from django.views import generic
+
+from horizon.decorators import require_auth
 
 from magnum_ui.api import magnum
 
@@ -223,6 +227,26 @@ class ClusterConfig(generic.View):
     def get(self, request, cluster_id):
         """Get config for a specific cluster"""
         return magnum.cluster_config(request, cluster_id)
+
+
+@urls.register
+@method_decorator(require_auth, name='dispatch')
+class ClusterConfigDownload(generic.View):
+    """Download a complete kubeconfig for a single cluster."""
+    url_regex = (
+        r'container_infra/clusters/(?P<cluster_id>[^/]+)/config/download$')
+
+    def get(self, request, cluster_id):
+        cluster_name, config = magnum.cluster_config_download(
+            request, cluster_id)
+        filename = slugify(cluster_name) or cluster_id
+        response = HttpResponse(
+            config, content_type='application/yaml; charset=utf-8')
+        response['Content-Disposition'] = (
+            f'attachment; filename="{filename}.kubeconfig"')
+        response['Content-Length'] = str(len(response.content))
+        response['Cache-Control'] = 'no-store'
+        return response
 
 
 @urls.register
