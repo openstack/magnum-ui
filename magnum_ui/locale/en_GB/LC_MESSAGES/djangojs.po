@@ -1,6 +1,5 @@
 # Andi Chandler <andi@gowling.com>, 2016. #zanata
 # Andi Chandler <andi@gowling.com>, 2017. #zanata
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # Andi Chandler <andi@gowling.com>, 2018. #zanata
 # Andi Chandler <andi@gowling.com>, 2019. #zanata
 # Andi Chandler <andi@gowling.com>, 2020. #zanata
@@ -12,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-07-07 05:15+0000\n"
+"POT-Creation-Date: 2026-07-17 12:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-01-07 03:47+0000\n"
+"PO-Revision-Date: 2026-07-17 08:48+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -125,9 +124,6 @@ msgstr "Availability Zone"
 msgid "COE"
 msgstr "COE"
 
-msgid "COE Version"
-msgstr "COE Version"
-
 msgid "CSR"
 msgstr "CSR"
 
@@ -217,8 +213,11 @@ msgstr "Choose nodes to remove (Optional)"
 msgid "Cinder"
 msgstr "Cinder"
 
+#, fuzzy
 msgid "Cluster"
-msgstr "Cluster"
+msgid_plural "Clusters"
+msgstr[0] "Cluster"
+msgstr[1] ""
 
 #, python-format
 msgid "Cluster %s was successfully created."
@@ -233,17 +232,17 @@ msgstr "Cluster Distro"
 msgid "Cluster Name"
 msgstr "Cluster Name"
 
+#, fuzzy
 msgid "Cluster Template"
-msgstr "Cluster Template"
+msgid_plural "Cluster Templates"
+msgstr[0] "Cluster Template"
+msgstr[1] ""
 
 msgid "Cluster Template Detail"
 msgstr "Cluster Template Detail"
 
 msgid "Cluster Template Name"
 msgstr "Cluster Template Name"
-
-msgid "Cluster Templates"
-msgstr "Cluster Templates"
 
 msgid "Cluster Type"
 msgstr "Cluster Type"
@@ -286,14 +285,8 @@ msgstr[1] "Confirm Delete Quotas"
 msgid "Container Orchestration Engine"
 msgstr "Container Orchestration Engine"
 
-msgid "Container Version"
-msgstr "Container Version"
-
 msgid "Control Plane Addresses"
 msgstr "Control Plane Addresses"
-
-msgid "Control Plane Count"
-msgstr "Control Plane Count"
 
 msgid "Control Plane Nodes"
 msgstr "Control Plane Nodes"
@@ -394,9 +387,6 @@ msgstr[1] "Deleted quotas: %s."
 
 msgid "Details"
 msgstr "Details"
-
-msgid "Device Mapper"
-msgstr "Device Mapper"
 
 msgid "Disable TLS"
 msgstr "Disable TLS"
@@ -714,9 +704,6 @@ msgstr ""
 "Only uneven number of control plane nodes are supported. This provides the "
 "best balance of fault tolerance and cost for etcd."
 
-msgid "Overlay"
-msgstr "Overlay"
-
 msgid "Overlay2"
 msgstr "Overlay2"
 
@@ -748,8 +735,11 @@ msgstr "Project ID"
 msgid "Public"
 msgstr "Public"
 
+#, fuzzy
 msgid "Quota"
-msgstr "Quota"
+msgid_plural "Quotas"
+msgstr[0] "Quota"
+msgstr[1] ""
 
 #, python-format
 msgid "Quota %s was successfully created."
@@ -758,9 +748,6 @@ msgstr "Quota %s was successfully created."
 #, python-format
 msgid "Quota %s/%s was successfully updated."
 msgstr "Quota %s/%s was successfully updated."
-
-msgid "Quotas"
-msgstr "Quotas"
 
 msgid "Record Properties"
 msgstr "Record Properties"
@@ -830,15 +817,6 @@ msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
-
-msgid "Stack"
-msgstr "Stack"
-
-msgid "Stack Faults"
-msgstr "Stack Faults"
-
-msgid "Stack ID"
-msgstr "Stack ID"
 
 msgid "Stats"
 msgstr "Stats"

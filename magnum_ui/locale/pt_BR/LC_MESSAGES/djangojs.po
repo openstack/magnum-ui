@@ -1,16 +1,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2017. #zanata
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2017. #zanata
 # Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2018. #zanata
+# Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-07-07 05:15+0000\n"
+"POT-Creation-Date: 2026-07-17 12:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-04-24 07:28+0000\n"
+"PO-Revision-Date: 2026-07-17 08:48+0000\n"
 "Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -28,9 +28,6 @@ msgstr "Um nome legível arbitrário"
 
 msgid "COE"
 msgstr "MOC"
-
-msgid "COE Version"
-msgstr "Versão COE"
 
 msgid "CSR"
 msgstr "CSR"
@@ -88,8 +85,11 @@ msgstr "Escolha uma imagem"
 msgid "Cinder"
 msgstr "Cinder"
 
+#, fuzzy
 msgid "Cluster"
-msgstr "Cluster"
+msgid_plural "Clusters"
+msgstr[0] "Cluster"
+msgstr[1] ""
 
 #, python-format
 msgid "Cluster %s was successfully created."
@@ -104,17 +104,17 @@ msgstr "Distribuição do Cluster"
 msgid "Cluster Name"
 msgstr "Nome do Cluster"
 
+#, fuzzy
 msgid "Cluster Template"
-msgstr "Modelo de Cluster"
+msgid_plural "Cluster Templates"
+msgstr[0] "Modelo de Cluster"
+msgstr[1] ""
 
 msgid "Cluster Template Detail"
 msgstr "Detalhe do Modelo de Cluster"
 
 msgid "Cluster Template Name"
 msgstr "Nome do Modelo de Cluster"
-
-msgid "Cluster Templates"
-msgstr "Modelos de Cluster"
 
 msgid "Cluster Type"
 msgstr "Tipo de Cluster"
@@ -147,9 +147,6 @@ msgstr[1] "Confirmar Exclusão de Quotas"
 
 msgid "Container Orchestration Engine"
 msgstr "Mecanismo de Orquestração de Contêiner"
-
-msgid "Container Version"
-msgstr "Versão do Contêiner"
 
 msgid "Create"
 msgstr "Criar"
@@ -213,9 +210,6 @@ msgid "Deleted quota: %s."
 msgid_plural "Deleted quotas: %s."
 msgstr[0] "Quota excluída: %s."
 msgstr[1] "Quotas excluídas: %s."
-
-msgid "Device Mapper"
-msgstr "Mapeador de Dispositivos"
 
 msgid "Disable TLS"
 msgstr "Desativar TLS"
@@ -380,9 +374,6 @@ msgstr "Nós"
 msgid "None"
 msgstr "Nenhum"
 
-msgid "Overlay"
-msgstr "Overlay"
-
 msgid "Overview"
 msgstr "Visão Geral"
 
@@ -395,8 +386,11 @@ msgstr "ID do Projeto"
 msgid "Public"
 msgstr "Público"
 
+#, fuzzy
 msgid "Quota"
-msgstr "Quota"
+msgid_plural "Quotas"
+msgstr[0] "Quota"
+msgstr[1] ""
 
 #, python-format
 msgid "Quota %s was successfully created."
@@ -405,9 +399,6 @@ msgstr "A quota %s foi criada com sucesso."
 #, python-format
 msgid "Quota %s/%s was successfully updated."
 msgstr "A quota  %s/%s foi atualizada com sucesso."
-
-msgid "Quotas"
-msgstr "Quotas"
 
 msgid "Record Properties"
 msgstr "Propriedades do Registro"
@@ -445,15 +436,6 @@ msgid ""
 msgstr ""
 "Especifique o servidor de nomes para usar para o modelo de cluster. Padrão: "
 "8.8.8.8"
-
-msgid "Stack"
-msgstr "Pilha"
-
-msgid "Stack Faults"
-msgstr "Falhas de Pilha"
-
-msgid "Stack ID"
-msgstr "ID Pilha"
 
 msgid "Stats"
 msgstr "Estatísticas"

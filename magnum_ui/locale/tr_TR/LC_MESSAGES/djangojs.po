@@ -1,15 +1,16 @@
 # işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
 # yasemin demiral <yasemin.demiral@tubitak.gov.tr>, 2017. #zanata
+# işbaran akçayır <isbaran@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-07-07 05:15+0000\n"
+"POT-Creation-Date: 2026-07-17 12:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-16 12:11+0000\n"
-"Last-Translator: yasemin demiral <yasemin.demiral@tubitak.gov.tr>\n"
+"PO-Revision-Date: 2026-07-17 08:48+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Turkish (Turkey)\n"
 "Language: tr_TR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -78,8 +79,11 @@ msgstr "Bir imaj seçin"
 msgid "Cinder"
 msgstr "Cinder"
 
+#, fuzzy
 msgid "Cluster"
-msgstr "Küme"
+msgid_plural "Clusters"
+msgstr[0] "Küme"
+msgstr[1] ""
 
 #, python-format
 msgid "Cluster %s was successfully created."
@@ -94,17 +98,17 @@ msgstr "Küme Dağıtımı"
 msgid "Cluster Name"
 msgstr "Küme İsmi"
 
+#, fuzzy
 msgid "Cluster Template"
-msgstr "Küme Şablonu"
+msgid_plural "Cluster Templates"
+msgstr[0] "Küme Şablonu"
+msgstr[1] ""
 
 msgid "Cluster Template Detail"
 msgstr "Küme Şablonu Ayrıntısı"
 
 msgid "Cluster Template Name"
 msgstr "Küme Şablon İsmi"
-
-msgid "Cluster Templates"
-msgstr "Küme Şablonları"
 
 msgid "Cluster Type"
 msgstr "Küme Türü"
@@ -175,9 +179,6 @@ msgid "Deleted cluster: %s."
 msgid_plural "Deleted clusters: %s."
 msgstr[0] "Küme silindi: %s."
 msgstr[1] "Kümeler silindi: %s."
-
-msgid "Device Mapper"
-msgstr "Aygıt Eşleştirici"
 
 msgid "Disable TLS"
 msgstr "TLS'i Kapat"
@@ -322,9 +323,6 @@ msgstr "Düğüm Özelliği"
 msgid "Nodes"
 msgstr "Düğümler"
 
-msgid "Overlay"
-msgstr "Overlay"
-
 msgid "Overview"
 msgstr "Genel Görünüm"
 
@@ -363,9 +361,6 @@ msgid ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 msgstr ""
 "Küme şablonu için kullanılacak isim sunucuyu belirtin. Öntanımlı: 8.8.8.8"
-
-msgid "Stack ID"
-msgstr "Yığın ID'si"
 
 msgid "Status"
 msgstr "Durum"

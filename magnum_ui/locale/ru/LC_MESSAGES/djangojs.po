@@ -11,12 +11,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-07-07 05:15+0000\n"
+"POT-Creation-Date: 2026-07-17 12:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-07-15 05:42+0000\n"
-"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
+"PO-Revision-Date: 2026-07-20 03:56+0000\n"
+"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -126,9 +126,6 @@ msgstr "Зона доступности"
 msgid "COE"
 msgstr "COE"
 
-msgid "COE Version"
-msgstr "Версия COE"
-
 msgid "CSR"
 msgstr "CSR"
 
@@ -215,11 +212,17 @@ msgstr "Выберите ingress контроллер"
 msgid "Choose nodes to remove (Optional)"
 msgstr "Выберите узлы для удаления (опционально)"
 
+msgid "Cilium"
+msgstr "Cilium"
+
 msgid "Cinder"
 msgstr "Cinder"
 
 msgid "Cluster"
-msgstr "Кластер"
+msgid_plural "Clusters"
+msgstr[0] "Кластер"
+msgstr[1] "Кластеры"
+msgstr[2] "Кластеры"
 
 #, python-format
 msgid "Cluster %s was successfully created."
@@ -231,20 +234,23 @@ msgstr "Таймаут создания кластера"
 msgid "Cluster Distro"
 msgstr "Дистрибутив кластера"
 
+msgid "Cluster ID"
+msgstr "ID кластера"
+
 msgid "Cluster Name"
 msgstr "Имя кластера"
 
 msgid "Cluster Template"
-msgstr "Шаблон кластера"
+msgid_plural "Cluster Templates"
+msgstr[0] "Шаблон кластера"
+msgstr[1] "Шаблоны кластеров"
+msgstr[2] "Шаблоны кластеров"
 
 msgid "Cluster Template Detail"
 msgstr "Подробности шаблона кластера"
 
 msgid "Cluster Template Name"
 msgstr "Имя шаблона кластера"
-
-msgid "Cluster Templates"
-msgstr "Шаблоны кластеров"
 
 msgid "Cluster Type"
 msgstr "Тип кластера"
@@ -290,14 +296,11 @@ msgstr[2] "Подтвердите удаление квот"
 msgid "Container Orchestration Engine"
 msgstr "Движок оркестрации контейнера"
 
-msgid "Container Version"
-msgstr "Версия контейнера"
-
 msgid "Control Plane Addresses"
 msgstr "Адреса Control Plane"
 
-msgid "Control Plane Count"
-msgstr "Число узлов Control Plane"
+msgid "Control Plane Node Count"
+msgstr "Количество узлов Control Plane"
 
 msgid "Control Plane Nodes"
 msgstr "Узлы Control Plane"
@@ -405,9 +408,6 @@ msgstr[2] "Удалены квоты: %s."
 msgid "Details"
 msgstr "Подробности"
 
-msgid "Device Mapper"
-msgstr "Сопоставитель устройств"
-
 msgid "Disable TLS"
 msgstr "Выключить TLS"
 
@@ -440,6 +440,9 @@ msgstr "Существует"
 
 msgid "External Network ID"
 msgstr "ID внешней сети"
+
+msgid "Faults"
+msgstr "Ошибки"
 
 msgid "Fixed Network"
 msgstr "Фиксированная сеть"
@@ -691,6 +694,7 @@ msgstr "Адреса узлов"
 msgid "Node Count"
 msgstr "Количество узлов"
 
+#, fuzzy
 msgid "Node Count (default-worker)"
 msgstr "Количество узлов (worker узлов по умолчанию)"
 
@@ -726,9 +730,6 @@ msgstr ""
 "Поддерживается только нечетное количество узлов Control Plane. Это "
 "обеспечивает наилучший баланс между отказоустойчивостью и затратами для etcd."
 
-msgid "Overlay"
-msgstr "Overlay"
-
 msgid "Overlay2"
 msgstr "Overlay2"
 
@@ -762,7 +763,10 @@ msgid "Public"
 msgstr "Публичный"
 
 msgid "Quota"
-msgstr "Квота"
+msgid_plural "Quotas"
+msgstr[0] "Квота"
+msgstr[1] "Квоты"
+msgstr[2] "Квоты"
 
 #, python-format
 msgid "Quota %s was successfully created."
@@ -771,9 +775,6 @@ msgstr "Квота %s была успешно создана."
 #, python-format
 msgid "Quota %s/%s was successfully updated."
 msgstr "Квота %s/%s была успешно обновлена."
-
-msgid "Quotas"
-msgstr "Квоты"
 
 msgid "Record Properties"
 msgstr "Свойства записи"
@@ -793,8 +794,17 @@ msgstr "Восстановление завершено"
 msgid "Resume complete"
 msgstr "Возобновление завершено"
 
+msgid "Resume failed"
+msgstr "Не удалось возобновить выполнение"
+
 msgid "Rollback complete"
 msgstr "Откат завершен"
+
+msgid "Rollback failed"
+msgstr "Не удалось выполнить откат"
+
+msgid "Rollback in progress"
+msgstr "Выполняется откат"
 
 msgid "Rolling Cluster Upgrade"
 msgstr "Пошаговое обновление кластера"
@@ -849,15 +859,6 @@ msgstr ""
 msgid "Specify the size in GB for the Docker Volume"
 msgstr "Укажите размер тома Docker в ГБ"
 
-msgid "Stack"
-msgstr "Стек"
-
-msgid "Stack Faults"
-msgstr "Ошибки стека"
-
-msgid "Stack ID"
-msgstr "ID стека"
-
 msgid "Stats"
 msgstr "Статистика"
 
@@ -873,12 +874,20 @@ msgstr "TLS отключен"
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "Сервер имен DNS для использования в этом шаблоне кластера"
 
+msgid ""
+"The Docker storage driver used to manage the containers writable layer and "
+"image storage."
+msgstr ""
+"Драйвер хранилища Docker используется для управления записываемым слоем "
+"контейнеров и хранилищем образов."
+
 msgid "The URL of Docker Registry."
 msgstr "URL-адрес Docker Registry."
 
 msgid "The cluster node count."
 msgstr "Количество узлов кластера."
 
+#, fuzzy
 msgid "The default-worker nodegroup node count."
 msgstr "Количество узлов в группе узлов default-worker."
 
@@ -910,9 +919,12 @@ msgstr ""
 "Максимальное количество worker узлов не может быть меньше количества worker "
 "узлов по умолчанию и меньше, чем 1."
 
+msgid "The maximum number of nodes in each upgrade batch."
+msgstr "Максимальное количество узлов в каждом пакете обновления."
+
 msgid "The maximum number of nodes in the batch has been exceeded."
 msgstr ""
-"Превышено максимально допустимое количество одновременно обновляемых узлов"
+"Превышено максимально допустимое количество одновременно обновляемых узлов."
 
 msgid ""
 "The minimum number of Worker Nodes a new cluster can auto scale to cannot "
@@ -947,7 +959,7 @@ msgid "The number of Control Plane nodes for the cluster"
 msgstr "Количество узлов Control Plane для кластера"
 
 msgid "The number of worker nodes for the cluster"
-msgstr "Количество раб worker узлов для кластера"
+msgstr "Количество worker узлов для кластера"
 
 msgid ""
 "The selected options do not support multiple control plane nodes. A "
@@ -978,8 +990,8 @@ msgstr "Не удалось создать квоту."
 msgid "Unable to delete cluster template: %s."
 msgid_plural "Unable to delete cluster templates: %s."
 msgstr[0] "Не удалось удалить шаблон кластера: %s."
-msgstr[1] "Не удалось удалить шаблоны кластера: %s."
-msgstr[2] "Не удалось удалить шаблоны кластера: %s."
+msgstr[1] "Не удалось удалить шаблоны кластеров: %s."
+msgstr[2] "Не удалось удалить шаблоны кластеров: %s."
 
 #, python-format
 msgid "Unable to delete cluster: %s."
@@ -1035,6 +1047,9 @@ msgstr "Не удалось получить доступные дополнен
 
 msgid "Unable to retrieve available ingress controllers."
 msgstr "Не удалось получить доступные ingress контроллеры."
+
+msgid "Unable to retrieve flavor minimums."
+msgstr "Не удалось получить минимальные значения шаблона конфигурации."
 
 msgid "Unable to retrieve the certificate."
 msgstr "Не удалось получить сертификат."
@@ -1207,7 +1222,7 @@ msgid_plural ""
 "templates are not recoverable."
 msgstr[0] ""
 "Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаленный шаблон "
-"кластера невозможно восстановить.."
+"кластера невозможно восстановить."
 msgstr[1] ""
 "Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаленные шаблоны "
 "кластеров невозможно восстановить."
@@ -1223,14 +1238,14 @@ msgid_plural ""
 "You have selected \"%s\". Please confirm your selection. Deleted quotas are "
 "not recoverable."
 msgstr[0] ""
-"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квоты "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаленную квоту "
+"невозможно восстановить."
 msgstr[1] ""
-"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квот "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаленные квоты "
+"невозможно восстановить."
 msgstr[2] ""
-"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаление квот "
-"необратимо."
+"Вы выбрали \"%s\". Пожалуйста, подтвердите ваш выбор. Удаленные квоты "
+"невозможно восстановить."
 
 msgid ""
 "You may only select as many nodes as you are reducing the original node "
@@ -1241,6 +1256,15 @@ msgstr ""
 
 msgid "as follows:"
 msgstr "следующим образом:"
+
+msgid ""
+"default storage driver on all currently supported Linux distributions. It "
+"requires no extra configuration and is used automatically for new Docker "
+"installations."
+msgstr ""
+"драйвер хранилища по умолчанию во всех поддерживаемых в настоящее время "
+"дистрибутивах Linux. Он не требует дополнительной настройки и используется "
+"автоматически при новых установках Docker."
 
 msgid "error"
 msgid_plural "errors"
