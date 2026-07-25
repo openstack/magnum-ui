@@ -618,14 +618,15 @@
         var items = response.data.items;
 
         angular.forEach(items, function(item) {
+          var keypair = item.keypair || item;
           keypairsTitleMap.push({
-            value: item.keypair.name,
-            name: item.keypair.name
+            value: keypair.name,
+            name: keypair.name
           });
         });
 
         if (items.length === 1) {
-          model.keypair = items[0].keypair.name;
+          model.keypair = (items[0].keypair || items[0]).name;
         }
       }
 

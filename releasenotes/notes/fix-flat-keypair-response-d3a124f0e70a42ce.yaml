@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Fixed keypair selection in the cluster and cluster template workflows
+    when using a Horizon version that returns flat keypair objects from
+    the Nova API.

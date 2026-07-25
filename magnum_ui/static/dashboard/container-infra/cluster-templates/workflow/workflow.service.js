@@ -535,7 +535,8 @@
     function onGetKeypairs(response) {
       keypairs = [{value:"", name: gettext("Choose a Keypair")}];
       angular.forEach(response.data.items, function(item) {
-        keypairs.push({value: item.keypair.name, name: item.keypair.name});
+        var keypair = item.keypair || item;
+        keypairs.push({value: keypair.name, name: keypair.name});
       });
       form[0].tabs[1].items[0].items[1].items[0].titleMap = keypairs;
       var deferred = $q.defer();

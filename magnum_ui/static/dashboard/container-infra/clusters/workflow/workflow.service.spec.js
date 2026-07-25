@@ -40,7 +40,7 @@
       deferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
 
       keyDeferred = $q.defer();
-      keyDeferred.resolve({data:{items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}}});
+      keyDeferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
 
       controllersResponse = {controllers:[
         {name: 'Controller1', labels:{ingress_controller:'ic1'}},
