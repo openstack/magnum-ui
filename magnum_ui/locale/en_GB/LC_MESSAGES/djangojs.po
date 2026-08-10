@@ -11,11 +11,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: magnum-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2026-07-17 12:05+0000\n"
+"POT-Creation-Date: 2026-07-21 05:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-07-17 08:48+0000\n"
+"PO-Revision-Date: 2026-08-08 08:52+0000\n"
 "Last-Translator: Andi Chandler <andi@gowling.com>\n"
 "Language-Team: English (United Kingdom)\n"
 "Language: en_GB\n"
@@ -210,14 +210,16 @@ msgstr "Choose an ingress controller"
 msgid "Choose nodes to remove (Optional)"
 msgstr "Choose nodes to remove (Optional)"
 
+msgid "Cilium"
+msgstr "Cilium"
+
 msgid "Cinder"
 msgstr "Cinder"
 
-#, fuzzy
 msgid "Cluster"
 msgid_plural "Clusters"
 msgstr[0] "Cluster"
-msgstr[1] ""
+msgstr[1] "Clusters"
 
 #, python-format
 msgid "Cluster %s was successfully created."
@@ -229,14 +231,16 @@ msgstr "Cluster Create Timeout"
 msgid "Cluster Distro"
 msgstr "Cluster Distro"
 
+msgid "Cluster ID"
+msgstr "Cluster ID"
+
 msgid "Cluster Name"
 msgstr "Cluster Name"
 
-#, fuzzy
 msgid "Cluster Template"
 msgid_plural "Cluster Templates"
 msgstr[0] "Cluster Template"
-msgstr[1] ""
+msgstr[1] "Cluster Templates"
 
 msgid "Cluster Template Detail"
 msgstr "Cluster Template Detail"
@@ -287,6 +291,9 @@ msgstr "Container Orchestration Engine"
 
 msgid "Control Plane Addresses"
 msgstr "Control Plane Addresses"
+
+msgid "Control Plane Node Count"
+msgstr "Control Plane Node Count"
 
 msgid "Control Plane Nodes"
 msgstr "Control Plane Nodes"
@@ -420,6 +427,9 @@ msgstr "Exists"
 
 msgid "External Network ID"
 msgstr "External Network ID"
+
+msgid "Faults"
+msgstr "Faults"
 
 msgid "Fixed Network"
 msgstr "Fixed Network"
@@ -735,11 +745,10 @@ msgstr "Project ID"
 msgid "Public"
 msgstr "Public"
 
-#, fuzzy
 msgid "Quota"
 msgid_plural "Quotas"
 msgstr[0] "Quota"
-msgstr[1] ""
+msgstr[1] "Quotas"
 
 #, python-format
 msgid "Quota %s was successfully created."
@@ -767,8 +776,17 @@ msgstr "Restore complete"
 msgid "Resume complete"
 msgstr "Resume complete"
 
+msgid "Resume failed"
+msgstr "Resume failed"
+
 msgid "Rollback complete"
 msgstr "Rollback complete"
+
+msgid "Rollback failed"
+msgstr "Rollback failed"
+
+msgid "Rollback in progress"
+msgstr "Rollback in progress"
 
 msgid "Rolling Cluster Upgrade"
 msgstr "Rolling Cluster Upgrade"
@@ -818,6 +836,9 @@ msgid ""
 msgstr ""
 "Specify the nameserver to use for the cluster template. Default: 8.8.8.8"
 
+msgid "Specify the size in GB for the Docker Volume"
+msgstr "Specify the size in GB for the Docker Volume"
+
 msgid "Stats"
 msgstr "Stats"
 
@@ -832,6 +853,13 @@ msgstr "TLS Disabled"
 
 msgid "The DNS nameserver to use for this cluster template"
 msgstr "The DNS nameserver to use for this cluster template"
+
+msgid ""
+"The Docker storage driver used to manage the containers writable layer and "
+"image storage."
+msgstr ""
+"The Docker storage driver used to manage the containers writable layer and "
+"image storage."
 
 msgid "The URL of Docker Registry."
 msgstr "The URL of Docker Registry."
@@ -868,6 +896,9 @@ msgid ""
 msgstr ""
 "The maximum number of Worker Nodes cannot be less than the default number of "
 "Worker Nodes and 1."
+
+msgid "The maximum number of nodes in each upgrade batch."
+msgstr "The maximum number of nodes in each upgrade batch."
 
 msgid "The maximum number of nodes in the batch has been exceeded."
 msgstr "The maximum number of nodes in the batch has been exceeded."
@@ -987,6 +1018,9 @@ msgstr "Unable to retrieve available add-ons."
 
 msgid "Unable to retrieve available ingress controllers."
 msgstr "Unable to retrieve available ingress controllers."
+
+msgid "Unable to retrieve flavor minimums."
+msgstr "Unable to retrieve flavour minimums."
 
 msgid "Unable to retrieve the certificate."
 msgstr "Unable to retrieve the certificate."
@@ -1178,6 +1212,15 @@ msgstr ""
 
 msgid "as follows:"
 msgstr "as follows:"
+
+msgid ""
+"default storage driver on all currently supported Linux distributions. It "
+"requires no extra configuration and is used automatically for new Docker "
+"installations."
+msgstr ""
+"default storage driver on all currently supported Linux distributions. It "
+"requires no extra configuration and is used automatically for new Docker "
+"installations."
 
 msgid "error"
 msgid_plural "errors"

@@ -1,17 +1,18 @@
 # Artem <amikhalev90@gmail.com>, 2017. #zanata
 # Dmitriy Chubinidze <dcu995@gmail.com>, 2025. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2025. #zanata
+# Dmitriy Chubinidze <dcu995@gmail.com>, 2026. #zanata
 # Ivan Anfimov <lazekteam@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: Magnum UI Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-17 12:04+0000\n"
+"POT-Creation-Date: 2026-07-21 05:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2026-07-18 10:38+0000\n"
-"Last-Translator: Ivan Anfimov <lazekteam@gmail.com>\n"
+"PO-Revision-Date: 2026-08-09 10:59+0000\n"
+"Last-Translator: Dmitriy Chubinidze <dcu995@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -56,8 +57,8 @@ msgstr "17.0.0-7"
 msgid "18.0.0"
 msgstr "18.0.0"
 
-msgid "18.0.0-42"
-msgstr "18.0.0-42"
+msgid "18.0.0-43"
+msgstr "18.0.0-43"
 
 msgid "2.1.1"
 msgstr "2.1.1"
@@ -158,6 +159,16 @@ msgid ""
 msgstr ""
 "Добавлены flavor_id, master_flavor_id и метки для создания кластера в виде "
 "шаблона конфигурации, основного шаблона конфигурации и меток."
+
+msgid ""
+"Added options for filtering Compute flavors so only supported flavors are "
+"selectable. These options are MAGNUM_MINIMUM_FLAVOR_RAM and "
+"MAGNUM_MINIMUM_FLAVOR_VCPU, which can be set in configuration."
+msgstr ""
+"Добавлены параметры для фильтрации шаблонов конфигурации, благодаря которым "
+"для выбора доступны только поддерживаемые шаблоны конфигурации. Это "
+"параметры MAGNUM_MINIMUM_FLAVOR_RAM и MAGNUM_MINIMUM_FLAVOR_VCPU, которые "
+"можно задать в конфигурации."
 
 msgid ""
 "Added some attributes for cluster to show. Keypair, API address and Master "
