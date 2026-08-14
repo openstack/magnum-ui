@@ -19,20 +19,20 @@
 
   describe('horizon.dashboard.container-infra.clusters.config.service', function() {
 
-    var $scope, service, selected, magnum, textDownload;
+    var service, selected, testWindow;
 
     beforeEach(module('horizon.app.core'));
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.dashboard.container-infra.clusters'));
+    beforeEach(module(function($provide) {
+      testWindow = {location: {assign: jasmine.createSpy('assign')}};
+      $provide.value('$window', testWindow);
+    }));
 
     beforeEach(inject(function($injector) {
       service = $injector.get(
         'horizon.dashboard.container-infra.clusters.config.service');
-      magnum = $injector.get('horizon.app.core.openstack-service-api.magnum');
-      textDownload = $injector.get('horizon.framework.util.file.text-download');
-      spyOn(textDownload, 'downloadTextFile').and.returnValue(Promise.resolve(true));
-      $scope = $injector.get('$rootScope');
-      selected = {id: '1'};
+      selected = {id: 'cluster-id', name: 'test'};
     }));
 
     it('should check the policy', function() {
@@ -40,36 +40,15 @@
       expect(allowed).toBeTruthy();
     });
 
-    it('should get magnum.getClusterConfig', function() {
-      var returnValue = {data: {cluster_config: "config1"}};
-      spyOn(magnum, 'getClusterConfig').and.returnValue(Promise.resolve(returnValue));
-
+    it('should navigate to the cluster config download', function() {
       service.initAction();
-      var promise = service.perform(selected);
-      promise.then(verifyContents);
-      $scope.$apply();
-      expect(magnum.getClusterConfig).toHaveBeenCalled();
-      function verifyContents (contents) {
-        expect(contents.created).toBeDefined();
-        expect(contents.failed).toEqual([]);
-        expect(textDownload.downloadTextFile.calls.count()).toBe(1);
-      }
+      var result = service.perform(selected);
+
+      expect(testWindow.location.assign).toHaveBeenCalledWith(
+        '/api/container_infra/clusters/cluster-id/config/download');
+      expect(result.created).toBeDefined();
+      expect(result.failed).toEqual([]);
     });
-
-    it('should download', inject(function() {
-      var returnValue = {data: {key: "key1", cluster_config: "config1", ca: "ca1", cert: "cert1"}};
-      spyOn(magnum, 'getClusterConfig').and.returnValue(Promise.resolve(returnValue));
-      service.initAction();
-      var promise = service.perform(selected);
-      promise.then(verifyContents);
-      $scope.$apply();
-      expect(magnum.getClusterConfig).toHaveBeenCalled();
-      function verifyContents (contents) {
-        expect(contents.created).toBeDefined();
-        expect(contents.failed).toEqual([]);
-        expect(textDownload.downloadTextFile.calls.count()).toBe(4);
-      }
-    }));
 
   });
 })();

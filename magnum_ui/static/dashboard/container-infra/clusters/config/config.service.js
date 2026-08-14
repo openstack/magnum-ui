@@ -18,7 +18,7 @@
   /**
    * @ngdoc overview
    * @name horizon.dashboard.container-infra.clusters.config.service
-   * @description Service for the container-infra cluster get config modal
+   * @description Service for downloading a container-infra cluster config
    */
   angular
     .module('horizon.dashboard.container-infra.clusters')
@@ -27,15 +27,14 @@
       getClusterConfigService);
 
   getClusterConfigService.$inject = [
-    'horizon.app.core.openstack-service-api.magnum',
     'horizon.dashboard.container-infra.clusters.resourceType',
     'horizon.framework.util.actions.action-result.service',
-    'horizon.framework.util.file.text-download',
-    'horizon.framework.util.q.extensions'
+    'horizon.framework.util.q.extensions',
+    '$window'
   ];
 
   function getClusterConfigService(
-    magnum, resourceType, actionResult, textDownload, $qExtensions
+    resourceType, actionResult, $qExtensions, $window
   ) {
 
     var service = {
@@ -52,18 +51,12 @@
     }
 
     function perform(selected) {
-      // get config
-      return magnum.getClusterConfig(selected.id).then(function(response) {
-        if (typeof response.data.key !== "undefined") {
-          textDownload.downloadTextFile(response.data.key, selected.name + "_key.pem");
-          textDownload.downloadTextFile(response.data.ca, selected.name + "_ca.pem");
-          textDownload.downloadTextFile(response.data.cert, selected.name + "_cert.pem");
-        }
-        textDownload.downloadTextFile(response.data.cluster_config, selected.name + "_config");
-        var result = actionResult.getActionResult()
-                     .created(resourceType, selected.id);
-        return result.result;
-      });
+      var url = '/api/container_infra/clusters/' + encodeURIComponent(selected.id) +
+        '/config/download';
+      $window.location.assign(url);
+      return actionResult.getActionResult()
+        .created(resourceType, selected.id)
+        .result;
     }
 
     function allowed() {

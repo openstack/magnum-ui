@@ -198,7 +198,7 @@ def cluster_show(request, id):
     return magnumclient(request).clusters.get(id)
 
 
-def cluster_config(request, id):
+def _cluster_config(request, id):
     cluster = magnumclient(request).clusters.get(id)
     if (hasattr(cluster, 'api_address') and cluster.api_address is None):
         LOG.debug(f"api_address for cluster {id} is not known yet.")
@@ -217,11 +217,21 @@ def cluster_config(request, id):
         tls["cert"] = magnumclient(request).certificates.create(**opts).pem
 
     config = client_utils.config_cluster(
-        cluster, cluster_template, cfg_dir="", direct_output=True
+        cluster, cluster_template, cfg_dir="", certs=tls or None,
+        direct_output=True
     )
     result = {"cluster_config": config}
     result.update(tls)
-    return result
+    return cluster, result
+
+
+def cluster_config(request, id):
+    return _cluster_config(request, id)[1]
+
+
+def cluster_config_download(request, id):
+    cluster, result = _cluster_config(request, id)
+    return cluster.name, result["cluster_config"]
 
 
 def cluster_resize(request, cluster_id, node_count,

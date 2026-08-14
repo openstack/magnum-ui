@@ -107,6 +107,39 @@ class MagnumRestTestCase(test.RestAPITestCase):
             request,
             'cluster_id')
 
+    @mock.patch.object(magnum, 'magnum')
+    def test_cluster_config_get(self, client):
+        request = self.mock_rest_request()
+        client.cluster_config.return_value = {
+            'cluster_config': 'apiVersion: v1\n'}
+
+        response = magnum.ClusterConfig().get(request, 'cluster-id')
+
+        self.assertStatusCode(response, 200)
+        self.assertEqual(
+            {'cluster_config': 'apiVersion: v1\n'}, response.json)
+        client.cluster_config.assert_called_once_with(request, 'cluster-id')
+
+    @mock.patch.object(magnum, 'magnum')
+    def test_cluster_config_download(self, client):
+        request = self.mock_rest_request()
+        client.cluster_config_download.return_value = (
+            'Test Cluster', 'apiVersion: v1\n')
+
+        response = magnum.ClusterConfigDownload().get(
+            request, 'cluster-id')
+
+        self.assertStatusCode(response, 200)
+        self.assertEqual(b'apiVersion: v1\n', response.content)
+        self.assertEqual(
+            'attachment; filename="test-cluster.kubeconfig"',
+            response['Content-Disposition'])
+        self.assertEqual('application/yaml; charset=utf-8',
+                         response['Content-Type'])
+        self.assertEqual('no-store', response['Cache-Control'])
+        client.cluster_config_download.assert_called_once_with(
+            request, 'cluster-id')
+
     # Certificates
     @mock.patch.object(magnum, 'magnum')
     def test_certificate_create(self, client):
