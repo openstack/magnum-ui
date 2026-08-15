@@ -35,7 +35,7 @@
       deferred = $q.defer();
       deferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
       keyDeferred = $q.defer();
-      keyDeferred.resolve({data:{items:{1:{keypair:{name:1}},2:{keypair:{name:2}}}}});
+      keyDeferred.resolve({data:{items:{1:{name:1},2:{name:2}}}});
       spyOn(glance, 'getImages').and.returnValue(deferred.promise);
       spyOn(nova, 'getFlavors').and.returnValue(deferred.promise);
       spyOn(nova, 'getKeypairs').and.returnValue(keyDeferred.promise);
