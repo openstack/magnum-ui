@@ -295,7 +295,7 @@
                           type: 'checkbox',
                           title: gettext('Auto-scale Worker Nodes'),
                           onChange: function(isAutoScaling) {
-                            // Reset dependant model fields to defaults first
+                            // Reset dependent model fields to defaults first
                             model.min_node_count = MODEL_DEFAULTS.min_node_count;
                             model.max_node_count = MODEL_DEFAULTS.max_node_count;
 
@@ -451,7 +451,7 @@
                           template: '<div class="alert alert-warning">' +
                             '<span class="fa fa-warning"></span> ' +
                             gettext('A public floating IP will mean the Kubernetes API is ' +
-                              'publically routable on the internet. It is generally not ' +
+                              'publicly routable on the internet. It is generally not ' +
                               'recommended to give public access to the Kubernetes API. ' +
                               'Consider limiting the access using the Allowed CIDRs ' +
                               'section.') +
@@ -644,7 +644,7 @@
       function onGetAddons(response) {
         angular.forEach(response.data.addons, function(addon) {
           addonsTitleMap.push({ value: addon, name: addon.name });
-          // Pre-selected by default
+          // Preselected by default
           if (addon.selected) { model.addons.push(addon); }
         });
       }

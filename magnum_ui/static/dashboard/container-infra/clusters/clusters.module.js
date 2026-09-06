@@ -211,7 +211,7 @@
    * @param {Object} clustersUtils
    * @description Extends behaviour of `horizon.framework.widgets.action-list.directive:actions`
    * with business logic in clusters.getActionsDirectiveLinkFn();
-   * @return {Object} Returns the ammended directive.
+   * @return {Object} Returns the amended directive.
    */
   function actionsDirectiveDecorator($delegate, clustersUtils) {
     var directive = $delegate[0];
