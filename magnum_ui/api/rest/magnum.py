@@ -188,7 +188,9 @@ class ClusterTemplates(generic.View):
 
         Returns the new ClusterTemplate object on success.
         """
-        new_template = magnum.cluster_template_create(request, **request.DATA)
+        params = {key: value for key, value in request.DATA.items()
+                  if key in magnum.CLUSTER_TEMPLATE_CREATE_ATTRS}
+        new_template = magnum.cluster_template_create(request, **params)
         return rest_utils.CreatedResponse(
             '/api/container_infra/cluster_template/%s' % new_template.uuid,
             new_template.to_dict())
