@@ -14,6 +14,7 @@
 
 from unittest import mock
 
+from django.test.utils import override_settings
 from oslo_serialization import jsonutils
 
 from magnum_ui.api.rest import magnum
@@ -22,6 +23,12 @@ from openstack_dashboard.test import helpers as test
 from openstack_dashboard.test.test_data import utils
 
 TEST = utils.TestData(test_data.data)
+
+TEMPLATE_GROUP_FILTERS = {
+    "dev": ".*-dev-.*",
+    "prod": ".*-prod-.*",
+    "k8s": "k8s-.*",
+}
 
 
 class MagnumRestTestCase(test.RestAPITestCase):
@@ -38,6 +45,53 @@ class MagnumRestTestCase(test.RestAPITestCase):
         self.assertItemsCollectionEqual(response,
                                         TEST.cluster_templates.list())
         client.cluster_template_list.assert_called_once_with(request)
+
+    @mock.patch.object(magnum, 'magnum')
+    def _get_related_template_names(self, related_to, client):
+        request = self.mock_rest_request(GET={'related_to': related_to})
+        client.cluster_template_list.return_value = mock_templates(
+            ['k8s-dev-v2', 'k8s-prod-v1', 'swarm-dev-v1', 'other',
+             'k8s-dev-v1'])
+        response = magnum.ClusterTemplates().get(request)
+
+        self.assertStatusCode(response, 200)
+        items = jsonutils.loads(response.content.decode('utf-8'))['items']
+        return [t['name'] for t in items]
+
+    @override_settings(CLUSTER_TEMPLATE_GROUP_FILTERS=TEMPLATE_GROUP_FILTERS)
+    def test_cluster_template_get_related_to_multiple_groups(self):
+        # k8s-dev-v1 matches both the "dev" and "k8s" groups, templates
+        # in both groups must be returned only once.
+        self.assertEqual(
+            ['k8s-dev-v1', 'k8s-dev-v2', 'k8s-prod-v1', 'swarm-dev-v1'],
+            self._get_related_template_names('k8s-dev-v1'))
+
+    @override_settings(CLUSTER_TEMPLATE_GROUP_FILTERS=TEMPLATE_GROUP_FILTERS)
+    def test_cluster_template_get_related_to_single_group(self):
+        self.assertEqual(
+            ['k8s-dev-v1', 'k8s-dev-v2', 'swarm-dev-v1'],
+            self._get_related_template_names('swarm-dev-v1'))
+
+    @override_settings(CLUSTER_TEMPLATE_GROUP_FILTERS=TEMPLATE_GROUP_FILTERS)
+    def test_cluster_template_get_related_to_no_group(self):
+        self.assertEqual(
+            ['k8s-dev-v1', 'k8s-dev-v2', 'k8s-prod-v1', 'other',
+             'swarm-dev-v1'],
+            self._get_related_template_names('other'))
+
+    @override_settings(CLUSTER_TEMPLATE_GROUP_FILTERS=TEMPLATE_GROUP_FILTERS)
+    def test_cluster_template_get_related_to_unknown(self):
+        self.assertEqual(
+            ['k8s-dev-v1', 'k8s-dev-v2', 'k8s-prod-v1', 'other',
+             'swarm-dev-v1'],
+            self._get_related_template_names('unknown'))
+
+    @override_settings(CLUSTER_TEMPLATE_GROUP_FILTERS=None)
+    def test_cluster_template_get_related_to_without_filters(self):
+        self.assertEqual(
+            ['k8s-dev-v1', 'k8s-dev-v2', 'k8s-prod-v1', 'other',
+             'swarm-dev-v1'],
+            self._get_related_template_names('k8s-dev-v1'))
 
     @mock.patch.object(magnum, 'magnum')
     def test_cluster_template_create(self, client):
@@ -168,3 +222,21 @@ def mock_resource(resource):
         [mock.Mock(**{'to_dict.return_value': item}) for item in resource]
 
     return mocked_data
+
+
+class FakeTemplate(object):
+    """Unhashable, like magnumclient's Resource objects."""
+
+    __hash__ = None
+
+    def __init__(self, name):
+        # Use the name as uuid to keep the test data readable
+        self.uuid = name
+        self.name = name
+
+    def to_dict(self):
+        return {'uuid': self.uuid, 'name': self.name}
+
+
+def mock_templates(names):
+    return [FakeTemplate(name) for name in names]

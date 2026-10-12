@@ -1,0 +1,8 @@
+---
+fixes:
+  - |
+    Fixed listing cluster templates with ``related_to`` when
+    ``CLUSTER_TEMPLATE_GROUP_FILTERS`` is configured. If the related template
+    matched at least one filter group, the API returned HTTP 500 and the
+    "Upgrade Cluster" dialog showed no templates. See `LP#2170568
+    <https://bugs.launchpad.net/magnum-ui/+bug/2170568>`__ for details.

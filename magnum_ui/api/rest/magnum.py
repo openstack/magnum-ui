@@ -162,10 +162,14 @@ class ClusterTemplates(generic.View):
                             groups[group].append(template)
 
                 if matched_groups:
+                    seen = set()
                     new_templates = []
                     for group in matched_groups:
-                        new_templates += groups[group]
-                    templates = set(new_templates)
+                        for t in groups[group]:
+                            if t.uuid not in seen:
+                                seen.add(t.uuid)
+                                new_templates.append(t)
+                    templates = new_templates
 
         # Sort clusters alphabetically by name.
         # This should result in newer K8s versions at the bottom.
