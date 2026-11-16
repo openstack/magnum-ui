@@ -247,13 +247,19 @@ class PlaywrightTestCase(base.BaseTestCase):
     def open_modal(self, action_button):
         """Click an action button and return the opened modal dialog."""
         action_button.click()
-        modal = self.page.locator('.modal-dialog')
+        # Skip horizon's "Loading..." wait spinner, which some actions show
+        # while preparing the form and which can briefly overlap with it
+        modal = self.page.locator(
+            '.modal:not(.modal-wait-spinner) .modal-dialog')
         self.expect(modal).to_be_visible()
         return modal
 
     def submit_modal(self, modal):
         modal.locator('.modal-footer .btn-primary').click()
         self.expect(modal).to_be_hidden()
+
+    def goto_wizard_step(self, modal, title):
+        modal.locator('.wizard-nav li', has_text=title).click()
 
     def wait_for_success_message(self):
         self.expect(
