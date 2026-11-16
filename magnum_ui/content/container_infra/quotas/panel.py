@@ -18,3 +18,6 @@ import horizon
 class Quotas(horizon.Panel):
     name = _("Quotas")
     slug = "container_infra.quotas"
+    # Same rule the Admin dashboard uses; Horizon only enforces policy
+    # rules of the panel itself when its URL is accessed directly.
+    policy_rules = (('identity', 'admin_required'),)

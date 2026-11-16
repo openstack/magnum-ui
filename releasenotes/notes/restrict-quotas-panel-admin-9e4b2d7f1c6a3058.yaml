@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    The Admin Container Infra Quotas panel can no longer be opened by
+    non-admin users through its URL.
