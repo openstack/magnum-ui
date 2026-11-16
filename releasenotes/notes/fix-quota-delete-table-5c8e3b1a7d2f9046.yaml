@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Fixed deleted quotas remaining in the Admin Quotas table until the page
+    was reloaded.
