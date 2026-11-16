@@ -155,7 +155,8 @@ def cluster_template_delete(request, id):
 def cluster_template_list(request, limit=None, marker=None, sort_key=None,
                           sort_dir=None, detail=True):
     return magnumclient(request).cluster_templates.list(
-        limit, marker, sort_key, sort_dir, detail)
+        limit=limit, marker=marker, sort_key=sort_key, sort_dir=sort_dir,
+        detail=detail)
 
 
 def cluster_template_show(request, id):
@@ -190,8 +191,9 @@ def cluster_delete(request, id):
 
 def cluster_list(request, limit=None, marker=None, sort_key=None,
                  sort_dir=None, detail=True):
-    return magnumclient(request).clusters.list(limit, marker, sort_key,
-                                               sort_dir, detail)
+    return magnumclient(request).clusters.list(
+        limit=limit, marker=marker, sort_key=sort_key, sort_dir=sort_dir,
+        detail=detail)
 
 
 def cluster_show(request, id):
@@ -275,7 +277,8 @@ def stats_list(request, project_id=None):
 def quotas_list(request, limit=None, marker=None, sort_key=None,
                 sort_dir=None, all_tenants=True):
     return magnumclient(request).quotas.list(
-        limit, marker, sort_key, sort_dir, all_tenants)
+        limit=limit, marker=marker, sort_key=sort_key, sort_dir=sort_dir,
+        all_tenants=all_tenants)
 
 
 def quotas_show(request, project_id, resource):

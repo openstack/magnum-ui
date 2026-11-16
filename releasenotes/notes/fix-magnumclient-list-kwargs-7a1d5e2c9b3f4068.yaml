@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Fixed the Clusters panel failing with "Unable to retrieve the clusters."
+    with python-magnumclient releases where the list calls only accept
+    keyword arguments.
