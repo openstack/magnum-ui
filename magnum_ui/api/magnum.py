@@ -127,11 +127,11 @@ def magnumclient(request):
 
     c = magnum_client.Client(username=request.user.username,
                              project_id=request.user.tenant_id,
-                             input_auth_token=request.user.token.id,
+                             auth_token=request.user.token.id,
                              magnum_url=magnum_url,
                              insecure=insecure,
                              api_version=magnum_api_version,
-                             cacert=cacert)
+                             ca_file=cacert)
     return c
 
 
