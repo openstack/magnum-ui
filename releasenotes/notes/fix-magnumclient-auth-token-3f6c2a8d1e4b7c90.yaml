@@ -1,0 +1,8 @@
+---
+fixes:
+  - |
+    Fixed all Container Infra panels failing with "Unable to retrieve ..."
+    errors when used with python-magnumclient releases that no longer accept
+    the deprecated ``input_auth_token`` argument. The dashboard now passes
+    the user's token as ``auth_token``. The ``OPENSTACK_SSL_CACERT`` setting
+    is now also honoured for Magnum API connections.
