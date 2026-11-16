@@ -1,0 +1,26 @@
+---
+- hosts: all
+  roles:
+    - run-devstack
+    - test-setup
+    - ensure-tox
+  tasks:
+    - name: Create tox venv with Playwright dependencies
+      ansible.builtin.command: >-
+        {{ tox_executable }} -e venv -- python3 -m playwright --version
+      args:
+        chdir: "{{ zuul.project.src_dir }}"
+      environment:
+        TOX_CONSTRAINTS_FILE: "{{ ansible_user_dir }}/src/opendev.org/openstack/requirements/upper-constraints.txt"
+
+    - name: Install Playwright system dependencies
+      ansible.builtin.command: >-
+        {{ zuul.project.src_dir }}/.tox/venv/bin/playwright install-deps {{ tox_environment.PLAYWRIGHT_BROWSER }}
+      become: true
+
+    - name: Install Playwright browser
+      ansible.builtin.command: >-
+        {{ zuul.project.src_dir }}/.tox/venv/bin/python3 -m playwright install {{ tox_environment.PLAYWRIGHT_BROWSER }}
+      environment:
+        PLAYWRIGHT_BROWSERS_PATH: "{{ zuul.project.src_dir }}/.playwright"
+
