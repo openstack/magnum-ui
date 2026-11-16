@@ -134,11 +134,13 @@
       // To make the result of this action generically useful, reformat the return
       // from the deleteModal into a standard form
       var result = actionResult.getActionResult();
+      // Report the quota ID, which is what the resource table uses to
+      // remove deleted rows
       deleteModalResult.pass.forEach(function markDeleted(item) {
-        result.deleted(resourceType, getEntity(item).project_id + "/" + getEntity(item).resource);
+        result.deleted(resourceType, getEntity(item).id);
       });
       deleteModalResult.fail.forEach(function markFailed(item) {
-        result.failed(resourceType, getEntity(item).project_id + "/" + getEntity(item).resource);
+        result.failed(resourceType, getEntity(item).id);
       });
       var indexPath = "/admin/container_infra/quotas";
       var currentPath = $location.path();
