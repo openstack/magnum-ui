@@ -31,6 +31,9 @@ from magnumclient.v1 import quotas
 LOG = logging.getLogger(__name__)
 
 CLUSTER_TEMPLATE_CREATE_ATTRS = cluster_templates.CREATION_ATTRIBUTES
+# Cluster template attributes which are not part of the update form, and
+# therefore must not be removed when updating a cluster template
+CLUSTER_TEMPLATE_UNMANAGED_ATTRS = ('driver', 'tags')
 CLUSTER_CREATE_ATTRS = clusters.CREATION_ATTRIBUTES
 CERTIFICATE_CREATE_ATTRS = certificates.CREATION_ATTRIBUTES
 QUOTA_CREATION_ATTRIBUTES = quotas.CREATION_ATTRIBUTES
@@ -144,6 +147,8 @@ def cluster_template_update(request, id, **kwargs):
     new = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, True, **kwargs)
     old = magnumclient(request).cluster_templates.get(id).to_dict()
     old = _cleanup_params(CLUSTER_TEMPLATE_CREATE_ATTRS, False, **old)
+    for key in CLUSTER_TEMPLATE_UNMANAGED_ATTRS:
+        old.pop(key, None)
     patch = _create_patches(old, new)
     return magnumclient(request).cluster_templates.update(id, patch)
 

@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Updating a cluster template no longer removes its ``driver`` and
+    ``tags`` attributes, which are not part of the update form.

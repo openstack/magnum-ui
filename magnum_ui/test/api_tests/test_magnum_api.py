@@ -58,3 +58,20 @@ class MagnumApiTestCase(test.TestCase):
         result = magnum.cluster_config_download(self.request, 'cluster-id')
 
         self.assertEqual(('test', 'complete-kubeconfig'), result)
+
+    @mock.patch.object(magnum, 'magnumclient')
+    def test_cluster_template_update_keeps_unmanaged_attrs(self, mock_client):
+        templates = mock_client.return_value.cluster_templates
+        templates.get.return_value.to_dict.return_value = {
+            'name': 'template',
+            'coe': 'kubernetes',
+            'driver': 'k8s_capi_helm_v1',
+            'tags': 'tag1,tag2',
+        }
+
+        magnum.cluster_template_update(self.request, 'template-id',
+                                       name='renamed', coe='kubernetes')
+
+        templates.update.assert_called_once_with(
+            'template-id',
+            [{'op': 'replace', 'path': '/name', 'value': 'renamed'}])
