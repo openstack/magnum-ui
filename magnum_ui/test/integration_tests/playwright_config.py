@@ -84,6 +84,22 @@ def get_dashboard_url():
 
 
 @functools.cache
+def get_image():
+    """Image with an os_distro supported by the installed Magnum driver."""
+    return os.environ['MAGNUM_IMAGE']
+
+
+@functools.cache
+def get_external_network():
+    return os.environ['MAGNUM_EXTERNAL_NETWORK']
+
+
+@functools.cache
+def get_flavor():
+    return os.environ['MAGNUM_FLAVOR']
+
+
+@functools.cache
 def get_browser():
     browser = os.environ['PLAYWRIGHT_BROWSER'].lower()
     if browser not in VALID_BROWSERS:

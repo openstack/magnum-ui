@@ -9,6 +9,7 @@
     required-projects:
       - name: openstack/horizon
       - name: openstack/magnum
+      - name: openstack/magnum-capi-helm
       - name: openstack/magnum-ui
       - name: openstack/python-magnumclient
     roles:
@@ -23,6 +24,9 @@
         '{{ zuul.project.src_dir }}/playwright': logs
       devstack_plugins:
         magnum: https://opendev.org/openstack/magnum
+        # Provides a driver for the (vm, ubuntu, kubernetes) cluster type,
+        # so cluster templates can be created (no management cluster)
+        magnum-capi-helm: https://opendev.org/openstack/magnum-capi-helm
         magnum-ui: https://opendev.org/openstack/magnum-ui
       devstack_services:
         horizon: true
