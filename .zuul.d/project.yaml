@@ -1,4 +1,5 @@
 - project:
+    queue: magnum
     templates:
       - check-requirements
       - horizon-non-primary-django-jobs
