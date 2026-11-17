@@ -1,0 +1,6 @@
+---
+fixes:
+  - |
+    Fixed the Availability Zone field of the Create Cluster form showing
+    "undefined" with Horizon releases using openstacksdk, which made it
+    impossible to create clusters from the dashboard.

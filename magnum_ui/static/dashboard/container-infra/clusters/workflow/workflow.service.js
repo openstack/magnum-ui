@@ -633,12 +633,11 @@
       function onGetAvailabilityZones(response) {
         angular.forEach(response.data.items, function(availabilityZone) {
           availabilityZoneTitleMap.push({
-            value: availabilityZone.zoneName,
-            name: availabilityZone.zoneName
+            value: availabilityZone.name,
+            name: availabilityZone.name
           });
         });
-
-        setSingleItemAsDefault(response.data.items, 'availability_zone', 'zoneName');
+        setSingleItemAsDefault(response.data.items, 'availability_zone', 'name');
       }
 
       function onGetAddons(response) {

@@ -58,8 +58,8 @@
 
       zoneDeferred = $q.defer();
       zoneDeferred.resolve({data:{items:[
-        {zoneName: 'zone1'},
-        {zoneName: 'zone2'}
+        {name: 'zone1'},
+        {name: 'zone2'}
       ]}});
 
       addonsResponse = {addons:[
@@ -105,6 +105,18 @@
 
       expect(config.model.ingressControllers).toBe(controllersResponse.controllers);
       expect(config.model.addons.length).toBe(2);
+    }));
+
+    it('should default to the only availability zone', inject(function($timeout, $q) {
+      var config;
+      nova.getAvailabilityZones.and.returnValue(
+        $q.resolve({data: {items: [{name: 'zone1'}]}}));
+      workflow.init('Create Cluster', $scope).then(function(conf) {
+        config = conf;
+      });
+      $timeout.flush();
+
+      expect(config.model.availability_zone).toBe('zone1');
     }));
 
   });
