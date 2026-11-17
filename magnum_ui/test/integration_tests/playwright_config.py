@@ -100,6 +100,24 @@ def get_flavor():
 
 
 @functools.cache
+def get_network_driver():
+    return os.environ['MAGNUM_NETWORK_DRIVER']
+
+
+@functools.cache
+def cluster_tests_enabled():
+    """Cluster lifecycle tests need a Cluster API management cluster."""
+    return strutils.bool_from_string(os.environ['MAGNUM_CLUSTER_TESTS'],
+                                     strict=True)
+
+
+@functools.cache
+def get_cluster_timeout():
+    """Timeout for cluster create/delete in seconds."""
+    return int(os.environ['MAGNUM_CLUSTER_TIMEOUT'])
+
+
+@functools.cache
 def get_browser():
     browser = os.environ['PLAYWRIGHT_BROWSER'].lower()
     if browser not in VALID_BROWSERS:
