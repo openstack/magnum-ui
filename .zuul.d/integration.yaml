@@ -41,11 +41,55 @@
         PLAYWRIGHT_TRACE: retain-on-failure
         PLAYWRIGHT_HEADLESS: true
 
+- job:
+    name: magnum-ui-integration-tests-playwright-clusters
+    description: |
+      Cluster lifecycle tests, using the Cluster API management cluster
+      set up by the magnum-capi-helm tempest job.
+    parent: magnum-capi-helm-tests-cluster-calico-v1-34
+    pre-run: playbooks/playwright/pre.yaml
+    run: playbooks/playwright/run.yaml
+    post-run: playbooks/playwright/post.yaml
+    timeout: 10800
+    required-projects:
+      - name: openstack/horizon
+      - name: openstack/magnum-ui
+      - name: openstack/python-magnumclient
+    files:
+      - ^magnum_ui/api/.*
+      - ^magnum_ui/static/dashboard/container-infra/clusters/.*
+      - ^magnum_ui/static/dashboard/container-infra/magnum.service.js$
+      - ^magnum_ui/test/integration_tests/.*
+      - ^playbooks/playwright/.*
+      - ^\.zuul\.d/integration\.yaml$
+      - ^(test-)?requirements\.txt$
+      - ^tox\.ini$
+    vars:
+      zuul_copy_output:
+        '{{ zuul.project.src_dir }}/playwright': logs
+      devstack_plugins:
+        magnum-ui: https://opendev.org/openstack/magnum-ui
+      devstack_services:
+        horizon: true
+        tempest: false
+      tox_envlist: integration-playwright
+      tox_environment:
+        PLAYWRIGHT_BROWSER: webkit
+        PLAYWRIGHT_VIDEO: retain-on-failure
+        PLAYWRIGHT_TRACE: retain-on-failure
+        PLAYWRIGHT_HEADLESS: true
+        MAGNUM_CLUSTER_TESTS: true
+        MAGNUM_IMAGE: "ubuntu-24.04-{{ kube_version }}"
+        MAGNUM_FLAVOR: ds2G
+        MAGNUM_NETWORK_DRIVER: calico
+
 - project-template:
     name: magnum-ui-integration-jobs
     check:
       jobs:
         - magnum-ui-integration-tests-playwright
+        - magnum-ui-integration-tests-playwright-clusters
     gate:
       jobs:
         - magnum-ui-integration-tests-playwright
+        - magnum-ui-integration-tests-playwright-clusters

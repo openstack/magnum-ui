@@ -14,11 +14,13 @@
 
 import os
 import re
+import time
 
 import fixtures
 from keystoneauth1 import identity
 from keystoneauth1 import session as keystone_session
 from magnumclient import client as magnum_client
+import openstack
 from oslo_log import log
 from oslotest import base
 from playwright import sync_api
@@ -153,6 +155,7 @@ class PlaywrightTestCase(base.BaseTestCase):
         magnum_fixture = self.useFixture(MagnumClientFixture())
         self.magnum_client = magnum_fixture.client
         self.project_id = magnum_fixture.session.get_project_id()
+        self.session = magnum_fixture.session
 
         self._screenshot_counter = 0
         self._screenshot_dir = None
@@ -257,6 +260,24 @@ class PlaywrightTestCase(base.BaseTestCase):
     def submit_modal(self, modal):
         modal.locator('.modal-footer .btn-primary').click()
         self.expect(modal).to_be_hidden()
+
+    def create_keypair(self, name):
+        """Create a Nova keypair, deleted again on cleanup."""
+        compute = openstack.connection.Connection(session=self.session).compute
+        compute.create_keypair(name=name)
+        self.addCleanup(compute.delete_keypair, name, ignore_missing=True)
+
+    def wait_for(self, predicate, timeout, message, interval=30):
+        """Poll predicate() until it returns a true value and return it."""
+        deadline = time.monotonic() + timeout
+        while True:
+            result = predicate()
+            if result:
+                return result
+            if time.monotonic() > deadline:
+                self.fail('Timed out after %ss waiting for %s'
+                          % (timeout, message))
+            time.sleep(interval)
 
     def goto_wizard_step(self, modal, title):
         modal.locator('.wizard-nav li', has_text=title).click()
