@@ -25,7 +25,10 @@
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.dashboard.container-infra.clusters'));
     beforeEach(module(function($provide) {
-      testWindow = {location: {assign: jasmine.createSpy('assign')}};
+      testWindow = {
+        WEBROOT: '/dashboard/',
+        location: {assign: jasmine.createSpy('assign')}
+      };
       $provide.value('$window', testWindow);
     }));
 
@@ -45,7 +48,7 @@
       var result = service.perform(selected);
 
       expect(testWindow.location.assign).toHaveBeenCalledWith(
-        '/api/container_infra/clusters/cluster-id/config/download');
+        '/dashboard/api/container_infra/clusters/cluster-id/config/download');
       expect(result.created).toBeDefined();
       expect(result.failed).toEqual([]);
     });
