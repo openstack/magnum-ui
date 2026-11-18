@@ -51,8 +51,8 @@
     }
 
     function perform(selected) {
-      var url = '/api/container_infra/clusters/' + encodeURIComponent(selected.id) +
-        '/config/download';
+      var url = $window.WEBROOT + 'api/container_infra/clusters/' +
+        encodeURIComponent(selected.id) + '/config/download';
       $window.location.assign(url);
       return actionResult.getActionResult()
         .created(resourceType, selected.id)
