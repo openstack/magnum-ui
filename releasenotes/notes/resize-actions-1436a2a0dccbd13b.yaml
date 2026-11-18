@@ -1,7 +1,7 @@
 ---
 features:
   - >
-    REST Api and Angular service for resizing clusters is addedd. Angular view
+    REST Api and Angular service for resizing clusters is added. Angular view
     supports resizing number of worker nodes only.
 other:
   - >
